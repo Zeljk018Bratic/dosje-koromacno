@@ -1,4 +1,19 @@
 # dosje-koromacno
+
+# 📁 BRZI PRISTUP PRAVNIM I TEHNIČKIM DOKUMENTIMA (`/docs/`)
+
+| Dokument / Akt | Format | Svrha i Namjena |
+| :--- | :--- | :--- |
+| [**Kaznena Prijava DORH Pula**](docs/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | `PDF` | Predaja ODO Pula protiv odgovornih osoba |
+| [**Zapisnik i Zaključak OV Raša 21.09.2026.**](docs/OV_RASA_21_09_2026.pdf) | `PDF` | Dokaz o dvostrukom prekoračenju TOC-a |
+| [**Zahtjev za Status Stranke (Aarhus)**](docs/zahtjev-status-stranke-arhus.md) | `MD` | Predaja Općini/Županiji za formalno učešće |
+| [**Forenzika Otpada RDF/SRF**](docs/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analiza uvoza i *End-of-Waste* rupa |
+| [**Transkripti i Dokazni Zaključak OV Raša**](docs/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Izvorne izjave predsjednika, načelnika i MO Koromačno |
+| [**Usporedni dokazni elaborat**](docs/usporedni-dokazni-elaborat.md) | `MD` | Poveznica Poglavlja VII i zapisnika OV Raša |
+| [**Sisak vs. Koromačno – komparativni model**](docs/sisak-vs-koromacno-elaborat.md) | `MD` | Institutional capture usporedba |
+
+---
+
 ## 🚀 Kako koristiti ovaj interaktivni sustav
 
 Ovaj repozitorij stvoren je s ciljem potpune transparentnosti i naoružavanja građana Labinštine i Istre neoborivim inženjersko-pravnim činjenicama.
@@ -49,7 +64,7 @@ Elaborat povezuje Poglavlje VII o prekograničnom prometu RDF/SRF otpada sa zapi
 
 ...
 31. **Općinsko vijeće Općine Raša (21.09.2026.)** – Službeni transkripti i audio arhiva sjednice Općinskog vijeća o spaljivanju otpada u cementari Holcim Koromačno. 
-    * **Izvorne audio datoteke:** `ABedrina2209.mp3` (1:46), `LKnapic2209.mp3` (1:11), `MPlazibat2209.mp3` (1:29)[cite: 6].
+    * **Izvorne audio datoteke:** `audio/ABedrina2209.mp3` (1:46), `audio/LKnapic2209.mp3` (1:11), `audio/MPlazibat2209.mp3` (1:29)[cite: 6].
     * **Ključni nalaz:** Službeno izglasana potvrda o dvostrukim prekoračenjima TOC-a (Zahtjev 3) te javno priznanje MO Koromačno o porastu emisija predkalcinatora za 10–15 puta iznad projiciranih vrijednosti iz Studije utjecaja na okoliš[cite: 6].
     * **Arhivski status:** Trajno arhivirano na repozitoriju i predano na Wayback Machine permalink[cite: 6].
 
@@ -119,11 +134,11 @@ Faza operativnog rada (Mjere 62–70): Propisuje primjenu novih GVE normi s akti
 POGLAVLJE V: TRANSKRIPTI I DOKAZNI ZAKLJUČAK OPĆINSKOG VIJEĆA RAŠA (21.09.2026.)
 Općinsko vijeće Općine Raša usvojilo je sa 9 glasova ZA i 1 suzdržanim službeni Zaključak od 5 zahtjeva povodom najave dovoza otpada iz Gospića na suspaljivanje:
 1. Izvorni Transkripti Audio Zapisnika (audio/ repozitorij)
-1.1. Aleks Bedrina – Predsjednik OV Raša (ABedrina2209.mp3, 1:46)
+1.1. Aleks Bedrina – Predsjednik OV Raša (audio/ABedrina2209.mp3, 1:46)
 "Tražimo da analizu svega otpada, pa tako i onog iz Gospića, izvrši neovisno stručno tijelo i odgovori može li Holcim vršiti spaljivanje tog otpada u cementari Koromačno. Pod dva, tražimo da se odredi tko će to konstantno nadzirati emisije na dimnjaku peći Holcim u Koromačnu, te da se ne prekoračuju granične vrijednosti emisije GVE, ni polusatne, ni dnevne, te da se odmah reagira u slučaju prekoračenja. Pod tri, tražimo zabranu spaljivanja goriva iz otpada, GEO, RDF, do dobivanja zapisnika i rješenja od Državnog inspektorata za prekoračenja dvostrukih graničnih vrijednosti emisija GVE ukupnih organskih ugljika TOC, te dok se ne uspostavi kontinuirano izvještavanje o emisijama žive i amonijaka na stranicama Ministarstva okoliša i zelene tranzicije te stranicama Nastavnog zavoda za javno zdravstvo Istarske županije, u skladu s okolišnom dozvolom. Pod četiri, tražimo izmjenu okolišne dozvole i zakona o djelu smanjenja limita i vrednovanja emisija sukladno normama EU za spaljivanje otpada u procesu proizvodnje cementa. Pod pet, tražimo postavljanje monitora na upravnu zgradu Holcima koji će prikazivati vrijednosti polusatnih emisija na dimnjaku peći u realnom vremenu. Zaštita zdravlja ljudi i očuvanje prirodnog staništa apsolutno su prioritet koji nema alternativu."
-1.2. Leo Knapić – Načelnik Općine Raša (LKnapic2209.mp3, 1:11)
+1.2. Leo Knapić – Načelnik Općine Raša (audio/LKnapic2209.mp3, 1:11)
 "Odluka Vlade Republike Hrvatske, kojom se određuje da se otpad s područja Gospića zbrine spaljivanjem u tvornici cementa Holcim u Koromačnu, izazvala je opravdanu uznemirenost i zabrinutost cijele javnosti. Kao predstavničko tijelo jedinice lokalne samouprave na čijem se administrativnom području nalazi postrojenje, Općinsko vijeće Općine Raša ima temeljnu ustavnu i zakonsku dužnost reagirati i zaštititi interese svojih građana. Poseban naglasak pri tome mora biti stavljen na stanovnike naselja Koromačno koji žive u neposrednom susjestvu tvornice cementa i koji su u svakodnevnom životu najizravnije izloženi radu postrojenja. Njihova kvaliteta života, čisti zrak i sigurnost okruženja u kojem borave moraju biti na prvom mjestu pri donošenju bilo kakvih odluka o tehnološkim procesima u pogonu."
-1.3. Milenko Plazibat – Predsjednik MO Koromačno (MPlazibat2209.mp3, 1:29)
+1.3. Milenko Plazibat – Predsjednik MO Koromačno (audio/MPlazibat2209.mp3, 1:29)
 "Zabrinjava nas da studija utjecaja na okoliš, koja je prije četiri godine napravljena i bila je tu i na Vijeću, zavarala sve nas. Znači, ona je govorila da će sve vrijednosti koje su bile prije izgradnje predkalcinatora, da će sve emisije biti jednake ili da će se čak smanjiti. Sad je pokazala stvarnost nešto drugo. Sve emisije su se povećale od 10 do 15 puta u odnosu na što je rekla studija utjecaja na okoliš. I sad se postavlja pitanje za dalje projekte kako vjerovati Holcimu kao vjerodostojnom partneru. Znači, mi imamo saznanja da je tehnologija koju su odabrali za predkalcinator skroz fulana. Znači, i mi zbog tehnologijskih problema lokalno stanovništvo se uništava i ispašta. I to po nama nije okej."
 POGLAVLJE VI: PREDLOŽAK KAZNENE PRIJAVE ZA DORH (PULA)
 OPĆINSKOM DRŽAVNOM ODVJETNIŠTVU U PULI-POLA
@@ -235,13 +250,13 @@ Službeni analitički PDF o prekograničnom prometu i End-of-Waste rupa u zakonu
 OV_RASA_21_09_2026.pdf
 /docs/
 Službeni zapisnik i 5 zahtjeva OV Raša povodom otpada iz Gospića.
-ABedrina2209.mp3
+audio/ABedrina2209.mp3
 /audio/
 Transkript i audio zapis izjave predsjednika OV Raša Aleksa Bedrine.
-LKnapic2209.mp3
+audio/LKnapic2209.mp3
 /audio/
 Transkript i audio zapis izjave načelnika Općine Raša Lea Knapića.
-MPlazibat2209.mp3
+audio/MPlazibat2209.mp3
 /audio/
 Transkript i audio zapis izjave predsjednika MO Koromačno Milenka Plazibata.
 
@@ -284,8 +299,8 @@ https://envi-metapodaci.azo.hr/geonetwork/srv/hrv/catalog.search#/search?resultT
 
 ### 📄 PDF dokumentacija
 
-* [`poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf`](poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) — forenzičko poglavlje o prekograničnom i unutrašnjem prometu RDF/SRF otpada te tehnološko-pravnom okviru slučaja.
-* [`zapisnik-opcinsko-vijece-rasa-21-09-2026.pdf`](zapisnik-opcinsko-vijece-rasa-21-09-2026.pdf) — službeni zapisnik i zaključci sjednice Općinskog vijeća Raša od 21. rujna 2026. s transkriptnim i institucionalnim dokazima.
+* [`poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf`](docs/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) — forenzičko poglavlje o prekograničnom i unutrašnjem prometu RDF/SRF otpada te tehnološko-pravnom okviru slučaja.
+* [`zapisnik-opcinsko-vijece-rasa-21-09-2026.pdf`](docs/OV_RASA_21_09_2026.pdf) — službeni zapisnik i zaključci sjednice Općinskog vijeća Raša od 21. rujna 2026. s transkriptnim i institucionalnim dokazima.
 
 ### © Licenca
 
