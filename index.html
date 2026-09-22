@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interaktivni Dokumentacijski i Pravni Sustav - Ekocid Koromačno</title>
+  <style>
+    :root {
+      --bg-main: #140303;
+      --bg-card: #220808;
+      --bg-card-alt: #2c0d0d;
+      --border-red: #5c1616;
+      --border-bright: #991b1b;
+      --accent-red: #dc2626;
+      --accent-hover: #ef4444;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-gold: #fbbf24;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 50px;
+    }
+
+    /* Fixed Sticky Nav */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background-color: #2a0606;
+      border-bottom: 3px solid var(--accent-red);
+      padding: 12px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.8);
+    }
+
+    .nav-btn {
+      background-color: #7f1d1d;
+      color: #ffffff;
+      border: 1px solid var(--accent-red);
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-btn:hover {
+      background-color: var(--accent-red);
+      border-color: #fca5a5;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(220, 38, 38, 0.4);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 25px auto;
+      padding: 0 20px;
+    }
+
+    .header-banner {
+      background: linear-gradient(135deg, #450a0a 0%, #1a0303 100%);
+      border: 2px solid var(--border-bright);
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+
+    .header-banner h1 {
+      color: #ffffff;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    }
+
+    .header-banner p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-red);
+      border-left: 5px solid var(--accent-red);
+      border-radius: 8px;
+      padding: 28px;
+      margin-bottom: 35px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      scroll-margin-top: 80px;
+    }
+
+    .section-card h2 {
+      color: var(--text-gold);
+      font-size: 1.6rem;
+      border-bottom: 2px solid var(--border-bright);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-card h3 {
+      color: #fca5a5;
+      font-size: 1.25rem;
+      margin-top: 22px;
+      margin-bottom: 12px;
+    }
+
+    p, li {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-bottom: 12px;
+    }
+
+    strong {
+      color: var(--text-main);
+    }
+
+    .highlight-red {
+      color: #f87171;
+      font-weight: bold;
+    }
+
+    .highlight-gold {
+      color: var(--text-gold);
+      font-weight: bold;
+    }
+
+    /* Timeline Styling */
+    .timeline {
+      border-left: 3px solid var(--accent-red);
+      margin: 20px 0 20px 10px;
+      padding-left: 20px;
+    }
+
+    .timeline-event {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .timeline-event::before {
+      content: '';
+      position: absolute;
+      left: -27px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: var(--accent-red);
+      border: 2px solid var(--text-main);
+    }
+
+    .timeline-date {
+      font-weight: 800;
+      color: var(--text-gold);
+      font-size: 1.05rem;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* Tables */
+    .table-responsive {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--bg-card-alt);
+      border: 1px solid var(--border-red);
+      font-size: 0.93rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border-red);
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #3b0808;
+      color: var(--text-gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+
+    tr:nth-child(even) {
+      background-color: #1a0505;
+    }
+
+    /* Collapsible Measures List */
+    details {
+      background-color: var(--bg-card-alt);
+      border: 1px solid var(--border-bright);
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-bottom: 16px;
+    }
+
+    summary {
+      font-weight: 700;
+      color: var(--text-gold);
+      cursor: pointer;
+      font-size: 1.05rem;
+    }
+
+    details[open] summary {
+      border-bottom: 1px solid var(--border-red);
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    ol.measures-list {
+      padding-left: 25px;
+    }
+
+    ol.measures-list li {
+      margin-bottom: 10px;
+      color: var(--text-muted);
+    }
+
+    /* Form and Interactive Inputs */
+    .form-container {
+      background-color: var(--bg-card-alt);
+      border: 1px solid var(--border-bright);
+      padding: 25px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--text-gold);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px 14px;
+      background-color: #140303;
+      border: 1px solid var(--border-bright);
+      border-radius: 4px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-hover);
+      box-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+    }
+
+    textarea.form-control {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .checkbox-group {
+      background-color: #1a0505;
+      border: 1px solid var(--border-red);
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: var(--accent-red);
+      cursor: pointer;
+      margin-top: 2px;
+    }
+
+    .checkbox-group label {
+      color: var(--text-main);
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    .legal-code-block {
+      background-color: #0d0202;
+      border: 1px solid var(--border-bright);
+      padding: 20px;
+      border-radius: 6px;
+      font-family: 'Courier New', Courier, monospace;
+      color: #e2e8f0;
+      white-space: pre-wrap;
+      line-height: 1.5;
+      font-size: 0.9rem;
+      margin: 15px 0;
+    }
+
+    a.external-link {
+      color: #fca5a5;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    a.external-link:hover {
+      color: var(--accent-hover);
+    }
+
+    /* Print Stylesheet (@media print) */
+    @media print {
+      .sticky-nav, .btn-group, .alert-banner, button, .no-print {
+        display: none !important;
+      }
+
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 11pt;
+        line-height: 1.4;
+        padding: 0 !important;
+      }
+
+      .container {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+
+      .header-banner {
+        background: none !important;
+        border: none !important;
+        border-bottom: 2px solid #000 !important;
+        color: #000000 !important;
+        padding: 10px 0 !important;
+        margin-bottom: 20px !important;
+        text-align: left !important;
+      }
+
+      .header-banner h1 {
+        color: #000000 !important;
+        font-size: 18pt !important;
+        text-shadow: none !important;
+      }
+
+      .header-banner p {
+        color: #333333 !important;
+      }
+
+      .section-card {
+        background: #ffffff !important;
+        color: #000000 !important;
+        border: none !important;
+        border-bottom: 1px dashed #000 !important;
+        border-left: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding: 15px 0 !important;
+        margin-bottom: 20px !important;
+        page-break-inside: avoid;
+      }
+
+      .section-card h2 {
+        color: #000000 !important;
+        border-bottom: 1px solid #000 !important;
+        font-size: 14pt !important;
+      }
+
+      .section-card h3 {
+        color: #222222 !important;
+        font-size: 12pt !important;
+      }
+
+      p, li, strong, span {
+        color: #000000 !important;
+      }
+
+      .timeline {
+        border-left-color: #000 !important;
+      }
+
+      .timeline-event::before {
+        background-color: #000 !important;
+        border-color: #fff !important;
+      }
+
+      .timeline-date {
+        color: #000000 !important;
+      }
+
+      table {
+        background-color: #ffffff !important;
+        border: 1px solid #000 !important;
+      }
+
+      th, td {
+        border: 1px solid #000 !important;
+        color: #000000 !important;
+        padding: 6px 8px !important;
+      }
+
+      th {
+        background-color: #f0f0f0 !important;
+      }
+
+      details {
+        background-color: #ffffff !important;
+        border: 1px solid #000 !important;
+      }
+
+      summary {
+        color: #000000 !important;
+      }
+
+      .form-container, .legal-code-block, .checkbox-group {
+        background-color: #ffffff !important;
+        border: 1px solid #000 !important;
+        color: #000000 !important;
+      }
+
+      .form-control {
+        background-color: #ffffff !important;
+        border: 1px solid #000 !important;
+        color: #000000 !important;
+      }
+
+      a.external-link {
+        color: #000000 !important;
+        text-decoration: underline !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FIXED STICKY NAVIGATION BAR -->
+  <nav class="sticky-nav no-print">
+    <button class="nav-btn" onclick="scrollToSection('polje1')">🗓️ Kronologija Prikrivanja</button>
+    <button class="nav-btn" onclick="scrollToSection('polje2')">🗺️ Geomorfološka Zamka CO₂</button>
+    <button class="nav-btn" onclick="scrollToSection('polje3')">🌊 Podmorski Ekocid, GVE & 70 Mjera</button>
+    <button class="nav-btn" onclick="scrollToSection('polje4')">☢️ Forenzika Robne Razmjene & Pazin</button>
+    <button class="nav-btn" onclick="scrollToSection('polje5')">⚖️ Kaznena Prijava (DORH) & Monitoring</button>
+    <button class="nav-btn" onclick="scrollToSection('polje6')">📈 Korporativni Izlaz vs Vizija</button>
+    <button class="nav-btn" style="background-color: #dc2626;" onclick="window.print()">🖨️ Ispiši Letak (Ctrl+P)</button>
+  </nav>
+
+  <div class="container">
+    
+    <!-- HEADER BANNER -->
+    <div class="header-banner">
+      <h1>Cjeloviti Interaktivni Istraživački Dosje & Pravni Alat</h1>
+      <p>Sveobuhvatna procesno-inženjerska, kemijska i pravna forenzika slučaja dekarbonizacije, suspaljivanja otpada i ekološkog rizika u cementari Holcim Koromačno i Raškom zaljevu.</p>
+    </div>
+
+    <!-- POLJE 1 -->
+    <section id="polje1" class="section-card">
+      <h2>🗓️ POLJE 1: Kronologija Strateškog Prikrivanja i Proceduralnog Inženjeringa</h2>
+      <p>Rekonstrukcija institucionalnog i korporativnog postupanja otkriva precizno tempiran lanac odabranih administrativnih koraka, tajnog ispitivanja pogona te pravnih manipulacija usmjerenih na izbjegavanje cjelovite javne kontrole i procjene utjecaja na okoliš (PUO)[cite: 4, 5].</p>
+      
+      <div class="timeline">
+        <div class="timeline-event">
+          <span class="timeline-date">Listopad 2025.</span>
+          <p>Holcim (Hrvatska) d.o.o. službeno podnosi zahtjev Ministarstvu zaštite okoliša i zelene tranzicije za pokretanje postupka Procjene utjecaja na okoliš (PUO) za projekt dekarbonizacije "KO2"[cite: 4, 5].</p>
+        </div>
+        <div class="timeline-event">
+          <span class="timeline-date">Studeni 2025.</span>
+          <p>Započinje tajni pokusni rad sustava hvatanja CO₂ i usko povezanih procesnih jedinica unutar tvornice u Koromačnu, bez ishođene cjelovite okolišne dozvole i izvan znanja lokalne javnosti (činjenično potvrđeno na stranici 1 službenog Sažetka)[cite: 4, 5]. Istovremeno, u Švedskoj (Gotland/Slite), sestrinski CCS projekt Heidelberg Materialsa tiho se obustavlja zbog nepremostivih ekonomskih i sigurnosnih rizika[cite: 4, 5].</p>
+        </div>
+        <div class="timeline-event">
+          <span class="timeline-date">21. travnja 2026.</span>
+          <p>Ministarstvo donosi rješenje o prihvatljivosti zahvata za ekološku mrežu (KLASA: <code>UP/I-352-03/26-06/12</code>, URBROJ: <code>517-06-2-2-26-5</code>), čime je potpuno zanemaren specifičan geomorfološki položaj Raškog zaljeva i rizik akumulacije opasnih plinova[cite: 4].</p>
+        </div>
+        <div class="timeline-event">
+          <span class="timeline-date">10. kolovoza 2026.</span>
+          <p>Objavljuje se Informacija o javnoj raspravi (KLASA: <code>UP/I-351-03/25-08/46</code>, URBROJ: <code>517-04-1-1-26-28</code>), namjerno tempirana u samom vrhu ljetne sezone i godišnjih odmora kako bi se smanjio odaziv javnosti[cite: 4].</p>
+        </div>
+        <div class="timeline-event">
+          <span class="timeline-date">17. kolovoza 2026.</span>
+          <p>Službeni početak javne rasprave[cite: 4, 5]. Mobilizacija građana, nezavisnih stručnjaka i lokalnih udruga dovodi do masovnog razotkrivanja opasnih parametara iz studije Ekonerga[cite: 4, 5].</p>
+        </div>
+        <div class="timeline-event">
+          <span class="timeline-date">28. kolovoza 2026.</span>
+          <p>U strahu od nepremostivog javnog otpora i razotkrivanja manjkavosti u studiji, Holcim naglo podnosi podnesak o povlačenju Studije utjecaja na okoliš[cite: 4, 5]. Istog dana Ministarstvo po hitnoj proceduri izdaje Rješenje o obustavi postupka PUO (KLASA: <code>UP/I-351-03/25-08/46</code>, URBROJ: <code>517-04-1-1-26-30</code>)[cite: 4, 5].</p>
+        </div>
+        <div class="timeline-event">
+          <span class="timeline-date">03. rujna 2026.</span>
+          <p>Naprasno se otkazuje ranije zakazano javno izlaganje u Koromačnu kako bi se spriječio izravni sučeljavajući dijalog s lokalnim stanovništvom i izbjegla javna pitanja[cite: 4, 5].</p>
+        </div>
+        <div class="timeline-event">
+          <span class="timeline-date">11. – 13. rujna 2026.</span>
+          <p>Ministarstvo provodi ekspresno 48-satno vikend e-Savjetovanje o izmjenama zakonodavstva o otpadu, pokušavajući legalizirati preusmjeravanje otpadnih tokova bez uobičajenog roka od 30 dana[cite: 4, 5].</p>
+        </div>
+        <div class="timeline-event">
+          <span class="timeline-date">15. rujna 2026.</span>
+          <p>Održava se masovni prosvjed građana, ribara i lokalnih poduzetnika u Raši protiv pretvaranja Labinštine u regionalno odlagalište i spalionicu otpada[cite: 4, 5].</p>
+        </div>
+        <div class="timeline-event">
+          <span class="timeline-date">17. rujna 2026.</span>
+          <p>Kao izravni odgovor na narodni otpor u Raši, Vlada RH po hitnom postupku upućuje Prijedlog Zakona o georesursima u Sabor, nastojeći zakonodavno prisiliti preuzimanje podzemnih i podmorskih prostora za utiskivanje CO₂[cite: 4, 5].</p>
+        </div>
+        <div class="timeline-event">
+          <span class="timeline-date">21. rujna 2026.</span>
+          <p>Na sjednici Skupštine Istarske županije u Pazinu izglasava se sporni Članak 1. Zaključka o "sanaciji otpada", dok istovremeno Fond za zaštitu okoliša (FZOEU) dodjeljuje ugovor od 8,77 milijuna eura za pražnjenje opasnog otpada iz silosnih hala u Gospiću[cite: 4, 5].</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- POLJE 2 -->
+    <section id="polje2" class="section-card">
+      <h2>🗺️ POLJE 2: Geomorfološka Zamka i Fizika Kraha CO₂</h2>
+      <h3>1. Fizičko-kemijska svojstva i ponašanje LCO₂ u slučaju havarije</h3>
+      <p>Projekt dekarbonizacije predviđa skladištenje i manipulaciju s tekućim ugljikovim dioksidom (LCO₂) u dva masivna horizontalna kriogena spremnika pojedinačnog kapaciteta od <strong>3.000 m³</strong> (ukupno <strong>6.000 m³</strong>)[cite: 4, 5]. Skladištenje se odvija pod visokim tlakom od <strong>16 bara</strong> i iznimno niskoj temperaturi od <strong>-29,4 °C</strong>[cite: 4, 5].</p>
+      <p>U slučaju nagle dekompresije, puknuća cjevovoda na pretovarnom Vežu 3 ili katastrofalne rupture spremnika (BLEVE efekt):</p>
+      <ul>
+        <li>Tekući CO₂ instantno ekspandira za približno <strong>535 puta</strong> u plinovitu fazu.</li>
+        <li>Gustoća plinovitog CO₂ iznosi oko <strong>1,98 kg/m³</strong>, što ga čini <strong>1,5 puta težim od zraka</strong> ($1,2 \text{ kg/m}^3$)[cite: 4, 5].</li>
+        <li>Hladni, teški plinski oblak ne ditiže se u visinu nego se ponaša kao tekućina – teče niz padine i puni sve niže geološke depresije, klance i morske uvale.</li>
+      </ul>
+
+      <h3>2. Geomorfološka specifičnost Raškog zaljeva vs. "Švedski Spin"</h3>
+      <p>PR odjel industrije često uspoređuje Koromačno sa sestrinskim projektom Heidelberg Materialsa na otoku Gotlandu (Slite, Švedska)[cite: 4, 5]. Analiza dokazuje da je riječ o potpunoj stručnoj obmani:</p>
+      
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Parametar Komparacije</th>
+              <th>Gotland / Slite (Švedska)</th>
+              <th>Raški Zaljev / Koromačno (Hrvatska)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Geomorfologija</strong></td>
+              <td>Otvoreni, izrazito ravničarski otok usred Baltičkog mora[cite: 4, 5].</td>
+              <td>Uski, potopljeni riječni kanjon (fjord) dužine 12 km, širine 1 km, opkoljen liticama višim od 100 m[cite: 4, 5].</td>
+            </tr>
+            <tr>
+              <td><strong>Disperzija plinova</strong></td>
+              <td>Konstantni jaki baltički vjetrovi trenutno razrjeđuju i odnose eventualna curenja[cite: 4, 5].</td>
+              <td>Sustav zatvorenih litica pri ljetnoj inverziji i bezvjetrici zadržava teške plinove pri dnu zaljeva[cite: 4, 5].</td>
+            </tr>
+            <tr>
+              <td><strong>Rizik anoksije</strong></td>
+              <td>Minimalan zbog brzog miješanja zračnih masa[cite: 4, 5].</td>
+              <td>Katastrofalan: CO₂ istiskuje kisik u kotlinama u kojima leže naselja Koromačno, Brovinje i Trget, uzrokujući trenutno gušenje ljudi i životinja[cite: 4, 5].</td>
+            </tr>
+            <tr>
+              <td><strong>Status projekta</strong></td>
+              <td><span class="highlight-red">SLUŽBENO SLOMEN I OBUSTAVLJEN u studenom 2025. godine (izvor: Sveriges Radio)</span>[cite: 4, 5].</td>
+              <td>Gura se unatoč činjenici da je švedski uzor propao zbog troškova i opasnosti[cite: 4, 5].</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- POLJE 3 -->
+    <section id="polje3" class="section-card">
+      <h2>🌊 POLJE 3: Podmorski Ekocid, Kemijski Koktel, GVE & Registar 70 Mjera</h2>
+      
+      <h3>1. Ekonergovi inženjerski parametri: Usporedba emisija u zrak</h3>
+      <p>Izgradnja novog pomoćnog dimnjaka visine <strong>36 m</strong> uz postojeći od <strong>80 m</strong> otkriva stvarne namjere promjene sastava goriva i suspaljivanja otpadnih frakcija[cite: 4, 5]:</p>
+
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Parametar Onečišćenja</th>
+              <th>Novi Dimnjak (36 m)</th>
+              <th>Postojeći Dimnjak (80 m)</th>
+              <th>Dokazna Indikacija Procesnog Inženjeringa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sumporov dioksid (SO₂)</td>
+              <td>100 mg/Nm³[cite: 4, 5]</td>
+              <td>400 mg/Nm³[cite: 4, 5]</td>
+              <td>Redukcija zbog pretvorbe u procesne nusproizvode[cite: 4].</td>
+            </tr>
+            <tr>
+              <td>Dušikovi oksidi (NOₓ)</td>
+              <td>450 mg/Nm³[cite: 4, 5]</td>
+              <td>500 mg/Nm³[cite: 4, 5]</td>
+              <td>Visoke radne temperature peći[cite: 4].</td>
+            </tr>
+            <tr>
+              <td>Praškaste tvari (Čestice)</td>
+              <td>10 mg/Nm³[cite: 4, 5]</td>
+              <td>20 mg/Nm³[cite: 4, 5]</td>
+              <td>Filtarski sustavi pod opterećenjem finih čestica[cite: 4].</td>
+            </tr>
+            <tr>
+              <td>Amonijak (NH₃)</td>
+              <td>50 mg/Nm³[cite: 4, 5]</td>
+              <td>150 mg/Nm³[cite: 4, 5]</td>
+              <td>Korištenje u SNCR sustavima de-NOx obrade[cite: 4].</td>
+            </tr>
+            <tr>
+              <td>Ukupni organski ugljik (TOC)</td>
+              <td>35 mg/Nm³[cite: 4, 5]</td>
+              <td>35 mg/Nm³[cite: 4, 5]</td>
+              <td>Indikator nepotpunog izgaranja organskog otpada[cite: 4].</td>
+            </tr>
+            <tr>
+              <td><span class="highlight-gold">Klorovodik (HCl)</span></td>
+              <td><strong>10 mg/Nm³</strong>[cite: 4, 5]</td>
+              <td><strong>10 mg/Nm³</strong>[cite: 4, 5]</td>
+              <td><span class="highlight-red">NEOBORIV DOKAZ suspaljivanja klorirane plastike i PVC kabela!</span>[cite: 4]</td>
+            </tr>
+            <tr>
+              <td><span class="highlight-gold">Fluorovodik (HF)</span></td>
+              <td><strong>1 mg/Nm³</strong>[cite: 4, 5]</td>
+              <td><strong>1 mg/Nm³</strong>[cite: 4, 5]</td>
+              <td><span class="highlight-red">NEOBORIV DOKAZ suspaljivanja kemijskih i industrijskih frakcija!</span>[cite: 4]</td>
+            </tr>
+            <tr>
+              <td>Živa (Hg)</td>
+              <td>0,05 mg/Nm³[cite: 4, 5]</td>
+              <td>0,05 mg/Nm³[cite: 4, 5]</td>
+              <td>Ekstremno visoka akumulacija na katalizatorima[cite: 4].</td>
+            </tr>
+            <tr>
+              <td>Kadmij + Talij (Cd + Tl)</td>
+              <td>0,05 mg/Nm³[cite: 4, 5]</td>
+              <td>0,05 mg/Nm³[cite: 4, 5]</td>
+              <td>Teški metali iz elektroničkog i opasnog otpada[cite: 4].</td>
+            </tr>
+            <tr>
+              <td>Ostali teški metali (Pb, Cr, Ni...)</td>
+              <td>0,5 mg/Nm³[cite: 4, 5]</td>
+              <td>0,5 mg/Nm³[cite: 4, 5]</td>
+              <td>Standardni profil emisija suspaljivanja otpada[cite: 4].</td>
+            </tr>
+            <tr>
+              <td>Dioksini i Furani (PCDD/F)</td>
+              <td>0,1 ng TEQ/Nm³[cite: 4, 5]</td>
+              <td>0,1 ng TEQ/Nm³[cite: 4, 5]</td>
+              <td>Kancerogeni nusproizvodi izgaranja klora i plastike[cite: 4].</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>2. Podmorski desalinizator i termokemijsko uništenje akvatorija</h3>
+      <ul>
+        <li><strong>Crpljenje vode:</strong> Sustav crpi čak <strong>217 m³/h</strong> sirove morske/priobalne vode (ukupno <strong>1.562.400 m³/godišnje</strong>)[cite: 4, 5].</li>
+        <li><strong>Potrošnja kemikalija:</strong> Za obradu i neutralizaciju troši se <strong>1.567 tona/godišnje natrijeve lužine (NaOH)</strong>[cite: 4, 5].</li>
+        <li><strong>Podmorski ispust:</strong> Putem cjevovoda dužine 160 m na dubini od 42 m u more se izbacuje koncentrirana salamura saliniteta <strong>39 g/l</strong> uz povišenu temperaturu (do 30 °C) i ostatke amonijaka (do 10 mg/l)[cite: 4, 5].</li>
+        <li><strong>Ekološke posljedice:</strong> Hiper-salinitet stvara gusti slani tepih koji teče po morskom dnu do 700 m udaljenosti, trajno uništavajući bentoske zajednice, dok kemijske promjene vode izravno ugrožavaju staništa školjkaša u uzgajalištima u uvali Trget[cite: 4].</li>
+      </ul>
+
+      <h3>3. Socio-ekonomski krah i demografski egzodus</h3>
+      <ul>
+        <li><strong>Pad vrijednosti nekretnina:</strong> Nekretnine u naseljima Koromačno, Brovinje, Skitača i Ravni bilježe pad tržišne vrijednosti od <strong>30% do 50%</strong> uslijed industrijskog zagađenja i gubitka turističkog atraktiviteta.</li>
+        <li><strong>Buka i noćni rad:</strong> Emisija buke preko <strong>40 dB(A)</strong> noću na fasadama stambenih kuća (prvenstveno Koromačno 5 i 18) trajno narušava kvalitetu života i zdravlje mještana[cite: 4].</li>
+        <li><strong>Gospodarski slom:</strong> Uništenje tradicionalnog ribarstva, marikulture i obiteljskog iznajmljivanja pokreće egzodus mlađeg radno sposobnog stanovništva s područja istočne Labinštine.</li>
+      </ul>
+
+      <h3>4. Cjeloviti Registar od 70 Obvezujućih Mjera Zaštite Okoliša (Ekonerg)</h3>
+      <p>Kompletan katalog od 70 mjera raspoređenih po fazama izvedbe i rada postrojenja[cite: 4]:</p>
+
+      <details open>
+        <summary>Faza 1: Priprema i Projektiranje (Mjere 1–28)</summary>
+        <ol class="measures-list">
+          <li>Izrada detaljnog Projekta organizacije građenja[cite: 4].</li>
+          <li>Projekt privremene regulacije prometnog toka[cite: 4].</li>
+          <li>Izgradnja novog armiranobetonskog dimnjaka minimalne visine 36 m[cite: 4].</li>
+          <li>Uređenje mjernih mjesta za emisije prema normi HRN EN 15259[cite: 4].</li>
+          <li>Instalacija automatskog kontinuiranog mjernog sustava (AMS)[cite: 4].</li>
+          <li>Detaljna geološko-geofizička istraživanja trase podmorskog ispusta[cite: 4].</li>
+          <li>Izvedba vodonepropusnog sustava odvodnje oborinskih voda[cite: 4].</li>
+          <li>Sustav za obradu onečišćenih oborinskih voda s manipulativnih površina[cite: 4].</li>
+          <li>Ugradnja dvostrukih separatora ulja i masti odgovarajućeg kapaciteta[cite: 4].</li>
+          <li>Izgradnja posebnog uređaja za pročišćavanje industrijskih otpadnih voda[cite: 4].</li>
+          <li>Sustav za neutralizaciju i obradu voda od pranja filtarskih jedinica[cite: 4].</li>
+          <li>Postavljanje triju kontrolno-analitičkih mjernih okana[cite: 4].</li>
+          <li>Polaganje podmorskog cjevovoda dužine 160 m na dubinu od 42 m[cite: 4].</li>
+          <li>Izgradnja prihvatnog bazena za potencijalno onečišćene opožarene vode[cite: 4].</li>
+          <li>Izvedba nepropusnih uljnih jama ispod transformatora od 20 MVA i 30 MVA[cite: 4].</li>
+          <li>Postavljanje zaštitnih tankvana ispod svih spremnika kemikalija[cite: 4].</li>
+          <li>Upotreba isključivo prirodnog lomljenog vapnenca za podmorske radove[cite: 4].</li>
+          <li>Konstrukcija difuzora podignutog iznad morskog dna radi sprečavanja dizanja sedimenta[cite: 4].</li>
+          <li>Izrada cjelovitog Elaborata zaštite od buke s granicom od 40 dB(A) za stambenu zonu[cite: 4].</li>
+          <li>Strogo ograničenje radnog pojasa unutar šumskog obuhvata[cite: 4].</li>
+          <li>Premazivanje vanjskih struktura antirefleksnim mat bojama u tonu okoliša[cite: 4].</li>
+          <li>Primjena ekološke vanjske rasvjete u skladu sa zakonom o zaštiti od svjetlosnog onečišćenja[cite: 4].</li>
+          <li>Formiranje protupožarnog zaštitnog pojasa oko skladišnih jedinica[cite: 4].</li>
+          <li>Izrada Maritimne studije sigurnosti plovidbe za maneuvre LCO₂ tankera[cite: 4].</li>
+          <li>Primjena Najboljih raspoloživih tehnika (BAT) za skladištenje opasnih tvari[cite: 4].</li>
+          <li>Izgradnja masivne fizičke zaštitne barijere (zida) oko LCO₂ spremnika[cite: 4].</li>
+          <li>Instalacija mreže detektora CO₂ duž granice prema naselju povezanih s automatskim alarmom[cite: 4].</li>
+          <li>Uspostava sigurnosne zone u luci pod nadzorom Lučke kapetanije Pula[cite: 4].</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Faza 2: Građenje i Izvođenje (Mjere 29–61)</summary>
+        <ol class="measures-list" start="29">
+          <li>Kontinuirano vlaženje i prskanje prometnica radi suzbijanja prašine[cite: 4].</li>
+          <li>Postavljanje visokoučinkovitih otprašivača na mobilnu betonaru[cite: 4].</li>
+          <li>Postavljanje nove automatske mjerne stanice za kvalitetu zraka u samom Koromačnu[cite: 4].</li>
+          <li>Mjere za sprečavanje razlijevanja pogonskih goriva i maziva[cite: 4].</li>
+          <li>Priprema nepropusnih podloga za parkiranje građevinske mehanizacije[cite: 4].</li>
+          <li>Pretakanje goriva isključivo u kontroliranim i opremljenim zonama[cite: 4].</li>
+          <li>Odvodnja sanitarnih otpadnih voda gradilišta u sabirne nepropusne jame[cite: 4].</li>
+          <li>Kemijska analiza morskog sedimenta prije početka podvodnih iskopa[cite: 4].</li>
+          <li>Stroga zabrana izvođenja građevinskih radova u moru u razdoblju od 1. veljače do 1. travnja[cite: 4].</li>
+          <li>Osiguranje opreme za žurnu intervenciju u slučaju izlijevanja nafte ili goriva[cite: 4].</li>
+          <li>Odvojeno prikupljanje i očuvanje plodnog sloja humusa[cite: 4].</li>
+          <li>Ugradnja gradilišne rasvjete usmjerene isključivo prema dolje bez blještanja[cite: 4].</li>
+          <li>Korištenje atestiranih građevinskih strojeva s prigušivačima buke[cite: 4].</li>
+          <li>Izvođenje izrazito bučnih radova isključivo u dnevnoj smjeni[cite: 4].</li>
+          <li>Apsolutna zabrana odlaganja bilo kakvog otpadnog materijala u more[cite: 4].</li>
+          <li>Selektivno razvrstavanje i evidencija građevinskog otpada na mjestu nastanka[cite: 4].</li>
+          <li>Sanacija i biologizacija oštećenih šumskih rubova[cite: 4].</li>
+          <li>Obvezno uklanjanje i zbrinjavanje panjeva iz radnog obuhvata[cite: 4].</li>
+          <li>Provođenje mjera za sprečavanje širenja invazivnih biljnih vrsta[cite: 4].</li>
+          <li>Službeno obavještavanje lokalnih lovačkih udruga o dinamici radova[cite: 4].</li>
+          <li>Osiguranje stalnog arheološkog nadzora tijekom zemaljskih radova[cite: 4].</li>
+          <li>Maksimalno očuvanje zatečene visoke vegetacije i stabala[cite: 4].</li>
+          <li>Vraćanje svih privremeno korištenih platoa u prvobitno stanje[cite: 4].</li>
+          <li>Revizija i usklađivanje Operativnog plana za slučajeve izvanrednih onečišćenja[cite: 4].</li>
+          <li>Fizičko i svjetlosno označavanje pomorskog radnog područja[cite: 4].</li>
+          <li>Službena objava privremene zone zabranjene plovidbe za civilne brodice[cite: 4].</li>
+          <li>Strog režim ograničenja brzine kretanja radnih plovila[cite: 4].</li>
+          <li>Jasno vizualno označavanje svih angažiranih radnih plovila i remorkera[cite: 4].</li>
+          <li>Postavljanje zaštitnih plivajućih eko-brana oko radnih plovila[cite: 4].</li>
+          <li>Montaža graničnika na palubama radi sprečavanja prelijevanja ulja u more[cite: 4].</li>
+          <li>Sklaping ugovora sa specijaliziranom tvrtkom za hitno čišćenje mora[cite: 4].</li>
+          <li>Redovito tehničko održavanje svih objekata sigurnosti plovidbe[cite: 4].</li>
+          <li>Obvezna trenutna prijava svakog uočenog onečišćenja Lučkoj kapetaniji[cite: 4].</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Faza 3: Operativni Rad Postrojenja (Mjere 62–70)</summary>
+        <ol class="measures-list" start="62">
+          <li>Primjena starih GVE normi isključivo u trenucima kada sustav dekarbonizacije ne radi[cite: 4].</li>
+          <li>Obvezna primjena novih, strožih GVE normi čim se aktivira proces dekarbonizacije[cite: 4].</li>
+          <li>Pokretanje novog postupka PUO ako kaptažni bunari ne budu osiguravali dovoljno vode[cite: 4].</li>
+          <li>Usmjeravanje svih sanitarnih otpadnih voda na postojeći centralni pročistač[cite: 4].</li>
+          <li>Vođenje industrijskih otpadnih voda kroz novoproprojektirani pročistač[cite: 4].</li>
+          <li>Apsolutna zabrana korištenja ili ispuštanja prioritetnih opasnih tvari[cite: 4].</li>
+          <li>Obvezna kemijska obrada i neutralizacija voda proizašlih iz pranja filtara[cite: 4].</li>
+          <li>Kontinuirano ispuštanje obrađenih voda isključivo kroz duboki podmorski ispust[cite: 4].</li>
+          <li>Strogi fizikalno-kemijski parametri na ispustu: Temperatura ≤ 30 °C, pH 6,5–9,0, amonijak (NH₃) ≤ 10 mg/l, ukupne suspendirane tvari ≤ 35 mg/l[cite: 4].</li>
+        </ol>
+      </details>
+    </section>
+
+    <!-- POLJE 4 -->
+    <section id="polje4" class="section-card">
+      <h2>☢️ POLJE 4: Forenzička Analiza Robne Razmjene i Anomalije Carinskih Deklaracija</h2>
+      
+      <h3>1. Carinski podaci Nenada Bakića: Uvoz iz Italije za 124 eura</h3>
+      <p>Carinska forenzika uvoznih deklaracija razotkriva šokantnu računicu: iz Italije je uvezeno čak <strong>19.013 tona opasnog kemijskog/industrijskog otpada</strong> (otpadna ulja, emulzije, kemijski ostaci)[cite: 4, 5]. Cjelokupna pošiljka prijavljena je na carini uz ukupnu deklariranu vrijednost od svega <strong>124 EUR</strong> (što iznosi apsurdnih <strong>0,0065 € po toni</strong>)[cite: 4, 5]!</p>
+      <p>Ova simbolična cijena dokazuje da se ne radi o kupnji sirovine ili goriva, već o uslužno plaćenom odlaganju opasnog otpada gdje talijanski operateri plaćaju milijunske iznose u vanbilančnim aranžmanima kako bi se riješili otpada koji je u Italiji nemoguće legalno zbrinuti po toj cijeni.</p>
+
+      <h3>2. Akumulacija žive na katalitičkim filtrima Catalyst R3-15S</h3>
+      <p>Filtarski sustav plinova <em>Catalyst R3-15S (Puristar)</em> tijekom 4 godine rada akumulirat će više od <strong>40 kg čiste elementarne žive (Hg)</strong>[cite: 4, 5]. Ovaj izuzetno opasan materijal klasificiran je pod ključnim brojem otpada <code>KB 16 08 07*</code> (istrošeni katalizatori koji sadrže opasne prijelazne metale)[cite: 4, 5]. Kontinuirana akumulacija žive neoboriv je dokaz da se u pećima spaljuju teške frakcije otpada koje sadrže živu.</p>
+
+      <h3>3. Matrica triju odvojenih otpadnih tokova i Pazinski Članak 1.</h3>
+      
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Identifikator Toka</th>
+              <th>Izvor i Količina Otpada</th>
+              <th>Sastav i Karakteristike</th>
+              <th>Financijsko-Pravni Mehanizam</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Tok 1: Gospić</strong></td>
+              <td>~650 t neopasnog / 4.500 t rasutog opasnog otpada u silosima[cite: 4].</td>
+              <td>Mljeveni kabeli, opasna plastika, ostaci kemikalija[cite: 4].</td>
+              <td>Ugovor FZOEU-a od 8,77 mil. € dodijeljen konzorciju (CE-ZA-R, CIAK, Saubermacher)[cite: 4, 5].</td>
+            </tr>
+            <tr>
+              <td><strong>Tok 2: Pazin</strong></td>
+              <td>~13.000 tona nataloženog otpada u hali Istraplastike[cite: 4].</td>
+              <td>Miješana plastika, tekstil, guma, industrijski otpad[cite: 4].</td>
+              <td>NRC d.o.o. u stečaju (Slaven Tintor). <span class="highlight-gold">Pazinski Članak 1. služi kao legalni kanal za prebacivanje u Koromačno!</span>[cite: 4, 5]</td>
+            </tr>
+            <tr>
+              <td><strong>Tok 3: Italija</strong></td>
+              <td>19.013 tona uvoznog otpada[cite: 4, 5].</td>
+              <td>Otpadna ulja, kemijski ostaci, teške emulzije[cite: 4, 5].</td>
+              <td>Deklarirano na carini za 124 € radi izbjegavanja poreza i ostvarivanja ekstraprofita na suspaljivanju[cite: 4, 5].</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- POLJE 5 -->
+    <section id="polje5" class="section-card">
+      <h2>⚖️ POLJE 5: Službeni Tekst Kaznene Prijave i Slom Monitoringa</h2>
+      <p>Ispod se nalazi kompletni službeni predložak kaznene prijave predviđen za izravno popunjavanje na ekranu mobitela ili računala te ispis radi slanja Državnom odvjetništvu RH (DORH).</p>
+
+      <div class="form-container">
+        <div class="form-group">
+          <label>PODNOSITELJ PRIJAVE (Ime, prezime / Naziv udruge / OIB):</label>
+          <input type="text" class="form-control" placeholder="Unesite vaše ime, prezime, OIB i adresu...">
+        </div>
+        
+        <div class="form-group">
+          <label>ADRESA STANOVANJA / SJEDIŠTA I KONTAKT TELEFON/E-MAIL:</label>
+          <input type="text" class="form-control" placeholder="Unesite adresu, telefon i e-mail...">
+        </div>
+
+        <h3>DRŽAVNOM ODVJETNIŠTVU REPUBLIKE HRVATSKE (DORH)</h3>
+        <p><strong>Nadležnom Županijskom državnom odvjetništvu</strong></p>
+
+        <div class="legal-code-block">
+PREDMET: KAZNENA PRIJAVA zbog osnovane sumnje na počinjenje kaznenih djela protiv okoliša iz članka 193. (Onečišćenje okoliša) i članka 196. (Ugrožavanje okoliša otpadom) Kaznenog zakona RH, te izazivanja izravne opasnosti od ekocida i havarije na području Raškog zaljeva i Labinštine.
+
+PRIJAVLJENI SUBJEKTI / DUŽNOSNICI:
+1. Odgovorne osobe Ministarstva zaštite okoliša i zelene tranzicije RH,
+2. Odgovorne osobe inspekcijskih službi Državnog inspektorata RH (DIRH),
+3. Odgovorne osobe i članovi Uprave trgovačkog društva Holcim (Hrvatska) d.o.o.
+
+ČINJENIČNI OPIS I OBRAZLOŽENJE:
+Prijavljene osobe su, unatoč višekratnim pismenim i javnim upozorenjima građana, stručnim indicijama o geomorfološkim rizicima Raškog zaljeva, te službenim carinskim pokazateljima o uvozu 19.013 tona kemijskog otpada po prijavljenoj cijeni od svega 124 EUR, svjesno propustile provesti neovisne kontrolne mehanizme, uzorkovanje i javnu objavu cjelovitog CFD modela disperzije tekućeg CO2. Umjesto zaštite javnog interesa, prijavljeni su aktivno sudjelovali u provođenju proceduralnog i vremenskog inženjeringa (potajne izmjene zakona preko vikenda te slanje Zakona o georesursima u Sabor na dan prosvjeda u Raši 17.09.2026.), čime su stvorene pretpostavke za nastanak nesreće velikih razmjera i ugrožavanje ljudskih života.
+        </div>
+
+        <h3>Oprez! Označite uočene povrede i incidente na vašoj lokaciji:</h3>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="inc1">
+          <label for="inc1"><strong>Prekoračenje GVE emisija:</strong> Uočena pojava gustog crnog/sivog dima, mirisa klora ili amonijaka, te prekomjerno prašenje iz smjera tvornice.</label>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="inc2">
+          <label for="inc2"><strong>Nekontrolirane emisije plinova / CO₂:</strong> Curenje plinovitog ili tekućeg CO₂ pri transportu ili na lučkom pretovarnom Vežu 3.</label>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="inc3">
+          <label for="inc3"><strong>Podmorski incident / Salinitet:</strong> Pomor ribe, bentosa ili školjaka u uzgajalištima Trget uslijed izbacivanja salamure i kemikalija.</label>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="inc4">
+          <label for="inc4"><strong>Sumnjivi dovoz otpada:</strong> Nenajavljeni noćni dovoz cisterni ili kamiona s talijanskim, pazinskim ili gospićkim otpadom bez deklaracije.</label>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="inc5">
+          <label for="inc5"><strong>Prekomjerna buka:</strong> Buka noću na fasadama stambenih objekata koja prelazi dopuštenih 40 dB(A).</label>
+        </div>
+
+        <div class="form-group" style="margin-top: 15px;">
+          <label>DODATNI DOKAZI I OPAŽANJA GRAĐANA (Opis mjesta, datuma i zabilježenih učinaka):</label>
+          <textarea class="form-control" placeholder="Upišite vlastita opažanja, datume, fotografije ili video snimke koje posjedujete..."></textarea>
+        </div>
+
+        <div class="legal-code-block">
+PRAVNI TEMELJ I ZAHTJEV:
+S obzirom na to da neznanje ne oslobađa od odgovornosti dužnosnike koji su po službenoj dužnosti pozvani nadzirati opasna postrojenja, podnositelj zahtijeva hitno pokretanje istražnih radnji, privremenu obustavu rada postrojenja te podizanje optužnice za svjesni nehaj i ekocid.
+        </div>
+
+        <div class="form-group">
+          <label>Mjesto i datum popunjavanja:</label>
+          <input type="text" class="form-control" value="U Koromačnu / Raši / Labinu, dana ___________ 2026. godine">
+        </div>
+      </div>
+
+      <h3>Slom Državnog Monitoringa i Pravna Zamka za Građane</h3>
+      <ul>
+        <li><strong>Neažurirane baze podataka:</strong> Službeni javni registri onečišćavanja, kao što su <a href="https://haop.hr" target="_blank" class="external-link">HAOP sustavi</a>, <a href="https://azo.hr" target="_blank" class="external-link">ENVI portal</a> te državni <a href="https://azo.hr" target="_blank" class="external-link">Sustav ISKZL</a>, nisu sustavno i transparentno ažurirani još od <strong>2017. godine</strong>, čime je javnost onemogućena u uvidu u stvarne emisije u realnom vremenu[cite: 4].</li>
+        <li><strong>Privatizirani inspekcijski nadzor:</strong> Državni inspektorat (DIRH) u potpunosti se oslanja na mjerenja koja financira sam zagađivač (Holcim), prihvaćajući njihove interne izvještaje bez nenajavljenih neovisnih kontrola.</li>
+        <li><strong>Pravosudna opstrukcija:</strong> Ustavna i sudska praksa u RH sustavno odbacuje neovisne kemijske i ekološke nalaze koje izrade građani ili udruge, pod izlikom da "nisu prikupljeni od strane ovlaštenih akreditiranih laboratorija", stvarajući tako zatvoreni krug sistemske neodgovornosti.</li>
+      </ul>
+    </section>
+
+    <!-- POLJE 6 -->
+    <section id="polje6" class="section-card">
+      <h2>📈 POLJE 6: Scenarij Korporativnog Izlaza vs. Vizija Održive Alternative</h2>
+      
+      <h3>1. Financijski rizik i Scenarij korporativnog izlaza</h3>
+      <p>Holcim kroz projekt KO2 pokušava povući čak <strong>116,9 milijuna eura bespovratnih sredstava</strong> iz Inovacijskog fonda EU. Međutim, u slučaju pravne blokade peći ili sudskog zaustavljanja rada zbog ekoloških povreda, tvornica se suočava s ogromnim financijskim udarcem:</p>
+      <ul>
+        <li>Plaćanje ETS penala za emisije CO₂ u iznosu od preko <strong>30 milijuna eura godišnje</strong>.</li>
+        <li>Gubitak EU bespovratnih sredstava i obveza povrata do sada investiranih kapitalnih iznosa.</li>
+        <li><strong>Korporativni izlaz:</strong> Upravljačka struktura planira prebaciti kapitalne i pravne rizike na teret proračuna RH kroz novi Zakon o georesursima, privatizirajući dobit od ETS kredita, dok se potencijalno saniranje nastale štete prepušta građanima Hrvatske.</li>
+      </ul>
+
+      <h3>2. Vizija održive alternative: Prekretnica za Labinštinu</h3>
+      <p>Umjesto pretvaranja Raškog zaljeva u spalionicu europskog otpada i eksperimentalno odlagalište opasnih plinova, predlaže se strateški zaokret prema održivom i visokovrijednom pomorskom gospodarstvu:</p>
+
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Sektor</th>
+              <th>Model Teške Otpadne Industrije (Trenutno)</th>
+              <th>Vizija Održive Alternative (Predloženo)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Korištenje resursa</strong></td>
+              <td>Spaljivanje 19.000+ tona uvoznog otpada i taloženje 40 kg žive[cite: 4, 5].</td>
+              <td>Potpuna obustava suspaljivanja otpada i zatvaranje zagađujućih pogona.</td>
+            </tr>
+            <tr>
+              <td><strong>Nautički turizam</strong></td>
+              <td>Industriijska luka za prevoz ugljena, otpada i kriogenog CO₂[cite: 4].</td>
+              <td>Izgradnja elitne <strong>ACI marine</strong> u dubokim, zaštićenim uvalama Trget i Blaz.</td>
+            </tr>
+            <tr>
+              <td><strong>Marikultura</strong></td>
+              <td>Uništenje uzgajališta školjaka uslijed izbacivanja 1,5 mil. m³ salamure[cite: 4, 5].</td>
+              <td>Revitalizacija i ekološka zaštita uzgoja autohtonih pedoča i ostriga s EU oznakom izvornosti.</td>
+            </tr>
+            <tr>
+              <td><strong>Lokalno gospodarstvo</strong></td>
+              <td>Pad nekretnina 30-50%, iseljavanje i monokultura prljave industrije.</td>
+              <td>Razvoj održivog eko-turizma, pješačkih staza Skitača-Koromačno i visoke gastronomske ponude.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Smooth Scrolling Functionality for Buttons
+    function scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+  </script>
+</body>
+</html>
