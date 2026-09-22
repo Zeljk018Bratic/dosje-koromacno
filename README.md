@@ -71,15 +71,16 @@ Ovaj vodič točno prikazuje kako pristupiti cjelokupnoj arhivi, koristiti inter
 18. Sabor RH — Izvještaj o Državnom inspektoratu
 19. IRENA Istra — Podaci o emisijama Holcim Koromačno
 20. Novi list — „Prosvjed u Raši“ (15.09.2026.)
-21. https://envi-portal.azo.hr/documents
-22. https://mzozt.gov.hr/informacije-o-gospodarenju-otpadom/10745
-23. https://www.haop.hr/hr/informacijski-sustavi
-24. https://mzozt.gov.hr/UserDocsImages//UPRAVA-ZA-PROCJENU-UTJECAJA-NA-OKOLIS-ODRZIVO-GOSPODARENJE-OTPADOM/Puo//14_08_2026_Informacija_JR_tvornica_cementa_Koroma%c4%8dno.pdf#1#1
-25. https://mingo.gov.hr/UserDocsImages/UPRAVA-ZA-PROCJENU-UTJECAJA-NA-OKOLIS-ODRZIVO-GOSPODARENJE-OTPADOM/Puo/8_7_2022_sazetak_JR_holcim_koromacno.pdf
-26. https://mzozt.gov.hr/UserDocsImages//UPRAVA%20ZA%20ZA%C5%A0TITU%20PRIRODE/Prethodna%20ocjena%202026/Prethodna%20ocjena%20za%20zahvate%202026//23042026_Rjesenje_Dekarbonizacija%20tvornice%20cementa%20u%20Koromacnu.pdf
-27. https://mzozt.gov.hr/UserDocsImages/UPRAVA-ZA-PROCJENU-UTJECAJA-NA-OKOLIS-ODRZIVO-GOSPODARENJE-OTPADOM/Puo/14_08_2026_Sa%C5%BEetak_tvornica_cementa_Koroma%C4%8Dno.pdf
-28. https://balkangreenenergynews.com/rs/holcim-hrvatska-dobio-strateski-status-za-projekat-hvatanja-i-skladistenja-co2/
-29. https://istrain.hr/istrain/vijesti/6a7ec17db3ed0/tvornica-cementa-u-koromacnu-pred-velikom-promjenom-javnost-daje-misljenje-o-projektu-dekarbonizacije/vijest
-30. https://mzozt.gov.hr/dokumenti/4937?trazi=1&tip2=&datumod=&datumdo=&pojam=&page=15
+21. https://www.pokazatelji.hr/tema/uvoz-i-izvoz-otpada?sfnsn=scwspmo
+22. https://envi-portal.azo.hr/documents
+23. https://mzozt.gov.hr/informacije-o-gospodarenju-otpadom/10745
+24. https://www.haop.hr/hr/informacijski-sustavi
+25. https://mzozt.gov.hr/UserDocsImages//UPRAVA-ZA-PROCJENU-UTJECAJA-NA-OKOLIS-ODRZIVO-GOSPODARENJE-OTPADOM/Puo//14_08_2026_Informacija_JR_tvornica_cementa_Koroma%c4%8dno.pdf#1#1
+26. https://mingo.gov.hr/UserDocsImages/UPRAVA-ZA-PROCJENU-UTJECAJA-NA-OKOLIS-ODRZIVO-GOSPODARENJE-OTPADOM/Puo/8_7_2022_sazetak_JR_holcim_koromacno.pdf
+27. https://mzozt.gov.hr/UserDocsImages//UPRAVA%20ZA%20ZA%C5%A0TITU%20PRIRODE/Prethodna%20ocjena%202026/Prethodna%20ocjena%20za%20zahvate%202026//23042026_Rjesenje_Dekarbonizacija%20tvornice%20cementa%20u%20Koromacnu.pdf
+28. https://mzozt.gov.hr/UserDocsImages/UPRAVA-ZA-PROCJENU-UTJECAJA-NA-OKOLIS-ODRZIVO-GOSPODARENJE-OTPADOM/Puo/14_08_2026_Sa%C5%BEetak_tvornica_cementa_Koroma%C4%8Dno.pdf
+29. https://balkangreenenergynews.com/rs/holcim-hrvatska-dobio-strateski-status-za-projekat-hvatanja-i-skladistenja-co2/
+30. https://istrain.hr/istrain/vijesti/6a7ec17db3ed0/tvornica-cementa-u-koromacnu-pred-velikom-promjenom-javnost-daje-misljenje-o-projektu-dekarbonizacije/vijest
+31. https://mzozt.gov.hr/dokumenti/4937?trazi=1&tip2=&datumod=&datumdo=&pojam=&page=15
 https://envi-metapodaci.azo.hr/geonetwork/srv/hrv/catalog.search#/search?resultType=details&type=service&from=1&to=20&sortBy=relevance
 
