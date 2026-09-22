@@ -40,6 +40,14 @@ Za sve korisnike, medije i neovisne istraživače koji žele vizualni dokaz o au
 
 Ovaj vodič točno prikazuje kako pristupiti cjelokupnoj arhivi, koristiti interaktivne gumb-skretnice, verificirati Granične Vrijednosti Emisija (HCl/HF) i ispravno koristiti ugrađeni obrazac kaznene prijave.
 
+### 7. 📚 Službeni Izvori i Dokazna Dokumentacija (Quelle)
+
+...
+31. **Općinsko vijeće Općine Raša (21.09.2026.)** – Službeni transkripti i audio arhiva sjednice Općinskog vijeća o spaljivanju otpada u cementari Holcim Koromačno. 
+    * **Izvorne audio datoteke:** `ABedrina2209.mp3` (1:46), `LKnapic2209.mp3` (1:11), `MPlazibat2209.mp3` (1:29)[cite: 6].
+    * **Ključni nalaz:** Službeno izglasana potvrda o dvostrukim prekoračenjima TOC-a (Zahtjev 3) te javno priznanje MO Koromačno o porastu emisija predkalcinatora za 10–15 puta iznad projiciranih vrijednosti iz Studije utjecaja na okoliš[cite: 6].
+    * **Arhivski status:** Trajno arhivirano na repozitoriju i predano na Wayback Machine permalink[cite: 6].
+
 
 **Izvori:**
 
