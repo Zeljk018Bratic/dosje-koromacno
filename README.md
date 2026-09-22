@@ -40,6 +40,11 @@ Za sve korisnike, medije i neovisne istraživače koji žele vizualni dokaz o au
 
 Ovaj vodič točno prikazuje kako pristupiti cjelokupnoj arhivi, koristiti interaktivne gumb-skretnice, verificirati Granične Vrijednosti Emisija (HCl/HF) i ispravno koristiti ugrađeni obrazac kaznene prijave.
 
+### 📘 6.a Usporedni dokazni elaborat
+👉 **[📘 Usporedni dokazni elaborat](docs/usporedni-dokazni-elaborat.md)**
+
+Elaborat povezuje Poglavlje VII o prekograničnom prometu RDF/SRF otpada sa zapisnikom Općinskog vijeća Raša i sažima njihovu dokaznu i pravnu sinergiju za daljnje institucionalno postupanje.
+
 ### 7. 📚 Službeni Izvori i Dokazna Dokumentacija (Quelle)
 
 ...
@@ -84,3 +89,11 @@ Ovaj vodič točno prikazuje kako pristupiti cjelokupnoj arhivi, koristiti inter
 31. https://mzozt.gov.hr/dokumenti/4937?trazi=1&tip2=&datumod=&datumdo=&pojam=&page=15
 https://envi-metapodaci.azo.hr/geonetwork/srv/hrv/catalog.search#/search?resultType=details&type=service&from=1&to=20&sortBy=relevance
 
+### 📄 PDF dokumentacija
+
+* [`poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf`](poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) — forenzičko poglavlje o prekograničnom i unutrašnjem prometu RDF/SRF otpada te tehnološko-pravnom okviru slučaja.
+* [`zapisnik-opcinsko-vijece-rasa-21-09-2026.pdf`](zapisnik-opcinsko-vijece-rasa-21-09-2026.pdf) — službeni zapisnik i zaključci sjednice Općinskog vijeća Raša od 21. rujna 2026. s transkriptnim i institucionalnim dokazima.
+
+### © Licenca
+
+Sadržaj ovog dosjea dostupan je za slobodnu upotrebu u svrhu zaštite okoliša, informiranja javnosti i pravnog postupanja. Svaki dozvoljeni prijenos treba navoditi izvorni repozitorij `Zeljk018Bratic/dosje-koromacno`.
