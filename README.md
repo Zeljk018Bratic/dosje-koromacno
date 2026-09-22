@@ -34,6 +34,12 @@ Kada preuzmete, ispunite i vlastoručno potpišete (ili ovjerite pečatom udruge
 *   **Fond za zaštitu okoliša i energetsku učinkovitost (FZOEU):** `kontakt@fzoeu.hr` (upiti vezani uz ugovore o sanacijama)
 *   **Službeni kontakt za medije (MZOZT):** `press@mzozt.hr` (dostava dosjea novinarima radi razbijanja medijske blokade)
 
+### 📸 6. Vizualni priručnik i verifikacija sustava (ScribeHow)
+Za sve korisnike, medije i neovisne istraživače koji žele vizualni dokaz o autentičnosti, strukturi i načinu navigacije kroz ovu bazu podataka, kreiran je službeni korak-po-korak priručnik s automatskim screenshotovima i prikazom tijeka rada:
+👉 **[POGLEDAJ VIZUALNI VODIČ ZA NAVIGACIJU KROZ DOSJE](https://scribehow.com/o/q9itr4owQBup8ORI-zOxDQ/viewer/Accessing_And_Navigating_The_Dosje_Koromacno_Archive__K_Zk_xgIQOGh20GtiF-Dew)**
+
+Ovaj vodič točno prikazuje kako pristupiti cjelokupnoj arhivi, koristiti interaktivne gumb-skretnice, verificirati Granične Vrijednosti Emisija (HCl/HF) i ispravno koristiti ugrađeni obrazac kaznene prijave.
+
 
 **Izvori:**
 
