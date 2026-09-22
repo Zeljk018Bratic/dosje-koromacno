@@ -20,6 +20,20 @@ Ako želite imati ovaj alat lokalno na svom računalu ili mobitelu bez pristupa 
 * U gornjem desnom kutu koda klikni na ikonu za preuzimanje (**Download raw file**).
 * Spremite datoteku na svoj uređaj. Možete je otvoriti u bilo kojem internetskom pregledniku (Chrome, Safari, Firefox) i radit će potpuno interaktivno i bez internetske veze.
 
+### ⚖️ 4. Pravni poziv na Aarhušku konvenciju i pravo na pristup informacijama
+Sukladno **Aarhuškoj konvenciji** (Konvencija o pristupu informacijama, sudjelovanju javnosti u odlučivanju i pristupu pravosuđu u pitanjima okoliša) te važećem **Zakonu o pravu na pristup informacijama (NN 25/13)**, tijela javne vlasti dužna su građanima i udrugama osigurati potpun, pravovremen i neobrisiv uvid u sve relevantne okolišne parametre, bez obveze dokazivanja pravnog interesa. 
+
+Svako uskraćivanje, friziranje ili zakašnjelo validiranje sirovih podataka (RAW DATA) o emisijama u zrak i more, kao i prikrivanje pokusnog rada postrojenja koji traje od studenoga 2025. godine, predstavlja izravno kršenje međunarodnog i ustavnog prava.
+
+### 📧 5. Kamo poslati popunjenu i potpisanu kaznenu prijavu?
+Kada preuzmete, ispunite i vlastoručno potpišete (ili ovjerite pečatom udruge) predložak kaznene prijave iz ovog sustava, zakonski je dužni dostaviti izravno na službene adrese nadležnih državnih institucija i inspekcija:
+
+*   **Državno odvjetništvo RH (DORH):** `tajnistvo@dorh.hr` (glavna adresa za zaprimanje kaznenih prijava)
+*   **Ministarstvo zaštite okoliša i zelene tranzicije:** `javnost@mzozt.hr` i `press@mzozt.hr` (zahtjevi za uvid i prijave onečišćenja)
+*   **Državni inspektorat RH (DIRH) - Inspekcija zaštite okoliša:** `prijave@dirh.hr` (hitno postupanje i nenajavljeni nadzor)
+*   **Fond za zaštitu okoliša i energetsku učinkovitost (FZOEU):** `kontakt@fzoeu.hr` (upiti vezani uz ugovore o sanacijama)
+*   **Službeni kontakt za medije (MZOZT):** `press@mzozt.hr` (dostava dosjea novinarima radi razbijanja medijske blokade)
+
 
 **Izvori:**
 
