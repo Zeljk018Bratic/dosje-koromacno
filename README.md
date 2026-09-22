@@ -1,4 +1,25 @@
 # dosje-koromacno
+## 🚀 Kako koristiti ovaj interaktivni sustav
+
+Ovaj repozitorij stvoren je s ciljem potpune transparentnosti i naoružavanja građana Labinštine i Istre neoborivim inženjersko-pravnim činjenicama.
+
+### 🌐 1. Pokretanje interaktivne stranice uživo
+Cjelokupni istraživački dosje, kronologija, proračuni podmorskog ekocida i interaktivni obrazac kaznene prijave aktivni su i dostupni u realnom vremenu na službenom linku projekta:
+👉 **[OTVORI DOSJE KOROMAČNO UŽIVO]( https://zeljk018bratic.github.io/dosje-koromacno/)** https://zeljk018bratic.github.io/dosje-koromacno/
+
+
+### 🖨️ 2. Kako automatski generirati fizički letak i prijavu (Ctrl + P)
+Stranica je programski optimizirana za ispis i cestu. Kada otvorite gornji link:
+1. Pritisnite **Ctrl + P** (ili *Cmd + P* na Macu) ili kliknite na crveni gumb **"Ispiši Letak"** na vrhu stranice.
+2. Sustav će automatski sakriti sve digitalne navigacijske gumbe, izbornike i tamne pozadine.
+3. Na pisač će vam izaći čisti, crno-bijeli pravni dokument i formalni obrazac kaznene prijave za DORH, potpuno spreman za ispis, vlastoručni potpis i dijeljenje na terenu i prosvjedima.
+
+### 📂 3. Kako preuzeti izvorni kod za vlastitu upotrebu
+Ako želite imati ovaj alat lokalno na svom računalu ili mobitelu bez pristupa internetu:
+* Kliknite na datoteku `index.html` ovdje na GitHubu.
+* U gornjem desnom kutu koda klikni na ikonu za preuzimanje (**Download raw file**).
+* Spremite datoteku na svoj uređaj. Možete je otvoriti u bilo kojem internetskom pregledniku (Chrome, Safari, Firefox) i radit će potpuno interaktivno i bez internetske veze.
+
 
 **Izvori:**
 
