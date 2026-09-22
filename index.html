@@ -310,6 +310,10 @@
       color: var(--text-main);
       cursor: pointer;
       font-size: 0.95rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      width: 100%;
     }
 
     .legal-code-block {
@@ -544,7 +548,7 @@
       <p>U slučaju nagle dekompresije, puknuća cjevovoda na pretovarnom Vežu 3 ili katastrofalne rupture spremnika (BLEVE efekt):</p>
       <ul>
         <li>Tekući CO₂ instantno ekspandira za približno <strong>535 puta</strong> u plinovitu fazu.</li>
-        <li>Gustoća plinovitog CO₂ iznosi oko <strong>1,98 kg/m³</strong>, što ga čini <strong>1,5 puta težim od zraka</strong> ($1,2 \text{ kg/m}^3$)[cite: 4, 5].</li>
+        <li>Gustoća plinovitog CO₂ iznosi oko <strong>1,98 kg/m³</strong>, što ga čini <strong>1,5 puta težim od zraka</strong> (1,2 kg/m³)[cite: 4, 5].</li>
         <li>Hladni, teški plinski oblak ne ditiže se u visinu nego se ponaša kao tekućina – teče niz padine i puni sve niže geološke depresije, klance i morske uvale.</li>
       </ul>
 
@@ -780,7 +784,7 @@
         </ol>
       </details>
      <!-- TABLICA GRANIČNIH VRIJEDNOSTI EMISIJA (GVE) S TOC PARAMETROM -->
-<div class="table-container" style="margin-top: 1.5rem; overflow-x: auto;">
+<div class="table-responsive" style="margin-top: 1.5rem; overflow-x: auto;">
   <table style="width: 100%; border-collapse: collapse; background: #121824; color: #e2e8f0; border: 1px solid #334155; font-size: 0.9rem;">
     <thead>
       <tr style="background-color: #1e293b; border-bottom: 2px solid #475569; text-align: left;">
@@ -907,28 +911,23 @@ Prijavljene osobe su, unatoč višekratnim pismenim i javnim upozorenjima građa
         <h3>Oprez! Označite uočene povrede i incidente na vašoj lokaciji:</h3>
 
         <div class="checkbox-group">
-          <input type="checkbox" id="inc1">
-          <label for="inc1"><strong>Prekoračenje GVE emisija:</strong> Uočena pojava gustog crnog/sivog dima, mirisa klora ili amonijaka, te prekomjerno prašenje iz smjera tvornice.</label>
+          <label for="inc1"><input type="checkbox" id="inc1"><span><strong>Prekoračenje GVE emisija:</strong> Uočena pojava gustog crnog/sivog dima, mirisa klora ili amonijaka, te prekomjerno prašenje iz smjera tvornice.</span></label>
         </div>
 
         <div class="checkbox-group">
-          <input type="checkbox" id="inc2">
-          <label for="inc2"><strong>Nekontrolirane emisije plinova / CO₂:</strong> Curenje plinovitog ili tekućeg CO₂ pri transportu ili na lučkom pretovarnom Vežu 3.</label>
+          <label for="inc2"><input type="checkbox" id="inc2"><span><strong>Nekontrolirane emisije plinova / CO₂:</strong> Curenje plinovitog ili tekućeg CO₂ pri transportu ili na lučkom pretovarnom Vežu 3.</span></label>
         </div>
 
         <div class="checkbox-group">
-          <input type="checkbox" id="inc3">
-          <label for="inc3"><strong>Podmorski incident / Salinitet:</strong> Pomor ribe, bentosa ili školjaka u uzgajalištima Trget uslijed izbacivanja salamure i kemikalija.</label>
+          <label for="inc3"><input type="checkbox" id="inc3"><span><strong>Podmorski incident / Salinitet:</strong> Pomor ribe, bentosa ili školjaka u uzgajalištima Trget uslijed izbacivanja salamure i kemikalija.</span></label>
         </div>
 
         <div class="checkbox-group">
-          <input type="checkbox" id="inc4">
-          <label for="inc4"><strong>Sumnjivi dovoz otpada:</strong> Nenajavljeni noćni dovoz cisterni ili kamiona s talijanskim, pazinskim ili gospićkim otpadom bez deklaracije.</label>
+          <label for="inc4"><input type="checkbox" id="inc4"><span><strong>Sumnjivi dovoz otpada:</strong> Nenajavljeni noćni dovoz cisterni ili kamiona s talijanskim, pazinskim ili gospićkim otpadom bez deklaracije.</span></label>
         </div>
 
         <div class="checkbox-group">
-          <input type="checkbox" id="inc5">
-          <label for="inc5"><strong>Prekomjerna buka:</strong> Buka noću na fasadama stambenih objekata koja prelazi dopuštenih 40 dB(A).</label>
+          <label for="inc5"><input type="checkbox" id="inc5"><span><strong>Prekomjerna buka:</strong> Buka noću na fasadama stambenih objekata koja prelazi dopuštenih 40 dB(A).</span></label>
         </div>
 
         <div class="form-group" style="margin-top: 15px;">
@@ -1063,6 +1062,7 @@ S obzirom na to da neznanje ne oslobađa od odgovornosti dužnosnike koji su po 
         });
       }
     }
+
   </script>
 </body>
 </html>
