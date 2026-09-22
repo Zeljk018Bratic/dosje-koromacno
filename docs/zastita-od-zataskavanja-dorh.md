@@ -26,19 +26,19 @@ Ova analiza razotkriva dva sistemska obrasca postupanja tijela državne vlasti i
 
 Ako želimo izbjeći da kaznena prijava za Koromačno (Poglavlje VI) završi na isti način u ladici DORH-a, moramo u startu primijeniti tri pravna osigurača:
 
-### 1. Inzistirajte na statusu "Oštećenika", a ne samo "Prijavitelja"
+### 1\. Inzistirajte na statusu "Oštećenika", a ne samo "Prijavitelja"
 
 Kada podnosite kaznenu prijavu ODO Pula, podnositelji (građani, stanovnici Koromačna/Raše, udruga) moraju se formalno deklarirati kao **OŠTEĆENICI** (osobe čije je zdravlje i imovina izravno ugrožena emisijama).
 
 **Zašto je ovo presudno?** Prema Zakonu o kaznenom postupku (ZKP), ako DORH odbaci prijavu običnog građanina, nema obvezu dostaviti mu detaljno rješenje. Ali ako odbaci prijavu oštećenika, DORH mu po zakonu **MORA** dostaviti Rješenje o odbačaju s poukom o pravnom lijeku, čime oštećenik dobiva pravo u roku od **8 dana** samostalno preuzeti kazneni progon pred sudom (supstitucija).
 
-### 2. Podaci o okolišu štiti Aarhuška konvencija (okolišni podaci ne mogu biti tajna)
+### 2\. Podaci o okolišu štiti Aarhuška konvencija (okolišni podaci ne mogu biti tajna)
 
 Dok se u slučajevima državnih nekretnina tijela pozivaju na "tajnost istrage" ili "poslovnu tajnu", podaci o onečišćenju okoliša, emisijama i kancerogenim tvarima po Aarhuškoj konvenciji i Zakonu o zaštiti okoliša **NE MOGU BITI TAJNI**.
 
 Svako skrivanje mjernih podataka o TOC-u, klorovodiku ili analizi sedimenta predstavlja izravno kršenje međunarodnog ugovora.
 
-### 3. Interpelacija i pritisak preko Sabora i Antikorupcijskog vijeća
+### 3\. Interpelacija i pritisak preko Sabora i Antikorupcijskog vijeća
 
 Iz objave je vidljivo da u Saboru postoje zastupnici (poput Dalije Orešković i članova Odbora za zaštitu okoliša) koji aktivno otvaraju teme zataškavanja analitičkih izvješća.
 
@@ -49,11 +49,11 @@ Iz objave je vidljivo da u Saboru postoje zastupnici (poput Dalije Orešković i
 ## Sažetak: Tri pravna osigurača
 
 | Red | Osigurač | Pravni učinak |
-| :--- | :--- | :--- |
-| 1. | **Status oštećenika** | Pravo na Rješenje o odbačaju + supstitucija u roku od 8 dana |
-| 2. | **Aarhuška konvencija** | Okolišni podaci ne mogu biti svrstani u tajne |
-| 3. | **Sabor / Antikorupcijsko vijeće** | Politički i institucionalni pritisak na DORH/DIRH |
+| :---- | :---- | :---- |
+| 1\. | **Status oštećenika** | Pravo na Rješenje o odbačaju \+ supstitucija u roku od 8 dana |
+| 2\. | **Aarhuška konvencija** | Okolišni podaci ne mogu biti svrstani u tajne |
+| 3\. | **Sabor / Antikorupcijsko vijeće** | Politički i institucionalni pritisak na DORH/DIRH |
 
 ---
 
-> **Koromačno ne smije završiti kao Slite (propali švedski CCS) ni kao Sisak (bageri unatoč prosvjedima). Ključ je u tome da se hitno spriječi legalizacija zahvata u prostornom planu i da se kaznena prijava podnese kao oštećenik, ne kao anonimni građanin.**
+> **Koromačno ne smije završiti kao Slite (propali švedski CCS) ni kao Sisak (bageri unatoč prosvjedima). Ključ je u tome da se hitno spriječi legalizacija zahvata u prostornom planu i da se kaznena prijava podnese kao oštećenik, ne kao anonimni građanin.**  
