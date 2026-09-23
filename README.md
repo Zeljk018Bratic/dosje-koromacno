@@ -260,6 +260,8 @@ audio/MPlazibat2209.mp3
 /audio/
 Transkript i audio zapis izjave predsjednika MO Koromačno Milenka Plazibata.
 
+(Izvor br. 34):Cjeloviti transkript konferencije za medije platforme Možemo od 22. rujna 2026. o saborskim izmjenama Zakona o otpadu i slomu u Lici uvodi se kao službeni Izvor br. 34 (Quelle). https://github.com/Zeljk018Bratic/dosje-koromacno/blob/main/docs/Vladine%20izmjene%20Zakona%20ne%C4%87e%20rije%C5%A1iti%20problem%20otpada.md https://www.facebook.com/mozemo.hr/videos/1310093527756846
+
 https://github.com/Zeljk018Bratic/dosje-koromacno/blob/main/README.md
 
 **Izvori:**
