@@ -48,6 +48,14 @@ Kada preuzmete, ispunite i vlastoručno potpišete (ili ovjerite pečatom udruge
 *   **Državni inspektorat RH (DIRH) - Inspekcija zaštite okoliša:** `prijave@dirh.hr` (hitno postupanje i nenajavljeni nadzor)
 *   **Fond za zaštitu okoliša i energetsku učinkovitost (FZOEU):** `kontakt@fzoeu.hr` (upiti vezani uz ugovore o sanacijama)
 *   **Službeni kontakt za medije (MZOZT):** `press@mzozt.hr` (dostava dosjea novinarima radi razbijanja medijske blokade)
+  
+### 5.a. 📧 🇪🇺 UPUTE ZA PROSLIJEĐIVANJE EUROPSKOJ AGENCIJI ZA OKOLIŠ (EEA)
+Ove dvije točne natuknice služe za sve građane na terenu kako bi prijava automatski otišla na prave europske adrese uz priloženu službenu PDF dokumentaciju 
+iz našeg /docs/ foldera:Službeni e-mail i primatelji: Tekst prijave (zajedno s priloženim PDF dokumentima o forenzici prometa otpada, službenim ZPPI-jem te zapisnikom Općinskog vijeća Raša) šalje se izravno na službene adrese Europske agencije za okoliš (EEA) i Europske komisije za okoliš: eea.enquiries@eea.europa.eu i env-info@ec.europa.eu. U polje Subject (Naslov) obavezno upišite: URGENT: Aarhus Convention Violation and EcoCide in Koromacno (Croatia) - Class 45 bar LCO2 risk.Engleski popratni uvod (Samo kopirajte na početak maila): Kako bi europski inspektori odmah shvatili o čemu se radi, na sam početak e-maila iznad teksta prijave stavite ove dvije rečenice:"Dear Sir/Madam, we are officially reporting a severe violation of the Aarhus Convention and environmental laws by the local authorities in Raša and the Ministry in Croatia regarding the illegal 48-hour weekend e-Consultation and experimental 45-bar LCO2 terminal in Koromačno. Please find attached the full environmental and legal dossier from our repository, including chemical evidence of 1.06% chlorine waste incineration."
+
+### 5.b. 📱 GITHUB INFOGRAFIKA: POŠALJI ZPPI U 3 KORAKA (Format za mobitel)[ KORAK 1: KOPIRAJ ] ──► [ KORAK 2: UPIŠI PODATKE ] ──► [ KORAK 3: POŠALJI ]
+(Označi tekst Zahtjeva)     (Unesi Ime, OIB i Adresu)     (Klikni na protokol@rasa.hr)
+KORAK: Kopiraj tekst – Drži prst na tekstu službenog Zahtjeva ispod ove upute i kopiraj ga u cijelosti.KORAK: Upiši svoje podatke – Otvori svoj e-mail ili obrazac na stranici Općine Raša i na samom dnu upiši svoje ime, prezime, adresu i OIB.KORAK: Pošalji na Protokol – U polje primatelja upiši protokol@rasa.hr (ili kopiraj u obrazac na rasa.hr/kutak-za-gradane/postavite-pitanje-2/) i stisni POŠALJI!Sustav te po zakonu mora izvijestiti i poslati podatke u roku od 15 dana! Ne dajte da vas varaju, uzmite kontrolu!
 
 ### 📸 6. Vizualni priručnik i verifikacija sustava (ScribeHow)
 Za sve korisnike, medije i neovisne istraživače koji žele vizualni dokaz o autentičnosti, strukturi i načinu navigacije kroz ovu bazu podataka, kreiran je službeni korak-po-korak priručnik s automatskim screenshotovima i prikazom tijeka rada:
