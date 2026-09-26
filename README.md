@@ -72,6 +72,83 @@ Ovaj vodič točno prikazuje kako pristupiti cjelokupnoj arhivi, koristiti inter
 👉 **[📘 Usporedni dokazni elaborat](docs/usporedni-dokazni-elaborat.md)**
 
 Elaborat povezuje Poglavlje VII o prekograničnom prometu RDF/SRF otpada sa zapisnikom Općinskog vijeća Raša i sažima njihovu dokaznu i pravnu sinergiju za daljnje institucionalno postupanje.
+👉 ** 📘 Analiza – povučena Studija, projekt KOdeCO i zdravlje  (https://github.com/Zeljk018Bratic/dosje-koromacno/blob/1976d9de1b0040b511376f424a450fdd739abb3a/docs/Analiza%20%E2%80%93%20povu%C4%8Dena%20Studija%2C%20projekt%20KOdeCO%20i%20zdravlje%20Povu%C4%8Dena%20Studija
+(docs/Analiza – povučena Studija, projekt KOdeCO i zdravlje Povučena Studija)                                              Analiza – povučena Studija, projekt KOdeCO i zdravlje
+Povučena Studija (KLASA: UP/I-351-03/25-08/46)
+
+
+Holcim je 6. listopada 2025. podnio zahtjev za procjenu utjecaja na okoliš za sustav hvatanja i ukapljivanja CO₂ (dio projekta KOdeCO net zero). Javna rasprava bila je planirana od 17. kolovoza do 16. rujna 2026.
+
+
+Dana 28. kolovoza 2026. Holcim je odustao od zahtjeva. Ministarstvo je istog dana obustavilo postupak.
+
+
+Razlog: usklađivanje s izmjenama Prostornog plana Općine Raša i premještanjem dijelova infrastrukture (spremnici CO₂, luka, ispusti) nakon pritiska lokalne zajednice. Holcim najavljuje novu studiju nakon usvajanja izmjena plana.
+Projekt KOdeCO
+Faza 1: povećanje udjela alternativnih goriva (pretkalcinator + sustav za izuzimanje klorida) – cilj ~92 % energije iz otpada.
+Faza 2 (KOdeCO net zero): hvatanje ~366–367 tisuća tona CO₂ godišnje, ukapljivanje, privremeno skladištenje i trajno geološko skladištenje ispod Sredozemlja.
+Vrijednost: preko 230–350 milijuna eura, od čega ~117 milijuna eura iz EU Inovacijskog fonda.
+Cilj: prva ugljično neutralna cementara u Hrvatskoj i Mediteranu (planirani početak rada sustava hvatanja oko 2028.–2030.).
+Dozvola Holcima
+
+
+Holcim ima važeću dozvolu za gospodarenje otpadom (postupak R1) i okolišnu dozvolu koje pokrivaju određene EWC kodove neopasnog otpada (uključujući 19 12 10 – gorivo iz otpada, otpadne gume, ulja, RDF/GIO itd.). Točna i potpuna lista kodova nije u cijelosti javno dostupna u sažecima – zato je zahtjev u ZPPI-u kritičan.
+Utjecaj na zdravlje
+Cementne peći rade na visokim temperaturama (~1450 °C) što teoretski uništava dioksine i furane.
+Kontinuirano se mjere TOC, HCl, HF, NOx, SO₂, prašina; dioksini/furani i dio teških metala samo periodički (obično 2× godišnje).
+Lokalni izvori (Mjesni odbor, vijećnici) navode prekoračenja TOC-a i ponekad HCl/NOx/SO₂ u 2026.
+Neovisni stručnjaci (npr. Renato Šarc) upozoravaju da „neopasan“ status ne jamči tehničku prikladnost i da povišen klor može utjecati na proces i emisije.
+Dugoročni zdravstveni učinci (kumulativno izlaganje, posebno osjetljive skupine) ovise o stvarnim emisijama i kvaliteti monitoringa – zato su sirovi AMS podaci i javni paneli ključni.
+Analiza EWC kodova i zakonskog okvira
+1. Što se javno zna o otpadu iz Gospića (big-bag vreće)
+Vlada i Ministarstvo opisuju otpad kao:
+otpadnu plastiku,
+plastiku i gume,
+ostali otpad nastao mehaničkom obradom otpada.
+Klasificiran je kao neopasan.
+
+
+Točne EWC (kataloške) šifre nisu javno objavljene u odluci Vlade ni u priopćenjima Ministarstva/Holcima/Nexe.
+
+
+Najčešći kodovi koji odgovaraju tom opisu su:
+EWC kod
+Opis
+Status
+Napomena
+19 12 04
+Plastika i guma
+Neopasan
+Čest kod za plastični otpad
+19 12 10
+Gorivi otpad (gorivo dobiveno iz otpada – RDF/SRF/GIO)
+Neopasan
+Standardni kod za alternativno gorivo u cementarama
+19 12 12
+Ostali otpaci od mehaničke obrade otpada
+Neopasan
+Često se koristi za mješavine
+19 12 11*
+Ostali otpaci od mehaničke obrade koji sadrže opasne tvari
+Opasan
+Kod sa zvjezdicom
+
+U širem kontekstu ilegalnog odlaganja u Gospiću (zakopani dio) stručnjaci i mediji spominju sumnje na pogrešnu deklaraciju (npr. opasni otpad deklariran kao 19 12 12 umjesto 19 12 11*). Za big-bag dio (650 tona) službeno se tvrdi da su sve analize (uključujući 48 uzoraka koje spominje ministrica) pokazale neopasan otpad.
+2. Zakonski okvir (Hrvatska + EU)
+Zakon o gospodarenju otpadom (NN 84/21 i izmjene) + Pravilnik o katalogu otpada.
+Cementare smiju koristiti otpad kao alternativno gorivo samo postupkom R1 (korištenje otpada uglavnom kao goriva ili drugog načina dobivanja energije).
+Dozvola za gospodarenje otpadom + okolišna dozvola moraju izričito sadržavati konkretne EWC kodove koje postrojenje smije prihvatiti.
+Holcim ima važeće dozvole za R1 i za niz alternativnih goriva (otpadne gume, otpadna ulja, RDF/GIO, mesno-koštano brašno, muljevi itd.). Točne liste kodova nalaze se u njihovoj dozvoli za gospodarenje otpadom i okolišnoj dozvoli (izmjene iz 2018., 2021. i kasnije).
+„Neopasan“ status je pravna klasifikacija. On ne znači automatski da je materijal tehnički prikladan kao gorivo. Cementara ima pravo (i obvezu) raditi vlastite ulazne analize (kalorijska vrijednost, sadržaj klora, teških metala, vlage, granulometrija…). Ako pošiljka ne zadovolji njihove interne specifikacije, mogu je odbiti.
+Stručnjak Renato Šarc (Montanuniversität Leoben) javno je upozorio da dostupne analize gospićkog otpada pokazuju ograničenja za uporabu u cementarama (npr. povišen klor) i da „neopasan“ ≠ „prikladan kao gorivo“.
+
+3. Ključne točke za ZPPI i pitanja
+Zato je u ZPPI-u kritično tražiti:
+točan popis EWC kodova svake pošiljke,
+rezultate ulaznih analiza (posebno klor, teški metali, kalorična vrijednost),
+potvrdu da je svaki kod izričito naveden u važećoj dozvoli Holcima,
+presliku relevantnih dijelova dozvole.
+Bez tih podataka nije moguće provjeriti je li postupak u potpunosti unutar zakonskih i dozvoljenih okvira.
 
 ### 7. 📚 Službeni Izvori i Dokazna Dokumentacija (Quelle)
 
