@@ -40,9 +40,10 @@ Sukladno **Aarhuškoj konvenciji** (Konvencija o pristupu informacijama, sudjelo
 
 Svako uskraćivanje, friziranje ili zakašnjelo validiranje sirovih podataka (RAW DATA) o emisijama u zrak i more, kao i prikrivanje pokusnog rada postrojenja koji traje od studenoga 2025. godine, predstavlja izravno kršenje međunarodnog i ustavnog prava.
 
-👉  ** 📧 1. Dopunjeni ZPPI predložak (precizniji zahtjev za EWC + analize)
+👉 **  📧 1. Dopunjeni ZPPI predložak (precizniji zahtjev za EWC + analize)
+** (https://github.com/Zeljk018Bratic/dosje-koromacno/blob/352da544f7771e06a8595f3d21d16a4419e73848/docs/dopunjeni-zppi-predlozak.md)                                                                                                                 📧 1. Dopunjeni ZPPI predložak (precizniji zahtjev za EWC + analize)
 Predmet: Zahtjev za pristup informacijama – EWC kodovi, ulazne analize, AMS podaci, vagarski listovi i status nadzora
-https://github.com/Zeljk018Bratic/dosje-koromacno/blob/main/docs/Dopunjeni%20ZPPI%20predlo%C5%BEak
+
 Dopunjeni ZPPI predložak (precizniji zahtjev za EWC + analize)
 Predmet: Zahtjev za pristup informacijama – EWC kodovi, ulazne analize, AMS podaci, vagarski listovi i status nadzora
 Poštovani,
