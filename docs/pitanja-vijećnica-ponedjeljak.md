@@ -1,0 +1,29 @@
+1. **Gradonačelniče Blaškoviću, vi ste politički ponikli u IDS-u, a danas nastupate kao "nezavisni", primjenjujući identičnu političku matricu interesno povezane obitelji. Zašto ste pokušali prebaciti cjelokupnu odgovornost na Općinu Rašu i njihovo vijeće, kao da se otrovni dimni oblak i ekocid ne tiču Labina i Vaših birača? Budući da ste službeno i javno upozoreni na 148 TOC prekoračenja i sumnjivi uvoz kemijskog otpada iz Italije, svjesni ste da Vas neznanje više ne oslobađa kaznene odgovornosti. Ako sami ne razumijete kako Vas zakon držaju odgovornim za prikrivanje kroz svjesni nehaj, zašto ne prepustite nekom AI alatu (poput Claudea ili ChatGPT-a) da Vam analizira članke 193\. i 196\. Kaznenog zakona pa da javno pred nama pročitate odgovor?**  
+2. **Sazivate li ovaj hitni sastanak s mještanima Kapelice u ponedjeljak u 18 sati samo zato da stvorite paravan demokracije, maknete ljude s ceste i u tišini osigurate prolaz kamionima i cisternama kroz dio prometnice koji je pod Vašom izravnom jurisdikcijom? Ako tvrdite da Labin nema ovlasti nad tvornicom u Koromačnu, zašto onda organizirate ovu predstavu umjesto da zakonski blokirate prolaz teških teretnih vozila kroz naseljeno područje Kapelice?**  
+3. **Možete li ovdje, pred cijelim narodom Labinštine, dati javno obećanje i potpisati da ćete, u slučaju da Holcim sutra proglasi bankrot ili proda postrojenje, jamčiti svojom osobnom imovinom i imovinom članova svoje obitelji za sve troškove zdravstvenog liječenja naše djece i sanaciju zagađenog tla i zraka? Ako niste spremni jamčiti imovinom, s kojim pravom držite narod za budale i tražite od nas konformizam i povjerenje u institucije koje su nas u Pazinu već izdale?**  
+4. **Gradonačelniče, na 12\. sjednici Gradskog vijeća 22\. rujna jednoglasno je usvojen zaključak kojim se traži kontinuirano mjerenje svih parametara onečišćenja, uključujući one koji se trenutačno ne mjere, te osnivanje fonda za neovisna mjerenja. Kada će Grad Labin konkretno zatražiti od Holcima i nadležnih tijela postavljanje javno dostupnog panela s podacima o kvaliteti zraka u stvarnom vremenu i tko će financirati taj monitoring?**  
+5. **U siječnju 2025\. zbog 11 zapaljenih kanti na Katurama hitno ste reagirali, govorilo se o dioksinima i furanima, uveli su se pojačane mjere i iz proračuna su se izdvojila znatna sredstva za podzemne kontejnere i nadzor. Kako isti princip zaštite građana i imovine primjenjujete na kontinuiranu oporabu otpada u Koromačnu, gdje se radi o znatno većim količinama i potencijalno istim spojevima? Gdje su javni paneli i tko snosi odgovornost ako se utvrde prekoračenja?**  
+6. **Sukob interesa / reizbor:** Je li pročelnica Loreta Blašković prošla isti postupak javnog reizbora kao ostali pročelnici? Ako nije, koji je formalni pravni osnov za izuzeće i je li to usklađeno sa Zakonom o lokalnoj i područnoj (regionalnoj) samoupravi te propisima o sukobu interesa?  
+7. **Mediji i proračun:** Koliko je sredstava iz gradskog proračuna u 2024./2025./2026. isplaćeno lokalnim medijima (nazivi medija, iznosi, ugovori)? Jesu li ti ugovori javno dostupni?  
+8. **Dnevni redovi i materijali:** Tko formalno predlaže i priprema dnevne redove i prateće materijale za sjednice Gradskog vijeća? Jesu li svi materijali (uključujući one o spajanju Labin stan / Labin 2000 i natječajima za stanove) objavljeni na službenim stranicama grada prije sjednica?
+
+---
+
+📌 Za načelnika Lea Knapića (ili na županijskoj razini):
+
+1. **Načelniče Knapiću, mislite li da se sustavni industrijski ekocid i dvostruka prekoračenja kancerogenog TOC-a rješavaju Vašim PR akcijama i ekološkim ronjenjima dvaput godišnje? Smatrate li da ronjenje može isprati činjenicu da sjedite u Odboru koji nema nikakvu stručnu opremu ni mehanizme za detekciju teških metala, žive i klorida na dimnjaku tvornice?**  
+2. **Na temelju kojih točno zakonskih ovlasti je Vaš savjetodavni odbor imenovan na fiksni mandat od čak 4 GODINE usred eskalacije ekološke krize? Je li taj četverogodišnji mandat osiguran kako biste pravno pokrivali eksperimentalni projekt "KOdeCO Net Zero" i uvođenje kriogenog CO₂ terminala na 45 bara u uski, zatvoreni Raški zaljev, dok se e-Savjetovanja od naroda skrivaju preko vikenda u roku od 48 sati?**  
+3. **Budući da je Boris Miletić kao bivši IDS-ovac i sadašnji "nezavisni" župan, zajedno s još 17 vijećnika u Pazinu, ostao sramotno SUZDRŽAN na trajno zaustavljanje spaljivanja otpada, čije interese ovaj Odbor zapravo brani? Ako tvrdite da ćete neovisno kontrolirati sastav otpada, unesite link priloženog javnog Dosjea Koromačno u bilo koji AI alat po Vašem izboru i odgovorite narodu: koji inozemni, neovisni laboratorij pod nadzorom građana planirate angažirati, ili ćete podatke i dalje prepisivati iz friziranih izvješća same uprave Holcima?**  
+4. **Načelniče, javno ste izjavili da niste bili upoznati s blokadom u Kapelici 24\. rujna. Kako je moguće da lokalna vlast nije imala informaciju o okupljanju na kojem je zaustavljen znatno veći broj kamiona od ranije najavljivanih „2-3 dnevno“? Što poduzimate da se ubuduće osigura točna i javna informacija o količinama i rasporedu dovoza?**  
+5. **Podržavate li zahtjev Gradskog vijeća Labina za kontinuiranim mjerenjem parametara koji se trenutačno ne prate i za osnivanjem fonda koji bi financirala industrijska postrojenja na Labinštini?**
+
+---
+
+II. TEHNIČKA PITANJA O USKLAĐENOSTI EWC KODOVA S DOZVOLOM
+
+1. Koji su točni EWC kodovi otpada iz Gospića koji su ili će biti preuzeti u Koromačno?  
+2. Jesu li svi ti kodovi izričito navedeni u važećoj dozvoli za gospodarenje otpadom i okolišnoj dozvoli Holcima?  
+3. Koje su ulazne analize (posebno sadržaj klora, antimona, kobalta i teških metala) provedene na svakoj pošiljci i jesu li rezultati unutar Holcimovih internih specifikacija za alternativno gorivo?  
+4. Ako neka pošiljka ne zadovolji tehničke kriterije, hoće li biti odbijena i gdje će završiti?
+
+---
