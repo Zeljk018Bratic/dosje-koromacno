@@ -1,4 +1,4 @@
-1. Dopunjeni ZPPI predložak (precizniji zahtjev za EWC + analize)
+Dopunjeni ZPPI predložak (precizniji zahtjev za EWC + analize)
 Predmet: Zahtjev za pristup informacijama – EWC kodovi, ulazne analize, AMS podaci, vagarski listovi i status nadzora
 Poštovani,
 Temeljem Zakona o pravu na pristup informacijama (NN 25/13, 85/15, 69/22) podnosim zahtjev za dostavu:
