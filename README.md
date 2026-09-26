@@ -40,6 +40,10 @@ Sukladno **Aarhuškoj konvenciji** (Konvencija o pristupu informacijama, sudjelo
 
 Svako uskraćivanje, friziranje ili zakašnjelo validiranje sirovih podataka (RAW DATA) o emisijama u zrak i more, kao i prikrivanje pokusnog rada postrojenja koji traje od studenoga 2025. godine, predstavlja izravno kršenje međunarodnog i ustavnog prava.
 
+1. Dopunjeni ZPPI predložak (precizniji zahtjev za EWC + analize)
+Predmet: Zahtjev za pristup informacijama – EWC kodovi, ulazne analize, AMS podaci, vagarski listovi i status nadzora
+https://github.com/Zeljk018Bratic/dosje-koromacno/blob/main/docs/Dopunjeni%20ZPPI%20predlo%C5%BEak
+
 ### 📧 5. Kamo poslati popunjenu i potpisanu kaznenu prijavu?
 Kada preuzmete, ispunite i vlastoručno potpišete (ili ovjerite pečatom udruge) predložak kaznene prijave iz ovog sustava, zakonski je dužni dostaviti izravno na službene adrese nadležnih državnih institucija i inspekcija:
 
@@ -48,6 +52,7 @@ Kada preuzmete, ispunite i vlastoručno potpišete (ili ovjerite pečatom udruge
 *   **Državni inspektorat RH (DIRH) - Inspekcija zaštite okoliša:** `prijave@dirh.hr` (hitno postupanje i nenajavljeni nadzor)
 *   **Fond za zaštitu okoliša i energetsku učinkovitost (FZOEU):** `kontakt@fzoeu.hr` (upiti vezani uz ugovore o sanacijama)
 *   **Službeni kontakt za medije (MZOZT):** `press@mzozt.hr` (dostava dosjea novinarima radi razbijanja medijske blokade)
+*   **Nadležno tijelo: Odbor za predstavke i pritužbe Skupštine Istarske županije (predsjednik odbora je Dalibor Macan).Kontakt adresa: Dršćevka 3, 52000 Pazin.E-mail za kontakt: skupstina@istra-istria.hr ili strucna.sluzba@istra-istria.hr.Telefon Stručne službe Skupštine: 052/351-667.
   
 ### 5.a. 📧 🇪🇺 UPUTE ZA PROSLIJEĐIVANJE EUROPSKOJ AGENCIJI ZA OKOLIŠ (EEA)
 Ove dvije točne natuknice služe za sve građane na terenu kako bi prijava automatski otišla na prave europske adrese uz priloženu službenu PDF dokumentaciju 
