@@ -1,21 +1,42 @@
-ZAHTJEV ZA PRISTUP INFORMACIJAMA – AUTOMATSKE MJERNE STANICE, MONITORING PODMORJA I DOKUMENTACIJA POSTUPKA DEKARBONIZACIJE TVORNICE CEMENTA
-OPĆINA RAŠA
-Službenik za informiranje
-Trg republike 2
-52223 Raša
-PREDMET: Zahtjev za pristup informacijama – automatske mjerne stanice, monitoring podmorja i dokumentacija postupka dekarbonizacije tvornice cementa
+**ZAHTJEV ZA PRISTUP INFORMACIJAMA – UGOVORNI ODNOSI, TEHNIČKA DOKUMENTACIJA I EVIDENCIJA IZMJENA SUSTAVA TRANSPARENTNOSTI PRORAČUNA ZA KONTA 3233 I 3237**
+
+**GRAD LABIN**
+
+**Službenik za informiranje**
+
+Titov trg 11
+
+52220 Labin
+
+**PREDMET: Zahtjev za pristup informacijama – ugovorni odnosi, tehnička dokumentacija i evidencija izmjena sustava transparentnosti proračuna za konta 3233 i 3237**
+
 Poštovani,
+
 na temelju Zakona o pravu na pristup informacijama, podnosim zahtjev za pristup informacijama i dostavu preslika sljedećih postojećih dokumenata i zapisa u elektroničkom obliku:
-1. Sirovi AMS podaci (Emisije): Presliku svih kontinuiranih i nekorigiranih podataka s automatskih mjernih stanica (AMS) za praćenje emisija u zrak u okolici tvornice cementa u Koromačnu za razdoblje od 1. lipnja 2026. do dana podnošenja ovog zahtjeva.
-2. Monitoring podmorja i priobalja: Sve službene izvještaje, kemijske analize i nalaze monitoringa stanja morskog okoliša, podmorja i priobalnog pojasa neposredno uz industrijski kompleks u Koromačnu za 2025. i 2026. godinu.
-3. Službena korespondencija i nadzor: Presliku svih dopisa, očitovanja i zapisnika razmijenjenih između Općine Raša, Državnog inspektorata (DIRH) i nadležnih ministarstava vezano uz ekološke incidente i prekoračenja graničnih vrijednosti emisija u istom razdoblju.
-4. Dokumentacija o obustavi postupka: Presliku kompletnog rješenja Ministarstva o obustavi postupka procjene utjecaja na okoliš (SUO) za projekt dekarbonizacije tvornice cementa u Koromačnu (KOdeCO net zero), kao i presliku cjelokupne službene korespondencije i dokumentacije povezane s investitorovim povlačenjem zahtjeva od 28. kolovoza 2026. godine.
-Ukoliko se za bilo koji dio traženih informacija utvrde zakonska ograničenja pristupa, zahtijevam da se sukladno članku 15. Zakona omogući djelomični pristup informacijama (zacrnjivanjem zaštićenih dijelova) te dostavi službeno rješenje s točnim navođenjem pravne osnove i obrazloženja za svako pojedino ograničenje.
+
+1. **Ugovorna i financijska dokumentacija (Mediji i oglašavanje):** Presliku ugovora, pripadajućih aneksa i specifikacija troškova vezanih uz proračunske isplate na Kontu 3233 s opisima „Ugovoreno proračunsko oglašavanje i praćenje rada uprave“ (primatelj Lokalni portal InfoLabin) i „Radio emisije, promidžba i ljetne kampanje Grada“ (primatelj Radio Labin d.o.o.).  
+2. **Ugovorna dokumentacija (Konzultantske usluge):** Presliku ugovora, aneksa i narudžbenica za isplate na Kontu 3237 s opisom „Intelektualne i konzultantske usluge za pripremu EU fondova“ (primatelj Vanjski savjetnik d.o.o.).  
+3. **Oznaka pružatelja usluge (CityX):** Sve postojeće dokumente i ugovore iz kojih je vidljiv pravni odnos Grada s pravnom osobom koja se na portalu navodi pod oznakom CityX, te osnova za prikaz navedene autorske ili partnerske oznake.  
+4. **Tehnički tok i Audit Log:** Tehnički zapis ili specifikaciju iz koje je vidljivo povlače li se podaci izravno iz Glavne knjige proračuna te vodi li sustav Audit Log (automatsku evidenciju naknadnih izmjena, brisanja ili retroaktivnih modifikacija unesenih proračunskih stavki s vremenskim oznakama i korisničkim računima).  
+5. **Mehanizmi integriteta (Hash):** Dokumentaciju iz koje je vidljivo koristi li sustav kriptografsko hashiranje (SHA-256) ili digitalni potpis za verifikaciju i dokazivanje nepromjenjivosti podataka prije javnog izvoza.
+
+Ukoliko se za bilo koji dio traženih informacija utvrde zakonska ograničenja pristupa, zahtijevam da se sukladno članku 15\. Zakona omogući djelomični pristup informacijama (zacrnjivanjem zaštićenih dijelova) te dostavi službeno rješenje s točnim navođenjem pravne osnove i obrazloženja za svako pojedino ograničenje.
+
 Ovim zahtjevom potražuju se isključivo već postojeće informacije i dokumenti u posjedu tijela javne vlasti. Zahtjev ne uključuje izradu novih analiza, stručnih mišljenja ili donošenje novih zaključaka.
+
 Molim da se traženi dokumenti dostave elektroničkim putem na niže navedenu e-mail adresu.
-PODNOSITELJ ZAHTJEVA:
+
+**PODNOSITELJ ZAHTJEVA:**
+
 Ime i prezime:
+
 Adresa:
+
 E-mail:
-U ___________, dana ____________ 2026. godine.
-Vlastoručni potpis: ___________________________
+
+U \_\_\_\_\_\_\_\_\_\_\_, dana \_\_\_\_\_\_\_\_\_\_\_\_ 2026\. godine.
+
+Vlastoručni potpis: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+---
+
