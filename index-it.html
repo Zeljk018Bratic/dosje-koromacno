@@ -1,1 +1,716 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Interattivo di Documentazione e Strumento Legale - Ecocidio Koromačno</title>
+  <style>
+    :root {
+      --bg-main: #140303;
+      --bg-card: #220808;
+      --bg-card-alt: #2c0d0d;
+      --border-red: #5c1616;
+      --border-bright: #991b1b;
+      --accent-red: #dc2626;
+      --accent-hover: #ef4444;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-gold: #fbbf24;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 50px;
+    }
+    .sticky-nav {
+      position: sticky; top: 0; z-index: 9999;
+      background-color: #2a0606;
+      border-bottom: 3px solid var(--accent-red);
+      padding: 12px 16px;
+      display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.8);
+    }
+    .nav-btn {
+      background-color: #7f1d1d; color: #ffffff;
+      border: 1px solid var(--accent-red);
+      padding: 8px 14px; border-radius: 6px;
+      font-weight: 700; font-size: 0.85rem;
+      cursor: pointer; transition: all 0.2s ease-in-out;
+      display: flex; align-items: center; gap: 6px;
+      text-decoration: none;
+    }
+    .nav-btn:hover {
+      background-color: var(--accent-red); border-color: #fca5a5;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(220, 38, 38, 0.4);
+    }
+    .container { max-width: 1280px; margin: 25px auto; padding: 0 20px; }
+    .header-banner {
+      background: linear-gradient(135deg, #450a0a 0%, #1a0303 100%);
+      border: 2px solid var(--border-bright);
+      border-radius: 10px; padding: 30px; text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    .header-banner h1 {
+      color: #ffffff; font-size: 2.2rem; text-transform: uppercase;
+      letter-spacing: 1px; margin-bottom: 12px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    }
+    .header-banner p { color: var(--text-muted); font-size: 1.05rem; max-width: 1000px; margin: 0 auto; }
+    .section-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-red);
+      border-left: 5px solid var(--accent-red);
+      border-radius: 8px; padding: 28px; margin-bottom: 35px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      scroll-margin-top: 80px;
+    }
+    .section-card h2 {
+      color: var(--text-gold); font-size: 1.6rem;
+      border-bottom: 2px solid var(--border-bright);
+      padding-bottom: 10px; margin-bottom: 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-card h3 { color: #fca5a5; font-size: 1.25rem; margin-top: 22px; margin-bottom: 12px; }
+    p, li { color: var(--text-muted); font-size: 0.98rem; margin-bottom: 12px; }
+    strong { color: var(--text-main); }
+    .highlight-red { color: #f87171; font-weight: bold; }
+    .highlight-gold { color: var(--text-gold); font-weight: bold; }
+    .timeline { border-left: 3px solid var(--accent-red); margin: 20px 0 20px 10px; padding-left: 20px; }
+    .timeline-event { position: relative; margin-bottom: 20px; }
+    .timeline-event::before {
+      content: ''; position: absolute; left: -27px; top: 5px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background-color: var(--accent-red); border: 2px solid var(--text-main);
+    }
+    .timeline-date { font-weight: 800; color: var(--text-gold); font-size: 1.05rem; display: block; margin-bottom: 4px; }
+    .table-responsive { overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; background-color: var(--bg-card-alt); border: 1px solid var(--border-red); font-size: 0.93rem; }
+    th, td { border: 1px solid var(--border-red); padding: 12px 15px; text-align: left; }
+    th { background-color: #3b0808; color: var(--text-gold); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; }
+    tr:nth-child(even) { background-color: #1a0505; }
+    details { background-color: var(--bg-card-alt); border: 1px solid var(--border-bright); border-radius: 6px; padding: 14px 18px; margin-bottom: 16px; }
+    summary { font-weight: 700; color: var(--text-gold); cursor: pointer; font-size: 1.05rem; }
+    details[open] summary { border-bottom: 1px solid var(--border-red); padding-bottom: 10px; margin-bottom: 12px; }
+    ol.measures-list { padding-left: 25px; }
+    ol.measures-list li { margin-bottom: 10px; color: var(--text-muted); }
+    .form-container { background-color: var(--bg-card-alt); border: 1px solid var(--border-bright); padding: 25px; border-radius: 8px; margin-top: 20px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; color: var(--text-gold); font-weight: 600; margin-bottom: 6px; }
+    .form-control { width: 100%; padding: 10px 14px; background-color: #140303; border: 1px solid var(--border-bright); border-radius: 4px; color: var(--text-main); font-size: 0.95rem; }
+    .form-control:focus { outline: none; border-color: var(--accent-hover); box-shadow: 0 0 8px rgba(239, 68, 68, 0.5); }
+    textarea.form-control { min-height: 120px; resize: vertical; }
+    .checkbox-group { background-color: #1a0505; border: 1px solid var(--border-red); padding: 15px; border-radius: 6px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; cursor: pointer; }
+    .checkbox-group input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--accent-red); cursor: pointer; margin-top: 2px; }
+    .checkbox-group label { color: var(--text-main); cursor: pointer; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 12px; width: 100%; }
+    .legal-code-block { background-color: #0d0202; border: 1px solid var(--border-bright); padding: 20px; border-radius: 6px; font-family: 'Courier New', Courier, monospace; color: #e2e8f0; white-space: pre-wrap; line-height: 1.5; font-size: 0.9rem; margin: 15px 0; }
+    a.external-link { color: #fca5a5; text-decoration: underline; font-weight: bold; }
+    a.external-link:hover { color: var(--accent-hover); }
+    .download-callout { display: flex; align-items: center; gap: 10px; width: fit-content; margin: 18px 0 6px; padding: 12px 16px; background: linear-gradient(135deg, #450a0a 0%, #2c0d0d 100%); border: 1px solid var(--border-bright); border-left: 4px solid var(--text-gold); border-radius: 8px; color: #fee2e2; font-weight: 700; text-decoration: none; box-shadow: 0 6px 16px rgba(0,0,0,0.35); transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+    .download-callout:hover { transform: translateY(-2px); border-color: #fca5a5; box-shadow: 0 10px 20px rgba(127, 29, 29, 0.4); }
+    .download-callout small { display: block; color: var(--text-muted); font-weight: 500; }
+    .audio-evidence { margin-top: 20px; padding: 20px; background-color: #1a0505; border: 1px solid var(--border-red); border-radius: 8px; }
+    .audio-evidence h4 { color: var(--text-gold); margin-bottom: 12px; font-size: 1.05rem; }
+    .audio-evidence-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .audio-card { background-color: var(--bg-card-alt); border: 1px solid var(--border-bright); border-radius: 8px; padding: 14px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); }
+    .audio-card strong { display: block; margin-bottom: 8px; color: #fecaca; }
+    .audio-card audio { width: 100%; filter: hue-rotate(330deg) saturate(1.1); }
+    .lang-switch { text-align: center; padding: 8px; background-color: #2a0606; font-size: 0.85rem; }
+    .lang-switch a { color: #fca5a5; text-decoration: none; font-weight: bold; margin: 0 8px; padding: 4px 8px; border-radius: 4px; }
+    .lang-switch a.active { background-color: var(--accent-red); color: white; }
+    .lang-switch a:hover { background-color: var(--accent-hover); color: white; }
+    @media print {
+      .sticky-nav, .btn-group, .alert-banner, button, .no-print, .lang-switch { display: none !important; }
+      body { background-color: #ffffff !important; color: #000000 !important; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 11pt; line-height: 1.4; padding: 0 !important; }
+      .container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; box-shadow: none !important; border: none !important; }
+      .header-banner { background: none !important; border: none !important; border-bottom: 2px solid #000 !important; color: #000000 !important; padding: 10px 0 !important; margin-bottom: 20px !important; text-align: left !important; }
+      .header-banner h1 { color: #000000 !important; font-size: 18pt !important; text-shadow: none !important; }
+      .header-banner p { color: #333333 !important; }
+      .section-card { background: #ffffff !important; color: #000000 !important; border: none !important; border-bottom: 1px dashed #000 !important; border-left: none !important; border-radius: 0 !important; box-shadow: none !important; padding: 15px 0 !important; margin-bottom: 20px !important; page-break-inside: avoid; }
+      .section-card h2 { color: #000000 !important; border-bottom: 1px solid #000 !important; font-size: 14pt !important; }
+      .section-card h3 { color: #222222 !important; font-size: 12pt !important; }
+      p, li, strong, span { color: #000000 !important; }
+      .timeline { border-left-color: #000 !important; }
+      .timeline-event::before { background-color: #000 !important; border-color: #fff !important; }
+      .timeline-date { color: #000000 !important; }
+      table { background-color: #ffffff !important; border: 1px solid #000 !important; }
+      th, td { border: 1px solid #000 !important; color: #000000 !important; padding: 6px 8px !important; }
+      th { background-color: #f0f0f0 !important; }
+      details { background-color: #ffffff !important; border: 1px solid #000 !important; }
+      summary { color: #000000 !important; }
+      .form-container, .legal-code-block, .checkbox-group { background-color: #ffffff !important; border: 1px solid #000 !important; color: #000000 !important; }
+      .download-callout, .audio-evidence { display: none !important; }
+      .form-control { background-color: #ffffff !important; border: 1px solid #000 !important; color: #000000 !important; }
+      a.external-link { color: #000000 !important; text-decoration: underline !important; }
+    }
+  </style>
+</head>
+<body>
 
+<div class="lang-switch no-print">
+  <a href="index.html">🇭🇷 HR</a>
+  <a href="index-en.html">🇬🇧 EN</a>
+  <a href="index-de.html">🇩🇪 DE</a>
+  <a href="index-it.html" class="active">🇮🇹 IT</a>
+</div>
+
+<nav class="sticky-nav no-print">
+  <button class="nav-btn" onclick="scrollToSection('polje1')">🗓️ Cronologia dell'Occultamento</button>
+  <button class="nav-btn" onclick="scrollToSection('polje2')">🗺️ Trappola Geomorfologica + Lacuna CO₂</button>
+  <button class="nav-btn" onclick="scrollToSection('polje3')">🌊 Ecocidio Subacqueo, GVE & 70 Misure</button>
+  <button class="nav-btn" onclick="scrollToSection('polje4')">☢️ Forense Commerciale & Pazin</button>
+  <button class="nav-btn" onclick="scrollToSection('polje5')">⚖️ Denuncia Penale (DORH) & Monitoraggio</button>
+  <button class="nav-btn" onclick="scrollToSection('polje6')">📈 Uscita Aziendale vs Visione</button>
+  <button class="nav-btn" onclick="scrollToSection('polje8_zataskavanje')">⚖️ 8. Difesa contro l'Insabbiamento (DORH)</button>
+  <a class="nav-btn" href="https://github.com/Zeljk018Bratic/dosje-koromacno/blob/main/docs/usporedni-dokazni-elaborat.md" target="_blank" rel="noopener noreferrer">📘 Studio Comparativo</a>
+  <button class="nav-btn" style="background-color: #dc2626;" onclick="window.print()">🖨️ Stampa (Ctrl+P)</button>
+</nav>
+
+<div class="container">
+
+  <div class="header-banner">
+    <h1>Dossier Investigativo Interattivo Completo & Strumento Legale</h1>
+    <p>Forense completa di ingegneria di processo, chimica e legale del caso di decarbonizzazione, coincenerimento dei rifiuti e rischio ecologico nello stabilimento Holcim Koromačno e nella Baia di Raša.</p>
+    <div class="action-buttons no-print" style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 22px;">
+      <a class="nav-btn" href="docs/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf" download>🚨 Scarica la Denuncia Penale per DORH (PDF)</a>
+      <a class="nav-btn" href="docs/zahtjev-zppi.pdf" download>📝 Scarica la Richiesta ZPPI per il Comune di Raša (PDF)</a>
+      <a class="nav-btn" href="docs/zahtjev-zppi.md" download>📋 Scarica il Modello ZPPI (Markdown/Testo)</a>
+      <a class="nav-btn" href="docs/OV_RASA_21_09_2026.pdf" download>📜 Conclusione e Trascrizioni del Consiglio Comunale di Raša (PDF)</a>
+      <a class="nav-btn" href="docs/zahtjev-status-stranke-arhus.md" download>⚖️ Scarica la Richiesta di Status di Parte (MD/Aarhus)</a>
+      <a class="nav-btn" href="docs/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf" download>☢️ Forense Rifiuti RDF/SRF (PDF)</a>
+    </div>
+  </div>
+
+  <!-- BLOCCO PROVE UFFICIALMENTE NOTIFICATE -->
+  <div class="proof-container" style="margin: 25px 0 15px; padding: 15px; background-color: #f4fbf7; border-left: 5px solid #2e7d32; border-radius: 4px;">
+    <h3 style="color: #1b5e20; margin-top: 0; font-size: 16px; margin-bottom: 6px;">🛑 PROVE E DOCUMENTI UFFICIALMENTE NOTIFICATI · 30.09.2026</h3>
+    <p style="color: #334155; margin-bottom: 15px; font-size: 13px;">Di seguito sono raccolti documenti pubblicamente disponibili del pacchetto probatorio, tra cui MARA ALL-IN V2, Evidence Matrix, impronta SHA-256 e documenti che registrano l'invio o la consegna.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
+      <a href="docs/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2.pdf" style="display:inline-block; padding:8px 12px; background-color:#7f1d1d; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">📘 MARA ALL-IN V2 · PDF</a>
+      <a href="docs/Evidence_Matrix_Koromacno_25-09-2026.xlsx" style="display:inline-block; padding:8px 12px; background-color:#166534; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">📊 EVIDENCE MATRIX · XLSX</a>
+      <a href="docs/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2_SHA256.txt" style="display:inline-block; padding:8px 12px; background-color:#374151; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">🔐 SHA-256 · IMPRONTA FISSA V2</a>
+      <a href="docs/Slanje_Dokaza_30-09-2026/uruceno-dopis-i-mara-v2-radna-skupina-sabor.pdf" style="display:inline-block; padding:8px 12px; background-color:#1565c0; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">📕 PROVA DI CONSEGNA · MARA V2</a>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+      <a href="docs/Slanje_Dokaza_30-09-2026/uruceno-zppi-01-ams-kodeco.pdf" style="display:inline-block; padding:8px 12px; background-color:#0f766e; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">🌫️ PROVA DI CONSEGNA · ZPPI-01 / Raša</a>
+      <a href="docs/Slanje_Dokaza_30-09-2026/uruceno_zahtjev_ppi_grad_labin_transparentnost_cityx.pdf" style="display:inline-block; padding:8px 12px; background-color:#1e40af; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">🔷 PROVA DI CONSEGNA · ZPPI-02 / Labin</a>
+      <a href="docs/ZPPI-03/zahtjev-zppi-prostorni-plan-ubas-koromacno.html" style="display:inline-block; padding:8px 12px; background-color:#b91c1c; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">🌲 PROVA / RICHIESTA · ZPPI-03 / Ubaš</a>
+    </div>
+  </div>
+
+  <!-- CAMPO 1 -->
+  <section id="polje1" class="section-card">
+    <h2>🗓️ CAMPO 1: Cronologia dell'Occultamento Strategico e dell'Ingegneria Procedurale</h2>
+    <p>La ricostruzione della condotta istituzionale e aziendale rivela una catena precisamente cronometrata di passi amministrativi selezionati, test segreti degli impianti e manipolazioni legali volte a evitare il pieno controllo pubblico e la Valutazione di Impatto Ambientale (VIA).</p>
+    <div class="timeline">
+      <div class="timeline-event">
+        <span class="timeline-date">Ottobre 2025</span>
+        <p>Holcim (Croazia) d.o.o. presenta formalmente domanda al Ministero dell'Ambiente e della Transizione Verde per avviare la procedura di VIA per il progetto di decarbonizzazione "KO2".</p>
+      </div>
+      <div class="timeline-event">
+        <span class="timeline-date">Novembre 2025</span>
+        <p>Inizia il funzionamento sperimentale segreto del sistema di cattura della CO₂ e delle unità di processo strettamente correlate all'interno dello stabilimento di Koromačno, senza autorizzazione ambientale completa e all'insaputa del pubblico locale. Contemporaneamente, in Svezia (Gotland/Slite), il progetto CCS gemello di Heidelberg Materials viene silenziosamente abbandonato a causa di rischi economici e di sicurezza insormontabili.</p>
+      </div>
+      <div class="timeline-event">
+        <span class="timeline-date">21 aprile 2026</span>
+        <p>Il Ministero emana una decisione sull'accettabilità del progetto per la rete ecologica (CLASSE: UP/I-352-03/26-06/12, N. PROTOCOLLO: 517-06-2-2-26-5), ignorando completamente la specifica posizione geomorfologica della Baia di Raša e il rischio di accumulo di gas pericolosi.</p>
+      </div>
+      <div class="timeline-event">
+        <span class="timeline-date">10 agosto 2026</span>
+        <p>Viene pubblicata l'Informazione sulla consultazione pubblica (CLASSE: UP/I-351-03/25-08/46, N. PROTOCOLLO: 517-04-1-1-26-28), deliberatamente programmata proprio nel pieno della stagione estiva e delle ferie per ridurre la partecipazione pubblica.</p>
+      </div>
+      <div class="timeline-event">
+        <span class="timeline-date">17 agosto 2026</span>
+        <p>Inizio ufficiale della consultazione pubblica. La mobilitazione di cittadini, esperti indipendenti e associazioni locali porta alla massiccia divulgazione di parametri pericolosi dallo studio Ekonerg.</p>
+      </div>
+      <div class="timeline-event">
+        <span class="timeline-date">28 agosto 2026</span>
+        <p>Temendo una resistenza pubblica insormontabile e la divulgazione di carenze nello studio, Holcim presenta bruscamente una richiesta di ritiro dello Studio di Impatto Ambientale. Lo stesso giorno, il Ministero emana in procedura d'urgenza la Decisione sulla Sospensione della Procedura di VIA (CLASSE: UP/I-351-03/25-08/46, N. PROTOCOLLO: 517-04-1-1-26-30).</p>
+      </div>
+      <div class="timeline-event">
+        <span class="timeline-date">03 settembre 2026</span>
+        <p>La presentazione pubblica precedentemente programmata a Koromačno viene bruscamente annullata per impedire un dialogo diretto e conflittuale con la popolazione locale ed evitare domande pubbliche.</p>
+      </div>
+      <div class="timeline-event">
+        <span class="timeline-date">11 – 13 settembre 2026</span>
+        <p>Il Ministero conduce una consultazione elettronica lampo di 48 ore nel fine settimana sulle modifiche alla legislazione sui rifiuti, cercando di legalizzare la ridirezione dei flussi di rifiuti senza il consueto termine di 30 giorni.</p>
+      </div>
+      <div class="timeline-event">
+        <span class="timeline-date">15 settembre 2026</span>
+        <p>Si tiene a Raša una manifestazione di protesta di massa di cittadini, pescatori e imprenditori locali contro la trasformazione di Labinština in una discarica regionale e inceneritore di rifiuti.</p>
+      </div>
+      <div class="timeline-event">
+        <span class="timeline-date">17 settembre 2026</span>
+        <p>Come risposta diretta alla resistenza popolare a Raša, il Governo della Repubblica di Croazia presenta in procedura d'urgenza il Disegno di Legge sulle Georisorse al Parlamento, cercando di imporre legislativamente l'acquisizione di spazi sotterranei e sottomarini per l'iniezione di CO₂.</p>
+      </div>
+      <div class="timeline-event">
+        <span class="timeline-date">21 settembre 2026</span>
+        <p>Nella sessione dell'Assemblea della Regione Istriana a Pazin viene adottato il contestato Articolo 1 della Conclusione sulla "bonifica dei rifiuti", mentre contemporaneamente il Fondo per la Protezione Ambientale (FZOEU) assegna un contratto del valore di 8,77 milioni di euro per lo svuotamento dei rifiuti pericolosi dalle sale silo di Gospić.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPO 2 -->
+  <section id="polje2" class="section-card">
+    <h2>🗺️ CAMPO 2: Trappola Geomorfologica e Fisica del Collasso della CO₂</h2>
+    <h3>1. Proprietà fisico-chimiche e comportamento del LCO₂ in caso di incidente</h3>
+    <p>Il progetto di decarbonizzazione prevede lo stoccaggio e la manipolazione di anidride carbonica liquida (LCO₂) in due massicci serbatoi criogenici orizzontali, ciascuno con capacità di 3.000 m³ (totale 6.000 m³). Lo stoccaggio avviene sotto alta pressione di 16 bar e temperatura estremamente bassa di -29,4 °C.</p>
+    <p>In caso di decompressione improvvisa, rottura di tubazioni alla Banchina 3 o rottura catastrofica del serbatoio (effetto BLEVE):</p>
+    <ul>
+      <li>La CO₂ liquida si espande istantaneamente di circa <strong>535 volte</strong> in fase gassosa.</li>
+      <li>La densità della CO₂ gassosa è di circa 1,98 kg/m³, rendendola <strong>1,5 volte più pesante dell'aria</strong> (1,2 kg/m³).</li>
+      <li>La nube gassosa fredda e pesante non si alza verso l'alto ma si comporta come un liquido – scorre lungo i pendii e riempie tutte le depressioni geologiche inferiori, le gole e le insenature marine.</li>
+    </ul>
+    <h3>3. Restringimento deliberato dell'ambito del progetto – "Sparizione magica" delle navi cisterna LCO₂</h3>
+    <p>Lo Studio di Impatto Ambientale (SIA) nella sezione 1.4.5 afferma esplicitamente che il trasporto e lo stoccaggio permanente della CO₂ sono <span class="highlight-red">al di fuori dell'ambito del progetto</span>. Non appena la nave cisterna carica lascia la Banchina 3, scompare dalla valutazione.</p>
+    <ul>
+      <li>Anche lo scenario peggiore di dispersione (condizioni meteorologiche 9/D in caso di collisione navale) è stato modellato e presentato visivamente <strong>esclusivamente mentre la nave era ancora al terminal</strong>.</li>
+      <li>Le navi cisterna specializzate per CO₂ liquida sono ancora in fase di sviluppo – questo rischio tecnologico non è stato affatto valutato.</li>
+      <li>Lo stoccaggio permanente è previsto in giacimenti di gas esauriti in Italia → gli effetti transfrontalieri sono stati deliberatamente omessi, nonostante le Convenzioni di Espoo e Aarhus.</li>
+    </ul>
+    <p>Questo non è un errore tecnico. È un classico <span class="highlight-gold">"salami slicing"</span> – la frammentazione dell'intero progetto in modo che i rischi cumulativi e transfrontalieri non possano mai essere valutati completamente. Proprio per questo lo status di <strong>Parte Lesa</strong> diventa cruciale: solo una parte lesa formale può forzare l'espansione dell'ambito dello studio e la completa apertura della catena di rischio del trasporto.</p>
+
+    <h3>2. Specificità geomorfologica della Baia di Raša vs. "Swedish Spin"</h3>
+    <p>L'ufficio PR dell'industria confronta spesso Koromačno con il progetto gemello di Heidelberg Materials sull'isola di Gotland (Slite, Svezia). L'analisi dimostra che si tratta di una completa frode professionale:</p>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr><th>Parametro di Confronto</th><th>Gotland / Slite (Svezia)</th><th>Baia di Raša / Koromačno (Croazia)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Geomorfologia</strong></td><td>Isola aperta ed estremamente piatta nel mezzo del Mar Baltico.</td><td>Stretto canyon fluviale sommerso (fiordo), lungo 12 km, largo 1 km, circondato da scogliere alte oltre 100 m.</td></tr>
+          <tr><td><strong>Dispersione dei gas</strong></td><td>Forti venti baltici costanti diluiscono e trasportano immediatamente eventuali perdite.</td><td>Il sistema di scogliere chiuse durante l'inversione estiva e la calma di vento trattiene i gas pesanti sul fondo della baia.</td></tr>
+          <tr><td><strong>Rischio di anossia</strong></td><td>Minimo grazie al rapido rimescolamento delle masse d'aria.</td><td>Catastrofico: la CO₂ sposta l'ossigeno nei bacini dove si trovano gli insediamenti di Koromačno, Brovinje e Trget, causando soffocamento istantaneo di persone e animali.</td></tr>
+          <tr><td><strong>Stato del progetto</strong></td><td><span class="highlight-red">UFFICIALMENTE FALLITO E SOSPESO a novembre 2025 (fonte: Sveriges Radio)</span>.</td><td>Portato avanti nonostante il modello svedese sia fallito per costi e pericoli.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CAMPO 3 -->
+  <section id="polje3" class="section-card">
+    <h2>🌊 CAMPO 3: Ecocidio Subacqueo, Cocktail Chimico, GVE & Registro delle 70 Misure</h2>
+
+    <h3>1. Parametri ingegneristici Ekonerg: Confronto delle emissioni in aria</h3>
+    <p>La costruzione di un nuovo camino ausiliario alto 36 m accanto a quello esistente di 80 m rivela le vere intenzioni di cambiare la composizione del combustibile e di coincenerire frazioni di rifiuti:</p>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr><th>Parametro Inquinante</th><th>Nuovo Camino (36 m)</th><th>Camino Esistente (80 m)</th><th>Indicazione Probatoria di Ingegneria di Processo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Anidride solforosa (SO₂)</td><td>100 mg/Nm³</td><td>400 mg/Nm³</td><td>Riduzione per conversione in sottoprodotti di processo.</td></tr>
+          <tr><td>Ossidi di azoto (NOₓ)</td><td>450 mg/Nm³</td><td>500 mg/Nm³</td><td>Alte temperature operative del forno.</td></tr>
+          <tr><td>Polveri (Particelle)</td><td>10 mg/Nm³</td><td>20 mg/Nm³</td><td>Sistemi filtranti sotto carico di particelle fini.</td></tr>
+          <tr><td>Ammoniaca (NH₃)</td><td>50 mg/Nm³</td><td>150 mg/Nm³</td><td>Utilizzo in sistemi SNCR de-NOx.</td></tr>
+          <tr><td>Carbonio organico totale (TOC)</td><td>35 mg/Nm³</td><td>35 mg/Nm³</td><td>Indicatore di combustione incompleta di rifiuti organici.</td></tr>
+          <tr><td><span class="highlight-gold">Acido cloridrico (HCl)</span></td><td><strong>10 mg/Nm³</strong></td><td><strong>10 mg/Nm³</strong></td><td><span class="highlight-red">PROVA IRREFUTABILE del coincenerimento di plastica clorurata e cavi in PVC!</span></td></tr>
+          <tr><td><span class="highlight-gold">Acido fluoridrico (HF)</span></td><td><strong>1 mg/Nm³</strong></td><td><strong>1 mg/Nm³</strong></td><td><span class="highlight-red">PROVA IRREFUTABILE del coincenerimento di frazioni chimiche e industriali!</span></td></tr>
+          <tr><td>Mercurio (Hg)</td><td>0,05 mg/Nm³</td><td>0,05 mg/Nm³</td><td>Accumulo estremamente elevato sui catalizzatori.</td></tr>
+          <tr><td>Cadmio + Tallio (Cd + Tl)</td><td>0,05 mg/Nm³</td><td>0,05 mg/Nm³</td><td>Metalli pesanti da rifiuti elettronici e pericolosi.</td></tr>
+          <tr><td>Altri metalli pesanti (Pb, Cr, Ni...)</td><td>0,5 mg/Nm³</td><td>0,5 mg/Nm³</td><td>Profilo standard di emissioni da coincenerimento di rifiuti.</td></tr>
+          <tr><td>Diossine e Furani (PCDD/F)</td><td>0,1 ng TEQ/Nm³</td><td>0,1 ng TEQ/Nm³</td><td>Sottoprodotti cancerogeni della combustione di cloro e plastica.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>2. Dissalatore subacqueo e distruzione termochimica dell'ambiente acquatico</h3>
+    <ul>
+      <li><strong>Prelievo d'acqua:</strong> Il sistema preleva fino a <strong>217 m³/h</strong> di acqua marina/costiera grezza (totale <strong>1.562.400 m³/anno</strong>).</li>
+      <li><strong>Consumo di sostanze chimiche:</strong> Per il trattamento e la neutralizzazione si consumano <strong>1.567 tonnellate/anno di idrossido di sodio (NaOH)</strong>.</li>
+      <li><strong>Scarico subacqueo:</strong> Attraverso una condotta lunga 160 m a una profondità di 42 m, viene scaricata in mare salamoia concentrata con salinità di <strong>39 g/l</strong>, con temperatura elevata (fino a 30 °C) e residui di ammoniaca (fino a 10 mg/l).</li>
+      <li><strong>Conseguenze ecologiche:</strong> L'ipersalinità crea un denso tappeto salino che scorre lungo il fondale marino fino a 700 m di distanza, distruggendo permanentemente le comunità bentoniche, mentre i cambiamenti chimici dell'acqua minacciano direttamente gli habitat dei molluschi negli allevamenti nella baia di Trget.</li>
+    </ul>
+
+    <h3>3. Collasso socioeconomico ed esodo demografico</h3>
+    <ul>
+      <li><strong>Perdita di valore degli immobili:</strong> Gli immobili negli insediamenti di Koromačno, Brovinje, Skitača e Ravni registrano una perdita di valore di mercato dal <strong>30% al 50%</strong> a causa dell'inquinamento industriale e della perdita di attrattiva turistica.</li>
+      <li><strong>Rumore e lavoro notturno:</strong> Le emissioni acustiche superiori a <strong>40 dB(A)</strong> di notte sulle facciate degli edifici residenziali (principalmente Koromačno 5 e 18) compromettono permanentemente la qualità della vita e la salute dei residenti.</li>
+      <li><strong>Collasso economico:</strong> La distruzione della pesca tradizionale, della maricoltura e dell'affitto familiare spinge l'esodo della popolazione in età lavorativa più giovane dall'area del Labinština orientale.</li>
+    </ul>
+
+    <h3>4. Registro completo delle 70 Misure Vincolanti di Protezione Ambientale (Ekonerg)</h3>
+    <p>Catalogo completo di 70 misure distribuite per fasi di costruzione e funzionamento dell'impianto:</p>
+
+    <details open>
+      <summary>Fase 1: Preparazione e Progettazione (Misure 1–28)</summary>
+      <ol class="measures-list">
+        <li>Redazione del Progetto dettagliato di organizzazione del cantiere.</li>
+        <li>Progetto di regolazione temporanea del traffico.</li>
+        <li>Costruzione di un nuovo camino in cemento armato alto almeno 36 m.</li>
+        <li>Predisposizione di punti di misurazione delle emissioni secondo la norma HRN EN 15259.</li>
+        <li>Installazione di un sistema automatico di monitoraggio continuo (AMS).</li>
+        <li>Indagini geologiche-geofisiche dettagliate del tracciato dello scarico subacqueo.</li>
+        <li>Realizzazione di un sistema impermeabile di drenaggio delle acque piovane.</li>
+        <li>Sistema per il trattamento delle acque piovane contaminate dalle superfici di manipolazione.</li>
+        <li>Installazione di doppi separatori di oli e grassi di capacità adeguata.</li>
+        <li>Costruzione di un impianto dedicato per il trattamento delle acque reflue industriali.</li>
+        <li>Sistema per la neutralizzazione e il trattamento delle acque di lavaggio delle unità filtranti.</li>
+        <li>Installazione di tre pozzi di misurazione controllo-analitica.</li>
+        <li>Posa di una condotta subacquea lunga 160 m a una profondità di 42 m.</li>
+        <li>Costruzione di una vasca di raccolta per acque antincendio potenzialmente contaminate.</li>
+        <li>Realizzazione di fosse oleose impermeabili sotto trasformatori da 20 MVA e 30 MVA.</li>
+        <li>Installazione di vasche di contenimento protettive sotto tutti i serbatoi di sostanze chimiche.</li>
+        <li>Utilizzo esclusivo di calcare naturale frantumato per i lavori subacquei.</li>
+        <li>Costruzione di un diffusore rialzato sopra il fondale marino per prevenire il sollevamento dei sedimenti.</li>
+        <li>Redazione di uno Studio completo di protezione acustica con limite di 40 dB(A) per zone residenziali.</li>
+        <li>Severa limitazione della fascia di lavoro all'interno dell'area forestale.</li>
+        <li>Rivestimento delle strutture esterne con vernici opache antiriflesso nel tono dell'ambiente.</li>
+        <li>Utilizzo di illuminazione esterna ecologica in conformità con la legge sulla protezione dall'inquinamento luminoso.</li>
+        <li>Formazione di una fascia di protezione antincendio attorno alle unità di stoccaggio.</li>
+        <li>Redazione di uno Studio marittimo di sicurezza della navigazione per le manovre delle navi cisterna LCO₂.</li>
+        <li>Applicazione delle Migliori Tecniche Disponibili (BAT) per lo stoccaggio di sostanze pericolose.</li>
+        <li>Costruzione di una massiccia barriera fisica protettiva (muro) attorno ai serbatoi LCO₂.</li>
+        <li>Installazione di una rete di rilevatori di CO₂ lungo il confine verso l'insediamento collegati ad allarme automatico.</li>
+        <li>Istituzione di una zona di sicurezza nel porto sotto la supervisione della Capitaneria di Porto di Pola.</li>
+      </ol>
+    </details>
+
+    <details>
+      <summary>Fase 2: Costruzione ed Esecuzione (Misure 29–61)</summary>
+      <ol class="measures-list" start="29">
+        <li>Bagnatura e spruzzatura continue delle strade per sopprimere la polvere.</li>
+        <li>Installazione di abbattitori di polvere ad alta efficienza sull'impianto di betonaggio mobile.</li>
+        <li>Installazione di una nuova stazione automatica di monitoraggio della qualità dell'aria proprio a Koromačno.</li>
+        <li>Misure per prevenire la fuoriuscita di carburanti e lubrificanti.</li>
+        <li>Preparazione di superfici impermeabili per il parcheggio dei macchinari da costruzione.</li>
+        <li>Trasferimento del carburante esclusivamente in zone controllate e attrezzate.</li>
+        <li>Drenaggio delle acque reflue sanitarie del cantiere in fosse di raccolta impermeabili.</li>
+        <li>Analisi chimica dei sedimenti marini prima dell'inizio degli scavi subacquei.</li>
+        <li>Severo divieto di esecuzione di lavori di costruzione in mare nel periodo dal 1° febbraio al 1° aprile.</li>
+        <li>Fornitura di attrezzature per interventi di emergenza in caso di sversamenti di olio o carburante.</li>
+        <li>Raccolta separata e conservazione dello strato fertile di humus.</li>
+        <li>Installazione di illuminazione di cantiere diretta esclusivamente verso il basso senza abbagliamento.</li>
+        <li>Utilizzo di macchinari da costruzione certificati con silenziatori.</li>
+        <li>Esecuzione di lavori estremamente rumorosi esclusivamente nel turno diurno.</li>
+        <li>Divieto assoluto di smaltimento di qualsiasi materiale di scarto in mare.</li>
+        <li>Selezione e registrazione selettiva dei rifiuti da costruzione nel luogo di origine.</li>
+        <li>Bonifica e biologizzazione dei margini forestali danneggiati.</li>
+        <li>Rimozione obbligatoria e smaltimento dei ceppi dall'area di lavoro.</li>
+        <li>Attuazione di misure per prevenire la diffusione di specie vegetali invasive.</li>
+        <li>Notifica ufficiale alle associazioni venatorie locali sulla dinamica dei lavori.</li>
+        <li>Fornitura di supervisione archeologica permanente durante i lavori di scavo.</li>
+        <li>Massima conservazione della vegetazione alta esistente e degli alberi.</li>
+        <li>Ripristino di tutti gli altopiani temporaneamente utilizzati allo stato originario.</li>
+        <li>Revisione e allineamento del Piano Operativo per i casi di inquinamento di emergenza.</li>
+        <li>Marcatura fisica e luminosa dell'area di lavoro marittima.</li>
+        <li>Annuncio ufficiale di una zona temporanea vietata alla navigazione per le imbarcazioni civili.</li>
+        <li>Regime severo di limitazione di velocità per le imbarcazioni da lavoro.</li>
+        <li>Marcatura visiva chiara di tutte le imbarcazioni da lavoro e rimorchiatori impegnati.</li>
+        <li>Installazione di barriere ecologiche galleggianti protettive attorno alle imbarcazioni da lavoro.</li>
+        <li>Installazione di paratie sulle coperture per prevenire la fuoriuscita di olio in mare.</li>
+        <li>Contraenza con un'azienda specializzata per la pulizia di emergenza del mare.</li>
+        <li>Manutenzione tecnica regolare di tutte le strutture di sicurezza della navigazione.</li>
+        <li>Obbligo di segnalazione immediata di qualsiasi inquinamento osservato alla Capitaneria di Porto.</li>
+      </ol>
+    </details>
+
+    <details>
+      <summary>Fase 3: Funzionamento Operativo dell'Impianto (Misure 62–70)</summary>
+      <ol class="measures-list" start="62">
+        <li>Applicazione delle vecchie norme GVE esclusivamente nei momenti in cui il sistema di decarbonizzazione non è in funzione.</li>
+        <li>Applicazione obbligatoria delle nuove, più severe norme GVE non appena viene attivato il processo di decarbonizzazione.</li>
+        <li>Avvio di una nuova procedura di VIA se i pozzi di captazione non forniranno acqua sufficiente.</li>
+        <li>Convogliamento di tutte le acque reflue sanitarie all'impianto di trattamento centrale esistente.</li>
+        <li>Convogliamento delle acque reflue industriali attraverso l'impianto di trattamento di nuova progettazione.</li>
+        <li>Divieto assoluto di utilizzo o rilascio di sostanze pericolose prioritarie.</li>
+        <li>Trattamento chimico obbligatorio e neutralizzazione delle acque derivanti dal lavaggio dei filtri.</li>
+        <li>Scarico continuo delle acque trattate esclusivamente attraverso lo scarico subacqueo profondo.</li>
+        <li>Parametri fisico-chimici severi allo scarico: Temperatura ≤ 30 °C, pH 6,5–9,0, ammoniaca (NH₃) ≤ 10 mg/l, solidi sospesi totali ≤ 35 mg/l.</li>
+      </ol>
+    </details>
+
+    <!-- TABELLA DEI VALORI LIMITE GVE CON PARAMETRO TOC -->
+    <div class="table-responsive" style="margin-top: 1.5rem; overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse; background: #121824; color: #e2e8f0; border: 1px solid #334155; font-size: 0.9rem;">
+        <thead>
+          <tr style="background-color: #1e293b; border-bottom: 2px solid #475569; text-align: left;">
+            <th style="padding: 10px; border-right: 1px solid #334155;">Parametro / Inquinante</th>
+            <th style="padding: 10px; border-right: 1px solid #334155;">GVE (Media giornaliera)</th>
+            <th style="padding: 10px; border-right: 1px solid #334155;">Stato osservato / segnalato</th>
+            <th style="padding: 10px;">Stato e Fonte del risultato</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #334155;">
+            <td style="padding: 10px; border-right: 1px solid #334155; font-weight: bold; color: #f87171;">TOC (Carbonio organico totale)</td>
+            <td style="padding: 10px; border-right: 1px solid #334155;">10 mg/m³</td>
+            <td style="padding: 10px; border-right: 1px solid #334155; color: #ef4444; font-weight: bold;">Doppio superamento (&gt; 20 mg/m³)</td>
+            <td style="padding: 10px;"><strong>Richiesta Ufficiale 3 del Consiglio Comunale di Raša (21.09.2026)</strong> – richiesto intervento urgente DIRH</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #334155; background-color: #0f172a;">
+            <td style="padding: 10px; border-right: 1px solid #334155; font-weight: bold; color: #facc15;">Emissioni totali del precalcinatore</td>
+            <td style="padding: 10px; border-right: 1px solid #334155;">Secondo SIA</td>
+            <td style="padding: 10px; border-right: 1px solid #334155; color: #f87171; font-weight: bold;">Aumento da 10 a 15 volte</td>
+            <td style="padding: 10px;"><strong>Dichiarazione del Comitato Locale di Koromačno (M. Plazibat)</strong> – tecnologia del precalcinatore fallita</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #334155;">
+            <td style="padding: 10px; border-right: 1px solid #334155;">Acido cloridrico (HCl)</td>
+            <td style="padding: 10px; border-right: 1px solid #334155;">10 mg/m³</td>
+            <td style="padding: 10px; border-right: 1px solid #334155;">Deviazioni occasionali</td>
+            <td style="padding: 10px;">Monitoraggio continuo – database ISKZL</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #334155; background-color: #0f172a;">
+            <td style="padding: 10px; border-right: 1px solid #334155;">Acido fluoridrico (HF)</td>
+            <td style="padding: 10px; border-right: 1px solid #334155;">1 mg/m³</td>
+            <td style="padding: 10px; border-right: 1px solid #334155;">Soggetto a fluttuazioni</td>
+            <td style="padding: 10px;">Richiesta visualizzazione in tempo reale ogni mezz'ora</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border-right: 1px solid #334155;">Mercurio (Hg) e Ammoniaca (NH₃)</td>
+            <td style="padding: 10px; border-right: 1px solid #334155;">Secondo Autorizzazione Ambientale</td>
+            <td style="padding: 10px; border-right: 1px solid #334155; color: #f87171;">Mancanza di pubblicazione continua</td>
+            <td style="padding: 10px;"><strong>Richieste 3 e 5 del Consiglio Comunale di Raša</strong> – richiesta pubblicazione pubblica su MZOZT/NZJZ</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CAMPO 4 -->
+  <section id="polje4" class="section-card">
+    <h2>☢️ CAMPO 4: Analisi Forense del Commercio e Anomalie delle Dichiarazioni Doganali</h2>
+
+    <h3>1. Dati doganali: Importazione dall'Italia per 124 euro</h3>
+    <p>La forense doganale delle dichiarazioni di importazione rivela un calcolo scioccante: dall'Italia sono state importate <strong>19.013 tonnellate di rifiuti chimici/industriali pericolosi</strong> (oli usati, emulsioni, residui chimici). L'intera spedizione è stata dichiarata in dogana con un valore totale dichiarato di soli <strong>124 EUR</strong> (assurdi <strong>0,0065 € per tonnellata</strong>)!</p>
+    <p>Questo prezzo simbolico dimostra che non si tratta di acquisto di materie prime o combustibili, ma di <strong>smaltimento di rifiuti pericolosi pagato come servizio</strong>, dove gli operatori italiani pagano milioni in accordi fuori bilancio per sbarazzarsi di rifiuti che in Italia non possono essere legalmente gestiti a quel prezzo.</p>
+
+    <h3>2. Accumulo di mercurio sui filtri catalitici Catalyst R3-15S</h3>
+    <p>Il sistema di filtraggio dei gas <em>Catalyst R3-15S (Puristar)</em> durante 4 anni di funzionamento accumulerà più di <strong>40 kg di mercurio elementare puro (Hg)</strong>. Questo materiale estremamente pericoloso è classificato con il codice rifiuto <code>KB 16 08 07*</code> (catalizzatori esauriti contenenti metalli di transizione pericolosi). L'accumulo continuo di mercurio è una prova irrefutabile che nei forni vengono incenerite frazioni pesanti di rifiuti contenenti mercurio.</p>
+    <a class="download-callout" href="docs/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf" download>
+      <span>📄 Scarica il Capitolo VII (PDF)</span>
+      <small>Trasporto transfrontaliero di rifiuti RDF/SRF e quadro forense del caso.</small>
+    </a>
+
+    <h3>3. Matrice di tre flussi di rifiuti separati e Articolo 1 di Pazin</h3>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr><th>Identificatore del Flusso</th><th>Fonte e Quantità di Rifiuti</th><th>Composizione e Caratteristiche</th><th>Meccanismo Finanziario-Legale</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Flusso 1: Gospić</strong></td><td>~650 t non pericolosi / 4.500 t rifiuti pericolosi sfusi nei silos.</td><td>Cavi macinati, plastica pericolosa, residui chimici.</td><td>Contratto FZOEU di 8,77 milioni € assegnato al consorzio (CE-ZA-R, CIAK, Saubermacher).</td></tr>
+          <tr><td><strong>Flusso 2: Pazin</strong></td><td>~13.000 tonnellate di rifiuti accumulati nella sala Istraplastika.</td><td>Plastica mista, tessili, gomma, rifiuti industriali.</td><td>NRC d.o.o. in fallimento (Slaven Tintor). <span class="highlight-gold">L'Articolo 1 di Pazin serve come canale legale per il trasferimento a Koromačno!</span></td></tr>
+          <tr><td><strong>Flusso 3: Italia</strong></td><td>19.013 tonnellate di rifiuti importati.</td><td>Oli usati, residui chimici, emulsioni pesanti.</td><td>Dichiarato in dogana per 124 € per evitare tasse e ottenere extra profitto dal coincenerimento.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CAMPO 5 -->
+  <section id="polje5" class="section-card">
+    <h2>⚖️ CAMPO 5: Testo Ufficiale della Denuncia Penale e Collasso del Monitoraggio</h2>
+    <p>Di seguito è riportato il modello ufficiale completo della denuncia penale previsto per la compilazione diretta sullo schermo di un telefono cellulare o computer e la stampa per l'invio alla Procura della Repubblica di Croazia (DORH).</p>
+
+    <div class="form-container">
+      <div class="form-group">
+        <label>RICORRENTE (Nome, cognome / Nome associazione / PIN):</label>
+        <input type="text" class="form-control" placeholder="Inserisci nome, cognome, PIN e indirizzo...">
+      </div>
+      <div class="form-group">
+        <label>INDIRIZZO DI RESIDENZA / SEDE E CONTATTO TELEFONO/E-MAIL:</label>
+        <input type="text" class="form-control" placeholder="Inserisci indirizzo, telefono ed e-mail...">
+      </div>
+      <h3>ALLA PROCURA DELLA REPUBBLICA DI CROAZIA (DORH)</h3>
+      <p><strong>Alla Procura della Repubblica competente</strong></p>
+      <div class="legal-code-block">
+OGGETTO: DENUNCIA PENALE per fondato sospetto di reati contro l'ambiente ai sensi dell'articolo 193 (Inquinamento ambientale) e dell'articolo 196 (Messa in pericolo dell'ambiente con rifiuti) del Codice Penale della Repubblica di Croazia, e di causare pericolo diretto di ecocidio e incidente nell'area della Baia di Raša e di Labinština.
+
+SOGGETTI / FUNZIONARI DENUNCIATI:
+1. Persone responsabili del Ministero dell'Ambiente e della Transizione Verde della Repubblica di Croazia,
+2. Persone responsabili dei servizi di ispezione dell'Ispettorato di Stato della Repubblica di Croazia (DIRH),
+3. Persone responsabili e membri del Consiglio di Amministrazione della società commerciale Holcim (Croazia) d.o.o.
+
+DESCRIZIONE DEI FATTI E MOTIVAZIONE:
+Le persone denunciate, nonostante ripetuti avvertimenti scritti e pubblici da parte dei cittadini, indicazioni tecniche sui rischi geomorfologici della Baia di Raša, e indicatori doganali ufficiali sull'importazione di 19.013 tonnellate di rifiuti chimici a un prezzo dichiarato di soli 124 EUR, hanno consapevolmente omesso di attuare meccanismi di controllo indipendenti, campionamenti e la divulgazione pubblica del modello CFD completo della dispersione della CO₂ liquida. Invece di proteggere l'interesse pubblico, i denunciati hanno partecipato attivamente all'attuazione di ingegneria procedurale e temporale (modifiche legislative clandestine nel fine settimana e invio della Legge sulle Georisorse al Parlamento il giorno della protesta a Raša il 17.09.2026), creando così le precondizioni per il verificarsi di un incidente su larga scala e la messa in pericolo di vite umane.
+      </div>
+      <h3>Attenzione! Contrassegnare le violazioni e gli incidenti osservati nella propria località:</h3>
+      <div class="checkbox-group">
+        <label for="inc1"><input type="checkbox" id="inc1"><span><strong>Superamento delle emissioni GVE:</strong> Osservata presenza di fumo denso nero/grigio, odore di cloro o ammoniaca e polverosità eccessiva dalla direzione dello stabilimento.</span></label>
+      </div>
+      <div class="checkbox-group">
+        <label for="inc2"><input type="checkbox" id="inc2"><span><strong>Emissioni incontrollate di gas / CO₂:</strong> Perdita di CO₂ gassosa o liquida durante il trasporto o alla Banchina 3 del porto.</span></label>
+      </div>
+      <div class="checkbox-group">
+        <label for="inc3"><input type="checkbox" id="inc3"><span><strong>Incidente subacqueo / Salinità:</strong> Moria di pesci, benthos o molluschi negli allevamenti di Trget a causa dello scarico di salamoia e sostanze chimiche.</span></label>
+      </div>
+      <div class="checkbox-group">
+        <label for="inc4"><input type="checkbox" id="inc4"><span><strong>Consegna sospetta di rifiuti:</strong> Consegna notturna non annunciata di cisterne o camion con rifiuti italiani, di Pazin o di Gospić senza dichiarazione.</span></label>
+      </div>
+      <div class="checkbox-group">
+        <label for="inc5"><input type="checkbox" id="inc5"><span><strong>Rumore eccessivo:</strong> Rumore notturno sulle facciate degli edifici residenziali che supera i 40 dB(A) consentiti.</span></label>
+      </div>
+      <div class="form-group" style="margin-top: 15px;">
+        <label>PROVE AGGIUNTIVE E OSSERVAZIONI DEI CITTADINI (Descrizione del luogo, data ed effetti registrati):</label>
+        <textarea class="form-control" placeholder="Inserisci le tue osservazioni, date, fotografie o registrazioni video che possiedi..."></textarea>
+      </div>
+      <div class="legal-code-block">
+BASE GIURIDICA E RICHIESTA:
+Dato che l'ignoranza non esonera dalla responsabilità i funzionari che sono chiamati d'ufficio a supervisionare impianti pericolosi, il ricorrente richiede l'avvio urgente di azioni investigative, la sospensione temporanea del funzionamento dell'impianto e la formulazione di un'accusa per negligenza cosciente ed ecocidio.
+      </div>
+      <div class="form-group">
+        <label>Luogo e data di compilazione:</label>
+        <input type="text" class="form-control" value="A Koromačno / Raša / Labin, il ___________ 2026.">
+      </div>
+    </div>
+
+    <h3>Collasso del Monitoraggio Statale e Trappola Legale per i Cittadini</h3>
+    <ul>
+      <li><strong>Database obsoleti:</strong> I registri pubblici ufficiali dell'inquinamento, come i <a href="https://haop.hr" target="_blank" class="external-link">sistemi HAOP</a>, il <a href="https://azo.hr" target="_blank" class="external-link">portale ENVI</a> e il <a href="https://azo.hr" target="_blank" class="external-link">Sistema ISKZL</a> statale, non sono stati sistematicamente e trasparentemente aggiornati dal <strong>2017</strong>, impedendo al pubblico di vedere le emissioni in tempo reale.</li>
+      <li><strong>Supervisione ispettiva privatizzata:</strong> L'Ispettorato di Stato (DIRH) si basa interamente su misurazioni finanziate dall'inquinatore stesso (Holcim), accettando i loro rapporti interni senza ispezioni indipendenti non annunciate.</li>
+      <li><strong>Ostruzione giudiziaria:</strong> La prassi costituzionale e giudiziaria in Croazia respinge sistematicamente i risultati chimici e ambientali indipendenti prodotti da cittadini o associazioni, con il pretesto che "non sono stati raccolti da laboratori accreditati autorizzati", creando così un circolo chiuso di irresponsabilità sistemica.</li>
+    </ul>
+
+    <div class="legal-document-box" style="background: #1e293b; border-left: 5px solid #ef4444; padding: 1.5rem; border-radius: 4px; margin-top: 1rem; color: #f8fafc;">
+      <h3 style="color: #f87171; border-bottom: 1px solid #475569; padding-bottom: 0.5rem; margin-top: 0;">⚖️ DENUNCIA PENALE – PROCURA DELLA REPUBBLICA (DORH)</h3>
+      <p><strong>ALLA PROCURA MUNICIPALE DI PULA-POLA</strong><br>
+      <strong>Oggetto:</strong> Denuncia penale contro le persone responsabili dell'operatore e dei servizi di ispezione competenti per fondato sospetto di reati contro l'ambiente (art. 193 CP) e lavoro negligente in servizio (art. 337 CP).</p>
+
+      <div style="background: #0f172a; padding: 1rem; border-radius: 4px; border: 1px solid #334155; margin: 1rem 0;">
+        <h4 style="color: #38bdf8; margin-top: 0;">I. DESCRIZIONE DEI FATTI E PROVE MATERIALI IRREFUTABILI</h4>
+        <p>Il 21 settembre 2026, il Consiglio Comunale del Comune di Raša ha adottato una Conclusione ufficiale (9 voti A FAVORE, 1 astensione) che conferma il drammatico deterioramento della situazione ambientale e il collasso del sistema di monitoraggio:</p>
+        <div style="border-left: 3px solid #facc15; padding-left: 0.8rem; margin: 0.8rem 0; font-style: italic; color: #cbd5e1;">
+          "Richiesta 3: Chiediamo il divieto di incenerimento di combustibili da rifiuti (GEO, RDF) fino all'ottenimento di un verbale e di una decisione dell'Ispettorato di Stato per il superamento dei doppi valori limite delle emissioni GVE di carbonio organico totale (TOC)..."<br>
+          <strong>— Aleks Bedrina, Presidente del Consiglio Comunale di Raša (Audio: audio/ABedrina2209.mp3)</strong>
+        </div>
+        <div style="border-left: 3px solid #f87171; padding-left: 0.8rem; margin: 0.8rem 0; font-style: italic; color: #cbd5e1;">
+          "Lo studio di impatto ambientale ci ha ingannati... Tutte le emissioni sono aumentate da 10 a 15 volte rispetto a quanto diceva lo studio. La tecnologia scelta per il precalcinatore è completamente sbagliata. A causa di problemi tecnologici, la popolazione locale viene distrutta e soffre."<br>
+          <strong>— Milenko Plazibat, Presidente del Comitato Locale di Koromačno (Audio: audio/MPlazibat2209.mp3)</strong>
+        </div>
+        <div style="border-left: 3px solid #38bdf8; padding-left: 0.8rem; margin: 0.8rem 0; font-style: italic; color: #cbd5e1;">
+          "Il Consiglio Comunale del Comune di Raša ha il fondamentale dovere costituzionale e legale di reagire e proteggere gli interessi dei suoi cittadini... I residenti di Koromačno sono nella vita quotidiana più direttamente esposti al funzionamento dell'impianto."<br>
+          <strong>— Leo Knapić, Sindaco del Comune di Raša (Audio: audio/LKnapic2209.mp3)</strong>
+        </div>
+      </div>
+
+      <div style="background: #0f172a; padding: 1rem; border-radius: 4px; border: 1px solid #334155; margin: 1rem 0;">
+        <h4 style="color: #38bdf8; margin-top: 0;">II. QUALIFICAZIONE GIURIDICA DEI REATI</h4>
+        <ol style="padding-left: 1.2rem; margin-bottom: 0;">
+          <li style="margin-bottom: 0.5rem;">
+            <strong>Inquinamento ambientale (Articolo 193 del Codice Penale):</strong> Gli operatori sono accusati di aver causato, mettendo in funzione un precalcinatore tecnologicamente inadeguato, un salto delle emissioni da 10 a 15 volte oltre i limiti consentiti e frequenti doppi superamenti del TOC.
+          </li>
+          <li>
+            <strong>Lavoro negligente in servizio (Articolo 337 del Codice Penale):</strong> Gli ispettori competenti dell'Ispettorato di Stato della Repubblica di Croazia sono accusati di non aver emesso, nonostante la conoscenza e le richieste ufficiali delle unità di autogoverno locale, una decisione sulla sospensione temporanea del funzionamento del forno fino all'eliminazione della causa del doppio superamento del TOC.
+          </li>
+        </ol>
+      </div>
+
+      <p><strong>Allegati alla denuncia:</strong> Verbale della sessione del Consiglio Comunale di Raša del 21.09.2026, trascrizioni audio (audio/ABedrina2209.mp3, audio/LKnapic2209.mp3, audio/MPlazibat2209.mp3), estratto tabellare delle misurazioni GVE.</p>
+      <a class="download-callout" href="docs/OV_RASA_21_09_2026.pdf" download>
+        <span>📄 Scarica il verbale del Consiglio Comunale di Raša (PDF)</span>
+        <small>Verbale ufficiale e conclusioni della sessione del 21.09.2026.</small>
+      </a>
+      <div class="audio-evidence no-print">
+        <h4>🔊 Allegati probatori audio della sessione del Consiglio Comunale di Raša</h4>
+        <div class="audio-evidence-grid">
+          <div class="audio-card">
+            <strong>Aleks Bedrina</strong>
+            <audio controls preload="none"><source src="audio/ABedrina2209.mp3" type="audio/mpeg"></audio>
+          </div>
+          <div class="audio-card">
+            <strong>Leo Knapić</strong>
+            <audio controls preload="none"><source src="audio/LKnapic2209.mp3" type="audio/mpeg"></audio>
+          </div>
+          <div class="audio-card">
+            <strong>Milenko Plazibat</strong>
+            <audio controls preload="none"><source src="audio/MPlazibat2209.mp3" type="audio/mpeg"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPO 6 -->
+  <section id="polje6" class="section-card">
+    <h2>📈 CAMPO 6: Scenario di Uscita Aziendale vs. Visione di Alternativa Sostenibile</h2>
+
+    <h3>1. Rischio finanziario e Scenario di uscita aziendale</h3>
+    <p>Attraverso il progetto KO2, Holcim cerca di ritirare fino a <strong>116,9 milioni di euro di sovvenzioni non rimborsabili</strong> dal Fondo per l'Innovazione dell'UE. Tuttavia, in caso di blocco legale del forno o sospensione giudiziaria del funzionamento per violazioni ambientali, lo stabilimento affronta un enorme colpo finanziario:</p>
+    <ul>
+      <li>Pagamento di sanzioni ETS per emissioni di CO₂ per oltre <strong>30 milioni di euro all'anno</strong>.</li>
+      <li>Perdita delle sovvenzioni UE e obbligo di restituzione degli importi di capitale finora investiti.</li>
+      <li><strong>Uscita aziendale:</strong> La struttura di gestione prevede di trasferire i rischi di capitale e legali sul bilancio della Repubblica di Croazia attraverso la nuova Legge sulle Georisorse, privatizzando il profitto dai crediti ETS, mentre la potenziale bonifica del danno risultante viene lasciata ai cittadini della Croazia.</li>
+    </ul>
+
+    <h3>2. Visione di un'alternativa sostenibile: Punto di svolta per Labinština</h3>
+    <p>Invece di trasformare la Baia di Raša in un inceneritore di rifiuti europei e in un sito di smaltimento sperimentale di gas pericolosi, si propone un cambiamento strategico verso un'economia marittima sostenibile e di alto valore:</p>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr><th>Settore</th><th>Modello di Industria Pesante dei Rifiuti (Attuale)</th><th>Visione di Alternativa Sostenibile (Proposta)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Uso delle risorse</strong></td><td>Incenerimento di 19.000+ tonnellate di rifiuti importati e deposito di 40 kg di mercurio.</td><td>Completa cessazione del coincenerimento dei rifiuti e chiusura degli impianti inquinanti.</td></tr>
+          <tr><td><strong>Turismo nautico</strong></td><td>Porto industriale per il trasporto di carbone, rifiuti e CO₂ criogenica.</td><td>Costruzione di un esclusivo <strong>porto turistico ACI</strong> nelle profonde e riparate baie di Trget e Blaz.</td></tr>
+          <tr><td><strong>Maricoltura</strong></td><td>Distruzione degli allevamenti di molluschi a causa dello scarico di 1,5 milioni di m³ di salamoia.</td><td>Rivitalizzazione e protezione ecologica dell'allevamento di capesante e ostriche autoctone con denominazione di origine UE.</td></tr>
+          <tr><td><strong>Economia locale</strong></td><td>Perdita di valore degli immobili 30-50%, emigrazione e monocultura dell'industria sporca.</td><td>Sviluppo di ecoturismo sostenibile, sentieri escursionistici Skitača-Koromačno e alta offerta gastronomica.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CAMPO 8 -->
+  <section id="polje8_zataskavanje" class="section-card">
+    <h2>⚖️ CAMPO 8: Difesa contro l'Insabbiamento (DORH / USKOK) e Testimonianze Parlamentari</h2>
+
+    <div class="alert-banner">
+      ⚠️ TESTIMONIANZA CORONA (Parlamento Croato, 22.09.2026): "Le conseguenze sulla salute di tali incidenti ecologici si vedono con ritardo e accumulo di tempo e veleno. Non è un virus influenzale." — On. Ivana Kekin.
+    </div>
+
+    <h3>1. Due modelli sistemici di insabbiamento istituzionale</h3>
+    <p>Sulla base delle rivelazioni parlamentari e dell'analisi della condotta degli organi statali croati, sono stati definiti due modelli identici e perfidi che i cittadini incontrano nei casi di Koromačno e Lika:</p>
+    <ul>
+      <li><strong>Modello A (Nascondere e mettere i rapporti "sotto il tappeto"):</strong> Quando le analisi ufficiali stabiliscono la presenza di sostanze cancerogene, o quando il Consiglio Comunale stesso nella Richiesta 3 verifica ufficialmente un <strong>doppio superamento del carbonio organico totale (TOC)</strong>, gli organi competenti e l'operatore tengono i dati in un blackout informativo per prevenire la reazione pubblica.</li>
+      <li><strong>Modello B (Buco nero procedurale e occultamento dei rigetti):</strong> Le denunce penali dei cittadini vengono tenute nei cassetti per anni, poi silenziosamente rigettate. Quando il pubblico chiede una spiegazione, segue un ping-pong amministrativo di trasferimento di competenza per impedire l'introspezione negli errori procedurali.</li>
+    </ul>
+
+    <h3>2. Perché i cittadini devono urgentemente assumere lo status di PARTE LESA?</h3>
+    <p>Per evitare che la denuncia penale (Campo 5) finisca nel cassetto di ODO Pula, viene applicata una protezione legale chiave: i ricorrenti (residenti di Koromačno, Raša e Labinština) devono dichiararsi formalmente come <strong>PARTI LESE</strong> (persone la cui salute, aria e valore della proprietà sono direttamente minacciati dall'accumulo di veleno).</p>
+    <div class="law-box">
+      <strong>EFFETTO LEGALE DELLO STATUS DI PARTE LESA (Codice di Procedura Penale):</strong><br>
+      Se DORH rigetta la denuncia di un cittadino comune, non ha l'obbligo di fornire una spiegazione dettagliata. Ma se rigetta la denuncia di una <strong>parte lesa</strong>, per legge <strong>DEVE consegnare una Decisione ufficiale sul Rigetto con istruzioni sui rimedi legali</strong>. Così la parte lesa acquisisce il diritto legale, entro <strong>8 giorni</strong>, di assumere autonomamente l'azione penale davanti al tribunale (sostituzione) e costringere il sistema ad aprire le prove!
+    </div>
+
+    <h3>3. Smascherare i trucchi PR locali dei "subacquei"</h3>
+    <p>La dichiarazione ufficiale del sindaco che il problema dell'inquinamento subacqueo e dello scarico di <strong>1.567 tonnellate di idrossido di sodio (NaOH) all'anno</strong> sarà risolto facendo andare "un subacqueo due volte all'anno a controllare i danni visibili" rappresenta un classico tenere i cittadini come oche nel nebbione.</p>
+    <p><strong>Reality check fisico e di processo:</strong> Il danno da rifiuti RDF/SRF importati inadeguati (importati attraverso una lacuna legale e la cancellazione del capitolo sul trasporto transfrontaliero in Parlamento) è procedurale ed è già stato misurato al camino attraverso il <strong>doppio superamento del TOC e il salto delle emissioni del precalcinatore da 10 a 15 volte</strong>! Mentre il governo locale offre maschere da sub per deviare l'attenzione, essi firmano attraverso sessioni d'emergenza le V. modifiche al Piano Regolatore (PPUO Raša) per legittimare legalmente il progetto all'investitore prima che i cittadini vedano anche solo il nuovo Studio di Impatto Ambientale.</p>
+
+    <h3>4. Tre protezioni legali nel blueprint della lotta</h3>
+    <table>
+      <thead>
+        <tr><th>N.</th><th>Nome della Protezione</th><th>Effetto tecnico-legale e leva</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>1.</strong></td><td><strong>Status formale di parte lesa</strong></td><td>Obbligo legale di DORH di consegnare la Decisione sul Rigetto + diritto alla sostituzione (azione penale autonoma) entro 8 giorni.</td></tr>
+        <tr><td><strong>2.</strong></td><td><strong>Convenzione di Aarhus</strong></td><td>I dati su ambiente, inquinamento e sostanze cancerogene secondo il diritto internazionale <strong>non possono essere dichiarati segreti commerciali o di stato</strong>.</td></tr>
+        <tr><td><strong>3.</strong></td><td><strong>Interpellanza parlamentare</strong></td><td>Invio ufficiale del Master Dossier e delle trascrizioni audio della sessione di Raša (15 volte emissioni superiori) alla Commissione Parlamentare per la Protezione Ambientale per costringere DIRH e DORH a rispondere attraverso domande parlamentari.</td></tr>
+      </tbody>
+    </table>
+
+    <p>Tutti i collegamenti legali validi, le assurdità doganali e le trascrizioni delle ammissioni sono permanentemente conservati nel documento <code>docs/zastita-od-zataskavanja-dorh.md</code> all'interno di questo repository.</p>
+  </section>
+
+</div>
+
+<script>
+  function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navHeight = 65;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - navHeight;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+  }
+</script>
+
+</body>
+</html>
