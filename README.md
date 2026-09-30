@@ -11,6 +11,10 @@
 | [**Transkripti i Dokazni Zaključak OV Raša**](docs/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Izvorne izjave predsjednika, načelnika i MO Koromačno |
 | [**Usporedni dokazni elaborat**](docs/usporedni-dokazni-elaborat.md) | `MD` | Poveznica Poglavlja VII i zapisnika OV Raša |
 | [**Sisak vs. Koromačno – komparativni model**](docs/sisak-vs-koromacno-elaborat.md) | `MD` | Institutional capture usporedba |
+| **Zahtjev ZPPI-01 (Raša / Okoliš)** | `MD` | Zahtjev za sirove AMS podatke i odluku od 2. rujna | docs/ZPPI-01/zahtjev-zppi-rasa-okolis-kodeco.md |
+| **Zahtjev ZPPI-02 (Labin / Proračun)** | `MD` | Zahtjev za ugovore i audit logove (CityX) | docs/ZPPI-02/zahtjev-zppi-grad-labin-transparentnost-cityx.md |
+| **Zahtjev ZPPI-03 (Ubaš / Planovi)** | `MD` | Zahtjev za V. izmjene PPUO i koncesiju 2045. | docs/ZPPI-03/_zahtjev-zppi-prostorni-plan-ubas-koromacno.md |
+
 
 ---
 
@@ -95,6 +99,11 @@ Kada preuzmete, ispunite i vlastoručno potpišete (ili ovjerite pečatom udruge
 *   **Fond za zaštitu okoliša i energetsku učinkovitost (FZOEU):** `kontakt@fzoeu.hr` (upiti vezani uz ugovore o sanacijama)
 *   **Službeni kontakt za medije (MZOZT):** `press@mzozt.hr` (dostava dosjea novinarima radi razbijanja medijske blokade)
 *   **Nadležno tijelo: Odbor za predstavke i pritužbe Skupštine Istarske županije (predsjednik odbora je Dalibor Macan).Kontakt adresa: Dršćevka 3, 52000 Pazin.E-mail za kontakt: skupstina@istra-istria.hr ili strucna.sluzba@istra-istria.hr.Telefon Stručne službe Skupštine: 052/351-667.
+*   *   **ODO Pula (Kaznena prijava - obavezno navesti status OŠTEĆENIK):** `tajnistvo@odopu.dorh.hr`
+*   **USKOK (Cc kopija prijave):** `pisarnica@uskok.dorh.hr`
+*   **Općina Raša (Zahtjevi za okoliš i planove):** `protokol@rasa.hr`
+*   **Grad Labin (Zahtjevi za proračun i CityX):** `pisarnica@labin.hr`
+
   
 ### 5.a. 📧 🇪🇺 UPUTE ZA PROSLIJEĐIVANJE EUROPSKOJ AGENCIJI ZA OKOLIŠ (EEA)
 Ove dvije točne natuknice služe za sve građane na terenu kako bi prijava automatski otišla na prave europske adrese uz priloženu službenu PDF dokumentaciju 
