@@ -11,9 +11,10 @@
 | [**Transkripti i Dokazni Zaključak OV Raša**](docs/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Izvorne izjave predsjednika, načelnika i MO Koromačno |
 | [**Usporedni dokazni elaborat**](docs/usporedni-dokazni-elaborat.md) | `MD` | Poveznica Poglavlja VII i zapisnika OV Raša |
 | [**Sisak vs. Koromačno – komparativni model**](docs/sisak-vs-koromacno-elaborat.md) | `MD` | Institutional capture usporedba |
-| **Zahtjev ZPPI-01 (Raša / Okoliš)** | `MD` | Zahtjev za sirove AMS podatke i odluku od 2. rujna | docs/ZPPI-01/zahtjev-zppi-rasa-okolis-kodeco.md |
-| **Zahtjev ZPPI-02 (Labin / Proračun)** | `MD` | Zahtjev za ugovore i audit logove (CityX) | docs/ZPPI-02/zahtjev-zppi-grad-labin-transparentnost-cityx.md |
-| **Zahtjev ZPPI-03 (Ubaš / Planovi)** | `MD` | Zahtjev za V. izmjene PPUO i koncesiju 2045. | docs/ZPPI-03/_zahtjev-zppi-prostorni-plan-ubas-koromacno.md |
+| [**Zahtjev ZPPI-01 (Raša / Okoliš)**](docs/ZPPI-01/zahtjev-zppi-rasa-okolis-kodeco.md) | `MD` | Zahtjev za sirove AMS podatke i odluku od 2. rujna |
+| [**Zahtjev ZPPI-02 (Labin / Proračun)**](docs/ZPPI-02/zahtjev-zppi-grad-labin-transparentnost-cityx.md) | `MD` | Zahtjev za ugovore i audit logove (CityX) |
+| [**Zahtjev ZPPI-03 (Ubaš / Planovi)**](docs/ZPPI-03/_zahtjev-zppi-prostorni-plan-ubas-koromacno.md) | `MD` | Zahtjev za V. izmjene PPUO i koncesiju 2045. |
+
 
 
 ---
