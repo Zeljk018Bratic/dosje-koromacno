@@ -95,7 +95,7 @@
       max-width: 1000px;
       margin: 0 auto;
     }
-    .section-card {
+    .    .section-card {
       background-color: var(--bg-card);
       border: 1px solid var(--border-red);
       border-left: 5px solid var(--accent-red);
@@ -137,7 +137,13 @@
       color: var(--text-gold);
       font-weight: bold;
     }
-
+    /* FIX: tamni tekst unutar bijelih kartica */
+    .section-card p,
+    .section-card li,
+    .section-card td,
+    .section-card blockquote {
+      color: #1e293b !important;
+    }
     /* Timeline Styling */
     .timeline {
       border-left: 3px solid var(--accent-red);
