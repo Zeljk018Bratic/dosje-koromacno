@@ -2,8 +2,7 @@
 
 **Cjeloviti forenzički, kemijski i pravni dosje slučaja Holcim Koromačno i Raškog zaljeva.**
 
->  **[🇬🇧 Read this README in English →](README-en.md)** · **[🇩🇪 Auf Deutsch lesen →](README-de.md)** · **[🇮🇹 Leggi in italiano →](README-it.md)**
-
+> **[🇬🇧 Read this README in English →](README-en.md)** · **[🇩🇪 Auf Deutsch lesen →](README-de.md)** · **[🇮🇹 Leggi in italiano →](README-it.md)**
 ---
 
 ## 📑 Sadržaj
