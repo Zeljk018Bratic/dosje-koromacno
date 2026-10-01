@@ -147,3 +147,21 @@ Tekst prijave (zajedno s priloženim PDF dokumentima o forenzici prometa otpada,
 - **UNECE:** `public.participation@un.org`
 
 **Subject:**
+---
+
+## 🌐 Višejezične verzije
+
+| Jezik | Stranica |
+|-------|----------|
+| 🇭🇷 Hrvatski | [forenzika.html](forenzika.html) |
+| 🇬🇧 English | [forenzika-en.html](forenzika-en.html) |
+| 🇩🇪 Deutsch | [forenzika-de.html](forenzika-de.html) |
+| 🇮🇹 Italiano | [forenzika-it.html](forenzika-it.html) |
+
+## 📜 Manifest
+
+[Pročitaj manifest](manifest.html) – „NISU NAS SLOMILI"
+
+---
+
+*Posljednje ažuriranje: 01.10.2026.*
