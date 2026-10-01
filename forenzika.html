@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔬 Forenzika · Dosje Koromačno</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+    h1, h2, h3 { color: #0f172a; }
+    pre { background: #1e293b; color: #e2e8f0; padding: 16px; border-radius: 8px; overflow-x: auto; }
+    a { color: #1e3a5f; }
+  </style>
+</head>
+<body>
 
+<div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; font-family: sans-serif;">
+  <a href="index.html" style="padding: 10px 18px; background: #374151; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold;">← Početna</a>
+  <a href="manifest.html" style="padding: 10px 18px; background: #b91c1c; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold;">📜 Manifest</a>
+  <a href="forenzika.html" style="padding: 10px 18px; background: #1e3a5f; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold;">🔬 Forenzika</a>
+</div>
+
+<h1>🔬 Forenzička analiza</h1>
+<div id="content">Učitavanje...</div>
+
+<script>
+  fetch('forenzika.txt')
+    .then(r => r.text())
+    .then(t => {
+      document.getElementById('content').innerHTML = marked.parse(t);
+    })
+    .catch(e => {
+      document.getElementById('content').innerHTML = '<p>Greška pri učitavanju: ' + e + '</p>';
+    });
+</script>
+
+</body>
+</html>
