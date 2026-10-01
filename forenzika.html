@@ -3,44 +3,401 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🔬 Forenzika · Dosje Koromačno</title>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <title>📂 Arhiva dokaza · Dosje Koromačno</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Roboto, sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px;
-      background: #f8fafc;
-      color: #1e293b;
-      line-height: 1.7;
+    :root {
+      --bg-main: #140303;
+      --bg-card: #220808;
+      --bg-card-alt: #2c0d0d;
+      --border-red: #5c1616;
+      --border-bright: #991b1b;
+      --accent-red: #dc2626;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-gold: #fbbf24;
     }
-    h1, h2, h3 { color: #0f172a; }
-    pre { background: #1e293b; color: #e2e8f0; padding: 16px; border-radius: 8px; overflow-x: auto; }
-    a { color: #1e3a5f; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding-bottom: 60px;
+    }
+    .nav-bar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: #2a0606;
+      border-bottom: 3px solid var(--accent-red);
+      padding: 12px 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.8);
+    }
+    .nav-bar a {
+      padding: 8px 16px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: 1px solid var(--accent-red);
+      transition: 0.2s;
+    }
+    .nav-bar a:hover { transform: translateY(-2px); }
+    .nav-bar a.home { background: #374151; border-color: #6b7280; }
+    .nav-bar a.manifest { background: #7f1d1d; }
+    .nav-bar a.forenzika { background: #1e3a5f; border-color: #93c5fd; }
+    .container {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 0 20px;
+    }
+    .header-banner {
+      background: linear-gradient(135deg, #450a0a 0%, #1a0303 100%);
+      border: 2px solid var(--border-bright);
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .header-banner h1 {
+      color: #f87171;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .header-banner p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .section-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-red);
+      border-left: 5px solid var(--accent-red);
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    .section-card h2 {
+      color: var(--text-gold);
+      font-size: 1.4rem;
+      border-bottom: 2px solid var(--border-bright);
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .doc-list {
+      list-style: none;
+      padding: 0;
+    }
+    .doc-list li {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-red);
+      border-left: 4px solid var(--accent-red);
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+      transition: 0.2s;
+    }
+    .doc-list li:hover {
+      border-left-color: var(--text-gold);
+      transform: translateX(4px);
+    }
+    .doc-list a {
+      color: #fca5a5;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .doc-list a:hover { color: var(--text-gold); text-decoration: underline; }
+    .doc-list .desc {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+    .doc-list .meta {
+      color: #64748b;
+      font-size: 0.78rem;
+      margin-top: 6px;
+      font-family: 'Courier New', monospace;
+    }
+    .stats {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+    .stat-box {
+      flex: 1 1 180px;
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-red);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+    }
+    .stat-box .num {
+      display: block;
+      color: var(--text-gold);
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-box .lbl {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .footer-links {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 25px;
+      border-top: 1px solid var(--border-red);
+    }
+    .footer-links a {
+      display: inline-block;
+      padding: 10px 18px;
+      margin: 6px;
+      background-color: #7f1d1d;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      border: 1px solid var(--accent-red);
+      transition: 0.2s;
+    }
+    .footer-links a:hover { background-color: var(--accent-red); transform: translateY(-2px); }
+    .signature {
+      text-align: center;
+      margin-top: 30px;
+      color: var(--accent-red);
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
   </style>
 </head>
 <body>
 
-<div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; font-family: sans-serif;">
-  <a href="index.html" style="padding: 10px 18px; background: #374151; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold;">← Početna</a>
-  <a href="manifest.html" style="padding: 10px 18px; background: #b91c1c; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold;">📜 Manifest</a>
-  <a href="forenzika.html" style="padding: 10px 18px; background: #1e3a5f; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold;">🔬 Forenzika</a>
+<nav class="nav-bar no-print">
+  <a href="index.html" class="home">← Početna</a>
+  <a href="manifest.html" class="manifest">📜 Manifest</a>
+  <a href="forenzika.html" class="forenzika">📂 Arhiva dokaza</a>
+</nav>
+
+<div class="container">
+
+  <div class="header-banner">
+    <h1>📂 Arhiva dokaza</h1>
+    <p>Svi dokumenti, transkripti, audio zapisi, forenzički elaborati i pravni obrasci na jednom mjestu. Trajno pohranjeni, provjerljivi, otvoreni svima.</p>
+  </div>
+
+  <!-- STATISTIKA -->
+  <div class="stats">
+    <div class="stat-box">
+      <span class="num">6</span>
+      <span class="lbl">Analiziranih slučajeva</span>
+    </div>
+    <div class="stat-box">
+      <span class="num">8</span>
+      <span class="lbl">Pravnih polja</span>
+    </div>
+    <div class="stat-box">
+      <span class="num">70</span>
+      <span class="lbl">Mjera zaštite okoliša</span>
+    </div>
+    <div class="stat-box">
+      <span class="num">3</span>
+      <span class="lbl">Audio dokaza</span>
+    </div>
+  </div>
+
+  <!-- 1. GLAVNI FORENZIČKI DOSJEI -->
+  <section class="section-card">
+    <h2>📘 Glavni forenzički dosjei</h2>
+    <ul class="doc-list">
+      <li>
+        <a href="docs/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2.pdf" target="_blank" rel="noopener">📘 MARA ALL-IN V2 · Završni forenzički dosje</a>
+        <div class="desc">Kompletna forenzička analiza slučaja Koromačno – svi dokazi, transkripti, tablice i pravni obrasci.</div>
+        <div class="meta">PDF · 29.09.2026. · FINAL V2</div>
+      </li>
+      <li>
+        <a href="docs/usporedni-dokazni-elaborat.md" target="_blank" rel="noopener">📘 Usporedni dokazni elaborat</a>
+        <div class="desc">Usporedba slučajeva: TE Plomin, Rockwool, IUR, Kaštijun, Uljanik, Holcim Koromačno.</div>
+        <div class="meta">Markdown · 6 lokacija · 10-točkasti obrazac</div>
+      </li>
+      <li>
+        <a href="docs/Evidence_Matrix_Koromacno_25-09-2026.xlsx" target="_blank" rel="noopener">📊 Evidence Matrix</a>
+        <div class="desc">Matrica dokaza s referencama na stranice studije, tablice i ključne nalaze.</div>
+        <div class="meta">XLSX · 25.09.2026.</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 2. PRAVNI DOKUMENTI -->
+  <section class="section-card">
+    <h2>⚖️ Pravni dokumenti</h2>
+    <ul class="doc-list">
+      <li>
+        <a href="docs/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf" target="_blank" rel="noopener">🚨 Predložak kaznene prijave za DORH</a>
+        <div class="desc">Službeni obrazac kaznene prijave zbog kaznenih djela protiv okoliša (čl. 193. i 196. KZ).</div>
+        <div class="meta">PDF · Poglavlje VI</div>
+      </li>
+      <li>
+        <a href="docs/zahtjev-status-stranke-arhus.md" target="_blank" rel="noopener">⚖️ Zahtjev za status stranke (Aarhus)</a>
+        <div class="desc">Zahtjev za priznavanje statusa oštećenika prema Aarhuškoj konvenciji.</div>
+        <div class="meta">Markdown · Aarhus konvencija</div>
+      </li>
+      <li>
+        <a href="docs/zahtjev-zppi.pdf" target="_blank" rel="noopener">📝 ZPPI zahtjev za Općinu Raša</a>
+        <div class="desc">Zahtjev za pristup informacijama o okolišnim dozvolama i inspekcijskim zapisnicima.</div>
+        <div class="meta">PDF · ZPPI obrazac</div>
+      </li>
+      <li>
+        <a href="docs/zahtjev-zppi.md" target="_blank" rel="noopener">📋 ZPPI obrazac (Markdown/Tekst)</a>
+        <div class="desc">Urednički obrazac ZPPI zahtjeva za slanje na više adresa.</div>
+        <div class="meta">Markdown · prilagodljiv</div>
+      </li>
+      <li>
+        <a href="docs/ZPPI-03/zahtjev-zppi-prostorni-plan-ubas-koromacno.html" target="_blank" rel="noopener">🌲 ZPPI-03 · Prostorni plan Ubaš-Koromačno</a>
+        <div class="desc">Zahtjev za uvid u prostorni plan i planiranu namjenu područja Ubaš.</div>
+        <div class="meta">HTML · Općina Raša</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 3. SLUŽBENI ZAPISNICI I TRANSKRIPTI -->
+  <section class="section-card">
+    <h2>📜 Službeni zapisnici i transkripti</h2>
+    <ul class="doc-list">
+      <li>
+        <a href="docs/OV_RASA_21_09_2026.pdf" target="_blank" rel="noopener">📜 Zapisnik OV Raša · 21.09.2026.</a>
+        <div class="desc">Službeni zapisnik sjednice Općinskog vijeća Općine Raša s ključnim zaključcima i transkriptima.</div>
+        <div class="meta">PDF · 21.09.2026. · 9 ZA, 1 suzdržan</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 4. AUDIO DOKAZI -->
+  <section class="section-card">
+    <h2>🔊 Audio dokazi · sjednica OV Raša</h2>
+    <ul class="doc-list">
+      <li>
+        <a href="audio/ABedrina2209.mp3" target="_blank" rel="noopener">🎙️ Aleks Bedrina · predsjednik OV Raša</a>
+        <div class="desc">Zahtjev 3 – zabrana spaljivanja GEO/RDF goriva zbog dvostrukog prekoračenja TOC-a.</div>
+        <div class="meta">MP3 · 21.09.2026.</div>
+      </li>
+      <li>
+        <a href="audio/LKnapic2209.mp3" target="_blank" rel="noopener">🎙️ Leo Knapić · načelnik Općine Raša</a>
+        <div class="desc">O ustavnoj dužnosti Općinskog vijeća da zaštiti interese građana.</div>
+        <div class="meta">MP3 · 21.09.2026.</div>
+      </li>
+      <li>
+        <a href="audio/MPlazibat2209.mp3" target="_blank" rel="noopener">🎙️ Milenko Plazibat · predsjednik MO Koromačno</a>
+        <div class="desc">Svjedočanstvo: emisije su se povećale 10–15 puta u odnosu na studiju.</div>
+        <div class="meta">MP3 · 21.09.2026.</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 5. FORENZIKA RDF/SRF -->
+  <section class="section-card">
+    <h2>☢️ Forenzika RDF/SRF otpada</h2>
+    <ul class="doc-list">
+      <li>
+        <a href="docs/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf" target="_blank" rel="noopener">☢️ Poglavlje VII · Prekogranični promet RDF/SRF otpada</a>
+        <div class="desc">Forenzička analiza carinskih deklaracija, uvoza 19.013 tona otpada iz Italije i tri odvojena otpadna toka (Gospić, Pazin, Italija).</div>
+        <div class="meta">PDF · Poglavlje VII</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 6. SHA-256 OTISCI -->
+  <section class="section-card">
+    <h2>🔐 SHA-256 digitalni otisci</h2>
+    <ul class="doc-list">
+      <li>
+        <a href="docs/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2_SHA256.txt" target="_blank" rel="noopener">🔐 SHA-256 · Fiksni otisak V2</a>
+        <div class="desc">Kriptografski otisak završnog forenzičkog dosjea – dokaz da dokument nije mijenjan.</div>
+        <div class="meta">TXT · SHA-256 hash</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 7. POTVRDE O URUČENJU -->
+  <section class="section-card">
+    <h2>📬 Potvrde o uručenju dokaza</h2>
+    <ul class="doc-list">
+      <li>
+        <a href="docs/Slanje_Dokaza_30-09-2026/uruceno-dopis-i-mara-v2-radna-skupina-sabor.pdf" target="_blank" rel="noopener">📕 Dokaz uručenja · MARA V2 · Sabor</a>
+        <div class="desc">Potvrda o uručenju forenzičkog dosjea Radnoj skupini Sabora RH.</div>
+        <div class="meta">PDF · 30.09.2026.</div>
+      </li>
+      <li>
+        <a href="docs/Slanje_Dokaza_30-09-2026/uruceno-zppi-01-ams-kodeco.pdf" target="_blank" rel="noopener">🌫️ Dokaz uručenja · ZPPI-01 / Općina Raša</a>
+        <div class="desc">Potvrda o uručenju ZPPI zahtjeva Općini Raša u vezi KOdeCO projekta.</div>
+        <div class="meta">PDF · 30.09.2026.</div>
+      </li>
+      <li>
+        <a href="docs/Slanje_Dokaza_30-09-2026/uruceno_zahtjev_ppi_grad_labin_transparentnost_cityx.pdf" target="_blank" rel="noopener">🔷 Dokaz uručenja · ZPPI-02 / Grad Labin</a>
+        <div class="desc">Potvrda o uručenju ZPPI zahtjeva Gradu Labinu u vezi transparentnosti.</div>
+        <div class="meta">PDF · 30.09.2026.</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 8. VANJSKI IZVORI -->
+  <section class="section-card">
+    <h2>🌐 Vanjski izvori i baze podataka</h2>
+    <ul class="doc-list">
+      <li>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Mohorovic+L" target="_blank" rel="noopener">🔬 PubMed · radovi dr. Lucijana Mohorovića</a>
+        <div class="desc">Znanstveni radovi o methemoglobinu, staničnoj hipoksiji i dugoročnim zdravstvenim posljedicama na Labinštini.</div>
+        <div class="meta">PubMed · međunarodna medicinska baza</div>
+      </li>
+      <li>
+        <a href="https://www.istra-istria.hr/" target="_blank" rel="noopener">🏛️ Istarska županija · službene stranice</a>
+        <div class="desc">Prostorni planovi, županijski zaključci, dokumentacija o Kaštijunu i drugim projektima.</div>
+        <div class="meta">Službeni portal</div>
+      </li>
+      <li>
+        <a href="https://www.holcim.hr/kodeco" target="_blank" rel="noopener">🏭 Holcim Hrvatska · KOdeCO Net Zero</a>
+        <div class="desc">Službena projektna dokumentacija Holcimovog projekta hvatanja CO₂ u Koromačnu.</div>
+        <div class="meta">Korporativni portal</div>
+      </li>
+      <li>
+        <a href="https://cinea.ec.europa.eu/" target="_blank" rel="noopener">🇪🇺 CINEA · Inovacijski fond EU</a>
+        <div class="desc">Službeni podaci o financiranju projekta KOdeCO (116,9 milijuna eura).</div>
+        <div class="meta">EU · Clean Energy Fund</div>
+      </li>
+    </ul>
+  </section>
+
+  <div class="footer-links">
+    <a href="index.html">🏠 Početna</a>
+    <a href="manifest.html">📜 Manifest</a>
+    <a href="https://github.com/Zeljk018Bratic/dosje-koromacno" target="_blank" rel="noopener">📂 GitHub</a>
+    <a href="https://github.com/Zeljk018Bratic/open-fiscal-forensics" target="_blank" rel="noopener">🔍 Open Fiscal Forensics</a>
+  </div>
+
+  <div class="signature">Krepat ma ne molat!</div>
+
 </div>
-
-<h1>🔬 Forenzička analiza</h1>
-<div id="content">Učitavanje...</div>
-
-<script>
-  fetch('forenzika.txt')
-    .then(r => r.text())
-    .then(t => {
-      document.getElementById('content').innerHTML = marked.parse(t);
-    })
-    .catch(e => {
-      document.getElementById('content').innerHTML = '<p>Greška pri učitavanju: ' + e + '</p>';
-    });
-</script>
 
 </body>
 </html>
