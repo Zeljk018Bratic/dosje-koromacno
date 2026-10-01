@@ -1,7 +1,8 @@
 # 🔬 EKOCID KOROMAČNO · Interaktivni Istraživački Dosje & Pravni Alat
 
+Cjeloviti forenzički, kemijski i pravni dosje slučaja Holcim Koromačno i Raškog zaljeva.
+
 > **EN · [Read this README in English →](README-en.md)** | **DE · [Auf Deutsch lesen →](README-de.md)** | **IT · [Leggi in italiano →](README-it.md)**
----
 
 ## 📑 Sadržaj
 
