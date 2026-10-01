@@ -1,7 +1,7 @@
 # 🔬 ECOCIDIO KOROMAČNO · Dossier di Ricerca Interattivo & Strumento Legale
 
 **Dossier forense, chimico e legale completo sul caso Holcim Koromačno e sulla Baia di Raša.**
-> **[🇭🇷 Pročitaj ovaj README na hrvatskom →](README.md)** · **[🇬🇧 Read this README in English →](README-en.md)** · **[🇩🇪 Auf Deutsch lesen →](README-de.md)**
+> **HR · [Pročitaj ovaj README na hrvatskom →](README.md)** | **EN · [Read this README in English →](README-en.md)** | **DE · [Auf Deutsch lesen →](README-de.md)**
 
 ---
 
