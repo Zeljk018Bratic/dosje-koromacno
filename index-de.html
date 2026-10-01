@@ -34,23 +34,25 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.8);
     }
     .nav-btn {
-  background-color: #7f1d1d; color: #ffffff;
-  border: 1px solid var(--accent-red);
-  padding: 8px 14px; border-radius: 6px;
-  font-weight: 700; font-size: 0.85rem;
-  cursor: pointer; transition: all 0.2s ease-in-out;
-  display: flex; align-items: center; gap: 6px;
-  text-decoration: none;
-}
-
-.nav-btn.ied-bat {
-  background-color: #6d28d9;
-  border: 1px solid #a78bfa;
-}
+      background-color: #7f1d1d; color: #ffffff;
+      border: 1px solid var(--accent-red);
+      padding: 8px 14px; border-radius: 6px;
+      font-weight: 700; font-size: 0.85rem;
+      cursor: pointer; transition: all 0.2s ease-in-out;
+      display: flex; align-items: center; gap: 6px;
+      text-decoration: none;
+    }
+    .nav-btn.ied-bat {
+      background-color: #6d28d9;
+      border: 1px solid #a78bfa;
+    }
     .nav-btn:hover {
       background-color: var(--accent-red); border-color: #fca5a5;
       transform: translateY(-2px);
       box-shadow: 0 4px 10px rgba(220, 38, 38, 0.4);
+    }
+    .nav-btn.ied-bat:hover {
+      background-color: #7c3aed; border-color: #c4b5fd;
     }
     .container { max-width: 1280px; margin: 25px auto; padding: 0 20px; }
     .header-banner {
@@ -199,6 +201,7 @@
       <a href="docs/Evidence_Matrix_Koromacno_25-09-2026.xlsx" style="display:inline-block; padding:8px 12px; background-color:#166534; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">📊 EVIDENCE MATRIX · XLSX</a>
       <a href="docs/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2_SHA256.txt" style="display:inline-block; padding:8px 12px; background-color:#374151; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">🔐 SHA-256 · FIXIERTER FINGERABDRUCK V2</a>
       <a href="docs/Slanje_Dokaza_30-09-2026/uruceno-dopis-i-mara-v2-radna-skupina-sabor.pdf" style="display:inline-block; padding:8px 12px; background-color:#1565c0; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">📕 ZUSTELLUNGSNACHWEIS · MARA V2</a>
+      <a class="nav-btn ied-bat" href="docs/HOLCIM_KOROMACNO_IED_BAT_USKLADENOST_2014-2026.md" target="_blank" rel="noopener noreferrer">⚖️ IED / BAT-KONFORMITÄT 2014–2026</a>
     </div>
     <div style="display: flex; flex-wrap: wrap; gap: 8px;">
       <a href="docs/Slanje_Dokaza_30-09-2026/uruceno-zppi-01-ams-kodeco.pdf" style="display:inline-block; padding:8px 12px; background-color:#0f766e; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">🌫️ ZUSTELLUNGSNACHWEIS · ZPPI-01 / Raša</a>
@@ -431,7 +434,6 @@
       </ol>
     </details>
 
-    <!-- TABELLE DER GVE-GRENZWERTE MIT TOC-PARAMETER -->
     <div class="table-responsive" style="margin-top: 1.5rem; overflow-x: auto;">
       <table style="width: 100%; border-collapse: collapse; background: #121824; color: #e2e8f0; border: 1px solid #334155; font-size: 0.9rem;">
         <thead>
@@ -573,23 +575,27 @@ Da Unwissenheit Beamte nicht von der Verantwortung befreit, die von Amts wegen z
       <li><strong>Justizielle Obstruktion:</strong> Die Verfassungs- und Gerichtspraxis in Kroatien lehnt systematisch unabhängige chemische und ökologische Befunde von Bürgern oder Vereinen mit der Begründung ab, sie seien „nicht von autorisierten akkreditierten Labors erhoben worden", wodurch ein geschlossener Kreis systemischer Verantwortungslosigkeit entsteht.</li>
     </ul>
 
-<!-- AMTLICH ZUGESTELLTE BEWEISE -->
-<div class="proof-container" style="margin: 25px 0 15px; padding: 15px; background-color: #f4fbf7; border-left: 5px solid #2e7d32; border-radius: 4px;">
-  <h3 style="color: #1b5e20; margin-top: 0; font-size: 16px; margin-bottom: 6px;">🛑 AMTLICH ZUGESTELLTE BEWEISE UND DOKUMENTE · 30.09.2026</h3>
-  <p style="color: #334155; margin-bottom: 15px; font-size: 13px;">Hier sind öffentlich zugängliche Dokumente des Beweispakets zusammengefasst, darunter MARA ALL-IN V2, Evidence Matrix, SHA-256-Fingerabdruck und Dokumente, die die Zustellung dokumentieren.</p>
-  <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
-    <a href="docs/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2.pdf" style="display:inline-block; padding:8px 12px; background-color:#7f1d1d; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">📘 MARA ALL-IN V2 · PDF</a>
-    <a href="docs/Evidence_Matrix_Koromacno_25-09-2026.xlsx" style="display:inline-block; padding:8px 12px; background-color:#166534; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">📊 EVIDENCE MATRIX · XLSX</a>
-    <a href="docs/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2_SHA256.txt" style="display:inline-block; padding:8px 12px; background-color:#374151; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">🔐 SHA-256 · FIXIERTER FINGERABDRUCK V2</a>
-    <a href="docs/Slanje_Dokaza_30-09-2026/uruceno-dopis-i-mara-v2-radna-skupina-sabor.pdf" style="display:inline-block; padding:8px 12px; background-color:#1565c0; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">📕 ZUSTELLUNGSNACHWEIS · MARA V2</a>
-    <a class="nav-btn ied-bat" href="docs/HOLCIM_KOROMACNO_IED_BAT_USKLADENOST_2014-2026.md" target="_blank" rel="noopener noreferrer">⚖️ IED / BAT-KONFORMITÄT 2014–2026</a>
-  </div>
-  <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-    <a href="docs/Slanje_Dokaza_30-09-2026/uruceno-zppi-01-ams-kodeco.pdf" style="display:inline-block; padding:8px 12px; background-color:#0f766e; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">🌫️ ZUSTELLUNGSNACHWEIS · ZPPI-01 / Raša</a>
-    <a href="docs/Slanje_Dokaza_30-09-2026/uruceno_zahtjev_ppi_grad_labin_transparentnost_cityx.pdf" style="display:inline-block; padding:8px 12px; background-color:#1e40af; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">🔷 ZUSTELLUNGSNACHWEIS · ZPPI-02 / Labin</a>
-    <a href="docs/ZPPI-03/zahtjev-zppi-prostorni-plan-ubas-koromacno.html" style="display:inline-block; padding:8px 12px; background-color:#b91c1c; color:white; text-decoration:none; font-weight:bold; border-radius:4px; font-size:12px;" target="_blank" rel="noopener noreferrer">🌲 NACHWEIS / ANTRAG · ZPPI-03 / Ubaš</a>
-  </div>
-</div>
+    <div class="legal-document-box" style="background: #1e293b; border-left: 5px solid #ef4444; padding: 1.5rem; border-radius: 4px; margin-top: 1rem; color: #f8fafc;">
+      <h3 style="color: #f87171; border-bottom: 1px solid #475569; padding-bottom: 0.5rem; margin-top: 0;">⚖️ STRAFANZEIGE – STAATSANWALTSCHAFT (DORH)</h3>
+      <p><strong>AN DIE MUNIZIPALSTAATSANWALTSCHAFT IN PULA-POLA</strong><br>
+      <strong>Gegenstand:</strong> Strafanzeige gegen verantwortliche Personen des Betreibers und zuständiger Inspektionsdienste wegen begründeten Verdachts auf Straftaten gegen die Umwelt (Art. 193 StGB) und fahrlässige Dienstausübung (Art. 337 StGB).</p>
+      <a class="nav-btn ied-bat" href="docs/HOLCIM_KOROMACNO_IED_BAT_USKLADENOST_2014-2026.md" target="_blank" rel="noopener noreferrer">⚖️ IED / BAT-KONFORMITÄT 2014–2026</a>
+      <div style="background: #0f172a; padding: 1rem; border-radius: 4px; border: 1px solid #334155; margin: 1rem 0;">
+        <h4 style="color: #38bdf8; margin-top: 0;">I. SACHVERHALT UND UNWIDERLEGBARE MATERIELLE BEWEISE</h4>
+        <p>Am 21. September 2026 verabschiedete der Munizipalrat der Gemeinde Raša eine offizielle Schlussfolgerung (9 Stimmen FÜR, 1 Enthaltung), die die dramatische Verschlechterung des Umweltzustands und den Zusammenbruch des Überwachungssystems bestätigt:</p>
+        <div style="border-left: 3px solid #facc15; padding-left: 0.8rem; margin: 0.8rem 0; font-style: italic; color: #cbd5e1;">
+          „Antrag 3: Wir fordern ein Verbot der Verbrennung von Brennstoffen aus Abfall (GEO, RDF) bis zum Erhalt eines Berichts und Beschlusses der Staatlichen Inspektion über die Überschreitung der doppelten Grenzwerte der GVE-Emissionen von gesamtem organischem Kohlenstoff (TOC)..."<br>
+          <strong>— Aleks Bedrina, Präsident des Munizipalrats Raša (Audio: audio/ABedrina2209.mp3)</strong>
+        </div>
+        <div style="border-left: 3px solid #f87171; padding-left: 0.8rem; margin: 0.8rem 0; font-style: italic; color: #cbd5e1;">
+          „Die Umweltverträglichkeitsstudie hat uns getäuscht... Alle Emissionen sind um das 10- bis 15-Fache im Vergleich zu dem gestiegen, was die Studie sagte. Die Technologie, die sie für den Vorkalzinator gewählt haben, ist völlig fehlerhaft. Aufgrund technologischer Probleme wird die lokale Bevölkerung zerstört und leidet."<br>
+          <strong>— Milenko Plazibat, Präsident des Ortsausschusses Koromačno (Audio: audio/MPlazibat2209.mp3)</strong>
+        </div>
+        <div style="border-left: 3px solid #38bdf8; padding-left: 0.8rem; margin: 0.8rem 0; font-style: italic; color: #cbd5e1;">
+          „Der Munizipalrat der Gemeinde Raša hat die grundlegende verfassungsrechtliche und gesetzliche Pflicht zu reagieren und die Interessen seiner Bürger zu schützen... Die Einwohner von Koromačno sind im täglichen Leben am direktesten dem Betrieb der Anlage ausgesetzt."<br>
+          <strong>— Leo Knapić, Bürgermeister der Gemeinde Raša (Audio: audio/LKnapic2209.mp3)</strong>
+        </div>
+      </div>
 
       <div style="background: #0f172a; padding: 1rem; border-radius: 4px; border: 1px solid #334155; margin: 1rem 0;">
         <h4 style="color: #38bdf8; margin-top: 0;">II. RECHTLICHE QUALIFIKATION DER STRAFTATEN</h4>
