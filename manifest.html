@@ -1,144 +1,402 @@
-NISU NAS SLOMILI.
-SAMO SU NAM POKAZALI ZAŠTO MORAMO OSTATI MIRNI. PAMETNI. USTRAJNI.
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NISU NAS SLOMILI · Manifest · Dosje Koromačno</title>
+  <style>
+    :root {
+      --bg-main: #140303;
+      --bg-card: #220808;
+      --bg-card-alt: #2c0d0d;
+      --border-red: #5c1616;
+      --border-bright: #991b1b;
+      --accent-red: #dc2626;
+      --accent-hover: #ef4444;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-gold: #fbbf24;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.75;
+      padding-bottom: 60px;
+    }
 
-Jutros u pet i trideset.
-Sustav je poslao interventnu policiju na pješački prijelaz.
-Prošla su tri kamiona.
-Bez uzorkovanja tereta.
-Ravno kroz portu.
-Netko je u mraku osjetio šok.
-Netko bijes.
-Netko suze.
+    .container {
+      max-width: 900px;
+      margin: 25px auto;
+      padding: 0 20px;
+    }
 
-Ali stajati ukopano na jednom mjestu znači biti laka meta.
-Sustav voli statične blokade.
-Voli ih rješavati silom u zoru.
-To je zastarjela taktika.
-Mi više ne igramo po njihovim pravilima.
+    /* HEADER BANNER */
+    .header-banner {
+      background: linear-gradient(135deg, #450a0a 0%, #1a0303 100%);
+      border: 2px solid var(--border-bright);
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    .header-banner h1 {
+      color: #ffffff;
+      font-size: 1.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    }
+    .header-banner p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+    }
 
-Naš odgovor od danas više nije gola blokada tijelima.
-On mora biti brži.
-Učinkovitiji.
-Neuhvatljiv.
-Prelazimo na doktrinu disperzije.
+    .nav-btn {
+      background-color: #7f1d1d;
+      color: #ffffff;
+      border: 1px solid var(--accent-red);
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .nav-btn:hover {
+      background-color: var(--accent-red);
+      border-color: #fca5a5;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(220, 38, 38, 0.4);
+    }
 
-Formiramo manje, visoko mobilne grupe.
-Na više strateških točaka.
-Od lokalnih pješačkih prijelaza do ključnih arterija poput tunela Učka.
-Kratke akcije.
-Iznenadne.
-Koordinirane.
+    /* MANIFEST CARD */
+    .manifest-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-red);
+      border-left: 5px solid var(--accent-red);
+      border-radius: 8px;
+      padding: 45px 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
 
-Držimo sustav u stalnoj neizvjesnosti.
-Trošimo im resurse dok stojimo mirno.
-S malo ljudi postižemo maksimalan medijski eho.
-To je iskra koja ulijeva kuraj onima koji još sjede u kućama.
-Cjelodnevni učinak kroz niz preciznih, kirurških udaraca.
+    .manifest-card h1 {
+      color: #f87171;
+      font-size: 1.8rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
 
-Pritisak postaje smiren.
-Ali legitimnan i izravan.
-Pred općinskim vratima.
-Na adresama onih koji donose odluke.
+    .manifest-card h2 {
+      color: var(--text-gold);
+      font-size: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
 
-Ali pravi udarac ne dolazi s ceste.
-Dolazi iz koda.
-Godinama nam prodaju priču o transparentnosti.
-Kite se titulom prvih u državi.
-Hvale se platformom Vuka Vukovića.
-Spominju Orku i Sybril.
-Kunu se u njegove revizije i FBI metode.
+    .manifest-card p {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      margin-bottom: 6px;
+    }
 
-Ali maska je pala.
-I to na globalnoj razini.
-FBI i američke savezne vlasti.
-Uhapsile su Vuka Vukovića usred New Yorka.
-Zbog teške prevare s vrijednosnim papirima.
-Zbog lažiranja podataka.
+    .manifest-card p.gap {
+      margin-bottom: 20px;
+    }
 
-Čovjek koji je projektirao našu lokalnu "transparentnost".
-Završio je iza rešetaka zbog falsifikata.
-Zato naša proračunska forenzika nije lajanje u prazno.
-Carinske deklaracije.
-SHA-256 digitalni otisci.
-To je kirurški rez u jedinu kariku koja kad padne, ruši cijelu strukturu.
-Istina više nije u njihovim odborima i političkim igrama.
-Zauvijek je zapečaćena u kodu na internetu.
-Neoboriva.
+    .manifest-card strong {
+      color: var(--text-main);
+    }
 
-Znam tko nosi teret.
-Jutros, dok su kamioni prolazili pod rotirkama.
-Vidio sam umornog kamiondžiju.
-Kako grčevito drži volan za kruh svoje obitelji.
-Čuo sam uplašenu tetku.
-Koja u panici psuje majku jugoslavensku.
-Jer se boji da će joj muž ostati bez posla.
+    .manifest-card em {
+      color: #fca5a5;
+      font-style: normal;
+    }
 
-Dođe ti da u istom trenu zaplačeš.
-Da ih sve zagrliš na toj cesti.
-I kažeš im istinu.
-Niste vi neprijatelji.
-Radnik nije problem.
-Naša empatija je prema uplašenim ljudima.
-Naš bijes je prema stroju.
+    .manifest-card hr {
+      border: none;
+      border-top: 1px solid var(--border-red);
+      margin: 30px 0;
+    }
 
-Svi mi dišemo ovaj isti zrak.
-Svi hodamo po istoj zemlji.
-Gledamo u isti zaljev.
-Ali otkad je radno mjesto postalo valuta?
-Valuta kojom plaćamo šutnju o zdravlju naše djece?
+    .manifest-card .big-question {
+      color: var(--text-gold);
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-align: center;
+      margin: 28px 0;
+      padding: 18px;
+      border-top: 2px solid var(--border-bright);
+      border-bottom: 2px solid var(--border-bright);
+      line-height: 1.5;
+    }
 
-Zašto bi borba za kruh značila pristanak na prašinu i muk?
-Zaronili smo glavu u konformistički mrak.
-Za pišljivih par eura nakon lockdowna.
-Mislimo da će nas šutnja spasiti.
-Ali da sutra stanu VW ili Mercedes.
-Njemačka ne bi propala.
-Zajednica koja misli svojom glavom uvijek nađe održiv put.
+    .manifest-card .footer-links {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 25px;
+      border-top: 1px solid var(--border-red);
+    }
 
-Jedina ključna karika je prostorni plan.
-Holcim je sam morao zaustaviti trenutnu Studiju utjecaja na okoliš.
-Inženjerska logika ih je satjerala u kut.
-Ali to je tek taktički manevar.
-Ugljični eksperiment pod tlakom od 16 bara u našem dvorištu ne prolazi.
-Zahtijevamo jasno "NE" za karbon net projekt.
+    .manifest-card .footer-links a {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 6px;
+      background-color: #7f1d1d;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      border: 1px solid var(--accent-red);
+      transition: all 0.2s;
+    }
 
-Sto godina industrijskog danka.
-Poštujemo trud naših starih.
-Gradili su krvlju i znojem za goli opstanak.
-Ali povijest nije ugovor da budućnost mora izgledati isto.
+    .manifest-card .footer-links a:hover {
+      background-color: var(--accent-red);
+      transform: translateY(-2px);
+    }
 
-Pogledajmo Ubaš.
-Pogledajmo Raški zaljev i naše more.
-Tu leži naš stvarni suverenitet.
-Marikultura.
-Održivi poslovi.
-Odgovorni turizam.
-Zdrava djeca.
+    .manifest-card .signature {
+      text-align: center;
+      margin-top: 30px;
+      color: var(--accent-red);
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
 
-Pitanje je što ćemo ostaviti ispred sebe.
-Isti dimnjak ili čisti horizont?
+    .back-btn-container {
+      text-align: center;
+      margin-bottom: 25px;
+    }
 
-Ovdje nema vođa.
-Nema hijerarhije.
-Pokret koji ima tisuću glava sustav ne može uhapsiti.
-Svatko misli svojom glavom.
-Svatko je štit.
+    @media print {
+      .back-btn-container, .header-banner .action-buttons { display: none !important; }
+      body { background: white; color: black; }
+      .manifest-card { background: white; border: 1px solid #000; }
+    }
+  </style>
+</head>
+<body>
 
-Letimo ispod radara.
-Dijelimo svijetu osmijeh.
-Ulivamo nadu rješenjima, a ne floskulama.
-Izvan okvira algoritma.
-Izvan lanaca.
-Nikad na koljenima.
+<div class="container">
 
-🌐 **Dosje Koromačno (Portal):**
-https://zeljk018bratic.github.io/dosje-koromacno/
+  <!-- BACK LINK -->
+  <div class="back-btn-container no-print">
+    <a href="index.html" class="nav-btn">← Natrag na Dosje</a>
+  </div>
 
-📂 **Dokumenti i građa:**
-https://github.com/Zeljk018Bratic/dosje-koromacno
+  <!-- HEADER BANNER -->
+  <div class="header-banner">
+    <h1>Cjeloviti Interaktivni Istraživački Dosje & Pravni Alat</h1>
+    <p>Sveobuhvatna procesno-inženjerska, kemijska i pravna forenzika slučaja dekarbonizacije, suspaljivanja otpada i ekološkog rizika u cementari Holcim Koromačno i Raškom zaljevu.</p>
+    <div class="action-buttons no-print" style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+      <a class="nav-btn" href="docs/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf" download>🚨 Preuzmi Kaznenu Prijavu za DORH (PDF)</a>
+      <a class="nav-btn" href="docs/zahtjev-zppi.pdf" download>📝 Preuzmi ZPPI Zahtjev za Općinu Raša (PDF)</a>
+      <a class="nav-btn" href="docs/zahtjev-zppi.md" download>📋 Preuzmi ZPPI Obrazac (Markdown/Tekst)</a>
+      <a class="nav-btn" href="docs/OV_RASA_21_09_2026.pdf" download>📜 Zaključak i Transkripti OV Raša (PDF)</a>
+      <a class="nav-btn" href="docs/zahtjev-status-stranke-arhus.md" download>⚖️ Preuzmi Zahtjev za Status Stranke (MD/Aarhus)</a>
+      <a class="nav-btn" href="docs/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf" download>☢️ Forenzika RDF/SRF Otpada (PDF)</a>
+    </div>
+  </div>
 
-🔍 **Open Fiscal Forensics (Repozitorij i README):**
-https://github.com/Zeljk018Bratic/open-fiscal-forensics
+  <!-- MANIFEST CARD -->
+  <div class="manifest-card">
 
-**Krepat ma ne molat!**
+    <h1>NISU NAS SLOMILI.</h1>
+    <h2>Samo su nam pokazali zašto moramo ostati mirni. Pametni. Ustrajni.</h2>
 
+    <p class="gap">Jutros u pet i trideset.</p>
+    <p>Sustav je poslao interventnu policiju na pješački prijelaz.</p>
+    <p>Prošla su tri kamiona.</p>
+    <p>Bez uzorkovanja tereta.</p>
+    <p>Ravno kroz portu.</p>
+    <p>Netko je u mraku osjetio šok.</p>
+    <p>Netko bijes.</p>
+    <p>Netko suze.</p>
+
+    <hr>
+
+    <p>Ali stajati ukopano na jednom mjestu znači biti laka meta.</p>
+    <p>Sustav voli statične blokade.</p>
+    <p>Voli ih rješavati silom u zoru.</p>
+    <p>To je zastarjela taktika.</p>
+    <p>Mi više ne igramo po njihovim pravilima.</p>
+
+    <hr>
+
+    <p>Naš odgovor od danas više nije gola blokada tijelima.</p>
+    <p>On mora biti brži.</p>
+    <p>Učinkovitiji.</p>
+    <p>Neuhvatljiv.</p>
+    <p><strong>Prelazimo na doktrinu disperzije.</strong></p>
+
+    <hr>
+
+    <p>Formiramo manje, visoko mobilne grupe.</p>
+    <p>Na više strateških točaka.</p>
+    <p>Od lokalnih pješačkih prijelaza do ključnih arterija poput tunela Učka.</p>
+    <p>Kratke akcije.</p>
+    <p>Iznenadne.</p>
+    <p>Koordinirane.</p>
+
+    <hr>
+
+    <p>Držimo sustav u stalnoj neizvjesnosti.</p>
+    <p>Trošimo im resurse dok stojimo mirno.</p>
+    <p>S malo ljudi postižemo maksimalan medijski eho.</p>
+    <p>To je iskra koja ulijeva kuraj onima koji još sjede u kućama.</p>
+    <p>Cjelodnevni učinak kroz niz preciznih, kirurških udaraca.</p>
+
+    <hr>
+
+    <p>Pritisak postaje smiren.</p>
+    <p>Ali legitimnan i izravan.</p>
+    <p>Pred općinskim vratima.</p>
+    <p>Na adresama onih koji donose odluke.</p>
+
+    <hr>
+
+    <p><strong>Ali pravi udarac ne dolazi s ceste.</strong></p>
+    <p><strong>Dolazi iz koda.</strong></p>
+    <p>Godinama nam prodaju priču o transparentnosti.</p>
+    <p>Kite se titulom prvih u državi.</p>
+    <p>Hvale se platformom Vuka Vukovića.</p>
+    <p>Spominju Orku i Sybril.</p>
+    <p>Kunu se u njegove revizije i FBI metode.</p>
+
+    <hr>
+
+    <p>Ali maska je pala.</p>
+    <p>I to na globalnoj razini.</p>
+    <p>FBI i američke savezne vlasti.</p>
+    <p>Uhapsile su Vuka Vukovića usred New Yorka.</p>
+    <p>Zbog teške prevare s vrijednosnim papirima.</p>
+    <p>Zbog lažiranja podataka.</p>
+
+    <hr>
+
+    <p>Čovjek koji je projektirao našu lokalnu "transparentnost".</p>
+    <p>Završio je iza rešetaka zbog falsifikata.</p>
+    <p>Zato naša proračunska forenzika nije lajanje u prazno.</p>
+    <p>Carinske deklaracije.</p>
+    <p>SHA-256 digitalni otisci.</p>
+    <p>To je kirurški rez u jedinu kariku koja kad padne, ruši cijelu strukturu.</p>
+    <p>Istina više nije u njihovim odborima i političkim igrama.</p>
+    <p><strong>Zauvijek je zapečaćena u kodu na internetu.</strong></p>
+    <p><strong>Neoboriva.</strong></p>
+
+    <hr>
+
+    <p>Znam tko nosi teret.</p>
+    <p>Jutros, dok su kamioni prolazili pod rotirkama.</p>
+    <p>Vidio sam umornog kamiondžiju.</p>
+    <p>Kako grčevito drži volan za kruh svoje obitelji.</p>
+    <p>Čuo sam uplašenu tetku.</p>
+    <p>Koja u panici psuje majku jugoslavensku.</p>
+    <p>Jer se boji da će joj muž ostati bez posla.</p>
+
+    <hr>
+
+    <p>Dođe ti da u istom trenu zaplačeš.</p>
+    <p>Da ih sve zagrliš na toj cesti.</p>
+    <p>I kažeš im istinu.</p>
+    <p><strong>Niste vi neprijatelji.</strong></p>
+    <p><strong>Radnik nije problem.</strong></p>
+    <p>Naša empatija je prema uplašenim ljudima.</p>
+    <p>Naš bijes je prema stroju.</p>
+
+    <hr>
+
+    <p>Svi mi dišemo ovaj isti zrak.</p>
+    <p>Svi hodamo po istoj zemlji.</p>
+    <p>Gledamo u isti zaljev.</p>
+    <p>Ali otkad je radno mjesto postalo valuta?</p>
+    <p>Valuta kojom plaćamo šutnju o zdravlju naše djece?</p>
+
+    <hr>
+
+    <p>Zašto bi borba za kruh značila pristanak na prašinu i muk?</p>
+    <p>Zaronili smo glavu u konformistički mrak.</p>
+    <p>Za pišljivih par eura nakon lockdowna.</p>
+    <p>Mislimo da će nas šutnja spasiti.</p>
+    <p>Ali da sutra stanu VW ili Mercedes.</p>
+    <p>Njemačka ne bi propala.</p>
+    <p>Zajednica koja misli svojom glavom uvijek nađe održiv put.</p>
+
+    <hr>
+
+    <p><strong>Jedina ključna karika je prostorni plan.</strong></p>
+    <p>Holcim je sam morao zaustaviti trenutnu Studiju utjecaja na okoliš.</p>
+    <p>Inženjerska logika ih je satjerala u kut.</p>
+    <p>Ali to je tek taktički manevar.</p>
+    <p>Ugljični eksperiment pod tlakom od 16 bara u našem dvorištu ne prolazi.</p>
+    <p><strong>Zahtijevamo jasno "NE" za karbon net projekt.</strong></p>
+
+    <hr>
+
+    <p>Sto godina industrijskog danka.</p>
+    <p>Poštujemo trud naših starih.</p>
+    <p>Gradili su krvlju i znojem za goli opstanak.</p>
+    <p>Ali povijest nije ugovor da budućnost mora izgledati isto.</p>
+
+    <hr>
+
+    <p>Pogledajmo Ubaš.</p>
+    <p>Pogledajmo Raški zaljev i naše more.</p>
+    <p>Tu leži naš stvarni suverenitet.</p>
+    <p>Marikultura.</p>
+    <p>Održivi poslovi.</p>
+    <p>Odgovorni turizam.</p>
+    <p>Zdrava djeca.</p>
+
+    <p class="big-question">Pitanje je što ćemo ostaviti ispred sebe.<br>Isti dimnjak ili čisti horizont?</p>
+
+    <hr>
+
+    <p>Ovdje nema vođa.</p>
+    <p>Nema hijerarhije.</p>
+    <p><strong>Pokret koji ima tisuću glava sustav ne može uhapsiti.</strong></p>
+    <p>Svatko misli svojom glavom.</p>
+    <p>Svatko je štit.</p>
+
+    <hr>
+
+    <p>Letimo ispod radara.</p>
+    <p>Dijelimo svijetu osmijeh.</p>
+    <p>Ulivamo nadu rješenjima, a ne floskulama.</p>
+    <p>Izvan okvira algoritma.</p>
+    <p>Izvan lanaca.</p>
+    <p><strong>Nikad na koljenima.</strong></p>
+
+    <div class="footer-links">
+      <a href="https://zeljk018bratic.github.io/dosje-koromacno/" target="_blank" rel="noopener">🌐 Dosje Koromačno (Portal)</a>
+      <a href="https://github.com/Zeljk018Bratic/dosje-koromacno" target="_blank" rel="noopener">📂 Dokumenti i građa (GitHub)</a>
+      <a href="https://github.com/Zeljk018Bratic/open-fiscal-forensics" target="_blank" rel="noopener">🔍 Open Fiscal Forensics</a>
+    </div>
+
+    <div class="signature">Krepat ma ne molat!</div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
