@@ -8,6 +8,14 @@
 **Note:** an asterisk (*) in the KBO code indicates the waste is classified as hazardous under the Waste Catalogue. R1 indicates energy recovery.
 
 ---
+## Executive Summary
+
+Official Croatian Ministry of Environment reports confirm that HOLCIM
+(CROATIA) Ltd. received hazardous waste from Italy and Slovenia at its
+Koromačno cement plant in 2023, totalling 1,457.24 tonnes, processed
+under R1 energy recovery. This registry compiles primary-source data
+for 2014–2024 and identifies gaps requiring official clarification.
+---
 
 ## 1. Registry by year
 
@@ -84,14 +92,6 @@
 12. Data from e-ONTO and other official records.
 13. Documentation on inspections related to those shipments.
 
----
-## Executive Summary
-
-Official Croatian Ministry of Environment reports confirm that HOLCIM
-(CROATIA) Ltd. received hazardous waste from Italy and Slovenia at its
-Koromačno cement plant in 2023, totalling 1,457.24 tonnes, processed
-under R1 energy recovery. This registry compiles primary-source data
-for 2014–2024 and identifies gaps requiring official clarification.
 ---
 
 *Last updated: 01.10.2026*
