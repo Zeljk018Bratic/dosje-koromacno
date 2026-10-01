@@ -2,7 +2,7 @@
 
 **Complete forensic, chemical and legal dossier on the Holcim Koromačno case and the Raša Bay.**
 
-> **[Pročitaj ovaj README na hrvatskom →](README.md)**
+> **[🇭🇷 Pročitaj ovaj README na hrvatskom →](README.md)** · **[🇩🇪 Auf Deutsch lesen →](README-de.md)** · **[🇮🇹 Leggi in italiano →](README-it.md)**
 
 ---
 
