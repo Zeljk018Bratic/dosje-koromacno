@@ -2,7 +2,7 @@
 
 **Vollständiges forensisches, chemisches und rechtliches Dossier zum Fall Holcim Koromačno und zur Bucht von Raša.**
 
-> **[Pročitaj ovaj README na hrvatskom →](README.md)** · **[Read this README in English →](README-en.md)**
+> **[🇭🇷 Pročitaj ovaj README na hrvatskom →](README.md)** · **[🇬🇧 Read this README in English →](README-en.md)** · **[🇮🇹 Leggi in italiano →](README-it.md)**
 
 ---
 
