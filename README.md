@@ -1,34 +1,34 @@
-# 🛑 EKOCID KOROMAČNO · Interaktivni Istraživački Dosje & Pravni Alat
+# 🔬 EKOCID KOROMAČNO · Interaktivni Istraživački Dosje & Pravni Alat
 
 **Cjeloviti forenzički, kemijski i pravni dosje slučaja Holcim Koromačno i Raškog zaljeva.**
 
-> 🇬🇧 **[Read this README in English →](README-en.md)**
+> **[Read this README in English →](README-en.md)**
 
 ---
 
-## 📖 Sadržaj
+## 📑 Sadržaj
 
-- [📁 Brzi pristup pravnim i tehničkim dokumentima (/docs/)](#-brzi-pristup-pravnim-i-tehničkim-dokumentima-docs)
-- [🚀 Kako koristiti ovaj interaktivni sustav](#-kako-koristiti-ovaj-interaktivni-sustav)
-- [📧 Dopunjeni ZPPI predložak](#-dopunjeni-zppi-predložak)
-- [📧 Kamo poslati kaznenu prijavu](#-kamo-poslati-popunjenu-i-potpisanu-kaznenu-prijavu)
-- [🇪🇺 Upute za EEA](#-upute-za-proslijeđivanje-europskoj-agenciji-za-okoliš-eea)
-- [📱 GitHub infografika](#-github-infografika-pošalji-zppi-u-3-koraka)
-- [📸 Vizualni priručnik (ScribeHow)](#-vizualni-priručnik-i-verifikacija-sustava-scribehow)
-- [📚 Službeni izvori i dokazna dokumentacija](#-službeni-izvori-i-dokazna-dokumentacija-quelle)
-- [© Licenca](#-licenca)
+- [Brzi pristup dokumentima](#-brzi-pristup-pravnim-i-tehničkim-dokumentima)
+- [Interaktivni sustav](#-kako-koristiti-ovaj-interaktivni-sustav)
+- [ZPPI predložak](#-dopunjeni-zppi-predložak)
+- [Kamo poslati kaznenu prijavu](#-kamo-poslati-popunjenu-i-potpisanu-kaznenu-prijavu)
+- [Upute za EEA](#-upute-za-proslijeđivanje-europskoj-agenciji-za-okoliš-eea)
+- [Službeni izvori](#-službeni-izvori-i-dokazna-dokumentacija)
+- [Višejezične verzije](#-višejezične-verzije)
+- [Manifest](#-manifest)
+- [Licenca](#-licenca)
 
 ---
 
-## 📁 Brzi pristup pravnim i tehničkim dokumentima (`/docs/`)
+## 📂 Brzi pristup pravnim i tehničkim dokumentima (`/docs/`)
 
-| Dokument / Akt | Format | Svrha i Namjena |
-| :--- | :--- | :--- |
-| [**Kaznena Prijava DORH Pula**](docs/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | `PDF` | Predaja ODO Pula protiv odgovornih osoba |
-| [**Zapisnik i Zaključak OV Raša 21.09.2026.**](docs/OV_RASA_21_09_2026.pdf) | `PDF` | Dokaz o dvostrukom prekoračenju TOC-a |
-| [**Zahtjev za Status Stranke (Aarhus)**](docs/zahtjev-status-stranke-arhus.md) | `MD` | Predaja Općini/Županiji za formalno učešće |
-| [**Forenzika Otpada RDF/SRF**](docs/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analiza uvoza i *End-of-Waste* rupa |
-| [**Transkripti i Dokazni Zaključak OV Raša**](docs/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Izvorne izjave predsjednika, načelnika i MO Koromačno |
+| Dokument / Akt | Format | Svrha i namjena |
+| :--- | :---: | :--- |
+| [**Kaznena prijava DORH Pula**](docs/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | `PDF` | Predaja ODO Pula protiv odgovornih osoba |
+| [**Zapisnik i zaključak OV Raša 21.09.2026.**](docs/OV_RASA_21_09_2026.pdf) | `PDF` | Dokaz o dvostrukom prekoračenju TOC-a |
+| [**Zahtjev za status stranke (Aarhus)**](docs/zahtjev-status-stranke-arhus.md) | `MD` | Predaja Općini/Županiji za formalno učešće |
+| [**Forenzika otpada RDF/SRF**](docs/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analiza uvoza i *End-of-Waste* rupa |
+| [**Transkripti i dokazni zaključak OV Raša**](docs/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Izvorne izjave predsjednika, načelnika i MO Koromačno |
 | [**Usporedni dokazni elaborat**](docs/usporedni-dokazni-elaborat.md) | `MD` | Poveznica Poglavlja VII i zapisnika OV Raša |
 | [**Sisak vs. Koromačno – komparativni model**](docs/sisak-vs-koromacno-elaborat.md) | `MD` | Institutional capture usporedba |
 | [**Zahtjev ZPPI-01 (Raša / Okoliš)**](docs/ZPPI-01/zahtjev-zppi-rasa-okolis-kodeco.md) | `MD` | Zahtjev za sirove AMS podatke i odluku od 2. rujna |
@@ -37,39 +37,33 @@
 
 ---
 
-## 🚀 Kako koristiti ovaj interaktivni sustav
+## 🖥️ Kako koristiti ovaj interaktivni sustav
 
 Ovaj repozitorij stvoren je s ciljem potpune transparentnosti i naoružavanja građana Labinštine i Istre neoborivim inženjersko-pravnim činjenicama.
 
-### 🌐 1. Pokretanje interaktivne stranice uživo
+### 1. Pokretanje interaktivne stranice uživo
 
 Cjelokupni istraživački dosje, kronologija, proračuni podmorskog ekocida i interaktivni obrazac kaznene prijave aktivni su u realnom vremenu:
 
-👉 **[OTVORI DOSJE KOROMAČNO UŽIVO](https://zeljk018bratic.github.io/dosje-koromacno/)**
+> **[OTVORI DOSJE KOROMAČNO UŽIVO](https://zeljk018bratic.github.io/dosje-koromacno/)**
 
-**Višejezične verzije:**
-- 🇭🇷 [Hrvatski](https://zeljk018bratic.github.io/dosje-koromacno/index.html)
-- 🇬🇧 [Engleski](https://zeljk018bratic.github.io/dosje-koromacno/index-en.html)
-- 🇩🇪 [Njemački](https://zeljk018bratic.github.io/dosje-koromacno/index-de.html)
-- 🇮🇹 [Talijanski](https://zeljk018bratic.github.io/dosje-koromacno/index-it.html)
-
-### 🖨️ 2. Kako automatski generirati fizički letak i prijavu (Ctrl + P)
+### 2. Kako automatski generirati fizički letak i prijavu (Ctrl + P)
 
 Stranica je programski optimizirana za ispis i cestu:
 
-1. Pritisnite **Ctrl + P** (ili *Cmd + P* na Macu) ili kliknite na crveni gumb **"Ispiši Letak"** na vrhu stranice.
+1. Pritisnite **Ctrl + P** (ili *Cmd + P* na Macu) ili kliknite na crveni gumb **„Ispiši Letak"** na vrhu stranice.
 2. Sustav automatski skriva sve digitalne navigacijske gumbe, izbornike i tamne pozadine.
 3. Na pisač izlazi čisti, crno-bijeli pravni dokument i formalni obrazac kaznene prijave za DORH – spreman za ispis, vlastoručni potpis i dijeljenje na terenu.
 
-### 📂 3. Kako preuzeti izvorni kod za vlastitu upotrebu
+### 3. Kako preuzeti izvorni kod za vlastitu upotrebu
 
 Za lokalno korištenje bez pristupa internetu:
 
-- Kliknite na datoteku `index.html` na GitHubu.
-- U gornjem desnom kutu kliknite **Download raw file**.
-- Spremite datoteku na uređaj i otvorite u bilo kojem pregledniku (Chrome, Safari, Firefox).
+1. Kliknite na datoteku `index.html` na GitHubu.
+2. U gornjem desnom kutu kliknite **Download raw file**.
+3. Spremite datoteku na uređaj i otvorite u bilo kojem pregledniku (Chrome, Safari, Firefox).
 
-### ⚖️ 4. Pravni poziv na Aarhušku konvenciju i pravo na pristup informacijama
+### 4. Pravni poziv na Aarhušku konvenciju i pravo na pristup informacijama
 
 Sukladno **Aarhuškoj konvenciji** (Konvencija o pristupu informacijama, sudjelovanju javnosti u odlučivanju i pristupu pravosuđu u pitanjima okoliša) te **Zakonu o pravu na pristup informacijama (NN 25/13)**, tijela javne vlasti dužna su građanima i udrugama osigurati potpun, pravovremen i neobrisiv uvid u sve relevantne okolišne parametre, bez obveze dokazivanja pravnog interesa.
 
@@ -77,11 +71,11 @@ Svako uskraćivanje, friziranje ili zakašnjelo validiranje sirovih podataka (RA
 
 ---
 
-## 📧 Dopunjeni ZPPI predložak
+## 📝 Dopunjeni ZPPI predložak
 
 **Predmet:** Zahtjev za pristup informacijama – EWC kodovi, ulazne analize, AMS podaci, vagarski listovi i status nadzora
 
-> 📄 **[Preuzmi cijeli predložak →](docs/dopunjeni-zppi-predlozak.md)**
+> **[Preuzmi cijeli predložak →](docs/dopunjeni-zppi-predlozak.md)**
 
 Poštovani,
 
@@ -119,7 +113,7 @@ S poštovanjem,
 
 ---
 
-## 📧 Kamo poslati popunjenu i potpisanu kaznenu prijavu?
+## 📬 Kamo poslati popunjenu i potpisanu kaznenu prijavu?
 
 Kada preuzmete, ispunite i vlastoručno potpišete (ili ovjerite pečatom udruge) predložak kaznene prijave, zakonski ju je dužno dostaviti na službene adrese:
 
@@ -146,21 +140,34 @@ Tekst prijave (zajedno s priloženim PDF dokumentima o forenzici prometa otpada,
 - **Aarhus Compliance:** `env-aarhus@ec.europa.eu`
 - **UNECE:** `public.participation@un.org`
 
-**Subject:**
+---
+
+## 📚 Službeni izvori i dokazna dokumentacija
+
+Svi dokumenti, transkripti, audio zapisi, forenzički elaborati i pravni obrasci trajno su pohranjeni u ovom repozitoriju i dostupni su u `/docs/` i `/audio/` mapama.
+
 ---
 
 ## 🌐 Višejezične verzije
 
 | Jezik | Stranica |
-|-------|----------|
+| :--- | :--- |
 | 🇭🇷 Hrvatski | [forenzika.html](forenzika.html) |
 | 🇬🇧 English | [forenzika-en.html](forenzika-en.html) |
 | 🇩🇪 Deutsch | [forenzika-de.html](forenzika-de.html) |
 | 🇮🇹 Italiano | [forenzika-it.html](forenzika-it.html) |
 
+---
+
 ## 📜 Manifest
 
 [Pročitaj manifest](manifest.html) – „NISU NAS SLOMILI"
+
+---
+
+## © Licenca
+
+Otvoreni sadržaj. Svi dokumenti i analize dostupni su za javnu upotrebu, provjeru i daljnju distribuciju u svrhu zaštite okoliša, zdravlja i javnog interesa.
 
 ---
 
