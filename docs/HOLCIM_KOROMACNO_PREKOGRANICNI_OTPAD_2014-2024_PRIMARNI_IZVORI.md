@@ -86,4 +86,4 @@
 
 ---
 
-*Zadnje ažuriranje: [upiši datum]*
+*Zadnje ažuriranje: [01.10.2026]*
