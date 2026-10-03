@@ -210,6 +210,26 @@ Zahtjevi za pristup informacijama prema Zakonu o pravu na pristup informacijama 
 > Kliknite. Otvorite izvor. Preuzmite dokument. Provjerite podatke. Napravite vlastiti zaključak.
 
 ---
+## Novi dokumenti (03.10.2026.)
+
+- [CARINSKI_CVOR_ANALIZA.md](CARINSKI_CVOR_ANALIZA.md) — Analiza carinskog čvora 19.013 t / 124 EUR
+- [LNG_KRK_BAVARSKA_ANALIZA.md](LNG_KRK_BAVARSKA_ANALIZA.md) — LNG plinovod Krk–Bavarska
+- [MASTER_DOSJE_V2.md](MASTER_DOSJE_V2.md) — Master forenzički dosje V2
+- [MASTER_POVEZNICA_V2.md](MASTER_POVEZNICA_V2.md) — Mapa sistema (sve povezano)
+- [ZPPI-07_08_ZAHTJEVI.md](ZPPI-07_08_ZAHTJEVI.md) — Zahtjevi Carinskoj upravi i NZJZ/DIRH
+
+## ZPPI frontovi
+
+- [ZPPI-01](ZPPI-01/) — Općina Raša
+- [ZPPI-02](ZPPI-02/) — Grad Labin
+- [ZPPI-03](ZPPI-03/) — Općina Raša / MZOZT
+- [ZPPI-04](ZPPI-04/) — MZOZT (prekogranični otpad)
+- [ZPPI-05](ZPPI-05/) — MZOZT (dozvole, R1, RAW AMS)
+- [ZPPI-06](ZPPI-06/) — DIRH / MZOZT (inspekcijski zapisnici)
+- ZPPI-07 — Carinska uprava (u ZPPI-07_08_ZAHTJEVI.md)
+- ZPPI-08 — NZJZ / DIRH (u ZPPI-07_08_ZAHTJEVI.md)
+
+---
 
 *Dokumentacija ostaje dostupna. Provjera je otvorena.*
 
