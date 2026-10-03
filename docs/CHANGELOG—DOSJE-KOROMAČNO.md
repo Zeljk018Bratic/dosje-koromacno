@@ -21,14 +21,11 @@ Labin transparentnost: CityX Apps, Otvoreni grad, Nenad Čakić.
 
 Pineta: 634.000 EUR, Jana Nature, panjevi ostaju.
 
-Politička mreža: Paliska, Demetlika, Knapić, Glavičić, Bedrina, Žakula.
+Politička mreža: Paliska, Demetlika, Knapić, Glavičić, Bedrina.
 
 ZPPI-01 do ZPPI-08, Aarhus, OLAF, GitHub, SHA-256.
 
-Drugi sloj — „Unbekanntes Dokument” / analitički ostatak
-To je zapravo nastavak istog dosjea, ali s dodatnim slojevima:
-
-detalji o PFAS-u u podzemnim vodama PPK Velebit,
+Detalji o PFAS-u u podzemnim vodama PPK Velebit,
 
 HZJZ nalazi: PFBS, B-1, 0,0378 µg/L,
 
@@ -50,37 +47,25 @@ detalji o EU Innovation Fund statusu,
 
 analiza pravnih propusta policije i inspekcija.
 
-Oba sloja se preklapaju. To nije problem. Samo ću ih spojiti u jedan Master dosje s dva dijela.
-
-II. DUPLIKATI KOJE TREBA SPOJITI, NE BRISATI
-Ovo se ponavlja i treba ih staviti na jedno mjesto:
 
 Gospić — 37.000 t, SOA 2022, PFAS, DORH, Turudić, Grmoja
-Pojavljuje se više puta. Spojiti u jednu cjelinu.
 
 Holcim/Koromačno — 650 t, 357.500 EUR, blokada, policija, Kapelica
-Isto se ponavlja. Spojiti u jednu kronologiju.
 
 KOdeCO — 237/117/366.000, povlačenje 28.08.2026.
-Ponavlja se. Spojiti u jedan financijsko-pravni blok.
 
 PFAS — 10 ispitanika, TFA, 6/10, 5 Gospić + 1 Pula
-Ponavlja se. Spojiti s HZJZ nalazima podzemnih voda.
 
 Vuk Vuković — FBI, 200.000 USD, putovnice, elektronički nadzor
-Ponavlja se. Spojiti i ispraviti da nije spin.
 
 Pineta — 634.000 EUR, Jana Nature, panjevi
-Ponavlja se. Spojiti s FZOEU podacima.
 
 Politička mreža — Paliska, Demetlika, Knapić, Glavičić
-Ponavlja se. Spojiti u jednu shemu.
 
 ZPPI frontovi
-Pojavljuju se u više verzija. Spojiti u jednu tablicu.
 
 III. NEDOSLJEDNOSTI I KONFLIKTI KOJE TREBA OZNAČITI
-Ovo nisu nužno laži, ali nisu usklađeni. Ne brišem, samo označavam.
+Ovo nisu nužno laži, ali nisu usklađeni.
 
 37.000 tona
 U tekstu se negdje spominje 35.000, negdje 37.000, negdje 45.000.
@@ -3092,7 +3077,6 @@ Sve je spremno. Sad samo:
 5. **Kreiraj** Release v1.0
 6. **Pošalji** medijsko priopćenje
 
-**Ako negdje zapneš — javi. Tu sam.**
 
 **#BajteBrothers**
 *„Leti nisko, udaraj jako.“*
