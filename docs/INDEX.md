@@ -1,175 +1,151 @@
-# DOSJE KOROMAČNO — INDEKS
+# 📁 DOSJE KOROMAČNO — INDEKS DOKUMENATA
 
 **Verzija:** 2.0  
-**Zadnje ažuriranje:** 03.10.2026.  
-**Jezici:** 🇭🇷 HR · 🇬🇧 EN · 🇩🇪 DE · 🇮🇹 IT  
-**Javni portal:** https://zeljk018bratic.github.io/dosje-koromacno/
+**Datum:** 03.10.2026.  
+**Standard:** MARA V2  
+**Načelo:** *Ne predstavljamo pretpostavke kao gotove činjenice.*
 
 ---
 
-## 📁 STRUKTURA FOLDERA
+## 🔑 ANCHOR EVIDENCE
 
-| Mapa | Sadržaj |
-|:---|:---|
-| [Arhiva/](Arhiva/) | MARA ALL-IN V2 (PDF, MD, DOCX, SHA-256) |
-| [Evidence/](Evidence/) | Evidence Matrix (CSV, XLSX) |
-| [Forenzika/](Forenzika/) | Master dosje, analize, elaborati |
-| [Mediji/](Mediji/) | Priopćenja, letci, pitanja za vijećnike |
-| [Pravni-akti/](Pravni-akti/) | Kaznena prijava, prigovor, Aarhus, zaštita |
-| [Slanje_Dokaza_30-09-2026/](Slanje_Dokaza_30-09-2026/) | Dokazi o slanju MARA V2 + ZPPI-01/02 |
-| [ZPPI-00_OPCI/](ZPPI-00_OPCI/) | Opći ZPPI predlošci |
-| [ZPPI-01/](ZPPI-01/) – [ZPPI-06/](ZPPI-06/) | ZPPI zahtjevi 01–06 |
-| [ZPPI-07_08/](ZPPI-07_08/) | Zahtjevi Carini i NZJZ-u |
-| [ZPPI-09/](ZPPI-09/) | Carinski čvor 19.013 t / 124 EUR |
-| [ZPPI-10/](ZPPI-10/) | Inspekcijski zapisnici DIRH-a |
-| [ZPPI-11/](ZPPI-11/) | PFAS u vodi za piće |
-| [peticija/](peticija/) | Peticija za zaštitu Labinštine |
+> **1.457,24 t opasnog otpada iz Italije i Slovenije (2023.)**  
+> KBO: 12 01 09*, 13 02 05*, 13 05 07*, 19 02 07* · postupak R1
 
 ---
 
-## 🎯 KLJUČNI DOKUMENTI
+## 📘 MARA ALL-IN V2
 
-| Dokument | Link |
-|:---|:---|
-| Master forenzički dosje V2 | [Forenzika/MASTER_DOSJE_V2.md](Forenzika/MASTER_DOSJE_V2.md) |
-| Mapa sistema (sve povezano) | [Forenzika/MASTER_POVEZNICA_V2.md](Forenzika/MASTER_POVEZNICA_V2.md) |
-| Carinski čvor 19.013 t / 124 EUR | [Forenzika/CARINSKI_CVOR_ANALIZA.md](Forenzika/CARINSKI_CVOR_ANALIZA.md) |
-| LNG Krk–Bavarska | [Forenzika/LNG_KRK_BAVARSKA_ANALIZA.md](Forenzika/LNG_KRK_BAVARSKA_ANALIZA.md) |
-| Detaljna analiza slučaja Koromačno | [Forenzika/Detaljna analiza slučaja Koromačno](Forenzika/Detaljna%20analiza%20slučaja%20Koromačno) |
-| Sisak vs. Koromačno | [Forenzika/sisak-vs-koromacno-elaborat.md](Forenzika/sisak-vs-koromacno-elaborat.md) |
-| Usporedni dokazni elaborat | [Forenzika/usporedni-dokazni-elaborat.md](Forenzika/usporedni-dokazni-elaborat.md) |
-| HOLCIM IED/BAT usklađenost | [Forenzika/HOLCIM_KOROMACNO_IED_BAT_USKLADENOST_2014-2026.md](Forenzika/HOLCIM_KOROMACNO_IED_BAT_USKLADENOST_2014-2026.md) |
-| Evidence Matrix — CSV | [Evidence/Evidence_Matrix.csv](Evidence/Evidence_Matrix.csv) |
-| Evidence Matrix — XLSX | [Evidence/Evidence_Matrix_Koromacno_03-10-2026.xlsx](Evidence/Evidence_Matrix_Koromacno_03-10-2026.xlsx) |
+| Dokument | Opis |
+|----------|------|
+| [MARA ALL-IN V2 · PDF](MARA_ALL_IN_V2.pdf) | Za čitanje |
+| [MARA ALL-IN V2 · DOCX](MARA_ALL_IN_V2.docx) | Za daljnju obradu |
+| [SHA-256 · FIKSNI OTISAK V2](SHA-256_V2.txt) | Za provjeru verzije |
+| [Dokaz uručenja · MARA V2](dokaz_urucenja_MARA_V2.pdf) | Potvrda dostave |
 
 ---
 
-## 📋 ZPPI FRONTOVI
+## ⚖️ ZPPI ZAHTJEVI — PRAVNI FRONTOVI
 
-| Šifra | Tema | Primatelj | Status |
-|:---|:---|:---|:---|
-| [ZPPI-01](ZPPI-01/) | Sirovi AMS, otrovni plinovi | Općina Raša | ✅ POSLANO |
-| [ZPPI-02](ZPPI-02/) | Ugovorni odnosi, CityX, konti 3233 i 3237 | Grad Labin | ✅ POSLANO |
-| [ZPPI-03](ZPPI-03/) | V. izmjene PPUO, koncesija, 66,36 ha, rok 2045. | Općina Raša / MZOZT | ✅ POSLANO |
-| [ZPPI-04](ZPPI-04/) | Prekogranični otpad 2014–2024 | MZOZT | ✅ POSLANO |
-| [ZPPI-05](ZPPI-05/) | Okolišna dozvola, R1, RAW AMS | MZOZT | ✅ POSLANO |
-| [ZPPI-06](ZPPI-06/) | Inspekcijski zapisnici | DIRH / MZOZT | ✅ POSLANO |
-| [ZPPI-07](ZPPI-07_08/ZAHTJEVI.md) | MRN, CMR, račun — Carina | Carinska uprava | ✅ POSLANO |
-| [ZPPI-08](ZPPI-07_08/ZAHTJEVI.md) | PFAS, kvaliteta zraka | NZJZ / DIRH | ✅ POSLANO |
-| [ZPPI-09](ZPPI-09/) | Carinski čvor 19.013 t / 124 EUR | MZOZT + Carina | ⬜ U PRIPREMI |
-| [ZPPI-10](ZPPI-10/) | Inspekcijski zapisnici 2022–2026 | DIRH | ⬜ U PRIPREMI |
-| [ZPPI-11](ZPPI-11/) | PFAS u vodi za piće | Vodovod Pula-Labin | ⬜ U PRIPREMI |
+| # | Zahtjev | Primatelj | Status | Rok |
+|---|---------|-----------|--------|-----|
+| **ZPPI-01** | AMS, KOdeCO, podmorje | Općina Raša | ✅ poslano | — |
+| **ZPPI-02** | Ugovorni odnosi, CityX | Grad Labin | ✅ poslano | — |
+| **ZPPI-03** | PPUO, koncesija, 66,36 ha | Općina Raša / MZOZT | ✅ poslano | — |
+| **ZPPI-04** | Prekogranični otpad 2014–2024 | MZOZT | ✅ poslano 01.10. | 16.10.2026. |
+| **ZPPI-05** | Okolišna i lokacijska dozvola, R1 | MZOZT | ✅ poslano 01.10. | 16.10.2026. |
+| **ZPPI-06** | Inspekcijski zapisnici | DIRH / MZOZT | ✅ poslano | — |
+| **ZPPI-07** | MRN, CMR, e-ONTO pristup | Carinska uprava | ✅ poslano | 15 dana |
+| **ZPPI-07b** | e-ONTO / ISGO podaci | MZOZT | ✅ poslano | 15 dana |
+| **ZPPI-08** | Stručne preporuke PFAS | Ministarstvo zdravstva | ✅ poslano | 15 dana |
+| **ZPPI-09** | U pripremi | — | 🔶 priprema | — |
+| **ZPPI-10** | U pripremi | — | 🔶 priprema | — |
+| **ZPPI-11** | U pripremi | — | 🔶 priprema | — |
+
+📁 [ZPPI-01 do ZPPI-06](ZPPI-01_do_06/)  
+📁 [ZPPI-07_08](ZPPI-07_08/)  
+📁 [ZPPI-09_10_11](ZPPI-09_10_11/) *(u pripremi)*
+
+---
+
+## 🔬 FORENZIKA
+
+### Ključni forenzički blokovi
+
+| Dokument | Opis |
+|----------|------|
+| [Mass Balance Chain](Forenzika/2026-10-03_MASS_BALANCE_CHAIN.md) | Carina → e-ONTO → ISGO — model zatvaranja dokaznog lanca |
+| [PFAS/TFA biomonitoring](Forenzika/2026-10-03_PFAS_TFA_BIOMONITORING.md) | Rezultati Greens/EFA, HZJZ, Ministarstvo zdravstva |
+| [Ministarstvo zdravstva — ZPPI-08](Forenzika/2026-10-03_MINISTARSTVO_ZDRAVSTVA_ZPPI-08.md) | Stručne preporuke o PFAS biomonitoringu |
+| [Mass Balance Gap model](Forenzika/2026-10-03_MASS_BALANCE_GAP_MODEL.md) | Kontrolni model za prekogranični promet otpada |
+| [Dokazni status — tablica](Forenzika/2026-10-03_DOKAZNI_STATUS_TABLICA.md) | FAKT / TVRDNJA / INDIKACIJA / OTVORENO |
+
+### Ostali forenzički dokumenti
+
+| Dokument | Opis |
+|----------|------|
+| [Master dosje](Forenzika/Master_dosje.md) | Sveobuhvatni pregled |
+| [Carinski čvor](Forenzika/Carinski_cvor.md) | Carinski tokovi i sumnje |
+| [LNG Krk–Bavarska](Forenzika/LNG_Krk_Bavarska.md) | Energetski tokovi |
+| [HOLCIM IED/BAT usklađenost](Forenzika/HOLCIM_IED_BAT_2014_2026.md) | Usklađenost 2014–2026 |
+| [Sisak vs. Koromačno](Forenzika/Sisak_vs_Koromacno.md) | Komparativna forenzika |
+| [Usporedni dokazni elaborat](Forenzika/Usporedni_dokazni_elaborat.md) | Komparativna analiza |
+
+---
+
+## 🌍 PREKOGRANIČNI OTPAD
+
+| Dokument | Jezik | Status |
+|----------|-------|--------|
+| [HOLCIM_KOROMACNO_PREKOGRANICNI_OTPAD_2014-2024.md](Prekogranicni_otpad/HOLCIM_KOROMACNO_PREKOGRANICNI_OTPAD_2014-2024.md) | HR | ✅ |
+| [HOLCIM_KOROMACNO_CROSS_BORDER_WASTE_2014-2024_EN.md](Prekogranicni_otpad/HOLCIM_KOROMACNO_CROSS_BORDER_WASTE_2014-2024_EN.md) | EN | ✅ |
+
+---
+
+## 📊 DOKAZNA MATRICA
+
+| Dokument | Opis |
+|----------|------|
+| [Evidence Matrix (XLSX)](Evidence_Matrix.xlsx) | Ažurirano 03.10.2026. |
+| [Evidence Matrix (CSV)](Evidence_Matrix.csv) | Backup |
 
 ---
 
 ## 📰 MEDIJI I JAVNOST
 
-- [Medijsko priopćenje (HR)](Mediji/medijsko-priopcenje.md)
-- [Letak A5](Mediji/letak-koromacno-a5.md)
-- [Pitanja za vijećnike](Mediji/pitanja-vijecnica-ponedjeljak.md)
-- [Vladine izmjene Zakona neće riješiti problem otpada](Mediji/Vladine%20izmjene%20Zakona%20neće%20riješiti%20problem%20otpada.md)
+| Dokument | Status |
+|----------|--------|
+| [Medijsko priopćenje (HR)](Mediji/Medijsko_priopcenje_HR.md) | ✅ objavljeno |
+| [Medijsko priopćenje — ZPPI-04](Mediji/Medijsko_priopcenje_ZPPI-04.md) | ✅ objavljeno |
+| [Priopćenje na 4 jezika](Mediji/Priopcenje_4_jezika.md) | HR / EN / DE / IT |
 
 ---
 
 ## ⚖️ PRAVNI AKTI
 
-- [Kaznena prijava — DORH](Pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf)
-- [Prigovor na PPUO Raša](Pravni-akti/prigovor-ppuo-rasa.md)
-- [Zaštita od zataškavanja — DORH](Pravni-akti/zastita-od-zataskavanja-dorh.md)
-- [Zahtjev za status stranke — Aarhus](Pravni-akti/zahtjev-status-stranke-arhus.md)
-- [Dopunjeni ZPPI predložak](Pravni-akti/dopunjeni-zppi-predlozak.md)
+| Dokument | Status |
+|----------|--------|
+| [Kaznena prijava DORH](Pravni_akti/Kaznena_prijava_DORH.md) | ✅ pripremljeno |
+| [Prigovor na PPUO Raša](Pravni_akti/Prigovor_PPUO_Rasa.md) | ✅ |
+| [Zahtjev za status stranke — Aarhus](Pravni_akti/Aarhus_status_stranke.md) | ✅ |
+| [Zaštita od zataškavanja — DORH](Pravni_akti/Zastita_od_zataskavanja.md) | ✅ |
+| [Žalba Povjereniku](Pravni_akti/Zalba_Povjereniku.md) | 🔶 čeka 17.10. |
 
 ---
 
-## 📊 EVIDENCE I DOKAZI
+## 🌐 PORTAL — VIŠEJEZIČNI
 
-- [Evidence Matrix — CSV](Evidence/Evidence_Matrix.csv)
-- [Evidence Matrix — XLSX](Evidence/Evidence_Matrix_Koromacno_03-10-2026.xlsx)
-- [Stanje dosjea 01.10.2026. — MD](Stanje_dosjea_na_01.10.2026.md)
-- [Stanje dosjea 01.10.2026. — PDF](Stanje_dosjea_na_01.10.2026.pdf)
-- [OV Raša — Zapisnik 21.09.2026.](Slanje_Dokaza_30-09-2026/OV_RASA_21_09_2026.pdf)
-- [Poglavlje V — Transkripti OV Raša](Slanje_Dokaza_30-09-2026/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md)
-- [Poglavlje VII — Prekogranični promet RDF/SRF](Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf)
-
----
-
-## ✍️ PETICIJA
-
-- [Peticija — glavna stranica](peticija/index.html)
-- [Stranica nakon potpisa](peticija/hvala.html)
-- [Verzija za print](peticija/peticija-print.html)
-- [README](peticija/README.md)
-
-**Online:** https://zeljk018bratic.github.io/dosje-koromacno/docs/peticija/
-
----
-
-## 🗄️ ARHIVA
-
-- [MARA ALL-IN V2 — PDF](Arhiva/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2.pdf)
-- [MARA ALL-IN V2 — MD](Arhiva/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2.md)
-- [MARA ALL-IN V2 — DOCX](Arhiva/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2.docx)
-- [MARA ALL-IN V2 — SHA-256](Arhiva/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2_SHA256.txt)
+| Stranica | Jezik |
+|----------|-------|
+| [index.html](../index.html) | HR |
+| [index-en.html](../index-en.html) | EN |
+| [index-de.html](../index-de.html) | DE |
+| [index-it.html](../index-it.html) | IT |
 
 ---
 
 ## 📅 KLJUČNI DATUMI
 
 | Datum | Događaj |
-|:---|:---|
-| 15.09.2014. | Holcim ishodio Rješenje o objedinjenim uvjetima zaštite okoliša |
-| 12.07.2017. | Nacrt izmjene okolišne dozvole |
-| 22.08.2024. | R1 prethodno odobrenje (72.000 t/god, važi do 22.08.2034.) |
-| 31.03.2025. | Rješenje o prihvatljivosti zahvata za ekološku mrežu |
-| 06.10.2025. | Holcim podnio zahtjev za PUO (KOdeCO) |
-| 11.2025. | Početak pokusnog rada CCS postrojenja |
-| 30.12.2025. | Objava postupka PUO |
-| 03.04.2026. | V. izmjene PPUO Raša — strateška procjena |
-| 14.08.2026. | Studija upućena na javnu raspravu |
-| 28.08.2026. | Holcim povukao Studiju; MZOZT obustavio PUO |
-| 21.09.2026. | OV Raša — Zaključak (9 glasova ZA, 1 suzdržan) |
-| 22.09.2026. | Saborska rasprava — izjava zastupnice Kekin |
-| 30.09.2026. | Slanje MARA V2 + ZPPI-01/02 |
-| 01.10.2026. | ZPPI-04 i ZPPI-05 poslani MZOZT-u |
-| 01.10.2026. | Rezultati VU Amsterdam (PFAS) u EU parlamentu |
-| 01.10.2026. | Sabor odbio opoziv Plenkovića |
-| 02.10.2026. | Söder i Plenković u Zagrebu — LNG plinovod |
-| **16.10.2026.** | **Rok za odgovor MZOZT-a (ZPPI-04, 05, 07, 08)** |
-| 17.10.2026. | Ako nema odgovora → urgencija |
-| ~25.10.2026. | Ako nema odgovora → žalba Povjereniku |
+|-------|---------|
+| **28.09.2026.** | Prva sjednica Radne skupine |
+| **30.09.2026.** | Medijski zapis — blokada i policijska intervencija |
+| **01.10.2026.** | ZPPI-04, ZPPI-05 poslani; Greens/EFA PFAS izvještaj |
+| **02.10.2026.** | Ministarstvo zdravstva — bez nacionalnog programa PFAS |
+| **03.10.2026.** | Novi forenzički blokovi (Mass Balance, PFAS) |
+| **16.10.2026.** | Rok za odgovor MZOZT-a (ZPPI-04, ZPPI-05) |
+| **17.10.2026.** | Ako nema odgovora → urgencija + žalba Povjereniku |
 
 ---
 
-## 📌 STATUS DOSJEA (03.10.2026.)
-
-| Kategorija | Broj |
-|:---|:---|
-| ZPPI zahtjeva poslano | **8** |
-| ZPPI u pripremi | **3** (ZPPI-09, ZPPI-10, ZPPI-11) |
-| Dokumenata u dosjeu | **40+** |
-| Jezika na portalu | **4** (HR, EN, DE, IT) |
-| Otvorenih pitanja | **~50** |
-
-**Ključni dokaz (Anchor Evidence):**
-
-> **2023. — Holcim Koromačno primio 1.457,24 t opasnog otpada**  
-> KBO: 12 01 09\*, 13 02 05\*, 13 05 07\*, 19 02 07\*  
-> Države polazišta: Italija i Slovenija  
-> Postupak: R1 — energetska oporaba  
-> Izvor: MZOZT, Izvješće o prekograničnom prometu otpada u 2023., Tablica 4.2 / 4.6
-
----
-
-## 📜 NAČELO DOSJEA
+## 🎯 NAČELO DOSJEA
 
 > **Ne predstavljamo pretpostavke kao gotove činjenice.**  
-> **Predajemo dokumentaciju, izvore i pitanja nadležnim institucijama.**  
->  
-> Kliknite. Otvorite izvor. Preuzmite dokument. Provjerite podatke. Napravite vlastiti zaključak.
+> **Svaka tvrdnja ima status: FAKT / TVRDNJA / INDIKACIJA / HIPOTEZA / OTVORENO.**  
+> **Dokazni lanac se zatvara dokument po dokument.**
 
 ---
 
-*Dokumentacija ostaje dostupna. Provjera je otvorena.*
-
-**Javni portal:** https://zeljk018bratic.github.io/dosje-koromacno/  
-**GitHub:** https://github.com/Zeljk018Bratic/dosje-koromacno
+**BajteBrothers · Dosje Koromačno**  
+*„Kvaliteta nije čin, to je navika."* — Aristotel  
+🍏🍒🚀❤️🤖
