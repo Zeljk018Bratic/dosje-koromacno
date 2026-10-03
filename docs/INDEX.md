@@ -74,7 +74,8 @@
 | [HOLCIM IED/BAT usklađenost](Forenzika/HOLCIM_KOROMACNO_IED_BAT_USKLADENOST_2014-2026.md) | Usklađenost 2014–2026 |
 | [Sisak vs. Koromačno](Forenzika/sisak-vs-koromacno-elaborat.md) | Komparativna forenzika |
 | [Usporedni dokazni elaborat](Forenzika/usporedni-dokazni-elaborat.md) | Komparativna analiza |
-| [Poglavlje VII — RDF/SRF otpad (PDF)](Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | Prekogranični promet |
+| [Poglavlje VII — RDF/SRF otpad (PDF)](Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | Prekogranični promet |ž
+| [Italija — 576 pošiljki (2022–2024)](Forenzika/2026-10-03_ITALIJA_576_POSILJKI.md) | 12.000–12.338 t plastičnog/miješanog otpada; tvrtke, odredišta, pravni okvir |
 
 ### Prekogranični otpad
 
