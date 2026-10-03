@@ -187,6 +187,23 @@
             color: var(--text-light);
             margin-bottom: 20px;
         }
+        .counter {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .counter .num {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            line-height: 1;
+        }
+        .counter .label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
         .btn {
             display: inline-block;
             background: var(--accent);
@@ -269,6 +286,7 @@
             main { padding: 30px 20px; margin-top: -15px; }
             .sign-section { padding: 20px 15px; }
             .btn { padding: 14px 28px; font-size: 1rem; }
+            .counter .num { font-size: 2rem; }
         }
     </style>
 </head>
@@ -351,6 +369,10 @@
         <div class="sign-section">
             <h3>✍️ Potpišite peticiju</h3>
             <p>Potpisivanje traje manje od minute. Vaši podaci su zaštićeni i neće biti javno objavljeni.</p>
+            <div class="counter">
+                <span class="num" id="counter">0</span>
+                <span class="label">potpisa do sada</span>
+            </div>
         </div>
 
         <h2 id="potpis"><span class="num">✍</span> Potpisni formular</h2>
@@ -390,5 +412,11 @@
         </div>
         <p class="copy">© 2026 Građanska inicijativa Labinština · Ova peticija je javno dobro.</p>
     </footer>
+
+    <script>
+        // Brojač potpisa — ažuriraj ručno nakon svakog novog potpisa
+        const SIGNATURES = 3;
+        document.getElementById('counter').textContent = SIGNATURES.toLocaleString('hr-HR');
+    </script>
 </body>
 </html>
