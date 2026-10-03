@@ -18,10 +18,10 @@
 
 | Dokument | Opis |
 |----------|------|
-| [MARA ALL-IN V2 · PDF](Arhiva/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2.pdf) | Za čitanje |
+| [MARA ALL-IN V2 · MD](Arhiva/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2.md) | Za čitanje i pretragu |
 | [MARA ALL-IN V2 · DOCX](Arhiva/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2.docx) | Za daljnju obradu |
-| [MARA ALL-IN V2 · MD](Arhiva/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2.md) | Izvorni tekst |
-| [SHA-256 · FIKSNI OTISAK](Arhiva/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2_SHA256.txt) | Za provjeru verzije |
+| [MARA ALL-IN V2 · SHA-256](Arhiva/MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2_SHA256.txt) | Za provjeru verzije |
+| [MARA ALL-IN V2 · Online pregled](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FZeljk018Bratic%2Fdosje-koromacno%2Frefs%2Fheads%2Fmain%2Fdocs%2FArhiva%2FMARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2.docx&wdOrigin=BROWSELINK) | Bez preuzimanja |
 
 ---
 
