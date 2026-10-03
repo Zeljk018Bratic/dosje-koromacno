@@ -229,8 +229,11 @@ Zahtjevi za pristup informacijama prema Zakonu o pravu na pristup informacijama 
 - ZPPI-07 — Carinska uprava (u ZPPI-07_08_ZAHTJEVI.md)
 - ZPPI-08 — NZJZ / DIRH (u ZPPI-07_08_ZAHTJEVI.md)
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d6a434849e1ca892061b311bf192ec0c79050040
 ---
 
 *Dokumentacija ostaje dostupna. Provjera je otvorena.*
