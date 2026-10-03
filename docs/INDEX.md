@@ -76,7 +76,7 @@
 - [Prigovor na PPUO Raša](Pravni-akti/prigovor-ppuo-rasa.md)
 - [Zaštita od zataškavanja — DORH](Pravni-akti/zastita-od-zataskavanja-dorh.md)
 - [Zahtjev za status stranke — Aarhus](Pravni-akti/zahtjev-status-stranke-arhus.md)
-- [Dopunjeni ZPPI predložak](dopunjeni-zppi-predlozak.md)
+- [Dopunjeni ZPPI predložak](Pravni-akti/dopunjeni-zppi-predlozak.md)
 
 ---
 
@@ -88,7 +88,7 @@
 - [Stanje dosjea 01.10.2026. — PDF](Stanje_dosjea_na_01.10.2026.pdf)
 - [OV Raša — Zapisnik 21.09.2026.](Slanje_Dokaza_30-09-2026/OV_RASA_21_09_2026.pdf)
 - [Poglavlje V — Transkripti OV Raša](Slanje_Dokaza_30-09-2026/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md)
-- [Poglavlje VII — Prekogranični promet RDF/SRF](poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf)
+- [Poglavlje VII — Prekogranični promet RDF/SRF](Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf)
 
 ---
 
