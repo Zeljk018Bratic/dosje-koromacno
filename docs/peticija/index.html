@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peticija za zaštitu Labinštine — STOP KOdeCO</title>
+    <meta name="description" content="Građanska peticija za obustavu spaljivanja otpada u tvornici Holcim Koromačno i zaštitu zdravlja stanovnika Labinštine.">
+    <meta property="og:title" content="Peticija za zaštitu Labinštine — STOP KOdeCO">
+    <meta property="og:description" content="Nije važno za koga glasate. Važno je da dišete. Potpišite.">
+    <meta property="og:type" content="website">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #1a4d7a;
+            --primary-dark: #0f3557;
+            --accent: #2e8b57;
+            --danger: #c0392b;
+            --text: #1a1a1a;
+            --text-light: #555;
+            --bg: #f8f9fa;
+            --white: #ffffff;
+            --border: #e0e0e0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        header .subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        header .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        main {
+            background: var(--white);
+            margin: -20px auto 0;
+            border-radius: 12px 12px 0 0;
+            max-width: 800px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .intro {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+        }
+        .intro p { margin-bottom: 15px; }
+        .intro p:last-child { margin-bottom: 0; }
+        h2 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin: 35px 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2 .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        .demands {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        .demands li {
+            background: #f0f6fa;
+            padding: 18px 20px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border-left: 4px solid var(--primary);
+        }
+        .demands li strong {
+            display: block;
+            color: var(--primary-dark);
+            margin-bottom: 6px;
+            font-size: 1.02rem;
+        }
+        .demands li span {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        .warning {
+            background: #fff4e6;
+            border-left: 4px solid var(--danger);
+            padding: 18px 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .warning strong {
+            color: var(--danger);
+            display: block;
+            margin-bottom: 8px;
+        }
+        .sign-section {
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .sign-section h3 {
+            color: var(--primary-dark);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .sign-section p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(46,139,87,0.3);
+        }
+        .btn:hover {
+            background: #256d46;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(46,139,87,0.4);
+        }
+        .btn-secondary {
+            background: var(--primary);
+            box-shadow: 0 4px 12px rgba(26,77,122,0.3);
+        }
+        .btn-secondary:hover {
+            background: var(--primary-dark);
+            box-shadow: 0 6px 16px rgba(26,77,122,0.4);
+        }
+        .counter {
+            text-align: center;
+            margin: 30px 0;
+            padding: 25px;
+            background: var(--primary);
+            color: white;
+            border-radius: 12px;
+        }
+        .counter .num {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+        .counter .label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 40px 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        footer a {
+            color: #a8d5ff;
+            text-decoration: none;
+        }
+        footer a:hover { text-decoration: underline; }
+        footer .links {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        footer .copy {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 20px;
+        }
+        .share {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+        }
+        .share p {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .share-buttons a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 18px;
+            background: var(--bg);
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            border: 1px solid var(--border);
+        }
+        .share-buttons a:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        @media (max-width: 600px) {
+            header { padding: 40px 15px 30px; }
+            main { padding: 30px 20px; margin-top: -15px; }
+            .sign-section { padding: 20px 15px; }
+            .btn { padding: 14px 28px; font-size: 1rem; }
+            .counter .num { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="badge">GRAĐANSKA INICIJATIVA — LABINŠTINA</div>
+        <h1>Peticija za obustavu spaljivanja otpada<br>u tvornici Holcim Koromačno</h1>
+        <p class="subtitle">Zaštitimo zdravlje naših obitelji, naš zrak i našu djecu</p>
+    </header>
+
+    <main>
+        <div class="intro">
+            <p><strong>Mi, dolje potpisani građani Općine Raša, Grada Labina, Koromačna, Brovinja, Skitače, Ravni, Trgeta i okolnih naselja</strong>, izražavamo ozbiljnu zabrinutost zbog projekta <strong>KOdeCO Net Zero</strong> u Koromačnu i kontinuiranog spaljivanja otpada u tvornici Holcim.</p>
+            <p>Smatramo da projekt, umjesto rješenja klimatske krize, predstavlja rizik za zdravlje, okoliš i kvalitetu života naših obitelji. Tražimo potpuni prestanak spaljivanja otpada u tvornici do uspostave neovisnog, kontinuiranog monitoringa emisija.</p>
+        </div>
+
+        <h2><span class="num">5</span> Naši zahtjevi</h2>
+        <ul class="demands">
+            <li>
+                <strong>1. Obustava spaljivanja otpada</strong>
+                <span>u tvornici Holcim Koromačno do uspostave neovisnog, kontinuiranog monitoringa emisija (dioksini, furani, PFAS, teški metali).</span>
+            </li>
+            <li>
+                <strong>2. Javna objava svih podataka o emisijama</strong>
+                <span>iz tvornice za razdoblje 2014–2026., uključujući sva mjerenja graničnih vrijednosti emisija (GVE).</span>
+            </li>
+            <li>
+                <strong>3. Neovisna zdravstvena studija</strong>
+                <span>o utjecaju tvornice na zdravlje stanovnika Labinštine, s javno dostupnim rezultatima.</span>
+            </li>
+            <li>
+                <strong>4. Obustava projekta KOdeCO Net Zero</strong>
+                <span>do ishođenja nove, cjelovite studije utjecaja na okoliš koja uključuje transport CO₂ brodovima i kumulativne emisije.</span>
+            </li>
+            <li>
+                <strong>5. Javna rasprava</strong>
+                <span>u Općini Raša i Gradu Labinu o svim aspektima projekta, uz sudjelovanje neovisnih stručnjaka.</span>
+            </li>
+        </ul>
+
+        <div class="warning">
+            <strong>⚠️ Ovo nije politička peticija.</strong>
+            Ova peticija ne podržava nijednu političku stranku niti pojedinca. Ona je zahtjev za transparentnost, zaštitu zdravlja i pravo građana na čist okoliš. Potpisivanjem ove peticije tražimo od nadležnih institucija da nas čuju.
+        </div>
+
+        <div class="counter">
+            <span class="num" id="counter">0</span>
+            <span class="label">potpisa do sada</span>
+        </div>
+
+        <div class="sign-section">
+            <h3>Potpišite peticiju</h3>
+            <p>Potpisivanje traje manje od minute. Vaši podaci su zaštićeni i neće biti javno objavljeni.</p>
+            <a href="#potpis" class="btn" onclick="document.getElementById('potpis').scrollIntoView({behavior:'smooth'}); return false;">✍️ Potpiši peticiju</a>
+        </div>
+
+        <h2 id="potpis"><span class="num">✍</span> Potpisni formular</h2>
+        <p style="color: var(--text-light); margin-bottom: 20px;">
+            Ispunite obrazac ispod. Svi podaci se koriste isključivo za potrebe ove peticije i bit će predani nadležnim institucijama (Općina Raša, Grad Labin, MZOZT).
+        </p>
+
+        <!-- Google Forms embed — zamijeni URL svojim formom -->
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdXXXXXX/viewform?embedded=true"
+            width="100%"
+            height="900"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            style="border-radius: 8px; border: 1px solid var(--border);">
+            Učitavanje…
+        </iframe>
+
+        <div class="share">
+            <p>Podijelite peticiju s prijateljima, obitelji i susjedima:</p>
+            <div class="share-buttons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://peticija.dosje-koromacno.hr" target="_blank" rel="noopener">📘 Facebook</a>
+                <a href="https://wa.me/?text=https://peticija.dosje-koromacno.hr" target="_blank" rel="noopener">💬 WhatsApp</a>
+                <a href="https://twitter.com/intent/tweet?url=https://peticija.dosje-koromacno.hr" target="_blank" rel="noopener">🐦 X</a>
+                <a href="mailto:?subject=Peticija za zaštitu Labinštine&body=https://peticija.dosje-koromacno.hr" target="_blank" rel="noopener">✉️ Email</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p style="font-size: 1.1rem; margin-bottom: 15px;">Nije važno za koga glasate. Važno je da dišete.</p>
+        <div class="links">
+            <a href="https://github.com/Zeljk018Bratic/dosje-koromacno" target="_blank" rel="noopener">📁 Forenzički dosje</a>
+            <a href="https://zeljk018bratic.github.io/dosje-koromacno/" target="_blank" rel="noopener">🌐 Web portal</a>
+            <a href="peticija-print.html">🖨️ Verzija za print</a>
+        </div>
+        <p class="copy">© 2026 Građanska inicijativa Labinština · Ova peticija je javno dobro.</p>
+    </footer>
+
+    <script>
+        // Brojač potpisa — ažuriraj ručno ili preko Google Sheets API
+        const SIGNATURES = 0; // <-- ovdje upiši trenutni broj potpisa
+        document.getElementById('counter').textContent = SIGNATURES.toLocaleString('hr-HR');
+    </script>
+</body>
+</html>
