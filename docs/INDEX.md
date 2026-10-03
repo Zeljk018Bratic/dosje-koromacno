@@ -17,6 +17,7 @@
 | [Mediji/](Mediji/) | Priopćenja, letci, pitanja za vijećnike |
 | [Pravni-akti/](Pravni-akti/) | Kaznena prijava, prigovor, Aarhus, zaštita |
 | [Slanje_Dokaza_30-09-2026/](Slanje_Dokaza_30-09-2026/) | Dokazi o slanju MARA V2 + ZPPI-01/02 |
+| [ZPPI-00_OPCI/](ZPPI-00_OPCI/) | Opći ZPPI predlošci |
 | [ZPPI-01/](ZPPI-01/) – [ZPPI-06/](ZPPI-06/) | ZPPI zahtjevi 01–06 |
 | [ZPPI-07_08/](ZPPI-07_08/) | Zahtjevi Carini i NZJZ-u |
 | [ZPPI-09/](ZPPI-09/) | Carinski čvor 19.013 t / 124 EUR |
