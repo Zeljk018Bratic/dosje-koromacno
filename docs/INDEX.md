@@ -100,6 +100,7 @@
 | [Medijsko priopćenje](Mediji/medijsko-priopcenje.md) | Glavno priopćenje |
 | [Letak Koromačno A5](Mediji/letak-koromacno-a5.md) | Letak za građane |
 | [Pitanja vijećnicima — ponedjeljak](Mediji/pitanja-vijecnica-ponedjeljak.md) | Za sjednicu |
+| [Vladine izmjene Zakona neće riješiti problem otpada](Mediji/Vladine%20izmjene%20Zakona%20ne%C4%87e%20rije%C5%A1iti%20problem%20otpada.md) | Komentar |
 
 ---
 
