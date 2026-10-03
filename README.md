@@ -22,13 +22,13 @@ Cjeloviti forenzički, kemijski i pravni dosje slučaja Holcim Koromačno i Raš
 
 | Dokument / Akt | Format | Svrha i namjena |
 | :--- | :---: | :--- |
-| [**Kaznena prijava DORH Pula**](docs/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | `PDF` | Predaja ODO Pula protiv odgovornih osoba |
-| [**Zapisnik i zaključak OV Raša 21.09.2026.**](docs/OV_RASA_21_09_2026.pdf) | `PDF` | Dokaz o dvostrukom prekoračenju TOC-a |
-| [**Zahtjev za status stranke (Aarhus)**](docs/zahtjev-status-stranke-arhus.md) | `MD` | Predaja Općini/Županiji za formalno učešće |
-| [**Forenzika otpada RDF/SRF**](docs/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analiza uvoza i *End-of-Waste* rupa |
-| [**Transkripti i dokazni zaključak OV Raša**](docs/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Izvorne izjave predsjednika, načelnika i MO Koromačno |
-| [**Usporedni dokazni elaborat**](docs/usporedni-dokazni-elaborat.md) | `MD` | Poveznica Poglavlja VII i zapisnika OV Raša |
-| [**Sisak vs. Koromačno – komparativni model**](docs/sisak-vs-koromacno-elaborat.md) | `MD` | Institutional capture usporedba |
+| [**Kaznena prijava DORH Pula**](docs/Pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | `PDF` | Predaja ODO Pula protiv odgovornih osoba |
+| [**Zapisnik i zaključak OV Raša 21.09.2026.**](docs/Slanje_Dokaza_30-09-2026/OV_RASA_21_09_2026.pdf) | `PDF` | Dokaz o dvostrukom prekoračenju TOC-a |
+| [**Zahtjev za status stranke (Aarhus)**](docs/Pravni-akti/zahtjev-status-stranke-arhus.md) | `MD` | Predaja Općini/Županiji za formalno učešće |
+| [**Forenzika otpada RDF/SRF**](docs/Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analiza uvoza i *End-of-Waste* rupa |
+| [**Transkripti i dokazni zaključak OV Raša**](docs/Slanje_Dokaza_30-09-2026/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Izvorne izjave predsjednika, načelnika i MO Koromačno |
+| [**Usporedni dokazni elaborat**](docs/Forenzika/usporedni-dokazni-elaborat.md) | `MD` | Poveznica Poglavlja VII i zapisnika OV Raša |
+| [**Sisak vs. Koromačno – komparativni model**](docs/Forenzika/sisak-vs-koromacno-elaborat.md) | `MD` | Institutional capture usporedba |
 | [**Zahtjev ZPPI-01 (Raša / Okoliš)**](docs/ZPPI-01/zahtjev-zppi-rasa-okolis-kodeco.md) | `MD` | Zahtjev za sirove AMS podatke i odluku od 2. rujna |
 | [**Zahtjev ZPPI-02 (Labin / Proračun)**](docs/ZPPI-02/zahtjev-zppi-grad-labin-transparentnost-cityx.md) | `MD` | Zahtjev za ugovore i audit logove (CityX) |
 | [**Zahtjev ZPPI-03 (Ubaš / Planovi)**](docs/ZPPI-03/zahtjev-zppi-prostorni-plan-ubas-koromacno.html) | `HTML` | Zahtjev za V. izmjene PPUO i koncesiju 2045. |
@@ -73,7 +73,7 @@ Svako uskraćivanje, friziranje ili zakašnjelo validiranje sirovih podataka (RA
 
 **Predmet:** Zahtjev za pristup informacijama – EWC kodovi, ulazne analize, AMS podaci, vagarski listovi i status nadzora
 
-> **[Preuzmi cijeli predložak →](docs/dopunjeni-zppi-predlozak.md)**
+> **[Preuzmi cijeli predložak →](docs/Pravni-akti/dopunjeni-zppi-predlozak.md)**
 
 Poštovani,
 
@@ -169,4 +169,4 @@ Otvoreni sadržaj. Svi dokumenti i analize dostupni su za javnu upotrebu, provje
 
 ---
 
-*Posljednje ažuriranje: 01.10.2026.*
+*Posljednje ažuriranje: 03.10.2026.*
