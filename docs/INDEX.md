@@ -162,6 +162,7 @@
 | **03.10.2026.** | Novi forenzički blokovi (Mass Balance, PFAS, Politička odluka) |
 | **16.10.2026.** | Rok za odgovor MZOZT-a (ZPPI-04, ZPPI-05) |
 | **17.10.2026.** | Ako nema odgovora — urgencija + žalba Povjereniku |
+| **03.10.2026.** | Novi forenzički blok: Italija — 576 pošiljki (2022–2024) |
 
 ---
 
