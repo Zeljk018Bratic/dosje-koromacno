@@ -99,7 +99,7 @@
 - [Verzija za print](peticija/peticija-print.html)
 - [README](peticija/README.md)
 
-**Online:** https://zeljk018bratic.github.io/dosje-koromacno/peticija/
+**Online:** https://zeljk018bratic.github.io/dosje-koromacno/docs/peticija/
 
 ---
 
