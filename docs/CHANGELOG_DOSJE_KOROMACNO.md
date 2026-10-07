@@ -19,8 +19,8 @@
 - „Šutnja je dokaz“ → kanonska formulacija o šutnji uprave prema ZPPI-u.
 
 ### Brojke
-- Peticija: 4.517 (peticijeonline.com, 04.10.2026.) + 195 (GitHub obrazac) = 4.712 zaprimljenih potpisa, bez provjere duplikata.
-- ZPPI: pripremljeno 11, poslano 4 (ZPPI-01, 02, 04, 05).
+- Peticija: 4.646 (peticijeonline.com, 07.10.2026.) + 195 (GitHub obrazac) = 4.841 zaprimljenih potpisa, bez provjere duplikata.
+- ZPPI: pripremljeno 11, poslano 5 (ZPPI-01, ZPPI-02 stara, ZPPI-04, ZPPI-05, ZPPI-02 nova 07.10.2026.).
 - Uklonjene stare brojke: 3.440, 3.416, 3.532.
 
 ### Dokumenti
@@ -35,11 +35,5 @@
 - Ažuriran status ulaza vozila → INDICIJA.
 
 ### Novi dokumenti
-- Dodan `docs/Forenzika/BAJTEBROTHERS_MARA_FORENSIC.md` — forenzička analiza vlasničke strukture (Vesta Software Group, Constellation Software), IT sustava (CityX, Libusoft) i transparentnosti proračuna Grada Labina,analiza slučaja Vuk Vuković.
+- Dodan `docs/Forenzika/BAJTEBROTHERS_MARA_FORENSIC.md` — forenzička analiza vlasničke strukture (Vesta Software Group, Constellation Software), IT sustava (CityX, Libusoft) i transparentnosti proračuna Grada Labina, analiza slučaja Vuk Vuković.
 - Ažuriran `README.md` s referencama na nove istraživačke dokumente.
-
-
-
-
-
-
