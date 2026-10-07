@@ -1,5 +1,7 @@
 DOSJE KOROMAČNO — ZAVRŠNI PAKET ZA JAVNOST I MEDIJE
+
 FILE 1: ZA GRAĐANE — ALAT JE VAŠ, ODLUKA JE VAŠA
+
 ŠTO JE DOSJE KOROMAČNO
 Dosje Koromačno je javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija i institucionalne odgovornosti u vezi s Tvornicom cementa Koromačno (Holcim Hrvatska d.o.o.).
 
