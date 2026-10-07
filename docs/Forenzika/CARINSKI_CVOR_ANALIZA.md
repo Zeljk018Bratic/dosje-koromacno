@@ -15,8 +15,7 @@ Ista metodologija kao u MASTER DOSJEU: ✅🟡🔵🔴⚪🔒. Ništa se ne bri�
 ---
 
 ## 1. EXECUTIVE SUMMARY
-
-Forenzičkom verifikacijom prekograničnih carinskih tokova identificiran je modus operandi iza anomalije od **19.013 tona** industrijskog otpada s prijavljenom carinskom vrijednošću od samo **124 EUR**. Istraživanje pokazuje da vrijednost od 124 EUR nije bila stvarna tržišna cijena, već nominalna administrativna pristojba unesena u carinski sustav kako bi teret prošao pod carinskom oznakom "sirovine", izbjegavajući striktne carinske preglede i masene bilance opasnih tvari.
+Uvidom u carinske i statističke evidencije identificirana je anomalija: 19.013 tona industrijskog otpada prijavljeno je s carinskom vrijednošću od samo 124 EUR. Prema dostupnim podacima (DZS, statistički zapis za 2025., CN 3825 90 90), nije dokazano da se radi o otpadu, da je odredište Koromačno, niti da je 124 EUR stvarna tržišna cijena. Anomalija se navodi kao predmet provjere i osnova za ZPPI zahtjev prema Carinskoj upravi i MZOZT-u.
 
 ---
 
