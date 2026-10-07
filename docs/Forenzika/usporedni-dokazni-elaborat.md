@@ -20,7 +20,6 @@ Analiza i supostavljanje dvaju ključnih dokumenata unutar dosjea — **Poglavlj
 
 Ova dva dokumenta tvore neraskidiv dokazni lanac:
 
-```text
 [Dokument A: Poglavlje VII]                                 [Dokument B: Zapisnik OV Raša]
 Sistemski uzrok i ulazna kemija                             Dokazana posljedica i službene izjave
 ┌────────────────────────────────────────┐                 ┌────────────────────────────────────────┐
