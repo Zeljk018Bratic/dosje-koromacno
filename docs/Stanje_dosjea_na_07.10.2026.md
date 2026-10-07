@@ -29,7 +29,7 @@
 
 ---
 
-# **DOSJE KOROMAČNO — KOMPLETNO STANJE NA DAN 01.10.2026.**
+# **DOSJE KOROMAČNO — KOMPLETNO STANJE NA DAN 07.10.2026.**
 
 Sve što je urađeno, ispravljeno, poslano i što slijedi.
 
@@ -136,7 +136,7 @@ Rezultat: Portal više ne tvrdi više nego što dokazi nose. To je forenzičko �
 
 | Dokument | Promjena |
 | :---- | :---- |
-| HR tablica prekograničnog otpada | Dodan datum ažuriranja (01.10.2026.) |
+| HR tablica prekograničnog otpada | Dodan datum ažuriranja (07.10.2026.) |
 | EN tablica | Dodan Executive Summary |
 | Evidence Matrix | Dodani ZPPI-04 i ZPPI-05 (13 redaka ukupno) |
 | Medijsko priopćenje | Kontakt → GitHub Issues (bez osobnih podataka) |
@@ -260,7 +260,7 @@ ________________________________________________________________________________
 
 ## **VIII. ZAKLJUČAK**
 
-Na dan 01.10.2026. dosje Koromačno je:
+Na dan 07.10.2026. dosje Koromačno je:
 
 * Pravno aktivan — 8 ZPPI fronti, kaznena prijava, Aarhus
 * Forenzički precizan — sve tvrdnje usklađene s dokazima
