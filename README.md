@@ -105,9 +105,9 @@ Tekst prijave s prilozima šalje se na:
 
 Svi dokumenti, transkripti, audio zapisi, forenzički elaborati i pravni obrasci trajno su pohranjeni u:
 
-- `/docs/` — dokumenti
-- `/audio/` — audio zapisi
-- `/public/` — statički web
+- [docs/](docs/) — dokumenti
+- [audio/](audio/) — audio zapisi
+- [public/](public/) — statički web
 
 ---
 
