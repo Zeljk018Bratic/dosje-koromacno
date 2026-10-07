@@ -561,7 +561,7 @@ Građani Labinštine blokirali su ulaz u tvornicu. Policija je **30.09.2026.** r
 - IMPEL
 
 ### 6.4. Kaznene prijave
-- ✅ DORH — čl. 193., 337. KZ
+- ✅ DORH — čl. 193., KZ
 - ✅ Zaštita od zataškavanja — DORH
 - ✅ Prigovor na PPUO Raša
 - ✅ Zahtjev za status stranke — Aarhus
