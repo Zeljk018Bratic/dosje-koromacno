@@ -24,19 +24,18 @@
 - Uklonjene stare brojke: 3.440, 3.416, 3.532.
 
 ### Dokumenti
-- Uklonjeni interni komentari („Brate“, „ako želiš“, „Claude je propustio“, „Eingefügter Text“).
+- Uklonjeni interni komentari.
 - Uklonjene duple verzije FILE 1 i FILE 2.
 - Uklonjen čl. 337. iz CHANGELOG, index.html, MASTER_DOSJE_V2, usporedni-dokazni-elaborat, PAUS_SABOR_KRONOLOGIJA, PDF Poglavlje VI.
 - Usklađena brojka 124 € / 19.013 t s MARA formulacijom u CARINSKI_CVOR_ANALIZA.md, index*.html, nacrtu prijave.
-- Uklonjena imena bez izvora (načelnik Blašković, Slaven Tintor) ili atribuirana.
+- Uklonjena imena bez izvora ili atribuirana.
 - Zamijenjen dokaz uručenja ZPPI-02 (Gmail ispis) dopunom.
 - Uklonjen red o američkom sudu (Vuk Vuković) iz Evidence Matrix ili stavljen status „neprovjereno“.
 - Ažuriran TOC status u Evidence Matrix: 148 TOC prekoračenja → INDICIJA.
 - Ažuriran status ulaza vozila → INDICIJA.
 
 ### Novi dokumenti
-- Dodan `docs/Forenzika/ISTRAZIVANJE_VUK_VUKOVIC.md` — analiza slučaja Vuk Vuković, CityX Apps, Libusoft i transparentnosti u Labinu.
-- Dodan `docs/Forenzika/BAJTEBROTHERS_MARA_FORENSIC.md` — forenzička analiza vlasničke strukture (Vesta Software Group, Constellation Software), IT sustava (CityX, Libusoft) i transparentnosti proračuna Grada Labina.
+- Dodan `docs/Forenzika/BAJTEBROTHERS_MARA_FORENSIC.md` — forenzička analiza vlasničke strukture (Vesta Software Group, Constellation Software), IT sustava (CityX, Libusoft) i transparentnosti proračuna Grada Labina,analiza slučaja Vuk Vuković.
 - Ažuriran `README.md` s referencama na nove istraživačke dokumente.
 
 
