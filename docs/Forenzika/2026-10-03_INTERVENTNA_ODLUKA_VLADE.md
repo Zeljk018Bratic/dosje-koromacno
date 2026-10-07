@@ -121,7 +121,6 @@ Vlada RH donijela je odluku kojom su **HOLCIM Hrvatska** i **NEXE** određeni za
 
 ### C.4. Pravna kvalifikacija — HIPOTEZA
 
-> **Članak 337. KZ (zlouporaba položaja i ovlasti) odnosi se na stari Kazneni zakon iz 1997.**
 >
 > **U važećem Kaznenom zakonu iz 2011. (na snazi od 2013.), zlouporaba položaja i ovlasti je članak 291.**
 >
