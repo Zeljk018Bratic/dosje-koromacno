@@ -9,7 +9,7 @@ Analiza i supostavljanje dvaju ključnih dokumenata unutar dosjea — **Poglavlj
 | Dimenzija Analize | Dokument A: Poglavlje VII (Sistemsko-tehnološki okvir) | Dokument B: OV Raša 21.9.2026. (Institucionalno-terenski dokaz) |
 | --- | --- | --- |
 | **Primarni Fokus** | Makro-sustav uvoza/izvoza otpada, pravne rupe (*End-of-Waste*) i kemijsko-procesni uzroci zagađenja. | Službeno izjašnjavanje predstavničkih tijela, transkripti lokalnih čelnika i 5 izglasanih zahtjeva. |
-| **Tehnički Dokaz** | Definira kako heterogeni sastav uvoznog RDF/SRF-a uzrokuje termičke oscilacije u peći. | Potvrđuje na terenu skok emisija od **10 do 15 puta** i promašenu tehnologiju predkalcinatora (M. Plazibat). |
+| **Tehnički Dokaz** | Definira kako heterogeni sastav uvoznog RDF/SRF-a uzrokuje termičke oscilacije u peći. |Prema izjavi M. Plazibata (MO Koromačno), 21.09.2026., emisije predkalcinatora porasle su 10 do 15 puta i tehnologija predkalcinatora je ocijenjena kao promašena. Neovisna mjerenja koja bi potvrdila taj omjer još nisu pribavljena.
 | **Pravni Otisak** | Identificira zlouporabu prekograničnog prometa i zakonskih normi (EU 1013/2006). | Formulira **Zahtjev 3** i podnesak za DORH Pula na temelju čl. 193. i KZ-a (dvostruko prekoračenje TOC-a). |
 | **Kritični Uzrok** | Lažno deklariranje otpada kao "sekundarne sirovine" kako bi se izbjegle strože notifikacije. | Dovoženje netransparentnih šarži (uključujući najavljeni otpad iz Gospića) bez neovisne analize. |
 | **Institucionalna Meta** | MZOZT, DIRH, Carinska uprava, međunarodne inspekcije za otpad. | Općina Raša, Holcim (Hrvatska) d.o.o., ODO Pula. |
