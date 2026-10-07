@@ -33,3 +33,14 @@
 - Uklonjen red o američkom sudu (Vuk Vuković) iz Evidence Matrix ili stavljen status „neprovjereno“.
 - Ažuriran TOC status u Evidence Matrix: 148 TOC prekoračenja → INDICIJA.
 - Ažuriran status ulaza vozila → INDICIJA.
+
+### Novi dokumenti
+- Dodan `docs/Forenzika/ISTRAZIVANJE_VUK_VUKOVIC.md` — analiza slučaja Vuk Vuković, CityX Apps, Libusoft i transparentnosti u Labinu.
+- Dodan `docs/Forenzika/BAJTEBROTHERS_MARA_FORENSIC.md` — forenzička analiza vlasničke strukture (Vesta Software Group, Constellation Software), IT sustava (CityX, Libusoft) i transparentnosti proračuna Grada Labina.
+- Ažuriran `README.md` s referencama na nove istraživačke dokumente.
+
+
+
+
+
+
