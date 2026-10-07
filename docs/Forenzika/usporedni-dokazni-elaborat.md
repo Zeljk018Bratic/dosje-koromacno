@@ -37,8 +37,7 @@ Sistemski uzrok i ulazna kemija                             Dokazana posljedica 
 ```
 
 1. **Umišljaj i Uzročno-posljedična veza (Članak 193. KZ-a):** Poglavlje VII dokazuje da je operater znao da nesortirani RDF/SRF narušava proces izgaranja. Zapisnik OV Raša služi kao materijalni dokaz da je ta praksa dovela do konkretnog ugrožavanja okoliša (dvostruki TOC i višestruki skok emisija predkalcinatora).
-2. **Propust i Nesavjesni rad (Članak 337. KZ-a):** Poglavlje VII ukazuje na izostanak provjere *End-of-Waste* certifikata, dok Zapisnik OV Raša potvrđuje da unatoč javnim saznanjima lokalne vlasti inspekcija nije zaustavila rad peći.
-
+2. **Propust i Nesavjesni rad  → „propust nadzora“
 ---
 
 ## 3. Audio-Dokazni Prilozi
