@@ -53,7 +53,8 @@ Cjelokupni dosje dostupan je uživo:
 3. Ispisuje se čisti pravni dokument i obrazac kaznene prijave.
 
 **Preuzimanje izvornog koda:**
-1. Otvori `index.html` na GitHubu.
+
+1. Otvori [index.html](index.html) na GitHubu.
 2. Klikni **Download raw file**.
 3. Otvori u pregledniku.
 
