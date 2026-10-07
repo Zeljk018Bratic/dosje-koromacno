@@ -87,7 +87,6 @@ Ovo upućuje na **unaprijed pripremljenu odluku** — možda i prije nego što j
 
 ### 4.3. Kazneni zakon
 
-- **Zlouporaba položaja i ovlasti** — čl. 337. KZ
 - **Nesavjesno postupanje u službi** — čl. 338. KZ
 
 **Ako je odluka donesena mimo procedure, to može biti kazneno djelo.**
