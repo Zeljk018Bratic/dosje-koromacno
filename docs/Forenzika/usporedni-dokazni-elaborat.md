@@ -10,7 +10,7 @@ Analiza i supostavljanje dvaju ključnih dokumenata unutar dosjea — **Poglavlj
 | --- | --- | --- |
 | **Primarni Fokus** | Makro-sustav uvoza/izvoza otpada, pravne rupe (*End-of-Waste*) i kemijsko-procesni uzroci zagađenja. | Službeno izjašnjavanje predstavničkih tijela, transkripti lokalnih čelnika i 5 izglasanih zahtjeva. |
 | **Tehnički Dokaz** | Definira kako heterogeni sastav uvoznog RDF/SRF-a uzrokuje termičke oscilacije u peći. | Potvrđuje na terenu skok emisija od **10 do 15 puta** i promašenu tehnologiju predkalcinatora (M. Plazibat). |
-| **Pravni Otisak** | Identificira zlouporabu prekograničnog prometa i zakonskih normi (EU 1013/2006). | Formulira **Zahtjev 3** i podnesak za DORH Pula na temelju čl. 193. i čl. 337. KZ-a (dvostruko prekoračenje TOC-a). |
+| **Pravni Otisak** | Identificira zlouporabu prekograničnog prometa i zakonskih normi (EU 1013/2006). | Formulira **Zahtjev 3** i podnesak za DORH Pula na temelju čl. 193. i KZ-a (dvostruko prekoračenje TOC-a). |
 | **Kritični Uzrok** | Lažno deklariranje otpada kao "sekundarne sirovine" kako bi se izbjegle strože notifikacije. | Dovoženje netransparentnih šarži (uključujući najavljeni otpad iz Gospića) bez neovisne analize. |
 | **Institucionalna Meta** | MZOZT, DIRH, Carinska uprava, međunarodne inspekcije za otpad. | Općina Raša, Holcim (Hrvatska) d.o.o., ODO Pula. |
 
