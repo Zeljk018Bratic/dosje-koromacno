@@ -54,8 +54,8 @@ Cjelokupni dosje dostupan je uživo:
 
 **Preuzimanje izvornog koda:**
 
-1. Otvori [index.html](index.html) na GitHubu.
-2. Klikni **Download raw file**.
+1. Otvori [index.html](https://raw.githubusercontent.com/Zeljk018Bratic/dosje-koromacno/main/index.html).
+2. Klikni **Save As** ili **Download raw file**.
 3. Otvori u pregledniku.
 
 ---
