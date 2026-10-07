@@ -148,7 +148,6 @@ Građani Labinštine blokirali su ulaz u tvornicu. Policija je **30.09.2026.** r
 
 **Pravna kvalifikacija:**
 - Zakon o sigurnosno-obavještajnom sustavu RH — čl. 27., 28., 29.
-- Kazneni zakon — čl. 337.
 
 ### 3.3. DORH / Turudić — selektivna pravda
 
@@ -404,7 +403,6 @@ Građani Labinštine blokirali su ulaz u tvornicu. Policija je **30.09.2026.** r
 - Zakon o policijskim poslovima i ovlastima — čl. 8., 11., 13., 23., 66., 75.
 - Zakon o gospodarenju otpadom — čl. 136. st. 3.
 - Zakon o zaštiti okoliša — čl. 10.
-- Kazneni zakon — čl. 337.
 
 **Dokaz XY:**
 - ✅ Video/audio transkript
