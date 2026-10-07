@@ -1,4 +1,4 @@
-## **Stanje dosjea na 01.10.2026. — kompletno**
+## **Stanje dosjea na 07.10.2026. — kompletno**
 
 | # | Zadatak | Status |
 | :---- | :---- | :---- |
