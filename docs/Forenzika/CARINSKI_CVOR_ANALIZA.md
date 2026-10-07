@@ -94,7 +94,7 @@ Uvidom u carinske i statističke evidencije identificirana je anomalija: 19.013 
 | Uredba (EZ) 1013/2006 | — | Pošiljke otpada |
 | Uredba (EU) 2024/1157 | — | Pošiljke otpada |
 | Zakon o gospodarenju otpadom | čl. 8., 136. | Nadzor otpada |
-| Kazneni zakon | čl. 193.,| Prijevara, |
+| Kazneni zakon | čl. 193.| Prijevara, |
 
 ---
 
