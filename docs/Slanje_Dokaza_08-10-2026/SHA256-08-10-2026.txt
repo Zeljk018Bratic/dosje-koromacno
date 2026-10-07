@@ -1,0 +1,13 @@
+DATUM SLANJA: 08.10.2026.
+ALGORITAM: SHA-256
+
+1. PRIJAVA DRŽAVNOM INSPEKTORATU (DIRH)
+   Datoteka: Gmail - Fwd_ PREDMET_ Prijava za inspekcijski nadzor – Sekundar Usluge d.o.o., lokacija Pazin.pdf
+   SHA256: 377b0509f9c0b3d49386d44d362084f59b064d6f10fb66c56cfdbf2c353410c9
+
+2. ZPPI MINISTARSTVU ZAŠTITE OKOLIŠA (MZOZT)
+   Datoteka: Gmail - PREDMET_ Zahtjev za pristup informacijama – Dozvole i suglasnosti za Sekundar Usluge d.o.o. na lokaciji Pazin.pdf
+   SHA256: 62f93521e2cda7f16f725e805ce7f846e92f5c173ad9097c50022518fc4438a1
+
+Napomena: Hash vrijednosti su izračunate certutil alatom na dan 08.10.2026.
+Svaka izmjena datoteke mijenja hash, čime se dokazuje izvornost.
