@@ -1,0 +1,14 @@
+DATUM SLANJA: 08.10.2026.
+ALGORITAM: SHA-256
+METODA: certutil -hashfile (Windows PowerShell)
+
+1. POTVRDA PRIJAVE DRŽAVNOM INSPEKTORATU (DIRH)
+   Datoteka: potvrda-dirh.pdf
+   SHA256: d5a8f0c3b6d0f7e76fbb64a6b75d108de1f25f06df5da68936f17a6416b60fe1
+
+2. POTVRDA ZAHTJEVA MZOZT (ZPPI)
+   Datoteka: potvrda-mzozt.pdf
+   SHA256: ea41fe4291f263c0abb28ff7a5a927374aeeb7d96546c2f3667190f10095b46e
+
+Napomena: Hash vrijednosti su izračunate alatom certutil na dan 08.10.2026.
+Svaka izmjena datoteke mijenja hash, čime se dokazuje izvornost.
