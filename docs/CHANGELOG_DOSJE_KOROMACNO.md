@@ -5,6 +5,7 @@
 ### Dodano
 - `docs/Forenzika/SVJEDOCANSTVO_VLATKOVIC_SOA.md` – svjedočanstvo dr. sc. Vlatković (kamioni u Gospiću, Božo Petrov, SOA) + medijske izjave Turudića i Ostojića.
 - Transkript YouTube intervjua "SVI SU SVE ZNALI JOŠ 2021." (BDNG Pričamo #33).
+- `docs/Forenzika/EKO-MAFIJA_LIKA_PAZIN_KOROMACNO.md` — objedinjeni dosje: Tipos Resurs, Sekundar, Holcim, SOA, Pazin, KBO prijevara, KOdeCO.
 
 ## [08.10.2026.]
 
