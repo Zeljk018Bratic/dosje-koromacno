@@ -1,5 +1,11 @@
 # CHANGELOG — DOSJE KOROMAČNO
 
+## [08.10.2026.] — dopuna
+
+### Dodano
+- `docs/Forenzika/SVJEDOCANSTVO_VLATKOVIC_SOA.md` – svjedočanstvo dr. sc. Vlatković (kamioni u Gospiću, Božo Petrov, SOA) + medijske izjave Turudića i Ostojića.
+- Transkript YouTube intervjua "SVI SU SVE ZNALI JOŠ 2021." (BDNG Pričamo #33).
+
 ## [08.10.2026.]
 
 ### Dodano
