@@ -26,6 +26,7 @@ Javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija 
 |:---|:---:|:---|
 | [Kaznena prijava DORH Pula](docs/Pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | PDF | Predaja ODO Pula |
 | [Zapisnik OV Raša 21.09.2026.](docs/Slanje_Dokaza_30-09-2026/OV_RASA_21_09_2026.pdf) | PDF | Dokaz o prekoračenju TOC-a |
+| [Slanje dokaza 08.10.2026.](docs/Slanje_Dokaza_08-10-2026/) | Folder | Prijava DIRH + ZPPI MZOZT + SHA256 potvrde |
 | [Zahtjev za status stranke (Aarhus)](docs/Pravni-akti/zahtjev-status-stranke-arhus.md) | MD | Formalno učešće |
 | [Forenzika otpada RDF/SRF](docs/Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | PDF | Analiza uvoza |
 | [Usporedni dokazni elaborat](docs/Forenzika/usporedni-dokazni-elaborat.md) | MD | Poveznica Poglavlja VII i OV Raša |
@@ -74,6 +75,24 @@ Cjelokupni dosje dostupan je uživo:
 - Po potrebi `tajnistvo@dorh.hr` uz kaznenu prijavu
 
 ---
+
+## 📮 Poslani zahtjevi
+
+### 08.10.2026.
+
+| Dokument | Institucija | Status | Dokaz |
+|:---|:---|:---:|:---|
+| [Prijava za inspekcijski nadzor](docs/Slanje_Dokaza_08-10-2026/Prijava_DIRH_Sekundar_Usluge_Pazin.md) | Državni inspektorat (DIRH) | Poslano | [potvrda-dirh.pdf](docs/Slanje_Dokaza_08-10-2026/potvrda-dirh.pdf) |
+| [Zahtjev za pristup informacijama](docs/Slanje_Dokaza_08-10-2026/ZPPI_MZOZT_Sekundar_Usluge_Pazin.md) | MZOZT | Poslano | [potvrda-mzozt.pdf](docs/Slanje_Dokaza_08-10-2026/potvrda-mzozt.pdf) |
+
+**Rokovi:**
+- MZOZT ZPPI: **23.10.2026.**
+- DIRH prijava: **07.11.2026.**
+
+**SHA256 dokazi:** [SHA256-08-10-2026.txt](docs/Slanje_Dokaza_08-10-2026/SHA256-08-10-2026.txt)
+
+---
+
 
 ## 📬 Kamo poslati kaznenu prijavu
 
