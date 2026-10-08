@@ -62,6 +62,7 @@
 | [Ministarstvo zdravstva — ZPPI-08](Forenzika/2026-10-03_MINISTARSTVO_ZDRAVSTVA_ZPPI-08.md) | Stručne preporuke PFAS |
 | [Politička odluka — Koromačno](Forenzika/2026-10-03_POLITICKA_ODLUKA_KOROMACNO.md) | Kronologija: Zaprešić → Koromačno |
 | [Dokazni status — tablica](Forenzika/2026-10-03_DOKAZNI_STATUS_TABLICA.md) | FAKT / TVRDNJA / INDIKACIJA |
+| [Svjedočanstvo Vlatković i SOA](Forenzika/SVJEDOCANSTVO_VLATKOVIC_SOA.md) | MD | Svjedočanstvo + Turudić/SOA kontekst |
 
 ### Ostali forenzički dokumenti
 
