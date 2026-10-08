@@ -1,5 +1,21 @@
 # CHANGELOG — DOSJE KOROMAČNO
 
+## [08.10.2026.]
+
+### Dodano
+- Prijava za inspekcijski nadzor – Državni inspektorat (DIRH), Sekundar Usluge d.o.o., lokacija Pazin.
+- Zahtjev za pristup informacijama – Ministarstvo zaštite okoliša i zelene tranzicije (MZOZT).
+- Ispravak poziva na zakon: članak 4. stavak 1. točka 27. i članak 77. ZGO-a (NN 84/21), umjesto članka 90.
+- SHA256 hash dokazi za potvrde slanja.
+- Folder `docs/Slanje_Dokaza_08-10-2026/`.
+
+### Izmijenjeno
+- README.md – dodan odjeljak „Poslani zahtjevi" i link na folder 08.10.2026.
+- Datum posljednjeg ažuriranja: 08.10.2026.
+
+### Napomena
+- Rokovi: MZOZT ZPPI do 23.10.2026., DIRH prijava do 07.11.2026.
+
 ## 07.10.2026.
 
 ### Pravne ispravke
