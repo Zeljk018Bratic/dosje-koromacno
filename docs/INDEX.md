@@ -63,6 +63,7 @@
 | [Politička odluka — Koromačno](Forenzika/2026-10-03_POLITICKA_ODLUKA_KOROMACNO.md) | Kronologija: Zaprešić → Koromačno |
 | [Dokazni status — tablica](Forenzika/2026-10-03_DOKAZNI_STATUS_TABLICA.md) | FAKT / TVRDNJA / INDIKACIJA |
 | [Svjedočanstvo Vlatković i SOA](Forenzika/SVJEDOCANSTVO_VLATKOVIC_SOA.md) | MD | Svjedočanstvo + Turudić/SOA kontekst |
+| [Eko-mafija: Lika → Pazin → Koromačno](Forenzika/EKO-MAFIJA_LIKA_PAZIN_KOROMACNO.md) | MD | Objedinjeni forenzički dosje |
 
 ### Ostali forenzički dokumenti
 
