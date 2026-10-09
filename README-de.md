@@ -24,13 +24,13 @@
 
 | Dokument / Akt | Format | Zweck |
 | :--- | :---: | :--- |
-| [**Strafanzeige an DORH Pula**](docs/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | `PDF` | Einreichung bei ODO Pula gegen verantwortliche Personen |
-| [**Protokoll und Beschluss des Gemeinderats Raša 21.09.2026**](docs/OV_RASA_21_09_2026.pdf) | `PDF` | Nachweis der doppelten TOC-Überschreitung |
-| [**Antrag auf Parteistatus (Aarhus)**](docs/zahtjev-status-stranke-arhus.md) | `MD` | Einreichung bei Gemeinde/Gespanschaft zur formellen Beteiligung |
-| [**Forensik des RDF/SRF-Abfalls**](docs/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analyse der Importe und der *End-of-Waste*-Lücke |
-| [**Transkripte und Beweisschluss des Gemeinderats Raša**](docs/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Originalaussagen des Präsidenten, Bürgermeisters und des Ortsausschusses Koromačno |
-| [**Vergleichender Beweisbericht**](docs/usporedni-dokazni-elaborat.md) | `MD` | Verbindung zwischen Kapitel VII und dem Protokoll des Gemeinderats Raša |
-| [**Sisak vs. Koromačno – vergleichendes Modell**](docs/sisak-vs-koromacno-elaborat.md) | `MD` | Vergleich der institutionellen Vereinnahmung |
+| [**Strafanzeige an DORH Pula**](docs/Pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | `PDF` | Einreichung bei ODO Pula gegen verantwortliche Personen |
+| [**Protokoll und Beschluss des Gemeinderats Raša 21.09.2026**](docs/Pravni-akti/OV_RASA_21_09_2026.pdf) | `PDF` | Nachweis der doppelten TOC-Überschreitung |
+| [**Antrag auf Parteistatus (Aarhus)**](docs/Pravni-akti/zahtjev-status-stranke-arhus.md) | `MD` | Einreichung bei Gemeinde/Gespanschaft zur formellen Beteiligung |
+| [**Forensik des RDF/SRF-Abfalls**](docs/Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analyse der Importe und der *End-of-Waste*-Lücke |
+| [**Transkripte und Beweisschluss des Gemeinderats Raša**](docs/Pravni-akti/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Originalaussagen des Präsidenten, Bürgermeisters und des Ortsausschusses Koromačno |
+| [**Vergleichender Beweisbericht**](docs/forenzika/usporedni-dokazni-elaborat.md) | `MD` | Verbindung zwischen Kapitel VII und dem Protokoll des Gemeinderats Raša |
+| [**Sisak vs. Koromačno – vergleichendes Modell**](docs/Forenzika/sisak-vs-koromacno-elaborat.md) | `MD` | Vergleich der institutionellen Vereinnahmung |
 | [**IFG-Antrag ZPPI-01 (Raša / Umwelt)**](docs/ZPPI-01/zahtjev-zppi-rasa-okolis-kodeco.md) | `MD` | Antrag auf rohe AMS-Daten und Entscheidung vom 2. September |
 | [**IFG-Antrag ZPPI-02 (Labin / Haushalt)**](docs/ZPPI-02/zahtjev-zppi-grad-labin-transparentnost-cityx.md) | `MD` | Antrag auf Verträge und Audit-Logs (CityX) |
 | [**IFG-Antrag ZPPI-03 (Ubaš / Pläne)**](docs/ZPPI-03/zahtjev-zppi-prostorni-plan-ubas-koromacno.html) | `HTML` | Antrag auf Änderungen V des Raumplans und Konzession bis 2045 |
@@ -59,7 +59,7 @@ Die Seite ist programmatisch für den Druck und die Verteilung auf der Straße o
 
 Für die lokale Nutzung ohne Internetzugang:
 
-1. Klicken Sie auf die Datei `index.html` auf GitHub.
+1. Öffnen Sie [index.html](https://github.com/Zeljk018Bratic/dosje-koromacno/blob/main/index.html) auf GitHub.
 2. Klicken Sie oben rechts auf **Download raw file**.
 3. Speichern Sie die Datei auf Ihrem Gerät und öffnen Sie sie in einem beliebigen Browser (Chrome, Safari, Firefox).
 
@@ -75,7 +75,7 @@ Jede Verweigerung, Manipulation oder verzögerte Validierung von Rohdaten (RAW D
 
 **Betreff:** Antrag auf Zugang zu Informationen – EWC-Codes, Eingangsanalysen, AMS-Daten, Waageprotokolle und Überwachungsstatus
 
-> **[Vollständige Vorlage herunterladen →](docs/dopunjeni-zppi-predlozak.md)**
+> **[Vollständige Vorlage herunterladen →](docs/Pravni-akti/dopunjeni-zppi-predlozak.md)**
 
 Sehr geehrte Damen und Herren,
 
@@ -144,7 +144,7 @@ Der Text des Berichts (zusammen mit den beigefügten PDF-Dokumenten zur Forensik
 
 ## 📚 Offizielle Quellen und Beweisunterlagen
 
-Alle Dokumente, Transkripte, Audioaufnahmen, forensischen Berichte und Rechtsvorlagen sind dauerhaft in diesem Repository gespeichert und in den Ordnern `/docs/` und `/audio/` verfügbar.
+Alle Dokumente, Transkripte, Audioaufnahmen, forensischen Berichte und Rechtsvorlagen sind dauerhaft in diesem Repository gespeichert und in den Ordnern [docs/](docs/) und [audio/](audio/) verfügbar.
 
 ---
 
