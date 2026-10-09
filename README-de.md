@@ -1,174 +1,174 @@
-# 🔬 ÖKOZID KOROMAČNO · Interaktives Recherche-Dossier & Rechtliches Werkzeug
+# 🔬 ECOCIDIO KOROMAČNO · Dossier di Ricerca Interattivo & Strumento Legale
 
-**Vollständiges forensisches, chemisches und rechtliches Dossier zum Fall Holcim Koromačno und zur Bucht von Raša.**
+**Dossier forense, chimico e legale completo sul caso Holcim Koromačno e sulla Baia di Raša.**
 
-> **HR · [Pročitaj ovaj README na hrvatskom →](README.md)** | **EN · [Read this README in English →](README-en.md)** | **IT · [Leggi in italiano →](README-it.md)**
-
----
-
-## 📑 Inhaltsverzeichnis
-
-- [Schnellzugriff auf Dokumente](#-schnellzugriff-auf-rechtliche-und-technische-dokumente-docs)
-- [Interaktives System](#-wie-man-dieses-interaktive-system-nutzt)
-- [IFG-Vorlage](#-aktualisierte-ifg-vorlage)
-- [Wohin die Anzeige senden](#-wohin-die-ausgefüllte-und-unterschriebene-strafanzeige-senden)
-- [Anweisungen für die EEA](#-anweisungen-zur-weiterleitung-an-die-europäische-umweltagentur-eea)
-- [Offizielle Quellen](#-offizielle-quellen-und-beweisunterlagen)
-- [Mehrsprachige Versionen](#-mehrsprachige-versionen)
-- [Manifest](#-manifest)
-- [Lizenz](#-lizenz)
+> **HR · [Pročitaj ovaj README na hrvatskom →](README.md)** | **EN · [Read this README in English →](README-en.md)** | **DE · [Auf Deutsch lesen →](README-de.md)**
 
 ---
 
-## 📂 Schnellzugriff auf rechtliche und technische Dokumente (`/docs/`)
+## 📑 Indice
 
-| Dokument / Akt | Format | Zweck |
+- [Accesso rapido ai documenti](#-accesso-rapido-ai-documenti-legali-e-tecnici-docs)
+- [Sistema interattivo](#-come-utilizzare-questo-sistema-interattivo)
+- [Modello FOIA](#-modello-foia-aggiornato)
+- [Dove inviare la denuncia](#-dove-inviare-la-denuncia-penale-compilata-e-firmata)
+- [Istruzioni per l'EEA](#-istruzioni-per-linoltre-allagenzia-europea-dellambiente-eea)
+- [Fonti ufficiali](#-fonti-ufficiali-e-documentazione-probatoria)
+- [Versioni multilingue](#-versioni-multilingue)
+- [Manifesto](#-manifesto)
+- [Licenza](#-licenza)
+
+---
+
+## 📂 Accesso rapido ai documenti legali e tecnici (`/docs/`)
+
+| Documento / Atto | Formato | Scopo |
 | :--- | :---: | :--- |
-| [**Strafanzeige an DORH Pula**](docs/Pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | `PDF` | Einreichung bei ODO Pula gegen verantwortliche Personen |
-| [**Protokoll und Beschluss des Gemeinderats Raša 21.09.2026**](docs/Pravni-akti/OV_RASA_21_09_2026.pdf) | `PDF` | Nachweis der doppelten TOC-Überschreitung |
-| [**Antrag auf Parteistatus (Aarhus)**](docs/Pravni-akti/zahtjev-status-stranke-arhus.md) | `MD` | Einreichung bei Gemeinde/Gespanschaft zur formellen Beteiligung |
-| [**Forensik des RDF/SRF-Abfalls**](docs/Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analyse der Importe und der *End-of-Waste*-Lücke |
-| [**Transkripte und Beweisschluss des Gemeinderats Raša**](docs/Pravni-akti/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Originalaussagen des Präsidenten, Bürgermeisters und des Ortsausschusses Koromačno |
-| [**Vergleichender Beweisbericht**](docs/forenzika/usporedni-dokazni-elaborat.md) | `MD` | Verbindung zwischen Kapitel VII und dem Protokoll des Gemeinderats Raša |
-| [**Sisak vs. Koromačno – vergleichendes Modell**](docs/Forenzika/sisak-vs-koromacno-elaborat.md) | `MD` | Vergleich der institutionellen Vereinnahmung |
-| [**IFG-Antrag ZPPI-01 (Raša / Umwelt)**](docs/ZPPI-01/zahtjev-zppi-rasa-okolis-kodeco.md) | `MD` | Antrag auf rohe AMS-Daten und Entscheidung vom 2. September |
-| [**IFG-Antrag ZPPI-02 (Labin / Haushalt)**](docs/ZPPI-02/zahtjev-zppi-grad-labin-transparentnost-cityx.md) | `MD` | Antrag auf Verträge und Audit-Logs (CityX) |
-| [**IFG-Antrag ZPPI-03 (Ubaš / Pläne)**](docs/ZPPI-03/zahtjev-zppi-prostorni-plan-ubas-koromacno.html) | `HTML` | Antrag auf Änderungen V des Raumplans und Konzession bis 2045 |
+| [**Denuncia penale alla DORH Pola**](docs/Pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | `PDF` | Presentazione all'ODO Pola contro i responsabili |
+| [**Verbale e conclusione del Consiglio comunale di Raša 21.09.2026**](docs/Pravni-akti/OV_RASA_21_09_2026.pdf) | `PDF` | Prova del doppio superamento del TOC |
+| [**Richiesta di status di parte (Aarhus)**](docs/Pravni-akti/zahtjev-status-stranke-arhus.md) | `MD` | Presentazione al Comune/Regione per la partecipazione formale |
+| [**Forense dei rifiuti RDF/SRF**](docs/Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analisi delle importazioni e della scappatoia *End-of-Waste* |
+| [**Trascrizioni e conclusione probatoria del Consiglio comunale di Raša**](docs/Pravni-akti/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Dichiarazioni originali del presidente, del sindaco e del Comitato locale di Koromačno |
+| [**Rapporto comparativo delle prove**](docs/Forenzika/usporedni-dokazni-elaborat.md) | `MD` | Collegamento tra il Capitolo VII e il verbale del Consiglio comunale di Raša |
+| [**Sisak vs. Koromačno – modello comparativo**](docs/Forenzika/sisak-vs-koromacno-elaborat.md) | `MD` | Confronto della cattura istituzionale |
+| [**Richiesta FOIA ZPPI-01 (Raša / Ambiente)**](docs/ZPPI-01/zahtjev-zppi-rasa-okolis-kodeco.md) | `MD` | Richiesta di dati AMS grezzi e decisione del 2 settembre |
+| [**Richiesta FOIA ZPPI-02 (Labin / Bilancio)**](docs/ZPPI-02/zahtjev-zppi-grad-labin-transparentnost-cityx.md) | `MD` | Richiesta di contratti e log di audit (CityX) |
+| [**Richiesta FOIA ZPPI-03 (Ubaš / Piani)**](docs/ZPPI-03/zahtjev-zppi-prostorni-plan-ubas-koromacno.html) | `HTML` | Richiesta delle modifiche V del piano regolatore e concessione fino al 2045 |
 
 ---
 
-## 🖥️ Wie man dieses interaktive System nutzt
+## 🖥️ Come utilizzare questo sistema interattivo
 
-Dieses Repository wurde mit dem Ziel geschaffen, vollständige Transparenz zu gewährleisten und die Bürger von Labinština und Istrien mit unwiderlegbaren technischen und rechtlichen Fakten auszustatten.
+Questo repository è stato creato con l'obiettivo della piena trasparenza e di dotare i cittadini di Labinština e dell'Istria di fatti tecnici e legali inconfutabili.
 
-### 1. Die interaktive Seite live öffnen
+### 1. Aprire la pagina interattiva dal vivo
 
-Das vollständige Recherche-Dossier, die Chronologie, die Berechnungen des Unterwasser-Ökozids und das interaktive Formular für die Strafanzeige sind in Echtzeit aktiv:
+Il dossier di ricerca completo, la cronologia, i calcoli dell'ecocidio sottomarino e il modulo interattivo per la denuncia penale sono attivi in tempo reale:
 
-> **[DOSSIER KOROMAČNO LIVE ÖFFNEN](https://zeljk018bratic.github.io/dosje-koromacno/)**
+> **[APRI IL DOSSIER KOROMAČNO DAL VIVO](https://zeljk018bratic.github.io/dosje-koromacno/)**
 
-### 2. Wie man automatisch ein physisches Flugblatt und eine Anzeige erzeugt (Strg + P)
+### 2. Come generare automaticamente un volantino fisico e una denuncia (Ctrl + P)
 
-Die Seite ist programmatisch für den Druck und die Verteilung auf der Straße optimiert:
+La pagina è programmaticamente ottimizzata per la stampa e la distribuzione in strada:
 
-1. Drücken Sie **Strg + P** (oder *Cmd + P* auf dem Mac) oder klicken Sie auf den roten Button **„Flugblatt drucken"** oben auf der Seite.
-2. Das System blendet automatisch alle digitalen Navigationsbuttons, Menüs und dunklen Hintergründe aus.
-3. Ein sauberes, schwarz-weißes Rechtsdokument und ein formelles Strafanzeigeformular für DORH wird an den Drucker gesendet – bereit zum Drucken, Unterschreiben und Verteilen.
+1. Premi **Ctrl + P** (o *Cmd + P* su Mac) oppure clicca sul pulsante rosso **"Stampa volantino"** in cima alla pagina.
+2. Il sistema nasconde automaticamente tutti i pulsanti di navigazione digitali, i menu e gli sfondi scuri.
+3. Un documento legale pulito, in bianco e nero, e un modulo formale di denuncia penale per la DORH vengono inviati alla stampante – pronti per la stampa, la firma e la distribuzione sul campo.
 
-### 3. Wie man den Quellcode für den eigenen Gebrauch herunterlädt
+### 3. Come scaricare il codice sorgente per uso personale
 
-Für die lokale Nutzung ohne Internetzugang:
+Per l'uso locale senza accesso a Internet:
 
-1. Öffnen Sie [index.html](https://github.com/Zeljk018Bratic/dosje-koromacno/blob/main/index.html) auf GitHub.
-2. Klicken Sie oben rechts auf **Download raw file**.
-3. Speichern Sie die Datei auf Ihrem Gerät und öffnen Sie sie in einem beliebigen Browser (Chrome, Safari, Firefox).
+1. Apri [index.html](https://github.com/Zeljk018Bratic/dosje-koromacno/blob/main/index.html) su GitHub.
+2. In alto a destra clicca su **Download raw file**.
+3. Salva il file sul tuo dispositivo e aprilo in qualsiasi browser (Chrome, Safari, Firefox).
 
-### 4. Rechtliche Berufung auf die Aarhus-Konvention und das Recht auf Zugang zu Informationen
+### 4. Richiamo legale alla Convenzione di Aarhus e al diritto di accesso alle informazioni
 
-In Übereinstimmung mit der **Aarhus-Konvention** (Konvention über den Zugang zu Informationen, die Öffentlichkeitsbeteiligung an Entscheidungsverfahren und den Zugang zu Gerichten in Umweltangelegenheiten) und dem **kroatischen Gesetz über das Recht auf Zugang zu Informationen (OG 25/13)** sind öffentliche Stellen verpflichtet, Bürgern und Verbänden einen vollständigen, rechtzeitigen und nicht löschbaren Einblick in alle relevanten Umweltparameter zu gewähren, ohne die Pflicht, ein rechtliches Interesse nachzuweisen.
+In conformità con la **Convenzione di Aarhus** (Convenzione sull'accesso alle informazioni, la partecipazione del pubblico ai processi decisionali e l'accesso alla giustizia in materia ambientale) e con la **Legge croata sul diritto di accesso alle informazioni (OG 25/13)**, le autorità pubbliche sono obbligate a fornire a cittadini e associazioni un accesso completo, tempestivo e non cancellabile a tutti i parametri ambientali rilevanti, senza l'obbligo di dimostrare un interesse legale.
 
-Jede Verweigerung, Manipulation oder verzögerte Validierung von Rohdaten (RAW DATA) über Emissionen in Luft und Meer sowie die Verschleierung des Probebetriebs der Anlage, der seit November 2025 läuft, stellt einen direkten Verstoß gegen internationales und Verfassungsrecht dar.
-
----
-
-## 📝 Aktualisierte IFG-Vorlage
-
-**Betreff:** Antrag auf Zugang zu Informationen – EWC-Codes, Eingangsanalysen, AMS-Daten, Waageprotokolle und Überwachungsstatus
-
-> **[Vollständige Vorlage herunterladen →](docs/Pravni-akti/dopunjeni-zppi-predlozak.md)**
-
-Sehr geehrte Damen und Herren,
-
-gemäß dem kroatischen Gesetz über das Recht auf Zugang zu Informationen (OG 25/13, 85/15, 69/22) stelle ich hiermit einen Antrag auf Übermittlung von:
-
-**1. EWC-Codes und Eingangsanalysen**
-- Eine genaue Liste aller EWC-(Katalog-)Abfallcodes, die vom Standort Bilajska 50, Gospić (Big-Bag-Säcke) zur Verwertung bei Holcim Hrvatska d.o.o. Koromačno übernommen wurden oder übernommen werden sollen.
-- Für jeden EWC-Code: Menge (Tonnen), Datum/Uhrzeit der Übernahme, Ergebnisse aller chemischen und physikalischen Eingangsanalysen (Heizwert, Chlorgehalt, Fluor, Schwermetalle – insbesondere Hg, Cd, Tl, Sb, Co, As, Pb, Cr, Cu, Mn, Ni, V – Feuchtigkeit, Asche, Granulometrie).
-- Bestätigung, dass jeder aufgeführte EWC-Code ausdrücklich durch die gültige Abfallwirtschaftsgenehmigung und Umweltgenehmigung von Holcim Hrvatska d.o.o. zugelassen ist.
-- Eine Kopie der relevanten Teile der gültigen Abfallwirtschaftsgenehmigung und Umweltgenehmigung, die die Liste der für das R1-Verfahren zugelassenen EWC-Codes enthält.
-
-**2. Waageprotokolle / Liefernachweise**
-- Alle Waageprotokolle, Lieferscheine und Aufzeichnungen über die übernommenen Mengen (EWC-Code, Masse, Datum, Uhrzeit, Fahrzeugkennzeichen) vom 10. September 2026 bis zum Datum des Antrags.
-
-**3. Rohe AMS-Daten**
-- Rohdaten aus der kontinuierlichen Emissionsmessung (TOC, HCl, HF, Hg, NOx, SO₂, Staub und andere kontinuierlich gemessene Parameter) vom 1. Januar 2026 bis zum Datum des Antrags, in Form von halbstündlichen und täglichen Mittelwerten (Excel/CSV).
-
-**4. Status der Luftqualitätsüberwachung und Überschreitungen**
-- Eine Liste der Parameter, die kontinuierlich und periodisch gemessen werden (einschließlich Dioxine/Furane und Schwermetalle).
-- Ob die Daten in Echtzeit öffentlich verfügbar sind und unter welcher Adresse.
-- Alle im Jahr 2026 festgestellten Überschreitungen der Grenzwerte (Datum, Uhrzeit, Parameter, Wert).
-
-Bitte liefern Sie in elektronischer Form innerhalb der gesetzlichen Frist.
-
-Mit freundlichen Grüßen,
-**[Name und Nachname]**
-**[Adresse / E-Mail]**
-
-**Sie können es parallel senden an:**
-- Ministerium für Umweltschutz und grünen Wandel
-- Staatliches Inspektorat
-- Gespanschaft Istrien
-- Holcim Kroatien
-- Bei Bedarf `tajnistvo@dorh.hr` zusammen mit der Strafanzeige
+Qualsiasi rifiuto, manipolazione o convalida ritardata di dati grezzi (RAW DATA) sulle emissioni in aria e in mare, così come l'occultamento del funzionamento di prova dell'impianto in corso da novembre 2025, costituisce una violazione diretta del diritto internazionale e costituzionale.
 
 ---
 
-## 📬 Wohin die ausgefüllte und unterschriebene Strafanzeige senden?
+## 📝 Modello FOIA aggiornato
 
-Sobald Sie die Vorlage der Strafanzeige heruntergeladen, ausgefüllt und persönlich unterschrieben (oder mit dem Siegel des Vereins gestempelt) haben, muss sie gesetzlich an die offiziellen Adressen gesendet werden:
+**Oggetto:** Richiesta di accesso alle informazioni – codici EWC, analisi di input, dati AMS, registri della pesa e stato della vigilanza
 
-| Institution | E-Mail | Zweck |
+> **[Scarica il modello completo →](docs/Pravni-akti/dopunjeni-zppi-predlozak.md)**
+
+Gentile Signore/Signora,
+
+ai sensi della Legge croata sul diritto di accesso alle informazioni (OG 25/13, 85/15, 69/22), presento la seguente richiesta di trasmissione di:
+
+**1. Codici EWC e analisi di input**
+- Un elenco esatto di tutti i codici (catalogo) EWC dei rifiuti prelevati o da prelevare dal sito Bilajska 50, Gospić (sacchi big-bag) per il recupero presso Holcim Hrvatska d.o.o. Koromačno.
+- Per ciascun codice EWC: quantità (tonnellate), data/ora del prelievo, risultati di tutte le analisi chimiche e fisiche di input (potere calorifico, contenuto di cloro, fluoro, metalli pesanti – in particolare Hg, Cd, Tl, Sb, Co, As, Pb, Cr, Cu, Mn, Ni, V – umidità, ceneri, granulometria).
+- Conferma che ciascun codice EWC elencato è esplicitamente consentito dal valido permesso di gestione dei rifiuti e dal permesso ambientale di Holcim Hrvatska d.o.o.
+- Copia delle parti rilevanti del valido permesso di gestione dei rifiuti e del permesso ambientale contenenti l'elenco dei codici EWC consentiti per la procedura R1.
+
+**2. Registri della pesa / registri di consegna**
+- Tutti i registri della pesa, le note di consegna e le registrazioni delle quantità prelevate (codice EWC, massa, data, ora, targa del veicolo) dal 10 settembre 2026 alla data della richiesta.
+
+**3. Dati AMS grezzi**
+- Dati grezzi dalla misurazione continua delle emissioni (TOC, HCl, HF, Hg, NOx, SO₂, polveri e altri parametri misurati in continuo) dal 1° gennaio 2026 alla data della richiesta, sotto forma di valori medi semiorari e giornalieri (Excel/CSV).
+
+**4. Stato della vigilanza sulla qualità dell'aria e superamenti**
+- Un elenco dei parametri misurati in continuo e periodicamente (inclusi diossine/furani e metalli pesanti).
+- Se i dati sono pubblicamente disponibili in tempo reale e a quale indirizzo.
+- Tutti i superamenti dei valori limite registrati nel 2026 (data, ora, parametro, valore).
+
+Si prega di trasmettere in forma elettronica entro il termine di legge.
+
+Cordiali saluti,
+**[Nome e cognome]**
+**[Indirizzo / e-mail]**
+
+**Puoi inviarlo in parallelo a:**
+- Ministero dell'Ambiente e della Transizione Verde
+- Ispettorato di Stato
+- Regione Istriana
+- Holcim Croazia
+- Se necessario [tajnistvo@dorh.hr](mailto:tajnistvo@dorh.hr) insieme alla denuncia penale
+
+---
+
+## 📬 Dove inviare la denuncia penale compilata e firmata?
+
+Una volta scaricato, compilato e firmato personalmente (o timbrato con il sigillo dell'associazione) il modello di denuncia penale, esso deve legalmente essere inviato agli indirizzi ufficiali:
+
+| Istituzione | Email | Scopo |
 | :--- | :--- | :--- |
-| **Staatsanwaltschaft der Republik Kroatien (DORH)** | `tajnistvo@dorh.hr` | Hauptadresse für den Empfang von Strafanzeigen |
-| **MZOZT** | `javnost@mzozt.hr`, `press@mzozt.hr` | Anträge auf Einsicht und Verschmutzungsmeldungen |
-| **Staatliches Inspektorat (DIRH)** | `prijave@dirh.hr` | Dringende Maßnahmen und unangekündigte Inspektionen |
-| **FZOEU** | `kontakt@fzoeu.hr` | Anfragen zu Sanierungsverträgen |
-| **ODO Pula-Pola** | `tajnistvo@odopu.dorh.hr` | Strafanzeige – **Status GESCHÄDIGTER angeben** |
-| **USKOK** | `pisarnica@uskok.dorh.hr` | Cc-Kopie der Anzeige |
-| **Gemeinde Raša** | `protokol@rasa.hr` | Anträge für Umwelt und Pläne |
-| **Stadt Labin** | `pisarnica@labin.hr` | Anträge für Haushalt und CityX |
-| **Versammlung der Gespanschaft Istrien** | `skupstina@istra-istria.hr`, `strucna.sluzba@istra-istria.hr` | Ausschuss für Petitionen und Beschwerden (Vorsitzender Dalibor Macan) |
+| **Procura di Stato della Repubblica di Croazia (DORH)** | [tajnistvo@dorh.hr](mailto:tajnistvo@dorh.hr) | Indirizzo principale per la ricezione delle denunce penali |
+| **MZOZT** | [javnost@mzozt.hr](mailto:javnost@mzozt.hr), [press@mzozt.hr](mailto:press@mzozt.hr) | Richieste di accesso e segnalazioni di inquinamento |
+| **Ispettorato di Stato (DIRH)** | [prijave@dirh.hr](mailto:prijave@dirh.hr) | Azione urgente e ispezione senza preavviso |
+| **FZOEU** | [kontakt@fzoeu.hr](mailto:kontakt@fzoeu.hr) | Richieste relative ai contratti di bonifica |
+| **ODO Pola-Pola** | [tajnistvo@odopu.dorh.hr](mailto:tajnistvo@odopu.dorh.hr) | Denuncia penale – **indicare lo status di PARTE OFFESA** |
+| **USKOK** | [pisarnica@uskok.dorh.hr](mailto:pisarnica@uskok.dorh.hr) | Copia Cc della denuncia |
+| **Comune di Raša** | [protokol@rasa.hr](mailto:protokol@rasa.hr) | Richieste per ambiente e piani |
+| **Città di Labin** | [pisarnica@labin.hr](mailto:pisarnica@labin.hr) | Richieste per bilancio e CityX |
+| **Assemblea della Regione Istriana** | [skupstina@istra-istria.hr](mailto:skupstina@istra-istria.hr), [strucna.sluzba@istra-istria.hr](mailto:strucna.sluzba@istra-istria.hr) | Commissione per le petizioni e i reclami (presidente Dalibor Macan) |
 
 ---
 
-## 🇪🇺 Anweisungen zur Weiterleitung an die Europäische Umweltagentur (EEA)
+## 🇪🇺 Istruzioni per l'inoltro all'Agenzia Europea dell'Ambiente (EEA)
 
-Der Text des Berichts (zusammen mit den beigefügten PDF-Dokumenten zur Forensik des Abfalltransports, dem offiziellen IFG-Antrag und dem Protokoll des Gemeinderats Raša) wird gesendet an:
+Il testo del rapporto (insieme ai documenti PDF allegati sulla forense del trasporto dei rifiuti, alla richiesta FOIA ufficiale e al verbale del Consiglio comunale di Raša) viene inviato a:
 
-- **EEA:** `eea.enquiries@eea.europa.eu`
-- **Europäische Kommission – Umwelt:** `env-info@ec.europa.eu`
-- **Aarhus Compliance:** `env-aarhus@ec.europa.eu`
-- **UNECE:** `public.participation@un.org`
-
----
-
-## 📚 Offizielle Quellen und Beweisunterlagen
-
-Alle Dokumente, Transkripte, Audioaufnahmen, forensischen Berichte und Rechtsvorlagen sind dauerhaft in diesem Repository gespeichert und in den Ordnern [docs/](docs/) und [audio/](audio/) verfügbar.
+- **EEA:** [eea.enquiries@eea.europa.eu](mailto:eea.enquiries@eea.europa.eu)
+- **Commissione Europea – Ambiente:** [env-info@ec.europa.eu](mailto:env-info@ec.europa.eu)
+- **Aarhus Compliance:** [env-aarhus@ec.europa.eu](mailto:env-aarhus@ec.europa.eu)
+- **UNECE:** [public.participation@un.org](mailto:public.participation@un.org)
 
 ---
 
-## 🌐 Mehrsprachige Versionen
+## 📚 Fonti ufficiali e documentazione probatoria
 
-| Sprache | Seite |
+Tutti i documenti, le trascrizioni, le registrazioni audio, i rapporti forensi e i modelli legali sono archiviati in modo permanente in questo repository e sono disponibili nelle cartelle [docs/](docs/) e [audio/](audio/).
+
+---
+
+## 🌐 Versioni multilingue
+
+| Lingua | Pagina |
 | :--- | :--- |
-| 🇭🇷 Kroatisch | [forenzika.html](forenzika.html) |
-| 🇬🇧 Englisch | [forenzika-en.html](forenzika-en.html) |
-| 🇩🇪 Deutsch | [forenzika-de.html](forenzika-de.html) |
-| 🇮🇹 Italienisch | [forenzika-it.html](forenzika-it.html) |
+| 🇭🇷 Croato | [forenzika.html](forenzika.html) |
+| 🇬🇧 Inglese | [forenzika-en.html](forenzika-en.html) |
+| 🇩🇪 Tedesco | [forenzika-de.html](forenzika-de.html) |
+| 🇮🇹 Italiano | [forenzika-it.html](forenzika-it.html) |
 
 ---
 
-## 📜 Manifest
+## 📜 Manifesto
 
-[Manifest lesen](manifest.html) – „SIE HABEN UNS NICHT GEBROCHEN"
-
----
-
-## © Lizenz
-
-Offener Inhalt. Alle Dokumente und Analysen sind für die öffentliche Nutzung, Überprüfung und Weiterverbreitung zum Zweck des Schutzes der Umwelt, der Gesundheit und des öffentlichen Interesses verfügbar.
+[Leggi il manifesto](manifest.html) – "NON CI HANNO SPEZZATI"
 
 ---
 
-*Zuletzt aktualisiert: 1. Oktober 2026.*
+## © Licenza
+
+Contenuto aperto. Tutti i documenti e le analisi sono disponibili per uso pubblico, verifica e ulteriore distribuzione allo scopo di proteggere l'ambiente, la salute e l'interesse pubblico.
+
+---
+
+*Ultimo aggiornamento: 1 ottobre 2026.*
