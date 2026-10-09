@@ -29,7 +29,7 @@
 | [**Application for party status (Aarhus)**](docs/Pravni-akti/zahtjev-status-stranke-arhus.md) | `MD` | Submission to Municipality/County for formal participation |
 | [**RDF/SRF waste forensics**](docs/Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analysis of imports and the *End-of-Waste* loophole |
 | [**Transcripts and evidentiary conclusion of Raša Council**](docs/Pravni-akti/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Original statements of the president, mayor and Koromačno Local Committee |
-| [**Comparative evidence report**](docs/forenzika/usporedni-dokazni-elaborat.md) | `MD` | Link between Chapter VII and the minutes of Raša Council |
+| [**Comparative evidence report**](docs/Forenzika/usporedni-dokazni-elaborat.md) | `MD` | Link between Chapter VII and the minutes of Raša Council |
 | [**Sisak vs. Koromačno – comparative model**](docs/Forenzika/sisak-vs-koromacno-elaborat.md) | `MD` | Institutional capture comparison |
 | [**FOIA request ZPPI-01 (Raša / Environment)**](docs/ZPPI-01/zahtjev-zppi-rasa-okolis-kodeco.md) | `MD` | Request for raw AMS data and decision of 2 September |
 | [**FOIA request ZPPI-02 (Labin / Budget)**](docs/ZPPI-02/zahtjev-zppi-grad-labin-transparentnost-cityx.md) | `MD` | Request for contracts and audit logs (CityX) |
@@ -58,8 +58,9 @@ The page is programmatically optimised for printing and street distribution:
 ### 3. How to download the source code for your own use
 
 For local use without internet access:
-1. Open [index.html](https://raw.githubusercontent.com/Zeljk018Bratic/dosje-koromacno/main/index.html).
-1. Open [index.html](https://github.com/Zeljk018Bratic/dosje-koromacno/blob/main/index.html).
+
+1. Open [index.html](https://github.com/Zeljk018Bratic/dosje-koromacno/blob/main/index.html) on GitHub.
+2. In the top-right corner click **Download raw file**.
 3. Save the file to your device and open it in any browser (Chrome, Safari, Firefox).
 
 ### 4. Legal invocation of the Aarhus Convention and the right of access to information
@@ -108,7 +109,7 @@ Yours faithfully,
 - State Inspectorate
 - Istria County
 - Holcim Croatia
-- If necessary `tajnistvo@dorh.hr` together with the criminal complaint
+- If necessary [tajnistvo@dorh.hr](mailto:tajnistvo@dorh.hr) together with the criminal complaint
 
 ---
 
@@ -118,15 +119,15 @@ Once you download, fill in and personally sign (or stamp with the association's 
 
 | Institution | Email | Purpose |
 | :--- | :--- | :--- |
-| **State Attorney's Office of the Republic of Croatia (DORH)** | `tajnistvo@dorh.hr` | Main address for receiving criminal complaints |
-| **MZOZT** | `javnost@mzozt.hr`, `press@mzozt.hr` | Requests for insight and pollution reports |
-| **State Inspectorate (DIRH)** | `prijave@dirh.hr` | Urgent action and unannounced inspection |
-| **FZOEU** | `kontakt@fzoeu.hr` | Queries related to remediation contracts |
-| **ODO Pula-Pola** | `tajnistvo@odopu.dorh.hr` | Criminal complaint – **must state INJURED PARTY status** |
-| **USKOK** | `pisarnica@uskok.dorh.hr` | Cc copy of the complaint |
-| **Municipality of Raša** | `protokol@rasa.hr` | Requests for environment and plans |
-| **City of Labin** | `pisarnica@labin.hr` | Requests for budget and CityX |
-| **Istria County Assembly** | `skupstina@istra-istria.hr`, `strucna.sluzba@istra-istria.hr` | Committee for Petitions and Complaints (chairman Dalibor Macan) |
+| **State Attorney's Office of the Republic of Croatia (DORH)** | [tajnistvo@dorh.hr](mailto:tajnistvo@dorh.hr) | Main address for receiving criminal complaints |
+| **MZOZT** | [javnost@mzozt.hr](mailto:javnost@mzozt.hr), [press@mzozt.hr](mailto:press@mzozt.hr) | Requests for insight and pollution reports |
+| **State Inspectorate (DIRH)** | [prijave@dirh.hr](mailto:prijave@dirh.hr) | Urgent action and unannounced inspection |
+| **FZOEU** | [kontakt@fzoeu.hr](mailto:kontakt@fzoeu.hr) | Queries related to remediation contracts |
+| **ODO Pula-Pola** | [tajnistvo@odopu.dorh.hr](mailto:tajnistvo@odopu.dorh.hr) | Criminal complaint – **must state INJURED PARTY status** |
+| **USKOK** | [pisarnica@uskok.dorh.hr](mailto:pisarnica@uskok.dorh.hr) | Cc copy of the complaint |
+| **Municipality of Raša** | [protokol@rasa.hr](mailto:protokol@rasa.hr) | Requests for environment and plans |
+| **City of Labin** | [pisarnica@labin.hr](mailto:pisarnica@labin.hr) | Requests for budget and CityX |
+| **Istria County Assembly** | [skupstina@istra-istria.hr](mailto:skupstina@istra-istria.hr), [strucna.sluzba@istra-istria.hr](mailto:strucna.sluzba@istra-istria.hr) | Committee for Petitions and Complaints (chairman Dalibor Macan) |
 
 ---
 
@@ -134,10 +135,10 @@ Once you download, fill in and personally sign (or stamp with the association's 
 
 The text of the report (together with the attached PDF documents on waste transport forensics, the official FOIA request and the minutes of Raša Council) is sent to:
 
-- **EEA:** `eea.enquiries@eea.europa.eu`
-- **European Commission – Environment:** `env-info@ec.europa.eu`
-- **Aarhus Compliance:** `env-aarhus@ec.europa.eu`
-- **UNECE:** `public.participation@un.org`
+- **EEA:** [eea.enquiries@eea.europa.eu](mailto:eea.enquiries@eea.europa.eu)
+- **European Commission – Environment:** [env-info@ec.europa.eu](mailto:env-info@ec.europa.eu)
+- **Aarhus Compliance:** [env-aarhus@ec.europa.eu](mailto:env-aarhus@ec.europa.eu)
+- **UNECE:** [public.participation@un.org](mailto:public.participation@un.org)
 
 ---
 
