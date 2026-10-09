@@ -24,13 +24,13 @@
 
 | Document / Act | Format | Purpose |
 | :--- | :---: | :--- |
-| [**Criminal complaint to DORH Pula**](docs/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | `PDF` | Submission to ODO Pula against responsible persons |
-| [**Minutes and conclusion of Raša Council 21.09.2026**](docs/OV_RASA_21_09_2026.pdf) | `PDF` | Evidence of double TOC exceedance |
-| [**Application for party status (Aarhus)**](docs/zahtjev-status-stranke-arhus.md) | `MD` | Submission to Municipality/County for formal participation |
-| [**RDF/SRF waste forensics**](docs/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analysis of imports and the *End-of-Waste* loophole |
-| [**Transcripts and evidentiary conclusion of Raša Council**](docs/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Original statements of the president, mayor and Koromačno Local Committee |
-| [**Comparative evidence report**](docs/usporedni-dokazni-elaborat.md) | `MD` | Link between Chapter VII and the minutes of Raša Council |
-| [**Sisak vs. Koromačno – comparative model**](docs/sisak-vs-koromacno-elaborat.md) | `MD` | Institutional capture comparison |
+| [**Criminal complaint to DORH Pula**](docs/Pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | `PDF` | Submission to ODO Pula against responsible persons |
+| [**Minutes and conclusion of Raša Council 21.09.2026**](docs/Pravni-akti/OV_RASA_21_09_2026.pdf) | `PDF` | Evidence of double TOC exceedance |
+| [**Application for party status (Aarhus)**](docs/Pravni-akti/zahtjev-status-stranke-arhus.md) | `MD` | Submission to Municipality/County for formal participation |
+| [**RDF/SRF waste forensics**](docs/Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analysis of imports and the *End-of-Waste* loophole |
+| [**Transcripts and evidentiary conclusion of Raša Council**](docs/Pravni-akti/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Original statements of the president, mayor and Koromačno Local Committee |
+| [**Comparative evidence report**](docs/forenzika/usporedni-dokazni-elaborat.md) | `MD` | Link between Chapter VII and the minutes of Raša Council |
+| [**Sisak vs. Koromačno – comparative model**](docs/Forenzika/sisak-vs-koromacno-elaborat.md) | `MD` | Institutional capture comparison |
 | [**FOIA request ZPPI-01 (Raša / Environment)**](docs/ZPPI-01/zahtjev-zppi-rasa-okolis-kodeco.md) | `MD` | Request for raw AMS data and decision of 2 September |
 | [**FOIA request ZPPI-02 (Labin / Budget)**](docs/ZPPI-02/zahtjev-zppi-grad-labin-transparentnost-cityx.md) | `MD` | Request for contracts and audit logs (CityX) |
 | [**FOIA request ZPPI-03 (Ubaš / Plans)**](docs/ZPPI-03/zahtjev-zppi-prostorni-plan-ubas-koromacno.html) | `HTML` | Request for Amendments V of the spatial plan and concession until 2045 |
@@ -75,7 +75,7 @@ Any denial, manipulation or delayed validation of raw data (RAW DATA) on emissio
 
 **Subject:** Request for access to information – EWC codes, input analyses, AMS data, weighbridge records and supervision status
 
-> **[Download the full template →](docs/dopunjeni-zppi-predlozak.md)**
+> **[Download the full template →](docs/Pravni-akti/dopunjeni-zppi-predlozak.md)**
 
 Dear Sir/Madam,
 
