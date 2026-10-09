@@ -9,13 +9,16 @@ Javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija 
 ## 📑 Sadržaj
 
 - [Brzi pristup dokumentima](#-brzi-pristup-dokumentima)
-- [Interaktivni sustav](#-interaktivni-sustav)
+- [Interaktivni sustav](#️-interaktivni-sustav)
 - [ZPPI predložak](#-zppi-predložak)
+- [Poslani zahtjevi](#-poslani-zahtjevi)
 - [Kamo poslati kaznenu prijavu](#-kamo-poslati-kaznenu-prijavu)
 - [Upute za EEA](#-upute-za-eea)
 - [Službeni izvori](#-službeni-izvori)
 - [Višejezične verzije](#-višejezične-verzije)
+- [Provjera SHA256 hashova](#-provjera-sha256-hashova)
 - [Manifest](#-manifest)
+- [Pravna napomena](#-pravna-napomena)
 - [Licenca](#-licenca)
 
 ---
@@ -27,6 +30,7 @@ Javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija 
 | [Kaznena prijava DORH Pula](docs/Pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | PDF | Predaja ODO Pula |
 | [Zapisnik OV Raša 21.09.2026.](docs/Slanje_Dokaza_30-09-2026/OV_RASA_21_09_2026.pdf) | PDF | Dokaz o prekoračenju TOC-a |
 | [Slanje dokaza 08.10.2026.](docs/Slanje_Dokaza_08-10-2026/) | Folder | Prijava DIRH + ZPPI MZOZT + SHA256 potvrde |
+| [Slanje dokaza 09.10.2026.](docs/Slanje_Dokaza_09_10_2026/) | Folder | DORH, DIRH, mediji, OLAF, SOA + SHA256 potvrde |
 | [Zahtjev za status stranke (Aarhus)](docs/Pravni-akti/zahtjev-status-stranke-arhus.md) | MD | Formalno učešće |
 | [Forenzika otpada RDF/SRF](docs/Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | PDF | Analiza uvoza |
 | [Usporedni dokazni elaborat](docs/Forenzika/usporedni-dokazni-elaborat.md) | MD | Poveznica Poglavlja VII i OV Raša |
@@ -46,9 +50,10 @@ Javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija 
 
 Cjelokupni dosje dostupan je uživo:
 
-> **[OTVORI DOSJE KOROMAČNO](https://zeljk018bratic.github.io/dosje-koromacno/)**
+> **[OTVORI DOSJE KOROMAČNO](https://Zeljk018Bratic.github.io/dosje-koromacno/)**
 
 **Ispis letka i prijave:**
+
 1. Pritisni **Ctrl + P** (ili *Cmd + P* na Macu).
 2. Sustav skriva navigaciju i tamne pozadine.
 3. Ispisuje se čisti pravni dokument i obrazac kaznene prijave.
@@ -68,6 +73,7 @@ Cjelokupni dosje dostupan je uživo:
 > **[Preuzmi cijeli predložak →](docs/Pravni-akti/dopunjeni-zppi-predlozak.md)**
 
 **Možeš ga poslati paralelno na:**
+
 - Ministarstvo zaštite okoliša i zelene tranzicije
 - Državni inspektorat
 - Istarsku županiju
@@ -76,7 +82,7 @@ Cjelokupni dosje dostupan je uživo:
 
 ---
 
-## 📮 Poslani zahtjevi
+## 📬 Poslani zahtjevi
 
 ### 08.10.2026.
 
@@ -86,6 +92,7 @@ Cjelokupni dosje dostupan je uživo:
 | [Zahtjev za pristup informacijama](docs/Slanje_Dokaza_08-10-2026/ZPPI_MZOZT_Sekundar_Usluge_Pazin.md) | MZOZT | Poslano | [potvrda-mzozt.pdf](docs/Slanje_Dokaza_08-10-2026/potvrda-mzozt.pdf) |
 
 **Rokovi:**
+
 - MZOZT ZPPI: **23.10.2026.**
 - DIRH prijava: **07.11.2026.**
 
@@ -93,8 +100,48 @@ Cjelokupni dosje dostupan je uživo:
 
 ---
 
+### 09.10.2026.
 
-## 📬 Kamo poslati kaznenu prijavu
+Dokazi o slanju kaznenih prijava, hitnih inspekcijskih nadopuna i međunarodnih obavijesti.
+
+| # | Predmet / Vrsta prijave | Primatelj | Vrijeme | Status / Dokument |
+|---|---|---|---|---|
+| 1 | **Kaznena prijava** (čl. 193 KZ — Ugrožavanje okoliša) | DORH / ODO Pula | Jutro | Poslano (`prijava_dorh.pdf`) |
+| 2 | **Prijava za hitni izvanredni nadzor** (Dopuna s dokazima) | DIRH (Državni inspektorat) | Dan | Poslano (`prijava_nadopuna_dirh.pdf`) |
+| 3 | **Hitna dopuna dosjea za medije** (Istraplastika / Miješanje) | Provjereno, Index, Potraga, Telegram, Istra24 | Dan | Poslano (`mediji_nadopuna.pdf`) |
+| 4 | **Official Notification of Irregularities** (EEA Grants) | OLAF (+ CC EPPO, EU Env, MZOZT, Sabor) | Popodne | Poslano (`send_olaf.pdf`) |
+| 5 | **Prijava ugroze nacionalne sigurnosti** (Stroncij-90 / Proboj) | SOA (Sigurnosno-obavještajna agencija) | Popodne | Poslano (`prijava_soa.pdf`) |
+
+**Krunski SHA256 dokazi (verificirana matrica):**
+
+- **DORH (Kaznena prijava):**
+  `41ecdb026f9017fe252f45e05fbd330a802c96f4ab132e5b9bbfb288935c1b9f`
+- **DIRH (Inspekcijska nadopuna):**
+  `9b5d8e6e918aa1460473161537eb9e4fd194336de70dcf11a6c9f829a0fb6831`
+- **MEDIJI (Dopuna ekoskandala):**
+  `37e7608cc798b474372025a028e45c8be80dc19e861c3a39409e533923c8d1bc`
+- **OLAF (EU prijava fondova):**
+  `3d744d9c6ea364d7fbfbc8092f8f3f730a65aec5b4a3c23a75d70b181ad3701c`
+- **SOA (Sigurnosni izvještaj):**
+  `9eb1f2b9a37f885a81cbed8bb1bfff21381ee844d88e8dd8e91720f5e8b39f18`
+
+**Zakonski rokovi za očitovanje i postupanje:**
+
+| Institucija / Zahtjev | Pravni okvir | Očekivani rok za odgovor |
+|---|---|---|
+| **DIRH (Predstavka/Dopuna)** | Zakon o državnom inspektoratu | **07.11.2026.** (Obavijest o utvrđenom stanju) |
+| **DORH / ODO Pula (Kaznena prijava)** | Zakon o kaznenom postupku (ZKP) | Provedba hitnih izvida / nalog inspekcijama |
+| **OLAF / EPPO** | EU Uredba 883/2013 | Inicijalna procjena nadležnosti i otvaranje istrage |
+
+**Nove dokazne okolnosti obuhvaćene prijavama:**
+
+1. **Slučaj Gospić (Radiološko-kemijska prijetnja):** Uvršteni službeni podaci o pronalasku Stroncija-90, PFAS-a, cijanida i teških metala u silosima, koji se preko neregistrirane lokacije u Pazinu usmjeravaju prema Koromačnu.
+2. **Korištenje represivnog aparata:** Priloženi dokazi o ranojutarnjem policijskom proboju (30.09. u 05:30 h) i prisilnom micanju građana s pješačkih prijelaza radi osiguranja prolaska šlepera s "A" (Abfall) oznakama.
+3. **Zlouporaba EU sredstava:** Povezan projekt ID 2023/363890 (EEA Grants, iznos 1.068.624 EUR) s radom mobilne opreme na ilegalnoj lokaciji u hali bivše Istraplastike u Pazinu.
+
+---
+
+## 📮 Kamo poslati kaznenu prijavu
 
 | Institucija | Email | Svrha |
 |:---|:---|:---|
@@ -142,16 +189,13 @@ Svi dokumenti, transkripti, audio zapisi, forenzički elaborati i pravni obrasci
 
 ---
 
-## 📜 Manifest
+## 🔐 Provjera SHA256 hashova
 
-[Pročitaj manifest](manifest.html) – „NISU NAS SLOMILI"
+### Windows (CertUtil)
 
----
-
-## © Licenca
-
-Otvoreni sadržaj. Svi dokumenti i analize dostupni su za javnu upotrebu, provjeru i daljnju distribuciju u svrhu zaštite okoliša, zdravlja i javnog interesa.
-
----
-
-*Posljednje ažuriranje: 07.10.2026.*
+```cmd
+CertUtil -hashfile prijava_dorh.pdf SHA256
+CertUtil -hashfile prijava_nadopuna_dirh.pdf SHA256
+CertUtil -hashfile mediji_nadopuna.pdf SHA256
+CertUtil -hashfile send_olaf.pdf SHA256
+CertUtil -hashfile prijava_soa.pdf SHA256
