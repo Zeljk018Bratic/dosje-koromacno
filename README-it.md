@@ -1,6 +1,7 @@
 # 🔬 ECOCIDIO KOROMAČNO · Dossier di Ricerca Interattivo & Strumento Legale
 
 **Dossier forense, chimico e legale completo sul caso Holcim Koromačno e sulla Baia di Raša.**
+
 > **HR · [Pročitaj ovaj README na hrvatskom →](README.md)** | **EN · [Read this README in English →](README-en.md)** | **DE · [Auf Deutsch lesen →](README-de.md)**
 
 ---
@@ -28,7 +29,7 @@
 | [**Richiesta di status di parte (Aarhus)**](docs/Pravni-akti/zahtjev-status-stranke-arhus.md) | `MD` | Presentazione al Comune/Regione per la partecipazione formale |
 | [**Forense dei rifiuti RDF/SRF**](docs/Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analisi delle importazioni e della scappatoia *End-of-Waste* |
 | [**Trascrizioni e conclusione probatoria del Consiglio comunale di Raša**](docs/Pravni-akti/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Dichiarazioni originali del presidente, del sindaco e del Comitato locale di Koromačno |
-| [**Rapporto comparativo delle prove**](docs/forenzika/usporedni-dokazni-elaborat.md) | `MD` | Collegamento tra il Capitolo VII e il verbale del Consiglio comunale di Raša |
+| [**Rapporto comparativo delle prove**](docs/Forenzika/usporedni-dokazni-elaborat.md) | `MD` | Collegamento tra il Capitolo VII e il verbale del Consiglio comunale di Raša |
 | [**Sisak vs. Koromačno – modello comparativo**](docs/Forenzika/sisak-vs-koromacno-elaborat.md) | `MD` | Confronto della cattura istituzionale |
 | [**Richiesta FOIA ZPPI-01 (Raša / Ambiente)**](docs/ZPPI-01/zahtjev-zppi-rasa-okolis-kodeco.md) | `MD` | Richiesta di dati AMS grezzi e decisione del 2 settembre |
 | [**Richiesta FOIA ZPPI-02 (Labin / Bilancio)**](docs/ZPPI-02/zahtjev-zppi-grad-labin-transparentnost-cityx.md) | `MD` | Richiesta di contratti e log di audit (CityX) |
@@ -108,7 +109,7 @@ Cordiali saluti,
 - Ispettorato di Stato
 - Regione Istriana
 - Holcim Croazia
-- Se necessario `tajnistvo@dorh.hr` insieme alla denuncia penale
+- Se necessario [tajnistvo@dorh.hr](mailto:tajnistvo@dorh.hr) insieme alla denuncia penale
 
 ---
 
@@ -118,15 +119,15 @@ Una volta scaricato, compilato e firmato personalmente (o timbrato con il sigill
 
 | Istituzione | Email | Scopo |
 | :--- | :--- | :--- |
-| **Procura di Stato della Repubblica di Croazia (DORH)** | `tajnistvo@dorh.hr` | Indirizzo principale per la ricezione delle denunce penali |
-| **MZOZT** | `javnost@mzozt.hr`, `press@mzozt.hr` | Richieste di accesso e segnalazioni di inquinamento |
-| **Ispettorato di Stato (DIRH)** | `prijave@dirh.hr` | Azione urgente e ispezione senza preavviso |
-| **FZOEU** | `kontakt@fzoeu.hr` | Richieste relative ai contratti di bonifica |
-| **ODO Pola-Pola** | `tajnistvo@odopu.dorh.hr` | Denuncia penale – **indicare lo status di PARTE OFFESA** |
-| **USKOK** | `pisarnica@uskok.dorh.hr` | Copia Cc della denuncia |
-| **Comune di Raša** | `protokol@rasa.hr` | Richieste per ambiente e piani |
-| **Città di Labin** | `pisarnica@labin.hr` | Richieste per bilancio e CityX |
-| **Assemblea della Regione Istriana** | `skupstina@istra-istria.hr`, `strucna.sluzba@istra-istria.hr` | Commissione per le petizioni e i reclami (presidente Dalibor Macan) |
+| **Procura di Stato della Repubblica di Croazia (DORH)** | [tajnistvo@dorh.hr](mailto:tajnistvo@dorh.hr) | Indirizzo principale per la ricezione delle denunce penali |
+| **MZOZT** | [javnost@mzozt.hr](mailto:javnost@mzozt.hr), [press@mzozt.hr](mailto:press@mzozt.hr) | Richieste di accesso e segnalazioni di inquinamento |
+| **Ispettorato di Stato (DIRH)** | [prijave@dirh.hr](mailto:prijave@dirh.hr) | Azione urgente e ispezione senza preavviso |
+| **FZOEU** | [kontakt@fzoeu.hr](mailto:kontakt@fzoeu.hr) | Richieste relative ai contratti di bonifica |
+| **ODO Pola-Pola** | [tajnistvo@odopu.dorh.hr](mailto:tajnistvo@odopu.dorh.hr) | Denuncia penale – **indicare lo status di PARTE OFFESA** |
+| **USKOK** | [pisarnica@uskok.dorh.hr](mailto:pisarnica@uskok.dorh.hr) | Copia Cc della denuncia |
+| **Comune di Raša** | [protokol@rasa.hr](mailto:protokol@rasa.hr) | Richieste per ambiente e piani |
+| **Città di Labin** | [pisarnica@labin.hr](mailto:pisarnica@labin.hr) | Richieste per bilancio e CityX |
+| **Assemblea della Regione Istriana** | [skupstina@istra-istria.hr](mailto:skupstina@istra-istria.hr), [strucna.sluzba@istra-istria.hr](mailto:strucna.sluzba@istra-istria.hr) | Commissione per le petizioni e i reclami (presidente Dalibor Macan) |
 
 ---
 
@@ -134,10 +135,10 @@ Una volta scaricato, compilato e firmato personalmente (o timbrato con il sigill
 
 Il testo del rapporto (insieme ai documenti PDF allegati sulla forense del trasporto dei rifiuti, alla richiesta FOIA ufficiale e al verbale del Consiglio comunale di Raša) viene inviato a:
 
-- **EEA:** `eea.enquiries@eea.europa.eu`
-- **Commissione Europea – Ambiente:** `env-info@ec.europa.eu`
-- **Aarhus Compliance:** `env-aarhus@ec.europa.eu`
-- **UNECE:** `public.participation@un.org`
+- **EEA:** [eea.enquiries@eea.europa.eu](mailto:eea.enquiries@eea.europa.eu)
+- **Commissione Europea – Ambiente:** [env-info@ec.europa.eu](mailto:env-info@ec.europa.eu)
+- **Aarhus Compliance:** [env-aarhus@ec.europa.eu](mailto:env-aarhus@ec.europa.eu)
+- **UNECE:** [public.participation@un.org](mailto:public.participation@un.org)
 
 ---
 
