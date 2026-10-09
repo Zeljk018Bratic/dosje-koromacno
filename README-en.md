@@ -58,9 +58,8 @@ The page is programmatically optimised for printing and street distribution:
 ### 3. How to download the source code for your own use
 
 For local use without internet access:
-
-1. Click on the `index.html` file on GitHub.
-2. In the top-right corner click **Download raw file**.
+1. Open [index.html](https://raw.githubusercontent.com/Zeljk018Bratic/dosje-koromacno/main/index.html).
+1. Open [index.html](https://github.com/Zeljk018Bratic/dosje-koromacno/blob/main/index.html).
 3. Save the file to your device and open it in any browser (Chrome, Safari, Firefox).
 
 ### 4. Legal invocation of the Aarhus Convention and the right of access to information
