@@ -171,4 +171,4 @@ Contenuto aperto. Tutti i documenti e le analisi sono disponibili per uso pubbli
 
 ---
 
-*Ultimo aggiornamento: 1 ottobre 2026.*
+*Ultimo aggiornamento: 9 ottobre 2026.*
