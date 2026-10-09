@@ -184,7 +184,7 @@ Svi dokumenti, transkripti, audio zapisi, forenzički elaborati i pravni obrasci
 
 ### Windows (CertUtil)
 
-*Posljednje ažuriranje: 07.10.2026.*
+*Posljednje ažuriranje: 09.10.2026.*
 
 ```cmd
 CertUtil -hashfile prijava_dorh.pdf SHA256
@@ -202,4 +202,4 @@ Sadržaj ovog repozitorija služi isključivo informiranju, dokumentiranju i za�
 © Licenca
 Otvoreni sadržaj. Svi dokumenti i analize dostupni su za javnu upotrebu, provjeru i daljnju distribuciju u svrhu zaštite okoliša, zdravlja i javnog interesa.
 
-Posljednje ažuriranje: 07.10.2026.
+Posljednje ažuriranje: 09.10.2026.
