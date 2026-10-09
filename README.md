@@ -3,7 +3,6 @@
 Javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija i institucionalne odgovornosti u vezi s Tvornicom cementa Koromačno (Holcim Hrvatska d.o.o.).
 
 > **EN · [Read this README in English →](README-en.md)** | **DE · [Auf Deutsch lesen →](README-de.md)** | **IT · [Leggi in italiano →](README-it.md)**
-
 ---
 
 ## 📑 Sadržaj
@@ -53,7 +52,6 @@ Cjelokupni dosje dostupan je uživo:
 > **[OTVORI DOSJE KOROMAČNO](https://Zeljk018Bratic.github.io/dosje-koromacno/)**
 
 **Ispis letka i prijave:**
-
 1. Pritisni **Ctrl + P** (ili *Cmd + P* na Macu).
 2. Sustav skriva navigaciju i tamne pozadine.
 3. Ispisuje se čisti pravni dokument i obrazac kaznene prijave.
@@ -71,9 +69,7 @@ Cjelokupni dosje dostupan je uživo:
 **Predmet:** Zahtjev za pristup informacijama – EWC kodovi, ulazne analize, AMS podaci, vagarski listovi i status nadzora
 
 > **[Preuzmi cijeli predložak →](docs/Pravni-akti/dopunjeni-zppi-predlozak.md)**
-
 **Možeš ga poslati paralelno na:**
-
 - Ministarstvo zaštite okoliša i zelene tranzicije
 - Državni inspektorat
 - Istarsku županiju
@@ -92,7 +88,6 @@ Cjelokupni dosje dostupan je uživo:
 | [Zahtjev za pristup informacijama](docs/Slanje_Dokaza_08-10-2026/ZPPI_MZOZT_Sekundar_Usluge_Pazin.md) | MZOZT | Poslano | [potvrda-mzozt.pdf](docs/Slanje_Dokaza_08-10-2026/potvrda-mzozt.pdf) |
 
 **Rokovi:**
-
 - MZOZT ZPPI: **23.10.2026.**
 - DIRH prijava: **07.11.2026.**
 
@@ -113,7 +108,6 @@ Dokazi o slanju kaznenih prijava, hitnih inspekcijskih nadopuna i međunarodnih 
 | 5 | **Prijava ugroze nacionalne sigurnosti** (Stroncij-90 / Proboj) | SOA (Sigurnosno-obavještajna agencija) | Popodne | Poslano (`prijava_soa.pdf`) |
 
 **Krunski SHA256 dokazi (verificirana matrica):**
-
 - **DORH (Kaznena prijava):**
   `41ecdb026f9017fe252f45e05fbd330a802c96f4ab132e5b9bbfb288935c1b9f`
 - **DIRH (Inspekcijska nadopuna):**
@@ -141,7 +135,7 @@ Dokazi o slanju kaznenih prijava, hitnih inspekcijskih nadopuna i međunarodnih 
 
 ---
 
-## 📮 Kamo poslati kaznenu prijavu
+## 📬 Kamo poslati kaznenu prijavu
 
 | Institucija | Email | Svrha |
 |:---|:---|:---|
@@ -193,29 +187,34 @@ Svi dokumenti, transkripti, audio zapisi, forenzički elaborati i pravni obrasci
 
 ### Windows (CertUtil)
 
+*Posljednje ažuriranje: 07.10.2026.*
+
 ```cmd
 CertUtil -hashfile prijava_dorh.pdf SHA256
 CertUtil -hashfile prijava_nadopuna_dirh.pdf SHA256
 CertUtil -hashfile mediji_nadopuna.pdf SHA256
 CertUtil -hashfile send_olaf.pdf SHA256
 CertUtil -hashfile prijava_soa.pdf SHA256
+```
 
+---
 
-Dobiveni hash mora odgovarati hashovima navedenima u odjeljku 09.10.2026.
+## 📜 Manifest
 
-📜 Manifest
-Pročitaj manifest – „NISU NAS SLOMILI"
+[Pročitaj manifest](manifest.html) – „NISU NAS SLOMILI"
 
-⚖️ Pravna napomena
-Dokumenti i hashovi objavljeni su u svrhu dokazivanja integriteta i tijeka komunikacije.
+---
 
-Ne objavljivati osobne podatke trećih osoba bez pravne osnove.
+## ⚖️ Pravna napomena
 
-Sadržaj ovog repozitorija služi kao arhiva i dokazna dokumentacija; nije pravni savjet.
+Sadržaj ovog repozitorija služi isključivo informiranju, dokumentiranju i zaštiti javnog interesa. Svi dokumenti i podaci prikupljeni su iz javnih izvora i/ili vlastitih zapisa. Ovo nije pravni savjet. Za poduzimanje pravnih radnji obratite se kvalificiranom odvjetniku.
 
-Za sve pravne radnje konzultirati odvjetnika i nadležne institucije.
+---
 
-© Licenca
+## © Licenca
+
 Otvoreni sadržaj. Svi dokumenti i analize dostupni su za javnu upotrebu, provjeru i daljnju distribuciju u svrhu zaštite okoliša, zdravlja i javnog interesa.
 
-Posljednje ažuriranje: 09.10.2026.
+---
+
+*Posljednje ažuriranje: 07.10.2026.*
