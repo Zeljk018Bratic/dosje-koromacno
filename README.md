@@ -3,6 +3,7 @@
 Javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija i institucionalne odgovornosti u vezi s Tvornicom cementa Koromačno (Holcim Hrvatska d.o.o.).
 
 > **EN · [Read this README in English →](README-en.md)** | **DE · [Auf Deutsch lesen →](README-de.md)** | **IT · [Leggi in italiano →](README-it.md)**
+
 ---
 
 ## 📑 Sadržaj
@@ -65,12 +66,13 @@ Cjelokupni dosje dostupan je uživo:
 **Predmet:** Zahtjev za pristup informacijama – EWC kodovi, ulazne analize, AMS podaci, vagarski listovi i status nadzora
 
 > **[Preuzmi cijeli predložak →](docs/Pravni-akti/dopunjeni-zppi-predlozak.md)**
+
 **Možeš ga poslati paralelno na:**
 - Ministarstvo zaštite okoliša i zelene tranzicije
 - Državni inspektorat
 - Istarsku županiju
 - Holcim Hrvatska
-- Po potrebi `tajnistvo@dorh.hr` uz kaznenu prijavu
+- Po potrebi [tajnistvo@dorh.hr](mailto:tajnistvo@dorh.hr) uz kaznenu prijavu
 
 ---
 
@@ -135,15 +137,15 @@ Dokazi o slanju kaznenih prijava, hitnih inspekcijskih nadopuna i međunarodnih 
 
 | Institucija | Email | Svrha |
 |:---|:---|:---|
-| Državno odvjetništvo RH (DORH) | `tajnistvo@dorh.hr` | Glavna adresa za prijave |
-| MZOZT | `javnost@mzozt.hr`, `press@mzozt.hr` | Uvid i prijave onečišćenja |
-| Državni inspektorat (DIRH) | `prijave@dirh.hr` | Hitno postupanje |
-| FZOEU | `kontakt@fzoeu.hr` | Ugovori o sanacijama |
-| ODO Pula-Pola | `tajnistvo@odopu.dorh.hr` | Kaznena prijava — status OŠTEĆENIK |
-| USKOK | `pisarnica@uskok.dorh.hr` | Cc kopija prijave |
-| Općina Raša | `protokol@rasa.hr` | Zahtjevi za okoliš |
-| Grad Labin | `pisarnica@labin.hr` | Proračun i CityX |
-| Istarska županija | `skupstina@istra-istria.hr` | Odbor za predstavke |
+| Državno odvjetništvo RH (DORH) | [tajnistvo@dorh.hr](mailto:tajnistvo@dorh.hr) | Glavna adresa za prijave |
+| MZOZT | [javnost@mzozt.hr](mailto:javnost@mzozt.hr), [press@mzozt.hr](mailto:press@mzozt.hr) | Uvid i prijave onečišćenja |
+| Državni inspektorat (DIRH) | [prijave@dirh.hr](mailto:prijave@dirh.hr) | Hitno postupanje |
+| FZOEU | [kontakt@fzoeu.hr](mailto:kontakt@fzoeu.hr) | Ugovori o sanacijama |
+| ODO Pula-Pola | [tajnistvo@odopu.dorh.hr](mailto:tajnistvo@odopu.dorh.hr) | Kaznena prijava — status OŠTEĆENIK |
+| USKOK | [pisarnica@uskok.dorh.hr](mailto:pisarnica@uskok.dorh.hr) | Cc kopija prijave |
+| Općina Raša | [protokol@rasa.hr](mailto:protokol@rasa.hr) | Zahtjevi za okoliš |
+| Grad Labin | [pisarnica@labin.hr](mailto:pisarnica@labin.hr) | Proračun i CityX |
+| Istarska županija | [skupstina@istra-istria.hr](mailto:skupstina@istra-istria.hr) | Odbor za predstavke |
 
 ---
 
@@ -151,10 +153,10 @@ Dokazi o slanju kaznenih prijava, hitnih inspekcijskih nadopuna i međunarodnih 
 
 Tekst prijave s prilozima šalje se na:
 
-- **EEA:** `eea.enquiries@eea.europa.eu`
-- **Europska komisija – okoliš:** `env-info@ec.europa.eu`
-- **Aarhus Compliance:** `env-aarhus@ec.europa.eu`
-- **UNECE:** `public.participation@un.org`
+- **EEA:** [eea.enquiries@eea.europa.eu](mailto:eea.enquiries@eea.europa.eu)
+- **Europska komisija – okoliš:** [env-info@ec.europa.eu](mailto:env-info@ec.europa.eu)
+- **Aarhus Compliance:** [env-aarhus@ec.europa.eu](mailto:env-aarhus@ec.europa.eu)
+- **UNECE:** [public.participation@un.org](mailto:public.participation@un.org)
 
 ---
 
@@ -190,7 +192,7 @@ CertUtil -hashfile prijava_nadopuna_dirh.pdf SHA256
 CertUtil -hashfile mediji_nadopuna.pdf SHA256
 CertUtil -hashfile send_olaf.pdf SHA256
 CertUtil -hashfile prijava_soa.pdf SHA256
-
+...
 📜 Manifest
 Pročitaj manifest – „NISU NAS SLOMILI"
 
