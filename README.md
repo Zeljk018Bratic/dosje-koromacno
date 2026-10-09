@@ -190,3 +190,15 @@ CertUtil -hashfile prijava_nadopuna_dirh.pdf SHA256
 CertUtil -hashfile mediji_nadopuna.pdf SHA256
 CertUtil -hashfile send_olaf.pdf SHA256
 CertUtil -hashfile prijava_soa.pdf SHA256
+markdown
+📜 Manifest
+Pročitaj manifest – „NISU NAS SLOMILI"
+
+⚖️ Pravna napomena
+Sadržaj ovog repozitorija služi isključivo informiranju, dokumentiranju i zaštiti javnog interesa. Svi dokumenti i podaci prikupljeni su iz javnih izvora i/ili vlastitih zapisa. Ovo nije pravni savjet. Za poduzimanje pravnih radnji obratite se kvalificiranom odvjetniku.
+
+© Licenca
+Otvoreni sadržaj. Svi dokumenti i analize dostupni su za javnu upotrebu, provjeru i daljnju distribuciju u svrhu zaštite okoliša, zdravlja i javnog interesa.
+
+Posljednje ažuriranje: 07.10.2026.
+
