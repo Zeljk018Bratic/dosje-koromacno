@@ -27,7 +27,7 @@ Javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija 
 | Dokument | Format | Svrha |
 |:---|:---:|:---|
 | [Kaznena prijava DORH Pula](docs/Pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | PDF | Predaja ODO Pula |
-| [Zapisnik OV Raša 21.09.2026.](docs/Slanje_Dokaza_30-09-2026/OV_RASA_21_09_2026.pdf) | PDF | Dokaz o prekoračenju TOC-a |
+| [Zapisnik OV Raša 21.09.2026.](docs/Pravni-akti/OV_RASA_21_09_2026.pdf) | PDF | Dokaz o prekoračenju TOC-a |
 | [Slanje dokaza 08.10.2026.](docs/Slanje_Dokaza_08-10-2026/) | Folder | Prijava DIRH + ZPPI MZOZT + SHA256 potvrde |
 | [Slanje dokaza 09.10.2026.](docs/Slanje_Dokaza_09_10_2026/) | Folder | DORH, DIRH, mediji, OLAF, SOA + SHA256 potvrde |
 | [Zahtjev za status stranke (Aarhus)](docs/Pravni-akti/zahtjev-status-stranke-arhus.md) | MD | Formalno učešće |
@@ -35,12 +35,8 @@ Javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija 
 | [Usporedni dokazni elaborat](docs/Forenzika/usporedni-dokazni-elaborat.md) | MD | Poveznica Poglavlja VII i OV Raša |
 | [Sisak vs. Koromačno](docs/Forenzika/sisak-vs-koromacno-elaborat.md) | MD | Komparativni model |
 | [Carinski čvor 9689054379](docs/Forenzika/CARINSKI_CVOR_ANALIZA.md) | MD | Anomalija 19.013 t / 124 EUR |
-| [Istraživanje Vuk Vuković](docs/Forenzika/ISTRAZIVANJE_VUK_VUKOVIC.md) | MD | CityX Apps, Libusoft, Labin |
-| [#BajteBrothers_MARA_Forensic](docs/Forenzika/BajteBrothers_MARA_Forensic.md) | MD | Vlasnička struktura, IT sustavi |
-| [EU forenzički okvir](docs/Forenzika/EU_FORENZICKI_OKVIR.md) | MD | Direktiva 2024/1203, matrica |
-| [Matrica institucionalne šutnje](docs/Forenzika/INSTITUCIONALNA_SUTNJA_MATRICA.md) | MD | Praćenje ZPPI rokova |
+| [MARA v2 – Bajte Brothers](docs/Forenzika/MARA_v2_BajteBrothers.md) | MD | Vlasnička struktura, IT sustavi |
 | [MASTER forenzički dosje V2](docs/Forenzika/MASTER_DOSJE_V2.md) | MD | Sveobuhvatni pregled |
-| [CHANGELOG](docs/CHANGELOG_DOSJE_KOROMACNO.md) | MD | Povijest izmjena |
 | [INDEX](docs/INDEX.md) | MD | Indeks svih dokumenata |
 
 ---
@@ -168,7 +164,6 @@ Svi dokumenti, transkripti, audio zapisi, forenzički elaborati i pravni obrasci
 
 - [docs/](docs/) — dokumenti
 - [audio/](audio/) — audio zapisi
-- [public/](public/) — statički web
 
 ---
 
@@ -195,26 +190,3 @@ CertUtil -hashfile prijava_nadopuna_dirh.pdf SHA256
 CertUtil -hashfile mediji_nadopuna.pdf SHA256
 CertUtil -hashfile send_olaf.pdf SHA256
 CertUtil -hashfile prijava_soa.pdf SHA256
-```
-
----
-
-## 📜 Manifest
-
-[Pročitaj manifest](manifest.html) – „NISU NAS SLOMILI"
-
----
-
-## ⚖️ Pravna napomena
-
-Sadržaj ovog repozitorija služi isključivo informiranju, dokumentiranju i zaštiti javnog interesa. Svi dokumenti i podaci prikupljeni su iz javnih izvora i/ili vlastitih zapisa. Ovo nije pravni savjet. Za poduzimanje pravnih radnji obratite se kvalificiranom odvjetniku.
-
----
-
-## © Licenca
-
-Otvoreni sadržaj. Svi dokumenti i analize dostupni su za javnu upotrebu, provjeru i daljnju distribuciju u svrhu zaštite okoliša, zdravlja i javnog interesa.
-
----
-
-*Posljednje ažuriranje: 07.10.2026.*
