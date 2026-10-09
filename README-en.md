@@ -143,7 +143,7 @@ The text of the report (together with the attached PDF documents on waste transp
 
 ## 📚 Official sources and evidentiary documentation
 
-All documents, transcripts, audio recordings, forensic reports and legal templates are permanently stored in this repository and are available in the `/docs/` and `/audio/` folders.
+All documents, transcripts, audio recordings, forensic reports and legal templates are permanently stored in this repository and are available in the [docs/](docs/) and [audio/](audio/) folders.
 
 ---
 
