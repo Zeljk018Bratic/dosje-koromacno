@@ -98,14 +98,16 @@
 
 ---
 
-## 📰 MEDIJI I JAVNOST
+## 📰 Mediji (`docs/Mediji/`)
 
 | Dokument | Opis |
-|----------|------|
-| [Medijsko priopćenje](Mediji/medijsko-priopcenje.md) | Glavno priopćenje |
-| [Letak Koromačno A5](Mediji/letak-koromacno-a5.md) | Letak za građane |
-| [Pitanja vijećnicima — ponedjeljak](Mediji/pitanja-vijecnica-ponedjeljak.md) | Za sjednicu |
-| [Vladine izmjene Zakona](Mediji/vladine-izmjene-zakona.md) | Komentar |
+|---|---|
+| [medijsko-priopcenje.md](Mediji/medijsko-priopcenje.md) | Glavno priopćenje |
+| [letak-koromacno-a5.md](Mediji/letak-koromacno-a5.md) | Letak za građane |
+| [pitanja-vijecnica-ponedjeljak.md](Mediji/pitanja-vijecnica-ponedjeljak.md) | Za sjednicu |
+| [vladine-izmjene-zakona.md](Mediji/vladine-izmjene-zakona.md) | Komentar |
+| **[2026-10-07/stroncij-90-gospic.md](Mediji/2026-10-07/stroncij-90-gospic.md)** | **Sr-90 u Gospiću — porast 961 % (Index.hr, zip.com.hr)** |
+| **[2026-10-09/dopuna-priopcenje.md](Mediji/2026-10-09/dopuna-priopcenje.md)** | **Dopuna priopćenja — Jašić, Sekundar Usluge, sukob interesa** |
 
 ---
 
