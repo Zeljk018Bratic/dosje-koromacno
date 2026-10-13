@@ -1,0 +1,11 @@
+CHECKLIST PRIJE SLANJA (Proton):
+1. U tijelu maila NE smije biti recenica o "5 dana / najava dogadaja" (izbacena).
+2. Na kraj tijela dodati Proton upute (6 tocka iz zadnjeg dopisa).
+3. Prilozi: tocno ova dva fajla, pretvorena u PDF (Notepad/Word -> Print -> Microsoft Print to PDF):
+   - PAKET_ZA_MATEU_FINAL.pdf   (iz PAKET_ZA_MATEU_FINAL.md)
+   - Izjava_pristanak_atribucija.pdf   (iz IZJAVA_PREDLOZAK_MATEA.md)
+4. Lokot -> Mit Passwort schützen -> lozinka >=16 znakova.
+5. Lozinku reci TELEFONOM. Nikako u mailu, nikako u WhatsAppu.
+6. Subject: "Važno – povjerljivo, bez odgovora ako ne želiš".
+7. Njezin odgovor (kućica 1/2/3 ili prazna stranica) upisati u docs/Zastita/ kao INTERNO zapis.
+OVO NIKAD NE IDE U JAVNI REPO NI U BILO KOJU PRIJAVU.

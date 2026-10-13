@@ -1,0 +1,121 @@
+﻿
+=== STRUKTURA docs/ ===
+[DIR] docs\Arhiva
+[FILE]  docs\Arhiva\MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2.docx (64.1 KB)
+[FILE]  docs\Arhiva\MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2.md (48.8 KB)
+[FILE]  docs\Arhiva\MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2.pdf (409.3 KB)
+[FILE]  docs\Arhiva\MARA_ALL-IN_ZAVRSNI_INDEPENDENTNI_FORENZICKI_DOSJE_29-09-2026_FINAL_V2_SHA256.txt (0.2 KB)
+[FILE]  docs\CHANGELOG—DOSJE-KOROMAČNO.md (82.5 KB)
+[DIR] docs\Evidence
+[FILE]  docs\Evidence\Evidence_Matrix.csv (4.3 KB)
+[FILE]  docs\Evidence\Evidence_Matrix_Koromacno_03-10-2026.xlsx (7.7 KB)
+[DIR] docs\Forenzika
+[FILE]  docs\Forenzika\2026-10-03_DOKAZNI_STATUS_TABLICA.md (4.8 KB)
+[FILE]  docs\Forenzika\2026-10-03_INTERVENTNA_ODLUKA_VLADE.md (12.3 KB)
+[FILE]  docs\Forenzika\2026-10-03_ITALIJA_576_POSILJKI.md (2.3 KB)
+[FILE]  docs\Forenzika\2026-10-03_MASS_BALANCE_CHAIN.md (7.4 KB)
+[FILE]  docs\Forenzika\2026-10-03_MASS_BALANCE_GAP_MODEL.md (2.3 KB)
+[FILE]  docs\Forenzika\2026-10-03_MINISTARSTVO_ZDRAVSTVA_ZPPI-08.md (3.8 KB)
+[FILE]  docs\Forenzika\2026-10-03_PAUS_SABOR_KRONOLOGIJA.md (6.6 KB)
+[FILE]  docs\Forenzika\2026-10-03_PFAS_TFA_BIOMONITORING.md (5.8 KB)
+[FILE]  docs\Forenzika\Analiza – povučena Studija, projekt KOdeCO i zdravlje Povučena Studija (8.2 KB)
+[FILE]  docs\Forenzika\CARINSKI_CVOR_ANALIZA.md (5.2 KB)
+[FILE]  docs\Forenzika\Detaljna analiza slučaja Koromačno (8.6 KB)
+[FILE]  docs\Forenzika\HOLCIM_KOROMACNO_CROSS_BORDER_WASTE_2014-2024_PRIMARY_SOURCES_EN.md (7.7 KB)
+[FILE]  docs\Forenzika\HOLCIM_KOROMACNO_IED_BAT_USKLADENOST_2014-2026.md (10.6 KB)
+[FILE]  docs\Forenzika\HOLCIM_KOROMACNO_PREKOGRANICNI_OTPAD_2014-2024_PRIMARNI_IZVORI.md (7.5 KB)
+[FILE]  docs\Forenzika\LNG_KRK_BAVARSKA_ANALIZA.md (3.9 KB)
+[FILE]  docs\Forenzika\MASTER_DOSJE_V2.md (29.5 KB)
+[FILE]  docs\Forenzika\MASTER_POVEZNICA_V2.md (0.9 KB)
+[FILE]  docs\Forenzika\poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf (90.6 KB)
+[FILE]  docs\Forenzika\sisak-vs-koromacno-elaborat.md (16.6 KB)
+[FILE]  docs\Forenzika\usporedni-dokazni-elaborat.md (5.2 KB)
+[FILE]  docs\INDEX.md (8.4 KB)
+[FILE]  docs\MARA GO ON BAJTE BROTHERS .md (12 KB)
+[FILE]  docs\MARA_v2_BajteBrothers.md (7 KB)
+[DIR] docs\Mediji
+[FILE]  docs\Mediji\letak-koromacno-a5.md (2.8 KB)
+[FILE]  docs\Mediji\medijsko-priopcenje.md (4.3 KB)
+[FILE]  docs\Mediji\pitanja-vijecnica-ponedjeljak.md (9.3 KB)
+[FILE]  docs\Mediji\vladine-izmjene-zakona.md (18.1 KB)
+[DIR] docs\peticija
+[FILE]  docs\peticija\hvala.html (3.6 KB)
+[FILE]  docs\peticija\index.html (15.7 KB)
+[FILE]  docs\peticija\peticija-print.html (7 KB)
+[FILE]  docs\peticija\README.md (0.5 KB)
+[DIR] docs\Pravni-akti
+[FILE]  docs\Pravni-akti\dopunjeni-zppi-predlozak.md (2.3 KB)
+[FILE]  docs\Pravni-akti\OV_RASA_21_09_2026.pdf (165.8 KB)
+[FILE]  docs\Pravni-akti\POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md (3.4 KB)
+[FILE]  docs\Pravni-akti\POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf (58.3 KB)
+[FILE]  docs\Pravni-akti\prigovor-ppuo-rasa.md (3.1 KB)
+[FILE]  docs\Pravni-akti\zahtjev-status-stranke-arhus.md (3.4 KB)
+[FILE]  docs\Pravni-akti\zastita-od-zataskavanja-dorh.md (4.2 KB)
+[FILE]  docs\SHIPMENT_Pasjak_Template_MARA_v2.md (3.5 KB)
+[DIR] docs\Slanje_Dokaza_30-09-2026
+[FILE]  docs\Slanje_Dokaza_30-09-2026\uruceno_zahtjev_ppi_grad_labin_transparentnost_cityx.pdf (95 KB)
+[FILE]  docs\Slanje_Dokaza_30-09-2026\uruceno-dopis-i-mara-v2-radna-skupina-sabor.pdf (257.6 KB)
+[FILE]  docs\Slanje_Dokaza_30-09-2026\uruceno-zppi-01-ams-kodeco.pdf (100.2 KB)
+[FILE]  docs\Stanje_dosjea_na_01.10.2026.md (12.3 KB)
+[FILE]  docs\Stanje_dosjea_na_01.10.2026.pdf (180.6 KB)
+[DIR] docs\zppi
+[FILE]  docs\ZPPI_tri_zahtjeva_1_2_3.md (5.6 KB)
+[FILE]  docs\ZPPI_tri_zahtjeva_GONG.md (5.4 KB)
+[FILE]  docs\ZPPI_tri_zahtjeva_GONG.pdf (101 KB)
+[FILE]  docs\ZPPI_zahtjevi_MARA_v2.md (3.9 KB)
+[DIR] docs\ZPPI-00_OPCI
+[FILE]  docs\ZPPI-00_OPCI\zahtjev-zppi.md (2.4 KB)
+[FILE]  docs\ZPPI-00_OPCI\zahtjev-zppi.pdf (71.1 KB)
+[DIR] docs\ZPPI-01
+[FILE]  docs\ZPPI-01\zahtjev-zppi-rasa-okolis-kodeco.md (2.6 KB)
+[FILE]  docs\ZPPI-01\zahtjev-zppi-rasa-okolis-kodeco.pdf (59.8 KB)
+[DIR] docs\ZPPI-02
+[FILE]  docs\ZPPI-02\zahtjev-zppi-grad-labin-transparentnost-cityx.md (2.8 KB)
+[FILE]  docs\ZPPI-02\zahtjev-zppi-grad-labin-transparentnost-cityx.pdf (63.8 KB)
+[DIR] docs\ZPPI-03
+[FILE]  docs\ZPPI-03\zahtjev-zppi-prostorni-plan-ubas-koromacno.html (6 KB)
+[FILE]  docs\ZPPI-03\zahtjev-zppi-prostorni-plan-ubas-koromacno.md (2.9 KB)
+[FILE]  docs\ZPPI-03\zahtjev-zppi-prostorni-plan-ubas-koromacno.pdf (61 KB)
+[DIR] docs\ZPPI-04
+[FILE]  docs\ZPPI-04\dokaz_slanja_ZPPI-04_01-10-2026.pdf (120.8 KB)
+[FILE]  docs\ZPPI-04\dokaz_slanja_ZPPI-04_01-10-2026.png (217.7 KB)
+[FILE]  docs\ZPPI-04\ZPPI-04 — Zahtjev za pristup informacijama o prekograničnom.pdf (53.6 KB)
+[FILE]  docs\ZPPI-04\ZPPI-04 — Zahtjev za pristup informacijama.md (2.6 KB)
+[DIR] docs\ZPPI-05
+[FILE]  docs\ZPPI-05\dokaz_slanja_ZPPI-05_01-10-2026.pdf (125.9 KB)
+[FILE]  docs\ZPPI-05\Predmet_ ZPPI-05 — Zahtjev za pristup informacijama o okolišnoj i lokacijskoj dozvoli, R1 prethodnim odobrenjima i inspekcijskim nadzorima za HOLCIM (HRVATSKA) d.pdf (47 KB)
+[FILE]  docs\ZPPI-05\Zahtjev za okolišnu dozvolu i inspekcijske zapisnike (3.2 KB)
+[DIR] docs\ZPPI-06
+[FILE]  docs\ZPPI-06\Zahtjev za inspekcijske zapisnike (0 KB)
+[DIR] docs\ZPPI-07_08
+[FILE]  docs\ZPPI-07_08\ZAHTJEVI.md (4 KB)
+[DIR] docs\ZPPI-07d
+[FILE]  docs\ZPPI-07d\CARINSKA UPRAVA (segmentirano) (2.5 KB)
+[FILE]  docs\ZPPI-07d\MZOZT (e-ONTO izvoz) (1.5 KB)
+[DIR] docs\ZPPI-09
+[FILE]  docs\ZPPI-09\FZOEU (650 t big-bag) (1.2 KB)
+[FILE]  docs\ZPPI-09\Zahtjev za pristup informacijama (4.3 KB)
+[DIR] docs\ZPPI-10
+[FILE]  docs\ZPPI-10\DIRH (zapisnici + Prilog VII) (1.1 KB)
+[FILE]  docs\ZPPI-10\INSPEKCIJSKI ZAPISNICI DIRH-a.md (4.1 KB)
+[DIR] docs\ZPPI-11
+[FILE]  docs\ZPPI-11\VODOVOD PULA-LABIN (PFAS U VODI).md (4.2 KB)
+[FILE]  docs\📄 ZPPI-09 — CARINSKI ČVOR 9689054379.md (4.2 KB)
+[FILE]  docs\📄 ZPPI-10 — INSPEKCIJSKI ZAPISNICI DIRH-a.md (4 KB)
+[FILE]  docs\📄 ZPPI-11 — VODOVOD PULA-LABIN (PFAS U VODI).md (4.1 KB)
+
+=== DUPLIKATI (isti naziv u različitim folderima) ===
+
+=== PRAZNI FOLDERI ===
+PRAZAN: docs\zppi
+
+=== SAŽETAK PO TIPU ===
+.md: 48 datoteka
+.pdf: 17 datoteka
+: 9 datoteka
+.html: 4 datoteka
+.png: 1 datoteka
+.xlsx: 1 datoteka
+.docx: 1 datoteka
+.txt: 1 datoteka
+.csv: 1 datoteka
