@@ -105,6 +105,18 @@ Dokazi o slanju kaznenih prijava, hitnih inspekcijskih nadopuna i međunarodnih 
 | 4 | **Official Notification of Irregularities** (EEA Grants) | OLAF (+ CC EPPO, EU Env, MZOZT, Sabor) | Popodne | Poslano (`send_olaf.pdf`) |
 | 5 | **Prijava ugroze nacionalne sigurnosti** (Stroncij-90 / Proboj) | SOA (Sigurnosno-obavještajna agencija) | Popodne | Poslano (`prijava_soa.pdf`) |
 
+### 14.10.2026.
+
+Dopuna dosjea s novim forenzičkim analizama, evidencijom i međunarodnim prijavama.
+
+| # | Predmet / Vrsta dokumenta | Primatelj / Svrha | Status / Lokacija |
+|---|---|---|---|
+| 1 | **OLAF Addendum** (Ares 9536412) – Zlouporaba EU sredstava | OLAF / EPPO | `docs/pravni-akti/2026-10-14_OLAF_ADDENDUM_Ares9536412_DRAFT.md` |
+| 2 | **Dubinska provjera registara i povučene studije** | Javnost / Mediji | `docs/forenzika/2026-10-14_DUBINSKA_PROVJERA_REGISTRI_I_STUDIJA.md` |
+| 3 | **Dodatak za sjednicu Vijeća Raše** | Općina Raša | `docs/Akcija/RASA_VIJECE_14-10-2026_DODATAK.md` |
+
+**Ažurirana Evidence matrica:** `docs/evidence/E-MATRIX_NOVI_REDOVI_E045-E059.csv`
+
 **Krunski SHA256 dokazi (verificirana matrica):**
 - **DORH (Kaznena prijava):**
   `41ecdb026f9017fe252f45e05fbd330a802c96f4ab132e5b9bbfb288935c1b9f`
@@ -184,7 +196,7 @@ Svi dokumenti, transkripti, audio zapisi, forenzički elaborati i pravni obrasci
 
 ### Windows (CertUtil)
 
-*Posljednje ažuriranje: 09.10.2026.*
+*Posljednje ažuriranje: 14.10.2026.*
 
 ```cmd
 CertUtil -hashfile prijava_dorh.pdf SHA256
@@ -202,4 +214,4 @@ Sadržaj ovog repozitorija služi isključivo informiranju, dokumentiranju i za�
 © Licenca
 Otvoreni sadržaj. Svi dokumenti i analize dostupni su za javnu upotrebu, provjeru i daljnju distribuciju u svrhu zaštite okoliša, zdravlja i javnog interesa.
 
-Posljednje ažuriranje: 09.10.2026.
+Posljednje ažuriranje: 14.10.2026.
