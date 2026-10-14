@@ -5,3 +5,4 @@ _TRASH_*/
 *.bak_*
 ocisti_duplikate*.ps1
 ocisti_duplikate_log.txt
+cleanup_log_*.txt
