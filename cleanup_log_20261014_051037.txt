@@ -1,0 +1,13 @@
+﻿=== POCETAK 10/14/2026 05:10:37 ===
+Backup matrice spremljen.
+Nadeno PDF-ova: 60
+--- DUPLIKAT (hash 431B0D03DFD76474F79F08450F2B8F57AE9000C963359F5C8FE8C6FF75DED146):
+    C:\Users\zeljk\dosije-koromacno\docs\evidence\MZOZT_Netehnicki_sazetak_Koromacno_14-08-2026.pdf
+    C:\Users\zeljk\dosije-koromacno\docs\evidence\PUO_2026-08-14_Netehnicki_sazetak.pdf
+--- DUPLIKAT (hash EBCE44586DFE287C8A907E3EA6976973895F2C64D7142F36A8A6A9FF5D1ED06C):
+    C:\Users\zeljk\dosije-koromacno\docs\evidence\MZOZT_OUZO_rjesenje_2014_Holcim.pdf
+    C:\Users\zeljk\dosije-koromacno\docs\evidence\OD_holcim\OD_holcim_2014_RJESENJE.pdf
+Ukupno duplikata: 4
+Azurirano 2 redova u Evidence_Matrix.csv
+=== KRAJ 10/14/2026 05:10:38 ===
+Log: C:\Users\zeljk\dosije-koromacno\cleanup_log_20261014_051037.txt
