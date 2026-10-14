@@ -3,6 +3,16 @@
 ## [14.10.2026.]
 
 ### Dodano
+
+- **E-073** – Prosljeđivanje predstavke: MZOZT proslijedio predstavku Željka Bratića od 07.10.2026. DIRH-u na nadležno postupanje (e-mail od 13.10.2026.). SHA256: `5C9542FAB6EF9012EE8DEAF3A7365DA0C0EBF2A06393CF2C88F63E7D54E24BF0`.
+- **E-074** – Medijski članak (Istra24): „EKSKLUZIVNO: Holcim spaljuje otpad iz Gospića, prethodno ga miješa s otpadom u Pazinu! Lokacija se ne želi otkriti da ne dođe do histerije u javnosti“ (07.10.2026.).
+- **E-075** – Medijski članak (Labinština.info): „Iz Holcima odgovorili što spaljuju, od čega se sastoji gospićki otpad te u kojem slučaju ga neće preuzeti“ (13.10.2026.).
+- **E-076** – Peticija (Peticijeonline.com): Peticija za zaustavljanje KOdeCO Net Zero — Koromačno (14.10.2026.).
+
+### Ažurirano
+- Evidence Matrix CANON v2: dodani redci E-073 do E-076.
+- Dokumenti spremljeni u odgovarajuće mape (`docs/Slanje_Dokaza_13-10-2026/`, `docs/Mediji/`).
+- Generirani SHA256 hashovi za nove dokumente (gdje je primjenjivo).
 - `docs/pravni-akti/2026-10-14_OLAF_ADDENDUM_Ares9536412_DRAFT.md` – Dopuna OLAF prijave o zlouporabi EU sredstava (Innovation Fund & EEA Grants).
 - `docs/forenzika/2026-10-14_DUBINSKA_PROVJERA_REGISTRI_I_STUDIJA.md` – Analiza povučene studije i registara.
 - `docs/Akcija/RASA_VIJECE_14-10-2026_DODATAK.md` – Pitanja i dodatak za sjednicu Vijeća.
