@@ -1,5 +1,18 @@
 # CHANGELOG — DOSJE KOROMAČNO
 
+## [14.10.2026.]
+
+### Dodano
+- `docs/pravni-akti/2026-10-14_OLAF_ADDENDUM_Ares9536412_DRAFT.md` – Dopuna OLAF prijave o zlouporabi EU sredstava (Innovation Fund & EEA Grants).
+- `docs/forenzika/2026-10-14_DUBINSKA_PROVJERA_REGISTRI_I_STUDIJA.md` – Analiza povučene studije i registara.
+- `docs/Akcija/RASA_VIJECE_14-10-2026_DODATAK.md` – Pitanja i dodatak za sjednicu Vijeća.
+- `docs/evidence/E-MATRIX_NOVI_REDOVI_E045-E059.csv` – Proširenje evidence matrice s novim dokazima (E045-E059).
+
+### Konsolidacija i čišćenje
+- Uklonjeni svi preostali duplikati nastali ZIP ekstrakcijom (`live_repo`, `verify_klon`, `repo_dosje`, `ZA_REPO_*`).
+- Očišćena root struktura: svi ZPPI i forenzički dokumenti sada su isključivo unutar `docs/` hijerarhije.
+- Root folder sada sadrži samo aktivne web datoteke (`index.html`, `README.md`, itd.) i glavne CSV matrice.
+
 ## [09.10.2026.]
 
 ### Dodano
