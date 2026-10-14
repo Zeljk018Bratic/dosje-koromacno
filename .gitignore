@@ -2,3 +2,6 @@ repo_dosje/
 live_repo/
 verify_klon/
 _TRASH_*/
+*.bak_*
+ocisti_duplikate*.ps1
+ocisti_duplikate_log.txt
