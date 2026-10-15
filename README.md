@@ -105,6 +105,19 @@ Dokazi o slanju kaznenih prijava, hitnih inspekcijskih nadopuna i međunarodnih 
 | 4 | **Official Notification of Irregularities** (EEA Grants) | OLAF (+ CC EPPO, EU Env, MZOZT, Sabor) | Popodne | Poslano (`send_olaf.pdf`) |
 | 5 | **Prijava ugroze nacionalne sigurnosti** (Stroncij-90 / Proboj) | SOA (Sigurnosno-obavještajna agencija) | Popodne | Poslano (`prijava_soa.pdf`) |
 
+### 13.10.2026.
+
+Dopuna dosjea s novim forenzičkim analizama, medijskim paketom i međunarodnim prijavama.
+
+| # | Predmet / Vrsta dokumenta | Primatelj / Svrha | Status / Lokacija |
+|---|---|---|---|
+| 1 | MEDIA_PACK v3.3 | Mediji / javnost | docs/mediji/2026-10-13_MEDIA_PACK_v3.3.md |
+| 2 | OLAF V2 + corrigendum + annex | OLAF | docs/pravni-akti/2026-10-12_OLAF_*.md |
+| 3 | EEA notice | EEA / EU Komisija | docs/pravni-akti/2026-10-13_EEA_SECRETARIAT_NOTICE_DRAFT.md |
+| 4 | DORH dopuna | DORH / USKOK | docs/pravni-akti/2026-10-13_DOPUNA_DORH_USKOK.md |
+| 5 | ZPPI-13 do ZPPI-19 | Razne institucije | docs/ZPPI-13/ … docs/ZPPI-19/ |
+| 6 | Evidence E-031 do E-041 | Arhiva | docs/evidence/Evidence_Matrix.csv |
+
 ### 14.10.2026.
 
 Dopuna dosjea s novim forenzičkim analizama, evidencijom i međunarodnim prijavama.
