@@ -27,7 +27,9 @@ Javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija 
 
 | Dokument | Format | Svrha |
 |:---|:---:|:---|
-| [Kaznena prijava DORH Pula](docs/pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | PDF | Predaja ODO Pula |
+| Dokument | Format | Svrha |
+|:---|:---:|:---|
+| [Kaznena prijava DORH Pula](docs/pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH_(PULA).pdf) | PDF | Predaja ODO Pula |
 | [Zapisnik OV Raša 21.09.2026.](docs/pravni-akti/OV_RASA_21_09_2026.pdf) | PDF | Dokaz o prekoračenju TOC-a |
 | [Slanje dokaza 08.10.2026.](docs/Slanje_Dokaza_08-10-2026/) | Folder | Prijava DIRH + ZPPI MZOZT + SHA256 potvrde |
 | [Slanje dokaza 09.10.2026.](docs/Slanje_Dokaza_09_10_2026/) | Folder | DORH, DIRH, mediji, OLAF, SOA + SHA256 potvrde |
