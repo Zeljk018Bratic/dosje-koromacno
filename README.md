@@ -129,6 +129,7 @@ Dopuna dosjea s novim forenzičkim analizama, evidencijom i međunarodnim prijav
 | 2 | **Dubinska provjera registara i povučene studije** | Javnost / mediji | `docs/forenzika/2026-10-14_DUBINSKA_PROVJERA_REGISTRI_I_STUDIJA.md` |
 | 3 | **Dodatak za sjednicu Vijeća Raše** | Općina Raša | `docs/Akcija/RASA_VIJECE_14-10-2026_DODATAK.md` |
 | 4 | **MASTER FORENZIČKI STATUS 14.10.2026. (E-077)** | GitHub / Arhiva | `docs/evidence/MASTER_STATUS_14-10-2026.md` |
+| 5 | **E-MATRIX NOVI REDOVI E-045 do E-060** | Arhiva / dokazi | `docs/evidence/E-MATRIX_NOVI_REDOVI_E045-E060.csv` |
 
 **Krunski SHA256 dokazi (verificirana matrica):**
 - **MASTER STATUS (E-077):**
