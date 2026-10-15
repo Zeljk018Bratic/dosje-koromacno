@@ -1,5 +1,29 @@
 # CHANGELOG — DOSJE KOROMAČNO
 
+Sve značajne promjene u ovom projektu bit će dokumentirane u ovoj datoteci.
+
+## [2026-10-15]
+### 🚀 Dodano (Added)
+- **E-077**: Dodan "MASTER FORENZIČKI STATUS 14.10.2026." kao kanonski kontrolni dokument koji definira pravila zaključivanja i prioritete ZPPI.
+- **E-078**: Dodana evidencija hitne prijave i ZPPI zahtjeva upućenog izravnim voditeljima DIRH-a (Ispostave Pazin, Pula, Rijeka) za hitno uzorkovanje otpada na PFAS i teške metale.
+- **E-079**: Dodana evidencija ZPPI zahtjeva upućenog MZOZT-u i DIRH-u za hitnu dostavu nalaza "neovisnog akreditiranog laboratorija" koje je Holcim najavio u svom javnom očitovanju od 14.10.2026.
+- **README.md**: Ažuriran odjeljak "📬 Poslani zahtjevi" s novim unosom za 15.10.2026., uključujući SHA256 hashove, točne primatelje i zakonske rokove za odgovor (~30.10.2026.).
+
+### 🛠️ Popravljeno (Fixed)
+- **CSV Formatiranje**: Ispravljen format unosa u `Evidence_Matrix_CANON_v2.csv` (redci E-077, E-078 i E-079). Sva polja su sada pravilno omeđena navodnicima (`"..."`), čime je osigurana 100% kompatibilnost s CSV parserima i stroga usklađenost s prethodnim redcima matrice.
+
+### 📅 Sljedeći koraci (Next Steps)
+- Praćenje zakonskog roka od 15 dana za odgovore na E-078 i E-079 (rok istječe ~30.10.2026.).
+- Priprema pritužbe Povjereniku za informiranje u slučaju institucionalne šutnje.
+- Eskalacija statusa u "INSTITUCIONALNA BLOKADA" i prosljeđivanje dokaza OLAF-u/EPPO-u ako zahtjevi budu ignorirani.
+
+## [2026-10-14]
+### 🚀 Dodano (Added)
+- **Holcim Očitovanje**: Arhivirano službeno očitovanje Holcima Gradu Labinu (14.10.2026.) s tvrdnjama o "zatvorenom sustavu" i "neovisnom laboratoriju".
+- **Zaključak Općine Raša**: Evidentirana jednoglasna odluka Općinskog vijeća Raša protiv projekta KOdeCO Net Zero.
+- **Peticija**: Zabilježena predaja peticije s preko 8.000 potpisa protiv projekta.
+```
+
 ## [14.10.2026.]
 
 ### Dodano
