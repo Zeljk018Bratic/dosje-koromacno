@@ -39,6 +39,7 @@ Javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija 
 | [MARA v2 – Bajte Brothers](docs/Forenzika/MARA_v2_BajteBrothers.md) | MD | Vlasnička struktura, IT sustavi |
 | [MASTER forenzički dosje V2](docs/Forenzika/MASTER_DOSJE_V2.md) | MD | Sveobuhvatni pregled |
 | [INDEX](docs/INDEX.md) | MD | Indeks svih dokumenata |
+| [MASTER STATUS 14.10.2026.](docs/MASTER_STATUS_14-10-2026.md) | MD | Sveobuhvatni status dosjea |
 
 ---
 
