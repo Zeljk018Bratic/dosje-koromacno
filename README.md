@@ -128,7 +128,7 @@ Dopuna dosjea s novim forenzičkim analizama, evidencijom i međunarodnim prijav
 | # | Predmet / Vrsta dokumenta | Primatelj / Svrha | Status / Lokacija |
 |---|---|---|---|
 | 1 | **OLAF Addendum** (Ares 9536412) – Zlouporaba EU sredstava | OLAF / EPPO | `docs/pravni-akti/2026-10-14_OLAF_ADDENDUM_Ares9536412_DRAFT.md` |
-| 2 | **Dubinska provjera registara i povučene studije** | Javnost / Mediji | `docs/forenzika/2026-10-14_DUBINSKA_PROVJERA_REGISTRI_I_STUDIJA.md` |
+| 2 | **Dubinska provjera registara i povučene studije** | Javnost / mediji | `docs/forenzika/2026-10-14_DUBINSKA_PROVJERA_REGISTRI_I_STUDIJA.md` |
 | 3 | **Dodatak za sjednicu Vijeća Raše** | Općina Raša | `docs/Akcija/RASA_VIJECE_14-10-2026_DODATAK.md` |
 | 4 | **MASTER FORENZIČKI STATUS 14.10.2026. (E-077)** | GitHub / Arhiva | `docs/evidence/MASTER_STATUS_14-10-2026.md` |
 
