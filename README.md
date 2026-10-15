@@ -114,19 +114,25 @@ Dopuna dosjea s novim forenzičkim analizama, evidencijom i međunarodnim prijav
 | 1 | **OLAF Addendum** (Ares 9536412) – Zlouporaba EU sredstava | OLAF / EPPO | `docs/pravni-akti/2026-10-14_OLAF_ADDENDUM_Ares9536412_DRAFT.md` |
 | 2 | **Dubinska provjera registara i povučene studije** | Javnost / Mediji | `docs/forenzika/2026-10-14_DUBINSKA_PROVJERA_REGISTRI_I_STUDIJA.md` |
 | 3 | **Dodatak za sjednicu Vijeća Raše** | Općina Raša | `docs/Akcija/RASA_VIJECE_14-10-2026_DODATAK.md` |
+| 4 | **MASTER FORENZIČKI STATUS 14.10.2026. (E-077)** | GitHub / Arhiva | `docs/evidence/MASTER_STATUS_14-10-2026.md` |
+
+**Krunski SHA256 dokazi (verificirana matrica):**
+- **MASTER STATUS (E-077):**
+  `8FB3E5B067773A3E61B2A7217178F20D3C68EF9AA6CE54D23926B7A926C8E7933`
+
+---
 
 ### 15.10.2026.
 
-Ciljani zahtjevi upućeni izravnim voditeljima ispostava i službi, s pozivanjem na Holcimovo javno očitovanje od 14.10.2026.
+Ciljani zahtjevi upućeni izravnim voditeljima ispostava i službi.
 
 | # | Predmet / Vrsta zahtjeva | Primatelj (To / CC) | Status / Dokument | SHA256 Hash |
 |---|---|---|---|---|
-| 1 | **HITNA PRIJAVA I ZPPI**: Sumnja na nezakonito miješanje otpada (Pazin–Koromačno) + Zahtjev za hitno uzorkovanje (PFAS/teški metali). | **To:** DIRH (Bervida, Tomičić, Krstelj)<br>**CC:** DIRH Pisarnica, Ispostava Gospić | Poslano / Hashirano<br>`docs/ZPPI-13/ZPPI-13_HITNA_PRIJAVA_DIRH_PAZIN.md` | `2C05DFAB513C9BC4B32389C2747C91D89508C3ECDF9DCC7ED50D369CAA5883F8` |
-| 2 | **ZPPI**: Hitni zahtjev za dostavu nalaza "neovisnog akreditiranog laboratorija" za otpad iz Gospića (poziv na Holcimovo očitovanje). | **To:** MZOZT, DIRH (Krstelj)<br>**CC:** DIRH Pisarnica, Ispostava Pazin | Poslano / Hashirano<br>`docs/ZPPI-14/ZPPI-14_ZAHTEV_NALAZI_LAB_HOLCIM.md` | `983539E53194BEC0E2373BC0D82759AF903A1649C51C4604A3F83E7E1FA28E9A` |
+| 1 | **HITNA PRIJAVA I ZPPI** (E-078): Sumnja na nezakonito miješanje otpada + Zahtjev za uzorkovanje. | **To:** DIRH (Bervida, Tomičić, Krstelj)<br>**CC:** DIRH Pisarnica, Gospić | Poslano / Hashirano<br>`docs/ZPPI-13/ZPPI-13_HITNA_PRIJAVA_DIRH_PAZIN.md` | `2C05DFAB513C9BC4B32389C2747C91D89508C3ECDF9DCC7ED50D369CAA5883F8` |
+| 2 | **ZPPI** (E-079): Hitni zahtjev za dostavu nalaza laboratorija (poziv na Holcimovo očitovanje). | **To:** MZOZT, DIRH (Krstelj)<br>**CC:** DIRH Pisarnica, Pazin | Poslano / Hashirano<br>`docs/ZPPI-14/ZPPI-14_ZAHTEV_NALAZI_LAB_HOLCIM.md` | `983539E53194BEC0E2373BC0D82759AF903A1649C51C4604A3F83E7E1FA28E9A` |
 
 **Rokovi:**
-- Zakonski rok za odgovor na ZPPI zahtjeve: **~30.10.2026.** (15 dana)
-- *Napomena:* U slučaju šutnje, 31.10.2026. automatski se aktivira žalba Povjereniku za informiranje, a šutnja se bilježi kao "INSTITUCIONALNA BLOKADA" za OLAF/EPPO prijavu.
+- Zakonski rok za odgovor: **~30.10.2026.**
 
 **Ažurirana Evidence matrica:** `docs/evidence/E-MATRIX_NOVI_REDOVI_E045-E059.csv`
 
@@ -209,7 +215,7 @@ Svi dokumenti, transkripti, audio zapisi, forenzički elaborati i pravni obrasci
 
 ### Windows (CertUtil)
 
-*Posljednje ažuriranje: 14.10.2026.*
+*Posljednje ažuriranje: 15.10.2026.*
 
 ```cmd
 CertUtil -hashfile prijava_dorh.pdf SHA256
@@ -227,4 +233,4 @@ Sadržaj ovog repozitorija služi isključivo informiranju, dokumentiranju i za�
 © Licenca
 Otvoreni sadržaj. Svi dokumenti i analize dostupni su za javnu upotrebu, provjeru i daljnju distribuciju u svrhu zaštite okoliša, zdravlja i javnog interesa.
 
-Posljednje ažuriranje: 14.10.2026.
+Posljednje ažuriranje: 15.10.2026.
