@@ -6,3 +6,8 @@ _TRASH_*/
 ocisti_duplikate*.ps1
 ocisti_duplikate_log.txt
 cleanup_log_*.txt
+*.mp3
+transkript*.py
+transkript_sabora.txt
+docs/Slanje_Dokaza_13-10-2026/
+docs/Slanje_Dokaza_15_10_2026/
