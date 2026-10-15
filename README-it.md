@@ -9,7 +9,7 @@
 ## 📑 Indice
 
 - [Accesso rapido ai documenti](#-accesso-rapido-ai-documenti-legali-e-tecnici-docs)
-- [Sistema interattivo](#-come-utilizzare-questo-sistema-interattivo)
+- [Sistema interattivo](#️-come-utilizzare-questo-sistema-interattivo)
 - [Modello FOIA](#-modello-foia-aggiornato)
 - [Dove inviare la denuncia](#-dove-inviare-la-denuncia-penale-compilata-e-firmata)
 - [Istruzioni per l'EEA](#-istruzioni-per-linoltre-allagenzia-europea-dellambiente-eea)
@@ -24,15 +24,15 @@
 
 | Documento / Atto | Formato | Scopo |
 | :--- | :---: | :--- |
-| [**Denuncia penale alla DORH Pola**](docs/Pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | `PDF` | Presentazione all'ODO Pola contro i responsabili |
-| [**Verbale e conclusione del Consiglio comunale di Raša 21.09.2026**](docs/Pravni-akti/OV_RASA_21_09_2026.pdf) | `PDF` | Prova del doppio superamento del TOC |
-| [**Richiesta di status di parte (Aarhus)**](docs/Pravni-akti/zahtjev-status-stranke-arhus.md) | `MD` | Presentazione al Comune/Regione per la partecipazione formale |
-| [**Forense dei rifiuti RDF/SRF**](docs/Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analisi delle importazioni e della scappatoia *End-of-Waste* |
-| [**Trascrizioni e conclusione probatoria del Consiglio comunale di Raša**](docs/Pravni-akti/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Dichiarazioni originali del presidente, del sindaco e del Comitato locale di Koromačno |
-| [**Rapporto comparativo delle prove**](docs/Forenzika/usporedni-dokazni-elaborat.md) | `MD` | Collegamento tra il Capitolo VII e il verbale del Consiglio comunale di Raša |
-| [**Sisak vs. Koromačno – modello comparativo**](docs/Forenzika/sisak-vs-koromacno-elaborat.md) | `MD` | Confronto della cattura istituzionale |
+| [**Denuncia penale alla DORH Pola**](docs/pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH_(PULA).pdf) | `PDF` | Presentazione all'ODO Pola contro i responsabili |
+| [**Verbale e conclusione del Consiglio comunale di Raša 21.09.2026**](docs/pravni-akti/OV_RASA_21_09_2026.pdf) | `PDF` | Prova del doppio superamento del TOC |
+| [**Richiesta di status di parte (Aarhus)**](docs/pravni-akti/zahtjev-status-stranke-arhus.md) | `MD` | Presentazione al Comune/Regione per la partecipazione formale |
+| [**Forense dei rifiuti RDF/SRF**](docs/forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | `PDF` | Analisi delle importazioni e della scappatoia *End-of-Waste* |
+| [**Trascrizioni e conclusione probatoria del Consiglio comunale di Raša**](docs/pravni-akti/POGLAVLJE_V_TRANSKRIPTI_I_DOKAZNI_ZAKLJUCAK_OPCINSKOG_VIJECA_RASA.md) | `MD` | Dichiarazioni originali del presidente, del sindaco e del Comitato locale di Koromačno |
+| [**Rapporto comparativo delle prove**](docs/forenzika/usporedni-dokazni-elaborat.md) | `MD` | Collegamento tra il Capitolo VII e il verbale del Consiglio comunale di Raša |
+| [**Sisak vs. Koromačno – modello comparativo**](docs/forenzika/sisak-vs-koromacno-elaborat.md) | `MD` | Confronto della cattura istituzionale |
 | [**Richiesta FOIA ZPPI-01 (Raša / Ambiente)**](docs/ZPPI-01/zahtjev-zppi-rasa-okolis-kodeco.md) | `MD` | Richiesta di dati AMS grezzi e decisione del 2 settembre |
-| [**Richiesta FOIA ZPPI-02 (Labin / Bilancio)**](docs/ZPPI-02/zahtjev-zppi-grad-labin-transparentnost-cityx.md) | `MD` | Richiesta di contratti e log di audit (CityX) |
+| [**Richiesta FOIA ZPPI-02 (Labin / Bilancio)**](docs/ZPPI-02/ZAHTJEV_ZA_PRISTUP_INFORMACIJAMA_GRAD_LABIN.md) | `MD` | Richiesta di contratti e log di audit (CityX) |
 | [**Richiesta FOIA ZPPI-03 (Ubaš / Piani)**](docs/ZPPI-03/zahtjev-zppi-prostorni-plan-ubas-koromacno.html) | `HTML` | Richiesta delle modifiche V del piano regolatore e concessione fino al 2045 |
 
 ---
@@ -75,7 +75,7 @@ Qualsiasi rifiuto, manipolazione o convalida ritardata di dati grezzi (RAW DATA)
 
 **Oggetto:** Richiesta di accesso alle informazioni – codici EWC, analisi di input, dati AMS, registri della pesa e stato della vigilanza
 
-> **[Scarica il modello completo →](docs/Pravni-akti/dopunjeni-zppi-predlozak.md)**
+> **[Scarica il modello completo →](docs/pravni-akti/dopunjeni-zppi-predlozak.md)**
 
 Gentile Signore/Signora,
 
@@ -171,4 +171,4 @@ Contenuto aperto. Tutti i documenti e le analisi sono disponibili per uso pubbli
 
 ---
 
-*Ultimo aggiornamento: 9 ottobre 2026.*
+*Ultimo aggiornamento: 15 ottobre 2026.*
