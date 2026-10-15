@@ -2,7 +2,7 @@
 
 Sve značajne promjene u ovom projektu bit će dokumentirane u ovoj datoteci.
 
-## [2026-10-15]
+## [15.10.2026.]
 ### 🚀 Dodano (Added)
 - **E-077**: Dodan "MASTER FORENZIČKI STATUS 14.10.2026." kao kanonski kontrolni dokument koji definira pravila zaključivanja i prioritete ZPPI.
 - **E-078**: Dodana evidencija hitne prijave i ZPPI zahtjeva upućenog izravnim voditeljima DIRH-a (Ispostave Pazin, Pula, Rijeka) za hitno uzorkovanje otpada na PFAS i teške metale.
@@ -17,7 +17,7 @@ Sve značajne promjene u ovom projektu bit će dokumentirane u ovoj datoteci.
 - Priprema pritužbe Povjereniku za informiranje u slučaju institucionalne šutnje.
 - Eskalacija statusa u "INSTITUCIONALNA BLOKADA" i prosljeđivanje dokaza OLAF-u/EPPO-u ako zahtjevi budu ignorirani.
 
-## [2026-10-14]
+## [14.10.2026.]
 ### 🚀 Dodano (Added)
 - **Holcim Očitovanje**: Arhivirano službeno očitovanje Holcima Gradu Labinu (14.10.2026.) s tvrdnjama o "zatvorenom sustavu" i "neovisnom laboratoriju".
 - **Zaključak Općine Raša**: Evidentirana jednoglasna odluka Općinskog vijeća Raša protiv projekta KOdeCO Net Zero.
