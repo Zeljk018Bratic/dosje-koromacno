@@ -27,17 +27,17 @@ Javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija 
 
 | Dokument | Format | Svrha |
 |:---|:---:|:---|
-| [Kaznena prijava DORH Pula](docs/Pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | PDF | Predaja ODO Pula |
-| [Zapisnik OV Raša 21.09.2026.](docs/Pravni-akti/OV_RASA_21_09_2026.pdf) | PDF | Dokaz o prekoračenju TOC-a |
+| [Kaznena prijava DORH Pula](docs/pravni-akti/POGLAVLJE_VI_PREDLOZAK_KAZNENE_PRIJAVE_ZA_DORH.pdf) | PDF | Predaja ODO Pula |
+| [Zapisnik OV Raša 21.09.2026.](docs/pravni-akti/OV_RASA_21_09_2026.pdf) | PDF | Dokaz o prekoračenju TOC-a |
 | [Slanje dokaza 08.10.2026.](docs/Slanje_Dokaza_08-10-2026/) | Folder | Prijava DIRH + ZPPI MZOZT + SHA256 potvrde |
 | [Slanje dokaza 09.10.2026.](docs/Slanje_Dokaza_09_10_2026/) | Folder | DORH, DIRH, mediji, OLAF, SOA + SHA256 potvrde |
-| [Zahtjev za status stranke (Aarhus)](docs/Pravni-akti/zahtjev-status-stranke-arhus.md) | MD | Formalno učešće |
-| [Forenzika otpada RDF/SRF](docs/Forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | PDF | Analiza uvoza |
-| [Usporedni dokazni elaborat](docs/Forenzika/usporedni-dokazni-elaborat.md) | MD | Poveznica Poglavlja VII i OV Raša |
-| [Sisak vs. Koromačno](docs/Forenzika/sisak-vs-koromacno-elaborat.md) | MD | Komparativni model |
-| [Carinski čvor 9689054379](docs/Forenzika/CARINSKI_CVOR_ANALIZA.md) | MD | Anomalija 19.013 t / 124 EUR |
-| [MARA v2 – Bajte Brothers](docs/Forenzika/MARA_v2_BajteBrothers.md) | MD | Vlasnička struktura, IT sustavi |
-| [MASTER forenzički dosje V2](docs/Forenzika/MASTER_DOSJE_V2.md) | MD | Sveobuhvatni pregled |
+| [Zahtjev za status stranke (Aarhus)](docs/pravni-akti/zahtjev-status-stranke-arhus.md) | MD | Formalno učešće |
+| [Forenzika otpada RDF/SRF](docs/forenzika/poglavlje-vii-prekogranicni-promet-rdf-srf-otpada.pdf) | PDF | Analiza uvoza |
+| [Usporedni dokazni elaborat](docs/forenzika/usporedni-dokazni-elaborat.md) | MD | Poveznica Poglavlja VII i OV Raša |
+| [Sisak vs. Koromačno](docs/forenzika/sisak-vs-koromacno-elaborat.md) | MD | Komparativni model |
+| [Carinski čvor 9689054379](docs/forenzika/CARINSKI_CVOR_ANALIZA.md) | MD | Anomalija 19.013 t / 124 EUR |
+| [MARA v2 – Bajte Brothers](docs/forenzika/MARA_v2_BajteBrothers.md) | MD | Vlasnička struktura, IT sustavi |
+| [MASTER forenzički dosje V2](docs/forenzika/MASTER_DOSJE_V2.md) | MD | Sveobuhvatni pregled |
 | [INDEX](docs/INDEX.md) | MD | Indeks svih dokumenata |
 | [MASTER STATUS 14.10.2026.](docs/MASTER_STATUS_14-10-2026.md) | MD | Sveobuhvatni status dosjea |
 
@@ -66,7 +66,7 @@ Cjelokupni dosje dostupan je uživo:
 
 **Predmet:** Zahtjev za pristup informacijama – EWC kodovi, ulazne analize, AMS podaci, vagarski listovi i status nadzora
 
-> **[Preuzmi cijeli predložak →](docs/Pravni-akti/dopunjeni-zppi-predlozak.md)**
+> **[Preuzmi cijeli predložak →](docs/pravni-akti/dopunjeni-zppi-predlozak.md)**
 
 **Možeš ga poslati paralelno na:**
 - Ministarstvo zaštite okoliša i zelene tranzicije
@@ -147,8 +147,8 @@ Ciljani zahtjevi upućeni izravnim voditeljima ispostava i službi.
 
 **Rokovi:**
 - Zakonski rok za odgovor: **~30.10.2026.**
-
-**Ažurirana Evidence matrica:** `docs/evidence/E-MATRIX_NOVI_REDOVI_E045-E059.csv`
+- 
+**Ažurirana Evidence matrica:** [E-MATRIX_NOVI_REDOVI_E045-E059.csv](docs/evidence/E-MATRIX_NOVI_REDOVI_E045-E059.csv)
 
 **Krunski SHA256 dokazi (verificirana matrica):**
 - **DORH (Kaznena prijava):**
@@ -247,4 +247,4 @@ Sadržaj ovog repozitorija služi isključivo informiranju, dokumentiranju i za�
 © Licenca
 Otvoreni sadržaj. Svi dokumenti i analize dostupni su za javnu upotrebu, provjeru i daljnju distribuciju u svrhu zaštite okoliša, zdravlja i javnog interesa.
 
-Posljednje ažuriranje: 15.10.2026.
+*Posljednje ažuriranje: 15.10.2026.*
