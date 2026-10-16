@@ -1,5 +1,19 @@
 # 🔬 ÖKOZID KOROMAČNO · Interaktives Recherche-Dossier & Rechtliches Instrument
 
+> **⚡ DOSSIER KOROMAČNO — FORENSISCHE DOKUMENTATION**
+>
+> Dieses Dossier dokumentiert den grenzüberschreitenden Abfallstrom aus Italien (Zoffoli Metalli, Gifema, Stena Recycling, Intercommercio, Tellfer) über Slowenien nach Kroatien, mit Fokus auf das Lager Gospić, das Verarbeitungszentrum Pazin und die Verbrennung im Holcim-Zementwerk in Koromačno.
+>
+> **Wichtige Fakten:**
+> - 576 Abfalltransporte aus Italien nach Kroatien (2022–2024), ca. 12.338 Tonnen
+> - 148 Überschreitungen des TOC-Grenzwerts (35 mg/Nm³ statt 10 mg/Nm³) im Werk Koromačno
+> - 116,9 Mio. EUR aus dem EU-Innovationsfonds (KOdeCO net zero, Projekt-ID: 101133120)
+> - USKOK-Ermittlungen gegen C.I.O.S. (Petar Pripuz) wegen illegalen Abfallhandels
+>
+> **Rechtsstatus:** Offenes Verfahren bei OLAF (Ares(2026)9536412), EPPO und DORH.
+>
+> **Muttergesellschaft:** Holcim Ltd, Schweiz
+
 **Vollständiges forensisches, chemisches und rechtliches Dossier zum Fall Holcim Koromačno und zur Bucht von Raša.**
 
 > **HR · [Pročitaj ovaj README na hrvatskom →](README.md)** | **EN · [Read this README in English →](README-en.md)** | **IT · [Leggi in italiano →](README-it.md)**
