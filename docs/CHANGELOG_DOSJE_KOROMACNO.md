@@ -2,7 +2,36 @@
 
 Sve značajne promjene u ovom projektu bit će dokumentirane u ovoj datoteci.
 
+---
+
+## [16.10.2026.]
+
+### 🚀 Dodano (Added)
+- **E-080**: Analiza rokova europskih CCS projekata (CINEA / Europska komisija). KOdeCO net zero je jedini projekt "na čekanju" (odgođen s 2028.), dok ostali (Prinos 2029, Ravenna Faza 2 2030, Callisto 2030-2035) idu po planu.
+- **E-081**: Službeni podaci EU Innovation Fund — Project ID 101133120, iznos 116,69 mil. €, nositelj Holcim (Hrvatska) d.o.o. Ključni identifikator za OLAF/EPPO prijavu.
+- **E-082**: Medijski članak (tportal): Pripuz (C.I.O.S.) dobio posao zbrinjavanja rasutog otpada u Gospiću.
+- **E-083**: Medijski članak (Slobodna Dalmacija): PREOKRET — Petar Pripuz izlazi iz posla sanacije otpada u Gospiću!
+- **E-084**: Potvrda o slanju dopune OLAF prijave — Additional evidence: Pripuz withdrawal, EU CCS delays, C.I.O.S. contract (hash: 0D487DBB...).
+- **E-085**: Potvrda o slanju inicijalne dopune OLAF prijave — EU-funded equipment and horizontal principles (hash: DA8BF73F...).
+- **E-086**: Holcimovo priopćenje nakon sjednice Općinskog vijeća Raše (5portal.hr). Ignoriraju političku prirodu odluke Vijeća, ne spominju TOC prekoračenja ni spaljivanje otpada iz Gospića.
+- **E-087**: Video podcasta "Bobu Bob!" (Večernji TV, 17.09.2026.) — župan Ernest Petry priznaje da je "vrh države znao" za otpad u Gospiću.
+- **E-088**: Medijski članak (tportal, 18.09.2026.): "Petry: 'Vrh države znao je za otpad'. O Plenkoviću ipak ne može reći kada je saznao." (hash: F9708B9C...).
+- **E-089**: Medijski članak (24sata, 17.09.2026.): "Petry o aferi u Gospiću: 'Vrh države je znao, ali ne mogu reći kad sam pričao s Plenkovićem'." (hash: 856837C9...).
+
+### 📝 Ažurirano (Changed)
+- **Evidence_Matrix_CANON_v2.csv**: Dodani retci E-080 do E-089 s hashovima i putanjama.
+- **README.md**: Ažuriran odjeljak s novim unosima za 16.10.2026.
+
+### 🎯 Sljedeći koraci (Next Steps)
+- Praćenje zakonskog roka od 15 dana za odgovore na E-078 i E-079 (rok istječe ~30.10.2026.).
+- Priprema pritužbe Povjereniku za informiranje u slučaju institucionalne šutnje.
+- Eskalacija statusa u "INSTITUCIONALNA BLOKADA" i prosljeđivanje dokaza OLAF-u/EPPO-u ako zahtjevi budu ignorirani.
+- Dodavanje novih dokaza o Kaštijunu (sjednica 15.10.2026.) i Petryju u OLAF dopunu.
+
+---
+
 ## [15.10.2026.]
+
 ### 🚀 Dodano (Added)
 - **E-077**: Dodan "MASTER FORENZIČKI STATUS 14.10.2026." kao kanonski kontrolni dokument koji definira pravila zaključivanja i prioritete ZPPI.
 - **E-078**: Dodana evidencija hitne prijave i ZPPI zahtjeva upućenog izravnim voditeljima DIRH-a (Ispostave Pazin, Pula, Rijeka) za hitno uzorkovanje otpada na PFAS i teške metale.
