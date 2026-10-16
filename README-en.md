@@ -1,5 +1,19 @@
 # 🔬 ECOCIDE KOROMAČNO · Interactive Research Dossier & Legal Tool
 
+> **⚡ KOROMAČNO DOSSIER — FORENSIC DOCUMENTATION**
+>
+> This dossier documents the cross-border flow of waste from Italy (Zoffoli Metalli, Gifema, Stena Recycling, Intercommercio, Tellfer) through Slovenia to Croatia, with focus on the Gospić storage site, the Pazin processing hub, and incineration at the Holcim cement plant in Koromačno.
+>
+> **Key facts:**
+> - 576 waste shipments from Italy to Croatia (2022–2024), approx. 12,338 tonnes
+> - 148 exceedances of the TOC limit (35 mg/Nm³ instead of 10 mg/Nm³) at the Koromačno plant
+> - EUR 116.9 million from the EU Innovation Fund (KOdeCO net zero, Project ID: 101133120)
+> - USKOK investigation into C.I.O.S. (Petar Pripuz) for illegal waste trafficking
+>
+> **Legal status:** Open case at OLAF (Ares(2026)9536412), EPPO and DORH (Croatian State Attorney's Office).
+>
+> **Key evidence repository:** https://github.com/Zeljk018Bratic/dosje-koromacno
+
 **Complete forensic, chemical and legal dossier on the Holcim Koromačno case and the Raša Bay.**
 
 > **[🇭🇷 Pročitaj ovaj README na hrvatskom →](README.md)** · **[🇩🇪 Auf Deutsch lesen →](README-de.md)** · **[🇮🇹 Leggi in italiano →](README-it.md)**
