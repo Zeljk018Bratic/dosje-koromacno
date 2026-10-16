@@ -1,5 +1,17 @@
 # 🔬 ECOCIDIO KOROMAČNO · Dossier di Ricerca Interattivo & Strumento Legale
 
+> **⚡ DOSSIER KOROMAČNO — DOCUMENTAZIONE FORENSE**
+>
+> Questo dossier documenta il flusso transfrontaliero di rifiuti dall'Italia (Zoffoli Metalli, Gifema, Stena Recycling, Intercommercio, Tellfer) attraverso la Slovenia verso la Croazia, con particolare attenzione al deposito di Gospić, al centro di trattamento di Pazin e all'incenerimento nella cementeria Holcim di Koromačno.
+>
+> **Dati chiave:**
+> - 576 spedizioni di rifiuti dall'Italia alla Croazia (2022–2024), circa 12.338 tonnellate
+> - 148 superamenti del limite TOC (35 mg/Nm³ invece di 10 mg/Nm³) presso la cementeria di Koromačno
+> - 116,9 milioni di EUR dal Fondo UE per l'Innovazione (KOdeCO net zero, Project ID: 101133120)
+> - Indagine USKOK su C.I.O.S. (Petar Pripuz) per traffico illecito di rifiuti
+>
+> **Stato:** Aperto presso OLAF (Ares(2026)9536412), EPPO e DORH.
+
 **Dossier forense, chimico e legale completo sul caso Holcim Koromačno e sulla Baia di Raša.**
 
 > **HR · [Pročitaj ovaj README na hrvatskom →](README.md)** | **EN · [Read this README in English →](README-en.md)** | **DE · [Auf Deutsch lesen →](README-de.md)**
