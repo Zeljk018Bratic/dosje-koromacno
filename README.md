@@ -40,6 +40,9 @@ Javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija 
 | [MASTER forenzički dosje V2](docs/forenzika/MASTER_DOSJE_V2.md) | MD | Sveobuhvatni pregled |
 | [INDEX](docs/INDEX.md) | MD | Indeks svih dokumenata |
 | [MASTER STATUS 14.10.2026.](docs/MASTER_STATUS_14-10-2026.md) | MD | Sveobuhvatni status dosjea |
+| [Petry — vrh države znao](https://github.com/Zeljk018Bratic/dosje-koromacno/blob/main/docs/evidence/Petry%20o%20aferi%20u%20Gospi%C4%87u_%20'Vrh%20dr%C5%BEave%20je%20znao%2C%20ali%20ne%20mogu%20re%C4%87i%20kad%20sam%20pri%C4%8Dao%20s%20Plenkovi%C4%87em'%20_%2024sata.pdf) | PDF | Dokaz da je vrh države znao za otpad |
+| [Pripuz izlazi iz sanacije](https://github.com/Zeljk018Bratic/dosje-koromacno/blob/main/docs/evidence/Slobodna%20Dalmacija%20%E2%80%94%20PREOKRET%20Petar%20Pripuz%20izlazi%20iz%20posla%20sanacije%20otpada%20u%20Gospi%C4%87u!%3B%20'Ne%20prihva%C4%87amo%20to!'.pdf) | PDF | Povlačenje C.I.O.S.-a iz sanacije |
+| [Holcim priopćenje 15.10.](https://github.com/Zeljk018Bratic/dosje-koromacno/blob/main/docs/Mediji/2026-10-15_5portal_Holcim_priopcenje.md) | MD | Holcim ignorira TOC prekoračenja |
 
 ---
 
@@ -230,7 +233,7 @@ Svi dokumenti, transkripti, audio zapisi, forenzički elaborati i pravni obrasci
 
 ### Windows (CertUtil)
 
-*Posljednje ažuriranje: 15.10.2026.*
+*Posljednje ažuriranje: 16.10.2026.*
 
 ```cmd
 CertUtil -hashfile prijava_dorh.pdf SHA256
@@ -248,4 +251,4 @@ Sadržaj ovog repozitorija služi isključivo informiranju, dokumentiranju i za�
 © Licenca
 Otvoreni sadržaj. Svi dokumenti i analize dostupni su za javnu upotrebu, provjeru i daljnju distribuciju u svrhu zaštite okoliša, zdravlja i javnog interesa.
 
-*Posljednje ažuriranje: 15.10.2026.*
+*Posljednje ažuriranje: 16.10.2026.*
