@@ -1,0 +1,4 @@
+nox_2026-10-29.json	eccca4c4bd8246481c5666d4fa9cba433b7971b4b092d8beaa74366d7617e918	2026-10-29T01:00:29+00:00	https://zrak.infomedica.hr/v1/public/locations/b54fb46b-32b6-4d66-af03-2612faae6deb/series?pollutant=nox&range=year&year=2026
+so2_2026-10-29.json	4dd9bc8c1606a701aeef8fd1043939b002ceb82332baa1c94d22b5d7425cfcba	2026-10-29T01:00:29+00:00	https://zrak.infomedica.hr/v1/public/locations/b54fb46b-32b6-4d66-af03-2612faae6deb/series?pollutant=so2&range=year&year=2026
+pm10_2026-10-29.json	375de32132122e0bfe450b8758fba5f0c332a5b915c02bc4fba0961a3a79a066	2026-10-29T01:00:29+00:00	https://zrak.infomedica.hr/v1/public/locations/b54fb46b-32b6-4d66-af03-2612faae6deb/series?pollutant=pm10&range=year&year=2026
+no2_2026-10-29.json	4ae53675fec72f904ddf4425fd05827d0bd99c6bb1685ad4298f2287cc3840cd	2026-10-29T01:00:29+00:00	https://zrak.infomedica.hr/v1/public/locations/b54fb46b-32b6-4d66-af03-2612faae6deb/series?pollutant=no2&range=year&year=2026

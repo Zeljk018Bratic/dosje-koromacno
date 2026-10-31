@@ -1,0 +1,21 @@
+2026-10-31 14:35:06,772 | INFO     | ============================================================
+2026-10-31 14:35:06,772 | INFO     | KONAČNA KONSOLIDACIJA – 31-10-2026
+2026-10-31 14:35:06,772 | INFO     | MODE: EXECUTE
+2026-10-31 14:35:06,772 | INFO     | ============================================================
+2026-10-31 14:35:06,772 | INFO     | 
+--- 1. RESTORE BAK ---
+2026-10-31 14:35:06,849 | INFO     | RESTORE redgo.haop.hr-vazece-dozvole.md.pre_redact.bak → redgo.haop.hr-vazece-dozvole.md
+2026-10-31 14:35:06,849 | INFO     | RESTORE redgo.haop.hr-vazece-dozvole.md.smart_redact.bak → redgo.haop.hr-vazece-dozvole.md
+2026-10-31 14:35:06,851 | INFO     | 
+--- 2. PAMETNA REDAKCIJA ---
+2026-10-31 14:35:06,972 | INFO     | REDACT docs\02_PRILOZI\ReDGO\redgo.haop.hr-vazece-dozvole.md: OIB=259 IBAN=0 MOB=0
+2026-10-31 14:35:06,988 | INFO     | 
+--- 3. RENAME + LINKOVI ---
+2026-10-31 14:35:07,209 | INFO     | 
+--- 4. AKTIVIZAM ---
+2026-10-31 14:35:07,265 | INFO     | 
+--- 5. ARHIVA SMEĆA ---
+2026-10-31 14:35:07,320 | INFO     | 
+--- 6. ROOT HASH ---
+2026-10-31 14:35:07,544 | INFO     | Datoteka: 40 | ROOT HASH: 2f2ea32f538f83573fd0dd6e08ed29c16cb9eb4d73a891618716fa10960bb140
+2026-10-31 14:35:07,544 | INFO     | JSON: C:\Users\zeljk\dosje-koromacno\tools\izvjestaj_KONACNA_31-10-2026.json

@@ -1,0 +1,6 @@
+Run ID,Naziv Akcije,Status,Zaključak,Pokrenuto (Datum i Vreme),Završeno (Datum i Vreme),Korisnik (Log-in)
+516,pages-build-deployment,completed,success,2026-10-08 05:10:37,2026-10-08 05:11:06,Zeljk018Bratic
+515,pages-build-deployment,completed,success,2026-10-07 22:15:10,2026-10-07 22:15:35,Zeljk018Bratic
+514,pages-build-deployment,completed,success,2026-10-07 18:40:12,2026-10-07 18:40:38,Zeljk018Bratic
+513,pages-build-deployment,completed,success,2026-10-07 14:22:45,2026-10-07 14:23:21,Zeljk018Bratic
+512,pages-build-deployment,completed,cancelled,2026-10-07 11:05:00,2026-10-07 11:06:39,Zeljk018Bratic

@@ -1,0 +1,22 @@
+2026-10-31 14:02:31,486 | INFO     | Log: C:\Users\zeljk\dosje-koromacno\tools\konsolidacija_logovi\recovery_smart_20261031_140231.log
+2026-10-31 14:02:31,486 | INFO     | ======================================================================
+2026-10-31 14:02:31,486 | INFO     | RECOVERY + PAMETNA REDAKCIJA – 31-10-2026
+2026-10-31 14:02:31,486 | INFO     | MODE: EXECUTE
+2026-10-31 14:02:31,486 | INFO     | ======================================================================
+2026-10-31 14:02:31,486 | INFO     | 
+--- 1. RESTAURACIJA IZ .pre_redact.bak ---
+2026-10-31 14:02:31,520 | INFO     | RESTORE: redgo.haop.hr-vazece-dozvole.md.pre_redact.bak → redgo.haop.hr-vazece-dozvole.md
+2026-10-31 14:02:31,537 | INFO     | Vraćeno datoteka: 1
+2026-10-31 14:02:31,537 | INFO     | 
+--- 2. PAMETNA REDAKCIJA (samo privatno) ---
+2026-10-31 14:02:31,658 | INFO     | SMART REDACT docs\02_PRILOZI\ReDGO\redgo.haop.hr-vazece-dozvole.md: OIB=259 IBAN=0 MOB=0
+2026-10-31 14:02:31,672 | INFO     | Redigirano privatnih entiteta: 259
+2026-10-31 14:02:31,672 | INFO     | 
+--- 3. SAŽIMANJE STARIH LOGOVA ---
+2026-10-31 14:02:31,722 | INFO     | Arhivirano logova: 0
+2026-10-31 14:02:31,722 | INFO     | 
+--- 4. FIX AKTIVIZAM LINKOVA ---
+2026-10-31 14:02:31,769 | INFO     | 
+--- 5. ROOT HASH (MARA) ---
+2026-10-31 14:02:32,009 | INFO     | Datoteka: 41 | ROOT HASH: 1b99403fe8e61a1fa9a694f114d220d5ede463eaf26cc963ed855a79a3f92811
+2026-10-31 14:02:32,009 | INFO     | JSON: C:\Users\zeljk\dosje-koromacno\tools\izvjestaj_recovery_smart_31-10-2026.json

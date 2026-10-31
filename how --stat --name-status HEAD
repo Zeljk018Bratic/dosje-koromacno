@@ -1,0 +1,27 @@
+[33mcommit 6ff2f88d90da74715f3dae5e95a7f32657e955a3[m
+Author: Zeljk018Bratic <117226289+Zeljk018Bratic@users.noreply.github.com>
+Date:   Thu Oct 15 09:10:59 2026 +0200
+
+    Riješen konflikt MASTER_STATUS_14-10-2026
+
+A	13 10 2026 - 2. dio, 12. sjednica Hrvatskoga sabora, 11. saziv 2026-10-13 18_46 [N1BhDnXILqY].mp3
+M	Evidence_Matrix_CANON_v2.csv
+M	docs/MASTER_STATUS_14-10-2026.md
+R100	"docs/evidence/Gmail -send- PREDMET_ Predstavka \342\200\224 zahtjev za inspekcijski nadzor postupanja s otpadom iz Gospi\304\207a (lokacija Pazin).pdf"	"docs/Slanje_Dokaza_13-10-2026/Gmail -send- PREDMET_ Predstavka \342\200\224 zahtjev za inspekcijski nadzor postupanja s otpadom iz Gospi\304\207a (lokacija Pazin).pdf"
+R100	"docs/evidence/Gmail - PREDMET_ Predstavka \342\200\224 zahtjev za inspekcijski nadzor postupanja s otpadom iz Gospi\304\207a (lokacija Pazin).pdf"	docs/Slanje_Dokaza_13-10-2026/Prosljedivanje_MZOZT_DIRH.pdf
+A	"docs/Slanje_Dokaza_15_10_2026/Gmail - Predmet_ HITNA PRIJAVA I ZPPI_ Sumnja na nezakonito mije\305\241anje i transport otpada (Pazin \342\200\223 Koroma\304\215no) + Zahtjev za hitno uzorkovanje - Kopie (2).pdf"
+A	"docs/Slanje_Dokaza_15_10_2026/Gmail - Predmet_ HITNA PRIJAVA I ZPPI_ Sumnja na nezakonito mije\305\241anje i transport otpada (Pazin \342\200\223 Koroma\304\215no) + Zahtjev za hitno uzorkovanje - Kopie.pdf"
+A	"docs/Slanje_Dokaza_15_10_2026/Gmail - Predmet_ HITNA PRIJAVA I ZPPI_ Sumnja na nezakonito mije\305\241anje i transport otpada (Pazin \342\200\223 Koroma\304\215no) + Zahtjev za hitno uzorkovanje.pdf"
+A	"docs/Slanje_Dokaza_15_10_2026/Gmail - Predmet_ ZPPI_ Hitni zahtjev za dostavu nalaza _neovisnog akreditiranog laboratorija_ za otpad iz Gospi\304\207a (Ref_ O\304\215itovanje Holcima od 14.10.2026.) - Kopie (2).pdf"
+A	"docs/Slanje_Dokaza_15_10_2026/Gmail - Predmet_ ZPPI_ Hitni zahtjev za dostavu nalaza _neovisnog akreditiranog laboratorija_ za otpad iz Gospi\304\207a (Ref_ O\304\215itovanje Holcima od 14.10.2026.) - Kopie.pdf"
+A	"docs/Slanje_Dokaza_15_10_2026/Gmail - Predmet_ ZPPI_ Hitni zahtjev za dostavu nalaza _neovisnog akreditiranog laboratorija_ za otpad iz Gospi\304\207a (Ref_ O\304\215itovanje Holcima od 14.10.2026.).pdf"
+A	docs/evidence/MASTER_STATUS_14-10-2026.md
+A	"docs/evidence/Op\304\207ina Ra\305\241a odbacila Holcimov projekt KOdeCO Net Zero i tra\305\276i njegovo uklanjanje sa strate\305\241ke liste.pdf"
+A	"docs/evidence/POBJEDA GRA\304\220ANA U RA\305\240I! Vije\304\207nici jednoglasno izglasali odluku protiv Holcimovog KOdeCO projekta! - Istra24 - Kopie (2).pdf"
+A	"docs/evidence/POBJEDA GRA\304\220ANA U RA\305\240I! Vije\304\207nici jednoglasno izglasali odluku protiv Holcimovog KOdeCO projekta! - Istra24 - Kopie.pdf"
+A	"docs/evidence/POBJEDA GRA\304\220ANA U RA\305\240I! Vije\304\207nici jednoglasno izglasali odluku protiv Holcimovog KOdeCO projekta! - Istra24.pdf"
+A	"docs/evidence/Tematska sjednica u Ra\305\241i_ KodeCO net zero - YouTube.pdf"
+A	"docs/evidence/Traffic \302\267 Zeljk018Bratic_dosje-koromacno.pdf"
+A	"docs/mediji/Gmail - Kontradikcija_ Plenkovi\304\207 tvrdi da dogovara s Istrom, Bla\305\241kovi\304\207 ga demantira \342\200\223 tra\305\276imo o\304\215itovanje.pdf"
+A	transkript.py
+A	transkript_sabora.txt

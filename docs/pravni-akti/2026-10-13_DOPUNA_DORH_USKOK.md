@@ -1,0 +1,17 @@
+# DOPUNA KAZNENE PRIJAVE / PRIOPĆENJE NOVIH DOKAZA — DORH (ODO Pula) i USKOK
+**Predmet:** Dopuna kaznene prijave od 09.10.2026. (čl. 193. KZ i dr.) — dostava novih materijalnih dokaza iz javnih izvora
+**Za:** DORH / ODO Pula; USKOK (kopija) · **Podnositelj:** [ime, kontakt] · **Datum:** [datum]
+
+Poštovani,
+uz prijavu iz predmeta dostavljam nove materijalne dokaze objavljene/imajuće u javnom optjecaju, uz napomenu da ih podnosim **kao dokazne podatke iz službenih i javnih izvora, bez vlastitih pravnih kvalifikacija**:
+
+1. **Nalaz i mišljenje vještaka zaštite okoliša (Sveučilište u Zagrebu, Geotehnički fakultet) za lokaciju Gospić, Bilajska 50**, kojim su u podzemnim vodama nizvodno od nezakonito odloženog otpada utvrđeni PFAS spojevi i povišene koncentracije teških metala; nalaz je objavilo Državno odvjetništvo (izjava glavnog državnog odvjetnika od 29.08.2026.). Preslika javno dostupnog PDF-a u prilogu (SHA-256 274dd4976e7ba3bb34ba4247ca8b50968a40ac3adad267b583353c9fc67462d2, 22,6 MB, preuzeto s uskok.hr 13.10.2026.).
+2. **Video-isječak izjave bivšeg župana ličko-senjskog D. Milinovića „Ako je plastika, ok, neka ga tu"** (razdoblje 2019.–2021.), kako ga je 13.10.2026. objavio Most (FB), uz tvrdnju da se najveća iskrcavanja otpada odvijala u tom razdoblju. Isječak dostavljam kao **indikaciju**; od Mosta sam zatražio provenijenciju i cjelovitu snimku s naznakom emisije i datuma, a od emitra arhivsku verziju — dostavit ću čim budu pribavljene, kako se izjava ne bi vrednovala izvan konteksta.
+3. **Činjenicu da je Holcim Hrvatska 28.08.2026. prihvatila prijedlog lokalne zajednice o novoj lokaciji luke** (jugostočna strana tvornice; Radio Labin, 28.08.2026.) uz istodobno povlačenje studije utjecaja na okoliš — radi utvrđenja obuhvata i vremenskog slijeda zahvata u lancu Koromačno.
+4. **Dopunu nalaza o PFAS spojevima u podzemnim vodama** (objava 06.08.2026., likaclub/USKOK komunikacija) te reakciju HZJZ-a od 12.08.2026. i priopćenje od 08.09.2026. o vodi za ljudsku potrošnju (PFAS ispod granice određivanja) — radi cjelovite slike bez odabira povoljnijeg nalaza.
+
+5. **Plan sanacije lokacije PPK Velebit (MZOZT, IX/2026.; javni PDF, SHA-256 73f672d2ce709aa3bda6d4133cedd82ae6de9875f215dd33d967f33823d8f7bf)** za Fazu 1 (rasuti opasni otpad uz silos, ~4.500 t, KB 19 12 11*, k.č. 591/3, 599/4 i 599/18 k.o. Divoselo; procjena 270.000 EUR bez PDV-a) propisuje zbrinjavanje na odlagalište opasnog otpada ili prethodnu obradu uz dokazivo uklanjanje opasnih svojstava, uz mogućnost energetske oporabe tek sukladno toč. 3.2.4. Plana; za prijevoz plan izriče obvezu notifikacijskog postupka za prekogranični promet opasnog otpada (uključujući opciju pomorskog transporta preko luke Rijeka). Javno dokumentirani tok (Radna skupina IŽ 07.10.2026.; Grad Pazin 08.10.2026.) vodi gospićki otpad kroz predobradu u Pazinu (Sekundar usluge) i suspaljivanje u Koromačnu pod KB 19 12 10. Molim da se utvrdi koja je faza i koji KB stvarno isporučen u Pazin/Koromačno te postoje li za to propisani popratni dokumenti: odstupanje stvarnog toka od vlastitog plana sanacije neka ocijene nadležna tijela, a ne podnositelj.
+
+Molim da se navedeno uvrsti u spis predmeta te da mi se, sukladno ZKP-u, dostavi obavijest o radnjama poduzetima povodom dopune. Spreman sam dostaviti sve izvornike i hash-verificirane kopije.
+S poštovanjem, [potpis]
+**Prilozi:** 1. PDF vještačenja (hash gore); 2. isječak/link objave Mosta; 3. ispis radiolabin.hr 28.08.2026.; 4. HZJZ priopćenja.

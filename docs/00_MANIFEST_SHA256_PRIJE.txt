@@ -1,0 +1,46 @@
+# SHA-256 MANIFEST
+# root=C:\Users\zeljk\dosje-koromacno
+# generated_utc=2026-10-31T08:19:40Z
+# algorithm=SHA256
+# excludes=.git
+# key_evidence_only=False
+# format=SHA256  RELATIVE_PATH
+# note=2026-10-31: 5 files moved to C:\Users\zeljk\dosje-koromacno_BACKUP\_ARHIVA_2026 (hashes of remaining files unchanged)
+#
+4889b9e9bfd46d38ed5f0733fc62d376cdcf9e3cc2c2f23276f855fa5c4dcfba  .github\copilot-instructions.md
+94d1d02a49a35f523d04fea2cab7a4b48713f9c2b59311229eee95a131188b34  .gitignore
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  .nojekyll
+b6532679097fff8606704a5026ad820000f0817fea107ccf7b8356bcd385ead2  docs\00_FAKTICKI_DOSJE.md
+72bff0c20b85f5c448c9b9e6a9c4f9ea7744fdb884fee10ff70283b4b92ce884  docs\01_REGISTAR_TVRDNJI.csv
+73f672d2ce709aa3bda6d4133cedd82ae6de9875f215dd33d967f33823d8f7bf  docs\02_PRILOZI\2026-09-21_MZOZT_PLAN-sanacija-PPK-Velebit.pdf
+d490ebf971a94eaf10ab630600cf4bb5ba574d5d76eb360f68c5cbc1b2110af3  docs\02_PRILOZI\2026-10-02_CINEA_FACTSHEET_KOdeCO-101133120.pdf
+794f73968f21a832e6da9dec5b363fc9781a36ba34673b0877a3e4ae5989cc5d  docs\02_PRILOZI\MANIFEST_SHA256.txt
+a1543a16624196031a75b20a9473a883e2a8dca9d7228a506e2c9cd96cfc6499  docs\02_PRILOZI\ReDGO\HOLCIM_doo_13.6.2024._Dozvola.pdf
+9b71740090dd3c40a82532bb190316e1af08071d8dad0b78280b432de6136788  docs\02_PRILOZI\ReDGO\HOLCIM_doo_14.3.2025._Dozvola.pdf
+399f18d840d73b76134353593757d0bf7fc37efb7f7573354d626cba1a1b9892  docs\02_PRILOZI\ReDGO\HOLCIM_doo_24.4.2024._Dozvola.pdf
+ccb0f69cd650427808dd5348e8fd6493463b4ffb103feb3e19dcd1e9bfc645c8  docs\02_PRILOZI\ReDGO\KAŠTIJUN_doo_21.11.2023._Dozvola.pdf
+2c0ccb92e481fa4c1578b602c99bf2550acc057b4447abfba8ed4371634563f5  docs\02_PRILOZI\ReDGO\redgo.haop.hr-vazece-dozvole.md
+4876c445b2f281632a1f473f7589b3aebffc95736cea34d30411f6eff750255a  docs\02_PRILOZI\ReDGO\RjesenjeElaborat Remondis 2025.pdf
+13701c40116ad4edcac7e178119bde01b9c666e71fdb57806fc13774141273c2  docs\02_PRILOZI\ReDGO\RjesenjeElaborat Remondis 2026.pdf
+5dddcdb77c7416a7a5a4809c6945fb20c72d8c3fb03279672ef04e0747ef9b12  docs\02_PRILOZI\ReDGO\RjesenjeElaborat -Sekundar Usluge-163-08-024-25-10.pdf
+95b4b2b613b9658d318c334b8122eff0fa7b0ca8e8f862a2d211f002839f55ca  docs\02_PRILOZI\ReDGO\SEKUNDAR_USLUGE_doo_30.12.2021._Dozvola.pdf
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs\03_ZPPI\.gitkeep
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  docs\04_PRAVNI_AKTI\.gitkeep
+d3b8e518c27ca7bc526a794a285acbd151fe3db6cbc72d9e8c9eae256ba591ee  docs\05_KRONOLOGIJA.csv
+62422fb3d3b2d26284b5a243eb433d3de7267b3a013afbbf37745f33a0254a2b  index.html
+9a42aa18b214cca9c5aeb25eca8193d62880b8af0159a6ca68b1f7d9e34dd83b  index_dosje_koromacno\dokaz_01_koromacno.png
+8789925176f46860d2586fef4316643414635db87c968e750315b025201513fb  index_dosje_koromacno\index_dosje_koromacno.html
+4eaa9fe62095fa1c46f409fabda860a6ef8f6408fde3e0095d993918bb90d569  index-de.html
+4e54e402cafba292909a3cf4f0c4b7c463c21f97f8710959365b6f65df4e8f1c  index-en.html
+eac0c812466685b4c23b46167765017613fc80abf9ac5156f6dd8be52abe5664  index-it.html
+0ca46da7e484ca0ac392c6fde6701557ead95904bbeb54fd74aa3ac0dfcde0a7  README.md
+72222fc78d6619106124905b01ccb7f3b6cc178d50e28c71ab2cbf19bde86ed6  README-de.md
+1537208af69e750f1273db247ad1a1b1878ac96d519535d9101f93968cf5261c  README-en.md
+96a1c6e134101845b24b100d8b7cc97666c6c9c77ced1f350731d42688dc8e88  README-it.md
+5af0ce8db2516d9620be9ee30710275c19f3ae19e5b93b5a0671bfa88f05a127  tools\hash_sha256.ps1
+#
+# file_count=31
+# bytes=82824351
+# elapsed_seconds=0,73
+# moved_out=5
+# moved_bytes=3379449

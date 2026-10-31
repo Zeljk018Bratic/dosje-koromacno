@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-31T14:02:32.009738",
+  "mode": "execute",
+  "restored_from_bak": 1,
+  "private_redacted": {
+    "oib": 259,
+    "iban": 0,
+    "mobile": 0,
+    "files": 1
+  },
+  "archived_logs": [],
+  "aktivizam_fixed": [],
+  "root_hash": "1b99403fe8e61a1fa9a694f114d220d5ede463eaf26cc963ed855a79a3f92811"
+}
