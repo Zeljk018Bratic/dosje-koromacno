@@ -1,0 +1,7 @@
+﻿=== POCETAK 10/14/2026 12:19:18 ===
+Backup matrice spremljen.
+Nadeno PDF-ova: 58
+Nema duplikata po hash-u.
+Azurirano 0 redova u Evidence_Matrix.csv
+=== KRAJ 10/14/2026 12:19:19 ===
+Log: C:\Users\zeljk\dosije-koromacno\cleanup_log_20261014_121917.txt
