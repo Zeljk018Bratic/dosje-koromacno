@@ -177,6 +177,31 @@ Tutti i documenti, le trascrizioni, le registrazioni audio, i rapporti forensi e
 
 ---
 
+⚖️📜 AVVISO LEGALE E ESCLUSIONE DI RESPONSABILITÀ
+
+1. Natura informativa dei contenuti e interesse pubblico
+Tutti i contenuti pubblicati su questo sito web ("Koromačno File") hanno l'unico scopo di informare il pubblico su questioni di eccezionale interesse collettivo: tutela dell'ambiente, salute dei cittadini, trasparenza nella gestione dei rifiuti e legalità delle attività di impianti industriali. I contenuti si basano su dati di pubblico dominio, documenti ufficiali, normativa vigente e ricerche autonome.
+
+2. Accuratezza e verifica dei dati
+L'autore si impegna a operare con la dovuta diligenza affinché tutte le informazioni risultino accurate e complete al momento della pubblicazione. Tuttavia, poiché i contenuti si basano su documenti provenienti da terze parti, non si assume alcuna responsabilità per eventuali errori involontari, omissioni o inesattezze nei dati tratti da registri ufficiali, organi di informazione o altre fonti esterne.
+
+3. Esclusione di responsabilità per danni
+Ai sensi della Legge sui rapporti obbligatori (art. 154) e della Legge sui media (art. 4, comma 4), l'autore non è responsabile per eventuali danni derivanti dall'utilizzo o dall'interpretazione delle informazioni presenti in questo sito, salvo nei casi di dolo o colpa grave accertati. I contenuti qui pubblicati hanno finalità puramente informative e non costituiscono, in alcun caso, consulenza legale, medica o finanziaria. Si raccomanda di consultare esperti qualificati prima di prendere decisioni basate su tali dati.
+
+4. Diritto di rettifica e replica
+Ai sensi della Legge sui media, chiunque – persona fisica o giuridica – ritenga che le informazioni pubblicate siano errate o che i propri diritti siano stati lesi, ha facoltà di richiedere la pubblicazione di una rettifica o di una replica. Le richieste di rettifica possono essere inviate all'indirizzo e-mail: zeljkobratic@[dominio].com. Qualora la richiesta risulti fondata, la rettifica verrà pubblicata nel minor tempo possibile.
+
+5. Diritto d'autore e utilizzo
+Tutti i documenti, le analisi e il materiale tecnico-investigativo pubblicati sono messi a disposizione del pubblico per finalità legate alla tutela dell'ambiente, della salute e dell'interesse collettivo. Si richiede di citare sempre la fonte (inserendo un link a questa pagina) qualora i contenuti vengano utilizzati.
+
+6. Link esterni
+Il presente sito contiene collegamenti a risorse esterne (ad esempio registri ufficiali, portali di informazione, GitHub). L'autore non controlla il contenuto di tali pagine e non si assume alcuna responsabilità in merito.
+***
+Il contenuto di questo archivio ha il solo scopo di informare, documentare e tutelare l'interesse pubblico. Tutti i documenti e i dati provengono da fonti pubbliche e/o da archivi propri. Il materiale qui presente non costituisce consulenza legale. Per intraprendere azioni legali, si prega di consultare un avvocato qualificato.
+***
+---
+
+
 ## © Licenza
 
 Contenuto aperto. Tutti i documenti e le analisi sono disponibili per uso pubblico, verifica e ulteriore distribuzione allo scopo di proteggere l'ambiente, la salute e l'interesse pubblico.

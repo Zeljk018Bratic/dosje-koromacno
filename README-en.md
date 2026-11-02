@@ -178,6 +178,30 @@ All documents, transcripts, audio recordings, forensic reports and legal templat
 [Read the manifesto](manifest.html) – "THEY DIDN'T BREAK US"
 
 ---
+⚖️📜 LEGAL NOTICE AND DISCLAIMER
+
+1. Informative nature of the content and public interest
+All content published on this website (Koromačno File) serves the sole purpose of informing the public about issues of exceptional public interest: environmental protection, citizens' health, transparency of waste management and the legality of the operation of industrial plants. The content is based on publicly available data, official documents, laws and own research.
+
+2. Accuracy and verification of data
+The author undertakes to act with due care so that all information is accurate and complete at the time of publication. However, the content is based on third-party documents, and no responsibility is assumed for any unintentional errors, omissions or inaccuracies in data taken from official registers, the media or by third parties.
+
+3. Exclusion of liability for damages
+In accordance with the Law on Obligatory Relations (Art. 154) and the Law on Media (Art. 4, Paragraph 4), the author is not responsible for any damage that may arise from the use or interpretation of information from this page, except in the case of proven intent or gross negligence. The content on this page is for informational purposes only and does not constitute legal, medical or financial advice under any circumstances. For making decisions based on this data, please consult authorized experts.
+
+4. Right to correction and reply
+Pursuant to the Law on Media, any natural or legal person who believes that the published information is incorrect or that their rights have been violated, has the right to publish corrections or answers. Please send correction requests directly to e-mail: zeljkobratic@[domain].com. In the case of a well-founded request, the correction will be published as soon as possible.
+
+5. Copyright and Use
+All published documents, analyzes and forensic materials are available for public use for the purpose of protecting the environment, health and public interest. Please be sure to mention the source (link to this page) when using the content.
+
+6. External links
+This page contains links to external websites (eg official registries, media portals, GitHub). The author does not control the content of those pages and assumes no responsibility for their content.
+***
+The content of this repository serves exclusively to inform, document and protect the public interest. All documents and data are collected from public sources and/or own records. This is not legal advice. Consult a qualified attorney to take legal action.   ***
+
+---
+
 
 ## © License
 

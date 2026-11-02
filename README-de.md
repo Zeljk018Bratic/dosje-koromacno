@@ -178,6 +178,29 @@ Alle Dokumente, Transkripte, Audioaufnahmen, forensischen Berichte und rechtlich
 [Lies das Manifest](manifest.html) – "SIE HABEN UNS NICHT GEBROCHEN"
 
 ---
+⚖️📜 RECHTLICHER HINWEIS UND HAFTUNGSAUSSCHLUSS
+
+1. Informativer Charakter der Inhalte und öffentliches Interesse
+Alle auf dieser Website („Koromačno-Dossier“) veröffentlichten Inhalte dienen ausschließlich dazu, die Öffentlichkeit über Themen von besonderem öffentlichem Interesse zu informieren: Umweltschutz, Gesundheit der Bürger, Transparenz in der Abfallwirtschaft sowie die Rechtmäßigkeit des Betriebs von Industrieanlagen. Die Inhalte basieren auf öffentlich zugänglichen Daten, offiziellen Dokumenten, Gesetzen und eigenen Recherchen.
+
+2. Genauigkeit und Überprüfung der Daten
+Der Autor verpflichtet sich, mit der gebotenen Sorgfalt sicherzustellen, dass alle Informationen zum Zeitpunkt der Veröffentlichung korrekt und vollständig sind. Da die Inhalte jedoch auf Dokumenten Dritter beruhen, wird keine Haftung für unbeabsichtigte Fehler, Auslassungen oder Ungenauigkeiten in Daten übernommen, die aus offiziellen Registern, Medien oder von Dritten stammen.
+
+3. Haftungsausschluss
+Gemäß dem Gesetz über Schuldverhältnisse (Art. 154) und dem Mediengesetz (Art. 4, Abs. 4) haftet der Autor nicht für Schäden, die aus der Nutzung oder Interpretation der auf dieser Seite bereitgestellten Informationen entstehen könnten – es sei denn, es liegt nachweislich Vorsatz oder grobe Fahrlässigkeit vor. Die Inhalte dieser Seite dienen ausschließlich Informationszwecken und stellen keinesfalls eine Rechts-, Medizin- oder Finanzberatung dar. Bitte konsultieren Sie bei Entscheidungen, die auf diesen Daten basieren, entsprechende Fachleute.
+
+4. Recht auf Berichtigung und Gegendarstellung
+Gemäß dem Mediengesetz hat jede natürliche oder juristische Person, die der Ansicht ist, dass veröffentlichte Informationen unrichtig sind oder ihre Rechte verletzt wurden, das Recht auf Veröffentlichung einer Berichtigung oder Gegendarstellung. Bitte richten Sie entsprechende Anfragen direkt an die E-Mail-Adresse: zeljkobratic@[domain].com. Bei einem begründeten Antrag wird die Berichtigung schnellstmöglich veröffentlicht.
+
+5. Urheberrecht und Nutzung
+Alle veröffentlichten Dokumente, Analysen und forensischen Materialien stehen der Öffentlichkeit zum Zwecke des Umwelt- und Gesundheitsschutzes sowie zur Wahrung des öffentlichen Interesses zur Verfügung. Bitte geben Sie bei der Verwendung der Inhalte stets die Quelle an (mit Link zu dieser Seite).
+
+6. Externe Links
+Diese Seite enthält Links zu externen Websites (z. B. offizielle Register, Medienportale, GitHub). Der Autor hat keinen Einfluss auf die Inhalte dieser Seiten und übernimmt keine Verantwortung für deren Inhalt.
+***
+Der Inhalt dieses Repositorys dient ausschließlich der Information, Dokumentation und dem Schutz des öffentlichen Interesses. Sämtliche Dokumente und Daten stammen aus öffentlichen Quellen und/oder eigenen Unterlagen. Dies stellt keine Rechtsberatung dar. Bitte konsultieren Sie einen qualifizierten Rechtsanwalt, falls Sie rechtliche Schritte einleiten möchten. ***
+
+---
 
 ## © Lizenz
 
