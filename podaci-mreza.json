@@ -1,0 +1,58 @@
+{
+  "nodes": [
+    { "id": 1, "label": "Holcim Koromačno\n(KO2 / Codeco)", "group": "industrija" },
+    { "id": 2, "label": "Remondis Medison d.o.o.\n(Logistički Centar)", "group": "industrija" },
+    { "id": 3, "label": "MZOZT\n(Ministarstvo Okoliša)", "group": "institucije" },
+    { "id": 4, "label": "DIRH\n(Državni Inspektorat)", "group": "institucije" },
+    { "id": 5, "label": "SOA\n(Obavještajna Agencija)", "group": "institucije" },
+    { "id": 6, "label": "DORH / USKOK\n(Pravosuđe & Spis 2013)", "group": "institucije" },
+    { "id": 7, "label": "ŽCGO Kaštijun\n(Istarski SRF Tok)", "group": "lokacije" },
+    { "id": 8, "label": "Gospić\n(PPK Velebit - Silosi)", "group": "lokacije" },
+    { "id": 9, "label": "Jakuševac & Kemis\n(Povijesni Otpadni Tok)", "group": "lokacije" },
+    { "id": 10, "label": "Brodarski Institut\n(Tehnička Dokumentacija)", "group": "instituti" },
+    { "id": 11, "label": "Usklađeni Logistički Operater (S_K)\n(Sudska Pobjeda - 26.562€)", "group": "dokazi" }
+  ],
+  "edges": [
+    { "from": 7, "to": 1, "label": "Preusmjeravanje SRF-a" },
+    { "from": 8, "to": 1, "label": "Pazinski Članak 1." },
+    { "from": 2, "to": 1, "label": "Logistička matrica i preuzimanje" },
+    { "from": 2, "to": 11, "label": "Izgubljen sudski spor (Pr-2077/2022)" },
+    { "from": 11, "to": 6, "label": "Predan dokazni materijal i prijave" },
+    { "from": 9, "to": 2, "label": "Gospodarenje medicinskim otpadom" },
+    { "from": 10, "to": 2, "label": "Stručne analize i ugovori" },
+    { "from": 5, "to": 6, "label": "Obavještajni briefovi (Slučaj Lika 2022)" },
+    { "from": 6, "to": 2, "label": "Istraga i spisi (KR-DO 1027/13)" }
+  ],
+  "details": {
+    "1": {
+      "title": "Holcim Koromačno (Projekt KO2 / Codeco)",
+      "meta": "KLASA: UP/I-351-03/25-08/46 | URBROJ: 517-04-1-1-26-30",
+      "body": "<b>Tehnološki krah i suspaljivanje:</b> Industrijsko jezgro sustava. Sinkronizirano s regionalnim operaterima preuzima otpadne tokove. Zabilježen drastičan skok emisija (10 do 15 puta) i prekoračenja TOC-a, uz prisilu sustava i proboj građanske blokade od strane interventne policije 30.09.2026."
+    },
+    "2": {
+      "title": "Remondis Medison d.o.o. (Logistička Matrica)",
+      "meta": "REGISTAR DOKAZA: SK-004, SK-006, SK-010, SK-016",
+      "body": "<b>Modus Operandi preuzimanja:</b> Izravno povezan s povijesnim upravnim aktima i dozvolama za gospodarenje otpadom (Dozvola iz 2015., ugovori s Mollierom o najmu skladišta, promemorije problema iz 2014.). Korporativna struktura koja kroz logističke koridore miješa i priprema industrijske i medicinske frakcije otpada za krajnje peći."
+    },
+    "6": {
+      "title": "DORH / USKOK (Pravosudni spisi i ladice)",
+      "meta": "SPIS: KR-DO 1027/13 | K-DO-200/15 | KPO-DO-11/15",
+      "body": "<b>Institucionalna crna rupa:</b> Evidentirane prijave DORH-u i USKOK-u još iz 2013. godine, uključujući krakove prema Jakuševcu i Kemisu (2011.). Unatoč opsežnoj predanoj dokumentaciji o nepravilnostima u izdavanju dozvola i postupanju inspekcija (Podnesak SK-001 i SK-005), predmeti su godinama držani u administrativnom zastoju bez neovisne verifikacije."
+    },
+    "9": {
+      "title": "Jakuševac & Kemis (Izvorišta i tokovi)",
+      "meta": "DOKUMENT: SK-001 / DORH-Jakuševac (1).docx",
+      "body": "<b>Forenzika otpadnih ruta:</b> Rane administrativne prijave i podnesci iz 2011. i 2013. detaljno opisuju nepropisne rute kretanja i obrade medicinskog i opasnog industrijskih otpada na lokacijama Jakuševac i Kemis, sumnjive inspekcijske nalaze i administrativne tragove koji prethode današnjem modelu u Koromačnu."
+    },
+    "10": {
+      "title": "Brodarski Institut (Tehnički elaborati)",
+      "meta": "DOKUMENT: SK-006 / EGO-REMONDIS-Brodarski_institut.pdf",
+      "body": "<b>Stručna verifikacija:</b> Službeni dokumenti i tehnička ispitivanja rađena u suradnji s Brodarskim institutom. Predstavljaju ključni tehnički dokaz i metodologiju za ocjenu stvarnog sastava materijala i procesnih operacija u logističkom lancu, koje je operater kasnije pokušao osporiti odustajanjem od IT vještačenja."
+    },
+    "11": {
+      "title": "Usklađeni Logistički Operater (Sudski Presedan)",
+      "meta": "PRESUDA: Općinski radni sud u Zagrebu | Poslovni broj: Pr-2077/2022-132",
+      "body": "<b>Pravna pobjeda i slom tužitelja:</b> Presudom datiranom 28.10.2024. (nakon rasprave 02.10.2024.), Sud u potpunosti **odbija tužbeni zahtjev Remondis Medison d.o.o.** i nalaže im plaćanje parničnog troška tuženoj u iznosu od <b>26.562,50 EUR</b>. Remondis je odustao od IT vještačenja jer nije mogao dokazati navode o neovlaštenom pristupu, čime je stvorena ključna pravna poluga za obranu prava zviždača i oštećenika."
+    }
+  }
+}
