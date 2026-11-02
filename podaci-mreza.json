@@ -6,12 +6,12 @@
     { "id": "dirh", "label": "DIRH\n(Državni Inspektorat)", "group": "institucije" },
     { "id": "soa", "label": "SOA\n(Obavještajna Agencija)", "group": "institucije" },
     { "id": "doh", "label": "DORH\n(Državno odvjetništvo)", "group": "institucije" },
-    { "id": "mup", "label": "MUP\n(Granična Policija)", "group": "institucije" },
     { "id": "kastijun", "label": "ŽCGO Kaštijun\n(Istarski SRF Tok)", "group": "lokacije" },
     { "id": "gospic", "label": "Gospić\n(PPK Velebit - Silosi)", "group": "lokacije" },
     { "id": "jakusevac", "label": "Jakuševac / Kemis Termoclean\n(Medicinski otpad)", "group": "lokacije" },
     { "id": "brodarski", "label": "Brodarski institut\n(Elaborati i analize)", "group": "instituti" },
-    { "id": "logistika", "label": "Usklađeni Logistički Operater\n(S_K)", "group": "industrija" }
+    { "id": "logistika", "label": "Usklađeni Logistički Operater\n(S_K)", "group": "industrija" },
+    { "id": "elaborat", "label": "USPOREDNI DOKAZNI ELABORAT\n(Sinergija i Lanac Dokaza)", "group": "instituti" }
   ],
   "edges": [
     { "from": "jakusevac", "to": "logistika", "label": "Transport opasnog otpada" },
@@ -24,7 +24,9 @@
     { "from": "soa", "to": "mup", "label": "Navodna obavijest 2022." },
     { "from": "soa", "to": "doh", "label": "Navodna obavijest 2022." },
     { "from": "mzozt", "to": "holcim", "label": "Dozvole i ignoriranje GVE" },
-    { "from": "dirh", "to": "holcim", "label": "Propust inspekcije" }
+    { "from": "dirh", "to": "holcim", "label": "Propust inspekcije" },
+    { "from": "elaborat", "to": "doh", "label": "Dokazni lanac za kazneni postupak" },
+    { "from": "holcim", "to": "elaborat", "label": "Analiza uzroka i posljedica" }
   ],
   "details": {
     "holcim": {
@@ -54,13 +56,8 @@
     },
     "doh": {
       "title": "🟡 DORH (Državno odvjetništvo)",
-      "meta": "STATUS: INSTITUCIONALNI ŠTIT",
-      "body": "Kategorički potvrđuje da mu SOA nije dostavila nikakvo izvješće o sumnjivom odlaganju opasnog otpada u Lici tijekom 2022. ili 2023. godine."
-    },
-    "mup": {
-      "title": "🟡 MUP (Ministarstvo unutarnjih poslova)",
-      "meta": "STATUS: INSTITUCIONALNI ŠTIT // DEMANTI",
-      "body": "Granična kontrola i policijske uprave. Kategorički negiraju primitak operativnih dokumenata i obavijesti od SOA-e iz 2022. godine vezanih uz nelegalne otpadne rute."
+      "meta": "STATUS: INSTITUCIONALNI ŠTIT // KAZNENI PROGON",
+      "body": "Zaprimatelj kaznene prijave na temelju članka 193. i 196. KZ-a (Ugrožavanje okoliša otpadom). Usporedni elaborat dokazuje izravni umišljaj operatera i nemar inspekcije kroz materijalne dokaze s terena."
     },
     "kastijun": {
       "title": "🔵 ŽCGO Kaštijun (Istarski SRF Tok)",
@@ -86,6 +83,11 @@
       "title": "🔴 Usklađeni Logistički Operater (S_K)",
       "meta": "STATUS: POSREDNIK // ZAŠTIĆENI IDENTITET",
       "body": "Anonimizirani čvor koji predstavlja ključne logističke i pravne operacije preuzimanja, miješanja i transporta otpada prema cementari. Ime operatera je namjerno izostavljeno u javnom prikazu radi pravne zaštite, ali dokazni lanac (ugovori, CMR-i, e-ONTO) ostaje 100% netaknut."
+    },
+    "elaborat": {
+      "title": "🟣 USPOREDNI DOKAZNI ELABORAT I SINERGIJA DVAJU DOKUMENATA",
+      "meta": "DOKUMENT: docs/forenzika/usporedni-dokazni-elaborat.md",
+      "body": "<b>Neraskidiv dokazni lanac za DORH:</b> Spaja sistemski uzrok (lažno deklariranje uvoznog heterogenog RDF/SRF-a kroz <i>End-of-Waste</i> rupu) i dokazane posljedice s terena (službeni Zapisnik OV Raša od 21.09.2026., audio izjave A. Bedrine, L. Knapića i M. Plazibata o skoku emisija predkalcinatora 10 do 15 puta i dvostrukom prekoračenju TOC-a)."
     }
   }
 }
