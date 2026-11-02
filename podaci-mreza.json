@@ -6,6 +6,7 @@
     { "id": "dirh", "label": "DIRH\n(Državni Inspektorat)", "group": "institucije" },
     { "id": "soa", "label": "SOA\n(Obavještajna Agencija)", "group": "institucije" },
     { "id": "doh", "label": "DORH\n(Državno odvjetništvo)", "group": "institucije" },
+    { "id": "mup", "label": "MUP\n(Granična Policija)", "group": "institucije" },
     { "id": "kastijun", "label": "ŽCGO Kaštijun\n(Istarski SRF Tok)", "group": "lokacije" },
     { "id": "gospic", "label": "Gospić\n(PPK Velebit - Silosi)", "group": "lokacije" },
     { "id": "jakusevac", "label": "Jakuševac / Kemis Termoclean\n(Medicinski otpad)", "group": "lokacije" },
@@ -36,7 +37,7 @@
       "meta": "STATUS: POSREDNIK // OPERATER",
       "body": "Međunarodna korporativna struktura zadužena za kompleksnu logistiku i preuzimanje industrijskih i opasnih frakcija otpada radi njihove 'energetske oporabe' (pripreme za peć)."
     },
-    "mzoxt": {
+    "mzozt": {
       "title": "🟡 MZOZT (Ministarstvo zaštite okoliša)",
       "meta": "STATUS: INSTITUCIONALNI ŠTIT",
       "body": "Izdalo je rješenje o prihvatljivosti zahvata za ekološku mrežu (KLASA: UP/I-352-03/26-06/12) čime je potpuno zanemaren geomorfološki položaj Raškog zaljeva i rizik akumulacije opasnih plinova."
@@ -55,6 +56,11 @@
       "title": "🟡 DORH (Državno odvjetništvo)",
       "meta": "STATUS: INSTITUCIONALNI ŠTIT",
       "body": "Kategorički potvrđuje da mu SOA nije dostavila nikakvo izvješće o sumnjivom odlaganju opasnog otpada u Lici tijekom 2022. ili 2023. godine."
+    },
+    "mup": {
+      "title": "🟡 MUP (Ministarstvo unutarnjih poslova)",
+      "meta": "STATUS: INSTITUCIONALNI ŠTIT // DEMANTI",
+      "body": "Granična kontrola i policijske uprave. Kategorički negiraju primitak operativnih dokumenata i obavijesti od SOA-e iz 2022. godine vezanih uz nelegalne otpadne rute."
     },
     "kastijun": {
       "title": "🔵 ŽCGO Kaštijun (Istarski SRF Tok)",
