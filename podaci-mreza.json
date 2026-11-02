@@ -1,58 +1,85 @@
 {
   "nodes": [
-    { "id": 1, "label": "Holcim Koromačno\n(KO2 / Codeco)", "group": "industrija" },
-    { "id": 2, "label": "Remondis Medison d.o.o.\n(Logistički Centar)", "group": "industrija" },
-    { "id": 3, "label": "MZOZT\n(Ministarstvo Okoliša)", "group": "institucije" },
-    { "id": 4, "label": "DIRH\n(Državni Inspektorat)", "group": "institucije" },
-    { "id": 5, "label": "SOA\n(Obavještajna Agencija)", "group": "institucije" },
-    { "id": 6, "label": "DORH / USKOK\n(Pravosuđe & Spis 2013)", "group": "institucije" },
-    { "id": 7, "label": "ŽCGO Kaštijun\n(Istarski SRF Tok)", "group": "lokacije" },
-    { "id": 8, "label": "Gospić\n(PPK Velebit - Silosi)", "group": "lokacije" },
-    { "id": 9, "label": "Jakuševac & Kemis\n(Povijesni Otpadni Tok)", "group": "lokacije" },
-    { "id": 10, "label": "Brodarski Institut\n(Tehnička Dokumentacija)", "group": "instituti" },
-    { "id": 11, "label": "Usklađeni Logistički Operater (S_K)\n(Sudska Pobjeda - 26.562€)", "group": "dokazi" }
+    { "id": "holcim", "label": "Holcim (Hrvatska) d.o.o.\nProjekt KO2 / Codeco", "group": "industrija" },
+    { "id": "remondis", "label": "Remondis d.o.o.\nLogistički centar", "group": "industrija" },
+    { "id": "mzozt", "label": "MZOZT\n(Ministarstvo Okoliša)", "group": "institucije" },
+    { "id": "dirh", "label": "DIRH\n(Državni Inspektorat)", "group": "institucije" },
+    { "id": "soa", "label": "SOA\n(Obavještajna Agencija)", "group": "institucije" },
+    { "id": "doh", "label": "DORH\n(Državno odvjetništvo)", "group": "institucije" },
+    { "id": "kastijun", "label": "ŽCGO Kaštijun\n(Istarski SRF Tok)", "group": "lokacije" },
+    { "id": "gospic", "label": "Gospić\n(PPK Velebit - Silosi)", "group": "lokacije" },
+    { "id": "jakusevac", "label": "Jakuševac / Kemis Termoclean\n(Medicinski otpad)", "group": "lokacije" },
+    { "id": "brodarski", "label": "Brodarski institut\n(Elaborati i analize)", "group": "instituti" },
+    { "id": "logistika", "label": "Usklađeni Logistički Operater\n(S_K)", "group": "industrija" }
   ],
   "edges": [
-    { "from": 7, "to": 1, "label": "Preusmjeravanje SRF-a" },
-    { "from": 8, "to": 1, "label": "Pazinski Članak 1." },
-    { "from": 2, "to": 1, "label": "Logistička matrica i preuzimanje" },
-    { "from": 2, "to": 11, "label": "Izgubljen sudski spor (Pr-2077/2022)" },
-    { "from": 11, "to": 6, "label": "Predan dokazni materijal i prijave" },
-    { "from": 9, "to": 2, "label": "Gospodarenje medicinskim otpadom" },
-    { "from": 10, "to": 2, "label": "Stručne analize i ugovori" },
-    { "from": 5, "to": 6, "label": "Obavještajni briefovi (Slučaj Lika 2022)" },
-    { "from": 6, "to": 2, "label": "Istraga i spisi (KR-DO 1027/13)" }
+    { "from": "jakusevac", "to": "logistika", "label": "Transport opasnog otpada" },
+    { "from": "logistika", "to": "remondis", "label": "Preusmjeravanje" },
+    { "from": "remondis", "to": "holcim", "label": "Sufinanciranje EU / Priprema za peć" },
+    { "from": "gospic", "to": "remondis", "label": "Pražnjenje silosa" },
+    { "from": "kastijun", "to": "remondis", "label": "SRF ugovori (16.790 t)" },
+    { "from": "brodarski", "to": "holcim", "label": "Lažni elaborati" },
+    { "from": "soa", "to": "dirh", "label": "Navodna obavijest 2022." },
+    { "from": "soa", "to": "mup", "label": "Navodna obavijest 2022." },
+    { "from": "soa", "to": "doh", "label": "Navodna obavijest 2022." },
+    { "from": "mzozt", "to": "holcim", "label": "Dozvole i ignoriranje GVE" },
+    { "from": "dirh", "to": "holcim", "label": "Propust inspekcije" }
   ],
   "details": {
-    "1": {
-      "title": "Holcim Koromačno (Projekt KO2 / Codeco)",
-      "meta": "KLASA: UP/I-351-03/25-08/46 | URBROJ: 517-04-1-1-26-30",
-      "body": "<b>Tehnološki krah i suspaljivanje:</b> Industrijsko jezgro sustava. Sinkronizirano s regionalnim operaterima preuzima otpadne tokove. Zabilježen drastičan skok emisija (10 do 15 puta) i prekoračenja TOC-a, uz prisilu sustava i proboj građanske blokade od strane interventne policije 30.09.2026."
+    "holcim": {
+      "title": "🔴 Holcim (Hrvatska) d.o.o. - Projekt KO2 / Codeco",
+      "meta": "STATUS: ZAGAĐIVAČ // KORISNIK OTPADA",
+      "body": "Glavna peć za suspaljivanje u Koromačnu. Koristi tehnološki neadekvatnu nadogradnju predkalcinatora koja je uzrokovala skok emisija od 10 do 15 puta i dvostruko prekoračenje TOC-a (> 20 mg/m³)."
     },
-    "2": {
-      "title": "Remondis Medison d.o.o. (Logistička Matrica)",
-      "meta": "REGISTAR DOKAZA: SK-004, SK-006, SK-010, SK-016",
-      "body": "<b>Modus Operandi preuzimanja:</b> Izravno povezan s povijesnim upravnim aktima i dozvolama za gospodarenje otpadom (Dozvola iz 2015., ugovori s Mollierom o najmu skladišta, promemorije problema iz 2014.). Korporativna struktura koja kroz logističke koridore miješa i priprema industrijske i medicinske frakcije otpada za krajnje peći."
+    "remondis": {
+      "title": "🔴 Remondis d.o.o. - Logistički centar",
+      "meta": "STATUS: POSREDNIK // OPERATER",
+      "body": "Međunarodna korporativna struktura zadužena za kompleksnu logistiku i preuzimanje industrijskih i opasnih frakcija otpada radi njihove 'energetske oporabe' (pripreme za peć)."
     },
-    "6": {
-      "title": "DORH / USKOK (Pravosudni spisi i ladice)",
-      "meta": "SPIS: KR-DO 1027/13 | K-DO-200/15 | KPO-DO-11/15",
-      "body": "<b>Institucionalna crna rupa:</b> Evidentirane prijave DORH-u i USKOK-u još iz 2013. godine, uključujući krakove prema Jakuševcu i Kemisu (2011.). Unatoč opsežnoj predanoj dokumentaciji o nepravilnostima u izdavanju dozvola i postupanju inspekcija (Podnesak SK-001 i SK-005), predmeti su godinama držani u administrativnom zastoju bez neovisne verifikacije."
+    "mzoxt": {
+      "title": "🟡 MZOZT (Ministarstvo zaštite okoliša)",
+      "meta": "STATUS: INSTITUCIONALNI ŠTIT",
+      "body": "Izdalo je rješenje o prihvatljivosti zahvata za ekološku mrežu (KLASA: UP/I-352-03/26-06/12) čime je potpuno zanemaren geomorfološki položaj Raškog zaljeva i rizik akumulacije opasnih plinova."
     },
-    "9": {
-      "title": "Jakuševac & Kemis (Izvorišta i tokovi)",
-      "meta": "DOKUMENT: SK-001 / DORH-Jakuševac (1).docx",
-      "body": "<b>Forenzika otpadnih ruta:</b> Rane administrativne prijave i podnesci iz 2011. i 2013. detaljno opisuju nepropisne rute kretanja i obrade medicinskog i opasnog industrijskih otpada na lokacijama Jakuševac i Kemis, sumnjive inspekcijske nalaze i administrativne tragove koji prethode današnjem modelu u Koromačnu."
+    "dirh": {
+      "title": "🟡 DIRH (Državni inspektorat)",
+      "meta": "STATUS: INSTITUCIONALNI ŠTIT",
+      "body": "Odbija hitno zatvoriti peć uprkos službenim zahtjevima Općinskog vijeća Raša zbog prekoračenja TOC-a. U potpunosti se oslanja na mjerenja koja financira sam zagađivač (Holcim)."
     },
-    "10": {
-      "title": "Brodarski Institut (Tehnički elaborati)",
-      "meta": "DOKUMENT: SK-006 / EGO-REMONDIS-Brodarski_institut.pdf",
-      "body": "<b>Stručna verifikacija:</b> Službeni dokumenti i tehnička ispitivanja rađena u suradnji s Brodarskim institutom. Predstavljaju ključni tehnički dokaz i metodologiju za ocjenu stvarnog sastava materijala i procesnih operacija u logističkom lancu, koje je operater kasnije pokušao osporiti odustajanjem od IT vještačenja."
+    "soa": {
+      "title": "🟡 SOA (Sigurnosno-obavještajna agencija)",
+      "meta": "STATUS: OBAVJEŠTAJNI ČVOR",
+      "body": "Prema zvaničnom izvještaju saborskog Odbora (Ranko Ostojić), SOA je još 2022. godine posjedovala podatke o ovoj mreži i proslijedila ih MUP-u, DIRH-u i DORH-u – koji primitak akata složno negiraju."
     },
-    "11": {
-      "title": "Usklađeni Logistički Operater (Sudski Presedan)",
-      "meta": "PRESUDA: Općinski radni sud u Zagrebu | Poslovni broj: Pr-2077/2022-132",
-      "body": "<b>Pravna pobjeda i slom tužitelja:</b> Presudom datiranom 28.10.2024. (nakon rasprave 02.10.2024.), Sud u potpunosti **odbija tužbeni zahtjev Remondis Medison d.o.o.** i nalaže im plaćanje parničnog troška tuženoj u iznosu od <b>26.562,50 EUR</b>. Remondis je odustao od IT vještačenja jer nije mogao dokazati navode o neovlaštenom pristupu, čime je stvorena ključna pravna poluga za obranu prava zviždača i oštećenika."
+    "doh": {
+      "title": "🟡 DORH (Državno odvjetništvo)",
+      "meta": "STATUS: INSTITUCIONALNI ŠTIT",
+      "body": "Kategorički potvrđuje da mu SOA nije dostavila nikakvo izvješće o sumnjivom odlaganju opasnog otpada u Lici tijekom 2022. ili 2023. godine."
+    },
+    "kastijun": {
+      "title": "🔵 ŽCGO Kaštijun (Istarski SRF Tok)",
+      "meta": "STATUS: IZVOR MATERIJALA",
+      "body": "Županijski centar koji zbog sloma tehnologije sortiranja generiše ogromne količine nekvalitetnog, vlažnog SRF-a (goriva iz otpada) koji niko ne želi. Političkim pritiskom se gura u Koromačno kako bi se sakrio komunalni kolaps Istre (ugovori 2025: 6.790 t, 2026: 10.000 t)."
+    },
+    "gospic": {
+      "title": "🔵 Gospić (PPK Velebit - Silosi)",
+      "meta": "STATUS: IZVOR MATERIJALA",
+      "body": "Lokacija na kojoj je nataloženo oko 4.500 tona opasnog i rasutog otpada (mljeveni kablovi, toksična plastika, hemijski ostaci). FZOEU dodjeljuje ugovor od 8,77 miliona eura konzorcijumu firmi (CE-ZA-R, CIAK, Saubermacher) za njegovo hitno pražnjenje."
+    },
+    "jakusevac": {
+      "title": "🔵 Jakuševac / Kemis Termoclean",
+      "meta": "STATUS: IZVOR MATERIJALA",
+      "body": "Nezakonita dozvola za izvoz opasnog medicinskog otpada. Lažiranje analiza i karakterizacije otpada s neispravnim uređajima (povezano sa svjedočanstvom zviždačice)."
+    },
+    "brodarski": {
+      "title": "🟣 Brodarski institut",
+      "meta": "STATUS: INSTITUT / ELABORATI",
+      "body": "Izrađivao studije za tvrtke koje su zatim dobivale koncesije i milijunske iznose iz Fonda za zaštitu okoliša (povijesni obrazac namještanja poslova opisan u svjedočenju iz 2012.)."
+    },
+    "logistika": {
+      "title": "🔴 Usklađeni Logistički Operater (S_K)",
+      "meta": "STATUS: POSREDNIK // ZAŠTIĆENI IDENTITET",
+      "body": "Anonimizirani čvor koji predstavlja ključne logističke i pravne operacije preuzimanja, miješanja i transporta otpada prema cementari. Ime operatera je namjerno izostavljeno u javnom prikazu radi pravne zaštite, ali dokazni lanac (ugovori, CMR-i, e-ONTO) ostaje 100% netaknut."
     }
   }
 }
