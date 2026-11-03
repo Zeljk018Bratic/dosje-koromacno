@@ -18,3 +18,5 @@ OCR nije primijenjen na svih 1.351 stranica PDF-ova koje sadrže slike; stranice
 ## Git povijest
 
 Ranije verzije datoteka koje su sadržavale poznate osobne identifikatore uklonjene su iz javne povijesti grane `main`; redigirane trenutačne kopije zadržane su. Povijest je prepisana uz odobrenje vlasnika repozitorija. Korisnicima koji imaju stari klon preporučuje se novo kloniranje.
+
+GitHub je zadržao tri poslužiteljski upravljane reference zatvorenih pull requestova (`refs/pull/1/head`–`refs/pull/3/head`), koje se ne mogu prepisati običnim pushom. Njihovih 63 commita i sadržaj datoteka provjereni su na poznate identifikatore; podudaranja nisu pronađena. Provjera ne obuhvaća rasprave u pull requestovima, forkove ni predmemorirane kopije.
