@@ -46,8 +46,8 @@ Sukladno članku 25. Zakona, rok je 15 dana od dana zaprimanja zahtjeva.
 S poštovanjem,
 
 Željko Bratić
-Prilaz Kršin 1
-52220 Labin
-zeljkobratic69@gmail.com
+[REDACTED HOME ADDRESS]
+[REDACTED POSTAL ADDRESS]
+[REDACTED PERSONAL EMAIL]
 
 Datum: 03.10.2026.

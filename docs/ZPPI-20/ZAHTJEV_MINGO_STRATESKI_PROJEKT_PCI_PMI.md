@@ -2,7 +2,7 @@
 
 **Za:** Ministarstvo gospodarstva (MINGO), službenik za informiranje — adresa s impressuma `mingo.gov.hr` (klik-test prije slanja)
 **Cc:** MZOZT (`pristup.informacijama@mzozt.hr`)
-**Podnositelj:** Željko Bratić, Prilaz Kršin 1, 52220 Labin · zeljkobratic69@gmail.com · dosje.koromacno@proton.me
+**Podnositelj:** Željko Bratić, [REDACTED HOME ADDRESS], [REDACTED POSTAL ADDRESS] · [REDACTED PERSONAL EMAIL] · dosje.koromacno@proton.me
 **Datum:** __.10.2026.
 **Osnova:** čl. 18. Zakona o pravu na pristup informacijama (NN 25/13, 85/15, 69/17, 25/22) + čl. 4. Aarhuške konvencije + Direktiva 2003/4/EZ
 **Predmet:** ZPPI-20 — Zahtjev za pristup informacijama: Sporazum o pripremi i provedbi strateškog projekta KOdeCO, status projekta nakon povlačenja studije utjecaja na okoliš (28.08.2026.) te nacionalne kandidature za 5. PCI/PMI listu
@@ -29,7 +29,7 @@
 
 ## Način i rok
 
-Odgovor tražim u zakonskom roku od **15 dana** od zaprimanja, u elektroničkom obliku (PDF izvornici s vidljivim KLASA/URBROJ oznakama), na: zeljkobratic69@gmail.com i dosje.koromacno@proton.me.
+Odgovor tražim u zakonskom roku od **15 dana** od zaprimanja, u elektroničkom obliku (PDF izvornici s vidljivim KLASA/URBROJ oznakama), na: [REDACTED PERSONAL EMAIL] i dosje.koromacno@proton.me.
 
 Za svaki zaprimljeni dokument izračunat ću **SHA-256** i arhivirati ga u javno dostupnom, hash-verificiranom dosjeu: https://github.com/Zeljk018Bratic/dosje-koromacno
 
@@ -37,4 +37,4 @@ Napomena: zahtjev podnosim kao građanin i prijavitelj nepravilnosti; **ne iznos
 
 S poštovanjem,
 Željko Bratić
-Prilaz Kršin 1, 52220 Labin
+[REDACTED HOME ADDRESS], [REDACTED POSTAL ADDRESS]

@@ -2,7 +2,7 @@
 ## Inspekcijski nadzori u Holcim Koromačno (2022–2026)
 
 **Za:** javnost@inspektorat.hr  
-**Cc:** pristup.informacijama@mzozt.hr, zeljkobratic69@gmail.com  
+**Cc:** pristup.informacijama@mzozt.hr, [REDACTED PERSONAL EMAIL]<br>
 **Predmet:** ZPPI-10 — Zahtjev za pristup informacijama o inspekcijskim nadzorima u tvornici Holcim Koromačno (2022–2026)
 
 ---
@@ -14,9 +14,9 @@ temeljem članka 18. Zakona o pravu na pristup informacijama (NN 25/13, 85/15, 6
 ## I. PODACI O PODNOSITELJU
 
 - Željko Bratić
-- Prilaz Kršin 1, 52220 Labin
-- OIB: 13166248811
-- E-mail: zeljkobratic69@gmail.com
+- [REDACTED HOME ADDRESS], [REDACTED POSTAL ADDRESS]
+- OIB: [REDACTED OIB]
+- E-mail: [REDACTED PERSONAL EMAIL]
 
 ## II. PODACI KOJI SE TRAŽE
 
@@ -93,9 +93,9 @@ Sukladno članku 25. Zakona, rok za dostavu informacije je **15 dana** od dana z
 S poštovanjem,
 
 Željko Bratić  
-Prilaz Kršin 1  
-52220 Labin  
-OIB: 13166248811  
-zeljkobratic69@gmail.com
+[REDACTED HOME ADDRESS]<br>
+[REDACTED POSTAL ADDRESS]<br>
+OIB: [REDACTED OIB]<br>
+[REDACTED PERSONAL EMAIL]
 
 Datum: 03.10.2026.

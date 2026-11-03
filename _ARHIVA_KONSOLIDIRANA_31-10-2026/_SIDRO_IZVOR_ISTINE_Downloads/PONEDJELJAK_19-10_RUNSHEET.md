@@ -82,7 +82,7 @@ Ponovi u **svakom profilu** (Chrome, Edge, Firefox) i na mobitelu ako se isto sk
 
 **Pravila za sve:**
 - U predmet UVIJEK stavi oznaku (`ZPPI-13 — …`) i, kod dopuna, **urudžbeni broj izvornog zahtjeva**.
-- Cc: **samo sebi** (zeljkobratic69@gmail.com + dosje.koromacno@proton.me). Nikome drugome.
+- Cc: **samo sebi** ([REDACTED PERSONAL EMAIL] + dosje.koromacno@proton.me). Nikome drugome.
 - Potpis: ime, adresa, dva maila. **Bez osobnog telefona.**
 - Svaki poslan mail → PDF + SHA-256 → `docs/Slanje_Dokaza_19-10-2026/` → **jedan commit na kraju koraka**, ne 8 commitova.
 

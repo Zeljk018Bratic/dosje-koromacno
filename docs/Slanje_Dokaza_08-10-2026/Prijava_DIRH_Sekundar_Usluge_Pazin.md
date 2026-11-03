@@ -42,10 +42,10 @@ S poštovanjem,
 
 **Željko Bratić**
 
-Prilaz Kršin 1
+[REDACTED HOME ADDRESS]
 
-52220 Labin
+[REDACTED POSTAL ADDRESS]
 
-zeljko.bratic69@gmail.com
+[REDACTED PERSONAL EMAIL]
 
 Datum: 8. listopada 2026.

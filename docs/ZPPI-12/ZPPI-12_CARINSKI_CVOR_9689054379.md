@@ -2,7 +2,7 @@
 ## Carinske deklaracije i prekogranične notifikacije otpada (čvor 9689054379)
 
 **Za:** pristup.informacijama@mzozt.hr, carinasredišnjica@carina.hr  
-**Cc:** zeljkobratic69@gmail.com  
+**Cc:** [REDACTED PERSONAL EMAIL]<br>
 **Predmet:** ZPPI-09 — Zahtjev za pristup informacijama o robnim deklaracijama i prekograničnim notifikacijama otpada (19.013 tona, deklarirano 124 EUR)
 
 ---
@@ -14,9 +14,9 @@ temeljem članka 18. Zakona o pravu na pristup informacijama (NN 25/13, 85/15, 6
 ## I. PODACI O PODNOSTELJU
 
 - Željko Bratić
-- Prilaz Kršin 1, 52220 Labin
-- OIB: 13166248811
-- E-mail: zeljkobratic69@gmail.com
+- [REDACTED HOME ADDRESS], [REDACTED POSTAL ADDRESS]
+- OIB: [REDACTED OIB]
+- E-mail: [REDACTED PERSONAL EMAIL]
 
 ## II. PODACI KOJI SE TRAŽE
 
@@ -90,9 +90,9 @@ Sukladno članku 25. Zakona, rok za dostavu informacije je **15 dana** od dana z
 S poštovanjem,
 
 Željko Bratić  
-Prilaz Kršin 1  
-52220 Labin  
-OIB: 13166248811  
-zeljkobratic69@gmail.com
+[REDACTED HOME ADDRESS]<br>
+[REDACTED POSTAL ADDRESS]<br>
+OIB: [REDACTED OIB]<br>
+[REDACTED PERSONAL EMAIL]
 
 Datum: 03.10.2026.

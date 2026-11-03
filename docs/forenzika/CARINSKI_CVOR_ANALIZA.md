@@ -128,9 +128,9 @@ Rok za dostavu je 15 dana.
 S poštovanjem,
 
 Željko Bratić  
-Prilaz Kršin 1, 52220 Labin  
-OIB: 13166248811  
-zeljkobratic69@gmail.com
+[REDACTED HOME ADDRESS], [REDACTED POSTAL ADDRESS]<br>
+OIB: [REDACTED OIB]<br>
+[REDACTED PERSONAL EMAIL]
 
 ---
 

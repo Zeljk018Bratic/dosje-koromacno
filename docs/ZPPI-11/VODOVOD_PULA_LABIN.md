@@ -2,7 +2,7 @@
 ## PFAS u vodi za piće (od 12.01.2026.)
 
 **Za:** info@vodovod-pula.hr  
-**Cc:** pristup@nzjz.hr, javnost@inspektorat.hr, zeljkobratic69@gmail.com  
+**Cc:** pristup@nzjz.hr, javnost@inspektorat.hr, [REDACTED PERSONAL EMAIL]<br>
 **Predmet:** ZPPI-11 — Zahtjev za pristup informacijama o mjerenjima PFAS-a u vodi za ljudsku potrošnju (od 12.01.2026.)
 
 ---
@@ -14,9 +14,9 @@ temeljem članka 18. Zakona o pravu na pristup informacijama (NN 25/13, 85/15, 6
 ## I. PODACI O PODNOSTELJU
 
 - Željko Bratić
-- Prilaz Kršin 1, 52220 Labin
-- OIB: 13166248811
-- E-mail: zeljkobratic69@gmail.com
+- [REDACTED HOME ADDRESS], [REDACTED POSTAL ADDRESS]
+- OIB: [REDACTED OIB]
+- E-mail: [REDACTED PERSONAL EMAIL]
 
 ## II. PODACI KOJI SE TRAŽE
 
@@ -98,9 +98,9 @@ Sukladno članku 25. Zakona, rok za dostavu informacije je **15 dana** od dana z
 S poštovanjem,
 
 Željko Bratić  
-Prilaz Kršin 1  
-52220 Labin  
-OIB: 13166248811  
-zeljkobratic69@gmail.com
+[REDACTED HOME ADDRESS]<br>
+[REDACTED POSTAL ADDRESS]<br>
+OIB: [REDACTED OIB]<br>
+[REDACTED PERSONAL EMAIL]
 
 Datum: 03.10.2026.

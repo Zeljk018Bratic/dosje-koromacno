@@ -1,7 +1,7 @@
 # ZPPI-08 — Zahtjev NZJZ i DIRH
 
 **Za:** pristup@nzjz.hr (NZJZ)  
-**Cc:** javnost@inspektorat.hr (DIRH), zeljkobratic69@gmail.com  
+**Cc:** javnost@inspektorat.hr (DIRH), [REDACTED PERSONAL EMAIL]<br>
 **Predmet:** ZPPI-08 — Zahtjev za pristup informacijama o kvaliteti zraka u okolici tvornice Holcim Koromačno (2022–2026)
 
 ---
@@ -13,9 +13,9 @@ temeljem članka 18. Zakona o pravu na pristup informacijama (NN 25/13, 85/15, 6
 ## I. PODACI O PODNOSITELJU
 
 - Željko Bratić
-- Prilaz Kršin 1, 52220 Labin
-- OIB: 13166248811
-- E-mail: zeljkobratic69@gmail.com
+- [REDACTED HOME ADDRESS], [REDACTED POSTAL ADDRESS]
+- OIB: [REDACTED OIB]
+- E-mail: [REDACTED PERSONAL EMAIL]
 
 ## II. PODACI KOJI SE TRAŽE
 
@@ -88,9 +88,9 @@ Sukladno članku 25. Zakona, rok za dostavu informacije je 15 dana od dana zapri
 S poštovanjem,
 
 Željko Bratić  
-Prilaz Kršin 1  
-52220 Labin  
-OIB: 13166248811  
-zeljkobratic69@gmail.com
+[REDACTED HOME ADDRESS]<br>
+[REDACTED POSTAL ADDRESS]<br>
+OIB: [REDACTED OIB]<br>
+[REDACTED PERSONAL EMAIL]
 
 Datum: 01.10.2026.

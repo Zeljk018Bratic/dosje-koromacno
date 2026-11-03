@@ -22,7 +22,7 @@ further to my e-mails of 9 and 12 October 2026, please note the following.
 
 I remain at your disposal.
 Kind regards,
-Željko Bratić · Prilaz Kršin 1, 52220 Labin · zeljkobratic69@gmail.com
+Željko Bratić · [REDACTED HOME ADDRESS], [REDACTED POSTAL ADDRESS] · [REDACTED PERSONAL EMAIL]
 
 ---
 ## HR NAPOMENE (ne salju se)

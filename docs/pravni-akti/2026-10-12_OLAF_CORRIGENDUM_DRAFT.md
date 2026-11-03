@@ -16,4 +16,4 @@ I remain at your disposal for any further information.
 
 Kind regards,
 Željko Bratić
-Prilaz Kršin 1, 52220 Labin, Croatia
+[REDACTED HOME ADDRESS], [REDACTED POSTAL ADDRESS], Croatia

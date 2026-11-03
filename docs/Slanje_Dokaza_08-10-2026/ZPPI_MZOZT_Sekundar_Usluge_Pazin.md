@@ -44,16 +44,16 @@ S obzirom na to da je iz sudskog registra razvidno da je gdin. Mihajlo Mirković
 
 Molim da se zahtjev obradi žurno, s obzirom na javni interes i zabrinutost građana.
 
-Tražene dokumente molim dostaviti elektroničkim putem na adresu: zeljko.bratic69@gmail.com.
+Tražene dokumente molim dostaviti elektroničkim putem na adresu: [REDACTED PERSONAL EMAIL].
 
 S poštovanjem,
 
 **Željko Bratić**
 
-Prilaz Kršin 1
+[REDACTED HOME ADDRESS]
 
-52220 Labin
+[REDACTED POSTAL ADDRESS]
 
-zeljko.bratic69@gmail.com
+[REDACTED PERSONAL EMAIL]
 
 Datum: 8. listopada 2026.

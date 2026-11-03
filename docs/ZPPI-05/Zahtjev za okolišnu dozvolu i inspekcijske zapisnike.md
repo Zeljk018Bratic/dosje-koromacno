@@ -1,5 +1,5 @@
 Za: pristup.informacijama@mzozt.hr
-Cc: zeljkobratic69@gmail.com
+Cc: [REDACTED PERSONAL EMAIL]
 Predmet: ZPPI-05 — Zahtjev za pristup informacijama o okolišnoj i lokacijskoj dozvoli, R1 prethodnim odobrenjima i inspekcijskim nadzorima za HOLCIM (HRVATSKA) d.o.o. — Koromačno
 
 Poštovani,
