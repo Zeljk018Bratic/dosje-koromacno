@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EKO-PRAVNI STRATEŠKI DOSJE | @BajteBrothers</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --container-bg: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent-blue: #4da6ff;
+            --accent-orange: #ff9933;
+            --accent-red: #ff4444;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* NOVI STIL ZA GUMBE JEZIKA */
+        .lang-nav {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 100;
+        }
+
+        .lang-btn {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--accent-red);
+            padding: 8px 16px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background-color: var(--accent-red);
+            color: white;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background-color: var(--container-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+            border: 1px solid var(--border-color);
+            margin-left: 100px; /* Pomak da ne prekriva gumbe */
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--accent-blue);
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+
+        .author {
+            color: var(--accent-orange);
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 0.9em;
+            letter-spacing: 2px;
+        }
+
+        .disclaimer {
+            background-color: rgba(255, 68, 68, 0.1);
+            border-left: 4px solid var(--accent-red);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .disclaimer h3 {
+            color: var(--accent-red);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 {
+            color: var(--accent-orange);
+            border-left: 4px solid var(--accent-orange);
+            padding-left: 15px;
+            margin-top: 40px;
+            font-size: 1.5em;
+        }
+
+        h3 {
+            color: var(--text-primary);
+            font-size: 1.2em;
+            margin-top: 25px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #252525;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #2a2a2a;
+            color: var(--accent-blue);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        tr:hover {
+            background-color: #2f2f2f;
+        }
+
+        .flowchart {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .flow-step {
+            background-color: #252525;
+            border: 1px solid var(--accent-blue);
+            border-radius: 6px;
+            padding: 20px;
+            flex: 1;
+            min-width: 180px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.2s;
+        }
+
+        .flow-step:hover {
+            transform: translateY(-3px);
+            background-color: #2a2a2a;
+        }
+
+        .flow-step h4 {
+            color: var(--accent-blue);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .flow-step::after {
+            content: '→';
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent-orange);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .flow-step:last-child::after {
+            content: '';
+        }
+
+        .warning-box {
+            background-color: rgba(255, 153, 51, 0.1);
+            border: 1px solid var(--accent-orange);
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .warning-box strong {
+            color: var(--accent-orange);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        .lang-section {
+            display: none; /* Sakriveno po defaultu */
+        }
+
+        .lang-section.active {
+            display: block; /* Prikazuje se kad je aktivno */
+        }
+
+        /* Mobitel */
+        @media (max-width: 900px) {
+            body { flex-direction: column; padding: 10px; }
+            .lang-nav { position: static; flex-direction: row; justify-content: center; transform: none; margin-bottom: 20px; }
+            .container { margin-left: 0; padding: 20px; }
+            h1 { font-size: 1.6em; }
+            .flowchart { flex-direction: column; }
+            .flow-step::after { content: '↓'; right: 50%; top: 100%; transform: translateX(50%); margin-top: 5px; }
+            table { display: block; overflow-x: auto; }
+        }
+
+        @media print {
+            body { background-color: white; color: black; }
+            .lang-nav { display: none; }
+            .container { box-shadow: none; border: none; max-width: 100%; padding: 0; margin: 0; }
+            h1, h2, h3, th { color: black !important; }
+            .disclaimer { border: 1px solid black; background-color: #f9f9f9; color: black; }
+            .flow-step { border: 1px solid black; break-inside: avoid; }
+            .flow-step::after { content: '→'; color: black; }
+            .lang-section { display: block !important; page-break-after: always; } /* Ispisuje sve jezike odjednom na papir */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- GUMBI ZA JEZIKE -->
+    <nav class="lang-nav">
+        <button class="lang-btn active" onclick="setLang('hr')">hr</button>
+        <button class="lang-btn" onclick="setLang('en')">en</button>
+        <button class="lang-btn" onclick="setLang('it')">it</button>
+        <button class="lang-btn" onclick="setLang('de')">de</button>
+    </nav>
+
+    <div class="container">
+        
+        <!-- ================= HRVATSKI ================= -->
+        <div id="lang-hr" class="lang-section active">
+            <header>
+                <h1>EKO-PRAVNI STRATEŠKI DOSJE</h1>
+                <div class="subtitle">EKO-POLITIČKA ANALIZA I STRATEGIJA ZAŠTITE LABINŠTINE</div>
+                <div class="subtitle">Slučaj "KOdeCO Net Zero": proceduralna raščlamba i pravni mehanizmi obustave industrijskog pritiska</div>
+                <div class="author">Made & created by @BajteBrothers</div>
+            </header>
+
+            <div class="disclaimer">
+                <h3>⚠ PRAVNA NAPOMENA (DISCLAIMER) — AUTORSKI RAD</h3>
+                <p>Ovaj dokument i svi njegovi dijelovi predstavljaju autorski rad namijenjen isključivo u svrhu informiranja i zaštite javnog interesa. Svi javno dostupni podaci, uključujući one s repozitorija na GitHubu (dosje-koromacno), mogu se koristiti isključivo uz obavezno i jasno navođenje izvora. Svako neovlašteno presretanje, zloupotreba, preoblikovanje ili komercijalna distribucija bez privole podliježe pravnoj odgovornosti. Sve strane pozivaju se na odgovorno postupanje, s obzirom na to da digitalni tragovi i zapisi ostaju trajno zabilježeni na poslužiteljima. Radimo transparentno, s potpunim respektom prema zakonitosti i javnom zdravlju.</p>
+            </div>
+
+            <h2>1. KRONOLOGIJA I PROCEDURALNI PROMAŠAJI AKTIVISTA U PAZINU</h2>
+            <p>Pravna i administrativna logika Županijske skupštine u Pazinu u potpunosti je nadvladala ulični aktivizam uslijed zanemarivanja rigidnih birokratskih procedura i formalnih procesnih okvira:</p>
+            <h3>Poslovnička i Zakonska Ograničenja</h3>
+            <p>Fizička prisutnost građana u sabornici ne daje automatsko pravo glasa niti predlaganja akata. Sukladno Zakonu o lokalnoj i područnoj samoupravi i Poslovniku Skupštine, pravo predlaganja dopuna dnevnog reda imaju samo župan, vijećnici i skupštinski odbori unutar propisanih rokova.</p>
+            <h3>Propušteni Institucionalni Koraci</h3>
+            <p>Propušten je zakonski rok za službeno uvrštavanje točke prije sjednice. Također, zaobiđen je Upravni odjel za održivi razvoj i mehanizmi Zakona o pravu na pristup informacijama, koji čine nužan pravni preduvjet prije radikalizacije na terenu.</p>
+            <p><strong>Uzroci proceduralnog izostanka:</strong> S jedne strane radi se o upravno-pravnom nesnalaženju građanskih inicijativa bez stručne pravne podrške. S druge strane, prebacivanje težišta na ulični i digitalni aktivizam omogućilo je širi medijski odjek i mobilizaciju na emotivnom naboju, što bi u suhoparnoj skupštinskoj raspravi izgubilo na dinamici.</p>
+
+            <h2>2. PROMAŠENI FOKUS PRITISKA (PROSVJED U LABINU)</h2>
+            <p>Prebacivanje pritiska na zgradu Grada Labina i zahtjevi za "smjenom" labinskog gradonačelnika predstavljaju pravno-administrativni apsurd i promašenu teritorijalnu geografiju:</p>
+            <h3>Teritorijalna Nenadležnost Grada Labina</h3>
+            <p>Tvornica Holcim nalazi se na području Općine Raša (Koromačno). Grad Labin nema nikakvu izvršnu ni prostorno-plansku nadležnost nad teretom, dozvolama ili prostornim planovima susjedne općine. Targetiranje Labina provedeno je isključivo jer je on ekonomsko i medijsko središte Labinštine sa znatno većom vidljivošću.</p>
+
+            <h2>3. STRATEŠKA TEŽINA PROJEKTA "KOdeCO NET ZERO"</h2>
+            <p>Dok lokalne inicijative fokus stavljaju na prosvjede protiv oporabe otpada, projekt s druge strane uživa najviši institucionalni i financijski legitimitet na državnoj i europskoj razini:</p>
+            <ul>
+                <li><strong>Nacionalni i EU Status:</strong> Projekt nosi status Strateškog investicijskog projekta RH te mu je odobreno sufinanciranje od 116,9 milijuna eura iz EU Inovacijskog fonda.</li>
+                <li><strong>Tehnološki Opseg:</strong> Prvi sustav za hvatanje i skladištenje ugljika (CCS) u Hrvatskoj s ciljem potpune dekarbonizacije tvornice do 2030. godine kroz ukapljivanje CO₂ i pomorski transport do podzemnih skladišta.</li>
+            </ul>
+
+            <h2>4. RAŠČLAMBA NADLEŽNOSTI PO RAZINAMA VLASTI</h2>
+            <table>
+                <thead>
+                    <tr><th>Razina Vlasti / Tijelo</th><th>Stvarna Pravna Nadležnost</th><th>Uloga u Slučaju Holcim / KOdeCO</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Ministarstvo zaštite okoliša</strong></td><td>Izdavanje okolišnih dozvola, procjena utjecaja na okoliš (PUO) i inspekcijski nadzor.</td><td>Odobrava ključne studije okoliša i obavlja nadzor nad graničnim vrijednostima emisija (GVE).</td></tr>
+                    <tr><td><strong>Istarska Županija (Pazin)</strong></td><td>Upravljanje pomorskim dobrom, županijski prostorni plan i koncesije.</td><td>Daje koncesije na pomorskom dobru od županijskog značaja i usklađuje prostorne planove.</td></tr>
+                    <tr><td><strong>Općina Raša</strong></td><td>Prostorni plan uređenja općine (PPUO) i lokalne komunalne dozvole.</td><td><strong>Ključna karika:</strong> Geografska lokacija tvornice. Određuje namjenu zemljišta i širenje luka.</td></tr>
+                    <tr><td><strong>Grad Labin</strong></td><td>Nadležnost isključivo unutar vlastitih administrativnih granica.</td><td><strong>NEMA NADLEŽNOST</strong> nad Koromačnom, Holcimom niti dozvolama u Općini Raša.</td></tr>
+                </tbody>
+            </table>
+
+            <h2>5. PRAVNA IZVEDIVOST ZAHTJEVA ZA UKIDANJE KONCESIJA I DOZVOLA</h2>
+            <p>Zahtjevi za hitnim ukinućem ekoloških dozvola i koncesija na pomorskom dobru jednostranim političkim dekretom pravno su neizvedivi bez prethodno dokazanih zakonskih preduvjeta:</p>
+            <h3>Jednostrani Raskid pod Pritiskom</h3>
+            <p>Ukidanje dozvola bez pravomoćnog nalaza inspekcije predstavlja kršenje Zakona o općem upravnom postupku. Izazvalo bi odštetne zahtjeve mjerljive u stotinama milijuna eura te penale i obvezu povrata EU grantova.</p>
+            <h3>Zakoniti Postupak na Temelju Inspekcije</h3>
+            <p>Zahtijeva egzaktne nalaze Državnog inspektorata o kontinuiranom prekoračenju emisija. Ako operater ne otkloni nepravilnosti u zadanom roku, stvara se čist pravni temelj za oduzimanje koncesije bez naknade štete.</p>
+
+            <h2>6. STRATEGIJA I PLAN DJELOVANJA ZA OBUSTAVU IZGRADNJE LUKE</h2>
+            <p>Projekt KOdeCO neraskidivo je vezan uz logistički lanac: ukapljeni CO₂ mora se brodovima transportirati do podzemnih skladišta. Bez nove ili proširene luke, projekt tehnički ne može funkcionirati. Onemogućavanje zahvata zahtijeva tri usklađena pravca:</p>
+            <ul>
+                <li><strong>Pravac A: Prostorno Planiranje (Lokalna razina - Općina Raša):</strong> Vijećnici moraju odbiti izglasavanje izmjena PPUO-a koje prenamjenjuju obalu u industrijsku luku. Bez prostornog plana nema lokacijske dozvole.</li>
+                <li><strong>Pravac B: Rušenje SUO-a (Državna razina - Ministarstvo):</strong> Mobilizacija stručne javnosti radi dokazivanja štete na morski ekosustav (Posidonia) i ishodovanja negativnog rješenja prihvatljivosti.</li>
+                <li><strong>Pravac C: Spor oko Koncesije (Upravni Sud RH):</strong> Pokretanje upravnih sporova protiv odluke Vlade RH ili Županije o dodjeli koncesije pozivajući se na povredu javnog interesa.</li>
+            </ul>
+
+            <h2>7. PROTOKOL JEDNOSTRANOG RASKIDA KONCESIJE NA POMORSKOM DOBRU</h2>
+            <p>Raskid koncesije zbog ekološke ugroze ne može se donijeti arbitratno, već isključivo kroz zakonski definirane protokolarne korake:</p>
+            <div class="flowchart">
+                <div class="flow-step"><h4>1. Inspekcijski Nalaz</h4><p>Utvrđivanje teške povrede i izdavanje rješenja</p></div>
+                <div class="flow-step"><h4>2. Službena Opomena</h4><p>Ostavljanje zakonskog roka za otklanjanje</p></div>
+                <div class="flow-step"><h4>3. Rješenje o Oduzimanju</h4><p>Odluka davatelja koncesije sukladno ZPDML-u</p></div>
+                <div class="flow-step"><h4>4. Upravni Spor</h4><p>Sudska provjera zakonitosti odluke</p></div>
+            </div>
+
+            <h2>8. KUMULATIVNI PREDUVJETI ZA ZAUSTAVLJANJE ZAHVATA</h2>
+            <ul>
+                <li><strong>Političko jedinstvo Općine Raša:</strong> Službena odluka vijeća o odbijanju širenja industrijske zone na novu obalu zaljeva.</li>
+                <li><strong>Neovisna ekološka ekspertiza:</strong> Znanstveni dokazi da gradnja luke uzrokuje trajnu degradaciju morskog dna.</li>
+                <li><strong>Registracija zainteresirane javnosti:</strong> Pravovremeno sudjelovanje građana u javnim raspravama radi ostvarivanja procesne legitimacije pred Upravnim sudom.</li>
+            </ul>
+
+            <h2>9. HODOGRAM POSTUPKA PUO I ROKOVI ZA REAKCIJU JAVNOSTI</h2>
+            <p>Postupak Procjene utjecaja na okoliš (PUO) iznimno je formaliziran. Propuštanje zakonskog roka za samo jedan dan trajno ukida mogućnost sudske zaštite.</p>
+            <table>
+                <thead><tr><th>Faza Postupka</th><th>Tko Vodi / Što se događa</th><th>Zakonski Rok i Akcija Javnosti</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Faza 1: Pokretanje</strong></td><td>Holcim predaje Studiju Ministarstvu; osniva se stručno povjerenstvo.</td><td>Praćenje oglasnih ploča i web stranica Ministarstva/Općine.</td></tr>
+                    <tr><td><strong>Faza 2: Javni Uvid<br><span style="color:var(--accent-orange)">(KLJUČNI KORAK)</span></strong></td><td>Studija se izlaže u Općini Raša i na webu. Građani uvidom analiziraju dokument.</td><td><strong>ROK:</strong> Najmanje 30 dana sukladno čl. 98. Zakona o zaštiti okoliša. Podnošenje pisanih, stručno utemeljenih prigovora.</td></tr>
+                    <tr><td><strong>Faza 3: Javno Izlaganje</strong></td><td>Usmena rasprava i prezentacija investitora.</td><td>Glasno iznošenje argumenata i inzistiranje na unošenju izjava u zapisnik.</td></tr>
+                    <tr><td><strong>Faza 4: Evaluacija</strong></td><td>Investitor piše odgovore na primjedbe i izrađuje se konačno Izvješće.</td><td>Provjera je li investitor adekvatno odgovorio na ekološke prigovore.</td></tr>
+                    <tr><td><strong>Faza 5: Rješenje & Sud<br><span style="color:var(--accent-red)">(SUDSKA BITKA)</span></strong></td><td>Ministarstvo izdaje Rješenje o prihvatljivosti zahvata.</td><td><strong>ROK:</strong> 30 DANA OD OBJAVE. Podnošenje tužbe Upravnom sudu u Rijeci.</td></tr>
+                </tbody>
+            </table>
+
+            <h2>10. PROCESNA DOKTRINA "ZAINTERESIRANE JAVNOSTI"</h2>
+            <p>Da bi građanin ili udruga imali pravo podnijeti tužbu Upravnom sudu u Fazi 5, moraju imati dokazan pravni interes. Sukladno Aarhuskoj konvenciji i Zakonu o zaštiti okoliša, status ostvaruju samo oni koji su pismeno sudjelovali u Fazi 2 (Javni uvid).</p>
+            <div class="warning-box">
+                <strong>⚠ UPOZORENJE O ELIMINACIJSKOM UVJETU:</strong><br>
+                Ako građanin ne preda pisani prigovor unutar zadanih 30 dana javnog uvida, Upravni sud će u Fazi 5 automatski odbaciti njegovu tužbu kao nedopuštenu, neovisno o težini ekoloških argumenata.
+            </div>
+
+            <h2>11. ZAKLJUČNO STAJALIŠTE I REZIME</h2>
+            <p>Zaštita vode, zemlje i zraka Labinštine zahtijeva hitnu transformaciju uličnog aktivizma u visokostručnu pravno-institucionalnu bitku. Pritisak se mora fokusirati na tijela koja drže stvarne poluge odlučivanja — <strong>Općinsko vijeće Raše, Ministarstvo i Upravni sud</strong> — kroz precizno korištenje alata prostornog planiranja i postupka PUO.</p>
+        </div>
+
+        <!-- ================= ENGLESKI ================= -->
+        <div id="lang-en" class="lang-section">
+            <header>
+                <h1>ECO-LEGAL STRATEGIC DOSSIER</h1>
+                <div class="subtitle">ECO-POLITICAL ANALYSIS AND STRATEGY FOR THE PROTECTION OF THE LABIN REGION</div>
+                <div class="subtitle">The "KOdeCO Net Zero" Case: Procedural Breakdown and Legal Mechanisms for Halting Industrial Pressure</div>
+                <div class="author">Made & created by @BajteBrothers</div>
+            </header>
+
+            <div class="disclaimer">
+                <h3>⚠ LEGAL NOTICE (DISCLAIMER) — COPYRIGHTED WORK</h3>
+                <p>This document and all its components constitute a copyrighted work intended solely for the purpose of informing and protecting the public interest. All publicly available data, including that from the GitHub repository (dosje-koromacno), may be used exclusively with the mandatory and clear citation of the source. Any unauthorized interception, misuse, reshaping, or commercial distribution without prior consent is subject to legal liability. All parties are urged to act responsibly, given that digital footprints and records remain permanently stored on servers. We operate transparently, with full respect for legality and public health.</p>
+            </div>
+
+            <h2>1. CHRONOLOGY AND PROCEDURAL FAILURES OF ACTIVISTS IN PAZIN</h2>
+            <p>The legal and administrative logic of the County Assembly in Pazin completely overwhelmed street activism due to the neglect of rigid bureaucratic procedures and formal procedural frameworks:</p>
+            <ul>
+                <li><strong>Rules of Procedure and Statutory Restrictions:</strong> The physical presence of citizens in the assembly hall does not automatically grant the right to vote or propose acts. In accordance with the Local and Regional Self-Government Act and the Assembly's Rules of Procedure, only the prefect, councilors, and assembly committees have the right to propose additions to the agenda within the prescribed deadlines.</li>
+                <li><strong>Missed Institutional Steps:</strong> The legal deadline for officially including an item on the agenda prior to the session was missed. Furthermore, the Administrative Department for Sustainable Development and the mechanisms of the Right to Access Information Act were bypassed, both of which constitute a necessary legal prerequisite before taking radical action on the ground.</li>
+                <li><strong>Causes of Procedural Absence:</strong> On one hand, this stems from the administrative-legal disorientation of citizen initiatives operating without professional legal support. On the other hand, shifting the focus to street and digital activism allowed for wider media coverage and mobilization driven by emotional charge, which would have lost its momentum in a dry assembly debate.</li>
+            </ul>
+
+            <h2>2. MISPLACED FOCUS OF PRESSURE (PROTEST IN LABIN)</h2>
+            <p>Shifting the pressure onto the City of Labin administration building and demanding the "dismissal" of the Mayor of Labin represents a legal-administrative absurdity and misplaced territorial geography:</p>
+            <ul>
+                <li><strong>Territorial Lack of Jurisdiction of the City of Labin:</strong> The Holcim factory is located within the territory of the Municipality of Raša (Koromačno). The City of Labin has no executive or spatial planning jurisdiction over the cargo, permits, or spatial plans of the neighboring municipality. Labin was targeted solely because it serves as the economic and media center of the Labin region, offering significantly higher visibility.</li>
+            </ul>
+
+            <h2>3. STRATEGIC WEIGHT OF THE "KOdeCO NET ZERO" PROJECT</h2>
+            <p>While local initiatives focus their efforts on protesting against waste recovery, the project conversely enjoys the highest institutional and financial legitimacy at both state and European levels:</p>
+            <ul>
+                <li><strong>National and EU Status:</strong> The project holds the status of a Strategic Investment Project of the Republic of Croatia and has been approved for co-financing of €116.9 million from the EU Innovation Fund.</li>
+                <li><strong>Technological Scope:</strong> The first carbon capture and storage (CCS) system in Croatia, aiming for the complete decarbonization of the factory by 2030 through CO₂ liquefaction and maritime transport to underground storage sites.</li>
+            </ul>
+
+            <h2>4. BREAKDOWN OF JURISDICTION BY LEVELS OF GOVERNMENT</h2>
+            <table>
+                <thead><tr><th>Level of Government / Body</th><th>Actual Legal Jurisdiction</th><th>Role in the Holcim / KOdeCO Case</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Ministry of Environmental Protection</strong></td><td>Issuance of environmental permits, environmental impact assessment (EIA), and inspection supervision.</td><td>Approves key environmental studies and monitors emission limit values (ELVs).</td></tr>
+                    <tr><td><strong>Istria County (Pazin)</strong></td><td>Management of the maritime domain, county spatial plan, and concessions.</td><td>Grants concessions on the maritime domain of county significance and harmonizes spatial plans.</td></tr>
+                    <tr><td><strong>Municipality of Raša</strong></td><td>Spatial Plan of the Municipality (PPUO) and local municipal permits.</td><td><strong>The crucial link:</strong> Geographical location of the factory. Determines land use and port expansion.</td></tr>
+                    <tr><td><strong>City of Labin</strong></td><td>Jurisdiction exclusively within its own administrative borders.</td><td><strong>NO JURISDICTION</strong> over Koromačno, Holcim, or permits in the Municipality of Raša.</td></tr>
+                </tbody>
+            </table>
+
+            <h2>5. LEGAL FEASIBILITY OF DEMANDS FOR REVOCATION OF CONCESSIONS AND PERMITS</h2>
+            <p>Demands for the immediate revocation of environmental permits and maritime domain concessions by unilateral political decree are legally unfeasible without previously proven statutory prerequisites:</p>
+            <ul>
+                <li><strong>Unilateral Termination Under Pressure:</strong> Revoking permits without a legally binding finding from the inspection constitutes a violation of the General Administrative Procedure Act. It would trigger damages claims measurable in hundreds of millions of euros, as well as penalties and the obligation to return EU grants.</li>
+                <li><strong>Lawful Procedure Based on Inspection:</strong> Requires exact findings from the State Inspectorate regarding continuous emission exceedances. If the operator fails to rectify the irregularities within the designated timeframe, a clear legal basis is established for revoking the concession without compensation for damages.</li>
+            </ul>
+
+            <h2>6. STRATEGY AND ACTION PLAN FOR HALTING PORT CONSTRUCTION</h2>
+            <p>The KOdeCO project is inextricably linked to the logistical chain: liquefied CO₂ must be transported by ships to underground storage sites. Without a new or expanded port, the project technically cannot function. Halting the intervention requires three coordinated courses of action:</p>
+            <ul>
+                <li><strong>Course A: Spatial Planning (Local Level - Municipality of Raša):</strong> Councilors must refuse to vote for amendments to the PPUO that rezone the coast into an industrial port. Without a spatial plan, there is no location permit.</li>
+                <li><strong>Course B: Overturning the EIA (State Level - Ministry):</strong> Mobilization of the expert public to prove damage to the marine ecosystem (Posidonia) and secure a negative environmental acceptability decision.</li>
+                <li><strong>Course C: Concession Dispute (Administrative Court of the RC):</strong> Initiating administrative disputes against the decision of the Government of the RC or the County regarding the allocation of the concession, citing a violation of the public interest.</li>
+            </ul>
+
+            <h2>7. PROTOCOL FOR UNILATERAL TERMINATION OF A MARITIME DOMAIN CONCESSION</h2>
+            <div class="flowchart">
+                <div class="flow-step"><h4>1. Inspection Finding</h4><p>Establishing a severe breach and issuing a formal decision.</p></div>
+                <div class="flow-step"><h4>2. Official Warning</h4><p>Providing a statutory deadline for rectification.</p></div>
+                <div class="flow-step"><h4>3. Revocation Decision</h4><p>Decision by the concession grantor in accordance with ZPDML.</p></div>
+                <div class="flow-step"><h4>4. Administrative Dispute</h4><p>Judicial review of the legality of the decision.</p></div>
+            </div>
+
+            <h2>8. CUMULATIVE PREREQUISITES FOR HALTING THE INTERVENTION</h2>
+            <ul>
+                <li><strong>Political Unity of the Municipality of Raša:</strong> An official council decision refusing the expansion of the industrial zone to the new shore of the bay.</li>
+                <li><strong>Independent Ecological Expertise:</strong> Scientific evidence that the construction of the port causes permanent degradation of the seabed.</li>
+                <li><strong>Registration of the Concerned Public:</strong> Timely participation of citizens in public consultations to establish procedural standing before the Administrative Court.</li>
+            </ul>
+
+            <h2>9. TIMELINE OF THE EIA PROCEDURE AND DEADLINES FOR PUBLIC REACTION</h2>
+            <p>The Environmental Impact Assessment (EIA) procedure is highly formalized. Missing the legal deadline by a single day permanently eliminates the possibility of judicial protection.</p>
+            <table>
+                <thead><tr><th>Phase of the Procedure</th><th>Who Conducts / What Happens</th><th>Legal Deadline and Public Action</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Phase 1: Initiation</strong></td><td>Holcim submits the Study to the Ministry; an expert committee is formed.</td><td>Monitoring notice boards and websites of the Ministry/Municipality.</td></tr>
+                    <tr><td><strong>Phase 2: Public Inspection<br><span style="color:var(--accent-orange)">(CRITICAL STEP)</span></strong></td><td>The Study is exhibited in the Municipality of Raša and online. Citizens analyze the document.</td><td><strong>DEADLINE:</strong> At least 30 days pursuant to Art. 98 of the Environmental Protection Act. Submission of written, expert-grounded objections.</td></tr>
+                    <tr><td><strong>Phase 3: Public Presentation</strong></td><td>Oral debate and presentation by the investor.</td><td>Voicing arguments loudly and insisting on entering statements into the minutes.</td></tr>
+                    <tr><td><strong>Phase 4: Evaluation</strong></td><td>The investor writes responses to the objections, and the final Report is drafted.</td><td>Checking whether the investor has adequately addressed environmental objections.</td></tr>
+                    <tr><td><strong>Phase 5: Decision & Court<br><span style="color:var(--accent-red)">(LEGAL BATTLE)</span></strong></td><td>The Ministry issues the Decision on the environmental acceptability of the project.</td><td><strong>DEADLINE:</strong> 30 DAYS FROM PUBLICATION. Filing a lawsuit with the Administrative Court in Rijeka.</td></tr>
+                </tbody>
+            </table>
+
+            <h2>10. PROCEDURAL DOCTRINE OF THE "CONCERNED PUBLIC"</h2>
+            <p>In order for a citizen or an association to have the right to file a lawsuit with the Administrative Court in Phase 5, they must have a proven legal interest. Pursuant to the Aarhus Convention and the Environmental Protection Act, status is granted only to those who participated in writing during Phase 2 (Public Inspection).</p>
+            <div class="warning-box">
+                <strong>⚠ WARNING ON ELIMINATION CONDITION:</strong><br>
+                If a citizen fails to submit a written objection within the designated 30 days of the public inspection, the Administrative Court will automatically dismiss their lawsuit in Phase 5 as inadmissible, regardless of the gravity of the ecological arguments.
+            </div>
+
+            <h2>11. CONCLUDING POSITION AND SUMMARY</h2>
+            <p>The protection of the water, land, and air of the Labin region requires an urgent transformation of street activism into a highly professional legal-institutional battle. Pressure must focus on the bodies holding actual leverage over decision-making — the Municipal Council of Raša, the Ministry, and the Administrative Court — through the precise utilization of spatial planning tools and the EIA procedure.</p>
+        </div>
+
+        <!-- ================= TALIJANSKI ================= -->
+        <div id="lang-it" class="lang-section">
+            <header>
+                <h1>DOSSIER STRATEGICO ECO-GIURIDICO</h1>
+                <div class="subtitle">ANALISI ECO-POLITICA E STRATEGIA DI TUTELA DEL TERRITORIO DI ALBONA</div>
+                <div class="subtitle">Il caso "KOdeCO Net Zero": analisi procedurale e meccanismi legali per l'arresto della pressione industriale</div>
+                <div class="author">Made & created by @BajteBrothers</div>
+            </header>
+
+            <div class="disclaimer">
+                <h3>⚠ NOTA LEGALE (DISCLAIMER) — OPERA PROTETTA DA COPYRIGHT</h3>
+                <p>Questo documento e tutte le sue parti costituiscono un'opera protetta da copyright, destinata esclusivamente a scopi informativi e alla tutela del pubblico interesse. Tutti i dati pubblicamente disponibili, inclusi quelli depositati nel repository GitHub (dosje-koromacno), possono essere utilizzati esclusivamente con l'obbligo di citare chiaramente la fonte. Qualsiasi intercettazione non autorizzata, abuso, rimodellamento o distribuzione commerciale senza previo consenso è soggetta a responsabilità legale. Tutte le parti sono invitate ad agire con responsabilità, dato che le tracce e i record digitali rimangono memorizzati in modo permanente sui server. Operiamo con trasparenza, nel pieno rispetto della legalità e della salute pubblica.</p>
+            </div>
+
+            <h2>1. CRONISTORIA E FALLIMENTI PROCEDURALI DEGLI ATTIVISTI A PISINO</h2>
+            <p>La logica giuridica e amministrativa dell'Assemblea Regionale a Pisino ha completamente sopraffatto l'attivismo di piazza a causa della negligenza nei confronti delle rigide procedure burocratiche e dei quadri procedurali formali:</p>
+            <ul>
+                <li><strong>Restrizioni Statutarie e di Legge:</strong> La presenza fisica dei cittadini nell'aula consiliare non conferisce automaticamente il diritto di voto o di proposta di atti. Ai sensi della Legge sulle autonomie locali e regionali e del Regolamento dell'Assemblea, il diritto di proporre integrazioni all'ordine del giorno spetta solo al presidente della regione, ai consiglieri e alle commissioni assembleari entro i termini stabiliti.</li>
+                <li><strong>Passaggi Istituzionali Mancati:</strong> È stato mancato il termine di legge per l'inserimento ufficiale del punto all'ordine del giorno prima della sessione. Inoltre, sono stati elusi l'Assessorato allo Sviluppo Sostenibile e i meccanismi della Legge sul Diritto di Accesso alle Informazioni, che costituiscono un presupposto legale necessario prima di una radicalizzazione sul campo.</li>
+                <li><strong>Cause dell'assenza procedurale:</strong> Da un lato si tratta di un disorientamento amministrativo-legale delle iniziative cittadine prive di un supporto legale professionale. Dall'altro, lo spostamento del focus sull'attivismo di piazza e digitale ha permesso una maggiore risonanza mediatica e una mobilitazione basata sulla carica emotiva, che avrebbe perso dinamismo in un arido dibattito assembleare.</li>
+            </ul>
+
+            <h2>2. FOCUS ERRATO DELLA PRESSIONE (PROTESTA AD ALBONA)</h2>
+            <p>Il trasferimento della pressione sull'edificio del Comune di Albona e le richieste di "dimissioni" del sindaco di Albona rappresentano un assurdo giuridico-amministrativo e una geografia territoriale errata:</p>
+            <ul>
+                <li><strong>Incompetenza Territoriale del Comune di Albona:</strong> La fabbrica Holcim si trova nel territorio del Comune di Arsa (Valmazzinghi/Koromačno). Il Comune di Albona non ha alcuna competenza esecutiva o di pianificazione territoriale sul carico, sulle autorizzazioni o sui piani regolatori del comune vicino. Albona è stata presa di mira esclusivamente perché è il centro economico e mediatico del territorio albonese, con una visibilità notevolmente maggiore.</li>
+            </ul>
+
+            <h2>3. PESO STRATEGICO DEL PROGETTO "KOdeCO NET ZERO"</h2>
+            <p>Mentre le iniziative locali si concentrano sulle proteste contro il recupero dei rifiuti, il progetto gode invece della massima legittimazione istituzionale e finanziaria a livello statale ed europeo:</p>
+            <ul>
+                <li><strong>Status Nazionale ed UE:</strong> Il progetto ha lo status di Progetto Investimento Strategico della Repubblica di Croazia ed è stato approvato per un cofinanziamento di 116,9 milioni di euro dal Fondo per l'Innovazione dell'UE.</li>
+                <li><strong>Ambito Tecnologico:</strong> Il primo sistema di cattura e stoccaggio del carbonio (CCS) in Croazia con l'obiettivo della completa decarbonizzazione della fabbrica entro il 2030 attraverso la liquefazione della CO₂ e il trasporto marittimo verso stoccaggi sotterranei.</li>
+            </ul>
+
+            <h2>4. RIPARTIZIONE DELLE COMPETENZE PER LIVELLI DI GOVERNO</h2>
+            <table>
+                <thead><tr><th>Livello di Governo / Organo</th><th>Effettiva Competenza Giuridica</th><th>Ruolo nel Caso Holcim / KOdeCO</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Ministero della Protezione Ambientale</strong></td><td>Rilascio di autorizzazioni ambientali, valutazione di impatto ambientale (VIA) e vigilanza ispettiva.</td><td>Approva gli studi ambientali chiave e monitora i valori limite di emissione (VLE).</td></tr>
+                    <tr><td><strong>Regione Istriana (Pisino)</strong></td><td>Gestione del demanio marittimo, piano territoriale regionale e concessioni.</td><td>Rilascia concessioni sul demanio marittimo di rilevanza regionale e armonizza i piani territoriali.</td></tr>
+                    <tr><td><strong>Comune di Arsa</strong></td><td>Piano di Assetto Territoriale del Comune (PPUO) e autorizzazioni comunali locali.</td><td><strong>L'anello fondamentale:</strong> Posizione geografica della fabbrica. Determina la destinazione d'uso dei terreni e l'espansione dei porti.</td></tr>
+                    <tr><td><strong>Comune di Albona</strong></td><td>Competenza esclusivamente entro i propri confini amministrativi.</td><td><strong>NESSUNA COMPETENZA</strong> su Valmazzinghi, Holcim o autorizzazioni nel Comune di Arsa.</td></tr>
+                </tbody>
+            </table>
+
+            <h2>5. FATTIBILITÀ GIURIDICA DELLE RICHIESTE DI REVOCA DELLE CONCESSIONI E AUTORIZZAZIONI</h2>
+            <p>Le richieste di revoca immediata delle autorizzazioni ambientali e delle concessioni del demanio marittimo tramite decreto politico unilaterale sono giuridicamente irrealizzabili senza presupposti legali preventivamente provati:</p>
+            <ul>
+                <li><strong>Risoluzione Unilaterale Sotto Pressione:</strong> La revoca delle autorizzazioni senza un accertamento ispettivo passato in giudicato costituisce una violazione della Legge sul procedimento amministrativo generale. Comporterebbe richieste di risarcimento danni misurabili in centinaia di milioni di euro, nonché penali e l'obbligo di restituzione dei contributi UE.</li>
+                <li><strong>Procedura Legittima basata sull'Ispezione:</strong> Richiede accertamenti precisi dell'Ispettorato statale riguardo al superamento continuo delle emissioni. Se l'operatore non elimina le irregolarità entro il termine stabilito, si crea una chiara base legale per la revoca della concessione senza risarcimento dei danni.</li>
+            </ul>
+
+            <h2>6. STRATEGIA E PIANO D'AZIONE PER L'ARRESTO DELLA COSTRUZIONE DEL PORTO</h2>
+            <p>Il progetto KOdeCO è indissolubilmente legato alla catena logistica: la CO₂ liquefatta deve essere trasportata via nave verso i depositi sotterranei. Senza un porto nuovo o ampliato, il progetto non può tecnicamente funzionare. L'impedimento dell'intervento richiede tre linee d'azione coordinate:</p>
+            <ul>
+                <li><strong>Linea A: Pianificazione Territoriale (Livello locale - Comune di Arsa):</strong> I consiglieri devono rifiutarsi di votare le modifiche al PPUO che riconvertono la costa in porto industriale. Senza piano territoriale non c'è permesso di localizzazione.</li>
+                <li><strong>Linea B: Annullamento della VIA (Livello statale - Ministero):</strong> Mobilitazione del pubblico esperto per dimostrare i danni all'ecosistema marino (Posidonia) e ottenere una delibera negativa di compatibilità ambientale.</li>
+                <li><strong>Linea C: Contenzioso sulla Concessione (Tribunale Amministrativo della RC):</strong> Avvio di ricorsi amministrativi contro la decisione del Governo della RC o della Regione sul rilascio della concessione, invocando la violazione del pubblico interesse.</li>
+            </ul>
+
+            <h2>7. PROTOCOLLO DI RISOLUZIONE UNILATERALE DELLA CONCESSIONE DEMANIALE MARITTIMA</h2>
+            <div class="flowchart">
+                <div class="flow-step"><h4>1. Verbale Ispettivo</h4><p>Accertamento della grave violazione ed emissione del provvedimento.</p></div>
+                <div class="flow-step"><h4>2. Diffida Ufficiale</h4><p>Concessione di un termine legale per la sanatoria.</p></div>
+                <div class="flow-step"><h4>3. Provvedimento di Revoca</h4><p>Decisione del concedente in conformità con la ZPDML.</p></div>
+                <div class="flow-step"><h4>4. Ricorso Amministrativo</h4><p>Controllo giurisdizionale della legittimità della decisione.</p></div>
+            </div>
+
+            <h2>8. PRESUPPOSTI CUMULATIVI PER IL BLOCCO DELL'INTERVENTO</h2>
+            <ul>
+                <li><strong>Unità Politica del Comune di Arsa:</strong> Decisione ufficiale del consiglio di rifiutare l'espansione della zona industriale sulla nuova sponda della baia.</li>
+                <li><strong>Perizia Ecologica Indipendente:</strong> Prove scientifiche che la costruzione del porto causi il degrado permanente del fondale marino.</li>
+                <li><strong>Registrazione del Pubblico Interessato:</strong> Tempestiva partecipazione dei cittadini alle audizioni pubbliche per ottenere la legittimazione processuale dinanzi al Tribunale Amministrativo.</li>
+            </ul>
+
+            <h2>9. CRONOPROGRAMMA DELLA PROCEDURA VIA E TERMINI DI REAZIONE PER IL PUBBLICO</h2>
+            <table>
+                <thead><tr><th>Fase della Procedura</th><th>Chi Conduce / Cosa Succede</th><th>Termine di Legge e Azione del Pubblico</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Fase 1: Avvio</strong></td><td>Holcim presenta lo Studio al Ministero; viene istituita una commissione di esperti.</td><td>Monitoraggio degli albi pretori e dei siti web del Ministero/Comune.</td></tr>
+                    <tr><td><strong>Fase 2: Consultazione Pubblica<br><span style="color:var(--accent-orange)">(PASSAGGIO CHIAVE)</span></strong></td><td>Lo Studio viene esposto nel Comune di Arsa e sul web. I cittadini analizzano il documento.</td><td><strong>TERMINE:</strong> Almeno 30 giorni ai sensi dell'art. 98 della Legge sulla protezione dell'ambiente. Presentazione di obiezioni scritte e tecnicamente fondate.</td></tr>
+                    <tr><td><strong>Fase 3: Presentazione Pubblica</strong></td><td>Dibattito orale e presentazione dell'investitore.</td><td>Esposizione ad alta voce degli argomenti e insistenza per l'inserimento delle dichiarazioni a verbale.</td></tr>
+                    <tr><td><strong>Fase 4: Valutazione</strong></td><td>L'investitore redige le risposte alle obiezioni e viene stilata la Relazione finale.</td><td>Verifica se l'investitore ha risposto adeguatamente alle obiezioni ecologiche.</td></tr>
+                    <tr><td><strong>Fase 5: Delibera e Tribunale<br><span style="color:var(--accent-red)">(BATTAGLIA LEGALE)</span></strong></td><td>Il Ministero rilascia la Delibera di compatibilità ambientale dell'intervento.</td><td><strong>TERMINE:</strong> 30 GIORNI DALLA PUBBLICAZIONE. Presentazione del ricorso al Tribunale Amministrativo di Fiume.</td></tr>
+                </tbody>
+            </table>
+
+            <h2>10. DOTTRINA PROCESSUALE DEL "PUBBLICO INTERESSATO"</h2>
+            <p>Affinché un cittadino o un'associazione abbiano il diritto di presentare un ricorso al Tribunale Amministrativo nella Fase 5, devono avere un interesse giuridico comprovato. In conformità con la Convenzione di Aarhus e la Legge sulla protezione dell'ambiente, lo status viene riconosciuto solo a coloro che hanno partecipato per iscritto durante la Fase 2 (Consultazione Pubblica).</p>
+            <div class="warning-box">
+                <strong>⚠ AVVERTENZA SULLA CONDIZIONE DI ELIMINAZIONE:</strong><br>
+                Se un cittadino non presenta un'obiezione scritta entro i 30 giorni stabiliti per la consultazione pubblica, il Tribunale Amministrativo respingerà automaticamente il ricorso nella Fase 5 in quanto inammissibile, indipendentemente dalla gravità degli argomenti ecologici.
+            </div>
+
+            <h2>11. POSIZIONE CONCLUSIVA E SINTESI</h2>
+            <p>La tutela dell'acqua, della terra e dell'aria del territorio albonese richiede un'urgente trasformazione dell'attivismo di piazza in una battaglia legale-istituzionale di alto livello professionale. La pressione deve concentrarsi sugli organi che detengono le reali leve decisionali — il Consiglio Comunale di Arsa, il Ministero e il Tribunale Amministrativo — attraverso l'uso preciso degli strumenti di pianificazione territoriale e della procedura VIA.</p>
+        </div>
+
+        <!-- ================= NJEMAČKI ================= -->
+        <div id="lang-de" class="lang-section">
+            <header>
+                <h1>ÖKO-RECHTLICHES STRATEGIEDOSSIER</h1>
+                <div class="subtitle">ÖKO-POLITISCHE ANALYSE UND STRATEGIE ZUM SCHUTZ DER REGION LABIN</div>
+                <div class="subtitle">Der Fall „KOdeCO Net Zero“: Verfahrenstechnische Aufschlüsselung und rechtliche Mechanismen zur Beendigung des industriellen Drucks</div>
+                <div class="author">Made & created by @BajteBrothers</div>
+            </header>
+
+            <div class="disclaimer">
+                <h3>⚠ RECHTLICHER HINWEIS (DISCLAIMER) — URHEBERRECHTLICH GESCHÜTZTES WERK</h3>
+                <p>Dieses Dokument und alle seine Teile stellen ein urheberrechtlich geschütztes Werk dar, das ausschließlich der Information und dem Schutz des öffentlichen Interesses dient. Alle öffentlich zugänglichen Daten, einschließlich derer aus dem GitHub-Repository (dosje-koromacno), dürfen ausschließlich unter obligatorischer und klarer Nennung der Quelle verwendet werden. Jedes unbefugte Abfangen, der Missbrauch, die Umgestaltung oder die kommerzielle Verbreitung ohne vorherige Zustimmung unterliegt der rechtlichen Haftung. Alle Parteien werden aufgefordert, verantwortungsvoll zu handeln, da digitale Spuren und Aufzeichnungen dauerhaft auf den Servern gespeichert bleiben. Wir arbeiten transparent, mit vollem Respekt vor der Rechtmäßigkeit und der öffentlichen Gesundheit.</p>
+            </div>
+
+            <h2>1. CHRONOLOGIE UND VERFAHRENSTECHNISCHE FEHLER DER AKTIVISTEN IN PAZIN</h2>
+            <p>Die rechtliche und administrative Logik der Gespanschaftsversammlung in Pazin hat den Straßenaktivismus aufgrund der Vernachlässigung starrer bürokratischer Verfahren und formaler Verfahrensrahmen vollständig überlagert:</p>
+            <ul>
+                <li><strong>Geschäftsordnungsmäßige und gesetzliche Einschränkungen:</strong> Die physische Präsenz von Bürgern im Sitzungssaal gewährt nicht automatisch das Stimmrecht oder das Recht, Rechtsakte vorzuschlagen. Gemäß dem Gesetz über die lokale und regionale Selbstverwaltung und der Geschäftsordnung der Versammlung haben nur der Präfekt, die Abgeordneten und die Ausschüsse der Versammlung das Recht, innerhalb der vorgeschriebenen Fristen Ergänzungen der Tagesordnung vorzuschlagen.</li>
+                <li><strong>Versäumte institutionelle Schritte:</strong> Die gesetzliche Frist für die offizielle Aufnahme des Tagesordnungspunkts vor der Sitzung wurde versäumt. Zudem wurden die Verwaltungsabteilung für nachhaltige Entwicklung und die Mechanismen des Gesetzes über das Recht auf Zugang zu Informationen umgangen, welche eine notwendige rechtliche Voraussetzung vor einer Radikalisierung vor Ort darstellen.</li>
+                <li><strong>Ursachen des verfahrenstechnischen Ausbleibens:</strong> Einerseits handelt es sich um eine administrativ-rechtliche Orientierungslosigkeit der Bürgerinitiativen ohne professionelle rechtliche Unterstützung. Andererseits ermöglichte die Verlagerung des Schwerpunkts auf den Straßen- und digitalen Aktivismus eine größere Medienresonanz und Mobilisierung auf emotionaler Ebene, was in einer trockenen Parlamentsdebatte an Dynamik verloren hätte.</li>
+            </ul>
+
+            <h2>2. FEHLFOKUSSIERTER DRUCK (PROTEST IN LABIN)</h2>
+            <p>Die Verlagerung des Drucks auf das Gebäude der Stadt Labin und die Forderungen nach einer „Absetzung“ des Bürgermeisters von Labin stellen ein rechtlich-administratives Absurdum und eine verfehlte territoriale Geografie dar:</p>
+            <ul>
+                <li><strong>Territoriale Unzuständigkeit der Stadt Labin:</strong> Die Holcim-Fabrik befindet sich auf dem Gebiet der Gemeinde Raša (Koromačno). Die Stadt Labin hat keinerlei vollziehende oder raumplanerische Zuständigkeit über die Fracht, die Genehmigungen oder die Raumpläne der Nachbargemeinde. Die Zielrichtung auf Labin erfolgte ausschließlich, weil es das wirtschaftliche und mediale Zentrum der Region Labin mit einer deutlich höheren Sichtbarkeit ist.</li>
+            </ul>
+
+            <h2>3. STRATEGISCHES GEWICHT DES PROJEKTS „KOdeCO NET ZERO“</h2>
+            <p>Während lokale Initiativen ihren Fokus auf Proteste gegen die Abfallverwertung legen, genießt das Projekt im Gegenzug höchste institutionelle und finanzielle Legitimität auf staatlicher und europäischer Ebene:</p>
+            <ul>
+                <li><strong>Nationaler und EU-Status:</strong> Das Projekt besitzt den Status eines Strategischen Investitionsprojekts der Republik Kroatien und es wurde ihm eine Kofinanzierung in Höhe von 116,9 Millionen Euro aus dem EU-Innovationsfonds bewilligt.</li>
+                <li><strong>Technologischer Umfang:</strong> Das erste System zur Kohlenstoffabscheidung und -speicherung (CCS) in Kroatien mit dem Ziel der vollständigen Dekarbonisierung der Fabrik bis 2030 durch Verflüssigung von CO₂ und Seetransport zu unterirdischen Speichern.</li>
+            </ul>
+
+            <h2>4. AUFSCHLÜSSELUNG DER ZUSTÄNDIGKEITEN NACH VERWALTUNGSEBENEN</h2>
+            <table>
+                <thead><tr><th>Verwaltungsebene / Behörde</th><th>Tatsächliche rechtliche Zuständigkeit</th><th>Rolle im Fall Holcim / KOdeCO</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Ministerium für Umweltschutz</strong></td><td>Erteilung von Umweltgenehmigungen, Umweltverträglichkeitsprüfung (UVP) und Aufsicht durch Inspektionen.</td><td>Genehmigt zentrale Umweltstudien und überwacht die Emissionsgrenzwerte (EGW).</td></tr>
+                    <tr><td><strong>Gespanschaft Istrien (Pazin)</strong></td><td>Verwaltung des Seeguts, Raumordnungsplan der Gespanschaft und Konzessionen.</td><td>Vergibt Konzessionen für Seegut von gespanschaftlicher Bedeutung und harmonisiert die Raumordnungspläne.</td></tr>
+                    <tr><td><strong>Gemeinde Raša</strong></td><td>Raumordnungsplan der Gemeinde (PPUO) und lokale kommunale Genehmigungen.</td><td><strong>Das entscheidende Bindeglied:</strong> Geografischer Standort der Fabrik. Bestimmt die Landnutzung und Hafenerweiterungen.</td></tr>
+                    <tr><td><strong>Stadt Labin</strong></td><td>Zuständigkeit ausschließlich innerhalb der eigenen Verwaltungsgrenzen.</td><td><strong>KEINE ZUSTÄNDIGKEIT</strong> über Koromačno, Holcim oder Genehmigungen in der Gemeinde Raša.</td></tr>
+                </tbody>
+            </table>
+
+            <h2>5. RECHTLICHE MACHTBARKEIT VON FORDERUNGEN NACH WIDERRUF VON KONZESSIONEN UND GENEHMIGUNGEN</h2>
+            <p>Forderungen nach einem sofortigen Widerruf von Umweltgenehmigungen und Konzessionen für das Seegut durch einseitiges politisches Dekret sind ohne zuvor nachgewiesene gesetzliche Voraussetzungen rechtlich undurchführbar:</p>
+            <ul>
+                <li><strong>Einseitige Kündigung unter Druck:</strong> Der Widerruf von Genehmigungen ohne rechtskräftigen Befund der Inspektion stellt einen Verstoß gegen das Gesetz über das allgemeine Verwaltungsverfahren dar. Er würde Schadenersatzforderungen in Höhe von Hunderten Millionen Euro sowie Strafen und die Verpflichtung zur Rückzahlung von EU-Fördergeldern nach sich ziehen.</li>
+                <li><strong>Rechtmäßiges Verfahren auf Basis einer Inspektion:</strong> Erfordert exakte Befunde der staatlichen Inspektion über kontinuierliche Grenzwertüberschreitungen der Emissionen. Wenn der Betreiber die Unregelmäßigkeiten nicht innerhalb der gesetzten Frist behebt, entsteht eine klare Rechtsgrundlage für den Entzug der Konzession ohne Schadenersatz.</li>
+            </ul>
+
+            <h2>6. STRATEGIE UND AKTIONSPLAN ZUR EINSTELLUNG DES HAFENBAUS</h2>
+            <p>Das KOdeCO-Projekt ist untrennbar mit der Logistikkette verbunden: Verflüssigtes CO₂ muss mit Schiffen zu den unterirdischen Speichern transportiert werden. Ohne einen neuen oder erweiterten Hafen kann das Projekt technisch nicht funktionieren. Die Verhinderung des Eingriffs erfordert drei koordinierte Wege:</p>
+            <ul>
+                <li><strong>Weg A: Raumordnung (Lokale Ebene - Gemeinde Raša):</strong> Die Gemeinderäte müssen sich weigern, für Änderungen des PPUO zu stimmen, die die Küste in einen Industriehafen umwidmen. Ohne Raumordnungsplan gibt es keine Standortgenehmigung.</li>
+                <li><strong>Weg B: Zu-Fall-Bringen der UVP (Staatliche Ebene - Ministerium):</strong> Mobilisierung der Fachöffentlichkeit zum Nachweis von Schäden am marinen Ökosystem (Posidonia) und Erwirkung eines negativen Bescheids über die Umweltverträglichkeit.</li>
+                <li><strong>Weg C: Konzessionsstreit (Verwaltungsgericht der RK):</strong> Einleitung von Verwaltungsstreitverfahren gegen die Entscheidung der Regierung der RK oder der Gespanschaft über die Vergabe der Konzession unter Berufung auf die Verletzung des öffentlichen Interesses.</li>
+            </ul>
+
+            <h2>7. PROTOKOLL ZUR EINSEITIGEN KÜNDIGUNG EINER SEEGUTKONZESSION</h2>
+            <div class="flowchart">
+                <div class="flow-step"><h4>1. Inspektionsbefund</h4><p>Feststellung einer schweren Verletzung und Erlass eines Bescheids.</p></div>
+                <div class="flow-step"><h4>2. Offizielle Abmahnung</h4><p>Setzung einer gesetzlichen Frist zur Behebung.</p></div>
+                <div class="flow-step"><h4>3. Entzugsbescheid</h4><p>Entscheidung des Konzessionsgebers gemäß dem Gesetz über das Seegut und die Seehäfen (ZPDML).</p></div>
+                <div class="flow-step"><h4>4. Verwaltungsstreitverfahren</h4><p>Gerichtliche Überprüfung der Rechtmäßigkeit der Entscheidung.</p></div>
+            </div>
+
+            <h2>8. KUMULATIVE VORAUSSETZUNGEN FÜR DEN STOPP DES EINGRIFFS</h2>
+            <ul>
+                <li><strong>Politische Einheit der Gemeinde Raša:</strong> Offizieller Beschluss des Rates zur Ablehnung der Erweiterung der Industriezone auf das neue Ufer der Bucht.</li>
+                <li><strong>Unabhängige ökologische Expertise:</strong> Wissenschaftliche Beweise dafür, dass der Bau des Hafens eine dauerhafte Degradation des Meeresbodens verursacht.</li>
+                <li><strong>Registrierung der betroffenen Öffentlichkeit:</strong> Rechtzeitige Teilnahme der Bürger an öffentlichen Anhörungen zur Erlangung der Prozesslegitimation vor dem Verwaltungsgericht.</li>
+            </ul>
+
+            <h2>9. ZEITPLAN DES UVP-VERFAHRENS UND FRISTEN FÜR DIE REAKTION DER ÖFFENTLICHKEIT</h2>
+            <p>Das Verfahren der Umweltverträglichkeitsprüfung (UVP) ist äußerst formalisiert. Das Versäumen der gesetzlichen Frist um nur einen einzigen Tag schließt die Möglichkeit des gerichtlichen Schutzes dauerhaft aus.</p>
+            <table>
+                <thead><tr><th>Phase des Verfahrens</th><th>Wer leitet / Was passiert</th><th>Gesetzliche Frist und Aktion der Öffentlichkeit</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Phase 1: Einleitung</strong></td><td>Holcim reicht die Studie beim Ministerium ein; ein Fachausschuss wird gebildet.</td><td>Überwachung der Amtstafeln und Websites des Ministeriums/der Gemeinde.</td></tr>
+                    <tr><td><strong>Phase 2: Öffentliche Einsichtnahme<br><span style="color:var(--accent-orange)">(ZENTRALER SCHRITT)</span></strong></td><td>Die Studie wird in der Gemeinde Raša und im Internet ausgelegt. Bürger analysieren das Dokument.</td><td><strong>FRIST:</strong> Mindestens 30 Tage gemäß Art. 98 des Umweltschutzgesetzes. Einreichung schriftlicher, fachlich begründeter Einwände.</td></tr>
+                    <tr><td><strong>Phase 3: Öffentliche Präsentation</strong></td><td>Mündliche Debatte und Präsentation des Investors.</td><td>Lautstarkes Vorbringen von Argumenten und Beharren auf der Aufnahme von Erklärungen in das Protokoll.</td></tr>
+                    <tr><td><strong>Phase 4: Evaluierung</strong></td><td>Der Investor verfasst Antworten auf die Einwände und der Abschlussbericht wird erstellt.</td><td>Überprüfung, ob der Investor adäquat auf die ökologischen Einwände geantwortet hat.</td></tr>
+                    <tr><td><strong>Phase 5: Bescheid & Gericht<br><span style="color:var(--accent-red)">(RECHTLICHER KAMPF)</span></strong></td><td>Das Ministerium erlässt den Bescheid über die Umweltverträglichkeit des Vorhabens.</td><td><strong>FRIST:</strong> 30 TAGE AB VERÖFFENTLICHUNG. Einreichung einer Klage beim Verwaltungsgericht in Rijeka.</td></tr>
+                </tbody>
+            </table>
+
+            <h2>10. VERFAHRENSDOKTRIN DER „BETROFFENEN ÖFFENTLICHKEIT“</h2>
+            <p>Damit ein Bürger oder ein Verein das Recht hat, in Phase 5 eine Klage beim Verwaltungsgericht einzureichen, muss ein rechtliches Interesse nachgewiesen sein. Gemäß der Aarhus-Konvention und dem Umweltschutzgesetz wird dieser Status nur denjenigen zuerkannt, die schriftlich an Phase 2 (Öffentliche Einsichtnahme) teilgenommen haben.</p>
+            <div class="warning-box">
+                <strong>⚠ WARNUNG VOR DER AUSSCHLUSSFRIST:</strong><br>
+                Wenn ein Bürger innerhalb der vorgegebenen 30 Tage der öffentlichen Einsichtnahme keinen schriftlichen Einwand einreicht, wird das Verwaltungsgericht seine Klage in Phase 5 unabhängig von der Schwere der ökologischen Argumente automatisch als unzulässig abweisen.
+            </div>
+
+            <h2>11. SCHLUSSFOLGERUNG UND ZUSAMMENFASSUNG</h2>
+            <p>Der Schutz von Wasser, Boden und Luft der Region Labin erfordert eine dringende Transformation des Straßenaktivismus in einen hochprofessionellen rechtlich-institutionellen Kampf. Der Druck muss sich auf die Gremien konzentrieren, die die tatsächlichen Entscheidungshebel in den Händen halten — den Gemeinderat von Raša, das Ministerium und das Verwaltungsgericht — durch die präzise Nutzung von Raumordnungsinstrumenten und des UVP-Verfahrens.</p>
+        </div>
+
+        <section id="gospic-kanal" class="mt-5">
+          <h2 class="h3">Gospić — paralelni kanal prema Koromačnu</h2>
+          <p>
+            Otpad iz Gospića povezan je s otvorenim pitanjima o evidenciji i konačnom odredištu.
+            Zahtjev MZOZT-u traži KBO šifre, e-ONTO zapise, primatelje i prijevoznike te provjeru
+            je li otpad izravno ili preko Pazina upućivan u Holcim Koromačno. Navodi o pogrešnim
+            KBO šiframa ili takvom toku otpada nisu ovdje predstavljeni kao utvrđene činjenice.
+          </p>
+          <p>
+            U dosjeu se prate postupak za oko 4.500 t rasutog otpada (rok za dostavu ponuda
+            03.11.2026.) i pregovarački postupak za oko 33.000 t zakopanog otpada. Njihova
+            dokumentacija može razjasniti tokove i odredišta otpada.
+          </p>
+          <ul>
+            <li><a href="../docs/monitoring/2026-11-02-dnevni-monitoring.md">Dnevni monitoring 02.11.2026. — Gospić rokovi, HRT, GitHub</a></li>
+            <li><a href="https://vijesti.hrt.hr/hrvatska/vuckovic-krece-pregovaracki-postupak-sanacije-zakopanog-otpada-u-gospicu-12989019" target="_blank" rel="noopener">HRT, 02.11.2026. — Vučković najavila pregovarački postupak</a></li>
+          </ul>
+          <p class="small text-muted">
+            Zahtjev za pristup informacijama o KBO šiframa i odredištu otpada iz Gospića
+            upućen je MZOZT-u. Očekivani rok odgovora: 15 dana.
+          </p>
+        </section>
+
+        <footer>
+            <p>KOdeCO Net Zero • Pravno-Analitički Dosje<br>
+            Made & created by @BajteBrothers<br>
+            <em>"Kvaliteta nije čin, to je navika."</em></p>
+        </footer>
+    </div>
+
+    <!-- SKRIPTA ZA MIJENJANJE JEZIKA -->
+    <script>
+        function setLang(lang) {
+            // Sakrij sve sekcije
+            document.querySelectorAll('.lang-section').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Prikaži odabranu sekciju
+            document.getElementById('lang-' + lang).classList.add('active');
+            
+            // Ažuriraj gumbe (crvena pozadina za aktivni)
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Promijeni jezik u <html> tagu
+            document.documentElement.lang = lang;
+        }
+    </script>
+<section class="site-legal-footer" style="margin-top:60px;padding:24px 20px;border-top:1px solid #2a2f3a;background:#0f1115;color:#a7adb8;font:14px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+  <div style="max-width:1100px;margin:0 auto">
+    <details style="margin-bottom:20px;background:#171a21;border:1px solid #2a2f3a;border-radius:10px;padding:15px">
+      <summary style="cursor:pointer;font-weight:700;color:#ffb703;font-size:16px">Provjera SHA-256 hashova (manifest)</summary>
+      <div style="margin-top:15px">
+        <p>U Windows Command Promptu možeš izračunati SHA-256 otisak manifesta ili pojedinačne datoteke:</p>
+        <pre style="white-space:pre-wrap;background:#0f1115;padding:10px;border-radius:6px;overflow-x:auto;font-size:13px;color:#e8eaed"><code>CertUtil -hashfile MANIFEST-SHA256.txt SHA256
+CertUtil -hashfile "putanja\do\datoteke" SHA256</code></pre>
+        <p><a href="../manifest.html" data-site-link="manifest-page" style="color:#4aa3ff;text-decoration:underline">Otvori manifest „NISU NAS SLOMILI”</a> · <a href="../MANIFEST-SHA256.txt" data-site-link="hash-manifest" style="color:#4aa3ff;text-decoration:underline">Preuzmi SHA-256 manifest datoteka</a></p>
+      </div>
+    </details>
+    <div style="background:#171a21;border:1px solid #2a2f3a;border-radius:10px;padding:20px;line-height:1.6">
+      <h2 style="color:#ffb703;margin-top:0;font-size:18px">Pravna napomena i uvjeti korištenja</h2>
+      <p><strong>1. Informativna priroda sadržaja i javni interes</strong><br>
+      Sav sadržaj objavljen na ovoj web stranici (Dosje Koromačno) služi isključivo u svrhu informiranja javnosti o pitanjima od iznimnog javnog interesa: zaštiti okoliša, zdravlja građana, transparentnosti upravljanja otpadom i zakonitosti rada industrijskih postrojenja. Sadržaj se temelji na javno dostupnim podacima, službenim dokumentima, zakonima i vlastitim istraživanjima.</p>
+      <p><strong>2. Točnost i provjera podataka</strong><br>
+      Autor se obvezao postupati s dužnom pažnjom kako bi sve informacije bile točne i potpune u trenutku objave. Međutim, sadržaj se temelji na dokumentima trećih strana, te se ne preuzima odgovornost za eventualne nenamjerne greške, propuste ili netočnosti u podacima koji su preuzeti iz službenih registara, medija ili od strane trećih osoba.</p>
+      <p><strong>3. Isključenje odgovornosti za štetu</strong><br>
+      U skladu sa Zakonom o obveznim odnosima (čl. 154.) i Zakonom o medijima (čl. 4. st. 4.), autor ne snosi odgovornost za štetu koja bi mogla nastati korištenjem ili tumačenjem informacija s ove stranice, osim u slučaju dokazane namjere ili krajnje nepažnje. Sadržaj na ovoj stranici je informativnog karaktera i ni pod kojim uvjetima ne predstavlja pravni, medicinski ili financijski savjet. Za donošenje odluka temeljenih na ovim podacima, molimo konzultirajte ovlaštene stručnjake.</p>
+      <p><strong>4. Pravo na ispravak i odgovor</strong><br>
+      Sukladno Zakonu o medijima, svaka fizička ili pravna osoba koja smatra da je objavljena informacija netočna ili da joj je povrijeđeno pravo, ima pravo na objavljivanje ispravka ili odgovora. Molimo da se zahtjevi za ispravak šalju izravno na e-mail: <a href="mailto:dosje.koromacno@proton.me" style="color:#4aa3ff">dosje.koromacno@proton.me</a> / <a href="mailto:dosje.koromacno@proton.me" style="color:#4aa3ff">dosje.koromacno@proton.me</a>. U slučaju utemeljenog zahtjeva, ispravak će biti objavljen u najkraćem mogućem roku.</p>
+      <p><strong>5. Autorska prava i korištenje</strong><br>
+      Svi objavljeni dokumenti, analize i forenzički materijali dostupni su za javnu upotrebu u svrhu zaštite okoliša, zdravlja i javnog interesa. Molimo da prilikom korištenja sadržaja obavezno navedete izvor (link na ovu stranicu ili GitHub repozitorij).</p>
+      <p><strong>6. Vanjski linkovi</strong><br>
+      Ova stranica sadrži linkove na vanjske web stranice (npr. službene registre, medijske portale, GitHub). Autor ne kontrolira sadržaj tih stranica i ne preuzima odgovornost za njihov sadržaj.</p>
+      <p>© 2026 @BajteBrothers / Dosje Koromačno. Sva prava pridržana. Materijali objavljeni na ovoj stranici dostupni su za osobnu, nekomercijalnu i edukativnu upotrebu. U javnoj uporabi obavezno navedite izvor: „Dosje Koromačno, https://zeljk018bratic.github.io/dosje-koromacno/”. Komercijalna uporaba, masovno umnožavanje ili objavljivanje bez prethodnog pisanog odobrenja nije dopušteno.</p>
+      <p style="margin-bottom:0;font-size:12px;color:#a7adb8"><em>Posljednje ažuriranje: 2. 11. 2026.</em></p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

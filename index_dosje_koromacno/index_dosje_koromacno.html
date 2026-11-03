@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="hr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Dosje: Rat za Resurse & Zeleni Greenwashing | 2026</title>
+    <meta name="description" content="Istraživački dosje: AI data-centri, greenwashing i slučaj Holcim KOdeCO u Istri. Forenzička analiza dokumenata, lokalnih inicijativa i EU subvencija.">
+    <meta property="og:title" content="Dosje: Rat za Resurse & Zeleni Greenwashing">
+    <meta property="og:description" content="Od Lexingona do Koromačna — kako građani razotkrivaju korporativni greenwashing.">
+    <meta property="og:type" content="article">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mono-font { font-family: 'JetBrains Mono', monospace; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.65);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        html { scroll-padding-top: 6rem; }
+        .nav-link { position: relative; transition: color .2s; }
+        .nav-link.active { color: #f87171; }
+        .nav-link.active::after {
+            content:''; position:absolute; left:0; right:0; bottom:-6px;
+            height:2px; background:#f87171; border-radius:2px;
+        }
+        .source-badge {
+            display:inline-flex; align-items:center; gap:.35rem;
+            font-size:.65rem; letter-spacing:.05em; text-transform:uppercase;
+            padding:.15rem .5rem; border-radius:.25rem;
+            border:1px solid rgba(52,211,153,.35); color:#34d399;
+            background:rgba(16,185,129,.08); margin-left:.35rem;
+        }
+        .source-badge.warn { border-color:rgba(251,191,36,.35); color:#fbbf24; background:rgba(251,191,36,.08); }
+        .source-badge.risk { border-color:rgba(248,113,113,.35); color:#f87171; background:rgba(248,113,113,.08); }
+
+        /* Fiksni izbornik jezika s lijeve strane */
+        .lang-sidebar {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+        
+        .lang-sidebar button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #0f172a; /* Tamna pozadina */
+            color: #ffffff;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            border: 2px solid #ef4444; /* Crveni okvir */
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .lang-sidebar button:hover, 
+        .lang-sidebar button.active {
+            background-color: #ef4444; /* Crvena pozadina na hover/aktivno */
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .lang-sidebar { display: none; }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-red-500 selection:text-white">
+
+    <!-- IZBORNIK JEZIKA -->
+    <div class="lang-sidebar">
+        <button onclick="setLang('hr')" class="active" id="btn-hr">HR</button>
+        <button onclick="setLang('en')" id="btn-en">EN</button>
+        <button onclick="setLang('it')" id="btn-it">IT</button>
+        <button onclick="setLang('de')" id="btn-de">DE</button>
+    </div>
+
+    <!-- PROGRESS BAR ČITANJA -->
+    <div id="progress" class="fixed top-0 left-0 h-0.5 bg-gradient-to-r from-red-500 to-amber-500 z-[60] transition-all duration-75" style="width:0%"></div>
+
+    <!-- NAVIGACIJA -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                </span>
+                <span class="font-extrabold text-xl tracking-wider text-white">DOSJE<span class="text-red-500">.FORENSIC</span></span>
+            </a>
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold text-slate-300">
+                <a href="#lexington" class="nav-link" data-i18n="nav_lex">Lexington & AI</a>
+                <a href="#europa" class="nav-link" data-i18n="nav_eur">Globalni Otpor</a>
+                <a href="#koromacno" class="nav-link" data-i18n="nav_kor">Holcim & Istra</a>
+                <a href="#lokacije" class="nav-link" data-i18n="nav_lok">Lokacije</a>
+                <a href="#github" class="nav-link" data-i18n="nav_for">Forenzika</a>
+                <a href="#metodologija" class="nav-link" data-i18n="nav_met">Metodologija</a>
+                <a href="#linkovi" class="nav-link" data-i18n="nav_izv">Izvori</a>
+                <a href="../energija.html" class="nav-link">Energija / EKONERG</a>
+            </nav>
+            <a href="#koromacno" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg shadow-red-900/40 transition" data-i18n="nav_btn">Podrži Akciju</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative overflow-hidden py-24 lg:py-32 border-b border-slate-900">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(239,68,68,0.15),transparent_50%)]"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block bg-red-950 text-red-400 text-xs px-3 py-1 rounded-full uppercase tracking-widest font-bold mb-6 border border-red-800/50" data-i18n="hero_badge">Istraživački dosje • Ažurirano: listopad 2026</span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight" data-i18n-html="hero_h1">
+                Kad <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-500">Tech-Miliarderi i Industrijski Giganti</span> Udare u Zid.
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed" data-i18n="hero_p">
+                Od građanskih pobuna u Lexingtonu do bunta u Istri: kako lokalne zajednice, digitalna forenzika i otvoreni podaci razotkrivaju greenwashing i lažne „Net Zero" projekte.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#koromacno" class="bg-white text-slate-950 hover:bg-slate-200 font-bold px-8 py-4 rounded-xl transition shadow-xl" data-i18n="hero_btn1">Istraži slučaj Holcim</a>
+                <a href="#github" class="bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 font-bold px-8 py-4 rounded-xl transition" data-i18n="hero_btn2">Forenzički dosje</a>
+            </div>
+            <p class="mono-font text-xs text-slate-500 mt-10">
+                <span data-i18n="hero_status">STATUS:</span> <span class="text-emerald-400" data-i18n="hero_status_val">AKTIVNO</span> · <span data-i18n="hero_docs">DOKUMENTI:</span> <span class="text-slate-300">14</span> · <span data-i18n="hero_sigs">POTPISI:</span> <span class="text-amber-400">7.100+</span>
+            </p>
+        </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
+
+        <!-- 1. LEXINGTON -->
+        <section id="lexington" class="scroll-mt-28">
+            <div class="border-l-4 border-red-500 pl-6 mb-8">
+                <h2 class="text-3xl font-bold text-white" data-i18n="s1_h2">1. Lexington, Kentucky: „Tech-miliarderi nisu glasači"</h2>
+                <p class="text-slate-400 text-sm mt-1" data-i18n="s1_sub">Krizna točka resursnog imperijalizma umjetne inteligencije</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl mb-6">
+                <p class="text-slate-300 text-sm leading-relaxed" data-i18n-html="s1_p1">
+                    Lokalna zajednica u Lexingtonu (Fayette County) postala je simbol globalnog otpora širenju AI data-centara. Nakon što je vijeće razmatralo moratorij na nove gradnje, građani su zatražili da se projekti zamrznu dok se ne procijeni utjecaj na mrežu, vodne resurse i cijene struje. <span class="source-badge">izvor: lokalni zapisnici</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="mono-font text-red-500 text-2xl font-bold mb-2" data-i18n="s1_c1_val">↗ energija</div>
+                    <h3 class="font-bold text-lg mb-2 text-white" data-i18n="s1_c1_h3">Višestruka potrošnja</h3>
+                    <p class="text-slate-400 text-sm" data-i18n-html="s1_c1_p">AI upit troši red veličina više energije od klasične pretrage, ovisno o modelu. <span class="source-badge warn">raspon sporan</span></p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="mono-font text-red-500 text-2xl font-bold mb-2">H₂O</div>
+                    <h3 class="font-bold text-lg mb-2 text-white" data-i18n="s1_c2_h3">Hlađenje servera</h3>
+                    <p class="text-slate-400 text-sm" data-i18n-html="s1_c2_p">Data-centri troše milijune litara pitke vode dnevno u regijama koje se suočavaju sa sušom. <span class="source-badge">više studija</span></p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="mono-font text-red-500 text-2xl font-bold mb-2" data-i18n="s1_c3_val">+ struja</div>
+                    <h3 class="font-bold text-lg mb-2 text-white" data-i18n="s1_c3_h3">Pritisak na cijene</h3>
+                    <p class="text-slate-400 text-sm" data-i18n-html="s1_c3_p">Studija Federal Reserve Bank of Dallas pokazuje vezu između rasta data-centara i rasta cijena struje. <span class="source-badge">Dallas Fed</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. EUROPA -->
+        <section id="europa" class="scroll-mt-28">
+            <div class="border-l-4 border-amber-500 pl-6 mb-8">
+                <h2 class="text-3xl font-bold text-white" data-i18n="s2_h2">2. Europski brandherdi: 70+ projektnih zaustavljanja</h2>
+                <p class="text-slate-400 text-sm mt-1" data-i18n="s2_sub">Od Dublina do Frankfurta: građani povlače ručnu kočnicu</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-i18n="s2_c1_h3">🇫🇷 Francuska — Étrechet</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed" data-i18n-html="s2_c1_p">
+                            Googleov projekt data-centra u Étrechetu izazvao je val lokalnih ostavki. Dio vijećnika i gradonačelnica napustili su funkcije zbog načina na koji je projekt proguran bez stvarne lokalne rasprave. <span class="source-badge">francuski tisak</span>
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-i18n="s2_c2_h3">🇮🇪 Irska & 🏴 Škotska</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed" data-i18n-html="s2_c2_p">
+                            Prema podacima irskog CSO-a, data-centri u Irskoj troše više električne energije nego sva kućanstva zajedno. Škotski parlament raspravljao je o moratoriju na nove projekte. <span class="source-badge">CSO.statistics</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. HOLCIM -->
+        <section id="koromacno" class="scroll-mt-28">
+            <div class="border-l-4 border-red-500 pl-6 mb-8">
+                <h2 class="text-3xl font-bold text-white" data-i18n="s3_h2">3. Slučaj Holcim: KOdeCO Net Zero u Istri</h2>
+                <p class="text-slate-400 text-sm mt-1" data-i18n="s3_sub">Globalna dvoličnost, EU subvencije i masovni narodni bunt</p>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl border border-red-500/30 space-y-6">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="w-full lg:w-1/2 space-y-4">
+                        <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded text-xs font-bold uppercase tracking-wider" data-i18n="s3_badge">Kronologija listopada 2026</span>
+                        <h3 class="text-2xl font-bold text-white" data-i18n="s3_h3">Kad Istra kaže: dosta!</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed" data-i18n-html="s3_p">
+                            Dok Holcim projekt u Koromačnu prodaje kao „poklon svjetskoj klimi" uz potporu EU Innovation Fund, stvarnost uključuje spaljivanje otpada (iz Kaštijuna, Pazina, Gospića) i zabrinutost zbog emisija. <span class="source-badge">CINEA baza</span>
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-300">
+                            <li class="flex items-start space-x-2">
+                                <span class="text-red-500">●</span>
+                                <span data-i18n-html="s3_li1"><strong>14.10.2026.</strong> — Preko 7.100 građana predalo službenu peticiju općini Raša.</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <span class="text-amber-500">●</span>
+                                <span data-i18n-html="s3_li2"><strong>15.10.2026.</strong> — Općinsko vijeće Raše glasalo protiv projekta i zatražilo uklanjanje sa strateške liste.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full lg:w-1/2 bg-slate-900 p-6 rounded-xl border border-slate-800">
+                        <h4 class="font-bold text-white mb-2 text-sm uppercase tracking-wider text-red-400" data-i18n="s3_h4">Otpad u Gospiću — otvoreno pitanje</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4" data-i18n-html="s3_p2">
+                            Dolazak talijanskog otpada u Gospić kroz sumnjive tvrtke otvorio je pitanja o lancu zbrinjavanja opasnog otpada. <span class="source-badge risk">TVRDNJA ZAHTIJEVA SUDSKI IZVOR</span>
+                        </p>
+                        <p class="text-slate-500 text-xs leading-relaxed mb-3" data-i18n-html="s3_note">
+                            ⚠️ Napomena urednika: ova tvrdnja trenutno nema javno dostupan sudski ili istražni dokument. Do objave takvog dokumenta, tretiramo je kao <em>istražnu hipotezu</em>, ne kao dokaz.
+                        </p>
+                        <div class="mono-font bg-slate-950 p-3 rounded text-xs text-amber-400 border border-amber-900/40" data-i18n="s3_status">
+                            STATUS: provjera u tijeku — čeka se odgovor institucija
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3.5. LOKACIJE (NOVO) -->
+        <section id="lokacije" class="scroll-mt-28">
+            <div class="border-l-4 border-amber-500 pl-6 mb-8">
+                <h2 class="text-3xl font-bold text-white" data-i18n="geo_h2">Prostorni i vizualni pregled ugroženosti</h2>
+                <p class="text-slate-400 text-sm mt-1" data-i18n="geo_sub">Crkva, kamenolom i plaža – sukob industrije i prirode</p>
+            </div>
+
+            <!-- Blok koji si tražio -->
+            <div class="glass-card p-6 rounded-2xl mb-8 border border-slate-700">
+                <h3 class="text-xl font-bold text-white mb-2" data-i18n="eko_lok_h3">Crkva sv. Ivana Krstitelja i Industrijska Zona</h3>
+                <p class="text-slate-400 text-sm mb-4" data-i18n="eko_lok_p">Simbol kulturne baštine smješten neposredno iznad ruba kopopa, s panoramskim pogledom na prostor pogođen eksploatacijom.</p>
+                <a href="https://maps.app.goo.gl/ctbaNYjvVx4iUim18" target="_blank" rel="noopener" class="inline-block bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-6 py-3 rounded-xl font-bold transition" data-i18n="eko_lok_btn">Otvori lokaciju na karti</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Kartica 1: Kamenolom -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-red-500/30">
+                    <div class="relative h-64 overflow-hidden">
+                        <span class="absolute top-4 left-4 z-10 bg-red-600 text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-wider shadow-lg" data-i18n="geo_c1_badge">Zona Eksploatacije</span>
+                        <img src="crkva_sv_ivan.jpg" alt="Satelitski snimak kopopa" class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-3" data-i18n="geo_c1_h3">Kamenolom & Kopop</h3>
+                            <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-i18n="geo_c1_p">Satelitski prikaz masivnog industrijskog zahvata neposredno uz morsku obalu. Prikazani su razmjeri eksploatacije i pritisak na prirodni okoliš.</p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/okRbHEd982QqD6rf7" target="_blank" rel="noopener" class="text-center w-full bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-3 rounded-xl font-bold transition" data-i18n="geo_btn">Prikaži na karti</a>
+                    </div>
+                </div>
+
+                <!-- Kartica 2: Crkva -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-amber-500/30">
+                    <div class="relative h-64 overflow-hidden">
+                        <span class="absolute top-4 left-4 z-10 bg-amber-500 text-slate-900 px-3 py-1 rounded text-xs font-bold uppercase tracking-wider shadow-lg" data-i18n="geo_c2_badge">Ugrožena Baština</span>
+                        <img src="image_0e8da6.png" alt="Satelitski snimak crkve sv. Ivana" class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-3" data-i18n="geo_c2_h3">Crkva sv. Ivana Krstitelja</h3>
+                            <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-i18n="geo_c2_p">Kulturna i povijesna baština smještena na samom rubu kopopa. Lokacija pruža izravan uvid u prostornu stisnutost između industrije i tradicije.</p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/ctbaNYjvVx4iUim18" target="_blank" rel="noopener" class="text-center w-full bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-3 rounded-xl font-bold transition" data-i18n="geo_btn">Prikaži na karti</a>
+                    </div>
+                </div>
+
+                <!-- Kartica 3: Plaža Vošćice -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col border border-emerald-500/30">
+                    <div class="relative h-64 overflow-hidden">
+                        <span class="absolute top-4 left-4 z-10 bg-emerald-500 text-slate-900 px-3 py-1 rounded text-xs font-bold uppercase tracking-wider shadow-lg" data-i18n="geo_c3_badge">Prirodni Biser</span>
+                        <img src="image_0e85e4.png" alt="Uvala i plaža Vošćice" class="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-3" data-i18n="geo_c3_h3">Plaža i Uvala Vošćice</h3>
+                            <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-i18n="geo_c3_p">Očuvana prirodna uvala iznimne bioraznolikosti koja se nalazi u neposrednoj blizini industrijske zone te trpi kontinuirani ekološki rizik.</p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/e8CckfScaRxsgXMbA" target="_blank" rel="noopener" class="text-center w-full bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-4 py-3 rounded-xl font-bold transition" data-i18n="geo_btn">Prikaži na karti</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. FORENZIKA (S DOKAZOM #01) -->
+        <section id="github" class="scroll-mt-28">
+            <div class="border-l-4 border-emerald-500 pl-6 mb-8">
+                <h2 class="text-3xl font-bold text-white" data-i18n="s4_h2">4. Forenzika: dosje „Koromačno"</h2>
+                <p class="text-slate-400 text-sm mt-1" data-i18n="s4_sub">Kako otvoreni podaci i kriptografski potpisi čuvaju integritet dokaza</p>
+            </div>
+
+            <!-- SNAPSHOT DOKAZA -->
+            <div class="glass-card p-6 md:p-8 rounded-2xl border border-emerald-500/30 mb-8 bg-gradient-to-br from-slate-900 to-slate-950">
+                <div class="flex flex-col lg:flex-row gap-8 items-start">
+                    <div class="w-full lg:w-1/2 space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded text-xs font-bold uppercase tracking-wider border border-emerald-500/30" data-i18n="s4_badge">Dokaz #01</span>
+                            <span class="mono-font text-xs text-slate-500" data-i18n="s4_date">Zabilježeno: 30.10.2026. u 23:00</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white" data-i18n="s4_h3">Matematički nemoguće emisije</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed" data-i18n-html="s4_p1">
+                            Službeni portal <strong>zrak.infomedica.hr</strong> (NZJZ Splitsko-dalmatinske županije) u realnom vremenu prikazuje negativne koncentracije dušikovog monoksida (NO) i dušikovih oksida (NOx). 
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-300 mono-font bg-slate-950 p-4 rounded-xl border border-slate-800">
+                            <li><span class="text-slate-500">>></span> <span data-i18n="s4_li1_name">NO (Dušikov monoksid):</span> <span class="text-red-400 font-bold">-1.622 µg/m³</span></li>
+                            <li><span class="text-slate-500">>></span> <span data-i18n="s4_li2_name">NOx (Dušikovi oksidi):</span> <span class="text-red-400 font-bold">-0.765 µg/m³</span></li>
+                            <li><span class="text-slate-500">>></span> <span data-i18n="s4_li3_name">Indeks kvalitete:</span> <span class="text-emerald-400 font-bold" data-i18n="s4_li3_val">1 (Vrlo dobra)</span></li>
+                        </ul>
+                        <p class="text-slate-400 text-sm leading-relaxed" data-i18n-html="s4_p2">
+                            Sustav istovremeno prikazuje ocjenu "Vrlo dobra", ignorirajući fizički nemoguće podatke. Na dnu stranice stoji ograda: <em>"Podaci u stvarnom vremenu su nevalidirani..."</em>. Ovo otvara pitanje kako se kalibriraju senzori i tko kontrolira "peglanje" podataka prije službenih izvještaja.
+                        </p>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <!-- SCREENSHOT i GUMB -->
+                        <div class="relative group">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                            <div class="relative bg-slate-900 rounded-xl overflow-hidden border border-slate-700">
+                                <a href="dokaz_01_koromacno.png" target="_blank" rel="noopener">
+                                    <img src="dokaz_01_koromacno.png" alt="Screenshot infomedica.hr - negativne vrijednosti NO i NOx" class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition duration-300 cursor-pointer">
+                                </a>
+                                <div class="absolute bottom-0 left-0 right-0 bg-slate-950/90 backdrop-blur text-xs p-3 text-slate-400 flex justify-between items-center border-t border-slate-800">
+                                    <span data-i18n="s4_img_arch">Arhivirano: NZJZ SDŽ</span>
+                                    <span class="mono-font text-emerald-400" title="9a42aa18b214cca9c5aeb25eca8193d62880b8af0159a6ca68b1f7d9e34dd83b">SHA256: 9a42aa18...</span>
+                                </div>
+                            </div>
+                            
+                            <!-- NOVI GUMB -->
+                            <a href="dokaz_01_koromacno.png" target="_blank" rel="noopener" class="mt-4 flex items-center justify-center w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl transition duration-300 shadow-lg shadow-emerald-900/50">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                <span data-i18n="s4_btn">Otvori dokaz #01 (PNG)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OSTALE KARTICE -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-2xl">
+                    <h3 class="font-bold text-lg mb-2 text-emerald-400" data-i18n="s4_c1_h3">SHA256 potpisi</h3>
+                    <p class="text-slate-400 text-sm mb-3" data-i18n="s4_c1_p">Dokumenti i mjerne tablice digitalno su „zamrznuti" hash vrijednostima — svaka naknadna izmjena postaje vidljiva.</p>
+                    <div class="mono-font text-xs bg-slate-950 p-2 rounded border border-slate-800 text-slate-500 break-all">
+                        sha256: <span class="text-emerald-400">9a42aa18b214cca9c5aeb25eca8193d62880b8af0159a6ca68b1f7d9e34dd83b</span>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <h3 class="font-bold text-lg mb-2 text-emerald-400" data-i18n="s4_c2_h3">Senzorska analiza</h3>
+                    <p class="text-slate-400 text-sm" data-i18n-html="s4_c2_p">Forenzički pregled zapisa o kvaliteti zraka pokazuje statistički sumnjive vrijednosti koje zahtijevaju neovisnu verifikaciju. <span class="source-badge warn">u provjeri</span></p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <h3 class="font-bold text-lg mb-2 text-emerald-400" data-i18n="s4_c3_h3">Sukob interesa</h3>
+                    <p class="text-slate-400 text-sm" data-i18n-html="s4_c3_p">Povezane tvrtke uključene su u više faza lanca: nabavu, dozvole i kontrolu parametara. <span class="source-badge">sudski registar</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. METODOLOGIJA -->
+        <section id="metodologija" class="scroll-mt-28">
+            <div class="border-l-4 border-blue-500 pl-6 mb-8">
+                <h2 class="text-3xl font-bold text-white" data-i18n="s5_h2">5. Metodologija i standardi provjere</h2>
+                <p class="text-slate-400 text-sm mt-1" data-i18n="s5_sub">Kako razlikujemo dokaz od hipoteze</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl space-y-4 text-sm text-slate-300 leading-relaxed">
+                <p data-i18n-html="s5_p1"><strong class="text-white">Tri razine tvrdnji u ovom dosjeu:</strong></p>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                        <span class="source-badge mt-0.5" data-i18n="s5_b1">DOKAZ</span>
+                        <span data-i18n="s5_b1_p">Primarni dokument, službeni zapis, sudska odluka ili objavljeni podaci institucije — s linkom na izvor.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="source-badge warn mt-0.5" data-i18n="s5_b2">TVRDNJA</span>
+                        <span data-i18n="s5_b2_p">Medijski izvor ili izjava aktera — vjerodostojno, ali nije isto što i dokaz. Označeno žutim.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="source-badge risk mt-0.5" data-i18n="s5_b3">HIPOTEZA</span>
+                        <span data-i18n="s5_b3_p">Otvoreno pitanje bez javno dostupnog dokumenta. Označeno crvenim, uz eksplicitnu napomenu.</span>
+                    </li>
+                </ul>
+                <p class="text-slate-400 pt-3 border-t border-slate-800" data-i18n="s5_p2">
+                    Ako pronađete grešku ili imate dokument koji mijenja sliku — javite se. Dosje se ažurira.
+                </p>
+            </div>
+        </section>
+
+        <!-- 6. IZVORI -->
+        <section id="linkovi" class="scroll-mt-28">
+            <div class="border-l-4 border-slate-500 pl-6 mb-8">
+                <h2 class="text-3xl font-bold text-white" data-i18n="s6_h2">6. Izvori i korisni linkovi</h2>
+                <p class="text-slate-400 text-sm mt-1" data-i18n="s6_sub">Provjeri primarne dokumente sam</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <a href="https://algorithmwatch.org/" target="_blank" rel="noopener" class="p-4 bg-slate-900 hover:bg-slate-800 rounded-xl border border-slate-800 transition flex items-center justify-between group">
+                    <span class="font-medium text-slate-200" data-i18n="s6_l1">AlgorithmWatch — istraživanja o data-centrima</span>
+                    <span class="text-blue-400 font-bold group-hover:translate-x-1 transition">↗</span>
+                </a>
+                <a href="https://www.cso.ie/" target="_blank" rel="noopener" class="p-4 bg-slate-900 hover:bg-slate-800 rounded-xl border border-slate-800 transition flex items-center justify-between group">
+                    <span class="font-medium text-slate-200" data-i18n="s6_l2">CSO Ireland — potrošnja energije data-centara</span>
+                    <span class="text-blue-400 font-bold group-hover:translate-x-1 transition">↗</span>
+                </a>
+                <a href="https://cinea.ec.europa.eu/" target="_blank" rel="noopener" class="p-4 bg-slate-900 hover:bg-slate-800 rounded-xl border border-slate-800 transition flex items-center justify-between group">
+                    <span class="font-medium text-slate-200" data-i18n="s6_l3">CINEA — EU Innovation Fund baza projekata</span>
+                    <span class="text-blue-400 font-bold group-hover:translate-x-1 transition">↗</span>
+                </a>
+                <a href="https://www.glasistre.hr/istra/2026/10/14/vise-od-7100-gradana-potpisalo-peticiju-protiv-spaljivanja-otpada-u-koromacnu-1087717" target="_blank" rel="noopener" class="p-4 bg-slate-900 hover:bg-slate-800 rounded-xl border border-slate-800 transition flex items-center justify-between group">
+                 <span class="font-medium text-slate-200" data-i18n="s6_l4">Glas Istre — Peticija 7.100 građana</span>
+                 <span class="text-blue-400 font-bold group-hover:translate-x-1 transition">↗</span>
+              </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-900 mt-24 py-12 text-center text-slate-500 text-xs">
+        <p class="mono-font">DOSJE.FORENSIC · 2026 · <span data-i18n="footer_text">Istina se ne može izbrisati hash-om.</span></p>
+        <p class="mt-2" data-i18n="footer_sub">Otvoreni izvori · Metodologija otvorena · Ispravci dobrodošli</p>
+    </footer>
+
+    <script>
+        // 1) Reading progress bar
+        const progress = document.getElementById('progress');
+        window.addEventListener('scroll', () => {
+            const h = document.documentElement;
+            const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+            progress.style.width = pct + '%';
+        }, { passive: true });
+
+        // 2) Scroll-spy za aktivni link u navigaciji
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const spy = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    const id = '#' + e.target.id;
+                    navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === id));
+                }
+            });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+        sections.forEach(s => spy.observe(s));
+
+        // 3) Prijevod (i18n)
+        const translations = {
+            hr: {
+                meta_title: "Dosje: Rat za Resurse & Zeleni Greenwashing | 2026",
+                nav_lex: "Lexington & AI", nav_eur: "Globalni Otpor", nav_kor: "Holcim & Istra", nav_lok: "Lokacije", nav_for: "Forenzika", nav_met: "Metodologija", nav_izv: "Izvori", nav_btn: "Podrži Akciju",
+                hero_badge: "Istraživački dosje • Ažurirano: listopad 2026",
+                hero_h1: 'Kad <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-500">Tech-Miliarderi i Industrijski Giganti</span> Udare u Zid.',
+                hero_p: "Od građanskih pobuna u Lexingtonu do bunta u Istri: kako lokalne zajednice, digitalna forenzika i otvoreni podaci razotkrivaju greenwashing i lažne „Net Zero\" projekte.",
+                hero_btn1: "Istraži slučaj Holcim", hero_btn2: "Forenzički dosje",
+                hero_status: "STATUS:", hero_status_val: "AKTIVNO", hero_docs: "DOKUMENTI:", hero_sigs: "POTPISI:",
+                s1_h2: '1. Lexington, Kentucky: „Tech-miliarderi nisu glasači"', s1_sub: "Krizna točka resursnog imperijalizma umjetne inteligencije",
+                s1_p1: 'Lokalna zajednica u Lexingtonu (Fayette County) postala je simbol globalnog otpora širenju AI data-centara. Nakon što je vijeće razmatralo moratorij na nove gradnje, građani su zatražili da se projekti zamrznu dok se ne procijeni utjecaj na mrežu, vodne resurse i cijene struje. <span class="source-badge">izvor: lokalni zapisnici</span>',
+                s1_c1_val: "↗ energija", s1_c1_h3: "Višestruka potrošnja", s1_c1_p: 'AI upit troši red veličina više energije od klasične pretrage, ovisno o modelu. <span class="source-badge warn">raspon sporan</span>',
+                s1_c2_h3: "Hlađenje servera", s1_c2_p: 'Data-centri troše milijune litara pitke vode dnevno u regijama koje se suočavaju sa sušom. <span class="source-badge">više studija</span>',
+                s1_c3_val: "+ struja", s1_c3_h3: "Pritisak na cijene", s1_c3_p: 'Studija Federal Reserve Bank of Dallas pokazuje vezu između rasta data-centara i rasta cijena struje. <span class="source-badge">Dallas Fed</span>',
+                s2_h2: "2. Europski brandherdi: 70+ projektnih zaustavljanja", s2_sub: "Od Dublina do Frankfurta: građani povlače ručnu kočnicu",
+                s2_c1_h3: "🇫🇷 Francuska — Étrechet", s2_c1_p: 'Googleov projekt data-centra u Étrechetu izazvao je val lokalnih ostavki. Dio vijećnika i gradonačelnica napustili su funkcije zbog načina na koji je projekt proguran bez stvarne lokalne rasprave. <span class="source-badge">francuski tisak</span>',
+                s2_c2_h3: "🇮🇪 Irska & 🏴 Škotska", s2_c2_p: 'Prema podacima irskog CSO-a, data-centri u Irskoj troše više električne energije nego sva kućanstva zajedno. Škotski parlament raspravljao je o moratoriju na nove projekte. <span class="source-badge">CSO.statistics</span>',
+                s3_h2: "3. Slučaj Holcim: KOdeCO Net Zero u Istri", s3_sub: "Globalna dvoličnost, EU subvencije i masovni narodni bunt",
+                s3_badge: "Kronologija listopada 2026", s3_h3: "Kad Istra kaže: dosta!",
+                s3_p: 'Dok Holcim projekt u Koromačnu prodaje kao „poklon svjetskoj klimi" uz potporu EU Innovation Fund, stvarnost uključuje spaljivanje otpada (iz Kaštijuna, Pazina, Gospića) i zabrinutost zbog emisija. <span class="source-badge">CINEA baza</span>',
+                s3_li1: '<strong>14.10.2026.</strong> — Preko 7.100 građana predalo službenu peticiju općini Raša.',
+                s3_li2: '<strong>15.10.2026.</strong> — Općinsko vijeće Raše glasalo protiv projekta i zatražilo uklanjanje sa strateške liste.',
+                s3_h4: "Otpad u Gospiću — otvoreno pitanje", s3_p2: 'Dolazak talijanskog otpada u Gospić kroz sumnjive tvrtke otvorio je pitanja o lancu zbrinjavanja opasnog otpada. <span class="source-badge risk">TVRDNJA ZAHTIJEVA SUDSKI IZVOR</span>',
+                s3_note: '⚠️ Napomena urednika: ova tvrdnja trenutno nema javno dostupan sudski ili istražni dokument. Do objave takvog dokumenta, tretiramo je kao <em>istražnu hipotezu</em>, ne kao dokaz.',
+                s3_status: "STATUS: provjera u tijeku — čeka se odgovor institucija",
+                
+                geo_h2: "Prostorni i vizualni pregled ugroženosti",
+                geo_sub: "Crkva, kamenolom i plaža – sukob industrije i prirode",
+                eko_lok_h3: "Crkva sv. Ivana Krstitelja i Industrijska Zona",
+                eko_lok_p: "Simbol kulturne baštine smješten neposredno iznad ruba kopopa, s panoramskim pogledom na prostor pogođen eksploatacijom.",
+                eko_lok_btn: "Otvori lokaciju na karti",
+                geo_c1_badge: "Zona Eksploatacije", geo_c1_h3: "Kamenolom & Kopop", geo_c1_p: "Satelitski prikaz masivnog industrijskog zahvata neposredno uz morsku obalu. Prikazani su razmjeri eksploatacije i pritisak na prirodni okoliš.",
+                geo_c2_badge: "Ugrožena Baština", geo_c2_h3: "Crkva sv. Ivana Krstitelja", geo_c2_p: "Kulturna i povijesna baština smještena na samom rubu kopopa. Lokacija pruža izravan uvid u prostornu stisnutost između industrije i tradicije.",
+                geo_c3_badge: "Prirodni Biser", geo_c3_h3: "Plaža i Uvala Vošćice", geo_c3_p: "Očuvana prirodna uvala iznimne bioraznolikosti koja se nalazi u neposrednoj blizini industrijske zone te trpi kontinuirani ekološki rizik.",
+                geo_btn: "Prikaži na karti",
+
+                s4_h2: '4. Forenzika: dosje „Koromačno"', s4_sub: "Kako otvoreni podaci i kriptografski potpisi čuvaju integritet dokaza",
+                s4_badge: "Dokaz #01", s4_date: "Zabilježeno: 30.10.2026. u 23:00", s4_h3: "Matematički nemoguće emisije",
+                s4_p1: 'Službeni portal <strong>zrak.infomedica.hr</strong> (NZJZ Splitsko-dalmatinske županije) u realnom vremenu prikazuje negativne koncentracije dušikovog monoksida (NO) i dušikovih oksida (NOx).',
+                s4_li1_name: "NO (Dušikov monoksid):", s4_li2_name: "NOx (Dušikovi oksidi):", s4_li3_name: "Indeks kvalitete:", s4_li3_val: "1 (Vrlo dobra)",
+                s4_p2: 'Sustav istovremeno prikazuje ocjenu "Vrlo dobra", ignorirajući fizički nemoguće podatke. Na dnu stranice stoji ograda: <em>"Podaci u stvarnom vremenu su nevalidirani..."</em>. Ovo otvara pitanje kako se kalibriraju senzori i tko kontrolira "peglanje" podataka prije službenih izvještaja.',
+                s4_img_arch: "Arhivirano: NZJZ SDŽ", s4_btn: "Otvori dokaz #01 (PNG)",
+                s4_c1_h3: "SHA256 potpisi", s4_c1_p: 'Dokumenti i mjerne tablice digitalno su „zamrznuti" hash vrijednostima — svaka naknadna izmjena postaje vidljiva.',
+                s4_c2_h3: "Senzorska analiza", s4_c2_p: 'Forenzički pregled zapisa o kvaliteti zraka pokazuje statistički sumnjive vrijednosti koje zahtijevaju neovisnu verifikaciju. <span class="source-badge warn">u provjeri</span>',
+                s4_c3_h3: "Sukob interesa", s4_c3_p: 'Povezane tvrtke uključene su u više faza lanca: nabavu, dozvole i kontrolu parametara. <span class="source-badge">sudski registar</span>',
+                s5_h2: "5. Metodologija i standardi provjere", s5_sub: "Kako razlikujemo dokaz od hipoteze", s5_p1: '<strong class="text-white">Tri razine tvrdnji u ovom dosjeu:</strong>',
+                s5_b1: "DOKAZ", s5_b1_p: "Primarni dokument, službeni zapis, sudska odluka ili objavljeni podaci institucije — s linkom na izvor.",
+                s5_b2: "TVRDNJA", s5_b2_p: "Medijski izvor ili izjava aktera — vjerodostojno, ali nije isto što i dokaz. Označeno žutim.",
+                s5_b3: "HIPOTEZA", s5_b3_p: "Otvoreno pitanje bez javno dostupnog dokumenta. Označeno crvenim, uz eksplicitnu napomenu.",
+                s5_p2: "Ako pronađete grešku ili imate dokument koji mijenja sliku — javite se. Dosje se ažurira.",
+                s6_h2: "6. Izvori i korisni linkovi", s6_sub: "Provjeri primarne dokumente sam",
+                s6_l1: "AlgorithmWatch — istraživanja o data-centrima", s6_l2: "CSO Ireland — potrošnja energije data-centara", s6_l3: "CINEA — EU Innovation Fund baza projekata", s6_l4: "Glas Istre — lokalno izvještavanje",
+                footer_text: "Istina se ne može izbrisati hash-om.", footer_sub: "Otvoreni izvori · Metodologija otvorena · Ispravci dobrodošli"
+            },
+            en: {
+                meta_title: "Dossier: War for Resources & Green Greenwashing | 2026",
+                nav_lex: "Lexington & AI", nav_eur: "Global Resistance", nav_kor: "Holcim & Istria", nav_lok: "Locations", nav_for: "Forensics", nav_met: "Methodology", nav_izv: "Sources", nav_btn: "Support Action",
+                hero_badge: "Investigative dossier • Updated: October 2026",
+                hero_h1: 'When <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-500">Tech Billionaires and Industrial Giants</span> Hit a Wall.',
+                hero_p: "From civil uprisings in Lexington to the rebellion in Istria: how local communities, digital forensics, and open data expose greenwashing and fake 'Net Zero' projects.",
+                hero_btn1: "Explore the Holcim case", hero_btn2: "Forensic dossier",
+                hero_status: "STATUS:", hero_status_val: "ACTIVE", hero_docs: "DOCUMENTS:", hero_sigs: "SIGNATURES:",
+                s1_h2: '1. Lexington, Kentucky: "Tech billionaires are not voters"', s1_sub: "The crisis point of resource imperialism in artificial intelligence",
+                s1_p1: 'The local community in Lexington (Fayette County) has become a symbol of global resistance to the expansion of AI data centers. After the council considered a moratorium on new construction, citizens demanded that projects be frozen until the impact on the grid, water resources, and electricity prices is assessed. <span class="source-badge">source: local records</span>',
+                s1_c1_val: "↗ energy", s1_c1_h3: "Multiple consumption", s1_c1_p: 'An AI query consumes orders of magnitude more energy than a classic search, depending on the model. <span class="source-badge warn">range disputed</span>',
+                s1_c2_h3: "Server cooling", s1_c2_p: 'Data centers consume millions of liters of drinking water daily in regions facing drought. <span class="source-badge">multiple studies</span>',
+                s1_c3_val: "+ electricity", s1_c3_h3: "Pressure on prices", s1_c3_p: 'A study by the Federal Reserve Bank of Dallas shows a link between data center growth and rising electricity prices. <span class="source-badge">Dallas Fed</span>',
+                s2_h2: "2. European heartlands: 70+ project stoppages", s2_sub: "From Dublin to Frankfurt: citizens are pulling the emergency brake",
+                s2_c1_h3: "🇫🇷 France — Étrechet", s2_c1_p: 'Google\'s data center project in Étrechet caused a wave of local resignations. Some councilors and the mayor left their posts due to the way the project was pushed through without real local debate. <span class="source-badge">French press</span>',
+                s2_c2_h3: "🇮🇪 Ireland & 🏴 Scotland", s2_c2_p: 'According to data from the Irish CSO, data centers in Ireland consume more electricity than all households combined. The Scottish Parliament discussed a moratorium on new projects. <span class="source-badge">CSO.statistics</span>',
+                s3_h2: "3. The Holcim Case: KOdeCO Net Zero in Istria", s3_sub: "Global hypocrisy, EU subsidies, and mass public uprising",
+                s3_badge: "October 2026 Chronology", s3_h3: "When Istria says: enough!",
+                s3_p: 'While Holcim sells the project in Koromačno as a "gift to the world climate" with the support of the EU Innovation Fund, the reality includes waste incineration (from Kaštijun, Pazin, Gospić) and concerns about emissions. <span class="source-badge">CINEA database</span>',
+                s3_li1: '<strong>14.10.2026.</strong> — Over 7,100 citizens submitted an official petition to the Municipality of Raša.',
+                s3_li2: '<strong>15.10.2026.</strong> — The Municipal Council of Raša voted against the project and requested its removal from the strategic list.',
+                s3_h4: "Waste in Gospić — an open question", s3_p2: 'The arrival of Italian waste in Gospić through suspicious companies has opened questions about the hazardous waste disposal chain. <span class="source-badge risk">CLAIM REQUIRES JUDICIAL SOURCE</span>',
+                s3_note: '⚠️ Editor\'s note: this claim currently has no publicly available judicial or investigative document. Until such a document is published, we treat it as an <em>investigative hypothesis</em>, not as evidence.',
+                s3_status: "STATUS: verification in progress — awaiting institutional response",
+                
+                geo_h2: "Spatial and Visual Overview of Endangerment",
+                geo_sub: "Church, quarry, and beach – the clash of industry and nature",
+                eko_lok_h3: "Church of St. John the Baptist and Industrial Zone",
+                eko_lok_p: "A symbol of cultural heritage located just above the edge of the quarry, with a panoramic view of the area affected by exploitation.",
+                eko_lok_btn: "Open location on map",
+                geo_c1_badge: "Exploitation Zone", geo_c1_h3: "Quarry & Kopop", geo_c1_p: "Satellite view of a massive industrial intervention right next to the coast. Shows the scale of exploitation and pressure on the natural environment.",
+                geo_c2_badge: "Endangered Heritage", geo_c2_h3: "Church of St. John the Baptist", geo_c2_p: "Cultural and historical heritage located right on the edge of the quarry. The location provides direct insight into the spatial squeeze between industry and tradition.",
+                geo_c3_badge: "Natural Gem", geo_c3_h3: "Vošćice Beach and Cove", geo_c3_p: "A preserved natural cove of exceptional biodiversity located in the immediate vicinity of the industrial zone, suffering continuous ecological risk.",
+                geo_btn: "Show on map",
+
+                s4_h2: '4. Forensics: "Koromačno" dossier', s4_sub: "How open data and cryptographic signatures preserve evidence integrity",
+                s4_badge: "Evidence #01", s4_date: "Recorded: 30.10.2026 at 23:00", s4_h3: "Mathematically impossible emissions",
+                s4_p1: 'The official portal <strong>zrak.infomedica.hr</strong> (Teaching Institute of Public Health of Split-Dalmatia County) displays negative concentrations of nitrogen monoxide (NO) and nitrogen oxides (NOx) in real-time.',
+                s4_li1_name: "NO (Nitrogen monoxide):", s4_li2_name: "NOx (Nitrogen oxides):", s4_li3_name: "Quality index:", s4_li3_val: "1 (Very good)",
+                s4_p2: 'The system simultaneously displays a "Very good" rating, ignoring physically impossible data. At the bottom of the page, there is a disclaimer: <em>"Real-time data is unvalidated..."</em>. This raises the question of how sensors are calibrated and who controls the "smoothing" of data before official reports.',
+                s4_img_arch: "Archived: NZJZ SDŽ", s4_btn: "Open Evidence #01 (PNG)",
+                s4_c1_h3: "SHA256 signatures", s4_c1_p: 'Documents and measurement tables are digitally "frozen" with hash values — any subsequent change becomes visible.',
+                s4_c2_h3: "Sensor analysis", s4_c2_p: 'Forensic review of air quality records shows statistically suspicious values that require independent verification. <span class="source-badge warn">under review</span>',
+                s4_c3_h3: "Conflict of interest", s4_c3_p: 'Related companies are involved in multiple stages of the chain: procurement, permits, and parameter control. <span class="source-badge">court register</span>',
+                s5_h2: "5. Methodology and verification standards", s5_sub: "How we distinguish evidence from hypothesis", s5_p1: '<strong class="text-white">Three levels of claims in this dossier:</strong>',
+                s5_b1: "EVIDENCE", s5_b1_p: "A primary document, official record, court decision, or published institutional data — with a link to the source.",
+                s5_b2: "CLAIM", s5_b2_p: "A media source or statement by an actor — credible, but not the same as evidence. Marked in yellow.",
+                s5_b3: "HYPOTHESIS", s5_b3_p: "An open question without a publicly available document. Marked in red, with an explicit note.",
+                s5_p2: "If you find an error or have a document that changes the picture — contact us. The dossier is updated.",
+                s6_h2: "6. Sources and useful links", s6_sub: "Verify the primary documents yourself",
+                s6_l1: "AlgorithmWatch — research on data centers", s6_l2: "CSO Ireland — data center energy consumption", s6_l3: "CINEA — EU Innovation Fund project database", s6_l4: "Glas Istre — local reporting",
+                footer_text: "Truth cannot be erased by a hash.", footer_sub: "Open sources · Open methodology · Corrections welcome"
+            },
+            it: {
+                meta_title: "Dossier: Guerra per le Risorse & Greenwashing Verde | 2026",
+                nav_lex: "Lexington & AI", nav_eur: "Resistenza Globale", nav_kor: "Holcim & Istria", nav_lok: "Località", nav_for: "Forense", nav_met: "Metodologia", nav_izv: "Fonti", nav_btn: "Sostieni l'Azione",
+                hero_badge: "Dossier investigativo • Aggiornato: ottobre 2026",
+                hero_h1: 'Quando <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-500">Miliardari Tech e Giganti Industriali</span> Sbattono contro un Muro.',
+                hero_p: "Dalle rivolte civili a Lexington alla ribellione in Istria: come le comunità locali, la digital forensics e i dati aperti smascherano il greenwashing e i falsi progetti 'Net Zero'.",
+                hero_btn1: "Esplora il caso Holcim", hero_btn2: "Dossier forense",
+                hero_status: "STATO:", hero_status_val: "ATTIVO", hero_docs: "DOCUMENTI:", hero_sigs: "FIRME:",
+                s1_h2: '1. Lexington, Kentucky: "I miliardari tech non sono elettori"', s1_sub: "Il punto di crisi dell'imperialismo delle risorse nell'intelligenza artificiale",
+                s1_p1: 'La comunità locale di Lexington (Fayette County) è diventata un simbolo della resistenza globale all\'espansione dei data center AI. Dopo che il consiglio ha considerato una moratoria sulle nuove costruzioni, i cittadini hanno chiesto che i progetti fossero congelati fino alla valutazione dell\'impatto sulla rete, sulle risorse idriche e sui prezzi dell\'elettricità. <span class="source-badge">fonte: verbali locali</span>',
+                s1_c1_val: "↗ energia", s1_c1_h3: "Consumo multiplo", s1_c1_p: 'Una query AI consuma ordini di grandezza più energia di una ricerca classica, a seconda del modello. <span class="source-badge warn">intervallo contestato</span>',
+                s1_c2_h3: "Raffreddamento dei server", s1_c2_p: 'I data center consumano milioni di litri di acqua potabile al giorno in regioni che affrontano la siccità. <span class="source-badge">molteplici studi</span>',
+                s1_c3_val: "+ elettricità", s1_c3_h3: "Pressione sui prezzi", s1_c3_p: 'Uno studio della Federal Reserve Bank of Dallas mostra un legame tra la crescita dei data center e l\'aumento dei prezzi dell\'elettricità. <span class="source-badge">Dallas Fed</span>',
+                s2_h2: "2. Cuori europei: 70+ fermate di progetti", s2_sub: "Da Dublino a Francoforte: i cittadini tirano il freno di emergenza",
+                s2_c1_h3: "🇫🇷 Francia — Étrechet", s2_c1_p: 'Il progetto del data center di Google a Étrechet ha causato un\'ondata di dimissioni locali. Alcuni consiglieri e il sindaco hanno lasciato il loro incarico a causa del modo in cui il progetto è stato portato avanti senza un vero dibattito locale. <span class="source-badge">stampa francese</span>',
+                s2_c2_h3: "🇮🇪 Irlanda & 🏴 Scozia", s2_c2_p: 'Secondo i dati del CSO irlandese, i data center in Irlanda consumano più elettricità di tutte le famiglie messe insieme. Il Parlamento scozzese ha discusso una moratoria sui nuovi progetti. <span class="source-badge">CSO.statistics</span>',
+                s3_h2: "3. Il caso Holcim: KOdeCO Net Zero in Istria", s3_sub: "Ipocrisia globale, sussidi UE e rivolta popolare di massa",
+                s3_badge: "Cronologia di ottobre 2026", s3_h3: "Quando l'Istria dice: basta!",
+                s3_p: 'Mentre Holcim vende il progetto a Koromačno come un "dono al clima mondiale" con il supporto del Fondo UE per l\'Innovazione, la realtà include l\'incenerimento dei rifiuti (da Kaštijun, Pazin, Gospić) e preoccupazioni per le emissioni. <span class="source-badge">database CINEA</span>',
+                s3_li1: '<strong>14.10.2026.</strong> — Oltre 7.100 cittadini hanno presentato una petizione ufficiale al Comune di Raša.',
+                s3_li2: '<strong>15.10.2026.</strong> — Il Consiglio comunale di Raša ha votato contro il progetto e ne ha chiesto la rimozione dalla lista strategica.',
+                s3_h4: "Rifiuti a Gospić — una questione aperta", s3_p2: 'L\'arrivo di rifiuti italiani a Gospić attraverso aziende sospette ha aperto interrogativi sulla catena di smaltimento dei rifiuti pericolosi. <span class="source-badge risk">AFFERMAZIONE RICHIEDE FONTE GIUDIZIARIA</span>',
+                s3_note: '⚠️ Nota dell\'editore: questa affermazione attualmente non ha alcun documento giudiziario o investigativo disponibile al pubblico. Fino alla pubblicazione di tale documento, la trattiamo come un\'<em>ipotesi investigativa</em>, non come prova.',
+                s3_status: "STATO: verifica in corso — in attesa di risposta istituzionale",
+                
+                geo_h2: "Panoramica spaziale e visiva del rischio",
+                geo_sub: "Chiesa, cava e spiaggia – lo scontro tra industria e natura",
+                eko_lok_h3: "Chiesa di San Giovanni Battista e Zona Industriale",
+                eko_lok_p: "Un simbolo del patrimonio culturale situato appena sopra il bordo della cava, con una vista panoramica sull'area colpita dallo sfruttamento.",
+                eko_lok_btn: "Apri la posizione sulla mappa",
+                geo_c1_badge: "Zona di Escavazione", geo_c1_h3: "Cava & Kopop", geo_c1_p: "Vista satellitare di un imponente intervento industriale a ridosso della costa. Mostra la scala dello sfruttamento e la pressione sull'ambiente naturale.",
+                geo_c2_badge: "Patrimonio a Rischio", geo_c2_h3: "Chiesa di San Giovanni Battista", geo_c2_p: "Patrimonio culturale e storico situato proprio sul bordo della cava. La posizione offre uno spaccato diretto della compressione spaziale tra industria e tradizione.",
+                geo_c3_badge: "Perla Naturale", geo_c3_h3: "Spiaggia e Baia di Vošćice", geo_c3_p: "Una baia naturale preservata di eccezionale biodiversità situata nelle immediate vicinanze della zona industriale, che subisce un rischio ecologico continuo.",
+                geo_btn: "Mostra sulla mappa",
+
+                s4_h2: '4. Forense: dossier "Koromačno"', s4_sub: "Come i dati aperti e le firme crittografiche preservano l'integrità delle prove",
+                s4_badge: "Prova #01", s4_date: "Registrato: 30.10.2026 alle 23:00", s4_h3: "Emissioni matematicamente impossibili",
+                s4_p1: 'Il portale ufficiale <strong>zrak.infomedica.hr</strong> (Istituto di Sanità Pubblica della Contea di Spalato-Dalmazia) mostra in tempo reale concentrazioni negative di monossido di azoto (NO) e ossidi di azoto (NOx).',
+                s4_li1_name: "NO (Monossido di azoto):", s4_li2_name: "NOx (Ossidi di azoto):", s4_li3_name: "Indice di qualità:", s4_li3_val: "1 (Molto buono)",
+                s4_p2: 'Il sistema mostra contemporaneamente una valutazione "Molto buono", ignorando dati fisicamente impossibili. In fondo alla pagina c\'è un avviso: <em>"I dati in tempo reale non sono convalidati..."</em>. Questo solleva la questione di come vengono calibrati i sensori e chi controlla la "levigatura" dei dati prima dei rapporti ufficiali.',
+                s4_img_arch: "Archiviato: NZJZ SDŽ", s4_btn: "Apri Prova #01 (PNG)",
+                s4_c1_h3: "Firme SHA256", s4_c1_p: 'Documenti e tabelle di misurazione sono digitalmente "congelati" con valori hash — qualsiasi modifica successiva diventa visibile.',
+                s4_c2_h3: "Analisi dei sensori", s4_c2_p: 'La revisione forense dei registri di qualità dell\'aria mostra valori statisticamente sospetti che richiedono una verifica indipendente. <span class="source-badge warn">in revisione</span>',
+                s4_c3_h3: "Conflitto di interessi", s4_c3_p: 'Le aziende collegate sono coinvolte in più fasi della catena: approvvigionamento, permessi e controllo dei parametri. <span class="source-badge">registro delle imprese</span>',
+                s5_h2: "5. Metodologia e standard di verifica", s5_sub: "Come distinguiamo le prove dalle ipotesi", s5_p1: '<strong class="text-white">Tre livelli di affermazioni in questo dossier:</strong>',
+                s5_b1: "PROVA", s5_b1_p: "Un documento primario, un registro ufficiale, una sentenza o dati istituzionali pubblicati — con un link alla fonte.",
+                s5_b2: "AFFERMAZIONE", s5_b2_p: "Una fonte mediatica o una dichiarazione di un attore — credibile, ma non è la stessa cosa di una prova. Contrassegnata in giallo.",
+                s5_b3: "IPOTESI", s5_b3_p: "Una questione aperta senza un documento disponibile al pubblico. Contrassegnata in rosso, con una nota esplicita.",
+                s5_p2: "Se trovi un errore o hai un documento che cambia il quadro — contattaci. Il dossier viene aggiornato.",
+                s6_h2: "6. Fonti e link utili", s6_sub: "Verifica tu stesso i documenti primari",
+                s6_l1: "AlgorithmWatch — ricerche sui data center", s6_l2: "CSO Ireland — consumo energetico dei data center", s6_l3: "CINEA — database dei progetti del Fondo UE per l'Innovazione", s6_l4: "Glas Istre — cronaca locale",
+                footer_text: "La verità non può essere cancellata da un hash.", footer_sub: "Fonti aperte · Metodologia aperta · Correzioni benvenute"
+            },
+            de: {
+                meta_title: "Dossier: Kampf um Ressourcen & Grünes Greenwashing | 2026",
+                nav_lex: "Lexington & AI", nav_eur: "Globaler Widerstand", nav_kor: "Holcim & Istrien", nav_lok: "Standorte", nav_for: "Forensik", nav_met: "Methodik", nav_izv: "Quellen", nav_btn: "Aktion unterstützen",
+                hero_badge: "Recherche-Dossier • Aktualisiert: Oktober 2026",
+                hero_h1: 'Wenn <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-500">Tech-Milliardäre und Industriegiganten</span> auf eine Mauer stoßen.',
+                hero_p: "Von den Bürgeraufständen in Lexington bis zur Rebellion in Istrien: Wie lokale Gemeinschaften, digitale Forensik und offene Daten Greenwashing und falsche 'Net Zero'-Projekte aufdecken.",
+                hero_btn1: "Holcim-Fall erkunden", hero_btn2: "Forensisches Dossier",
+                hero_status: "STATUS:", hero_status_val: "AKTIV", hero_docs: "DOKUMENTE:", hero_sigs: "UNTERSCHRIFTEN:",
+                s1_h2: '1. Lexington, Kentucky: "Tech-Milliardäre sind keine Wähler"', s1_sub: "Der Krisenpunkt des Ressourcen-Imperialismus in der künstlichen Intelligenz",
+                s1_p1: 'Die lokale Gemeinschaft in Lexington (Fayette County) ist zu einem Symbol des globalen Widerstands gegen die Ausbreitung von KI-Rechenzentren geworden. Nachdem der Stadtrat ein Moratorium für Neubauten erwogen hatte, forderten die Bürger, die Projekte einzufrieren, bis die Auswirkungen auf das Netz, die Wasserressourcen und die Strompreise bewertet sind. <span class="source-badge">Quelle: lokale Protokolle</span>',
+                s1_c1_val: "↗ Energie", s1_c1_h3: "Mehrfacher Verbrauch", s1_c1_p: 'Eine KI-Abfrage verbraucht je nach Modell um Größenordnungen mehr Energie als eine klassische Suche. <span class="source-badge warn">Spanne umstritten</span>',
+                s1_c2_h3: "Serverkühlung", s1_c2_p: 'Rechenzentren verbrauchen täglich Millionen Liter Trinkwasser in Regionen, die von Dürre betroffen sind. <span class="source-badge">mehrere Studien</span>',
+                s1_c3_val: "+ Strom", s1_c3_h3: "Preisdruck", s1_c3_p: 'Eine Studie der Federal Reserve Bank of Dallas zeigt einen Zusammenhang zwischen dem Wachstum von Rechenzentren und steigenden Strompreisen. <span class="source-badge">Dallas Fed</span>',
+                s2_h2: "2. Europäische Kernländer: 70+ Projektstopps", s2_sub: "Von Dublin bis Frankfurt: Bürger ziehen die Notbremse",
+                s2_c1_h3: "🇫🇷 Frankreich — Étrechet", s2_c1_p: 'Googles Rechenzentrumsprojekt in Étrechet löste eine Welle lokaler Rücktritte aus. Einige Stadträte und die Bürgermeisterin verließen ihre Posten wegen der Art und Weise, wie das Projekt ohne echte lokale Debatte durchgedrückt wurde. <span class="source-badge">französische Presse</span>',
+                s2_c2_h3: "🇮🇪 Irland & 🏴 Schottland", s2_c2_p: 'Laut Daten des irischen CSO verbrauchen Rechenzentren in Irland mehr Strom als alle Haushalte zusammen. Das schottische Parlament diskutierte ein Moratorium für neue Projekte. <span class="source-badge">CSO.statistics</span>',
+                s3_h2: "3. Der Fall Holcim: KOdeCO Net Zero in Istrien", s3_sub: "Globale Heuchelei, EU-Subventionen und massiver Volksaufstand",
+                s3_badge: "Chronologie Oktober 2026", s3_h3: "Wenn Istrien sagt: genug!",
+                s3_p: 'Während Holcim das Projekt in Koromačno als "Geschenk an das Weltklima" mit Unterstützung des EU-Innovationsfonds verkauft, umfasst die Realität die Verbrennung von Abfällen (aus Kaštijun, Pazin, Gospić) und Bedenken wegen Emissionen. <span class="source-badge">CINEA-Datenbank</span>',
+                s3_li1: '<strong>14.10.2026.</strong> — Über 7.100 Bürger reichten eine offizielle Petition bei der Gemeinde Raša ein.',
+                s3_li2: '<strong>15.10.2026.</strong> — Der Gemeinderat von Raša stimmte gegen das Projekt und forderte dessen Streichung von der strategischen Liste.',
+                s3_h4: "Abfall in Gospić — eine offene Frage", s3_p2: 'Die Ankunft italienischen Abfalls in Gospić über verdächtige Unternehmen hat Fragen zur Entsorgungskette für gefährliche Abfälle aufgeworfen. <span class="source-badge risk">BEHAUPTUNG ERFORDERT GERICHTSQUELLE</span>',
+                s3_note: '⚠️ Anmerkung der Redaktion: Für diese Behauptung liegt derzeit kein öffentlich zugängliches Gerichts- oder Ermittlungsdokument vor. Bis zur Veröffentlichung eines solchen Dokuments behandeln wir sie als <em>Ermittlungshypothese</em>, nicht als Beweis.',
+                s3_status: "STATUS: Überprüfung läuft — warte auf institutionelle Antwort",
+                
+                geo_h2: "Räumlicher und visueller Überblick über die Gefährdung",
+                geo_sub: "Kirche, Steinbruch und Strand – der Konflikt zwischen Industrie und Natur",
+                eko_lok_h3: "Kirche St. Johannes der Täufer und Industriezone",
+                eko_lok_p: "Ein Symbol des kulturellen Erbes, das direkt über dem Rand des Steinbruchs liegt und einen Panoramablick auf das von Ausbeutung betroffene Gebiet bietet.",
+                eko_lok_btn: "Standort auf der Karte öffnen",
+                geo_c1_badge: "Abbauzone", geo_c1_h3: "Steinbruch & Kopop", geo_c1_p: "Satellitenansicht eines massiven industriellen Eingriffs direkt an der Küste. Zeigt das Ausmaß der Ausbeutung und den Druck auf die natürliche Umwelt.",
+                geo_c2_badge: "Gefährdetes Erbe", geo_c2_h3: "Kirche St. Johannes der Täufer", geo_c2_p: "Kulturelles und historisches Erbe direkt am Rande des Steinbruchs. Der Standort bietet einen direkten Einblick in die räumliche Enge zwischen Industrie und Tradition.",
+                geo_c3_badge: "Naturjuwel", geo_c3_h3: "Strand und Bucht Vošćice", geo_c3_p: "Eine erhaltene natürliche Bucht von außergewöhnlicher Biodiversität in unmittelbarer Nähe der Industriezone, die einem kontinuierlichen ökologischen Risiko ausgesetzt ist.",
+                geo_btn: "Auf Karte anzeigen",
+
+                s4_h2: '4. Forensik: Dossier "Koromačno"', s4_sub: "Wie offene Daten und kryptografische Signaturen die Beweisintegrität wahren",
+                s4_badge: "Beweis #01", s4_date: "Aufgezeichnet: 30.10.2026 um 23:00", s4_h3: "Mathematisch unmögliche Emissionen",
+                s4_p1: 'Das offizielle Portal <strong>zrak.infomedica.hr</strong> (Lehranstalt für öffentliche Gesundheit der Gespanschaft Split-Dalmatien) zeigt in Echtzeit negative Konzentrationen von Stickstoffmonoxid (NO) und Stickoxiden (NOx).',
+                s4_li1_name: "NO (Stickstoffmonoxid):", s4_li2_name: "NOx (Stickoxide):", s4_li3_name: "Qualitätsindex:", s4_li3_val: "1 (Sehr gut)",
+                s4_p2: 'Das System zeigt gleichzeitig eine Bewertung "Sehr gut" an und ignoriert physikalisch unmögliche Daten. Am Ende der Seite steht ein Haftungsausschluss: <em>"Echtzeitdaten sind ungeprüft..."</em>. Dies wirft die Frage auf, wie Sensoren kalibriert werden und wer die "Glättung" der Daten vor offiziellen Berichten kontrolliert.',
+                s4_img_arch: "Archiviert: NZJZ SDŽ", s4_btn: "Beweis #01 öffnen (PNG)",
+                s4_c1_h3: "SHA256-Signaturen", s4_c1_p: 'Dokumente und Messtabellen werden digital mit Hash-Werten "eingefroren" — jede spätere Änderung wird sichtbar.',
+                s4_c2_h3: "Sensoranalyse", s4_c2_p: 'Die forensische Überprüfung der Luftqualitätsaufzeichnungen zeigt statistisch verdächtige Werte, die eine unabhängige Überprüfung erfordern. <span class="source-badge warn">in Prüfung</span>',
+                s4_c3_h3: "Interessenkonflikt", s4_c3_p: 'Verbundene Unternehmen sind in mehreren Phasen der Kette involviert: Beschaffung, Genehmigungen und Parameterkontrolle. <span class="source-badge">Handelsregister</span>',
+                s5_h2: "5. Methodik und Überprüfungsstandards", s5_sub: "Wie wir Beweise von Hypothesen unterscheiden", s5_p1: '<strong class="text-white">Drei Ebenen von Aussagen in diesem Dossier:</strong>',
+                s5_b1: "BEWEIS", s5_b1_p: "Ein Primärdokument, eine offizielle Aufzeichnung, ein Gerichtsurteil oder veröffentlichte institutionelle Daten — mit einem Link zur Quelle.",
+                s5_b2: "BEHAUPTUNG", s5_b2_p: "Eine Medienquelle oder eine Erklärung eines Akteurs — glaubwürdig, aber nicht dasselbe wie ein Beweis. Gelb markiert.",
+                s5_b3: "HYPOTHESE", s5_b3_p: "Eine offene Frage ohne öffentlich zugängliches Dokument. Rot markiert, mit einem ausdrücklichen Hinweis.",
+                s5_p2: "Wenn Sie einen Fehler finden oder ein Dokument haben, das das Bild ändert — kontaktieren Sie uns. Das Dossier wird aktualisiert.",
+                s6_h2: "6. Quellen und nützliche Links", s6_sub: "Überprüfen Sie die Primärdokumente selbst",
+                s6_l1: "AlgorithmWatch — Forschung zu Rechenzentren", s6_l2: "CSO Ireland — Energieverbrauch von Rechenzentren", s6_l3: "CINEA — Projektdatenbank des EU-Innovationsfonds", s6_l4: "Glas Istre — lokale Berichterstattung",
+                footer_text: "Die Wahrheit kann nicht durch einen Hash gelöscht werden.", footer_sub: "Offene Quellen · Offene Methodik · Korrekturen willkommen"
+            }
+        };
+
+        function setLang(lang) {
+            // Promijeni title
+            document.title = translations[lang].meta_title;
+            
+            // Promijeni sve elemente s data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            
+            // Promijeni sve elemente s data-i18n-html
+            document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                const key = el.getAttribute('data-i18n-html');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Ažuriraj aktivni gumb
+            document.querySelectorAll('.lang-sidebar button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + lang).classList.add('active');
+
+            // Postavi HTML lang atribut
+            document.documentElement.lang = lang;
+        }
+    </script>
+
+<section class="site-legal-footer" style="margin-top:60px;padding:24px 20px;border-top:1px solid #2a2f3a;background:#0f1115;color:#a7adb8;font:14px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+  <div style="max-width:1100px;margin:0 auto">
+    <details style="margin-bottom:20px;background:#171a21;border:1px solid #2a2f3a;border-radius:10px;padding:15px">
+      <summary style="cursor:pointer;font-weight:700;color:#ffb703;font-size:16px">Provjera SHA-256 hashova (manifest)</summary>
+      <div style="margin-top:15px">
+        <p>U Windows Command Promptu možeš izračunati SHA-256 otisak manifesta ili pojedinačne datoteke:</p>
+        <pre style="white-space:pre-wrap;background:#0f1115;padding:10px;border-radius:6px;overflow-x:auto;font-size:13px;color:#e8eaed"><code>CertUtil -hashfile MANIFEST-SHA256.txt SHA256
+CertUtil -hashfile "putanja\do\datoteke" SHA256</code></pre>
+        <p><a href="../manifest.html" data-site-link="manifest-page" style="color:#4aa3ff;text-decoration:underline">Otvori manifest „NISU NAS SLOMILI”</a> · <a href="../MANIFEST-SHA256.txt" data-site-link="hash-manifest" style="color:#4aa3ff;text-decoration:underline">Preuzmi SHA-256 manifest datoteka</a></p>
+      </div>
+    </details>
+    <div style="background:#171a21;border:1px solid #2a2f3a;border-radius:10px;padding:20px;line-height:1.6">
+      <h2 style="color:#ffb703;margin-top:0;font-size:18px">Pravna napomena i uvjeti korištenja</h2>
+      <p><strong>1. Informativna priroda sadržaja i javni interes</strong><br>
+      Sav sadržaj objavljen na ovoj web stranici (Dosje Koromačno) služi isključivo u svrhu informiranja javnosti o pitanjima od iznimnog javnog interesa: zaštiti okoliša, zdravlja građana, transparentnosti upravljanja otpadom i zakonitosti rada industrijskih postrojenja. Sadržaj se temelji na javno dostupnim podacima, službenim dokumentima, zakonima i vlastitim istraživanjima.</p>
+      <p><strong>2. Točnost i provjera podataka</strong><br>
+      Autor se obvezao postupati s dužnom pažnjom kako bi sve informacije bile točne i potpune u trenutku objave. Međutim, sadržaj se temelji na dokumentima trećih strana, te se ne preuzima odgovornost za eventualne nenamjerne greške, propuste ili netočnosti u podacima koji su preuzeti iz službenih registara, medija ili od strane trećih osoba.</p>
+      <p><strong>3. Isključenje odgovornosti za štetu</strong><br>
+      U skladu sa Zakonom o obveznim odnosima (čl. 154.) i Zakonom o medijima (čl. 4. st. 4.), autor ne snosi odgovornost za štetu koja bi mogla nastati korištenjem ili tumačenjem informacija s ove stranice, osim u slučaju dokazane namjere ili krajnje nepažnje. Sadržaj na ovoj stranici je informativnog karaktera i ni pod kojim uvjetima ne predstavlja pravni, medicinski ili financijski savjet. Za donošenje odluka temeljenih na ovim podacima, molimo konzultirajte ovlaštene stručnjake.</p>
+      <p><strong>4. Pravo na ispravak i odgovor</strong><br>
+      Sukladno Zakonu o medijima, svaka fizička ili pravna osoba koja smatra da je objavljena informacija netočna ili da joj je povrijeđeno pravo, ima pravo na objavljivanje ispravka ili odgovora. Molimo da se zahtjevi za ispravak šalju izravno na e-mail: <a href="mailto:dosje.koromacno@proton.me" style="color:#4aa3ff">dosje.koromacno@proton.me</a> / <a href="mailto:dosje.koromacno@proton.me" style="color:#4aa3ff">dosje.koromacno@proton.me</a>. U slučaju utemeljenog zahtjeva, ispravak će biti objavljen u najkraćem mogućem roku.</p>
+      <p><strong>5. Autorska prava i korištenje</strong><br>
+      Svi objavljeni dokumenti, analize i forenzički materijali dostupni su za javnu upotrebu u svrhu zaštite okoliša, zdravlja i javnog interesa. Molimo da prilikom korištenja sadržaja obavezno navedete izvor (link na ovu stranicu ili GitHub repozitorij).</p>
+      <p><strong>6. Vanjski linkovi</strong><br>
+      Ova stranica sadrži linkove na vanjske web stranice (npr. službene registre, medijske portale, GitHub). Autor ne kontrolira sadržaj tih stranica i ne preuzima odgovornost za njihov sadržaj.</p>
+      <p>© 2026 @BajteBrothers / Dosje Koromačno. Sva prava pridržana. Materijali objavljeni na ovoj stranici dostupni su za osobnu, nekomercijalnu i edukativnu upotrebu. U javnoj uporabi obavezno navedite izvor: „Dosje Koromačno, https://zeljk018bratic.github.io/dosje-koromacno/”. Komercijalna uporaba, masovno umnožavanje ili objavljivanje bez prethodnog pisanog odobrenja nije dopušteno.</p>
+      <p style="margin-bottom:0;font-size:12px;color:#a7adb8"><em>Posljednje ažuriranje: 2. 11. 2026.</em></p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dosje Koromačno — Energetski i institucionalni lanac</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --text:#e8eaed;
+    --muted:#a7adb8; --line:#2a2f3a; --accent:#ffb703; --ok:#2ecc71;
+    --warn:#f39c12; --bad:#e74c3c; --blue:#4aa3ff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{padding:32px 20px 18px;background:linear-gradient(180deg,#151922,#0f1115);border-bottom:1px solid var(--line)}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  h1{font-size:clamp(24px,3vw,38px);margin:0 0 8px}
+  h2{font-size:clamp(20px,2.2vw,28px);margin:32px 0 12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+  h3{font-size:19px;margin:22px 0 8px}
+  p{margin:10px 0}
+  .sub{color:var(--muted);max-width:900px}
+  nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  nav a{background:var(--panel);border:1px solid var(--line);padding:7px 11px;border-radius:999px;font-size:14px;color:var(--text)}
+  nav a:hover{border-color:var(--accent)}
+  main{padding:8px 0 60px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .kpi{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .kpi .big{font-size:26px;font-weight:700;color:var(--accent)}
+  .kpi .small{color:var(--muted);font-size:13px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:15px}
+  th,td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+  th{background:#202531;color:#fff}
+  td.num{text-align:right;font-variant-numeric:tabular-nums}
+  .badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.02em}
+  .ok{background:rgba(46,204,113,.15);color:var(--ok);border:1px solid rgba(46,204,113,.4)}
+  .warn{background:rgba(243,156,18,.15);color:var(--warn);border:1px solid rgba(243,156,18,.4)}
+  .bad{background:rgba(231,76,60,.15);color:var(--bad);border:1px solid rgba(231,76,60,.4)}
+  .note{background:#1b1f27;border-left:4px solid var(--accent);padding:12px 14px;border-radius:8px;color:#dfe3ea;margin:12px 0}
+  ul{margin:8px 0 8px 22px}
+  li{margin:6px 0}
+  footer{border-top:1px solid var(--line);color:var(--muted);padding:22px 0;font-size:14px}
+
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+  .filters button{background:var(--panel2);border:1px solid var(--line);color:var(--text);padding:7px 12px;border-radius:999px;font-size:14px;cursor:pointer}
+  .filters button:hover{border-color:var(--accent)}
+  .filters button.active{background:var(--accent);color:#111;border-color:var(--accent);font-weight:700}
+  tr.hidden{display:none}
+  pre.cover{white-space:pre-wrap;background:#12151c;border:1px solid var(--line);border-radius:10px;padding:14px;color:#dfe3ea;font:14px/1.6 ui-monospace,Consolas,monospace}
+
+  @media print{body{background:#fff;color:#000} .card,.kpi,th{background:#fff} a{color:#000} nav{display:none} .filters{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Dosje Koromačno — Energetski i institucionalni lanac</h1>
+    <p class="sub">EKONERG → Institut za elektroprivredu → HEP / Plomin → KOdeCO NetZERO → struja u Istri → Kaštijun. Stranica razlikuje <strong>dokazano</strong>, <strong>javnu optužbu</strong> i <strong>prazninu</strong>.</p>
+    <nav>
+      <a href="#sažetak">Sažetak</a>
+      <a href="#ekonerg">EKONERG</a>
+      <a href="#struja">Struja</a>
+      <a href="#kodeco">KOdeCO</a>
+      <a href="#more">Utjecaj na more</a>
+      <a href="#blazina">Blažina</a>
+      <a href="#kastijun">Kaštijun</a>
+      <a href="#kastijun-detaljno">Kaštijun detaljno</a>
+      <a href="#drava">Drava</a>
+      <a href="#dokazi">Dokazi</a>
+      <a href="#cover">Cover note</a>
+      <a href="#izvori">Izvori</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="sažetak">
+  <h2>1. Sažetak — što je stvarno na stolu</h2>
+  <div class="grid">
+    <div class="kpi"><div class="big">156.688,9 MWh</div><div class="small">godišnja potrošnja planiranog KOdeCO zahvata (SUO, str. 100–101)</div></div>
+    <div class="kpi"><div class="big">50 MVA</div><div class="small">zbroj nazivnih snaga transformatora (20 MVA + 30 MVA) – nije nužno ugovorena priključna snaga</div></div>
+    <div class="kpi"><div class="big">~10,4 %</div><div class="small">od proizvodnje Plomina 2 (uz pretpostavku 1,5 TWh/god.)</div></div>
+    <div class="kpi"><div class="big">~34,8 %</div><div class="small">od godišnje potrošnje cijele Istre (~450 GWh)</div></div>
+  </div>
+  <div class="note">
+    <strong>Ključna rečenica iz Studije:</strong> „Realizacijom planiranog zahvata procjenjuje se da će se potrošnja električne energije tvornice cementa u Koromačnu povećati skoro 4 puta.“
+  </div>
+</section>
+
+<section id="ekonerg">
+  <h2>2. EKONERG — tko je tko</h2>
+  <div class="card">
+    <h3>Vlasništvo i upravljanje</h3>
+    <ul>
+      <li><strong>EKONERG HOLDING d.o.o.</strong> drži <strong>62,44 %</strong> Instituta za elektroprivredu d.d.</li>
+      <li>Obitelj <strong>Čorak</strong> (Duško, Ljerka, Krešimir) drži ~<strong>32,8 %</strong>; zajedno s HOLDINGOM <strong>&gt;94 %</strong>.</li>
+      <li><strong>Zdravko Mužek</strong>: predsjednik nadzornog odbora Instituta od <strong>2001.</strong>; direktor/vlasnik EKONERG HOLDINGA.</li>
+      <li><strong>Nevenko Hladki</strong>: predsjednik uprave EKONERGA; javno optužen (Troskot, 2023.) u vezi mailova s HEP-om — EKONERG demantira.</li>
+      <li><strong>Duško Čorak</strong>: osnivač INETEC-a, član NO Instituta, javno zagovara nuklearnu energiju.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Uloga na Koromačnu</h3>
+    <ul>
+      <li><strong>2013.</strong> — EKONERG izradio <strong>Tehničko-tehnološko rješenje</strong> za postojeće postrojenje Holcim Koromačno (radni nalog <strong>I-14-0229</strong>).</li>
+      <li><strong>2026.</strong> — EKONERG je <strong>ovlaštenik (autor) netehničkog sažetka SUO</strong> za KOdeCO NetZERO (dokument <strong>I-03-1212</strong>, lipanj 2026.).</li>
+      <li>Naručitelj: Holcim (Hrvatska) d.o.o.</li>
+    </ul>
+    <p><span class="badge ok">DOKAZANO</span> EKONERG ima dvostruku dokumentiranu ulogu na istoj lokaciji — 2013. i 2026.</p>
+  </div>
+  <div class="card">
+    <h3>HEP i „Gmail afera“ (2023.)</h3>
+    <p><span class="badge warn">JAVNA OPTUŽBA</span> Zvonimir Troskot (Most) tvrdio je da mailovi Nevenka Hladkog tadašnjem direktoru HEP-a Mići Aralici pokazuju „dijeljenje plijena“ i namještanje poslova. EKONERG je to demantirao. Nema pravomoćne presude ni javno dostupnih mailova.</p>
+  </div>
+</section>
+
+<section id="struja">
+  <h2>3. Struja — brojke iz Studije</h2>
+  <div class="card">
+    <h3>Potrošnja planiranog zahvata (300 radnih dana)</h3>
+    <table>
+      <thead><tr><th>Postrojenje</th><th class="num">MWh/god.</th><th class="num">GWh/god.</th></tr></thead>
+      <tbody>
+        <tr><td>Hvatanje i ukapljivanje CO₂ + otprema</td><td class="num">136.800,0</td><td class="num">136,8</td></tr>
+        <tr><td>Tvornica cementa — nova oprema (retrofit)</td><td class="num">7.526,5</td><td class="num">7,53</td></tr>
+        <tr><td>Desalinizacija i obrada otpadnih voda</td><td class="num">12.362,4</td><td class="num">12,36</td></tr>
+        <tr><th>Ukupno</th><th class="num">156.688,9</th><th class="num">156,69</th></tr>
+      </tbody>
+    </table>
+    <p><span class="badge ok">DOKAZANO</span> Izvor: SUO, str. 100–101 PDF-a (tiskane 69–70).</p>
+  </div>
+  <div class="card">
+    <h3>Što to znači</h3>
+    <ul>
+      <li><strong>~10,4 %</strong> godišnje proizvodnje Plomina 2 — <em>uz pretpostavku da Plomin 2 proizvodi 1,5 TWh godišnje (to nije podatak iz KOdeCO studije)</em>.</li>
+      <li><strong>~34,8 %</strong> godišnje potrošnje Istre (~450 GWh).</li>
+      <li>Prosječna snaga: <strong>~21,8 MW</strong> tijekom 300 dana; <strong>~17,9 MW</strong> preko cijele godine.</li>
+      <li><strong>50 MVA</strong> je zbroj nazivnih snaga transformatora (20 MVA za tvornicu + 30 MVA za CO₂ postrojenje). To <strong>nije nužno</strong> ugovorena priključna snaga niti stvarno vršno opterećenje.</li>
+    </ul>
+    <p><span class="badge ok">DOKAZANO</span> Postojeći transformator: 16 MVA. Novi: 20 MVA + 30 MVA.</p>
+  </div>
+</section>
+
+<section id="kodeco">
+  <h2>4. KOdeCO NetZERO — projekt i status</h2>
+  <div class="card">
+    <ul>
+      <li>Projekt <strong>hvatanja, ukapljivanja i otpreme</strong> CO₂ iz Holcimove cementare Koromačno. Trajno geološko skladištenje planirano je u Italiji i nije dio zahvata u Koromačnu.</li>
+      <li>Vrijednost ~<strong>237 mil. €</strong>; <strong>117 mil. €</strong> iz EU Innovation Fund.</li>
+      <li>Cilj: ~<strong>367.000 t CO₂/god.</strong>; ~50 t CO₂/h; ~117.350 m³ dimnih plinova/h.</li>
+      <li>Tehnologija: <strong>Cryocap™ FG</strong> (Air Liquide) — isključivo na električnu energiju.</li>
+      <li>Holcim tvrdi ~20 % manju potrošnju u odnosu na klasično hvatanje na dimnjaku.</li>
+    </ul>
+    <p><span class="badge ok">DOKAZANO</span> SUO navodi 156.688,9 MWh/god. i povećanje potrošnje „skoro 4 puta“.</p>
+    <p><span class="badge bad">PRAZNINA</span> Nema javno objavljenog izvora „zelene struje“ ni ukupne energetske bilance prije/poslije.</p>
+  </div>
+  <div class="card">
+    <h3>Status postupka</h3>
+    <ul>
+      <li>Javna rasprava: 17.8.–16.9.2026.</li>
+      <li><strong>28.8.2026.</strong> Holcim povukao zahtjev za procjenu utjecaja na okoliš; Ministarstvo obustavilo postupak.</li>
+      <li>Razlog: zahtjev lokalne zajednice da se nova luka premjesti dalje od kuća; potrebna izmjena prostornog plana i nova/ažurirana Studija.</li>
+      <li>Novi rokovi: odluka o investiciji do 30.6.2027., puštanje u pogon do 31.5.2030.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="more">
+  <h2>4a. Utjecaj na more — desalinizacija i podmorski ispust</h2>
+  <p class="sub">Sažetak nalaza iz netehničkog sažetka SUO-a iz kolovoza 2026. i usporedba sa starijim opisom iz prosinca 2025. Podaci iz modela prikazani su kao procjene studije, a ne kao neovisna mjerenja utjecaja tijekom rada.</p>
+  <p><a href="https://mzozt.gov.hr/UserDocsImages/UPRAVA-ZA-PROCJENU-UTJECAJA-NA-OKOLIS-ODRZIVO-GOSPODARENJE-OTPADOM/Puo/14_08_2026_Sa%C5%BEetak_tvornica_cementa_Koroma%C4%8Dno.pdf" target="_blank" rel="noopener">Netehnički sažetak SUO-a — MZOZT, kolovoz 2026. (PDF)</a></p>
+
+  <div class="card">
+    <h3>4a.1 Projektni opis i rezultati modeliranja iz sažetka (2026.)</h3>
+    <ul>
+      <li><strong>Voda za desalinizaciju:</strong> SUO navodi da se sirova voda neće crpiti izravno iz mora, nego iz novih bunara u blizini mora na području k.o. Skitača. Opisani postupak obuhvaća kemijsku predobradu, pješčane filtre i reverznu osmozu.</li>
+      <li><strong>Podmorski ispust:</strong> Predviđena je cijev duga oko <strong>160 m</strong>, na dubini oko <strong>42 m</strong>, s difuzorom. Sažetak navodi ispuštanje obrađenog koncentrata i vode od povratnog ispiranja filtara; pročišćena voda uobičajeno bi se recirkulirala, a ispustila u more ako je postrojenje privremeno ne može prihvatiti.</li>
+      <li><strong>Modelirana slanost:</strong> Na udaljenosti od <strong>50 m</strong> od ispusta model daje <strong>39 g/L</strong>, oko <strong>2 % više</strong> od izmjerenih <strong>38,2 g/L</strong> u okolnom moru na dubini od 41 m. Prema modelu, izjednačenje sukladno prirodnoj slanosti nastupa najdalje na <strong>700 m jugoistočno</strong> od mjesta unosa.</li>
+      <li><strong>Utjecaj na morsko dno pri izgradnji:</strong> Sažetak procjenjuje degradaciju zajednice na čvrstoj podlozi u duljini oko <strong>90 m</strong> i širini oko <strong>2 m</strong>, uz očekivanu obnovu zajednica kroz približno <strong>10 godina</strong>.</li>
+      <li><strong>Utjecaj tijekom rada:</strong> SUO opisuje lokalni, umjeren negativan utjecaj koncentrata visoke slanosti i moguće promjene bentoskih zajednica. U ograničenoj zoni oko ispusta na dubini većoj od 40 m analizirani parametri ne bi bili u dobrom stanju; studija, uz navedene pretpostavke i mjere, ne očekuje značajan dugoročni utjecaj na širi morski ekosustav.</li>
+    </ul>
+    <p><span class="badge warn">PROCJENA SUO-a</span> Duljina i dubina ispusta su projektni podaci, a vrijednosti slanosti i prostorni opseg utjecaja rezultat su modeliranja u studiji — nisu potvrda neovisnim mjerenjima tijekom rada.</p>
+  </div>
+
+  <div class="card">
+    <h3>4a.2 Količine ostataka i često ponavljane brojke</h3>
+    <ul>
+      <li>U dijelu o ostacima obrade industrijskih otpadnih voda sažetak navodi <strong>27,81 m³/dan tekućeg koncentrata</strong> i <strong>2,21 m³/dan mulja</strong>. To su količine ostataka iz tog procesa, ne ukupni protok svih voda kroz podmorski ispust.</li>
+      <li><strong>96–182 m³/h koncentrata</strong>, <strong>2.039 tona kemikalija godišnje</strong> i <strong>9.000 m² utjecaja na dno</strong> nisu pronađeni u pregledanom netehničkom sažetku. To ne utvrđuje jesu li navedeni u nekom drugom dokumentu; za objavu kao činjenice potrebna je provjera punog SUO-a i izvora tih brojki.</li>
+      <li>Modeliranih <strong>39 g/L</strong> na 50 m od ispusta nije „duplo slanija voda”; u sažetku je uspoređeno s okolnim morem od 38,2 g/L na dubini od 41 m.</li>
+    </ul>
+    <p><span class="badge bad">NIJE POTVRĐENO U SAŽETKU</span> Pregledani sažetak ne navodi ukupni protok ispusta u m³/h ni potpuni sastav svih tokova u ispustu.</p>
+  </div>
+
+  <div class="card">
+    <h3>4a.3 Razlika između opisa projekta iz 2025. i 2026.</h3>
+    <p>Informacija uz zahtjev iz <strong>30. prosinca 2025.</strong> navodi ispust na oko <strong>60 m od obale i 10 m dubine</strong>. Netehnički sažetak iz <strong>kolovoza 2026.</strong> opisuje ispust duljine oko <strong>160 m</strong> i dubine oko <strong>42 m</strong>. To su opisi iz različitih verzija dokumentacije i ne treba ih predstavljati kao jedan istodobni projektni podatak.</p>
+    <p><span class="badge warn">POTREBNA PROVJERA</span> Usporediti puni projekt i studije obiju verzija kako bi se utvrdilo što se promijenilo u položaju ispusta, modelu miješanja i procjeni utjecaja.</p>
+  </div>
+
+  <div class="card">
+    <h3>4a.4 Javna zabrinutost i provjera</h3>
+    <p>U medijskom izvještaju Alfred Blažina izrazio je zabrinutost da bi se u more vraćala „duplo slanija” voda. Ta izjava je javno upozorenje, a ne rezultat mjerenja. Netehnički sažetak navodi drukčiji modelirani rezultat: oko 2 % viši salinitet na 50 m od ispusta. Za neovisnu procjenu potrebno je provjeriti model, njegove ulazne pretpostavke i budući monitoring.</p>
+    <p><span class="badge warn">JAVNA ZABRINUTOST</span> Tvrdnju o „duplo slanijoj” vodi ne prikazivati kao utvrđenu činjenicu bez dodatnog izvora ili mjerenja.</p>
+    <p><a href="https://www.istra24.hr/politika-i-drustvo/alfred-blazina-o-holcimovom-projektu-kodeco-net-zero-veliki-upitnik-je-utjecaj-na-more-jer-se-puno-vode-uzima-iz-mora-a-vraca-duplo-slanija-u-mo" target="_blank" rel="noopener">Istra24 — izjava Alfreda Blažine o mogućem utjecaju na more</a></p>
+  </div>
+
+  <div class="card">
+    <h3>4a.5 Dokumentacija za zatražiti</h3>
+    <ul>
+      <li><strong>Od MZOZT-a:</strong> postojeći puni model disperzije, ulazni podaci i pretpostavke za protok i sastav ispusta, uključujući procjenu saliniteta i zone miješanja.</li>
+      <li><strong>Od nositelja zahvata:</strong> projektirani i maksimalni protoci svih tokova, potpuni sastav otpadnih voda i plan monitoringa. Za dokumente koje tijelo javne vlasti posjeduje, zatražiti ih od nadležnog tijela putem ZPPI-ja.</li>
+      <li><strong>Za fazu rada:</strong> tražiti redovita mjerenja saliniteta i drugih relevantnih parametara na ispustu i u zoni miješanja te rezultate praćenja bentosa i morskih staništa.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="blazina">
+  <h2>5. Maria Blažina (SDP) u Saboru — tvrdnje i dokumenti</h2>
+  <div class="card">
+    <p>U raspravi o CBAM-u (29./30.10.2026.) iznijela je:</p>
+    <ul>
+      <li>Postrojenje za hvatanje CO₂ trošilo bi oko <strong>10,4 %</strong> godišnje proizvodnje Plomina (uz njezinu pretpostavku od 1,5 TWh/god.).</li>
+      <li>Priključna snaga tvornice porasla bi <strong>više od tri puta</strong>.</li>
+      <li>Holcim tvrdi da će koristiti „zelenu struju“, ali u pregledanim javnim dokumentima nema podatka o izvoru.</li>
+      <li>Prema njezinoj procjeni, za pokrivanje bi trebala <strong>gotovo trećina planiranih sunčanih elektrana u Istri</strong>.</li>
+      <li>Upozorila je da bi bez zamjene za Plomin struja mogla dolaziti iz ugljena ili uvoza, čime bi „net zero“ samo premjestio zagađenje.</li>
+    </ul>
+    <table>
+      <thead><tr><th>Tvrdnja</th><th>Status</th><th>Dokument</th></tr></thead>
+      <tbody>
+        <tr><td>~10,4 % Plomina</td><td><span class="badge warn">PROCJENA (uz pretpostavku)</span></td><td>156,7 GWh ≈ 10,4 % od 1.500 GWh</td></tr>
+        <tr><td>&gt;3× priključna snaga</td><td><span class="badge warn">PROCJENA</span></td><td>Postojeći 16 MVA; nazivne snage novih transformatora 20 + 30 MVA</td></tr>
+        <tr><td>Izvor „zelene struje“</td><td><span class="badge bad">PRAZNINA</span></td><td>Nema podatka u pregledanim javnim dokumentima</td></tr>
+        <tr><td>Trećina planiranih solara</td><td><span class="badge warn">PROCJENA</span></td><td>Nema javne studije</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="kastijun">
+  <h2>6. Kaštijun — EKONERG i AMP</h2>
+  <div class="card">
+    <ul>
+      <li>EKONERG je <strong>ovlašteni akreditirani laboratorij</strong> za praćenje kvalitete zraka na AMP Kaštijun.</li>
+      <li>Ugovor s Kaštijunom d.o.o. vrijedan ~<strong>403.000 €</strong> (višegodišnje razdoblje).</li>
+      <li>Prati se: NO₂, H₂S, PM10, PM2,5, NH₃, merkaptani i dr.</li>
+      <li>Podaci se prenose na službene stranice Ministarstva.</li>
+    </ul>
+    <p><span class="badge ok">DOKAZANO</span> EKONERG ima legalnu ulogu monitoringa.</p>
+    <p><span class="badge bad">NEMA DOKAZA</span> Za tvrdnju o „izravnavanju“ rezultata nema javnih dokaza. Službena izvješća pokazuju I. kategoriju zraka.</p>
+  </div>
+  <div class="card">
+    <h3>Kaštijun — meteorološka postaja Pula (metodološka rupa)</h3>
+    <p>U Studiji o utjecaju na okoliš za ŽCGO Kaštijun (SUO, poglavlje A.3.2, str. 13) izričito stoji: <strong>„Podaci za navedene pokazatelje uzeti su sa meteorološke postaje u Puli smještene na 30 m visine, 44º52´ geografske širine i 13º51´ geografske dužine.“</strong></p>
+    <p>Citat dokumentira izvor podataka za navedene klimatske pokazatelje, ali sam po sebi ne utvrđuje sve ulazne podatke korištene u modelu raspršenja niti potvrđuje da nije bilo podataka s lokacije Kaštijun. Otvara pitanje reprezentativnosti meteoroloških podataka za mikrolokaciju i modeliranje; za ocjenu su potrebni sirovi podaci i metodologija.</p>
+    <p><span class="badge warn">DJELOMIČNO DOKAZANO</span> Citat iz SUO-a je dokumentiran. Utjecaj na valjanost modela zahtijeva neovisnu provjeru.</p>
+    <p><a href="https://www.kastijun.hr/staticfiles/media/filer_public/5c/81/5c8119a6-d2aa-4a4f-b332-45d0b7746c31/suo_kastijun_23_07_08.pdf" target="_blank" rel="noopener">SUO ŽCGO Kaštijun (PDF)</a></p>
+  </div>
+  <div class="card">
+    <h3>Negativne vrijednosti (minus-offseti) u sirovim podacima</h3>
+    <p>Javni sažeci navode NO₂ oko 6,19 µg/m³ i I. kategoriju zraka, no to samo po sebi ne utvrđuje postoje li negativne vrijednosti u pojedinačnim satnim mjerenjima. Eventualno negativno očitanje u sirovom zapisu ne potvrđuje samo po sebi pogrešku mjerenja niti da je uključeno u dnevni ili godišnji prosjek.</p>
+    <p>Kalibraciju, nultu razinu, validaciju i metodologiju izračuna prosjeka potrebno je provjeriti prema dokumentaciji uređaja i izvornim zapisima prije zaključka o mogućem utjecaju na prosjeke.</p>
+    <ul>
+      <li><span class="badge warn">POTREBNA PROVJERA</span> Ako bi analizatori bilježili negativna očitanja, primjerice −3 ili −5 µg/m³, njihov mogući utjecaj na aritmetičku sredinu treba provjeriti u kontekstu validacije podataka i službene metodologije. Sama negativna vrijednost ne dokazuje da je prosjek snižen, da su vršna očitanja prikrivena ni da je postojala namjera; može biti povezana s mjerenjem, kalibracijom ili obradom podataka.</li>
+      <li><span class="badge bad">PRAZNINA</span> U pregledanim javnim izvorima nisu pronađeni sirovi satni podaci ni kalibracijski listovi. Za provjeru treba zatražiti ih ZPPI-jem od DIRH-a i EKONERGA, zajedno sa zapisima o nultom offsetu i metodologijom izračuna.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>English template — request for monitoring records</h3>
+    <p>This template is intended for the competent public authority (for example, DIRH). A request to EKONERG should be sent separately as a request for records; the Croatian Right of Access to Information Act does not automatically apply to a private company.</p>
+    <details>
+      <summary>Show English request template</summary>
+      <pre class="cover">Subject: Request for access to information — raw hourly data and calibration records for AMP Kaštijun
+
+Dear Sir or Madam,
+
+Pursuant to the Croatian Right of Access to Information Act (Official Gazette Nos. 25/13, 85/15 and 104/16), I request access to the following existing records and information concerning the Kaštijun automatic air quality monitoring station (AMP Kaštijun):
+
+1. Raw hourly monitoring data for the period from 1 January 2024 to 31 October 2026, in the original available format (CSV, JSON or XML), including:
+   - NO₂, H₂S, PM₁₀, PM₂.₅, NH₃ and mercaptans;
+   - all recorded values, including negative and zero readings;
+   - validity flags (valid/invalid) and any recorded reasons for invalidation.
+
+2. Calibration and maintenance records for the analysers at AMP Kaštijun for the same period, including:
+   - dates of calibrations, zero-offset checks and servicing;
+   - documentation of calibration procedures and correction factors;
+   - records of any faults and sensor replacements.
+
+3. Existing records describing the methodology used to calculate daily and annual averages, including:
+   - how negative readings are treated in the calculations;
+   - how missing data are treated;
+   - software processing applied to the data before publication on public portals.
+
+4. Existing records concerning the use of the Pula meteorological station in the Environmental Impact Assessment for the Kaštijun Waste Management Centre (section A.3.2, page 13), which states that the data were obtained from the Pula station, including:
+   - any assessment of whether the Pula station is representative of the Kaštijun site;
+   - any additional measurements or modelling used to support that choice.
+
+Please provide the records electronically within the applicable statutory time limit. If any requested records do not exist or are not held by your institution, please let me know. If access to any part of the information is refused or restricted, please provide the reasons and the applicable legal basis.
+
+Yours faithfully,
+[Full name]
+[Contact details]
+[Date]</pre>
+    </details>
+  </div>
+</section>
+
+<section id="kastijun-detaljno">
+  <h2>6a. Kaštijun — detaljno: sheme, tablice i energetske potrebe</h2>
+  <p class="sub">Ovaj pregled sažima podatke iz Studije o utjecaju na okoliš izgradnje ŽCGO Kaštijun, koju je izradio Fakultet strojarstva i brodogradnje. Brojke označene kao procjene ili projekcije opisuju planske pretpostavke iz SUO-a, a ne nužno današnje stanje ili izmjerene vrijednosti. Statusi razlikuju dokumentirani navod od pitanja koja zahtijevaju dodatnu provjeru.</p>
+  <p><a href="https://www.kastijun.hr/staticfiles/media/filer_public/5c/81/5c8119a6-d2aa-4a4f-b332-45d0b7746c31/suo_kastijun_23_07_08.pdf" target="_blank" rel="noopener">Izvor: SUO ŽCGO Kaštijun (PDF)</a></p>
+
+  <div class="card">
+    <h3>6a.1 Meteorološka postaja Pula — reprezentativnost za Kaštijun</h3>
+    <div class="note">
+      <strong>SUO, A.3.2, str. 13:</strong><br>
+      „Podaci za navedene pokazatelje uzeti su sa meteorološke postaje u Puli smještene na 30m visine, 44º52´ geografske širine i 13º51´ geografske dužine.“
+    </div>
+    <p>U poglavlju A.1.1.3 SUO opisuje podatke za Pulu: vjetrovi NE i E (bura) zastupljeni su oko 20% dana godišnje, SE (jugo) 13%, a ljeti su dominantni NW (12%) i W (10%). Za Pulu navodi i učestalost tišina od 16% ljeti te 11% u proljeće; ruža vjetra odnosi se na podatke za Pulu, za navedena razdoblja mjerenja.</p>
+    <ul>
+      <li><span class="badge ok">DOKUMENTIRANO</span> SUO navodi meteorološku postaju Pula za navedene pokazatelje i opisuje pulsku ružu vjetra.</li>
+      <li><span class="badge warn">POTREBNA PROVJERA</span> Ovi navodi sami ne dokazuju da se model raspršenja oslanjao isključivo na Pulu, niti da su podaci nereprezentativni za lokaciju Kaštijun. Za ocjenu su potrebni ulazi modela, metodologija i eventualna lokalna mjerenja.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>6a.2 Kvaliteta zraka — povijesna osnovna informacija</h3>
+    <p>SUO, poglavlje A.3.3, prenosi podatke o kvaliteti zraka za grad Pulu za 2006. godinu; navod o I. kategoriji odnosi se na Pulu, a ne na samu lokaciju Kaštijun.</p>
+    <div class="note">
+      <strong>SUO, A.3.3:</strong><br>
+      „Trenutno se s područja lokacije postojećeg neuređenog odlagališta koje je u postupku sanacije povremeno javljaju neugodni mirisi u krugu od 1000 m oko odlagališta i ne provode se mjerenja analize kvalitete zraka.“
+    </div>
+    <ul>
+      <li><span class="badge ok">DOKUMENTIRANO</span> U SUO-u se I. kategorija odnosi na podatke za Pulu iz 2006. godine.</li>
+      <li><span class="badge warn">VREMENSKI KONTEKST</span> Navod da se na lokaciji nisu provodila mjerenja opisuje stanje u vrijeme izrade SUO-a. Ne opisuje današnji monitoring; za sadašnje stanje treba koristiti novije podatke AMP Kaštijun.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>6a.3 Geologija i podzemne vode</h3>
+    <p>SUO opisuje rudistne vapnence i krški pukotinski sustav na području zahvata. Za podzemne vode navodi brzine tečenja od <strong>1,53–6,00 cm/s</strong> te zaključuje da su zbog tih obilježja osjetljive na incidentna onečišćenja.</p>
+    <ul>
+      <li><span class="badge ok">DOKUMENTIRANO</span> Prema SUO-u, lokacija nije u vodozaštitnom području i udaljena je oko 1 km od granice III. zone vodozaštite.</li>
+      <li><span class="badge warn">KONTEKST</span> Podatak o osjetljivosti opisuje geološki rizik; sam po sebi ne dokazuje da je došlo do onečišćenja podzemnih voda.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>6a.4 Povijest odlagališta</h3>
+    <p>Prema SUO-u, otpad se na lokaciji odlaže od <strong>1964.</strong> U razdoblju <strong>1967.–1968.</strong> otpad se palio, a odlagalište je, prema tekstu studije, stalno gorjelo. Studija navodi da je do 1980. postojeća depresija bila popunjena.</p>
+    <ul>
+      <li><span class="badge ok">DOKUMENTIRANO</span> SUO prenosi da je do tada na lokaciji odloženo preko <strong>290.000 tona komunalnog</strong> i oko <strong>65.000 tona posebnog otpada</strong>.</li>
+      <li><span class="badge warn">VREMENSKI KONTEKST</span> Ovo su povijesni navodi iz SUO-a, ne evidencija današnjeg stanja lokacije.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>6a.5 Planirane energetske potrebe i instalirana snaga</h3>
+    <p>SUO daje planske podatke o instaliranoj snazi: <strong>635 kW</strong> za predobradu i biostabilizaciju MBO-a te do <strong>350 kW</strong> za mehaničku obradu. Za MBO navodi oko <strong>1.000 kW</strong>, a za cijeli ŽCGO <strong>2.000 kW</strong>; u drugom poglavlju procjenjuje potrebu na <strong>3.000 kW</strong>.</p>
+    <table>
+      <thead><tr><th>Postrojenje / stavka</th><th class="num">Podatak iz SUO-a</th><th>Napomena</th></tr></thead>
+      <tbody>
+        <tr><td>MBO — predobrada i biostabilizacija</td><td class="num">635 kW</td><td>Instalirana snaga navedena u SUO-u</td></tr>
+        <tr><td>MBO — mehanička obrada</td><td class="num">do 350 kW</td><td>Instalirana snaga navedena u SUO-u</td></tr>
+        <tr><td>MBO ukupno</td><td class="num">oko 1.000 kW</td><td>Planski podatak za dovod električne energije</td></tr>
+        <tr><td>Cijeli ŽCGO</td><td class="num">2.000 kW; drugdje 3.000 kW</td><td>Različite procjene instalirane snage u različitim poglavljima SUO-a</td></tr>
+        <tr><td>Postrojenje za proizvodnju električne energije iz bioplina</td><td class="num">0,8 MW</td><td>Planirana proizvodna snaga, nije potrošnja</td></tr>
+      </tbody>
+    </table>
+    <p>SUO predviđa izgradnju nove transformatorske stanice prema elektroenergetskom rješenju HEP-a. Instalirana snaga i projektna procjena nisu isto što i izmjerena godišnja potrošnja električne energije; iz ovih podataka ne može se izračunati stvarna potrošnja centra.</p>
+    <ul>
+      <li><span class="badge ok">DOKUMENTIRANO</span> SUO navodi navedene instalirane i planirane snage te planiranu transformatorsku stanicu.</li>
+      <li><span class="badge warn">POTREBNA PROVJERA</span> Za današnje opterećenje i potrošnju potrebni su aktualni mjerni podaci i računi, a ne samo projektne vrijednosti iz SUO-a.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>6a.6 Prognoze količina otpada do 2035.</h3>
+    <p>Tablica 8 SUO-a prikazuje prognozu ukupno proizvedenog komunalnog otpada, procjenu komunalnog otpada koji ulazi u ŽCGO, neopasni proizvodni otpad predviđen za ŽCGO i njihov zbroj. Zbroj za ŽCGO nije zbroj ukupno proizvedenog komunalnog otpada i proizvodnog otpada.</p>
+    <table>
+      <thead><tr><th>Godina</th><th class="num">Ukupno proizveden komunalni otpad [t/g]</th><th class="num">Komunalni otpad za ŽCGO [t/g]</th><th class="num">Neopasni proizvodni otpad za ŽCGO [t/g]</th><th class="num">Ukupno za ŽCGO [t/g]</th></tr></thead>
+      <tbody>
+        <tr><td>2006.</td><td class="num">86.776</td><td class="num">66.331</td><td class="num">15.300</td><td class="num">81.631</td></tr>
+        <tr><td>2011.</td><td class="num">92.479</td><td class="num">66.483</td><td class="num">16.892</td><td class="num">83.375</td></tr>
+        <tr><td>2020.</td><td class="num">103.788</td><td class="num">70.472</td><td class="num">19.601</td><td class="num">90.073</td></tr>
+        <tr><td>2030.</td><td class="num">118.134</td><td class="num">70.171</td><td class="num">22.636</td><td class="num">92.807</td></tr>
+        <tr><td>2035.</td><td class="num">126.100</td><td class="num">74.903</td><td class="num">23.909</td><td class="num">98.812</td></tr>
+      </tbody>
+    </table>
+    <p>SUO procjenjuje ukupno <strong>2.688.463 t</strong> proizvedenog otpada za razdoblje do 2035. godine, uz prosječne udjele od 78% komunalnog i 22% neopasnog proizvodnog otpada.</p>
+    <h4>Procijenjeni prostor za odlaganje</h4>
+    <ul>
+      <li><strong>Biorazgradiva komponenta komunalnog otpada:</strong> 617.480 t, odnosno 949.969 m³.</li>
+      <li><strong>Neopasni proizvodni otpad:</strong> 592.184 t, odnosno 641.385 m³.</li>
+    </ul>
+    <h4>Prognoza prijevoza s transfernih stanica — odabrani primjeri</h4>
+    <table>
+      <thead><tr><th>Transferna stanica</th><th class="num">2011. [t/g]</th><th class="num">2035. [t/g]</th><th class="num">Procijenjene rute dnevno 2035.</th></tr></thead>
+      <tbody>
+        <tr><td>Labin</td><td class="num">9.590</td><td class="num">12.685</td><td class="num">1–2</td></tr>
+        <tr><td>Pazin</td><td class="num">6.394</td><td class="num">8.457</td><td class="num">1</td></tr>
+        <tr><td>Poreč</td><td class="num">16.484</td><td class="num">21.803</td><td class="num">2–3</td></tr>
+      </tbody>
+    </table>
+    <p><span class="badge warn">PROJEKCIJE</span> Navedene količine i rute su prognoze u SUO-u, a ne izvještaj o stvarno prevezenom otpadu.</p>
+  </div>
+
+  <div class="card">
+    <h3>6a.7 Sheme toka otpada i voda</h3>
+    <p>SUO sadrži grafičke prikaze procesa i infrastrukture ŽCGO-a:</p>
+    <ul>
+      <li><strong>Slika 18 — Tok otpada unutar ŽCGO-a:</strong> prikazuje tok komunalnog otpada kroz MBO te izdvajanje materijala za oporabu i recikliranje.</li>
+      <li><strong>Slika 19 — MBO s bioreaktorskim odlagalištem:</strong> prikazuje povezanost MBO-a, odlagališta i korištenja odlagališnog plina.</li>
+      <li><strong>Slika 21 — Shema zbrinjavanja otpadnih voda:</strong> prikazuje odvojene tokove voda; poglavlje o UPOV-u preporučuje SBR tehnologiju pročišćavanja.</li>
+    </ul>
+    <p>Opisi su sažetak prikaza u SUO-u; za detalje procesa i uvjete ispuštanja treba pregledati odgovarajuće sheme i tekst studije.</p>
+  </div>
+
+  <div class="card">
+    <h3>6a.8 Što podaci znače za dosje</h3>
+    <ul>
+      <li>SUO navodi meteorološke podatke za Pulu, ali taj navod sam ne utvrđuje sve ulaze modela raspršenja ni reprezentativnost za lokaciju Kaštijun.</li>
+      <li>Podatak o I. kategoriji zraka odnosi se na Pulu 2006.; opis izostanka mjerenja na lokaciji odlagališta vremenski je vezan uz izradu SUO-a.</li>
+      <li>Geološki podaci u SUO-u opisuju osjetljivost podzemnih voda na incidentna onečišćenja, ali ne dokazuju da je onečišćenje nastalo.</li>
+      <li>Podaci o otpadu i električnoj snazi su projektne prognoze i procjene, ne dokaz sadašnje količine otpada ili stvarne potrošnje električne energije.</li>
+    </ul>
+    <p><strong>Zaključak:</strong> SUO daje osnovu za ciljane provjere aktualnih mjerenja, modelskih ulaza, podzemnih voda, količina otpada i stvarne potrošnje energije. Za takve zaključke treba usporediti studiju s novijim mjerenjima, dozvolama i operativnim evidencijama.</p>
+    <p>Izvor: <a href="https://www.kastijun.hr/staticfiles/media/filer_public/5c/81/5c8119a6-d2aa-4a4f-b332-45d0b7746c31/suo_kastijun_23_07_08.pdf" target="_blank" rel="noopener">SUO ŽCGO Kaštijun — PDF</a>.</p>
+  </div>
+</section>
+
+<section id="drava">
+  <h2>7. Drava International / Drava plastika — nema veze</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Drava International d.o.o.</strong> (Osijek) — vlasnici Zvonko Bede, Marko Bede, Snježana Alerić.</li>
+      <li><strong>Nema vlasničke, upravljačke ni ugovorne veze</strong> s EKONERG-om ili Institution za elektroprivredu u javnim izvorima.</li>
+      <li><strong>DRAVA LIFE</strong> je EU LIFE projekt obnove rukavaca Drave; EKONERG je radio studije za taj projekt, ne za Drava International.</li>
+    </ul>
+    <p><span class="badge bad">NEMA VEZE</span> Ne miješati DRAVA LIFE s Drava International / Drava plastikom.</p>
+  </div>
+</section>
+
+<section id="dokazi">
+  <h2>8. Dokazano / optužba / praznina — jedna tablica</h2>
+  <div class="filters" id="statusFilters">
+    <button class="active" data-filter="all">Sve</button>
+    <button data-filter="ok">Dokazano</button>
+    <button data-filter="warn">Optužba / procjena</button>
+    <button data-filter="bad">Praznina / nema dokaza</button>
+  </div>
+  <div class="card">
+    <table>
+      <thead><tr><th>Tvrdnja / veza</th><th>Status</th><th>Napomena</th></tr></thead>
+      <tbody>
+        <tr data-status="ok"><td>EKONERG HOLDING — Institut (62,44 %)</td><td><span class="badge ok">DOKAZANO</span></td><td>Isti ljudi na vrhu obje strukture.</td></tr>
+        <tr data-status="ok"><td>EKONERG — KOdeCO SUO (I-03-1212)</td><td><span class="badge ok">DOKAZANO</span></td><td>Autor netehničkog sažetka.</td></tr>
+        <tr data-status="ok"><td>Potrošnja KOdeCO: 156.688,9 MWh/god.</td><td><span class="badge ok">DOKAZANO</span></td><td>SUO, str. 100–101.</td></tr>
+        <tr data-status="ok"><td>Transformatori: 20 MVA + 30 MVA (zbroj 50 MVA)</td><td><span class="badge ok">DOKAZANO</span></td><td>Nazivne snage; nije nužno ugovorena priključna snaga.</td></tr>
+        <tr data-status="warn"><td>EKONERG — HEP („Gmail afera“)</td><td><span class="badge warn">JAVNA OPTUŽBA</span></td><td>Troskot tvrdi; EKONERG demantira.</td></tr>
+        <tr data-status="ok"><td>EKONERG — Kaštijun (AMP)</td><td><span class="badge ok">DOKAZANO</span></td><td>Legalna uloga ovlaštenog laboratorija.</td></tr>
+        <tr data-status="bad"><td>„Izravnavanje“ analiza na Kaštijunu</td><td><span class="badge bad">NEMA DOKAZA</span></td><td>Službena izvješća: I. kategorija.</td></tr>
+        <tr data-status="bad"><td>EKONERG — Drava International</td><td><span class="badge bad">NEMA VEZE</span></td><td>DRAVA LIFE je odvojen projekt.</td></tr>
+        <tr data-status="bad"><td>Izvor „zelene struje“ za KOdeCO</td><td><span class="badge bad">PRAZNINA</span></td><td>Nema podatka u pregledanim javnim dokumentima.</td></tr>
+        <tr data-status="warn"><td>Utjecaj 50 MVA na mrežu Istre</td><td><span class="badge warn">DJELOMIČNO</span></td><td>HOPS priznaje niske napone; nema javne analize za KOdeCO.</td></tr>
+        <tr data-status="warn"><td>Kaštijun SUO koristi meteorološku postaju Pula</td><td><span class="badge warn">DJELOMIČNO DOKAZANO</span></td><td>Citat iz SUO, str. 13. Reprezentativnost podataka za model treba provjeriti.</td></tr>
+        <tr data-status="warn"><td>Moguće negativne NO₂ vrijednosti u sirovim podacima</td><td><span class="badge warn">POTREBNA PROVJERA</span></td><td>Negativne vrijednosti i njihov eventualni utjecaj na prosjeke nisu potvrđeni sirovim logovima.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="cover">
+  <h2>9. Cover note za slanje</h2>
+  <div class="card">
+    <pre class="cover">Poštovana zastupnice Blažina / kolege,
+
+u prilogu je sažeta, dokumentirana stranica o energetskom dijelu projekta KOdeCO NetZERO u Koromačnu.
+
+Ključne dokumentirane činjenice iz same Studije o utjecaju na okoliš (EKONERG, I-03-1212):
+
+• godišnja potrošnja planiranog zahvata: 156.688,9 MWh (≈ 156,7 GWh)
+• povećanje potrošnje električne energije cementare „skoro 4 puta“
+• nazivne snage novih transformatora: 20 MVA + 30 MVA (zbroj 50 MVA, nije nužno ugovorena priključna snaga)
+• to je ~10,4 % proizvodnje Plomina 2 (uz pretpostavku 1,5 TWh) i ~35 % potrošnje cijele Istre
+
+Stranica jasno razdvaja dokazano od javnih optužbi i praznina (izvor „zelene struje“ nije pronađen u pregledanim javnim dokumentima).
+
+S poštovanjem,
+[ime]</pre>
+  </div>
+</section>
+
+<section id="izvori">
+  <h2>10. Izvori i daljnji koraci</h2>
+  <div class="card">
+    <h3>Glavni izvori</h3>
+    <ul>
+      <li>SUO za KOdeCO NetZERO — <a href="https://drive.google.com/drive/folders/1jSiFZRKZD-gJdk0042VelzXt2-V3cxKZ?usp=sharing" target="_blank" rel="noopener">Google Drive (Općina Raša)</a></li>
+      <li>SUO ŽCGO Kaštijun — <a href="https://www.kastijun.hr/staticfiles/media/filer_public/5c/81/5c8119a6-d2aa-4a4f-b332-45d0b7746c31/suo_kastijun_23_07_08.pdf" target="_blank" rel="noopener">kastijun.hr (PDF)</a></li>
+      <li>Netehnički sažetak SUO — EKONERG, I-03-1212 (lipanj 2026.)</li>
+      <li>Javni registri (sudski registar, CompanyWall, Fininfo, SKDD)</li>
+      <li>Mediji: IstraIN, Glas Istre, Istra24, istarski.hr</li>
+      <li>EU: CINEA fiche 101133120; EU Innovation Fund</li>
+    </ul>
+    <h3>Što tražiti ZPPI-jem</h3>
+    <ol>
+      <li><strong>Holcim:</strong> ukupna energetska bilanca prije/poslije; izvor „zelene struje“; ugovor s EKONERG-om (I-03-1212).</li>
+      <li><strong>HOPS/HEP:</strong> analiza utjecaja dodatnih 50 MVA na mrežu Istre nakon Plomina; ugovorena priključna snaga.</li>
+      <li><strong>EKONERG:</strong> svi ugovori i dokumenti vezani uz KOdeCO i Koromačno od 2013. do danas.</li>
+      <li><strong>MZOZT:</strong> puna SUO i energetsko poglavlje; status nove/ažurirane studije.</li>
+    </ol>
+    <div class="note">
+      <strong>Napomena:</strong> Ova stranica razlikuje dokumentirane činjenice od javnih optužbi i praznina. Nijedna tvrdnja označena kao „javna optužba“ nije pravomoćno dokazana. Za sve brojke navedeni su izvori.
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p>Dosje Koromačno — radna verzija. Ažurirano: 2.11.2026. Nije pravni savjet.</p>
+</footer>
+
+<script>
+(function(){
+  const btns = document.querySelectorAll('#statusFilters button');
+  const rows = document.querySelectorAll('#dokazi table tbody tr');
+  btns.forEach(btn => btn.addEventListener('click', () => {
+    btns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    rows.forEach(r => {
+      const s = r.dataset.status || 'all';
+      r.classList.toggle('hidden', f !== 'all' && s !== f);
+    });
+  }));
+})();
+</script>
+<section class="site-legal-footer" style="margin-top:60px;padding:24px 20px;border-top:1px solid #2a2f3a;background:#0f1115;color:#a7adb8;font:14px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+  <div style="max-width:1100px;margin:0 auto">
+    <details style="margin-bottom:20px;background:#171a21;border:1px solid #2a2f3a;border-radius:10px;padding:15px">
+      <summary style="cursor:pointer;font-weight:700;color:#ffb703;font-size:16px">Provjera SHA-256 hashova (manifest)</summary>
+      <div style="margin-top:15px">
+        <p>U Windows Command Promptu možeš izračunati SHA-256 otisak manifesta ili pojedinačne datoteke:</p>
+        <pre style="white-space:pre-wrap;background:#0f1115;padding:10px;border-radius:6px;overflow-x:auto;font-size:13px;color:#e8eaed"><code>CertUtil -hashfile MANIFEST-SHA256.txt SHA256
+CertUtil -hashfile "putanja\do\datoteke" SHA256</code></pre>
+        <p><a href="manifest.html" data-site-link="manifest-page" style="color:#4aa3ff;text-decoration:underline">Otvori manifest „NISU NAS SLOMILI”</a> · <a href="MANIFEST-SHA256.txt" data-site-link="hash-manifest" style="color:#4aa3ff;text-decoration:underline">Preuzmi SHA-256 manifest datoteka</a></p>
+      </div>
+    </details>
+    <div style="background:#171a21;border:1px solid #2a2f3a;border-radius:10px;padding:20px;line-height:1.6">
+      <h2 style="color:#ffb703;margin-top:0;font-size:18px">Pravna napomena i uvjeti korištenja</h2>
+      <p><strong>1. Informativna priroda sadržaja i javni interes</strong><br>
+      Sav sadržaj objavljen na ovoj web stranici (Dosje Koromačno) služi isključivo u svrhu informiranja javnosti o pitanjima od iznimnog javnog interesa: zaštiti okoliša, zdravlja građana, transparentnosti upravljanja otpadom i zakonitosti rada industrijskih postrojenja. Sadržaj se temelji na javno dostupnim podacima, službenim dokumentima, zakonima i vlastitim istraživanjima.</p>
+      <p><strong>2. Točnost i provjera podataka</strong><br>
+      Autor se obvezao postupati s dužnom pažnjom kako bi sve informacije bile točne i potpune u trenutku objave. Međutim, sadržaj se temelji na dokumentima trećih strana, te se ne preuzima odgovornost za eventualne nenamjerne greške, propuste ili netočnosti u podacima koji su preuzeti iz službenih registara, medija ili od strane trećih osoba.</p>
+      <p><strong>3. Isključenje odgovornosti za štetu</strong><br>
+      U skladu sa Zakonom o obveznim odnosima (čl. 154.) i Zakonom o medijima (čl. 4. st. 4.), autor ne snosi odgovornost za štetu koja bi mogla nastati korištenjem ili tumačenjem informacija s ove stranice, osim u slučaju dokazane namjere ili krajnje nepažnje. Sadržaj na ovoj stranici je informativnog karaktera i ni pod kojim uvjetima ne predstavlja pravni, medicinski ili financijski savjet. Za donošenje odluka temeljenih na ovim podacima, molimo konzultirajte ovlaštene stručnjake.</p>
+      <p><strong>4. Pravo na ispravak i odgovor</strong><br>
+      Sukladno Zakonu o medijima, svaka fizička ili pravna osoba koja smatra da je objavljena informacija netočna ili da joj je povrijeđeno pravo, ima pravo na objavljivanje ispravka ili odgovora. Molimo da se zahtjevi za ispravak šalju izravno na e-mail: <a href="mailto:dosje.koromacno@proton.me" style="color:#4aa3ff">dosje.koromacno@proton.me</a> / <a href="mailto:dosje.koromacno@proton.me" style="color:#4aa3ff">dosje.koromacno@proton.me</a>. U slučaju utemeljenog zahtjeva, ispravak će biti objavljen u najkraćem mogućem roku.</p>
+      <p><strong>5. Autorska prava i korištenje</strong><br>
+      Svi objavljeni dokumenti, analize i forenzički materijali dostupni su za javnu upotrebu u svrhu zaštite okoliša, zdravlja i javnog interesa. Molimo da prilikom korištenja sadržaja obavezno navedete izvor (link na ovu stranicu ili GitHub repozitorij).</p>
+      <p><strong>6. Vanjski linkovi</strong><br>
+      Ova stranica sadrži linkove na vanjske web stranice (npr. službene registre, medijske portale, GitHub). Autor ne kontrolira sadržaj tih stranica i ne preuzima odgovornost za njihov sadržaj.</p>
+      <p>© 2026 @BajteBrothers / Dosje Koromačno. Sva prava pridržana. Materijali objavljeni na ovoj stranici dostupni su za osobnu, nekomercijalnu i edukativnu upotrebu. U javnoj uporabi obavezno navedite izvor: „Dosje Koromačno, https://zeljk018bratic.github.io/dosje-koromacno/”. Komercijalna uporaba, masovno umnožavanje ili objavljivanje bez prethodnog pisanog odobrenja nije dopušteno.</p>
+      <p style="margin-bottom:0;font-size:12px;color:#a7adb8"><em>Posljednje ažuriranje: 2. 11. 2026.</em></p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koromačno - MARA Forensic Karta Odgovornosti</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        :root {
+            --bg-main: #0a0c10;
+            --bg-panel: #12161f;
+            --border-color: #242b35;
+            --text-primary: #e1e7ef;
+            --text-muted: #8b9bb4;
+            --neon-red: #ff3b30;
+            --neon-amber: #ff9500;
+            --neon-blue: #007aff;
+            --neon-purple: #af52de;
+            --neon-green: #34c759;
+        }
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+            margin: 0;
+            padding: 24px;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--neon-purple);
+            padding-bottom: 12px;
+            margin-bottom: 6px;
+        }
+        .subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 24px; }
+        .layout-container { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+        #network-map { height: 700px; background-color: #0d1117; border: 1px solid var(--border-color); border-radius: 8px; }
+        #info-panel {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            border-top: 4px solid var(--neon-purple);
+            height: 700px;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+        #info-title { font-size: 20px; font-weight: 700; color: #ffffff; margin-top: 0; }
+        #info-meta {
+            font-family: monospace; font-size: 11px; color: var(--neon-amber);
+            background: rgba(255, 149, 0, 0.1); padding: 6px 10px; border-radius: 4px; margin-bottom: 16px;
+            border: 1px solid rgba(255, 149, 0, 0.2);
+        }
+        #info-body { font-size: 14px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <h1>⚖️ MARA FORENSIC: Sinergija Dokaznih Materijala</h1>
+    <p class="subtitle">Interaktivna mreža odgovornosti s integriranim Usporednim dokaznim elaboratom i audio svjedočanstvima.</p>
+    <div class="layout-container">
+        <div id="network-map"></div>
+        <div id="info-panel">
+            <h3 id="info-title">Upute za analizu</h3>
+            <div id="info-meta">STATUS: INTEGRIRAN ELABORAT // UŽIVO</div>
+            <div id="info-body">
+                Kliknite na čvorove unutar mreže za uvid u dokazne presude, spise <b>KR-DO 1027/13</b>, analize Brodarskog instituta i novi <b>Usporedni dokazni elaborat</b> koji dokazuje umišljaj operatera.
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var mapDetails = {};
+        var groupsStyle = {
+            industrija: { color: { background: '#ff3b30', border: '#cc2f26' }, shape: 'box', font: { color: '#000000', bold: true, size: 14 } },
+            institucije: { color: { background: '#ff9500', border: '#cc7700' }, shape: 'ellipse', font: { color: '#000000', size: 13 } },
+            lokacije: { color: { background: '#007aff', border: '#0062cc' }, shape: 'database', font: { color: '#ffffff', size: 13 } },
+            instituti: { color: { background: '#af52de', border: '#8c42b2' }, shape: 'diamond', font: { color: '#ffffff', size: 12 } }
+        };
+        fetch('podaci-mreza.json')
+            .then(response => response.json())
+            .then(jsonData => {
+                mapDetails = jsonData.details;
+                var nodeIds = jsonData.nodes.map(n => n.id);
+                if (!nodeIds.includes("mup")) {
+                    jsonData.nodes.push({ id: "mup", label: "MUP\n(Granična Policija)", group: "institucije" });
+                    mapDetails["mup"] = {
+                        "title": "🟡 MUP (Ministarstvo unutarnjih poslova)",
+                        "meta": "STATUS: INSTITUCIONALNI ŠTIT // DEMANTI",
+                        "body": "Kategorički negiraju primitak dokumenata i obavijesti od SOA-e iz 2022. godine vezanih uz nelegalne otpadne rute."
+                    };
+                }
+                var formattedNodes = jsonData.nodes.map(node => {
+                    return Object.assign({}, node, groupsStyle[node.group] || {});
+                });
+                var container = document.getElementById('network-map');
+                var data = { nodes: new vis.DataSet(formattedNodes), edges: new vis.DataSet(jsonData.edges) };
+                var options = {
+                    physics: { stabilization: true, barnesHut: { gravitationalConstant: -2000, centralGravity: 0.3, springLength: 150 } },
+                    edges: {
+                        arrows: 'to',
+                        color: { color: '#242b35', highlight: '#af52de' },
+                        font: { size: 10, color: '#8b9bb4', strokeWidth: 0, align: 'middle' },
+                        smooth: { type: 'cubicBezier', roundness: 0.4 }
+                    }
+                };
+                var network = new vis.Network(container, data, options);
+                network.on("click", function (params) {
+                    if (params.nodes.length > 0) {
+                        var clickedNodeId = params.nodes[0];
+                        var nodeData = mapDetails[clickedNodeId];
+                        if (nodeData) {
+                            document.getElementById('info-title').innerText = nodeData.title;
+                            document.getElementById('info-meta').innerText = nodeData.meta;
+                            document.getElementById('info-body').innerHTML = nodeData.body;
+                            var panel = document.getElementById('info-panel');
+                            if (clickedNodeId === "elaborat") {
+                                panel.style.borderTopColor = '#af52de';
+                            } else if (clickedNodeId === "logistika") {
+                                panel.style.borderTopColor = '#34c759';
+                            } else {
+                                panel.style.borderTopColor = '#ff3b30';
+                            }
+                        }
+                    }
+                });
+            });
+    </script>
+<section class="site-legal-footer" style="margin-top:60px;padding:24px 20px;border-top:1px solid #2a2f3a;background:#0f1115;color:#a7adb8;font:14px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+  <div style="max-width:1100px;margin:0 auto">
+    <details style="margin-bottom:20px;background:#171a21;border:1px solid #2a2f3a;border-radius:10px;padding:15px">
+      <summary style="cursor:pointer;font-weight:700;color:#ffb703;font-size:16px">Provjera SHA-256 hashova (manifest)</summary>
+      <div style="margin-top:15px">
+        <p>U Windows Command Promptu možeš izračunati SHA-256 otisak manifesta ili pojedinačne datoteke:</p>
+        <pre style="white-space:pre-wrap;background:#0f1115;padding:10px;border-radius:6px;overflow-x:auto;font-size:13px;color:#e8eaed"><code>CertUtil -hashfile MANIFEST-SHA256.txt SHA256
+CertUtil -hashfile "putanja\do\datoteke" SHA256</code></pre>
+        <p><a href="manifest.html" data-site-link="manifest-page" style="color:#4aa3ff;text-decoration:underline">Otvori manifest „NISU NAS SLOMILI”</a> · <a href="MANIFEST-SHA256.txt" data-site-link="hash-manifest" style="color:#4aa3ff;text-decoration:underline">Preuzmi SHA-256 manifest datoteka</a></p>
+      </div>
+    </details>
+    <div style="background:#171a21;border:1px solid #2a2f3a;border-radius:10px;padding:20px;line-height:1.6">
+      <h2 style="color:#ffb703;margin-top:0;font-size:18px">Pravna napomena i uvjeti korištenja</h2>
+      <p><strong>1. Informativna priroda sadržaja i javni interes</strong><br>
+      Sav sadržaj objavljen na ovoj web stranici (Dosje Koromačno) služi isključivo u svrhu informiranja javnosti o pitanjima od iznimnog javnog interesa: zaštiti okoliša, zdravlja građana, transparentnosti upravljanja otpadom i zakonitosti rada industrijskih postrojenja. Sadržaj se temelji na javno dostupnim podacima, službenim dokumentima, zakonima i vlastitim istraživanjima.</p>
+      <p><strong>2. Točnost i provjera podataka</strong><br>
+      Autor se obvezao postupati s dužnom pažnjom kako bi sve informacije bile točne i potpune u trenutku objave. Međutim, sadržaj se temelji na dokumentima trećih strana, te se ne preuzima odgovornost za eventualne nenamjerne greške, propuste ili netočnosti u podacima koji su preuzeti iz službenih registara, medija ili od strane trećih osoba.</p>
+      <p><strong>3. Isključenje odgovornosti za štetu</strong><br>
+      U skladu sa Zakonom o obveznim odnosima (čl. 154.) i Zakonom o medijima (čl. 4. st. 4.), autor ne snosi odgovornost za štetu koja bi mogla nastati korištenjem ili tumačenjem informacija s ove stranice, osim u slučaju dokazane namjere ili krajnje nepažnje. Sadržaj na ovoj stranici je informativnog karaktera i ni pod kojim uvjetima ne predstavlja pravni, medicinski ili financijski savjet. Za donošenje odluka temeljenih na ovim podacima, molimo konzultirajte ovlaštene stručnjake.</p>
+      <p><strong>4. Pravo na ispravak i odgovor</strong><br>
+      Sukladno Zakonu o medijima, svaka fizička ili pravna osoba koja smatra da je objavljena informacija netočna ili da joj je povrijeđeno pravo, ima pravo na objavljivanje ispravka ili odgovora. Molimo da se zahtjevi za ispravak šalju izravno na e-mail: <a href="mailto:dosje.koromacno@proton.me" style="color:#4aa3ff">dosje.koromacno@proton.me</a> / <a href="mailto:dosje.koromacno@proton.me" style="color:#4aa3ff">dosje.koromacno@proton.me</a>. U slučaju utemeljenog zahtjeva, ispravak će biti objavljen u najkraćem mogućem roku.</p>
+      <p><strong>5. Autorska prava i korištenje</strong><br>
+      Svi objavljeni dokumenti, analize i forenzički materijali dostupni su za javnu upotrebu u svrhu zaštite okoliša, zdravlja i javnog interesa. Molimo da prilikom korištenja sadržaja obavezno navedete izvor (link na ovu stranicu ili GitHub repozitorij).</p>
+      <p><strong>6. Vanjski linkovi</strong><br>
+      Ova stranica sadrži linkove na vanjske web stranice (npr. službene registre, medijske portale, GitHub). Autor ne kontrolira sadržaj tih stranica i ne preuzima odgovornost za njihov sadržaj.</p>
+      <p>© 2026 @BajteBrothers / Dosje Koromačno. Sva prava pridržana. Materijali objavljeni na ovoj stranici dostupni su za osobnu, nekomercijalnu i edukativnu upotrebu. U javnoj uporabi obavezno navedite izvor: „Dosje Koromačno, https://zeljk018bratic.github.io/dosje-koromacno/”. Komercijalna uporaba, masovno umnožavanje ili objavljivanje bez prethodnog pisanog odobrenja nije dopušteno.</p>
+      <p style="margin-bottom:0;font-size:12px;color:#a7adb8"><em>Posljednje ažuriranje: 2. 11. 2026.</em></p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
