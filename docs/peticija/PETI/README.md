@@ -31,6 +31,22 @@ Ova mapa sadrži sažetak i primjer teksta koji mogu poslužiti kao polazište z
 >
 > Ako mogu još nečim pomoći, tu sam. Ja sam zasad ovo pripremio i stavljam vam na uvid.
 
+## Medijski odjek i vanjski izvori
+
+Ovi članci dokumentiraju medijsko praćenje i javno iznesene navode povezane sa slučajem KOdeCO Net Zero. Oni nisu primarni pravni dokazi niti neovisna potvrda svih izjava sugovornika.
+
+- **Radio Labin** (23.10.2026.): *Željko Bratić traži neovisna mjerenja oko Holcima, prijavio projekt KOdeCO net zero europskim tijelima*
+  [Pročitaj članak](https://radiolabin.hr/zeljko-bratic-trazi-neovisna-mjerenja-oko-holcima-prijavio-projekt-kodeco-net-zero-europskim-tijelima-34207)
+  Članak prenosi priopćenje Građanske inicijative o zahtjevu za neovisnim uzorkovanjem te navodima o prijavama EPPO-u i OLAF-u; navodi su pripisani inicijativi.
+  **SHA-256 HTTP odgovora:** `C7841BD00603FFDD92A598273CC759E7A18770FC9FC9BC36AF65056635C8600E` (dohvaćeno 04.11.2026.; 61.498 bajtova).
+
+- **Novi list** (30.09.2026. u 09:13 UTC): *Policija razbila blokadu u Koromačnu, propustila kamione prema Holcimu: „Nasilje nad ljudima”*
+  [Pročitaj članak](https://www.novilist.hr/novosti/hrvatska/policija-razbila-blokadu-u-koromacnu-propustila-kamione-prema-holcimu-nasilje-nad-ljudima/)
+  Izvještava o uklanjanju prosvjednika s pješačkog prijelaza i propuštanju kamiona te prenosi izjave sudionika i zahtjev Građanske inicijative za dokumentaciju o emisijama, monitoringu mora i postupku KOdeCO.
+  **SHA-256 HTTP odgovora:** `E372F236CFDED5FE4AAA4FC559AA21D43BF992661D36F56CE1330E292F6F4C0D` (dohvaćeno 04.11.2026.; 329.110 bajtova).
+
+**Napomena o hashovima:** svaki SHA-256 izračunat je nad tijelom HTTP odgovora preuzetim navedenog datuma. Hash može pomoći usporediti bajtove iste kopije, ali sam po sebi ne dokazuje da je sadržaj bio jednak u trenutku objave niti potvrđuje istinitost navoda. Dinamičke promjene stranice mogu promijeniti hash pri ponovnom preuzimanju.
+
 ## Održavanje i odgovorno korištenje
 
 - Provjerite svaki datum, broj predmeta i izvadak prema povezanom izvorniku prije slanja.
