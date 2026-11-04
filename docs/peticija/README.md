@@ -1,6 +1,10 @@
 Peticija za zaštitu Labinštine
 Građanska peticija za obustavu spaljivanja otpada u tvornici Holcim Koromačno.
 
+## PETI — dodatni materijali za zainteresirane
+
+Pripremili smo zaseban [sažetak dokumenata, pitanja i primjer teksta za prilagodbu](PETI/PETI_podloga_Koromacno_HR.md), uz [jednostavne upute za čitanje i korištenje](PETI/README.md). To je javni materijal za dobrovoljno korištenje; **nije već podnesena predstavka**. Možete otvoriti poveznicu i pročitati je u pregledniku — GitHub račun nije potreban.
+
 🌐 Adresa
 Online:(https://www.peticijeonline.com/signatures/stop_kodeco_net_zero/)
 GitHub Pages: https://zeljk018bratic.github.io/dosje-koromacno/peticija/
@@ -90,5 +94,4 @@ Vanjski linkovi: Svi osobni podaci (ime, prezime, lokacija) prikupljaju se isklj
 Printanje (PDF): Verzija za ispis (peticija-print.html) služi isključivo za lokalno printanje i fizičko potpisivanje. Nikakvi podaci upisani na papir ne šalju se putem ove web stranice.
 
 Za sva pitanja vezana uz podatke na ovoj GitHub stranici, možete kontaktirati voditelja projekta na: dosje.koromacno@proton.me ili [REDACTED PERSONAL EMAIL] .
-
 
