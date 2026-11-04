@@ -36,7 +36,7 @@ Lokalno dostupan spremljeni 24-satni JSON izvoz za NO navodi 24 satne vrijednost
 
 Negativni rezultati opravdavaju zahtjev za tehničkim pojašnjenjem: statusom validacije i naknadnih korekcija, jedinicama i vremenskom zonom, postupkom izračuna NOx-a te zapisima o održavanju i kalibraciji mjerne opreme. Za provjeru treba pribaviti izvorne podatke, metapodatke i objašnjenje nadležnog tijela. Ovi izvozi sami po sebi ne dokazuju kvar opreme, izostanak validacije na serveru ni povredu prava.
 
-**Napomena o provjeri izvora:** SHA-256 zabilježen u retku E-122 (`7E3F61A081D2356435530BFB74C2D60A85F25B0CEFE09F8B94D087EA982A02BA`) ne podudara se sa SHA-256 lokalno dostupne datoteke [`2026-10-18_API_JSON_NO.json`](../../../2026-10-18_API_JSON_NO.json) (`6610B1C93C753D755908ABAFDEBB36A3AFF4F017567115D00001345D74F820DA`). JSON za E-121 naveden u matrici nije pronađen u ovoj radnoj kopiji. Prije prilaganja ili pozivanja na te hash-vrijednosti treba uskladiti izvorne datoteke i matricu.
+**Napomena o provjeri izvora:** Hash u retku E-122 usklađen je s lokalno dostupnom datotekom [`2026-10-18_API_JSON_NO.json`](../../../2026-10-18_API_JSON_NO.json) (`6610B1C93C753D755908ABAFDEBB36A3AFF4F017567115D00001345D74F820DA`). Izvorni JSON naveden u E-121 nije pronađen u ovoj radnoj kopiji; taj je zapis označen kao neprovjeren dok se izvor ne pribavi.
 
 ## Moguće poveznice s pravom i politikama EU-a
 
@@ -67,7 +67,7 @@ Korisni prilozi za ta pitanja su obavijest o raspravi, rješenje o obustavi, izv
 
 - Ova podloga **ne tvrdi** da je otpad iz Gospića upućen ili spaljen u Koromačnu. Za takvu tvrdnju bili bi potrebni primarni podaci o pošiljkama, otpremi, vagama, šiframa otpada i primatelju.
 - Studija i dozvola opisuju dokumentaciju i dopuštene/planirane aktivnosti; same po sebi ne dokazuju stvarno korištenje otpada ni kršenje propisa.
-- Prije korištenja API izvozâ kao priloga uskladite SHA-256 za E-122 i pribavite izvor naveden u E-121; detalji provjere navedeni su u odjeljku o mobilnoj postaji.
+- Prije korištenja E-121 kao priloga pribavite i provjerite izvorni JSON; status zapisa i ograničenja navedeni su u odjeljku o mobilnoj postaji.
 
 ## Poveznica za dijeljenje
 
