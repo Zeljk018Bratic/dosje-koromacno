@@ -22,6 +22,7 @@
 
 ## 📑 Inhalt
 
+- [⚖️ Chronologie der Genehmigungen – Die Illusion von Kontinuität und rechtlichen Vorlagen](dozvole.html)
 - [Schnellzugriff auf Dokumente](#-schnellzugriff-auf-rechtliche-und-technische-dokumente-docs)
 - [Interaktives System](#️-wie-man-dieses-interaktive-system-nutzt)
 - [FOIA-Vorlage](#-aktualisierte-foia-vorlage)
@@ -48,6 +49,8 @@
 | [**FOIA-Anfrage ZPPI-01 (Raša / Umwelt)**](docs/ZPPI-01/zahtjev-zppi-rasa-okolis-kodeco.md) | `MD` | Anfrage zu Roh-AMS-Daten und Entscheidung vom 2. September |
 | [**FOIA-Anfrage ZPPI-02 (Labin / Haushalt)**](docs/ZPPI-02/ZAHTJEV_ZA_PRISTUP_INFORMACIJAMA_GRAD_LABIN.md) | `MD` | Anfrage zu Verträgen und Audit-Logs (CityX) |
 | [**FOIA-Anfrage ZPPI-03 (Ubaš / Pläne)**](docs/ZPPI-03/zahtjev-zppi-prostorni-plan-ubas-koromacno.html) | `HTML` | Anfrage zu Änderungen V des Raumplans und Konzession bis 2045 |
+| [📐 Lageplan und Katasterparzelle](docs/02_PRILOZI/tlocrt_holcim_katastarska_cestica.pdf) | PDF | Räumlicher Geltungsbereich des Vorhabens und Standort des CO2-Speichertanks |
+| [⚙️ Verfahrensfließbild](docs/02_PRILOZI/procesni_dijagram_holcim.pdf) | PDF | Technologischer Prozess, Abfallströme und Messpunkte |
 
 ---
 
@@ -208,4 +211,4 @@ Offener Inhalt. Alle Dokumente und Analysen sind für die öffentliche Nutzung, 
 
 ---
 
-*Letzte Aktualisierung: 15. Oktober 2026.*
+*Letzte Aktualisierung: 6. November 2026.*

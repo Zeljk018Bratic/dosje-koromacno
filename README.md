@@ -8,6 +8,7 @@ Javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija 
 
 ## 📑 Sadržaj
 
+- [⚖️ Kronologija dozvola – Iluzija kontinuiteta i pravni obrasci](dozvole.html)
 - [Brzi pristup dokumentima](#-brzi-pristup-dokumentima)
 - [Interaktivni sustav](#️-interaktivni-sustav)
 - [ZPPI predložak](#-zppi-predložak)

@@ -20,6 +20,7 @@
 
 ## 📑 Indice
 
+- [⚖️ Cronologia dei permessi – L'illusione della continuità e i modelli giuridici](dozvole.html)
 - [Accesso rapido ai documenti](#-accesso-rapido-ai-documenti-legali-e-tecnici-docs)
 - [Sistema interattivo](#️-come-utilizzare-questo-sistema-interattivo)
 - [Modello FOIA](#-modello-foia-aggiornato)
@@ -46,6 +47,8 @@
 | [**Richiesta FOIA ZPPI-01 (Raša / Ambiente)**](docs/ZPPI-01/zahtjev-zppi-rasa-okolis-kodeco.md) | `MD` | Richiesta di dati AMS grezzi e decisione del 2 settembre |
 | [**Richiesta FOIA ZPPI-02 (Labin / Bilancio)**](docs/ZPPI-02/ZAHTJEV_ZA_PRISTUP_INFORMACIJAMA_GRAD_LABIN.md) | `MD` | Richiesta di contratti e log di audit (CityX) |
 | [**Richiesta FOIA ZPPI-03 (Ubaš / Piani)**](docs/ZPPI-03/zahtjev-zppi-prostorni-plan-ubas-koromacno.html) | `HTML` | Richiesta delle modifiche V del piano regolatore e concessione fino al 2045 |
+| [📐 Planimetria e particella catastale](docs/02_PRILOZI/tlocrt_holcim_katastarska_cestica.pdf) | PDF | Ambito spaziale dell'intervento e ubicazione del serbatoio di stoccaggio della CO2 |
+| [⚙️ Diagramma di flusso del processo](docs/02_PRILOZI/procesni_dijagram_holcim.pdf) | PDF | Processo tecnologico, flussi di rifiuti e punti di misurazione |
 
 ---
 
@@ -208,4 +211,4 @@ Contenuto aperto. Tutti i documenti e le analisi sono disponibili per uso pubbli
 
 ---
 
-*Ultimo aggiornamento: 15 ottobre 2026.*
+*Ultimo aggiornamento: 6 novembre 2026.*
