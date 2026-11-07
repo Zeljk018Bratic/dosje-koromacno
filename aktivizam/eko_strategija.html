@@ -22,12 +22,9 @@
             color: var(--text-primary);
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
+            padding: 20px 20px 20px 100px; /* Pomak lijevo zbog gumba */
         }
 
-        /* NOVI STIL ZA GUMBE JEZIKA */
         .lang-nav {
             position: fixed;
             left: 20px;
@@ -64,7 +61,7 @@
             border-radius: 8px;
             box-shadow: 0 8px 24px rgba(0,0,0,0.6);
             border: 1px solid var(--border-color);
-            margin-left: 100px; /* Pomak da ne prekriva gumbe */
+            margin: 0 auto; /* OVO CENTRIRA SADRŽAJ */
         }
 
         header {
@@ -239,18 +236,17 @@
         }
 
         .lang-section {
-            display: none; /* Sakriveno po defaultu */
+            display: none;
         }
 
         .lang-section.active {
-            display: block; /* Prikazuje se kad je aktivno */
+            display: block;
         }
 
-        /* Mobitel */
         @media (max-width: 900px) {
-            body { flex-direction: column; padding: 10px; }
+            body { padding: 10px; }
             .lang-nav { position: static; flex-direction: row; justify-content: center; transform: none; margin-bottom: 20px; }
-            .container { margin-left: 0; padding: 20px; }
+            .container { margin-left: auto; margin-right: auto; padding: 20px; }
             h1 { font-size: 1.6em; }
             .flowchart { flex-direction: column; }
             .flow-step::after { content: '↓'; right: 50%; top: 100%; transform: translateX(50%); margin-top: 5px; }
@@ -258,20 +254,19 @@
         }
 
         @media print {
-            body { background-color: white; color: black; }
+            body { background-color: white; color: black; padding: 0; }
             .lang-nav { display: none; }
             .container { box-shadow: none; border: none; max-width: 100%; padding: 0; margin: 0; }
             h1, h2, h3, th { color: black !important; }
             .disclaimer { border: 1px solid black; background-color: #f9f9f9; color: black; }
             .flow-step { border: 1px solid black; break-inside: avoid; }
             .flow-step::after { content: '→'; color: black; }
-            .lang-section { display: block !important; page-break-after: always; } /* Ispisuje sve jezike odjednom na papir */
+            .lang-section { display: block !important; page-break-after: always; }
         }
     </style>
 </head>
 <body>
 
-    <!-- GUMBI ZA JEZIKE -->
     <nav class="lang-nav">
         <button class="lang-btn active" onclick="setLang('hr')">hr</button>
         <button class="lang-btn" onclick="setLang('en')">en</button>
@@ -280,14 +275,14 @@
     </nav>
 
     <div class="container">
-        
+
         <!-- ================= HRVATSKI ================= -->
         <div id="lang-hr" class="lang-section active">
             <header>
                 <h1>EKO-PRAVNI STRATEŠKI DOSJE</h1>
                 <div class="subtitle">EKO-POLITIČKA ANALIZA I STRATEGIJA ZAŠTITE LABINŠTINE</div>
                 <div class="subtitle">Slučaj "KOdeCO Net Zero": proceduralna raščlamba i pravni mehanizmi obustave industrijskog pritiska</div>
-                <div class="author">Made & created by @BajteBrothers</div>
+                <div class="author">Made &amp; created by @BajteBrothers</div>
             </header>
 
             <div class="disclaimer">
@@ -368,7 +363,7 @@
                     <tr><td><strong>Faza 2: Javni Uvid<br><span style="color:var(--accent-orange)">(KLJUČNI KORAK)</span></strong></td><td>Studija se izlaže u Općini Raša i na webu. Građani uvidom analiziraju dokument.</td><td><strong>ROK:</strong> Najmanje 30 dana sukladno čl. 98. Zakona o zaštiti okoliša. Podnošenje pisanih, stručno utemeljenih prigovora.</td></tr>
                     <tr><td><strong>Faza 3: Javno Izlaganje</strong></td><td>Usmena rasprava i prezentacija investitora.</td><td>Glasno iznošenje argumenata i inzistiranje na unošenju izjava u zapisnik.</td></tr>
                     <tr><td><strong>Faza 4: Evaluacija</strong></td><td>Investitor piše odgovore na primjedbe i izrađuje se konačno Izvješće.</td><td>Provjera je li investitor adekvatno odgovorio na ekološke prigovore.</td></tr>
-                    <tr><td><strong>Faza 5: Rješenje & Sud<br><span style="color:var(--accent-red)">(SUDSKA BITKA)</span></strong></td><td>Ministarstvo izdaje Rješenje o prihvatljivosti zahvata.</td><td><strong>ROK:</strong> 30 DANA OD OBJAVE. Podnošenje tužbe Upravnom sudu u Rijeci.</td></tr>
+                    <tr><td><strong>Faza 5: Rješenje &amp; Sud<br><span style="color:var(--accent-red)">(SUDSKA BITKA)</span></strong></td><td>Ministarstvo izdaje Rješenje o prihvatljivosti zahvata.</td><td><strong>ROK:</strong> 30 DANA OD OBJAVE. Podnošenje tužbe Upravnom sudu u Rijeci.</td></tr>
                 </tbody>
             </table>
 
@@ -381,6 +376,17 @@
 
             <h2>11. ZAKLJUČNO STAJALIŠTE I REZIME</h2>
             <p>Zaštita vode, zemlje i zraka Labinštine zahtijeva hitnu transformaciju uličnog aktivizma u visokostručnu pravno-institucionalnu bitku. Pritisak se mora fokusirati na tijela koja drže stvarne poluge odlučivanja — <strong>Općinsko vijeće Raše, Ministarstvo i Upravni sud</strong> — kroz precizno korištenje alata prostornog planiranja i postupka PUO.</p>
+
+            <section id="gospic-kanal" style="margin-top:40px;">
+                <h2>Gospić — paralelni kanal prema Koromačnu</h2>
+                <p>Otpad iz Gospića povezan je s otvorenim pitanjima o evidenciji i konačnom odredištu. Zahtjev MZOZT-u traži KBO šifre, e-ONTO zapise, primatelje i prijevoznike te provjeru je li otpad izravno ili preko Pazina upućivan u Holcim Koromačno. Navodi o pogrešnim KBO šiframa ili takvom toku otpada nisu ovdje predstavljeni kao utvrđene činjenice.</p>
+                <p>U dosjeu se prate postupak za oko 4.500 t rasutog otpada (rok za dostavu ponuda 03.11.2026.) i pregovarački postupak za oko 33.000 t zakopanog otpada. Njihova dokumentacija može razjasniti tokove i odredišta otpada.</p>
+                <ul>
+                    <li><a href="../docs/monitoring/2026-11-02-dnevni-monitoring.md">Dnevni monitoring 02.11.2026. — Gospić rokovi, HRT, GitHub</a></li>
+                    <li><a href="https://vijesti.hrt.hr/hrvatska/vuckovic-krece-pregovaracki-postupak-sanacije-zakopanog-otpada-u-gospicu-12989019" target="_blank" rel="noopener">HRT, 02.11.2026. — Vučković najavila pregovarački postupak</a></li>
+                </ul>
+                <p style="font-size:0.85em; color:var(--text-secondary);">Zahtjev za pristup informacijama o KBO šiframa i odredištu otpada iz Gospića upućen je MZOZT-u. Očekivani rok odgovora: 15 dana.</p>
+            </section>
         </div>
 
         <!-- ================= ENGLESKI ================= -->
@@ -389,7 +395,7 @@
                 <h1>ECO-LEGAL STRATEGIC DOSSIER</h1>
                 <div class="subtitle">ECO-POLITICAL ANALYSIS AND STRATEGY FOR THE PROTECTION OF THE LABIN REGION</div>
                 <div class="subtitle">The "KOdeCO Net Zero" Case: Procedural Breakdown and Legal Mechanisms for Halting Industrial Pressure</div>
-                <div class="author">Made & created by @BajteBrothers</div>
+                <div class="author">Made &amp; created by @BajteBrothers</div>
             </header>
 
             <div class="disclaimer">
@@ -468,7 +474,7 @@
                     <tr><td><strong>Phase 2: Public Inspection<br><span style="color:var(--accent-orange)">(CRITICAL STEP)</span></strong></td><td>The Study is exhibited in the Municipality of Raša and online. Citizens analyze the document.</td><td><strong>DEADLINE:</strong> At least 30 days pursuant to Art. 98 of the Environmental Protection Act. Submission of written, expert-grounded objections.</td></tr>
                     <tr><td><strong>Phase 3: Public Presentation</strong></td><td>Oral debate and presentation by the investor.</td><td>Voicing arguments loudly and insisting on entering statements into the minutes.</td></tr>
                     <tr><td><strong>Phase 4: Evaluation</strong></td><td>The investor writes responses to the objections, and the final Report is drafted.</td><td>Checking whether the investor has adequately addressed environmental objections.</td></tr>
-                    <tr><td><strong>Phase 5: Decision & Court<br><span style="color:var(--accent-red)">(LEGAL BATTLE)</span></strong></td><td>The Ministry issues the Decision on the environmental acceptability of the project.</td><td><strong>DEADLINE:</strong> 30 DAYS FROM PUBLICATION. Filing a lawsuit with the Administrative Court in Rijeka.</td></tr>
+                    <tr><td><strong>Phase 5: Decision &amp; Court<br><span style="color:var(--accent-red)">(LEGAL BATTLE)</span></strong></td><td>The Ministry issues the Decision on the environmental acceptability of the project.</td><td><strong>DEADLINE:</strong> 30 DAYS FROM PUBLICATION. Filing a lawsuit with the Administrative Court in Rijeka.</td></tr>
                 </tbody>
             </table>
 
@@ -489,7 +495,7 @@
                 <h1>DOSSIER STRATEGICO ECO-GIURIDICO</h1>
                 <div class="subtitle">ANALISI ECO-POLITICA E STRATEGIA DI TUTELA DEL TERRITORIO DI ALBONA</div>
                 <div class="subtitle">Il caso "KOdeCO Net Zero": analisi procedurale e meccanismi legali per l'arresto della pressione industriale</div>
-                <div class="author">Made & created by @BajteBrothers</div>
+                <div class="author">Made &amp; created by @BajteBrothers</div>
             </header>
 
             <div class="disclaimer">
@@ -588,7 +594,7 @@
                 <h1>ÖKO-RECHTLICHES STRATEGIEDOSSIER</h1>
                 <div class="subtitle">ÖKO-POLITISCHE ANALYSE UND STRATEGIE ZUM SCHUTZ DER REGION LABIN</div>
                 <div class="subtitle">Der Fall „KOdeCO Net Zero“: Verfahrenstechnische Aufschlüsselung und rechtliche Mechanismen zur Beendigung des industriellen Drucks</div>
-                <div class="author">Made & created by @BajteBrothers</div>
+                <div class="author">Made &amp; created by @BajteBrothers</div>
             </header>
 
             <div class="disclaimer">
@@ -667,7 +673,7 @@
                     <tr><td><strong>Phase 2: Öffentliche Einsichtnahme<br><span style="color:var(--accent-orange)">(ZENTRALER SCHRITT)</span></strong></td><td>Die Studie wird in der Gemeinde Raša und im Internet ausgelegt. Bürger analysieren das Dokument.</td><td><strong>FRIST:</strong> Mindestens 30 Tage gemäß Art. 98 des Umweltschutzgesetzes. Einreichung schriftlicher, fachlich begründeter Einwände.</td></tr>
                     <tr><td><strong>Phase 3: Öffentliche Präsentation</strong></td><td>Mündliche Debatte und Präsentation des Investors.</td><td>Lautstarkes Vorbringen von Argumenten und Beharren auf der Aufnahme von Erklärungen in das Protokoll.</td></tr>
                     <tr><td><strong>Phase 4: Evaluierung</strong></td><td>Der Investor verfasst Antworten auf die Einwände und der Abschlussbericht wird erstellt.</td><td>Überprüfung, ob der Investor adäquat auf die ökologischen Einwände geantwortet hat.</td></tr>
-                    <tr><td><strong>Phase 5: Bescheid & Gericht<br><span style="color:var(--accent-red)">(RECHTLICHER KAMPF)</span></strong></td><td>Das Ministerium erlässt den Bescheid über die Umweltverträglichkeit des Vorhabens.</td><td><strong>FRIST:</strong> 30 TAGE AB VERÖFFENTLICHUNG. Einreichung einer Klage beim Verwaltungsgericht in Rijeka.</td></tr>
+                    <tr><td><strong>Phase 5: Bescheid &amp; Gericht<br><span style="color:var(--accent-red)">(RECHTLICHER KAMPF)</span></strong></td><td>Das Ministerium erlässt den Bescheid über die Umweltverträglichkeit des Vorhabens.</td><td><strong>FRIST:</strong> 30 TAGE AB VERÖFFENTLICHUNG. Einreichung einer Klage beim Verwaltungsgericht in Rijeka.</td></tr>
                 </tbody>
             </table>
 
@@ -682,87 +688,73 @@
             <p>Der Schutz von Wasser, Boden und Luft der Region Labin erfordert eine dringende Transformation des Straßenaktivismus in einen hochprofessionellen rechtlich-institutionellen Kampf. Der Druck muss sich auf die Gremien konzentrieren, die die tatsächlichen Entscheidungshebel in den Händen halten — den Gemeinderat von Raša, das Ministerium und das Verwaltungsgericht — durch die präzise Nutzung von Raumordnungsinstrumenten und des UVP-Verfahrens.</p>
         </div>
 
-        <section id="gospic-kanal" class="mt-5">
-          <h2 class="h3">Gospić — paralelni kanal prema Koromačnu</h2>
-          <p>
-            Otpad iz Gospića povezan je s otvorenim pitanjima o evidenciji i konačnom odredištu.
-            Zahtjev MZOZT-u traži KBO šifre, e-ONTO zapise, primatelje i prijevoznike te provjeru
-            je li otpad izravno ili preko Pazina upućivan u Holcim Koromačno. Navodi o pogrešnim
-            KBO šiframa ili takvom toku otpada nisu ovdje predstavljeni kao utvrđene činjenice.
-          </p>
-          <p>
-            U dosjeu se prate postupak za oko 4.500 t rasutog otpada (rok za dostavu ponuda
-            03.11.2026.) i pregovarački postupak za oko 33.000 t zakopanog otpada. Njihova
-            dokumentacija može razjasniti tokove i odredišta otpada.
-          </p>
-          <ul>
-            <li><a href="../docs/monitoring/2026-11-02-dnevni-monitoring.md">Dnevni monitoring 02.11.2026. — Gospić rokovi, HRT, GitHub</a></li>
-            <li><a href="https://vijesti.hrt.hr/hrvatska/vuckovic-krece-pregovaracki-postupak-sanacije-zakopanog-otpada-u-gospicu-12989019" target="_blank" rel="noopener">HRT, 02.11.2026. — Vučković najavila pregovarački postupak</a></li>
-          </ul>
-          <p class="small text-muted">
-            Zahtjev za pristup informacijama o KBO šiframa i odredištu otpada iz Gospića
-            upućen je MZOZT-u. Očekivani rok odgovora: 15 dana.
-          </p>
-        </section>
-
         <footer>
             <p>KOdeCO Net Zero • Pravno-Analitički Dosje<br>
-            Made & created by @BajteBrothers<br>
+            Made &amp; created by @BajteBrothers<br>
             <em>"Kvaliteta nije čin, to je navika."</em></p>
         </footer>
     </div>
 
-    <!-- SKRIPTA ZA MIJENJANJE JEZIKA -->
+    <!-- PRAVNI FOOTER (ISPRAVLJEN I ODVOJEN OD GLAVNOG SADRŽAJA) -->
+    <section class="site-legal-footer" style="margin-top:60px;padding:24px 20px;border-top:1px solid #2a2f3a;background:#0f1115;color:#a7adb8;font:14px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+      <div style="max-width:1100px;margin:0 auto">
+        <details style="margin-bottom:20px;background:#171a21;border:1px solid #2a2f3a;border-radius:10px;padding:15px">
+          <summary style="cursor:pointer;font-weight:700;color:#ffb703;font-size:16px">Provjera SHA-256 hashova (manifest)</summary>
+          <div style="margin-top:15px">
+            <p>U Windows Command Promptu možeš izračunati SHA-256 otisak manifesta ili pojedinačne datoteke:</p>
+            <pre style="white-space:pre-wrap;background:#0f1115;padding:10px;border-radius:6px;overflow-x:auto;font-size:13px;color:#e8eaed"><code>CertUtil -hashfile MANIFEST-SHA256.txt SHA256
+CertUtil -hashfile "putanja\do\datoteke" SHA256</code></pre>
+            <p><a href="../manifest.html" data-site-link="manifest-page" style="color:#4aa3ff;text-decoration:underline">Otvori manifest „NISU NAS SLOMILI”</a> · <a href="../MANIFEST-SHA256.txt" data-site-link="hash-manifest" style="color:#4aa3ff;text-decoration:underline">Preuzmi SHA-256 manifest datoteka</a></p>
+          </div>
+        </details>
+        <div style="background:#171a21;border:1px solid #2a2f3a;border-radius:10px;padding:20px;line-height:1.6">
+          <h2 style="color:#ffb703;margin-top:0;font-size:18px">Pravna napomena i uvjeti korištenja</h2>
+          <p><strong>1. Informativna priroda sadržaja i javni interes</strong><br>
+          Sav sadržaj objavljen na ovoj web stranici (Dosje Koromačno) služi isključivo u svrhu informiranja javnosti o pitanjima od iznimnog javnog interesa: zaštiti okoliša, zdravlja građana, transparentnosti upravljanja otpadom i zakonitosti rada industrijskih postrojenja. Sadržaj se temelji na javno dostupnim podacima, službenim dokumentima, zakonima i vlastitim istraživanjima.</p>
+          <p><strong>2. Točnost i provjera podataka</strong><br>
+          Autor se obvezao postupati s dužnom pažnjom kako bi sve informacije bile točne i potpune u trenutku objave. Međutim, sadržaj se temelji na dokumentima trećih strana, te se ne preuzima odgovornost za eventualne nenamjerne greške, propuste ili netočnosti u podacima koji su preuzeti iz službenih registara, medija ili od strane trećih osoba.</p>
+          <p><strong>3. Isključenje odgovornosti za štetu</strong><br>
+          U skladu sa Zakonom o obveznim odnosima (čl. 154.) i Zakonom o medijima (čl. 4. st. 4.), autor ne snosi odgovornost za štetu koja bi mogla nastati korištenjem ili tumačenjem informacija s ove stranice, osim u slučaju dokazane namjere ili krajnje nepažnje. Sadržaj na ovoj stranici je informativnog karaktera i ni pod kojim uvjetima ne predstavlja pravni, medicinski ili financijski savjet. Za donošenje odluka temeljenih na ovim podacima, molimo konzultirajte ovlaštene stručnjake.</p>
+          <p><strong>4. Pravo na ispravak i odgovor</strong><br>
+          Sukladno Zakonu o medijima, svaka fizička ili pravna osoba koja smatra da je objavljena informacija netočna ili da joj je povrijeđeno pravo, ima pravo na objavljivanje ispravka ili odgovora. Molimo da se zahtjevi za ispravak šalju izravno na e-mail: <a href="mailto:dosje.koromacno@proton.me" style="color:#4aa3ff">dosje.koromacno@proton.me</a>. U slučaju utemeljenog zahtjeva, ispravak će biti objavljen u najkraćem mogućem roku.</p>
+          <p><strong>5. Autorska prava i korištenje</strong><br>
+          Svi objavljeni dokumenti, analize i forenzički materijali dostupni su za javnu upotrebu u svrhu zaštite okoliša, zdravlja i javnog interesa. Molimo da prilikom korištenja sadržaja obavezno navedete izvor (link na ovu stranicu ili GitHub repozitorij).</p>
+          <p><strong>6. Vanjski linkovi</strong><br>
+          Ova stranica sadrži linkove na vanjske web stranice (npr. službene registre, medijske portale, GitHub). Autor ne kontrolira sadržaj tih stranica i ne preuzima odgovornost za njihov sadržaj.</p>
+          <p>© 2026 @BajteBrothers / Dosje Koromačno. Sva prava pridržana. Materijali objavljeni na ovoj stranici dostupni su za osobnu, nekomercijalnu i edukativnu upotrebu. U javnoj uporabi obavezno navedite izvor: „Dosje Koromačno, https://zeljk018bratic.github.io/dosje-koromacno/”. Komercijalna uporaba, masovno umnožavanje ili objavljivanje bez prethodnog pisanog odobrenja nije dopušteno.</p>
+          <p style="margin-bottom:0;font-size:12px;color:#a7adb8"><em>Posljednje ažuriranje: 2. 11. 2026.</em></p>
+        </div>
+      </div>
+    </section>
+
     <script>
         function setLang(lang) {
-            // Sakrij sve sekcije
-            document.querySelectorAll('.lang-section').forEach(el => {
+            document.querySelectorAll('.lang-section').forEach(function(el) {
                 el.classList.remove('active');
             });
-            
-            // Prikaži odabranu sekciju
-            document.getElementById('lang-' + lang).classList.add('active');
-            
-            // Ažuriraj gumbe (crvena pozadina za aktivni)
-            document.querySelectorAll('.lang-btn').forEach(btn => {
+            var target = document.getElementById('lang-' + lang);
+            if (target) {
+                target.classList.add('active');
+            }
+            document.querySelectorAll('.lang-btn').forEach(function(btn) {
                 btn.classList.remove('active');
             });
-            event.target.classList.add('active');
-            
-            // Promijeni jezik u <html> tagu
+            var activeBtn = document.querySelector('.lang-btn[onclick="setLang(\'' + lang + '\')"]');
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+            }
             document.documentElement.lang = lang;
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!document.querySelector('.lang-section.active')) {
+                var hr = document.getElementById('lang-hr');
+                if (hr) hr.classList.add('active');
+                var btn = document.querySelector('.lang-btn[onclick="setLang(\'hr\')"]');
+                if (btn) btn.classList.add('active');
+            }
+        });
     </script>
-<section class="site-legal-footer" style="margin-top:60px;padding:24px 20px;border-top:1px solid #2a2f3a;background:#0f1115;color:#a7adb8;font:14px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
-  <div style="max-width:1100px;margin:0 auto">
-    <details style="margin-bottom:20px;background:#171a21;border:1px solid #2a2f3a;border-radius:10px;padding:15px">
-      <summary style="cursor:pointer;font-weight:700;color:#ffb703;font-size:16px">Provjera SHA-256 hashova (manifest)</summary>
-      <div style="margin-top:15px">
-        <p>U Windows Command Promptu možeš izračunati SHA-256 otisak manifesta ili pojedinačne datoteke:</p>
-        <pre style="white-space:pre-wrap;background:#0f1115;padding:10px;border-radius:6px;overflow-x:auto;font-size:13px;color:#e8eaed"><code>CertUtil -hashfile MANIFEST-SHA256.txt SHA256
-CertUtil -hashfile "putanja\do\datoteke" SHA256</code></pre>
-        <p><a href="../manifest.html" data-site-link="manifest-page" style="color:#4aa3ff;text-decoration:underline">Otvori manifest „NISU NAS SLOMILI”</a> · <a href="../MANIFEST-SHA256.txt" data-site-link="hash-manifest" style="color:#4aa3ff;text-decoration:underline">Preuzmi SHA-256 manifest datoteka</a></p>
-      </div>
-    </details>
-    <div style="background:#171a21;border:1px solid #2a2f3a;border-radius:10px;padding:20px;line-height:1.6">
-      <h2 style="color:#ffb703;margin-top:0;font-size:18px">Pravna napomena i uvjeti korištenja</h2>
-      <p><strong>1. Informativna priroda sadržaja i javni interes</strong><br>
-      Sav sadržaj objavljen na ovoj web stranici (Dosje Koromačno) služi isključivo u svrhu informiranja javnosti o pitanjima od iznimnog javnog interesa: zaštiti okoliša, zdravlja građana, transparentnosti upravljanja otpadom i zakonitosti rada industrijskih postrojenja. Sadržaj se temelji na javno dostupnim podacima, službenim dokumentima, zakonima i vlastitim istraživanjima.</p>
-      <p><strong>2. Točnost i provjera podataka</strong><br>
-      Autor se obvezao postupati s dužnom pažnjom kako bi sve informacije bile točne i potpune u trenutku objave. Međutim, sadržaj se temelji na dokumentima trećih strana, te se ne preuzima odgovornost za eventualne nenamjerne greške, propuste ili netočnosti u podacima koji su preuzeti iz službenih registara, medija ili od strane trećih osoba.</p>
-      <p><strong>3. Isključenje odgovornosti za štetu</strong><br>
-      U skladu sa Zakonom o obveznim odnosima (čl. 154.) i Zakonom o medijima (čl. 4. st. 4.), autor ne snosi odgovornost za štetu koja bi mogla nastati korištenjem ili tumačenjem informacija s ove stranice, osim u slučaju dokazane namjere ili krajnje nepažnje. Sadržaj na ovoj stranici je informativnog karaktera i ni pod kojim uvjetima ne predstavlja pravni, medicinski ili financijski savjet. Za donošenje odluka temeljenih na ovim podacima, molimo konzultirajte ovlaštene stručnjake.</p>
-      <p><strong>4. Pravo na ispravak i odgovor</strong><br>
-      Sukladno Zakonu o medijima, svaka fizička ili pravna osoba koja smatra da je objavljena informacija netočna ili da joj je povrijeđeno pravo, ima pravo na objavljivanje ispravka ili odgovora. Molimo da se zahtjevi za ispravak šalju izravno na e-mail: <a href="mailto:dosje.koromacno@proton.me" style="color:#4aa3ff">dosje.koromacno@proton.me</a> / <a href="mailto:dosje.koromacno@proton.me" style="color:#4aa3ff">dosje.koromacno@proton.me</a>. U slučaju utemeljenog zahtjeva, ispravak će biti objavljen u najkraćem mogućem roku.</p>
-      <p><strong>5. Autorska prava i korištenje</strong><br>
-      Svi objavljeni dokumenti, analize i forenzički materijali dostupni su za javnu upotrebu u svrhu zaštite okoliša, zdravlja i javnog interesa. Molimo da prilikom korištenja sadržaja obavezno navedete izvor (link na ovu stranicu ili GitHub repozitorij).</p>
-      <p><strong>6. Vanjski linkovi</strong><br>
-      Ova stranica sadrži linkove na vanjske web stranice (npr. službene registre, medijske portale, GitHub). Autor ne kontrolira sadržaj tih stranica i ne preuzima odgovornost za njihov sadržaj.</p>
-      <p>© 2026 @BajteBrothers / Dosje Koromačno. Sva prava pridržana. Materijali objavljeni na ovoj stranici dostupni su za osobnu, nekomercijalnu i edukativnu upotrebu. U javnoj uporabi obavezno navedite izvor: „Dosje Koromačno, https://zeljk018bratic.github.io/dosje-koromacno/”. Komercijalna uporaba, masovno umnožavanje ili objavljivanje bez prethodnog pisanog odobrenja nije dopušteno.</p>
-      <p style="margin-bottom:0;font-size:12px;color:#a7adb8"><em>Posljednje ažuriranje: 2. 11. 2026.</em></p>
-    </div>
-  </div>
-</section>
 
 </body>
 </html>

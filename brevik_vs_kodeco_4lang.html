@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brevik vs KOdeCO | Usporedba CCS projekata</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --container-bg: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --accent-blue: #4da6ff;
+            --accent-orange: #ff9933;
+            --accent-red: #ff4444;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px 20px 20px 100px;
+        }
+
+        .lang-nav {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 100;
+        }
+
+        .lang-btn {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--accent-red);
+            padding: 8px 16px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background-color: var(--accent-red);
+            color: white;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background-color: var(--container-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+            border: 1px solid var(--border-color);
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--accent-blue);
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+
+        h2 {
+            color: var(--accent-orange);
+            border-left: 4px solid var(--accent-orange);
+            padding-left: 15px;
+            margin-top: 40px;
+            font-size: 1.5em;
+        }
+
+        h3 {
+            color: var(--text-primary);
+            font-size: 1.2em;
+            margin-top: 25px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background-color: #252525;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #2a2a2a;
+            color: var(--accent-blue);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        tr:hover {
+            background-color: #2f2f2f;
+        }
+
+        .card {
+            background-color: #252525;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: var(--border-color);
+            color: var(--text-primary);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+
+        .warning { color: var(--accent-red); font-weight: bold; }
+        .risk-high { color: var(--accent-red); font-weight: bold; }
+        .risk-med { color: var(--accent-orange); font-weight: bold; }
+        .risk-low { color: #2ecc71; font-weight: bold; }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+
+        @media (max-width: 900px) {
+            body { padding: 10px; }
+            .lang-nav { position: static; flex-direction: row; justify-content: center; transform: none; margin-bottom: 20px; }
+            .container { margin-left: auto; margin-right: auto; padding: 20px; }
+            h1 { font-size: 1.6em; }
+            table { display: block; overflow-x: auto; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="lang-nav">
+        <button class="lang-btn active" onclick="setLang('hr')">hr</button>
+        <button class="lang-btn" onclick="setLang('en')">en</button>
+        <button class="lang-btn" onclick="setLang('it')">it</button>
+        <button class="lang-btn" onclick="setLang('de')">de</button>
+    </nav>
+
+    <div class="container">
+
+        <!-- ================= HRVATSKI ================= -->
+        <div id="lang-hr" class="lang-section active">
+            <header>
+                <h1>Brevik vs KOdeCO / Koromačno</h1>
+                <div class="subtitle">Dva pionirska CCS projekta u cementnoj industriji – usporedba tehnologije, rizika, otpora i politike</div>
+            </header>
+
+            <div class="grid">
+                <div class="card">
+                    <h2>🇳🇴 Brevik CCS – Heidelberg Materials</h2>
+                    <span class="tag">U pogonu od lipnja 2025.</span><span class="tag">Aminno pranje</span><span class="tag">Skladištenje u Sjevernom moru</span>
+                    <p><strong>Planirani kapacitet:</strong> 400.000 t CO₂/god. (50 % emisija postrojenja)</p>
+                    <p><strong>Stvarni kapacitet (1. godina):</strong> <span class="warning">≈ 15 % smanjenja (≈ 120.000 t)</span></p>
+                    <p><strong>Skladištenje:</strong> Northern Lights, 2,6 km ispod morskog dna Sjevernog mora</p>
+                    <p><strong>Glavni problemi:</strong> Curenja u cijevima dimnih plinova, konstrukcijske greške, višemjesečni zastoji.</p>
+                </div>
+                <div class="card">
+                    <h2>🇭🇷 KOdeCO net zero – Holcim Hrvatska</h2>
+                    <span class="tag">U planu</span><span class="tag">Cryocap™ FG (Air Liquide)</span><span class="tag">Skladištenje u Sredozemlju (Italija)</span>
+                    <p><strong>Planirani kapacitet:</strong> 367.000 t CO₂/god.</p>
+                    <p><strong>Planirano puštanje u pogon:</strong> 31. svibnja 2030.</p>
+                    <p><strong>Investicija:</strong> 237 milijuna € (od toga 116,9 mil. € iz EU Inovacijskog fonda)</p>
+                    <p><strong>Glavni problemi:</strong> <span class="warning">Masovni prosvjedi, 7.152 potpisa protiv, Općina Raša traži ukidanje strateškog statusa.</span></p>
+                </div>
+            </div>
+
+            <h2>🔍 Izravna usporedba</h2>
+            <table>
+                <thead>
+                    <tr><th>Kriterij</th><th>Brevik (Norveška)</th><th>KOdeCO / Koromačno (Hrvatska)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Tehnologija</td><td>Amini (S26), SLB Capturi</td><td>Kriogena (Cryocap™ FG), Air Liquide</td></tr>
+                    <tr><td>Planirani kapacitet</td><td>400.000 t CO₂/god.</td><td>367.000 t CO₂/god.</td></tr>
+                    <tr><td>Stvarni učinak (1. god.)</td><td><span class="risk-high">~15 % redukcije (35–38 t/h)</span></td><td>Još nije u pogonu</td></tr>
+                    <tr><td>Glavni lokalni rizici</td><td><span class="risk-med">Amini (nitrozamini)</span> + CO₂ u blizini naselja</td><td><span class="risk-high">CO₂ „jezero“ u zaljevu</span> + spaljivanje otpada bez kontinuiranog nadzora</td></tr>
+                    <tr><td>Lokalni otpor</td><td>Nizak/umjeren</td><td><span class="risk-high">Masivan (blokade, tužbe)</span></td></tr>
+                    <tr><td>Komercijalni model</td><td>evoZero (fizički i virtualni cement)</td><td>Neto-nulti cement (planirano)</td></tr>
+                </tbody>
+            </table>
+
+            <h2>⚠️ Glavni profili rizika</h2>
+            <div class="card">
+                <h3>Brevik: Tehnički neuspjeh u prvoj godini</h3>
+                <p>Postrojenje je trebalo dokazati da CCS funkcionira u industrijskim razmjerima – <strong>i u početku nije uspjelo</strong>. Umjesto 50 %, smanjeno je samo 15 % emisija. Curenja u cijevima dimnih plinova i konstrukcijske greške dovele su do višemjesečnih zastoja.</p>
+            </div>
+            <div class="card">
+                <h3>Koromačno: „Ekološka opasnost“ u uskom zaljevu</h3>
+                <p>Postrojenje se nalazi direktno na vodi u topografskoj depresiji. CO₂ je teži od zraka – u slučaju curenja, <strong>širio bi se poput jezera po tlu</strong>, istiskujući kisik. Stambene zgrade i kuće za odmor izuzetno su blizu postrojenja.</p>
+            </div>
+
+            <h2>📊 Zaključak</h2>
+            <p>Brevik pokazuje da je CCS tehnički izvediv – ali ne s obećanom učinkovitošću. Koromačno pokazuje da CCS na osjetljivoj lokaciji s uskim zaljevom, jakim lokalnim protivljenjem i netransparentnim nadzorom može postati <strong>politički barut</strong>.</p>
+        </div>
+
+        <!-- ================= ENGLESKI ================= -->
+        <div id="lang-en" class="lang-section">
+            <header>
+                <h1>Brevik vs KOdeCO / Koromačno</h1>
+                <div class="subtitle">Two pioneer CCS projects in the cement industry – comparison of technology, risks, resistance, and policy</div>
+            </header>
+
+            <div class="grid">
+                <div class="card">
+                    <h2>🇳🇴 Brevik CCS – Heidelberg Materials</h2>
+                    <span class="tag">Operational since June 2025</span><span class="tag">Amine scrubbing</span><span class="tag">North Sea storage</span>
+                    <p><strong>Planned capacity:</strong> 400,000 t CO₂/year (50 % of plant emissions)</p>
+                    <p><strong>Actual capacity (year 1):</strong> <span class="warning">≈ 15 % reduction (≈ 120,000 t)</span></p>
+                    <p><strong>Storage:</strong> Northern Lights, 2.6 km below the North Sea seabed</p>
+                    <p><strong>Main issues:</strong> Leaks in flue gas pipes, design flaws, months of downtime.</p>
+                </div>
+                <div class="card">
+                    <h2>🇭🇷 KOdeCO net zero – Holcim Hrvatska</h2>
+                    <span class="tag">Planned</span><span class="tag">Cryocap™ FG (Air Liquide)</span><span class="tag">Mediterranean storage (Italy)</span>
+                    <p><strong>Planned capacity:</strong> 367,000 t CO₂/year</p>
+                    <p><strong>Planned commissioning:</strong> 31 May 2030</p>
+                    <p><strong>Investment:</strong> €237 million (of which €116.9 million from EU Innovation Fund)</p>
+                    <p><strong>Main issues:</strong> <span class="warning">Mass protests, 7,152 signatures against, Raša municipality demands removal from strategic list.</span></p>
+                </div>
+            </div>
+
+            <h2>🔍 Direct comparison</h2>
+            <table>
+                <thead>
+                    <tr><th>Criterion</th><th>Brevik (Norway)</th><th>KOdeCO / Koromačno (Croatia)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Technology</td><td>Amines (S26), SLB Capturi</td><td>Cryogenic (Cryocap™ FG), Air Liquide</td></tr>
+                    <tr><td>Planned capacity</td><td>400,000 t CO₂/year</td><td>367,000 t CO₂/year</td></tr>
+                    <tr><td>Actual performance (year 1)</td><td><span class="risk-high">~15 % reduction (35–38 t/h)</span></td><td>Not yet operational</td></tr>
+                    <tr><td>Main local risks</td><td><span class="risk-med">Amines (nitrosamines)</span> + CO₂ near residential areas</td><td><span class="risk-high">CO₂ “lake” in the bay</span> + waste incineration without continuous monitoring</td></tr>
+                    <tr><td>Local resistance</td><td>Low/moderate</td><td><span class="risk-high">Massive (blockades, lawsuits)</span></td></tr>
+                    <tr><td>Commercial model</td><td>evoZero (physical and virtual cement)</td><td>Net-zero cement (planned)</td></tr>
+                </tbody>
+            </table>
+
+            <h2>⚠️ The core risk profiles</h2>
+            <div class="card">
+                <h3>Brevik: Technical failure in the first year</h3>
+                <p>The plant was meant to prove that CCS works at industrial scale – <strong>and initially failed</strong>. Instead of 50 %, only 15 % of emissions were reduced. Leaks in flue gas pipes and design flaws led to months of outages.</p>
+            </div>
+            <div class="card">
+                <h3>Koromačno: An “ecological hazard” in a narrow bay</h3>
+                <p>The plant sits directly on the water in a topographical depression. CO₂ is heavier than air – in the event of a leak, it would <strong>spread like a lake along the ground</strong>, displacing oxygen. Residential buildings and holiday homes are extremely close to the plant site.</p>
+            </div>
+
+            <h2>📊 Conclusion</h2>
+            <p>Brevik shows that CCS is technically feasible – but not at the promised efficiency. Koromačno shows that CCS at a sensitive site with a narrow bay, strong local opposition, and opaque monitoring can become a <strong>political powder keg</strong>.</p>
+        </div>
+
+        <!-- ================= TALIJANSKI ================= -->
+        <div id="lang-it" class="lang-section">
+            <header>
+                <h1>Brevik vs KOdeCO / Koromačno</h1>
+                <div class="subtitle">Due progetti pionieristici CCS nell’industria del cemento a confronto – tecnologia, rischi, resistenza e politiche</div>
+            </header>
+
+            <div class="grid">
+                <div class="card">
+                    <h2>🇳🇴 Brevik CCS – Heidelberg Materials</h2>
+                    <span class="tag">In funzione da giugno 2025</span><span class="tag">Lavaggio con ammine</span><span class="tag">Stoccaggio nel Mare del Nord</span>
+                    <p><strong>Capacità prevista:</strong> 400.000 t CO₂/anno (50 % delle emissioni dello stabilimento)</p>
+                    <p><strong>Capacità reale (1° anno):</strong> <span class="warning">≈ 15 % di riduzione (≈ 120.000 t)</span></p>
+                    <p><strong>Stoccaggio:</strong> Northern Lights, 2,6 km sotto il fondale del Mare del Nord</p>
+                    <p><strong>Problemi principali:</strong> Perdite nei condotti dei fumi, difetti di progettazione, mesi di fermo.</p>
+                </div>
+                <div class="card">
+                    <h2>🇭🇷 KOdeCO net zero – Holcim Hrvatska</h2>
+                    <span class="tag">In pianificazione</span><span class="tag">Cryocap™ FG (Air Liquide)</span><span class="tag">Stoccaggio nel Mediterraneo (Italia)</span>
+                    <p><strong>Capacità prevista:</strong> 367.000 t CO₂/anno</p>
+                    <p><strong>Entrata in funzione prevista:</strong> 31 maggio 2030</p>
+                    <p><strong>Investimento:</strong> 237 milioni di € (di cui 116,9 milioni dal Fondo per l’innovazione UE)</p>
+                    <p><strong>Problemi principali:</strong> <span class="warning">Proteste di massa, 7.152 firme contro, il comune di Raša chiede la rimozione dalla lista strategica.</span></p>
+                </div>
+            </div>
+
+            <h2>🔍 Confronto diretto</h2>
+            <table>
+                <thead>
+                    <tr><th>Criterio</th><th>Brevik (Norvegia)</th><th>KOdeCO / Koromačno (Croazia)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Tecnologia</td><td>Ammine (S26), SLB Capturi</td><td>Criogenica (Cryocap™ FG), Air Liquide</td></tr>
+                    <tr><td>Capacità prevista</td><td>400.000 t CO₂/anno</td><td>367.000 t CO₂/anno</td></tr>
+                    <tr><td>Prestazioni reali (1° anno)</td><td><span class="risk-high">~15 % di riduzione (35–38 t/h)</span></td><td>Non ancora operativo</td></tr>
+                    <tr><td>Rischi locali principali</td><td><span class="risk-med">Ammine (nitrosammine)</span> + CO₂ vicino a aree residenziali</td><td><span class="risk-high">“Lago” di CO₂ nella baia</span> + incenerimento dei rifiuti senza monitoraggio continuo</td></tr>
+                    <tr><td>Resistenza locale</td><td>Bassa/moderata</td><td><span class="risk-high">Massiccia (blocchi, cause legali)</span></td></tr>
+                    <tr><td>Modello commerciale</td><td>evoZero (cemento fisico e virtuale)</td><td>Cemento net-zero (previsto)</td></tr>
+                </tbody>
+            </table>
+
+            <h2>⚠️ I profili di rischio principali</h2>
+            <div class="card">
+                <h3>Brevik: fallimento tecnico nel primo anno</h3>
+                <p>L’impianto doveva dimostrare che il CCS funziona su scala industriale – <strong>e inizialmente ha fallito</strong>. Invece del 50 %, è stato ridotto solo il 15 % delle emissioni. Perdite nei condotti dei fumi e difetti di progettazione hanno causato mesi di inattività.</p>
+            </div>
+            <div class="card">
+                <h3>Koromačno: un “pericolo ecologico” in una baia stretta</h3>
+                <p>Lo stabilimento si trova direttamente sull’acqua in una depressione topografica. La CO₂ è più pesante dell’aria – in caso di perdita, si <strong>diffonderebbe come un lago lungo il terreno</strong>, spostando l’ossigeno. Gli edifici residenziali e le case vacanza sono estremamente vicini all’impianto.</p>
+            </div>
+
+            <h2>📊 Conclusione</h2>
+            <p>Brevik dimostra che il CCS è tecnicamente fattibile – ma non con l’efficienza promessa. Koromačno dimostra che il CCS in un sito sensibile con una baia stretta, una forte opposizione locale e un monitoraggio opaco può diventare una <strong>polveriera politica</strong>.</p>
+        </div>
+
+        <!-- ================= NJEMAČKI ================= -->
+        <div id="lang-de" class="lang-section">
+            <header>
+                <h1>Brevik vs KOdeCO / Koromačno</h1>
+                <div class="subtitle">Zwei CCS-Pionierprojekte der Zementindustrie im Vergleich – Technologie, Risiken, Widerstand und Politik</div>
+            </header>
+
+            <div class="grid">
+                <div class="card">
+                    <h2>🇳🇴 Brevik CCS – Heidelberg Materials</h2>
+                    <span class="tag">In Betrieb seit Juni 2025</span><span class="tag">Amine-Wäsche</span><span class="tag">Nordsee-Speicherung</span>
+                    <p><strong>Kapazität (geplant):</strong> 400.000 t CO₂/Jahr (50 % der Werksemissionen)</p>
+                    <p><strong>Kapazität (real, 1. Jahr):</strong> <span class="warning">≈ 15 % Reduktion (≈ 120.000 t)</span></p>
+                    <p><strong>Speicherung:</strong> Northern Lights, 2,6 km unter dem Nordseeboden</p>
+                    <p><strong>Hauptprobleme:</strong> Lecks in Abgasrohren, Konstruktionsfehler, monatelange Stillstände.</p>
+                </div>
+                <div class="card">
+                    <h2>🇭🇷 KOdeCO net zero – Holcim Hrvatska</h2>
+                    <span class="tag">In Planung</span><span class="tag">Cryocap™ FG (Air Liquide)</span><span class="tag">Mittelmeer-Speicherung (Italien)</span>
+                    <p><strong>Kapazität (geplant):</strong> 367.000 t CO₂/Jahr</p>
+                    <p><strong>Inbetriebnahme (geplant):</strong> 31. Mai 2030</p>
+                    <p><strong>Investition:</strong> 237 Mio. € (davon 116,9 Mio. € EU-Innovationsfonds)</p>
+                    <p><strong>Hauptprobleme:</strong> <span class="warning">Massenproteste, 7.152 Unterschriften gegen das Projekt, Gemeinde Raša fordert Streichung von der strategischen Liste.</span></p>
+                </div>
+            </div>
+
+            <h2>🔍 Direkter Vergleich</h2>
+            <table>
+                <thead>
+                    <tr><th>Kriterium</th><th>Brevik (Norwegen)</th><th>KOdeCO / Koromačno (Kroatien)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Technologie</td><td>Amine (S26), SLB Capturi</td><td>Kryogen (Cryocap™ FG), Air Liquide</td></tr>
+                    <tr><td>Geplante Kapazität</td><td>400.000 t CO₂/Jahr</td><td>367.000 t CO₂/Jahr</td></tr>
+                    <tr><td>Reale Leistung (1. Jahr)</td><td><span class="risk-high">~15 % Reduktion (35–38 t/h)</span></td><td>Noch nicht in Betrieb</td></tr>
+                    <tr><td>Lokale Hauptrisiken</td><td><span class="risk-med">Amine (Nitrosamine)</span> + CO₂ in der Nähe von Wohngebieten</td><td><span class="risk-high">CO₂-„See“ in der Bucht</span> + Müllverbrennung ohne kontinuierliche Überwachung</td></tr>
+                    <tr><td>Lokaler Widerstand</td><td>Niedrig/mittel</td><td><span class="risk-high">Massiv (Blockaden, Klagen)</span></td></tr>
+                    <tr><td>Geschäftsmodell</td><td>evoZero (physischer und virtueller Zement)</td><td>Net-Zero-Zement (geplant)</td></tr>
+                </tbody>
+            </table>
+
+            <h2>⚠️ Die zentralen Risikoprofile</h2>
+            <div class="card">
+                <h3>Brevik: Technisches Versagen im ersten Jahr</h3>
+                <p>Die Anlage sollte beweisen, dass CCS im industriellen Maßstab funktioniert – <strong>und scheiterte zunächst</strong>. Statt 50 % wurden nur 15 % der Emissionen reduziert. Lecks in Abgasrohren und Konstruktionsfehler führten zu monatelangen Ausfällen.</p>
+            </div>
+            <div class="card">
+                <h3>Koromačno: Ein „ökologisches Risiko“ in einer engen Bucht</h3>
+                <p>Das Werk liegt direkt am Wasser in einer topografischen Senke. CO₂ ist schwerer als Luft – bei einem Leck würde es sich <strong>wie ein See am Boden ausbreiten</strong> und Sauerstoff verdrängen. Die Anwohner und Ferienhäuser liegen extrem nah am Werksgelände.</p>
+            </div>
+
+            <h2>📊 Fazit</h2>
+            <p>Brevik zeigt, dass CCS technisch machbar ist – aber nicht in der versprochenen Effizienz. Koromačno zeigt, dass CCS an einem sensiblen Standort mit enger Bucht, starker lokaler Opposition und undurchsichtiger Überwachung zu einem <strong>politischen Sprengsatz</strong> werden kann.</p>
+        </div>
+
+        <footer>
+            <p>Brevik vs KOdeCO • Analitički Dosje<br>
+            Made &amp; created by @BajteBrothers</p>
+        </footer>
+    </div>
+
+    <!-- PRAVNI FOOTER -->
+    <section class="site-legal-footer" style="margin-top:60px;padding:24px 20px;border-top:1px solid #2a2f3a;background:#0f1115;color:#a7adb8;font:14px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+      <div style="max-width:1100px;margin:0 auto">
+        <details style="margin-bottom:20px;background:#171a21;border:1px solid #2a2f3a;border-radius:10px;padding:15px">
+          <summary style="cursor:pointer;font-weight:700;color:#ffb703;font-size:16px">Provjera SHA-256 hashova (manifest)</summary>
+          <div style="margin-top:15px">
+            <p>U Windows Command Promptu možeš izračunati SHA-256 otisak manifesta ili pojedinačne datoteke:</p>
+            <pre style="white-space:pre-wrap;background:#0f1115;padding:10px;border-radius:6px;overflow-x:auto;font-size:13px;color:#e8eaed"><code>CertUtil -hashfile MANIFEST-SHA256.txt SHA256
+CertUtil -hashfile "putanja\do\datoteke" SHA256</code></pre>
+            <p><a href="manifest.html" data-site-link="manifest-page" style="color:#4aa3ff;text-decoration:underline">Otvori manifest „NISU NAS SLOMILI”</a> · <a href="MANIFEST-SHA256.txt" data-site-link="hash-manifest" style="color:#4aa3ff;text-decoration:underline">Preuzmi SHA-256 manifest datoteka</a></p>
+          </div>
+        </details>
+        <div style="background:#171a21;border:1px solid #2a2f3a;border-radius:10px;padding:20px;line-height:1.6">
+          <h2 style="color:#ffb703;margin-top:0;font-size:18px">Pravna napomena i uvjeti korištenja</h2>
+          <p><strong>1. Informativna priroda sadržaja i javni interes</strong><br>
+          Sav sadržaj objavljen na ovoj web stranici (Dosje Koromačno) služi isključivo u svrhu informiranja javnosti o pitanjima od iznimnog javnog interesa: zaštiti okoliša, zdravlja građana, transparentnosti upravljanja otpadom i zakonitosti rada industrijskih postrojenja. Sadržaj se temelji na javno dostupnim podacima, službenim dokumentima, zakonima i vlastitim istraživanjima.</p>
+          <p><strong>2. Točnost i provjera podataka</strong><br>
+          Autor se obvezao postupati s dužnom pažnjom kako bi sve informacije bile točne i potpune u trenutku objave. Međutim, sadržaj se temelji na dokumentima trećih strana, te se ne preuzima odgovornost za eventualne nenamjerne greške, propuste ili netočnosti u podacima koji su preuzeti iz službenih registara, medija ili od strane trećih osoba.</p>
+          <p><strong>3. Isključenje odgovornosti za štetu</strong><br>
+          U skladu sa Zakonom o obveznim odnosima (čl. 154.) i Zakonom o medijima (čl. 4. st. 4.), autor ne snosi odgovornost za štetu koja bi mogla nastati korištenjem ili tumačenjem informacija s ove stranice, osim u slučaju dokazane namjere ili krajnje nepažnje. Sadržaj na ovoj stranici je informativnog karaktera i ni pod kojim uvjetima ne predstavlja pravni, medicinski ili financijski savjet. Za donošenje odluka temeljenih na ovim podacima, molimo konzultirajte ovlaštene stručnjake.</p>
+          <p><strong>4. Pravo na ispravak i odgovor</strong><br>
+          Sukladno Zakonu o medijima, svaka fizička ili pravna osoba koja smatra da je objavljena informacija netočna ili da joj je povrijeđeno pravo, ima pravo na objavljivanje ispravka ili odgovora. Molimo da se zahtjevi za ispravak šalju izravno na e-mail: <a href="mailto:dosje.koromacno@proton.me" style="color:#4aa3ff">dosje.koromacno@proton.me</a>. U slučaju utemeljenog zahtjeva, ispravak će biti objavljen u najkraćem mogućem roku.</p>
+          <p><strong>5. Autorska prava i korištenje</strong><br>
+          Svi objavljeni dokumenti, analize i forenzički materijali dostupni su za javnu upotrebu u svrhu zaštite okoliša, zdravlja i javnog interesa. Molimo da prilikom korištenja sadržaja obavezno navedete izvor (link na ovu stranicu ili GitHub repozitorij).</p>
+          <p><strong>6. Vanjski linkovi</strong><br>
+          Ova stranica sadrži linkove na vanjske web stranice (npr. službene registre, medijske portale, GitHub). Autor ne kontrolira sadržaj tih stranica i ne preuzima odgovornost za njihov sadržaj.</p>
+          <p>© 2026 @BajteBrothers / Dosje Koromačno. Sva prava pridržana. Materijali objavljeni na ovoj stranici dostupni su za osobnu, nekomercijalnu i edukativnu upotrebu. U javnoj uporabi obavezno navedite izvor: „Dosje Koromačno, https://zeljk018bratic.github.io/dosje-koromacno/”. Komercijalna uporaba, masovno umnožavanje ili objavljivanje bez prethodnog pisanog odobrenja nije dopušteno.</p>
+          <p style="margin-bottom:0;font-size:12px;color:#a7adb8"><em>Posljednje ažuriranje: 2. 11. 2026.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+        function setLang(lang) {
+            document.querySelectorAll('.lang-section').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            var target = document.getElementById('lang-' + lang);
+            if (target) {
+                target.classList.add('active');
+            }
+            document.querySelectorAll('.lang-btn').forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            var activeBtn = document.querySelector('.lang-btn[onclick="setLang(\'' + lang + '\')"]');
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+            }
+            document.documentElement.lang = lang;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!document.querySelector('.lang-section.active')) {
+                var hr = document.getElementById('lang-hr');
+                if (hr) hr.classList.add('active');
+                var btn = document.querySelector('.lang-btn[onclick="setLang(\'hr\')"]');
+                if (btn) btn.classList.add('active');
+            }
+        });
+    </script>
+
+</body>
+</html>
