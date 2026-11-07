@@ -27,10 +27,12 @@
         }
         a { color: var(--neon); text-decoration: none; }
         a:hover { text-decoration: underline; }
+        
+        /* ISPRAVLJENO ZAGLAVLJE */
         .header {
             background: linear-gradient(180deg, #0f172a 0%, #0a0e14 100%);
             border-bottom: 1px solid var(--border);
-            padding: 28px 20px 22px;
+            padding: 12px 20px 10px;
             text-align: center;
             position: relative;
         }
@@ -39,20 +41,21 @@
             color: var(--neon);
             letter-spacing: 1px;
             font-weight: 700;
-            margin-bottom: 6px;
+            margin-bottom: 2px;
         }
         .header .sub {
             color: var(--alert);
-            font-size: 0.85rem;
-            letter-spacing: 2px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            margin-bottom: 18px;
+            margin-bottom: 8px;
         }
         .lang-nav {
             display: flex;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
+            margin-bottom: 10px;
         }
         .lang-btn {
             background: transparent;
@@ -69,14 +72,15 @@
             color: var(--neon);
             background: rgba(0,255,204,0.08);
         }
-        /* NEW: site navigation */
+        
+        /* ISPRAVLJENA NAVIGACIJA */
         .site-nav {
             display: flex;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
-            margin-top: 16px;
-            padding-top: 14px;
+            margin-top: 8px;
+            padding-top: 8px;
             border-top: 1px solid var(--border);
         }
         .site-nav a {
@@ -101,7 +105,7 @@
         .site-nav a.alert:hover {
             background: rgba(255,51,102,0.10);
         }
-        /* NEW: inline links in text */
+        
         .card a.inline-link {
             color: var(--neon);
             border-bottom: 1px dotted rgba(0,255,204,0.55);
@@ -111,7 +115,7 @@
             border-bottom-style: solid;
             text-decoration: none;
         }
-        /* NEW: related button row */
+        
         .related {
             display: flex;
             flex-wrap: wrap;
@@ -141,20 +145,24 @@
         .related a.alert:hover {
             background: rgba(255,51,102,0.10);
         }
+        
+        /* ISPRAVLJEN KONTEJNER I SLIKA */
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 30px 18px 60px;
+            padding: 10px 18px 60px;
         }
         .hero-img {
             width: 100%;
-            max-height: 420px;
+            height: auto;
+            max-height: 800px; /* Povećano da se vidi cijela slika */
             object-fit: cover;
             border-radius: 6px;
             border: 1px solid var(--border);
-            margin-bottom: 55px;
+            margin-bottom: 25px;
             display: block;
         }
+        
         .card {
             background: var(--panel);
             border: 1px solid var(--border);
