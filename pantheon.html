@@ -41,6 +41,40 @@
             color: var(--muted-text);
             font-size: 1.1rem;
         }
+        /* --- NEW: site navigation --- */
+        .site-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 1.25rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border-color);
+        }
+        .site-nav a {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--muted-text);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+            transition: all 0.2s;
+        }
+        .site-nav a:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            background: rgba(56,189,248,0.08);
+        }
+        .site-nav a.alert {
+            color: var(--accent-red);
+            border-color: var(--accent-red);
+        }
+        .site-nav a.alert:hover {
+            background: rgba(239,68,68,0.10);
+        }
+        /* --- existing styles --- */
         .forensic-box {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -112,6 +146,13 @@
         <header>
             <h1>Projekt PANTHEON: Analiza ugroze vodonosnika</h1>
             <p class="subtitle">Nezavisna tehničko-pravna provjera lokacije i korporativnih parametara</p>
+
+            <!-- NEW: site navigation -->
+            <nav class="site-nav">
+                <a href="index.html">Početna</a>
+                <a href="brevik_kodeco.html">Brevik vs KOdeCO</a>
+                <a href="pantheon.html" class="alert">Pantheon / KOdeCO dosje</a>
+            </nav>
         </header>
 
         <div class="alert-banner">
@@ -130,9 +171,9 @@
         </div>
 
         <div class="btn-container">
-            <a href="https://github.io" class="btn-nav">🏠 Povratak na Dosje Koromačno</a>
-            <a href="https://github.io" class="btn-nav">⚡ Energetska analiza</a>
-            <a href="https://github.io" class="btn-nav btn-spiegel">📖 Slučaj braće Spiegel: Asimetrija odgovornosti AI-ja</a>
+            <a href="brevik_kodeco.html" class="btn-nav">🏠 Povratak na Dosje Koromačno</a>
+            <a href="brevik_kodeco.html#energija" class="btn-nav">⚡ Energetska analiza</a>
+            <a href="brevik_kodeco.html#spiegel" class="btn-nav btn-spiegel">📖 Slučaj braće Spiegel: Asimetrija odgovornosti AI-ja</a>
         </div>
 
         <footer>

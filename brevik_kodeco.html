@@ -69,6 +69,78 @@
             color: var(--neon);
             background: rgba(0,255,204,0.08);
         }
+        /* NEW: site navigation */
+        .site-nav {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border);
+        }
+        .site-nav a {
+            border: 1px solid var(--border);
+            color: var(--muted);
+            padding: 6px 14px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+        }
+        .site-nav a:hover {
+            border-color: var(--neon);
+            color: var(--neon);
+            background: rgba(0,255,204,0.08);
+            text-decoration: none;
+        }
+        .site-nav a.alert {
+            border-color: var(--alert);
+            color: var(--alert);
+        }
+        .site-nav a.alert:hover {
+            background: rgba(255,51,102,0.10);
+        }
+        /* NEW: inline links in text */
+        .card a.inline-link {
+            color: var(--neon);
+            border-bottom: 1px dotted rgba(0,255,204,0.55);
+            text-decoration: none;
+        }
+        .card a.inline-link:hover {
+            border-bottom-style: solid;
+            text-decoration: none;
+        }
+        /* NEW: related button row */
+        .related {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px dashed rgba(0,255,204,0.25);
+        }
+        .related a {
+            font-size: 0.78rem;
+            padding: 5px 12px;
+            border: 1px solid var(--neon);
+            border-radius: 3px;
+            color: var(--neon);
+            text-decoration: none;
+            letter-spacing: 0.4px;
+            transition: background 0.2s;
+        }
+        .related a:hover {
+            background: rgba(0,255,204,0.10);
+            text-decoration: none;
+        }
+        .related a.alert {
+            border-color: var(--alert);
+            color: var(--alert);
+        }
+        .related a.alert:hover {
+            background: rgba(255,51,102,0.10);
+        }
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -202,6 +274,11 @@
         <button class="lang-btn" onclick="setLang('de')">DE</button>
         <button class="lang-btn" onclick="setLang('it')">IT</button>
     </div>
+    <nav class="site-nav">
+        <a href="index.html">Početna</a>
+        <a href="brevik_kodeco.html">Brevik vs KOdeCO</a>
+        <a href="pantheon.html" class="alert">Pantheon / KOdeCO dosje</a>
+    </nav>
 </div>
 
 <div class="container">
@@ -231,9 +308,12 @@
                 </div>
                 <div>
                     <span class="tag tag-alert">HRVATSKA</span>
-                    <strong>KOdeCO</strong> (Holcim Koromačno)<br>
+                    <a href="pantheon.html" class="inline-link"><strong>KOdeCO</strong></a> (Holcim Koromačno)<br>
                     <span class="muted">Kriogena tehnologija (Cryocap™) • planirani start 2030. • Kvarnerski zaljev</span>
                 </div>
+            </div>
+            <div class="related">
+                <a href="pantheon.html" class="alert">KOdeCO dosje — detalji →</a>
             </div>
         </div>
 
@@ -242,10 +322,13 @@
             <p>Prema nezavisnim analizama i medijskim istraživanjima (uključujući izvješća iz 2026.), postrojenje u Breviku u prvoj godini rada postiglo je značajno nižu stopu hvatanja CO₂ od planiranih vrijednosti. Umjesto ciljane redukcije od oko 50 % (≈ 400.000 t/god), stvarna redukcija u dijelovima razdoblja kretala se oko 15 %.</p>
             <p class="muted">Izvori: javno dostupna istraživanja (Spiegel, Carbon Commentary i dr.). Operateri i nadležna tijela mogu imati drugačije interpretacije ili kasnije korekcije podataka.</p>
             <p>Za KOdeCO još nema operativnih podataka (planirani start 2030.). Stoga se pitanja o dugoročnoj pouzdanosti postavljaju na temelju iskustava sličnih projekata i tehničke literature.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">KOdeCO — tehnologija i rokovi →</a>
+            </div>
         </div>
 
         <div class="card card-neon">
-            <h2>3. Lokalni rizici — Koromačno i Kvarnerski zaljev</h2>
+            <h2>3. Lokalni rizici — <a href="pantheon/pantheon.html" class="inline-link">Koromačno i Kvarnerski zaljev</a></h2>
             <h3>3.1 Topografija i moguće „jezero“ CO₂</h3>
             <p>Postrojenje se nalazi u uskom zaljevu, u topografskoj depresiji, neposredno uz stambene i turističke objekte. CO₂ je teži od zraka. U scenarijima velikog curenja (tehnički kvar, hladno odzračivanje) plin se može zadržati uz tlo i površinu mora, istiskujući kisik. Ovo je standardna fizička karakteristika CO₂ i predmet je sigurnosnih analiza u svim CCS projektima blizu naselja.</p>
 
@@ -254,13 +337,19 @@
 
             <h3>3.3 Transport tankera</h3>
             <p>Budući da Hrvatska nema pogodna kopnena skladišta, ukapljeni CO₂ planira se prevoziti brodovima. Kvarnerski zaljev poznat je po snažnim i naglim burama. Rizik od incidenata u uskim plovnim putovima dio je standardne logističke procjene rizika.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Lokalni rizici — KOdeCO dosje →</a>
+            </div>
         </div>
 
         <div class="card card-warn">
-            <h2>4. Suspaljivanje otpada i monitoring emisija</h2>
+            <h2>4. <a href="pantheon.html" class="inline-link">Ssupaljivanje otpada i monitoring emisija</a></h2>
             <p>Cementare diljem Europe godinama koriste alternativna goriva (RDF/SRF, gume, plastični otpad, mulj). To smanjuje potrošnju fosilnih goriva, ali mijenja profil emisija (klor, teški metali, organske tvari).</p>
             <p>Kritičari ističu da se dioksini, furani i neki teški metali često mjere samo periodično (npr. 1–2 puta godišnje), dok se NOx, SO₂ i prašina kontinuirano prate. Negativne vrijednosti na automatskim mjernim stanicama (AMS) mogu ukazivati na pomak nulte točke senzora ili potrebu za baždarenjem — poznata tehnička pojava, a ne nužno dokaz manipulacije.</p>
             <p class="muted">Javni podaci o mjerenjima i zapisnici radnih skupina dostupni su putem lokalnih institucija i građanskih inicijativa. Transparentnost i frekvencija mjerenja ostaju predmet javne rasprave.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Monitoring i emisije — detalji →</a>
+            </div>
         </div>
 
         <div class="card card-neon">
@@ -313,18 +402,24 @@
                 </tbody>
             </table>
             <p class="src">Napomena: Brojke su približne i temelje se na javnim izvorima. Operativni podaci mogu se mijenjati.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Kontekst podataka — KOdeCO dosje →</a>
+            </div>
         </div>
 
         <div class="card card-neon">
             <h2>7. Mogući institucionalni kanali (EU)</h2>
             <p>Građani i organizacije imaju na raspolaganju formalne mehanizme:</p>
             <ul>
-                <li>Pritužba DG Environment (kršenje IED / Air Quality Directive)</li>
+                <li>Pritružba DG Environment (kršenje IED / Air Quality Directive)</li>
                 <li>Europski ombudsman (postupak o dodjeli sredstava)</li>
                 <li>Odbor za peticije Europskog parlamenta (PETI)</li>
                 <li>OLAF — u slučaju sumnje na zlouporabu sredstava (zahtijeva konkretne dokaze)</li>
             </ul>
             <p class="muted">Postojanje ovih kanala ne znači da je prekršaj utvrđen. Oni postoje upravo zato da se sumnje mogu provjeriti na transparentan način.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Institucionalni kanali — detalji →</a>
+            </div>
         </div>
 
         <div class="disclaimer">
@@ -363,9 +458,12 @@
                 </div>
                 <div>
                     <span class="tag tag-alert">CROATIA</span>
-                    <strong>KOdeCO</strong> (Holcim Koromačno)<br>
+                    <a href="pantheon.html" class="inline-link"><strong>KOdeCO</strong></a> (Holcim Koromačno)<br>
                     <span class="muted">Cryogenic technology (Cryocap™) • planned start 2030 • Kvarner Bay</span>
                 </div>
+            </div>
+            <div class="related">
+                <a href="pantheon.html" class="alert">KOdeCO dossier — details →</a>
             </div>
         </div>
 
@@ -374,10 +472,13 @@
             <p>According to independent analyses and investigative reporting (including 2026 sources), the Brevik plant achieved significantly lower CO₂ capture rates in its first year of operation than planned. Instead of the targeted ≈50 % reduction (≈400,000 t/year), actual reduction in parts of the period was around 15 %.</p>
             <p class="muted">Sources: publicly available investigations (Spiegel, Carbon Commentary et al.). Operators and authorities may hold different interpretations or later data corrections.</p>
             <p>KOdeCO has no operational data yet (planned start 2030). Questions about long-term reliability are therefore raised on the basis of experience from similar projects and technical literature.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">KOdeCO — technology & timeline →</a>
+            </div>
         </div>
 
         <div class="card card-neon">
-            <h2>3. Local risks — Koromačno and Kvarner Bay</h2>
+            <h2>3. Local risks — <a href="pantheon.html" class="inline-link">Koromačno and Kvarner Bay</a></h2>
             <h3>3.1 Topography and potential CO₂ “lake”</h3>
             <p>The plant sits in a narrow bay, in a topographic depression, immediately adjacent to residential and tourist buildings. CO₂ is heavier than air. In large-leak scenarios (technical failure, cold venting) the gas can pool near the ground and water surface, displacing oxygen. This is a standard physical characteristic of CO₂ and is addressed in safety analyses of all CCS projects near settlements.</p>
 
@@ -386,13 +487,19 @@
 
             <h3>3.3 Tanker transport</h3>
             <p>Because Croatia lacks suitable onshore storage, liquefied CO₂ is planned to be shipped. The Kvarner Bay is known for sudden, strong Bora winds. Accident risk in narrow fairways forms part of standard logistics risk assessment.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Local risks — KOdeCO dossier →</a>
+            </div>
         </div>
 
         <div class="card card-warn">
-            <h2>4. Co-incineration of waste and emission monitoring</h2>
+            <h2>4. <a href="pantheon.html" class="inline-link">Co-incineration of waste and emission monitoring</a></h2>
             <p>Cement plants across Europe have for years used alternative fuels (RDF/SRF, tyres, plastic waste, sludge). This reduces fossil fuel consumption but changes the emission profile (chlorine, heavy metals, organic compounds).</p>
             <p>Critics note that dioxins, furans and certain heavy metals are often measured only periodically (e.g. 1–2 times per year), while NOx, SO₂ and dust are continuously monitored. Negative values on automatic measuring stations (AMS) can indicate zero-point drift of sensors or the need for calibration — a known technical phenomenon, not necessarily evidence of manipulation.</p>
             <p class="muted">Public measurement data and minutes of working groups are available through local institutions and citizens’ initiatives. Transparency and measurement frequency remain subjects of public debate.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Monitoring & emissions — details →</a>
+            </div>
         </div>
 
         <div class="card card-neon">
@@ -445,6 +552,9 @@
                 </tbody>
             </table>
             <p class="src">Note: Figures are approximate and based on public sources. Operational data may change.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Data context — KOdeCO dossier →</a>
+            </div>
         </div>
 
         <div class="card card-neon">
@@ -457,6 +567,9 @@
                 <li>OLAF — in case of suspected misuse of funds (requires concrete evidence)</li>
             </ul>
             <p class="muted">The existence of these channels does not mean an infringement has been established. They exist precisely so that concerns can be examined transparently.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Institutional channels — details →</a>
+            </div>
         </div>
 
         <div class="disclaimer">
@@ -495,9 +608,12 @@
                 </div>
                 <div>
                     <span class="tag tag-alert">KROATIEN</span>
-                    <strong>KOdeCO</strong> (Holcim Koromačno)<br>
+                    <a href="pantheon/pantheon.html" class="inline-link"><strong>KOdeCO</strong></a> (Holcim Koromačno)<br>
                     <span class="muted">Kryogene Technologie (Cryocap™) • geplanter Start 2030 • Kvarner-Bucht</span>
                 </div>
+            </div>
+            <div class="related">
+                <a href="pantheon.html" class="alert">KOdeCO-Dossier — Details →</a>
             </div>
         </div>
 
@@ -506,10 +622,13 @@
             <p>Laut unabhängigen Analysen und investigativen Berichten (einschließlich Quellen aus 2026) erreichte die Anlage in Brevik im ersten Betriebsjahr deutlich niedrigere CO₂-Abscheidungsraten als geplant. Statt der angestrebten ≈50 % Reduktion (≈400.000 t/Jahr) lag die tatsächliche Reduktion in Teilen des Zeitraums bei rund 15 %.</p>
             <p class="muted">Quellen: öffentlich zugängliche Recherchen (Spiegel, Carbon Commentary u. a.). Betreiber und Behörden können andere Interpretationen oder spätere Datenkorrekturen haben.</p>
             <p>Für KOdeCO liegen noch keine Betriebsdaten vor (geplanter Start 2030). Fragen zur langfristigen Zuverlässigkeit werden daher auf Basis von Erfahrungen mit ähnlichen Projekten und der technischen Literatur gestellt.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">KOdeCO — Technologie & Zeitplan →</a>
+            </div>
         </div>
 
         <div class="card card-neon">
-            <h2>3. Lokale Risiken — Koromačno und Kvarner-Bucht</h2>
+            <h2>3. Lokale Risiken — <a href="pantheon.html" class="inline-link">Koromačno und Kvarner-Bucht</a></h2>
             <h3>3.1 Topografie und möglicher CO₂-„See“</h3>
             <p>Die Anlage liegt in einer engen Bucht, in einer topografischen Senke, unmittelbar neben Wohn- und Tourismusgebäuden. CO₂ ist schwerer als Luft. Bei großen Leckage-Szenarien (technischer Defekt, Kaltentlüftung) kann sich das Gas am Boden und über der Wasseroberfläche ansammeln und Sauerstoff verdrängen. Dies ist eine standardmäßige physikalische Eigenschaft von CO₂ und Gegenstand von Sicherheitsanalysen bei allen CCS-Projekten in der Nähe von Siedlungen.</p>
 
@@ -518,13 +637,19 @@
 
             <h3>3.3 Tankertransport</h3>
             <p>Da Kroatien über keine geeigneten Onshore-Speicher verfügt, soll verflüssigtes CO₂ per Schiff transportiert werden. Die Kvarner-Bucht ist bekannt für plötzliche, starke Bora-Winde. Unfallrisiken in engen Fahrwassern sind Teil der standardmäßigen logistischen Risikobewertung.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Lokale Risiken — KOdeCO-Dossier →</a>
+            </div>
         </div>
 
         <div class="card card-warn">
-            <h2>4. Mitverbrennung von Abfällen und Emissionsüberwachung</h2>
+            <h2>4. <a href="pantheon.html" class="inline-link">Mitverbrennung von Abfällen und Emissionsüberwachung</a></h2>
             <p>Zementwerke in ganz Europa nutzen seit Jahren alternative Brennstoffe (RDF/SRF, Reifen, Kunststoffabfälle, Schlamm). Das reduziert den Verbrauch fossiler Brennstoffe, verändert aber das Emissionsprofil (Chlor, Schwermetalle, organische Verbindungen).</p>
             <p>Kritiker weisen darauf hin, dass Dioxine, Furane und bestimmte Schwermetalle oft nur periodisch gemessen werden (z. B. 1–2 Mal pro Jahr), während NOx, SO₂ und Staub kontinuierlich überwacht werden. Negative Werte an automatischen Messstationen (AMS) können auf eine Nullpunktverschiebung der Sensoren oder den Bedarf an Kalibrierung hinweisen — ein bekanntes technisches Phänomen, nicht zwingend ein Beweis für Manipulation.</p>
             <p class="muted">Öffentliche Messdaten und Protokolle von Arbeitsgruppen sind über lokale Institutionen und Bürgerinitiativen verfügbar. Transparenz und Messhäufigkeit bleiben Gegenstand der öffentlichen Debatte.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Monitoring & Emissionen — Details →</a>
+            </div>
         </div>
 
         <div class="card card-neon">
@@ -577,6 +702,9 @@
                 </tbody>
             </table>
             <p class="src">Hinweis: Zahlen sind Näherungswerte und basieren auf öffentlichen Quellen. Betriebsdaten können sich ändern.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Datenkontext — KOdeCO-Dossier →</a>
+            </div>
         </div>
 
         <div class="card card-neon">
@@ -589,6 +717,9 @@
                 <li>OLAF — bei Verdacht auf Mittelmissbrauch (erfordert konkrete Beweise)</li>
             </ul>
             <p class="muted">Das Vorhandensein dieser Kanäle bedeutet nicht, dass ein Verstoß festgestellt wurde. Sie existieren gerade deshalb, damit Bedenken transparent geprüft werden können.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Institutionelle Kanäle — Details →</a>
+            </div>
         </div>
 
         <div class="disclaimer">
@@ -627,9 +758,12 @@
                 </div>
                 <div>
                     <span class="tag tag-alert">CROAZIA</span>
-                    <strong>KOdeCO</strong> (Holcim Koromačno)<br>
+                    <a href="pantheon.html" class="inline-link"><strong>KOdeCO</strong></a> (Holcim Koromačno)<br>
                     <span class="muted">Tecnologia criogenica (Cryocap™) • avvio previsto 2030 • Golfo del Quarnero</span>
                 </div>
+            </div>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Dossier KOdeCO — dettagli →</a>
             </div>
         </div>
 
@@ -638,10 +772,13 @@
             <p>Secondo analisi indipendenti e inchieste giornalistiche (incluse fonti del 2026), l’impianto di Brevik ha raggiunto nel primo anno di attività tassi di cattura della CO₂ significativamente inferiori a quelli pianificati. Invece della riduzione prevista di ≈50 % (≈400.000 t/anno), la riduzione effettiva in parti del periodo è stata intorno al 15 %.</p>
             <p class="muted">Fonti: indagini pubblicamente disponibili (Spiegel, Carbon Commentary ecc.). Operatori e autorità possono avere interpretazioni diverse o successive correzioni dei dati.</p>
             <p>Per KOdeCO non esistono ancora dati operativi (avvio previsto 2030). Le domande sull’affidabilità a lungo termine vengono quindi poste sulla base dell’esperienza di progetti simili e della letteratura tecnica.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">KOdeCO — tecnologia e tempistiche →</a>
+            </div>
         </div>
 
         <div class="card card-neon">
-            <h2>3. Rischi locali — Koromačno e Golfo del Quarnero</h2>
+            <h2>3. Rischi locali — <a href="pantheon.html" class="inline-link">Koromačno e Golfo del Quarnero</a></h2>
             <h3>3.1 Topografia e possibile “lago” di CO₂</h3>
             <p>L’impianto si trova in una baia stretta, in una depressione topografica, immediatamente adiacente a edifici residenziali e turistici. La CO₂ è più pesante dell’aria. In scenari di grandi perdite (guasto tecnico, sfiato a freddo) il gas può accumularsi vicino al suolo e alla superficie dell’acqua, spostando l’ossigeno. Questa è una caratteristica fisica standard della CO₂ ed è oggetto di analisi di sicurezza in tutti i progetti CCS vicini agli insediamenti.</p>
 
@@ -650,13 +787,19 @@
 
             <h3>3.3 Trasporto con navi cisterna</h3>
             <p>Poiché la Croazia non dispone di idonei stoccaggi a terra, la CO₂ liquefatta è prevista per il trasporto via nave. Il Golfo del Quarnero è noto per i venti di Bora improvvisi e forti. Il rischio di incidenti in canali stretti fa parte della valutazione standard del rischio logistico.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Rischi locali — dossier KOdeCO →</a>
+            </div>
         </div>
 
         <div class="card card-warn">
-            <h2>4. Co-incenerimento dei rifiuti e monitoraggio delle emissioni</h2>
+            <h2>4. <a href="pantheon.html" class="inline-link">Co-incenerimento dei rifiuti e monitoraggio delle emissioni</a></h2>
             <p>Gli impianti di cemento in tutta Europa utilizzano da anni combustibili alternativi (RDF/SRF, pneumatici, rifiuti plastici, fanghi). Ciò riduce il consumo di combustibili fossili ma modifica il profilo delle emissioni (cloro, metalli pesanti, composti organici).</p>
             <p>I critici osservano che diossine, furani e alcuni metalli pesanti vengono spesso misurati solo periodicamente (es. 1–2 volte all’anno), mentre NOx, SO₂ e polveri sono monitorati in continuo. Valori negativi sulle stazioni di misura automatiche (AMS) possono indicare uno spostamento del punto zero dei sensori o la necessità di calibrazione — un fenomeno tecnico noto, non necessariamente prova di manipolazione.</p>
             <p class="muted">I dati pubblici di misurazione e i verbali dei gruppi di lavoro sono disponibili tramite istituzioni locali e iniziative cittadine. Trasparenza e frequenza delle misurazioni restano oggetto di dibattito pubblico.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Monitoraggio ed emissioni — dettagli →</a>
+            </div>
         </div>
 
         <div class="card card-neon">
@@ -709,6 +852,9 @@
                 </tbody>
             </table>
             <p class="src">Nota: I numeri sono approssimativi e basati su fonti pubbliche. I dati operativi possono cambiare.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Contesto dei dati — dossier KOdeCO →</a>
+            </div>
         </div>
 
         <div class="card card-neon">
@@ -721,6 +867,9 @@
                 <li>OLAF — in caso di sospetto di uso improprio di fondi (richiede prove concrete)</li>
             </ul>
             <p class="muted">L’esistenza di questi canali non significa che sia stata accertata una violazione. Esistono proprio affinché le preoccupazioni possano essere esaminate in modo trasparente.</p>
+            <div class="related">
+                <a href="pantheon.html" class="alert">Canali istituzionali — dettagli →</a>
+            </div>
         </div>
 
         <div class="disclaimer">
