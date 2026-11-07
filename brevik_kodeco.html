@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOdeCO Analytical Dossier | Brevik vs Koromačno — Critical Review</title>
+    <meta name="description" content="Independent analytical overview of CCS projects Brevik (Norway) and KOdeCO (Croatia). Local risks, technological performance data, monitoring questions and public-interest context. Based on publicly available sources.">
+    <style>
+        :root {
+            --bg: #0a0e14;
+            --panel: #111827;
+            --border: #1e293b;
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --neon: #00ffcc;
+            --alert: #ff3366;
+            --warn: #f59e0b;
+            --code: #0f172a;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            font-size: 16px;
+        }
+        a { color: var(--neon); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .header {
+            background: linear-gradient(180deg, #0f172a 0%, #0a0e14 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 28px 20px 22px;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 {
+            font-size: clamp(1.4rem, 4vw, 2.1rem);
+            color: var(--neon);
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .header .sub {
+            color: var(--alert);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .lang-nav {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--muted);
+            padding: 6px 14px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+        .lang-btn.active, .lang-btn:hover {
+            border-color: var(--neon);
+            color: var(--neon);
+            background: rgba(0,255,204,0.08);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 18px 60px;
+        }
+        .hero-img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            margin-bottom: 28px;
+            display: block;
+        }
+        .card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 24px 26px;
+            margin-bottom: 22px;
+        }
+        .card-neon { border-left: 4px solid var(--neon); }
+        .card-alert { border-left: 4px solid var(--alert); }
+        .card-warn { border-left: 4px solid var(--warn); }
+        h2 {
+            color: var(--neon);
+            font-size: 1.25rem;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed rgba(0,255,204,0.25);
+        }
+        h3 {
+            color: var(--alert);
+            font-size: 1.05rem;
+            margin: 18px 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        p { margin-bottom: 12px; color: var(--text); }
+        ul, ol { margin: 10px 0 14px 22px; }
+        li { margin-bottom: 7px; }
+        .muted { color: var(--muted); font-size: 0.92rem; }
+        .disclaimer {
+            background: rgba(255,51,102,0.06);
+            border: 1px solid rgba(255,51,102,0.35);
+            padding: 16px 18px;
+            border-radius: 4px;
+            font-size: 0.88rem;
+            color: var(--muted);
+            margin: 20px 0;
+        }
+        .disclaimer strong { color: var(--alert); }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0;
+            font-size: 0.9rem;
+        }
+        th, td {
+            border: 1px solid var(--border);
+            padding: 10px 12px;
+            text-align: left;
+        }
+        th {
+            background: var(--code);
+            color: var(--neon);
+            font-weight: 600;
+        }
+        tr:nth-child(even) { background: rgba(15,23,42,0.5); }
+        .tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-right: 6px;
+            letter-spacing: 0.5px;
+        }
+        .tag-neon { background: rgba(0,255,204,0.15); color: var(--neon); border: 1px solid rgba(0,255,204,0.3); }
+        .tag-alert { background: rgba(255,51,102,0.12); color: var(--alert); border: 1px solid rgba(255,51,102,0.3); }
+        .footer {
+            text-align: center;
+            padding: 36px 20px;
+            color: var(--muted);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+        .section-lang { display: none; }
+        .section-lang.active { display: block; }
+        .quote {
+            border-left: 3px solid var(--neon);
+            padding: 10px 16px;
+            margin: 16px 0;
+            background: rgba(0,255,204,0.04);
+            font-style: italic;
+            color: #cbd5e1;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+        @media (max-width: 780px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+        .src {
+            font-size: 0.78rem;
+            color: var(--muted);
+            margin-top: 8px;
+        }
+        code {
+            background: var(--code);
+            padding: 1px 5px;
+            border-radius: 3px;
+            font-size: 0.88em;
+            color: var(--neon);
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="sub">Public Interest Analytical Dossier // Open Source</div>
+    <h1>BREVIK vs KOdeCO</h1>
+    <div style="color:var(--muted);font-size:0.95rem;margin-bottom:16px;">
+        Carbon Capture & Storage in the Cement Industry — Risk Profiles, Performance Data & Local Context
+    </div>
+    <div class="lang-nav">
+        <button class="lang-btn active" onclick="setLang('hr')">HR</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('de')">DE</button>
+        <button class="lang-btn" onclick="setLang('it')">IT</button>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- ===================== HRVATSKI ===================== -->
+    <div id="lang-hr" class="section-lang active">
+
+        <img src="githubtalkforus4.png" alt="Visual metaphor — data, industrial landscape, silence" class="hero-img">
+
+        <div class="disclaimer">
+            <strong>Napomena o sadržaju:</strong> Ova stranica je informativnog karaktera i služi javnom interesu (zaštita okoliša, zdravlje, transparentnost). Tekst se temelji isključivo na javno dostupnim dokumentima, medijskim izvješćima i znanstvenim/analitičkim izvorima. Ne sadrži optužbe za kaznena djela. Sve tvrdnje o rizikima predstavljene su kao pitanja, zabrinutosti i nalazi trećih strana. Autor ne tvrdi da je bilo koja tvrtka ili institucija počinila prekršaj. Za pravne, medicinske ili investicijske odluke obratite se kvalificiranim stručnjacima.
+        </div>
+
+        <div class="card card-neon">
+            <h2>1. Dva projekta, dva konteksta</h2>
+            <p>U raspravama o CCS (Carbon Capture and Storage) tehnologiji u cementnoj industriji korisno je razlikovati:</p>
+            <ul>
+                <li><strong>Lokalne rizike</strong> na licu mjesta (zdravlje, ekosustav, sigurnost naselja)</li>
+                <li><strong>Tehnološku pouzdanost</strong> i stvarnu učinkovitost hvatanja CO₂</li>
+            </ul>
+            <p>Dva referentna projekta:</p>
+            <div class="grid-2">
+                <div>
+                    <span class="tag tag-neon">NORVEŠKA</span>
+                    <strong>Brevik CCS</strong> (Heidelberg Materials)<br>
+                    <span class="muted">Amin-proces • Northern Lights skladištenje • rad od 2025.</span>
+                </div>
+                <div>
+                    <span class="tag tag-alert">HRVATSKA</span>
+                    <strong>KOdeCO</strong> (Holcim Koromačno)<br>
+                    <span class="muted">Kriogena tehnologija (Cryocap™) • planirani start 2030. • Kvarnerski zaljev</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-alert">
+            <h2>2. Tehnološka učinkovitost — što kažu dostupni podaci</h2>
+            <p>Prema nezavisnim analizama i medijskim istraživanjima (uključujući izvješća iz 2026.), postrojenje u Breviku u prvoj godini rada postiglo je značajno nižu stopu hvatanja CO₂ od planiranih vrijednosti. Umjesto ciljane redukcije od oko 50 % (≈ 400.000 t/god), stvarna redukcija u dijelovima razdoblja kretala se oko 15 %.</p>
+            <p class="muted">Izvori: javno dostupna istraživanja (Spiegel, Carbon Commentary i dr.). Operateri i nadležna tijela mogu imati drugačije interpretacije ili kasnije korekcije podataka.</p>
+            <p>Za KOdeCO još nema operativnih podataka (planirani start 2030.). Stoga se pitanja o dugoročnoj pouzdanosti postavljaju na temelju iskustava sličnih projekata i tehničke literature.</p>
+        </div>
+
+        <div class="card card-neon">
+            <h2>3. Lokalni rizici — Koromačno i Kvarnerski zaljev</h2>
+            <h3>3.1 Topografija i moguće „jezero“ CO₂</h3>
+            <p>Postrojenje se nalazi u uskom zaljevu, u topografskoj depresiji, neposredno uz stambene i turističke objekte. CO₂ je teži od zraka. U scenarijima velikog curenja (tehnički kvar, hladno odzračivanje) plin se može zadržati uz tlo i površinu mora, istiskujući kisik. Ovo je standardna fizička karakteristika CO₂ i predmet je sigurnosnih analiza u svim CCS projektima blizu naselja.</p>
+
+            <h3>3.2 Hlađenje i desalinizacija</h3>
+            <p>Projekt predviđa korištenje morske vode za hlađenje i desalinizaciju. Ispuštanje koncentrirane slane vode u zaljev s ograničenom cirkulacijom može lokalno povećati salinitet dna. Ekološke organizacije ističu potrebu za detaljnim modeliranjem i kontinuiranim monitoringom morskog ekosustava (mlađ, alge, bentos).</p>
+
+            <h3>3.3 Transport tankera</h3>
+            <p>Budući da Hrvatska nema pogodna kopnena skladišta, ukapljeni CO₂ planira se prevoziti brodovima. Kvarnerski zaljev poznat je po snažnim i naglim burama. Rizik od incidenata u uskim plovnim putovima dio je standardne logističke procjene rizika.</p>
+        </div>
+
+        <div class="card card-warn">
+            <h2>4. Suspaljivanje otpada i monitoring emisija</h2>
+            <p>Cementare diljem Europe godinama koriste alternativna goriva (RDF/SRF, gume, plastični otpad, mulj). To smanjuje potrošnju fosilnih goriva, ali mijenja profil emisija (klor, teški metali, organske tvari).</p>
+            <p>Kritičari ističu da se dioksini, furani i neki teški metali često mjere samo periodično (npr. 1–2 puta godišnje), dok se NOx, SO₂ i prašina kontinuirano prate. Negativne vrijednosti na automatskim mjernim stanicama (AMS) mogu ukazivati na pomak nulte točke senzora ili potrebu za baždarenjem — poznata tehnička pojava, a ne nužno dokaz manipulacije.</p>
+            <p class="muted">Javni podaci o mjerenjima i zapisnici radnih skupina dostupni su putem lokalnih institucija i građanskih inicijativa. Transparentnost i frekvencija mjerenja ostaju predmet javne rasprave.</p>
+        </div>
+
+        <div class="card card-neon">
+            <h2>5. Energetski i ekonomski kontekst</h2>
+            <p>Prema dostupnim procjenama utjecaja na okoliš, CCS postrojenje značajno povećava potrošnju električne energije (red veličine 150+ GWh/god). U regiji koja već uvozi značajan dio električne energije, to predstavlja dodatno opterećenje mreže i potencijalno više troškove za potrošače.</p>
+            <p>Sustav EU ETS i „zeleni“ certifikati stvaraju ekonomske poticaje. Različiti modeli (uključujući virtualne alokacije masa) omogućuju trgovanje kreditima. Pitanje stvarnog smanjenja emisija na mjestu potrošnje cementa ostaje predmet znanstvene i političke debate.</p>
+        </div>
+
+        <div class="card card-alert">
+            <h2>6. Usporedna tablica (javno dostupni podaci)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kriterij</th>
+                        <th>Brevik (Norveška)</th>
+                        <th>KOdeCO (Hrvatska)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tehnologija</td>
+                        <td>Amini (S26)</td>
+                        <td>Kriogena (Cryocap™ FG)</td>
+                    </tr>
+                    <tr>
+                        <td>Planirani kapacitet</td>
+                        <td>≈ 400.000 t CO₂/god</td>
+                        <td>≈ 367.000 t CO₂/god</td>
+                    </tr>
+                    <tr>
+                        <td>Stvarna učinkovitost (1. god.)</td>
+                        <td>Značajno ispod plana (≈ 15 % u dijelovima razdoblja)</td>
+                        <td>Još nije u radu (2030.)</td>
+                    </tr>
+                    <tr>
+                        <td>Javno financiranje</td>
+                        <td>> 1 mlrd EUR (norveški fondovi)</td>
+                        <td>≈ 116,9 mil. EUR (EU Innovation Fund)</td>
+                    </tr>
+                    <tr>
+                        <td>Glavni lokalni rizici (prema kritikama)</td>
+                        <td>Nitrosamini, ispušni sustav</td>
+                        <td>CO₂ u zaljevu, suspaljivanje, monitoring</td>
+                    </tr>
+                    <tr>
+                        <td>Lokalni otpor</td>
+                        <td>Umjeren</td>
+                        <td>Visok (prosvjedi, blokade, peticije)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="src">Napomena: Brojke su približne i temelje se na javnim izvorima. Operativni podaci mogu se mijenjati.</p>
+        </div>
+
+        <div class="card card-neon">
+            <h2>7. Mogući institucionalni kanali (EU)</h2>
+            <p>Građani i organizacije imaju na raspolaganju formalne mehanizme:</p>
+            <ul>
+                <li>Pritužba DG Environment (kršenje IED / Air Quality Directive)</li>
+                <li>Europski ombudsman (postupak o dodjeli sredstava)</li>
+                <li>Odbor za peticije Europskog parlamenta (PETI)</li>
+                <li>OLAF — u slučaju sumnje na zlouporabu sredstava (zahtijeva konkretne dokaze)</li>
+            </ul>
+            <p class="muted">Postojanje ovih kanala ne znači da je prekršaj utvrđen. Oni postoje upravo zato da se sumnje mogu provjeriti na transparentan način.</p>
+        </div>
+
+        <div class="disclaimer">
+            <strong>Pravna i etička napomena:</strong><br>
+            1. Sadržaj je informativan i u javnom interesu.<br>
+            2. Autor ne snosi odgovornost za štetu nastalu korištenjem ili tumačenjem informacija (izuzev namjere ili grube nepažnje).<br>
+            3. Pravo na ispravak: dosje.koromacno@proton.me<br>
+            4. Svi dokumenti i analize dostupni su za nekomercijalnu i edukativnu uporabu uz navođenje izvora.<br>
+            5. Ova stranica ne poziva na nezakonite radnje.
+        </div>
+
+    </div>
+
+    <!-- ===================== ENGLISH ===================== -->
+    <div id="lang-en" class="section-lang">
+
+        <img src="githubtalkforus1.png" alt="Visual metaphor — data, industrial landscape, silence" class="hero-img">
+
+        <div class="disclaimer">
+            <strong>Content notice:</strong> This page is informational and serves the public interest (environment, health, transparency). It is based exclusively on publicly available documents, media reports and analytical sources. It contains no accusations of criminal conduct. All risk statements are presented as questions, concerns and findings of third parties. The author does not claim that any company or institution has committed an offence. For legal, medical or investment decisions consult qualified professionals.
+        </div>
+
+        <div class="card card-neon">
+            <h2>1. Two projects, two contexts</h2>
+            <p>In discussions of CCS (Carbon Capture and Storage) in the cement industry it is useful to distinguish:</p>
+            <ul>
+                <li><strong>Local risks</strong> on site (health, ecosystem, settlement safety)</li>
+                <li><strong>Technological reliability</strong> and actual CO₂ capture performance</li>
+            </ul>
+            <p>Two reference projects:</p>
+            <div class="grid-2">
+                <div>
+                    <span class="tag tag-neon">NORWAY</span>
+                    <strong>Brevik CCS</strong> (Heidelberg Materials)<br>
+                    <span class="muted">Amine process • Northern Lights storage • operational from 2025</span>
+                </div>
+                <div>
+                    <span class="tag tag-alert">CROATIA</span>
+                    <strong>KOdeCO</strong> (Holcim Koromačno)<br>
+                    <span class="muted">Cryogenic technology (Cryocap™) • planned start 2030 • Kvarner Bay</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-alert">
+            <h2>2. Technological performance — available data</h2>
+            <p>According to independent analyses and investigative reporting (including 2026 sources), the Brevik plant achieved significantly lower CO₂ capture rates in its first year of operation than planned. Instead of the targeted ≈50 % reduction (≈400,000 t/year), actual reduction in parts of the period was around 15 %.</p>
+            <p class="muted">Sources: publicly available investigations (Spiegel, Carbon Commentary et al.). Operators and authorities may hold different interpretations or later data corrections.</p>
+            <p>KOdeCO has no operational data yet (planned start 2030). Questions about long-term reliability are therefore raised on the basis of experience from similar projects and technical literature.</p>
+        </div>
+
+        <div class="card card-neon">
+            <h2>3. Local risks — Koromačno and Kvarner Bay</h2>
+            <h3>3.1 Topography and potential CO₂ “lake”</h3>
+            <p>The plant sits in a narrow bay, in a topographic depression, immediately adjacent to residential and tourist buildings. CO₂ is heavier than air. In large-leak scenarios (technical failure, cold venting) the gas can pool near the ground and water surface, displacing oxygen. This is a standard physical characteristic of CO₂ and is addressed in safety analyses of all CCS projects near settlements.</p>
+
+            <h3>3.2 Cooling and desalination</h3>
+            <p>The project plans to use seawater for cooling and desalination. Discharge of concentrated brine into a bay with limited circulation may locally increase seabed salinity. Environmental organisations emphasise the need for detailed modelling and continuous monitoring of the marine ecosystem (fry, algae, benthos).</p>
+
+            <h3>3.3 Tanker transport</h3>
+            <p>Because Croatia lacks suitable onshore storage, liquefied CO₂ is planned to be shipped. The Kvarner Bay is known for sudden, strong Bora winds. Accident risk in narrow fairways forms part of standard logistics risk assessment.</p>
+        </div>
+
+        <div class="card card-warn">
+            <h2>4. Co-incineration of waste and emission monitoring</h2>
+            <p>Cement plants across Europe have for years used alternative fuels (RDF/SRF, tyres, plastic waste, sludge). This reduces fossil fuel consumption but changes the emission profile (chlorine, heavy metals, organic compounds).</p>
+            <p>Critics note that dioxins, furans and certain heavy metals are often measured only periodically (e.g. 1–2 times per year), while NOx, SO₂ and dust are continuously monitored. Negative values on automatic measuring stations (AMS) can indicate zero-point drift of sensors or the need for calibration — a known technical phenomenon, not necessarily evidence of manipulation.</p>
+            <p class="muted">Public measurement data and minutes of working groups are available through local institutions and citizens’ initiatives. Transparency and measurement frequency remain subjects of public debate.</p>
+        </div>
+
+        <div class="card card-neon">
+            <h2>5. Energy and economic context</h2>
+            <p>According to available environmental impact assessments, a CCS plant significantly increases electricity consumption (order of 150+ GWh/year). In a region that already imports a substantial share of its electricity this represents an additional grid load and potentially higher costs for consumers.</p>
+            <p>The EU ETS and “green” certificates create economic incentives. Different models (including virtual mass-balance allocation) allow credit trading. The question of actual emission reduction at the point of cement consumption remains a matter of scientific and policy debate.</p>
+        </div>
+
+        <div class="card card-alert">
+            <h2>6. Comparative table (publicly available data)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Criterion</th>
+                        <th>Brevik (Norway)</th>
+                        <th>KOdeCO (Croatia)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Technology</td>
+                        <td>Amines (S26)</td>
+                        <td>Cryogenic (Cryocap™ FG)</td>
+                    </tr>
+                    <tr>
+                        <td>Planned capacity</td>
+                        <td>≈ 400,000 t CO₂/yr</td>
+                        <td>≈ 367,000 t CO₂/yr</td>
+                    </tr>
+                    <tr>
+                        <td>Actual efficiency (1st year)</td>
+                        <td>Significantly below plan (≈15 % in parts of the period)</td>
+                        <td>Not yet operational (2030)</td>
+                    </tr>
+                    <tr>
+                        <td>Public funding</td>
+                        <td>> €1 bn (Norwegian funds)</td>
+                        <td>≈ €116.9 m (EU Innovation Fund)</td>
+                    </tr>
+                    <tr>
+                        <td>Main local risks (as raised by critics)</td>
+                        <td>Nitrosamines, exhaust system</td>
+                        <td>CO₂ in the bay, co-incineration, monitoring</td>
+                    </tr>
+                    <tr>
+                        <td>Local resistance</td>
+                        <td>Moderate</td>
+                        <td>High (protests, blockades, petitions)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="src">Note: Figures are approximate and based on public sources. Operational data may change.</p>
+        </div>
+
+        <div class="card card-neon">
+            <h2>7. Possible institutional channels (EU)</h2>
+            <p>Citizens and organisations have formal mechanisms available:</p>
+            <ul>
+                <li>Complaint to DG Environment (possible IED / Air Quality Directive issues)</li>
+                <li>European Ombudsman (procedure concerning fund allocation)</li>
+                <li>European Parliament Committee on Petitions (PETI)</li>
+                <li>OLAF — in case of suspected misuse of funds (requires concrete evidence)</li>
+            </ul>
+            <p class="muted">The existence of these channels does not mean an infringement has been established. They exist precisely so that concerns can be examined transparently.</p>
+        </div>
+
+        <div class="disclaimer">
+            <strong>Legal and ethical notice:</strong><br>
+            1. Content is informational and in the public interest.<br>
+            2. The author assumes no liability for damage arising from use or interpretation of the information (except intent or gross negligence).<br>
+            3. Right of rectification: dosje.koromacno@proton.me<br>
+            4. All documents and analyses are available for non-commercial and educational use with source citation.<br>
+            5. This page does not call for any unlawful action.
+        </div>
+
+    </div>
+
+    <!-- ===================== DEUTSCH ===================== -->
+    <div id="lang-de" class="section-lang">
+
+        <img src="githubtalkforus3.png" alt="Visuelle Metapher — Daten, Industrielandschaft, Stille" class="hero-img">
+
+        <div class="disclaimer">
+            <strong>Inhaltshinweis:</strong> Diese Seite dient der Information und dem öffentlichen Interesse (Umwelt, Gesundheit, Transparenz). Sie basiert ausschließlich auf öffentlich zugänglichen Dokumenten, Medienberichten und analytischen Quellen. Sie enthält keine Anschuldigungen strafbarer Handlungen. Alle Risikoaussagen werden als Fragen, Bedenken und Erkenntnisse Dritter dargestellt. Der Autor behauptet nicht, dass ein Unternehmen oder eine Institution eine Straftat begangen hat. Für rechtliche, medizinische oder investitionsbezogene Entscheidungen wenden Sie sich an qualifizierte Fachleute.
+        </div>
+
+        <div class="card card-neon">
+            <h2>1. Zwei Projekte, zwei Kontexte</h2>
+            <p>Bei der Diskussion über CCS (Carbon Capture and Storage) in der Zementindustrie ist es sinnvoll, zu unterscheiden zwischen:</p>
+            <ul>
+                <li><strong>Lokalen Risiken</strong> vor Ort (Gesundheit, Ökosystem, Siedlungssicherheit)</li>
+                <li><strong>Technologischer Zuverlässigkeit</strong> und tatsächlicher CO₂-Abscheidungsleistung</li>
+            </ul>
+            <p>Zwei Referenzprojekte:</p>
+            <div class="grid-2">
+                <div>
+                    <span class="tag tag-neon">NORWEGEN</span>
+                    <strong>Brevik CCS</strong> (Heidelberg Materials)<br>
+                    <span class="muted">Aminverfahren • Northern-Lights-Speicherung • Betrieb ab 2025</span>
+                </div>
+                <div>
+                    <span class="tag tag-alert">KROATIEN</span>
+                    <strong>KOdeCO</strong> (Holcim Koromačno)<br>
+                    <span class="muted">Kryogene Technologie (Cryocap™) • geplanter Start 2030 • Kvarner-Bucht</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-alert">
+            <h2>2. Technische Leistung — verfügbare Daten</h2>
+            <p>Laut unabhängigen Analysen und investigativen Berichten (einschließlich Quellen aus 2026) erreichte die Anlage in Brevik im ersten Betriebsjahr deutlich niedrigere CO₂-Abscheidungsraten als geplant. Statt der angestrebten ≈50 % Reduktion (≈400.000 t/Jahr) lag die tatsächliche Reduktion in Teilen des Zeitraums bei rund 15 %.</p>
+            <p class="muted">Quellen: öffentlich zugängliche Recherchen (Spiegel, Carbon Commentary u. a.). Betreiber und Behörden können andere Interpretationen oder spätere Datenkorrekturen haben.</p>
+            <p>Für KOdeCO liegen noch keine Betriebsdaten vor (geplanter Start 2030). Fragen zur langfristigen Zuverlässigkeit werden daher auf Basis von Erfahrungen mit ähnlichen Projekten und der technischen Literatur gestellt.</p>
+        </div>
+
+        <div class="card card-neon">
+            <h2>3. Lokale Risiken — Koromačno und Kvarner-Bucht</h2>
+            <h3>3.1 Topografie und möglicher CO₂-„See“</h3>
+            <p>Die Anlage liegt in einer engen Bucht, in einer topografischen Senke, unmittelbar neben Wohn- und Tourismusgebäuden. CO₂ ist schwerer als Luft. Bei großen Leckage-Szenarien (technischer Defekt, Kaltentlüftung) kann sich das Gas am Boden und über der Wasseroberfläche ansammeln und Sauerstoff verdrängen. Dies ist eine standardmäßige physikalische Eigenschaft von CO₂ und Gegenstand von Sicherheitsanalysen bei allen CCS-Projekten in der Nähe von Siedlungen.</p>
+
+            <h3>3.2 Kühlung und Entsalzung</h3>
+            <p>Das Projekt sieht die Nutzung von Meerwasser zur Kühlung und Entsalzung vor. Die Einleitung konzentrierter Sole in eine Bucht mit begrenzter Zirkulation kann lokal den Salzgehalt des Meeresbodens erhöhen. Umweltorganisationen betonen die Notwendigkeit detaillierter Modellierung und kontinuierlicher Überwachung des Meeresökosystems (Fischbrut, Algen, Benthos).</p>
+
+            <h3>3.3 Tankertransport</h3>
+            <p>Da Kroatien über keine geeigneten Onshore-Speicher verfügt, soll verflüssigtes CO₂ per Schiff transportiert werden. Die Kvarner-Bucht ist bekannt für plötzliche, starke Bora-Winde. Unfallrisiken in engen Fahrwassern sind Teil der standardmäßigen logistischen Risikobewertung.</p>
+        </div>
+
+        <div class="card card-warn">
+            <h2>4. Mitverbrennung von Abfällen und Emissionsüberwachung</h2>
+            <p>Zementwerke in ganz Europa nutzen seit Jahren alternative Brennstoffe (RDF/SRF, Reifen, Kunststoffabfälle, Schlamm). Das reduziert den Verbrauch fossiler Brennstoffe, verändert aber das Emissionsprofil (Chlor, Schwermetalle, organische Verbindungen).</p>
+            <p>Kritiker weisen darauf hin, dass Dioxine, Furane und bestimmte Schwermetalle oft nur periodisch gemessen werden (z. B. 1–2 Mal pro Jahr), während NOx, SO₂ und Staub kontinuierlich überwacht werden. Negative Werte an automatischen Messstationen (AMS) können auf eine Nullpunktverschiebung der Sensoren oder den Bedarf an Kalibrierung hinweisen — ein bekanntes technisches Phänomen, nicht zwingend ein Beweis für Manipulation.</p>
+            <p class="muted">Öffentliche Messdaten und Protokolle von Arbeitsgruppen sind über lokale Institutionen und Bürgerinitiativen verfügbar. Transparenz und Messhäufigkeit bleiben Gegenstand der öffentlichen Debatte.</p>
+        </div>
+
+        <div class="card card-neon">
+            <h2>5. Energie- und Wirtschaftskontext</h2>
+            <p>Laut verfügbaren Umweltverträglichkeitsprüfungen erhöht eine CCS-Anlage den Stromverbrauch erheblich (Größenordnung 150+ GWh/Jahr). In einer Region, die bereits einen erheblichen Teil ihres Stroms importiert, stellt dies eine zusätzliche Netzbelastung und potenziell höhere Kosten für Verbraucher dar.</p>
+            <p>Das EU-ETS und „grüne“ Zertifikate schaffen wirtschaftliche Anreize. Verschiedene Modelle (einschließlich virtueller Massenbilanz-Allokation) ermöglichen den Handel mit Gutschriften. Die Frage der tatsächlichen Emissionsreduktion am Ort des Zementverbrauchs bleibt Gegenstand wissenschaftlicher und politischer Debatte.</p>
+        </div>
+
+        <div class="card card-alert">
+            <h2>6. Vergleichstabelle (öffentlich verfügbare Daten)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kriterium</th>
+                        <th>Brevik (Norwegen)</th>
+                        <th>KOdeCO (Kroatien)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Technologie</td>
+                        <td>Amine (S26)</td>
+                        <td>Kryogen (Cryocap™ FG)</td>
+                    </tr>
+                    <tr>
+                        <td>Geplante Kapazität</td>
+                        <td>≈ 400.000 t CO₂/Jahr</td>
+                        <td>≈ 367.000 t CO₂/Jahr</td>
+                    </tr>
+                    <tr>
+                        <td>Tatsächliche Effizienz (1. Jahr)</td>
+                        <td>Deutlich unter Plan (≈15 % in Teilen des Zeitraums)</td>
+                        <td>Noch nicht in Betrieb (2030)</td>
+                    </tr>
+                    <tr>
+                        <td>Öffentliche Finanzierung</td>
+                        <td>> 1 Mrd. € (norwegische Mittel)</td>
+                        <td>≈ 116,9 Mio. € (EU-Innovationsfonds)</td>
+                    </tr>
+                    <tr>
+                        <td>Hauptlokale Risiken (laut Kritik)</td>
+                        <td>Nitrosamine, Abgassystem</td>
+                        <td>CO₂ in der Bucht, Mitverbrennung, Monitoring</td>
+                    </tr>
+                    <tr>
+                        <td>Lokaler Widerstand</td>
+                        <td>Moderat</td>
+                        <td>Hoch (Proteste, Blockaden, Petitionen)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="src">Hinweis: Zahlen sind Näherungswerte und basieren auf öffentlichen Quellen. Betriebsdaten können sich ändern.</p>
+        </div>
+
+        <div class="card card-neon">
+            <h2>7. Mögliche institutionelle Kanäle (EU)</h2>
+            <p>Bürger und Organisationen haben formelle Mechanismen zur Verfügung:</p>
+            <ul>
+                <li>Beschwerde bei DG Environment (mögliche IED- / Luftqualitätsrichtlinien-Fragen)</li>
+                <li>Europäischer Bürgerbeauftragter (Verfahren zur Mittelvergabe)</li>
+                <li>Petitionsausschuss des Europäischen Parlaments (PETI)</li>
+                <li>OLAF — bei Verdacht auf Mittelmissbrauch (erfordert konkrete Beweise)</li>
+            </ul>
+            <p class="muted">Das Vorhandensein dieser Kanäle bedeutet nicht, dass ein Verstoß festgestellt wurde. Sie existieren gerade deshalb, damit Bedenken transparent geprüft werden können.</p>
+        </div>
+
+        <div class="disclaimer">
+            <strong>Rechtlicher und ethischer Hinweis:</strong><br>
+            1. Der Inhalt ist informativ und im öffentlichen Interesse.<br>
+            2. Der Autor übernimmt keine Haftung für Schäden aus der Nutzung oder Auslegung der Informationen (außer Vorsatz oder grobe Fahrlässigkeit).<br>
+            3. Recht auf Berichtigung: dosje.koromacno@proton.me<br>
+            4. Alle Dokumente und Analysen stehen für nicht-kommerzielle und Bildungszwecke unter Quellenangabe zur Verfügung.<br>
+            5. Diese Seite fordert keine rechtswidrigen Handlungen auf.
+        </div>
+
+    </div>
+
+    <!-- ===================== ITALIANO ===================== -->
+    <div id="lang-it" class="section-lang">
+
+        <img src="githubtalkforus2.png" alt="Metafora visiva — dati, paesaggio industriale, silenzio" class="hero-img">
+
+        <div class="disclaimer">
+            <strong>Avviso sul contenuto:</strong> Questa pagina è di natura informativa e serve l’interesse pubblico (ambiente, salute, trasparenza). Si basa esclusivamente su documenti pubblicamente disponibili, rapporti mediatici e fonti analitiche. Non contiene accuse di reati. Tutte le affermazioni sui rischi sono presentate come domande, preoccupazioni e risultati di terzi. L’autore non afferma che alcuna azienda o istituzione abbia commesso un illecito. Per decisioni legali, mediche o di investimento consultare professionisti qualificati.
+        </div>
+
+        <div class="card card-neon">
+            <h2>1. Due progetti, due contesti</h2>
+            <p>Nelle discussioni sulla CCS (Carbon Capture and Storage) nell’industria del cemento è utile distinguere tra:</p>
+            <ul>
+                <li><strong>Rischi locali</strong> sul posto (salute, ecosistema, sicurezza degli insediamenti)</li>
+                <li><strong>Affidabilità tecnologica</strong> e prestazione reale di cattura della CO₂</li>
+            </ul>
+            <p>Due progetti di riferimento:</p>
+            <div class="grid-2">
+                <div>
+                    <span class="tag tag-neon">NORVEGIA</span>
+                    <strong>Brevik CCS</strong> (Heidelberg Materials)<br>
+                    <span class="muted">Processo ad ammine • stoccaggio Northern Lights • operativo dal 2025</span>
+                </div>
+                <div>
+                    <span class="tag tag-alert">CROAZIA</span>
+                    <strong>KOdeCO</strong> (Holcim Koromačno)<br>
+                    <span class="muted">Tecnologia criogenica (Cryocap™) • avvio previsto 2030 • Golfo del Quarnero</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-alert">
+            <h2>2. Prestazioni tecnologiche — dati disponibili</h2>
+            <p>Secondo analisi indipendenti e inchieste giornalistiche (incluse fonti del 2026), l’impianto di Brevik ha raggiunto nel primo anno di attività tassi di cattura della CO₂ significativamente inferiori a quelli pianificati. Invece della riduzione prevista di ≈50 % (≈400.000 t/anno), la riduzione effettiva in parti del periodo è stata intorno al 15 %.</p>
+            <p class="muted">Fonti: indagini pubblicamente disponibili (Spiegel, Carbon Commentary ecc.). Operatori e autorità possono avere interpretazioni diverse o successive correzioni dei dati.</p>
+            <p>Per KOdeCO non esistono ancora dati operativi (avvio previsto 2030). Le domande sull’affidabilità a lungo termine vengono quindi poste sulla base dell’esperienza di progetti simili e della letteratura tecnica.</p>
+        </div>
+
+        <div class="card card-neon">
+            <h2>3. Rischi locali — Koromačno e Golfo del Quarnero</h2>
+            <h3>3.1 Topografia e possibile “lago” di CO₂</h3>
+            <p>L’impianto si trova in una baia stretta, in una depressione topografica, immediatamente adiacente a edifici residenziali e turistici. La CO₂ è più pesante dell’aria. In scenari di grandi perdite (guasto tecnico, sfiato a freddo) il gas può accumularsi vicino al suolo e alla superficie dell’acqua, spostando l’ossigeno. Questa è una caratteristica fisica standard della CO₂ ed è oggetto di analisi di sicurezza in tutti i progetti CCS vicini agli insediamenti.</p>
+
+            <h3>3.2 Raffreddamento e desalinizzazione</h3>
+            <p>Il progetto prevede l’uso di acqua di mare per il raffreddamento e la desalinizzazione. Lo scarico di salamoia concentrata in una baia a circolazione limitata può aumentare localmente la salinità del fondale. Le organizzazioni ambientaliste sottolineano la necessità di modellazione dettagliata e monitoraggio continuo dell’ecosistema marino (avannotti, alghe, benthos).</p>
+
+            <h3>3.3 Trasporto con navi cisterna</h3>
+            <p>Poiché la Croazia non dispone di idonei stoccaggi a terra, la CO₂ liquefatta è prevista per il trasporto via nave. Il Golfo del Quarnero è noto per i venti di Bora improvvisi e forti. Il rischio di incidenti in canali stretti fa parte della valutazione standard del rischio logistico.</p>
+        </div>
+
+        <div class="card card-warn">
+            <h2>4. Co-incenerimento dei rifiuti e monitoraggio delle emissioni</h2>
+            <p>Gli impianti di cemento in tutta Europa utilizzano da anni combustibili alternativi (RDF/SRF, pneumatici, rifiuti plastici, fanghi). Ciò riduce il consumo di combustibili fossili ma modifica il profilo delle emissioni (cloro, metalli pesanti, composti organici).</p>
+            <p>I critici osservano che diossine, furani e alcuni metalli pesanti vengono spesso misurati solo periodicamente (es. 1–2 volte all’anno), mentre NOx, SO₂ e polveri sono monitorati in continuo. Valori negativi sulle stazioni di misura automatiche (AMS) possono indicare uno spostamento del punto zero dei sensori o la necessità di calibrazione — un fenomeno tecnico noto, non necessariamente prova di manipolazione.</p>
+            <p class="muted">I dati pubblici di misurazione e i verbali dei gruppi di lavoro sono disponibili tramite istituzioni locali e iniziative cittadine. Trasparenza e frequenza delle misurazioni restano oggetto di dibattito pubblico.</p>
+        </div>
+
+        <div class="card card-neon">
+            <h2>5. Contesto energetico ed economico</h2>
+            <p>Secondo le valutazioni di impatto ambientale disponibili, un impianto CCS aumenta significativamente il consumo di elettricità (ordine di 150+ GWh/anno). In una regione che già importa una quota rilevante della propria elettricità, ciò rappresenta un carico aggiuntivo sulla rete e potenzialmente costi più elevati per i consumatori.</p>
+            <p>Il sistema EU ETS e i certificati “verdi” creano incentivi economici. Diversi modelli (inclusa l’allocazione virtuale di bilanci di massa) consentono il commercio di crediti. La questione della reale riduzione delle emissioni nel punto di consumo del cemento rimane oggetto di dibattito scientifico e politico.</p>
+        </div>
+
+        <div class="card card-alert">
+            <h2>6. Tabella comparativa (dati pubblicamente disponibili)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Criterio</th>
+                        <th>Brevik (Norvegia)</th>
+                        <th>KOdeCO (Croazia)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tecnologia</td>
+                        <td>Ammine (S26)</td>
+                        <td>Criogenica (Cryocap™ FG)</td>
+                    </tr>
+                    <tr>
+                        <td>Capacità pianificata</td>
+                        <td>≈ 400.000 t CO₂/anno</td>
+                        <td>≈ 367.000 t CO₂/anno</td>
+                    </tr>
+                    <tr>
+                        <td>Efficienza reale (1° anno)</td>
+                        <td>Significativamente sotto piano (≈15 % in parti del periodo)</td>
+                        <td>Non ancora operativo (2030)</td>
+                    </tr>
+                    <tr>
+                        <td>Finanziamento pubblico</td>
+                        <td>> 1 mld € (fondi norvegesi)</td>
+                        <td>≈ 116,9 mln € (Fondo per l’innovazione UE)</td>
+                    </tr>
+                    <tr>
+                        <td>Principali rischi locali (secondo le critiche)</td>
+                        <td>Nitrosammine, sistema di scarico</td>
+                        <td>CO₂ nella baia, co-incenerimento, monitoraggio</td>
+                    </tr>
+                    <tr>
+                        <td>Resistenza locale</td>
+                        <td>Moderata</td>
+                        <td>Alta (proteste, blocchi, petizioni)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="src">Nota: I numeri sono approssimativi e basati su fonti pubbliche. I dati operativi possono cambiare.</p>
+        </div>
+
+        <div class="card card-neon">
+            <h2>7. Possibili canali istituzionali (UE)</h2>
+            <p>Cittadini e organizzazioni hanno a disposizione meccanismi formali:</p>
+            <ul>
+                <li>Reclamo a DG Environment (possibili questioni IED / Direttiva qualità dell’aria)</li>
+                <li>Mediatore europeo (procedura sull’assegnazione dei fondi)</li>
+                <li>Commissione per le petizioni del Parlamento europeo (PETI)</li>
+                <li>OLAF — in caso di sospetto di uso improprio di fondi (richiede prove concrete)</li>
+            </ul>
+            <p class="muted">L’esistenza di questi canali non significa che sia stata accertata una violazione. Esistono proprio affinché le preoccupazioni possano essere esaminate in modo trasparente.</p>
+        </div>
+
+        <div class="disclaimer">
+            <strong>Avviso legale ed etico:</strong><br>
+            1. Il contenuto è informativo e di interesse pubblico.<br>
+            2. L’autore non assume responsabilità per danni derivanti dall’uso o dall’interpretazione delle informazioni (salvo dolo o colpa grave).<br>
+            3. Diritto di rettifica: dosje.koromacno@proton.me<br>
+            4. Tutti i documenti e le analisi sono disponibili per uso non commerciale e didattico con citazione della fonte.<br>
+            5. Questa pagina non invita ad azioni illecite.
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer">
+    <div style="margin-bottom:8px;color:var(--neon);letter-spacing:1px;">KOdeCO Analytical Dossier • Open Source • Public Interest</div>
+    <div>© 2026 — Informational material. Cite the source when reusing.</div>
+    <div style="margin-top:10px;font-size:0.75rem;">Last structural update: November 2026</div>
+</div>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('.section-lang').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.textContent.trim().toLowerCase() === lang) btn.classList.add('active');
+    });
+}
+</script>
+
+</body>
+</html>
