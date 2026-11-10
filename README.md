@@ -273,4 +273,4 @@ Ova stranica sadrži linkove na vanjske web stranice (npr. službene registre, m
 
 > Sadržaj ovog repozitorija služi isključivo informiranju, dokumentiranju i zaštiti javnog interesa. Svi dokumenti i podaci prikupljeni su iz javnih izvora i/ili vlastitih zapisa. Ovo nije pravni savjet. Za poduzimanje pravnih radnji obratite se kvalificiranom odvjetniku.
 
-*Posljednje ažuriranje: 2. 11. 2026.*
+*Posljednje ažuriranje: 10. 11. 2026.*
