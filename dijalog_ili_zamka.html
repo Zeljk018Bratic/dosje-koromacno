@@ -305,8 +305,10 @@ h1 {
 
 <main class="container">
 
-  <!-- HERO IMAGE -->
-  <img src="prostorni.jpg" alt="Prostorni plan Raša - Dokazna matrica" class="hero-img">
+  <!-- HERO IMAGE SLIDESHOW -->
+  <div class="slideshow-wrapper" style="width: 100%; max-height: 800px; overflow: hidden; border-radius: 6px; border: 1px solid var(--border); margin-bottom: 25px; background: var(--panel);">
+      <img id="dinamicna-slika" src="prostorni.jpg" alt="Prostorni plan Raša - Dokazna matrica" class="hero-img" style="margin-bottom: 0; border: none; border-radius: 0; transition: opacity 0.6s ease-in-out; width: 100%; height: 100%; object-fit: cover; display: block;">
+  </div>
 
   <h1>DIJALOG ILI ZAMKA</h1>
   <p class="subtitle">Prostorni plan ostaje jedina prava barijera</p>
@@ -483,7 +485,7 @@ h1 {
     </p>
 </div>
 
-  <div class="site-footer">
+    <div class="site-footer">
     <p>Dosje Koromačno · Istina se ne pregovara</p>
     <div class="tags">
       <span class="tag">#Koromačno</span>
@@ -496,6 +498,42 @@ h1 {
   </div>
 
 </main>
+
+<!-- SKRIPTA ZA IZMJENU SLIKA -->
+<!-- SKRIPTA ZA IZMJENU SLIKA -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const slike = [
+            "prostorni.jpg", 
+            "slika1.jpg", 
+            "slika2.jpg", 
+            "slika3.jpg", 
+            "slika4.jpg"
+        ];
+
+        let indexSlika = 0;
+        const imgElement = document.getElementById("dinamicna-slika");
+
+        function promijeniSliku() {
+            indexSlika++;
+            if (indexSlika >= slike.length) {
+                indexSlika = 0; 
+            }
+            
+            // Efekt pretapanja (fade out)
+            imgElement.style.opacity = 0;
+            
+            setTimeout(() => {
+                imgElement.src = slike[indexSlika];
+                // Efekt pretapanja (fade in)
+                imgElement.style.opacity = 1;
+            }, 600); // 600ms je vrijeme trajanja fade efekta
+        }
+
+        // Mijenja sliku svakih 4 sekunde
+        setInterval(promijeniSliku, 4000);
+    });
+</script>
 
 </body>
 </html>
