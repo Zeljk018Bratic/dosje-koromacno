@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAMION · Terenski zapisnik opažanja · BajteBrothers</title>
+<style>
+  :root{--more:#0e7490;--srce:#e11d48;--tamno:#0f172a;--rub:#e2e8f0;--papir:#f8fafc;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--papir);color:#1e293b;line-height:1.6;padding-bottom:60px;}
+  header{background:linear-gradient(120deg,#0e7490,#0891b2 60%,#e11d48);color:#fff;text-align:center;padding:26px 16px 30px;}
+  header h1{font-size:clamp(20px,4.5vw,30px);}
+  header p{font-size:13.5px;opacity:.95;margin-top:6px;}
+  .interno{max-width:760px;margin:14px auto 0;background:#fffbeb;border:1px solid #fde68a;border-left:6px solid #b45309;color:#78350f;border-radius:10px;padding:12px 16px;font-size:13.5px;}
+  form{max-width:760px;margin:18px auto 0;background:#fff;border:1px solid var(--rub);border-radius:14px;padding:20px 18px;}
+  label{display:block;font-weight:700;font-size:13.5px;margin:14px 0 4px;color:#0f172a;}
+  label small{font-weight:400;color:#64748b;}
+  input[type=text],input[type=datetime-local],select,textarea{width:100%;padding:11px 12px;border:1px solid #cbd5e1;border-radius:9px;font-size:16px;background:#fff;}
+  textarea{min-height:70px;}
+  .red{display:flex;gap:10px;flex-wrap:wrap;}
+  .red>div{flex:1;min-width:200px;}
+  button{cursor:pointer;border:0;border-radius:10px;padding:12px 16px;font-weight:700;font-size:14px;color:#fff;background:linear-gradient(135deg,#0e7490,#0891b2);box-shadow:0 4px 12px rgba(8,145,178,.3);margin-top:8px;}
+  button.srce{background:linear-gradient(135deg,#e11d48,#f43f5e);box-shadow:0 4px 12px rgba(225,29,72,.35);}
+  button.sivo{background:linear-gradient(135deg,#475569,#64748b);}
+  button.zeleno{background:linear-gradient(135deg,#16a34a,#22c55e);}
+  .foto-box{border:2px dashed #94a3b8;border-radius:12px;padding:16px;text-align:center;margin-top:6px;background:#f1f5f9;}
+  .foto-box img{max-width:100%;max-height:220px;border-radius:8px;margin-top:10px;}
+  .hashline{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;background:#ecfeff;color:#155e75;border:1px dashed #a5f3fc;border-radius:8px;padding:8px 10px;word-break:break-all;margin-top:8px;display:none;}
+  .izlaz{max-width:760px;margin:18px auto 0;background:#fff;border:1px solid var(--rub);border-radius:14px;padding:18px;display:none;}
+  .izlaz h2{font-size:17px;margin-bottom:8px;color:#0f172a;}
+  pre{background:#0f172a;color:#e2e8f0;border-radius:10px;padding:14px;font-size:12px;overflow:auto;max-height:320px;white-space:pre-wrap;}
+  footer{max-width:760px;margin:26px auto 0;text-align:center;font-size:12.5px;color:#64748b;padding:0 16px;}
+  @media print{button,.foto-box input{display:none;}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🚛 KAMION · terenski zapisnik opažanja</h1>
+  <p>Građanski dokazni alat · Labinština ⇄ Koromačno · BajteBrothers · v1.0</p>
+</header>
+
+<div class="interno">⛔ <strong>INTERNO PRAVILO:</strong> puni zapisnik (s pločom i fotkom) ide <strong>samo</strong> u prijavu DIRH-u i u kriptirani arhiv. U javni GitHub repo (<code>docs/DIRH-LKW/</code>) ide <strong>samo maskirana verzija</strong> (bez fotke, ploča maskirana) + hash manifeste. Originalnu fotku ne mijenjaj i ne briši s mobitela.</div>
+
+<form id="f" autocomplete="off">
+  <div class="red">
+    <div><label>📅 Datum i vrijeme opažanja</label><input type="datetime-local" id="dt"></div>
+    <div><label>📍 Lokacija</label>
+      <select id="lok">
+        <option>Vrećari — STP Istratrans (zona stajanja)</option>
+        <option>Labin — kružni tok kod Spar / Trg labinskih rudara</option>
+        <option>Labin — čvorište „Kod Kapelice"</option>
+        <option>Trasa Labin → Koromačno</option>
+        <option>Drugo (upiši u napomenu)</option>
+      </select>
+    </div>
+  </div>
+  <button type="button" class="sivo" onclick="uzmiGPS()">🛰️ Upiši moj GPS (opcionalno)</button>
+  <span class="hashline" id="gpsout" style="display:inline-block;"></span>
+
+  <label>🔢 Registarska oznaka <small>(točno kako piše, npr. CE ND-798)</small></label>
+  <input type="text" id="ploca" placeholder="npr. CE ND-798 / OS 885-SH / KR 577-BO">
+
+  <div class="red">
+    <div><label>🅰️ Oznaka na vozilu</label>
+      <select id="oznaka">
+        <option>A — bijela ploča, crno slovo A (otpad / Abfall)</option>
+        <option>ADR narančasta ploća (opasni teret)</option>
+        <option>Oznaka „A" + ADR kombinacija</option>
+        <option>Bez vidljive oznake</option>
+        <option>Drugo (upiši u napomenu)</option>
+      </select>
+    </div>
+    <div><label>🚛 Vozilo</label><input type="text" id="vozilo" placeholder="npr. MAN crveni tegljač, Volvo bijeli…"></div>
+  </div>
+
+  <div class="red">
+    <div><label>🧭 Smjer / kretanje</label><input type="text" id="smjer" placeholder="npr. stoji ugašenih svjetala / kreće prema Koromačnu…"></div>
+    <div><label>👃 Miris / dim / drugo</label><input type="text" id="miris" placeholder="npr. jak kemijski miris, dim, curenje…"></div>
+  </div>
+
+  <label>📷 Fotografija originala <small>(ostaje na tvom uređaju; računa se samo SHA-256)</small></label>
+  <div class="foto-box">
+    <input type="file" id="foto" accept="image/*,video/*" capture="environment">
+    <img id="preview" alt="" style="display:none;">
+    <div class="hashline" id="hashout"></div>
+  </div>
+
+  <label>👤 Svjedok / ime građana <small>(opcionalno; za prijavu tijelu)</small></label>
+  <input type="text" id="svjedok" placeholder="ime i prezime ili „građanin svjedok 1"">
+  <label>📝 Napomena</label>
+  <textarea id="nap" placeholder="npr. policijska pratnja, broj kamiona u koloni, vrijeme stajanja…"></textarea>
+
+  <button type="button" class="srce" onclick="generiraj()">⚙️ Generiraj zapisnik</button>
+</form>
+
+<div class="izlaz" id="izlaz">
+  <h2>✅ Puni zapisnik (INTERNO — za DIRH i kriptirani arhiv)</h2>
+  <pre id="puni"></pre>
+  <button onclick="preuzmi('puni','ZAPISNIK-PUNI.md')">⬇️ Preuzmi .md</button>
+  <button class="sivo" onclick="kopiraj('puni')">📋 Kopiraj</button>
+
+  <h2 style="margin-top:20px;">🌐 Javna verzija (za repo docs/DIRH-LKW/ — ploča maskirana, bez fotke)</h2>
+  <pre id="javni"></pre>
+  <button class="zeleno" onclick="preuzmi('javni','ZAPISNIK-JAVNI.md')">⬇️ Preuzmi .md</button>
+  <button class="sivo" onclick="kopiraj('javni')">📋 Kopiraj</button>
+
+  <h2 style="margin-top:20px;">#️⃣ Manifest linija (hash fotke — sigurno za javni repo)</h2>
+  <pre id="mani"></pre>
+  <button class="sivo" onclick="kopiraj('mani')">📋 Kopiraj</button>
+</div>
+
+<footer>BajteBrothers · alat radi potpuno offline u tvom pregledniku · nijedan podatak ne napušta ovaj uređaj · 🍒❤️<br>Original čuvaj u Veracryptu; u repo samo maskirano + hash. Pitanja: GitHub Issues repozitorija dosje-koromacno.</footer>
+
+<script>
+var fotoHash = "", fotoIme = "", fotoVelicina = 0, gps = "";
+document.getElementById("dt").value = new Date(Date.now() - new Date().getTimezoneOffset()*60000).toISOString().slice(0,16);
+
+document.getElementById("foto").addEventListener("change", function(){
+  var f = this.files[0]; if(!f) return;
+  fotoIme = f.name; fotoVelicina = f.size;
+  var url = URL.createObjectURL(f);
+  var img = document.getElementById("preview");
+  if (f.type.startsWith("image/")){ img.src = url; img.style.display = "block"; } else { img.style.display = "none"; }
+  var h = document.getElementById("hashout"); h.style.display = "block"; h.textContent = "Računam SHA-256…";
+  if (!window.crypto || !crypto.subtle){ h.textContent = "⚠️ Browser ne podržava Web Crypto na ovoj stranici — otvorite preko https/localhost ili zabilježite hash naknadno na PC-u (certutil)."; return; }
+  f.arrayBuffer().then(function(buf){
+    return crypto.subtle.digest("SHA-256", buf);
+  }).then(function(d){
+    fotoHash = Array.from(new Uint8Array(d)).map(function(b){return b.toString(16).padStart(2,"0");}).join("");
+    h.textContent = "SHA-256: " + fotoHash + "  (" + f.name + ", " + f.size + " bajtova, zadnja izmjena: " + new Date(f.lastModified).toLocaleString() + ")";
+  });
+});
+
+function uzmiGPS(){
+  var o = document.getElementById("gpsout"); o.style.display = "inline-block";
+  if (!navigator.geolocation){ o.textContent = "⚠️ GPS nedostupan"; return; }
+  o.textContent = "Tražim GPS…";
+  navigator.geolocation.getCurrentPosition(function(p){
+    gps = p.coords.latitude.toFixed(5) + ", " + p.coords.longitude.toFixed(5);
+    o.textContent = "📍 " + gps + " (±" + Math.round(p.coords.accuracy) + " m)";
+  }, function(){ o.textContent = "⚠️ GPS odbijen — upiši lokaciju ručno u napomenu"; });
+}
+
+function maskiraj(p){
+  p = p.trim();
+  var m = p.match(/^([A-ZŽŠĐČĆ]{1,3})\s*(.*)$/i);
+  if (!m) return p.slice(0,2) + " ***";
+  var ostalo = m[2];
+  var zadnji = ostalo.slice(-3);
+  return m[1].toUpperCase() + " ***" + zadnji;
+}
+
+function generiraj(){
+  var dt = document.getElementById("dt").value.replace("T"," ") || "[datum/vrijeme]";
+  var ploca = document.getElementById("ploca").value.trim() || "[ploča nečitka]";
+  var lok = document.getElementById("lok").value;
+  var ozn = document.getElementById("oznaka").value;
+  var voz = document.getElementById("vozilo").value.trim() || "[vozilo]";
+  var smj = document.getElementById("smjer").value.trim() || "[kretanje]";
+  var mir = document.getElementById("miris").value.trim() || "—";
+  var svj = document.getElementById("svjedok").value.trim() || "[anonimni građanin svjedok]";
+  var nap = document.getElementById("nap").value.trim() || "—";
+  var id = "E-" + new Date().toISOString().slice(0,10).replace(/-/g,"") + "-" + Math.random().toString(36).slice(2,6).toUpperCase();
+
+  var puni =
+"# ZAPISNIK O OPAŽANJU VOZILA — " + id + " (INTERNO)\n\n" +
+"- **Datum/vrijeme opažanja:** " + dt + "\n" +
+"- **Lokacija:** " + lok + (gps ? "\n- **GPS opažatelja:** " + gps : "") + "\n" +
+"- **Registarska oznaka:** " + ploca + "\n" +
+"- **Oznaka na vozilu:** " + ozn + "\n" +
+"- **Vozilo:** " + voz + "\n" +
+"- **Smjer/kretanje:** " + smj + "\n" +
+"- **Miris/dim:** " + mir + "\n" +
+"- **Svjedok:** " + svj + "\n" +
+"- **Napomena:** " + nap + "\n\n" +
+"## Fotodokumentacija (original ostaje kod svjedoka)\n" +
+"- Datoteka: " + (fotoIme || "[bez fotke]") + "\n" +
+"- Veličina: " + (fotoVelicina || 0) + " bajtova\n" +
+"- SHA-256: " + (fotoHash || "[hash naknadno na PC-u: certutil -hashfile <file> SHA256]") + "\n\n" +
+"## Namjena\nPuni zapisnik dostavlja se isključivo: Državnom inspektoratu (prijava), pravnom timu i kriptiranom arhivu. Nije za javnu objavu.\n";
+
+  var javni =
+"# Opažanje vozila — " + id + " (javna evidencija, docs/DIRH-LKW/)\n\n" +
+"- **Datum/vrijeme:** " + dt + "\n" +
+"- **Lokacija:** " + lok + (gps ? "\n- **GPS:** " + gps : "") + "\n" +
+"- **Registracija:** " + maskiraj(ploca) + " (puni podatak u prijavi DIRH-u)\n" +
+"- **Oznaka:** " + ozn + "\n" +
+"- **Vozilo:** " + voz + "\n" +
+"- **Kretanje:** " + smj + "\n" +
+"- **Miris/dim:** " + mir + "\n" +
+"- **Svjedok:** " + (svj.startsWith("[") ? svj : "ime dostupno tijelima na zahtjev") + "\n" +
+"- **Fotodokumentacija:** DA · SHA-256: " + (fotoHash || "[naknadno]") + " (original se ne objavljuje)\n" +
+"- **Napomena:** " + nap + "\n";
+
+  var mani = (fotoHash ? fotoHash + "  " + fotoIme : "# bez fotke — nema manifest linije") + "\n";
+
+  document.getElementById("puni").textContent = puni;
+  document.getElementById("javni").textContent = javni;
+  document.getElementById("mani").textContent = mani;
+  document.getElementById("izlaz").style.display = "block";
+  document.getElementById("izlaz").scrollIntoView({behavior:"smooth"});
+}
+
+function preuzmi(id, ime){
+  var t = document.getElementById(id).textContent;
+  var b = new Blob([t], {type:"text/markdown;charset=utf-8"});
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(b); a.download = ime; a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); }, 1500);
+}
+function kopiraj(id){
+  var t = document.getElementById(id).textContent;
+  if (navigator.clipboard) navigator.clipboard.writeText(t);
+  else { var ta=document.createElement("textarea"); ta.value=t; document.body.appendChild(ta); ta.select(); document.execCommand("copy"); ta.remove(); }
+}
+</script>
+</body>
+</html>
