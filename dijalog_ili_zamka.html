@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIJALOG ILI ZAMKA | Dosje Koromačno</title>
+<style>
+:root {
+  --bg: #0a0e14;
+  --panel: #111827;
+  --border: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --neon: #00ffcc;
+  --alert: #ff3366;
+  --warn: #f59e0b;
+  --code: #0f172a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+/* HEADER + NAV */
+.header {
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.site-nav a:hover {
+  color: var(--neon);
+  background: rgba(0, 255, 204, 0.08);
+}
+
+.site-nav a.alert {
+  color: var(--alert);
+  border: 1px solid rgba(255, 51, 102, 0.3);
+}
+
+.site-nav a.alert:hover {
+  background: rgba(255, 51, 102, 0.1);
+  color: #ff6b8a;
+}
+
+/* HERO IMAGE */
+.hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 800px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  margin-bottom: 25px;
+  display: block;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  font-size: clamp(1.7rem, 5vw, 2.4rem);
+  color: var(--neon);
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-bottom: 36px;
+}
+
+/* UNITY BOX */
+.unity-box {
+  background: linear-gradient(135deg, #0f172a, var(--panel));
+  border: 1px solid var(--neon);
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin: 0 0 36px;
+  text-align: center;
+  font-size: 1.15rem;
+  box-shadow: 0 0 40px rgba(0, 255, 204, 0.07);
+}
+
+.unity-box strong {
+  color: var(--neon);
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.25rem;
+}
+
+/* CARDS */
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 30px;
+  margin-bottom: 28px;
+}
+
+.card-neon {
+  border-color: rgba(0, 255, 204, 0.35);
+}
+
+.card-alert {
+  border-color: rgba(255, 51, 102, 0.4);
+  background: linear-gradient(135deg, #1a0a12, var(--panel));
+}
+
+.card h2 {
+  color: var(--neon);
+  font-size: 1.35rem;
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+
+.card-alert h2 {
+  color: var(--alert);
+}
+
+.card p {
+  margin-bottom: 14px;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* QUESTIONS */
+.question {
+  background: var(--code);
+  border-left: 4px solid var(--alert);
+  padding: 16px 20px;
+  margin: 18px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.question strong {
+  color: var(--alert);
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+}
+
+/* FINAL MESSAGE */
+.final-box {
+  background: linear-gradient(135deg, #1a0a0f, #0f172a);
+  border: 1px solid var(--alert);
+  border-radius: 12px;
+  padding: 28px 30px;
+  margin: 36px 0;
+  text-align: center;
+  font-size: 1.12rem;
+}
+
+.final-box strong {
+  color: var(--alert);
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 14px;
+}
+
+/* VISUAL PROMPT (hidden concept) */
+.visual-prompt {
+  background: var(--code);
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 30px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.visual-prompt::before {
+  content: "VISUAL CONCEPT";
+  display: block;
+  color: var(--neon);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+/* FOOTER LINKS */
+.footer-links {
+  margin-top: 50px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-links h3 {
+  color: var(--neon);
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin: 10px 0;
+  padding-left: 18px;
+  position: relative;
+}
+
+.footer-links li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--neon);
+}
+
+.footer-links a {
+  color: var(--neon);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.footer-links a:hover {
+  border-bottom-color: var(--neon);
+}
+
+.site-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.tags {
+  margin-top: 12px;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--code);
+  color: var(--neon);
+  font-size: 0.78rem;
+  padding: 3px 11px;
+  border-radius: 20px;
+  margin: 3px;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    gap: 6px 10px;
+  }
+  .card, .final-box, .unity-box {
+    padding: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="site-nav">
+      <a href="index_dosje_koromacno/index_dosje_koromacno.html">Početna</a>
+      <a href="brevik_kodeco.html">Brevik vs KOdeCO</a>
+      <a href="docs/pantheon.html" class="alert">Pantheon / KOdeCO dosje</a>
+      <a href="energija.html">Energija</a>
+      <a href="dozvole.html">Dozvole</a>
+      <a href="promet.html">Promet otpada</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- HERO IMAGE -->
+  <img src="prostorni.jpg" alt="Prostorni plan Raša - Dokazna matrica" class="hero-img">
+
+  <h1>DIJALOG ILI ZAMKA</h1>
+  <p class="subtitle">Prostorni plan ostaje jedina prava barijera</p>
+
+  <div class="unity-box">
+    <strong>Ujedinjeni da. Za isti cilj da.</strong>
+    Ali bez skrivanja, bez samoodlučivanja i bez bježanja od odgovornosti.
+  </div>
+
+  <div class="card card-neon">
+    <h2>SLAŽEM SE SA 90% GOVORA, ALI OVAJ KRAJ JE KLASIČNA POLITIČKA ZAMKA</h2>
+
+    <p>Marija Blažina je održala stručan govor. 100 % joj priznajem tehnički dio: točno je govorila o mjerenjima, dioksinima, furanima, BTEX-ovima, PM česticama, apsurdu usporedbe s Norveškom i potrebi za strogim europskim standardima. Taj dio je bio ispravan i potreban. Ali kraj govora je klasična politička zamka.</p>
+
+    <p>Jeste li ovakvo mišljenje još od nekoga čuli? Ako niste, poželjno je da ga svi provjerite, da bi shvatili kako i iz super naizgled govora i podrške, ako niste budni 110%, i nemate stručni tim, koji bi sami kroz vaš taj angažman i neku udrugu izabrali, imali ne samo radi pravnoga legitimiteta, nego i ljude na vašoj strani, kojima bi mogli vjerovati da istinski i stručno zastupaju vaše interese, te koji bi i ovaj naizgled super govor, ipak forenzički možda i drukčije od većine kritički analizirali. Za ostvarenje zajedničkoga cilja.</p>
+  </div>
+
+  <div class="card card-alert">
+    <h2>Tri udarna pitanja o tom „dijalogu“</h2>
+
+    <p style="margin-bottom: 18px; font-style: italic; color: var(--muted);">„Potrebno je da se uspostavi dijalog s tvornicom. Sada je krajnji trenutak da se rasprava digne na viši nivo, u stručne krugove…“</p>
+
+    <div class="question">
+      <strong>S kim ćemo dijalog?</strong>
+      Holcim šalje SLAPP prijetnje dr. sc. Matei Vlatković. Njihovo pismo je odvjetnička ucjena, a ne dijalog. Ne sjeda se za stol s onim tko prijeti tužbom.
+    </div>
+
+    <div class="question">
+      <strong>Koja viša instanca?</strong>
+      Ne postoji viša instanca koja mijenja Prostorni plan Općine Raša. To je u rukama lokalnog vijeća i Knapića. Dok se rasprava diže na viši nivo, Knapić u Raši mirno čeka.
+    </div>
+
+    <div class="question">
+      <strong>Koji stručnjaci?</strong>
+      Gdje su bili kad je stanica bila u minusu? Pozivamo je da dijalog počne s onima koji imaju 144.000 tona dokaza i SHA-256 otiske na stolu, a ne s PR timovima.
+    </div>
+  </div>
+
+  <div class="final-box">
+    <strong>Završna poruka narodu</strong>
+    Ne nasjedajte na dijalog.<br>
+    Fokus nije Vlada, EU ni Županija.<br>
+    Fokus je Općina Raša i Prostorni plan.<br><br>
+    Ako Knapić ne stavi plan na glasanje – sve ostalo je dimna zavjesa.<br><br>
+    Lokalni političari i bilo tko koji bježi od odgovornosti i skriva se iza raznih grupa radi isto što i oni koji pozivaju na „višu instancu“: skreću fokus s jedinog mjesta gdje se projekt može stvarno zaustaviti.<br><br>
+    Jesu li toga svjesni, jedino je važno u ostvarenju zajedničkog cilja, zato <strong style="color: var(--alert);">LABIN ZBUDI SE</strong>.<br><br>
+    Ujedinjeni smo u cilju. Ali ujedinjenje bez istine i bez odgovornosti nije ujedinjenje – to je samo novi oblik kontrole narativa.
+  </div>
+
+  <div class="footer-links">
+    <h3>Repozitorij – izvorni dokumenti i forenzika</h3>
+    <ul>
+      <li><a href="index_dosje_koromacno/index_dosje_koromacno.html">Glavni portal Dosje Koromačno</a></li>
+      <li><a href="brevik_kodeco.html">Brevik vs KOdeCO – tehnička analiza</a></li>
+      <li><a href="energija.html">Energetska analiza</a></li>
+      <li><a href="docs/pantheon.html">Panteon – ugroza vodonosnika</a></li>
+      <li><a href="dozvole.html">Kronologija dozvola</a></li>
+      <li><a href="promet.html">Promet otpada</a></li>
+      <li><a href="forenzika.html">Forenzika</a></li>
+      <li><a href="manifest.html">Manifest</a></li>
+    </ul>
+  </div>
+  
+<!-- PRAVNA ZAŠTITA I OGRADA OD ODGOVORNOSTI -->
+<div class="card card-neon" style="font-size: 0.85rem; border-left: 4px solid var(--muted); background: rgba(30, 41, 59, 0.2); padding: 15px 20px; margin-top: 30px;">
+    <p style="margin-bottom: 5px; color: var(--muted); font-weight: 600;">⚖️ PRAVNA NAPOMENA I IZJAVA O OGRANIČENJU ODGOVORNOSTI</p>
+    <p style="color: var(--muted); margin: 0; line-height: 1.5;">
+        Svi izneseni podaci, analize i kronologija uvoza otpada na ovoj stranici temelje se isključivo na javno dostupnim informacijama i službenim dokumentima dobivenim putem zahtjeva za pristup informacijama (ZPPI). Sadržaj je namijenjen isključivo informiranju javnosti i zaštiti javnog interesa u pogledu očuvanja okoliša i zdravlja građana. Vrijednosni sudovi, kritički osvrti i iznesene sumnje predstavljaju ustavom zajamčeno pravo na slobodu govora i postavljanje legitimnih pitanja nadležnim institucijama, a ne pravomoćne sudske ili inspekcijske zaključke. Autor ne preuzima odgovornost za eventualne naknadne izmjene u službenim registrima trećih strana.
+    </p>
+</div>
+
+  <div class="site-footer">
+    <p>Dosje Koromačno · Istina se ne pregovara</p>
+    <div class="tags">
+      <span class="tag">#Koromačno</span>
+      <span class="tag">#ProstorniPlan</span>
+      <span class="tag">#Raša</span>
+      <span class="tag">#Holcim</span>
+      <span class="tag">#KOdeCO</span>
+      <span class="tag">#SHA256</span>
+    </div>
+  </div>
+
+</main>
+
+</body>
+</html>
