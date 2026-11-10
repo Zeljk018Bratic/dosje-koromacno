@@ -154,12 +154,30 @@ h1 {
   color: var(--alert);
 }
 
+.card h3 {
+  color: var(--neon);
+  font-size: 1.1rem;
+  margin-top: 22px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed rgba(0, 255, 204, 0.2);
+  padding-bottom: 4px;
+}
+
 .card p {
   margin-bottom: 14px;
 }
 
 .card p:last-child {
   margin-bottom: 0;
+}
+
+.card ul, .card ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.card li {
+  margin-bottom: 8px;
 }
 
 /* QUESTIONS */
@@ -194,28 +212,6 @@ h1 {
   font-size: 1.3rem;
   display: block;
   margin-bottom: 14px;
-}
-
-/* VISUAL PROMPT (hidden concept) */
-.visual-prompt {
-  background: var(--code);
-  border: 1px dashed var(--border);
-  border-radius: 10px;
-  padding: 14px 18px;
-  margin-bottom: 30px;
-  font-size: 0.82rem;
-  color: var(--muted);
-  line-height: 1.45;
-}
-
-.visual-prompt::before {
-  content: "VISUAL CONCEPT";
-  display: block;
-  color: var(--neon);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  margin-bottom: 8px;
 }
 
 /* FOOTER LINKS */
@@ -389,6 +385,71 @@ h1 {
     <p style="margin-top: 15px; font-weight: bold;">Fokus nije na vašem dimnjaku. Fokus je na Prostornom planu Općine Raša i na tome da se zaustavi ova farsa.</p>
   </div>
 
+  <!-- NOVI BLOK: FORENZIČKI PRESJEK -->
+  <div class="card card-neon" style="border-left: 6px solid var(--neon); background: #0a1a12;">
+    <h2 style="color: var(--neon); font-size: 1.25rem;">⚖️ FORENZIČKI PRESJEK: PETICIJA, ZAKON I PROSTORNI PLAN</h2>
+
+    <h3>⚖️ 1. Pravni okvir: Zašto peticija bez propisane procedure nema obvezujući učinak</h3>
+    <p>Zakon o lokalnoj i područnoj (regionalnoj) samoupravi (članak 25.) propisuje da je predstavničko tijelo dužno raspravljati o peticiji ako je potpisom podrži najmanje 10% od ukupnog broja birača u jedinici, te dati odgovor podnositeljima u roku od tri mjeseca od zaprimanja.</p>
+    <p>To je jedini način da peticija postane pravno obvezujuća za Općinsko vijeće. Peticija koja nije predana na propisanom obrascu, s jasnim podacima (ime, prezime, adresa, <strong>OIB</strong>) i koja nije uvrštena na dnevni red sjednice, <em>ostaje samo izraz volje građana, a ne pravni instrument koji obvezuje vlast.</em></p>
+
+    <h3>📜 2. Kronologija peticija i predaje</h3>
+    <p>Građanska inicijativa predala je peticiju načelniku Općine Raša 14. listopada 2026. Peticiju je potpisalo ukupno 7.152 građana, od čega 6.335 putem interneta i 817 u pisanom obliku. Među potpisnicima je 897 građana Općine Raša. Organizatorica je izjavila da su potpisi prikupljeni u devet dana, bez organiziranih punktova. Načelnik je peticiju preuzeo i tom prilikom izjavio: <em>„Ja vjerujem da će sve proći u najboljem redu.“</em></p>
+    <p>Istoga dana (14. listopada), Općinsko vijeće Raše jednoglasno je izglasalo zaključak protiv projekta KOdeCO i zatražilo od Vlade da ga ukine s liste strateških projekata.</p>
+    <p>Međutim, peticija nije uvrštena na dnevni red kao formalna točka, niti je o njoj vođena rasprava po zakonskoj proceduri. <strong>Time je prekršen članak 25. Zakona o lokalnoj samoupravi, jer je Vijeće bilo dužno raspravljati o peticiji s obzirom na broj potpisnika.</strong></p>
+
+    <h3>🏛️ 3. Postupanje lokalne vlasti: Odbijanje zahtjeva za glasanje o Prostornom planu</h3>
+    <p>Na sjednici 4. studenog 2026., vijećnica je zatražila da se izglasa odluka protiv V. izmjena Prostornog plana uređenja Općine Raša (PPUOR). Načelnik je odgovorio da <em>„nema potrebe glasati protiv 5. Izmjena i dopuna PPUOR, i sami sebe kočiti, u daljnjem razvoju, jer je Zaključkom općinskog Vijeća već sve rečeno“.</em></p>
+    <p><strong>Prijedlog vijećnice je odbijen</strong> (10 glasova protiv, 1 za, 1 suzdržan). Ona je tada upozorila: <em>„Ali to je samo poruka i pravno nikoga ne obavezuje, a Prostorni plan je obvezujući akt. Holcim je povukao Studiju o utjecaju na okoliš i čeka izmjenu PP-a, kako bi luku i spremnike ukapljenog CO₂ smjestio na južnu stranu poluotoka.“</em></p>
+
+    <h3>🗺️ 4. Ključna bitka: Prostorni plan Općine Raša</h3>
+    <p>Općinsko vijeće Raše <em>pokrenulo je V. izmjene i dopune Prostornog plana</em> uređenja (PPUOR) s ciljem redefiniranja zone Tvornice cementa Koromačno i pripadajuće industrijske luke, uključujući proširenje zone prema jugu.</p>
+    <p>Projekt KOdeCO Net Zero predviđa hvatanje CO₂, njegovo ukapljivanje i skladištenje u spremnicima kapaciteta po 3.000 tona, te transport tankerima u Italiju. Načelnik je izjavio da se izmjenama plana omogućuje premještanje spremnika dalje od naselja, jer bez izmjena plana <em>„Općina Raša bila bi taoc i krivac ako bi Holcim progurao sadašnje stajalište“.</em></p>
+
+    <h3>🏭 5. Studija utjecaja na okoliš: Povlačenje i obustava postupka</h3>
+    <p>Ministarstvo zaštite okoliša i zelene tranzicije donijelo je 28. kolovoza 2026. rješenje kojim se obustavlja postupak procjene utjecaja na okoliš za projekt dekarbonizacije tvornice cementa u Koromačnu. Iz obrazloženja rješenja vidljivo je da je nositelj zahvata 28. kolovoza 2026. podnio podnesak kojim odustaje od zahtjeva za procjenom utjecaja na okoliš.</p>
+    <p>Prema medijskim napisima, <em>projekt nije napušten, nego je najavljena nova studija usklađena s izmjenama prostornog plana i promijenjenom lokacijom dijela infrastrukture.</em></p>
+
+    <h3>📰 6. Medijsko izvještavanje i javni narativ: PR i skidanje fokusa</h3>
+    <p>Unatoč tome što su neki lokalni mediji najavili solidarno, iz njima poznatih razloga, ne praćenje prosvjeda (a navodno jedan od razloga je neprimjeren odnos i ponašanje prema njima novinarima), nacionalni mediji poput Večernjeg lista objavili su izvještaj 7. studenog 2026. pod naslovom <em>„Građani: Tražimo zaustavljanje projekta KOdeCO i konstantno mjerenje plinova koji nas ubijaju“</em>. U izvještaju se navodi da je prosvjedna povorka nastavak dvomjesečnih svakodnevnih prosvjeda i borbe građana.</p>
+    <p><strong>Međutim, ono što je u fokusu medija je izjava načelnika Lea Knapića:</strong><br>
+    Podršku građanskom prosvjedu opet je iskazao i načelnik općine Raša Leo Knapić. <em>„Moja podrška ide prema ljudima koji kritički sagledavaju situaciju. Moj pogled nije usmjeren na zatvaranje tvornice, nego na usklađenje sa svim normama i pritisak na investitora da dodatno postroži preglede i mjerenja u svom postrojenju jer ništa ne smije ići na uštrb zdravlja ljudi. Svaki normalan čovjek trebao bi težiti tome, u tome ne vidim nikakav problem. Ako treba dodatno investirati u nadogradnju kako bi se izbjegle sve rizične situacije, to bez odlaganja treba učiniti“</em>, kazao nam je načelnik Leo Knapić, dodajući da posve razumije i dijeli zabrinutost građana. Stoga je najavio kako će uskoro o svemu organizirati i okrugli stol s ciljem da se razgovara o rješenju problema.</p>
+    <p><strong>Ovo je klasičan PR manevar.</strong> Dok se u medijima načelnik prikazuje kao saveznik građana (koji ih "razumije"), istovremeno se u Općinskom vijeću odbija glasati o Prostornom planu koji bi stvarno zaustavio projekt. Fokus se skida s Općine Raša (koja drži ključ) i prebacuje na "razgovore" i "okrugle stolove".</p>
+    <p><strong>Istu poruku poslala je i SDP-ova saborska zastupnica Maria Blažina</strong>, koja je završila studij kemijskog inženjerstva i doktorirala na polju geoznanosti. Iako je njezin govor o opasnostima dioksina, furana i TOC-a bio stručno točan i koristan, on je također poslužio kao dio političkog PR-a. Ona je prozvala HDZ-ovu vlast i "otpadnu mafiju", ali fokus je ponovno skrenut na nacionalnu razinu (Vlada, premijer), a ne na lokalnu razinu gdje se odlučuje.</p>
+
+    <h3>🚨 7. Lažna pobjeda i opasnost od nepotpunih informacija</h3>
+    <p>Ovo je ključni detalj koji je zbunio građane. Nakon predaje peticije i zaključka Vijeća od 14. listopada, mnogi su povjerovali da je projekt KOdeCO time pravno zaustavljen. Međutim, to nije točno.</p>
+    <p><strong>Sama peticija (P2) sadrži dio koji to demantira:</strong></p>
+    <div class="question" style="border-left-color: var(--neon); background: rgba(0, 255, 204, 0.05);">
+      <em>„PREMJEŠTANJE PROJEKTA NIJE RJEŠENJE. Premještanje spremnika CO₂, luke ili drugih dijelova projekta s jedne lokacije na drugu ne odgovara na temeljno pitanje – želimo li takav projekt na području Koromačna? Ovom peticijom ne tražimo da se spremnici, luka ili drugi dijelovi projekta jednostavno pomaknu dalje od pojedinih kuća ili na drugu stranu industrijskog kompleksa. <strong>Ne tražimo premještanje projekta.</strong> <strong>Tražimo da se projekt KOdeCO net zero ne realizira na području Koromačna.</strong> <strong>ZATO TRAŽIMO:</strong> <strong>STOP redefiniranju područja Tvornice cementa Koromačno i pripadajuće industrijske luke kroz V. izmjene i dopune Prostornog plana uređenja Općine Raša.</strong> <strong>STOP stvaranju novih prostornih uvjeta za realizaciju projekta KOdeCO net zero.“</strong></em>
+    </div>
+    <p>Dok se građanima prezentira "pobjeda", lokalna vlast zapravo <strong>priprema izmjene Prostornog plana koje bi omogućile premještanje spremnika na južnu stranu poluotoka</strong>. Time bi se stvorili točno oni uvjeti koje peticija izričito odbija. Građani su zbunjeni jer im se govori da je projekt "zaustavljen", a on se zapravo sprema za realizaciju na drugoj lokaciji.</p>
+
+    <h3>🔒 8. GDPR i obrada osobnih podataka</h3>
+    <p>Platforma putem koje je peticija objavljena u svojoj politici privatnosti navodi da je za svaku pojedinačnu peticiju <strong>voditelj obrade podataka autor peticije</strong>, dok platforma djeluje kao <strong>izvršitelj obrade</strong>. To znači da je autor peticije odgovoran za poštivanje GDPR-a i zaštitu podataka potpisnika. Platforma primjenjuje SSL enkripciju, firewall i dnevne sigurnosne kopije.</p>
+    <p>Također, valja napomenuti da Inicijativa koja se navodi u peticijama <strong>pravno ne postoji</strong> kao registrirana udruga. Stoga svaki potpisnik treba znati da se njegovi podaci obrađuju pod odgovornošću fizičke osobe, a ne pravne osobe, što je dodatni pravni rizik.</p>
+
+    <h3>🎯 9. Opasnosti i rizici: Što projekt zapravo nosi</h3>
+    <p>Prema Studiji utjecaja na okoliš i javnim izlaganjima, projekt KOdeCO Net Zero nosi nekoliko ključnih rizika:</p>
+    <ul>
+      <li><strong>Opasnost od gušenja:</strong> U slučaju velikog curenja CO₂ iz spremnika, oblak guši radnike u manje od minute, a doseže i stambena područja.</li>
+      <li><strong>Kemikalije:</strong> Godišnje se planira koristiti oko 2.039 tona različitih kemikalija (natrijeva lužina, hipoklorit, inhibitori korozije).</li>
+      <li><strong>Morsko dno:</strong> Desalinizator bi ispuštao 96–182 m³ koncentrirane slane vode na sat, što bi promijenilo živi svijet na ~9.000 m² dna oko ispusta.</li>
+      <li><strong>Buka i promet:</strong> Broj pristajanja brodova porastao bi sa ~140 na 230 godišnje, uz dodatnih 150 kamiona za kemikalije i mulj.</li>
+      <li><strong>Energija:</strong> Novi sustavi trošili bi dodatnih 156.689 MWh električne energije godišnje, a potrošnja struje tvornice porasla bi gotovo četiri puta.</li>
+    </ul>
+
+    <h3>💎 10. Sažetak činjenica</h3>
+    <ol>
+      <li>Peticija je predana s 7.152 potpisa (897 iz Raše) 14. listopada 2026.</li>
+      <li>Zakon o lokalnoj samoupravi (čl. 25.) zahtijeva 10% birača i formalnu raspravu – što se nije dogodilo.</li>
+      <li>Načelnik je preuzeo peticiju, ali je nije stavio na dnevni red.</li>
+      <li>Vijećnica je tražila glasanje o Prostornom planu, ali je njezin prijedlog odbijen.</li>
+      <li>Holcim je povukao Studiju utjecaja na okoliš 28. kolovoza 2026., ali nije odustao od projekta.</li>
+      <li>Prostorni plan ostaje jedini obvezujući akt i jedina prava poluga za zaustavljanje projekta.</li>
+    </ol>
+  </div>
+
   <div class="final-box">
     <strong>Završna poruka narodu</strong>
     Ne nasjedajte na dijalog.<br>
@@ -438,4 +499,3 @@ h1 {
 
 </body>
 </html>
-
