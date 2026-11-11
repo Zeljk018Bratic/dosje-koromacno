@@ -1,0 +1,10 @@
+# Tekuća radna verzija (Ažurirano: 11.11.2026)
+# Evidence Matrix
+# - Povijesni snapshot (Zamrznuto: 31.10.2026):
+e829439b20907e558510e7357b6b5bbc24600f5d  Evidence_Matrix_CANON_v2.csv.OLD
+# - Radna verzija prije merge E-132–E-138:
+ad02ef4b6b96b6731643c3d12410e9740b60895d  docs/evidence/Evidence_Matrix_CANON_v2.csv
+# - Addendum E-132–E-138:
+#   docs/evidence/MATRIX_ADDENDUM_E132-E138.csv
+# Nakon punog merge-a u CANON_v2.csv izračunati novi SHA-256 cijele datoteke.
+# Puni popis datoteka: MANIFEST_FULL.sha256 / MANIFEST-SHA256_31-10-2026.txt
