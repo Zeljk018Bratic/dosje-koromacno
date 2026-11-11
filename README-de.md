@@ -1,6 +1,15 @@
 # 🔬 ÖKOZID KOROMAČNO · Interaktives Recherche-Dossier & Rechtliches Instrument
 
 > **⚡ DOSSIER KOROMAČNO — FORENSISCHE DOKUMENTATION**
+> ## 🚨 Aktuelles Update (11. November 2026)
+
+**Die EPPO hat die Einreichung offiziell erhalten.**
+*   **Referenznummer:** `PP.02503_2026_EN`
+*   **Status:** Eingegangen (Eingangsbestätigung). Hinweis: Dies bedeutet nicht, dass offiziell ein Ermittlungsverfahren eingeleitet wurde; es zeigt lediglich an, dass der Fall in das System der EPPO aufgenommen wurde.
+*   **Aktualisierung der Beweisübersicht:** Hinzufügung der Beweismittel E-139 (Bestätigung der EPPO) und E-140 (Informationsblatt zur EU-Finanzierung für KOdeCO).
+*   **Sicherheit:** Der Polizeibericht sowie personenbezogene Daten wurden aus dem öffentlichen Repository entfernt. Details zu den SHA-256-Hashes sind in der Datei `docs/evidence/MANIFEST-SHA256.txt` zu finden.
+
+---
 >
 > Dieses Dossier dokumentiert den grenzüberschreitenden Abfallstrom aus Italien (Zoffoli Metalli, Gifema, Stena Recycling, Intercommercio, Tellfer) über Slowenien nach Kroatien, mit Fokus auf das Lager Gospić, das Verarbeitungszentrum Pazin und die Verbrennung im Holcim-Zementwerk in Koromačno.
 >
