@@ -1,6 +1,16 @@
 # 🔬 ECOCIDIO KOROMAČNO · Dossier di Ricerca Interattivo & Strumento Legale
 
 > **⚡ DOSSIER KOROMAČNO — DOCUMENTAZIONE FORENSE**
+> 
+> ## 🚨 Ultimi aggiornamenti (11 novembre 2026)
+
+**La EPPO ha ufficialmente ricevuto la segnalazione.**
+*   **Numero di riferimento:** `PP.02503_2026_EN`
+*   **Stato:** Ricevuta (conferma di ricezione). Nota: ciò non implica l'apertura ufficiale di un'indagine; indica semplicemente che il caso è stato inserito nel sistema della EPPO.
+*   **Aggiornamento della matrice:** Aggiunti gli elementi probatori E-139 (conferma della EPPO) ed E-140 (scheda informativa sui finanziamenti UE per KOdeCO).
+*   **Sicurezza:** Il rapporto di polizia e i dati personali sono stati rimossi dall'archivio pubblico. I dettagli relativi agli hash SHA-256 sono disponibili nel file `docs/evidence/MANIFEST-SHA256.txt`.
+
+---
 >
 > Questo dossier documenta il flusso transfrontaliero di rifiuti dall'Italia (Zoffoli Metalli, Gifema, Stena Recycling, Intercommercio, Tellfer) attraverso la Slovenia verso la Croazia, con particolare attenzione al deposito di Gospić, al centro di trattamento di Pazin e all'incenerimento nella cementeria Holcim di Koromačno.
 >
@@ -211,4 +221,4 @@ Contenuto aperto. Tutti i documenti e le analisi sono disponibili per uso pubbli
 
 ---
 
-*Ultimo aggiornamento: 6 novembre 2026.*
+*Ultimo aggiornamento: 11 novembre 2026.*
