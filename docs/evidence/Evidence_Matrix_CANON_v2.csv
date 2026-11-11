@@ -1,1 +1,8 @@
-SEE_ARTIFACTS_Evidence_Matrix_CANON_v2_FIXED.csv — full content must be restored from local fixed file SHA256 944f33ecdab7d72cc164c05b821a683418197122e8b8f54284a1a03c4c3ffcd4
+# PLACEHOLDER — restore required
+# Use local file: Evidence_Matrix_CANON_v2_LEGAL.csv
+# SHA-256: af4306bc36196801e833568c74547a0b4428e99c27017c7f95fb1c93412ed077
+# See: docs/evidence/LEGAL_SOFT_EDITS_11-11-2026.md
+# See: docs/evidence/RESTORE_MATRIX_11-11-2026.md
+#
+# git checkout dc111e43728c9dbf89c3bfdbae51725f9530322a -- docs/evidence/Evidence_Matrix_CANON_v2.csv
+# then copy LEGAL build or apply soft-edits + mojibake fix, commit, push
