@@ -8,3 +8,16 @@ ad02ef4b6b96b6731643c3d12410e9740b60895d  docs/evidence/Evidence_Matrix_CANON_v2
 #   docs/evidence/MATRIX_ADDENDUM_E132-E138.csv
 # Nakon punog merge-a u CANON_v2.csv izračunati novi SHA-256 cijele datoteke.
 # Puni popis datoteka: MANIFEST_FULL.sha256 / MANIFEST-SHA256_31-10-2026.txt
+# =====================================================================
+# AŽURIRANJE (11.11.2026.) - Nakon merge-a E-139, E-140, E-141
+# =====================================================================
+
+# Novi kanonski SHA-256 za glavnu matricu (izračunat 11.11.2026.)
+1BF9A77680D420C00DB1EAFB53E22D3C91789280F3DD23D9ACFDA0E63BE0146E  docs/evidence/Evidence_Matrix_CANON_v2.csv
+
+# Hashovi novih ključnih dokaza (E-140, E-141)
+d490ebf971a94eaf10ab630600cf4bb5ba574d5d76eb360f68c5cbc1b2110af3  docs/evidence/EU_Funding_KOdeCO_101133120.pdf
+66c91873fe6ef0e231b9bc909463442d84e5b82b3b75931d4fcf168f95972fcb  docs/evidence/INNOVFUND_Croatia.pdf
+
+# Napomena za E-139 (EPPO):
+# PDF potvrde (PP.02503_2026_EN) čuva se OFFLINE zbog osobnih podataka. Hash nije javno objavljen.
