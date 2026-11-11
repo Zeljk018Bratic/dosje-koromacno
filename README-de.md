@@ -220,4 +220,4 @@ Offener Inhalt. Alle Dokumente und Analysen sind für die öffentliche Nutzung, 
 
 ---
 
-*Letzte Aktualisierung: 6. November 2026.*
+*Letzte Aktualisierung: 11. November 2026.*
