@@ -8,6 +8,16 @@ Javni, transparentan i neovisan alat za praćenje postupanja s otpadom, emisija 
 
 ## 📑 Sadržaj
 
+## 🚨 Najnovije (11. studenog 2026.)
+
+**EPPO je službeno zaprimio prijavu.**
+*   **Referentni broj:** `PP.02503_2026_EN`
+*   **Status:** Zaprimljeno (Acknowledgement of receipt). Napomena: to ne znači da je istraga službeno otvorena, već da je predmet ušao u EPPO sustav.
+*   **Ažuriranje matrice:** Dodani dokazi E-139 (EPPO potvrda) i E-140 (EU Funding Fact Sheet za KOdeCO).
+*   **Sigurnost:** Policijski izvještaj i osobni podaci uklonjeni su s javnog repozitorija. Detalji o SHA-256 hashovima dostupni su u `docs/evidence/MANIFEST-SHA256.txt`.
+
+---
+
 - [⚖️ Kronologija dozvola – Iluzija kontinuiteta i pravni obrasci](dozvole.html)
 - [Brzi pristup dokumentima](#-brzi-pristup-dokumentima)
 - [Interaktivni sustav](#️-interaktivni-sustav)
