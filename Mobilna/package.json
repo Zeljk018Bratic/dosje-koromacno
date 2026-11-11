@@ -1,0 +1,16 @@
+{
+  "name": "mobilna",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index-q01BZAt7.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "puppeteer": "^25.16.0"
+  }
+}

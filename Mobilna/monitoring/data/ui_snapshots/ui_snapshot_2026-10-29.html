@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kvaliteta zraka — Splitsko-dalmatinska županija</title>
+    <!-- OG za link-preview; solo stranica lokacije (`/{slug}`) ih prepisuje u trenutku ucitavanja (`solo.applyDocumentMeta`).
+         Poznato ogranicenje (28.09.2026.): crawler koji ne izvrsava JS vidi ovaj genericki naslov — bez SSR-a. -->
+    <meta property="og:title" content="Kvaliteta zraka — Splitsko-dalmatinska županija" />
+    <meta property="og:description" content="Mreža mjernih postaja NZJZ Splitsko-dalmatinske županije — indeks kvalitete zraka i izmjerene vrijednosti." />
+    <meta property="og:type" content="website" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+      :root{
+        --ink:#16222e; --t2:#51606e; --t3:#8593a0; --line:#e2e7ec; --line2:#eef2f5;
+        --navy:#0e2239; --teal:#1c7a91; --teal2:#0f566a; --paper:#fff; --bg:#eef1f4;
+        --disp:'Space Grotesk',system-ui,sans-serif; --body:'Hanken Grotesk',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+      }
+      *{ box-sizing:border-box; }
+      html,body,#root{ margin:0; }
+      body{ background:var(--bg); font-family:var(--body); color:var(--ink); -webkit-font-smoothing:antialiased; line-height:1.5; }
+      .num{ font-variant-numeric:tabular-nums; } .mono{ font-family:var(--mono); } .disp{ font-family:var(--disp); }
+      select{ outline:none; } a{ color:inherit; }
+      ::-webkit-scrollbar{ width:9px; height:9px; } ::-webkit-scrollbar-thumb{ background:#cfd8de; border-radius:9px; }
+      /* Mobitel/tablet-portret: fiksne 2-kolonske mreze (hero, grid2) se slazu u jednu kolonu —
+         inline gridTemplateColumns u App.jsx zahtijeva !important. */
+      @media (max-width: 768px) {
+        .hero, .grid2 { grid-template-columns: minmax(0,1fr) !important; }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-q01BZAt7.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Twyd4PtP.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

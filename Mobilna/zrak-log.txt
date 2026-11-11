@@ -1,0 +1,28 @@
+
+--- 06. 11. 2026. 09:09:30 ---
+Izmjerene vrijednosti · 06. 11. 09:00
+NO₂
+▼ 20%
+Dušikov dioksid
+3.825µg/m³
+Satne vrijednosti
+GV 200 µg/m³ · 1 h
+SO₂
+▬ 0%
+Sumporov dioksid
+1.864µg/m³
+Satne vrijednosti
+
+--- 06. 11. 2026. 10:09:28 ---
+Izmjerene vrijednosti · 06. 11. 10:00
+NO₂
+▲ 75%
+Dušikov dioksid
+6.694µg/m³
+Satne vrijednosti
+GV 200 µg/m³ · 1 h
+SO₂
+▲ 71%
+Sumporov dioksid
+3.196µg/m³
+Satne vrijednosti

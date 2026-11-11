@@ -1,0 +1,4 @@
+tree "C:\Users\zeljk\dosje-koromacno" /F /A > "$env:USERPROFILE\Desktop\dosje_struktura.txt"
+notepad "$env:USERPROFILE\Desktop\dosje_struktura.txt"
+
+C:\Users\zeljk\dosje-koromacno
