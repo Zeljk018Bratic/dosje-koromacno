@@ -253,6 +253,21 @@ CertUtil -hashfile "putanja\do\datoteke" SHA256
 - [Otvori manifest „NISU NAS SLOMILI”](manifest.html)
 - [Preuzmi SHA-256 manifest datoteka](MANIFEST-SHA256.txt)
 
+- ## 🌐 Javne stranice i analize (HTML)
+
+Ovdje možete pregledati sve javno dostupne analize, izvještaje i prijevode:
+
+*   [Naslovnica (HR)](index.html) | [EN](index-en.html) | [DE](index-de.html) | [IT](index-it.html)
+*   [Forenzička analiza (HR)](forenzika.html) | [EN](forenzika-en.html) | [DE](forenzika-de.html) | [IT](forenzika-it.html)
+*   [Analiza energije i KOdeCO projekta](energija.html)
+*   [Prekogranični promet otpada](promet.html)
+*   [Dozvole (R1/R5)](dozvole.html)
+*   [Dijalog ili zamka? (Analiza medija)](dijalog_ili_zamka.html)
+*   [Usporedba Brevik (Norveška) vs. Koromačno](brevik_kodeco.html) | [4 jezika](brevik_vs_kodeco_4lang.html)
+*   [Peticija](docs/peticija/index.html) | [Verzija za ispis](docs/peticija/peticija-print.html)
+*   [Eko strategija Labinštine](aktivizam/eko_strategija.html)
+*   [Manifest](manifest.html)
+
 ## ⚖️📜 Pravna napomena i uvjeti korištenja
 
 **© 2026 @BajteBrothers / Dosje Koromačno. Sva prava pridržana.** Materijali objavljeni na ovoj stranici dostupni su za osobnu, nekomercijalnu i edukativnu upotrebu. U javnoj uporabi obavezno navedite izvor: „Dosje Koromačno, https://zeljk018bratic.github.io/dosje-koromacno/”. Komercijalna uporaba, masovno umnožavanje ili objavljivanje bez prethodnog pisanog odobrenja nije dopušteno.
