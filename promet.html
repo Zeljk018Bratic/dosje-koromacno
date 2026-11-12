@@ -4,435 +4,1100 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prekogranični promet otpada — Holcim Koromačno 2015–2024 | Dosje Koromačno</title>
+<meta name="description" content="Forenzički presjek prekograničnog uvoza otpada u Holcim Koromačno 2015–2024: eONTO, OZO izvješća i notifikacijski consenti. Samo provjerljivi podaci.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #0a0e14;
-  --panel: #111827;
-  --border: #1e293b;
-  --text: #e2e8f0;
-  --muted: #94a3b8;
-  --neon: #00ffcc;
-  --alert: #ff3366;
-  --warn: #f59e0b;
-  --code: #0f172a;
+:root{
+  --bg0:#0a0d12; --bg1:#0f141c; --panel:#131a24; --panel2:#182130;
+  --line:#243044; --line2:#31415c;
+  --ink:#e8edf5; --muted:#8b98ac; --faint:#5b6880;
+  --amber:#ffb224; --ember:#ff7a1a; --red:#ff3b5c; --magenta:#ff4d8d;
+  --teal:#2ce6b0; --blue:#4da3ff; --purple:#b78cff; --lime:#c6f24e;
+  --it:#ff4d6d; --at:#4da3ff; --si:#2ce6b0; --bih:#b78cff;
+  --disp:'Archivo',system-ui,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'Cascadia Mono',Consolas,monospace;
+  --head-h:118px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg0);color:var(--ink);font-family:var(--disp);line-height:1.65;min-height:100vh;overflow-x:hidden}
+::selection{background:rgba(255,178,36,.35)}
+::-webkit-scrollbar{width:12px;height:10px}
+::-webkit-scrollbar-track{background:var(--bg0);border-left:1px solid var(--line)}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--amber),var(--ember));border-radius:8px;border:3px solid var(--bg0)}
+::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#ffc95e,var(--amber))}
+*{scrollbar-width:thin;scrollbar-color:var(--amber) var(--bg0)}
+a{color:var(--blue)}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;z-index:999;background:var(--amber);color:#1a1206;padding:8px 14px;border-radius:6px;font-weight:700}
+.skip:focus{left:8px}
+
+.bg-mesh{position:fixed;inset:0;z-index:-3;background:
+  radial-gradient(900px 620px at 12% -6%,rgba(255,122,26,.16),transparent 60%),
+  radial-gradient(820px 600px at 88% 12%,rgba(44,230,176,.10),transparent 62%),
+  radial-gradient(760px 700px at 70% 96%,rgba(255,59,92,.10),transparent 60%),
+  radial-gradient(600px 500px at 30% 70%,rgba(77,163,255,.07),transparent 60%),
+  linear-gradient(180deg,var(--bg0),var(--bg1) 55%,var(--bg0))}
+.bg-grid{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(139,152,172,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(139,152,172,.05) 1px,transparent 1px);
+  background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(1200px 800px at 50% 0%,#000 30%,transparent 80%);
+  mask-image:radial-gradient(1200px 800px at 50% 0%,#000 30%,transparent 80%)}
+.bg-grain{position:fixed;inset:-50%;z-index:-1;pointer-events:none;opacity:.055;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 9s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-4%)}60%{transform:translate(-3%,-2%)}80%{transform:translate(4%,3%)}100%{transform:translate(0,0)}}
+
+#progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:210;
+  background:linear-gradient(90deg,var(--teal),var(--amber),var(--ember),var(--red));box-shadow:0 0 12px rgba(255,178,36,.6)}
+header{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,13,18,.86);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--amber) 30%,var(--teal) 70%,transparent);opacity:.55}
+.hwrap{max-width:1240px;margin:0 auto;padding:10px 20px 0}
+.hrow{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
+.brand svg{flex:none}
+.brand b{font-weight:900;letter-spacing:.06em;font-size:.95rem}
+.brand small{display:block;color:var(--muted);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-family:var(--mono)}
+.proj{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
+.proj a{color:var(--muted);text-decoration:none;font-size:.8rem;font-weight:600;padding:5px 9px;border-radius:6px;transition:.18s}
+.proj a:hover{color:var(--teal);background:rgba(44,230,176,.08)}
+.proj a.alert{color:var(--red)}
+.proj a.alert:hover{background:rgba(255,59,92,.1);color:#ff7d95}
+.hact{display:flex;gap:8px}
+.btn{border:1px solid var(--line2);background:var(--panel);color:var(--ink);font-size:.8rem;font-weight:700;
+  padding:7px 13px;border-radius:8px;display:inline-flex;align-items:center;gap:7px;transition:.18s;letter-spacing:.02em}
+.btn:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-1px);box-shadow:0 4px 18px rgba(255,178,36,.15)}
+.btn.solid{background:linear-gradient(135deg,var(--amber),var(--ember));color:#1a1206;border-color:transparent}
+.btn.solid:hover{color:#1a1206;filter:brightness(1.08)}
+#menuBtn{display:none}
+.secnav{display:flex;gap:6px;overflow-x:auto;padding:9px 0 10px;scrollbar-width:none}
+.secnav::-webkit-scrollbar{height:5px}
+.secnav::-webkit-scrollbar-thumb{background:var(--line2);border:none;border-radius:4px}
+.secnav a{flex:none;color:var(--muted);text-decoration:none;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;
+  padding:5px 11px;border-radius:99px;border:1px solid transparent;transition:.18s;white-space:nowrap}
+.secnav a:hover{color:var(--ink);border-color:var(--line2)}
+.secnav a.on{color:#1a1206;background:linear-gradient(135deg,var(--amber),var(--ember));font-weight:600;border-color:transparent}
+@media(max-width:900px){
+  :root{--head-h:64px}
+  .proj{display:none}
+  #menuBtn{display:inline-flex}
+  .secnav{display:none}
+  header.open .secnav{display:flex}
+  header.open .proj{display:flex;width:100%;margin:6px 0 2px}
+  .hact .btn span{display:none}
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+main{max-width:1240px;margin:0 auto;padding:calc(var(--head-h) + 26px) 20px 40px}
+section{scroll-margin-top:calc(var(--head-h) + 18px)}
+.sec{display:grid;grid-template-columns:250px minmax(0,1fr);gap:34px;padding:52px 0;border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:none}
+.sec-head{position:sticky;top:calc(var(--head-h) + 22px);align-self:start}
+.sec-head .idx{font-family:var(--mono);font-size:.78rem;color:var(--acc,var(--amber));letter-spacing:.2em}
+.sec-head h2{font-size:1.5rem;font-weight:900;line-height:1.2;margin:6px 0 10px;letter-spacing:-.01em}
+.sec-head .bar{width:46px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--acc,var(--amber)),transparent)}
+.sec-head p{color:var(--muted);font-size:.83rem;margin-top:10px}
+@media(max-width:900px){.sec{grid-template-columns:1fr;gap:16px;padding:38px 0}.sec-head{position:static}}
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  line-height: 1.65;
-  min-height: 100vh;
+.hero{position:relative;z-index:0;padding:34px 0 10px}
+.hero>*:not(#dust){position:relative;z-index:1}
+#dust{position:absolute;inset:0;z-index:0;pointer-events:none}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.28em;color:var(--amber);text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--amber)}
+h1{font-size:clamp(2rem,5.4vw,3.4rem);font-weight:900;line-height:1.06;letter-spacing:-.025em;margin:14px 0 6px}
+h1 .hl{background:linear-gradient(100deg,var(--amber),var(--ember) 55%,var(--red));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:1.06rem;max-width:760px;margin-top:10px}
+.meta-chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 8px}
+.chip{font-family:var(--mono);font-size:.72rem;color:var(--muted);border:1px solid var(--line2);background:rgba(19,26,36,.7);
+  padding:5px 12px;border-radius:99px;display:inline-flex;gap:7px;align-items:center}
+.chip i{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 8px var(--teal)}
+.chip.warn i{background:var(--amber);box-shadow:0 0 8px var(--amber)}
+.legend-method{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0 0;font-size:.76rem;color:var(--muted)}
+.legend-method b{font-family:var(--mono);font-size:.7rem;padding:2px 8px;border-radius:5px;margin-right:5px}
+.m-fakt b{background:rgba(44,230,176,.14);color:var(--teal);border:1px solid rgba(44,230,176,.35)}
+.m-izr b{background:rgba(77,163,255,.14);color:var(--blue);border:1px solid rgba(77,163,255,.35)}
+.m-open b{background:rgba(255,178,36,.14);color:var(--amber);border:1px solid rgba(255,178,36,.35)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0 6px}
+@media(max-width:1000px){.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.stats{grid-template-columns:1fr}}
+.stat{position:relative;background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);
+  border-radius:14px;padding:18px 18px 15px;overflow:hidden;transition:.22s}
+.stat::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--sc,var(--teal)),transparent)}
+.stat:hover{transform:translateY(-3px);border-color:var(--sc,var(--teal));box-shadow:0 14px 34px rgba(0,0,0,.4)}
+.stat .lab{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.stat .val{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:900;font-variant-numeric:tabular-nums;color:var(--sc,var(--teal));margin:6px 0 2px;letter-spacing:-.02em}
+.stat .val small{font-size:.55em;color:var(--muted);font-weight:700;margin-left:3px}
+.stat .sub{font-size:.76rem;color:var(--muted)}
+.stat .copy{position:absolute;top:10px;right:10px;background:none;border:1px solid var(--line2);color:var(--faint);
+  width:28px;height:28px;border-radius:7px;font-size:.8rem;transition:.18s;display:grid;place-items:center}
+.stat .copy:hover{color:var(--sc,var(--teal));border-color:var(--sc,var(--teal))}
+.stat-note{font-size:.76rem;color:var(--faint);margin:4px 0 0}
+
+.panel{background:linear-gradient(170deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:14px;padding:20px;margin:16px 0}
+.panel h3{font-size:1.02rem;font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.pill{font-family:var(--mono);font-size:.66rem;font-weight:600;padding:3px 9px;border-radius:99px;letter-spacing:.06em}
+.pill.teal{background:rgba(44,230,176,.13);color:var(--teal);border:1px solid rgba(44,230,176,.35)}
+.pill.red{background:rgba(255,59,92,.13);color:var(--red);border:1px solid rgba(255,59,92,.4)}
+.pill.amber{background:rgba(255,178,36,.13);color:var(--amber);border:1px solid rgba(255,178,36,.4)}
+.pill.blue{background:rgba(77,163,255,.13);color:var(--blue);border:1px solid rgba(77,163,255,.4)}
+p{margin-bottom:12px}
+.src{font-size:.78rem;color:var(--faint);font-family:var(--mono);margin-top:8px}
+.src em{color:var(--muted)}
+strong{color:var(--ink)}
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}
+table{width:100%;border-collapse:collapse;font-size:.86rem;background:var(--panel);min-width:560px}
+th,td{border-bottom:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:var(--bg1);color:var(--amber);font-weight:700;font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;font-family:var(--mono)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:.82rem}
+tbody tr{transition:background .15s}
+tbody tr:hover td,tbody tr.hl td{background:rgba(255,178,36,.06)}
+tfoot th,tfoot td{background:var(--bg1);border-top:2px solid var(--line2);border-bottom:none;font-weight:700}
+tbody tr:last-child td{border-bottom:none}
+.has-star{color:var(--red);font-weight:700}
+tr.hazrow td:first-child{box-shadow:inset 3px 0 0 var(--red)}
+tr.hide{display:none}
+code{font-family:var(--mono);font-size:.85em;background:var(--bg1);border:1px solid var(--line);padding:1px 6px;border-radius:5px;color:var(--teal)}
+
+.chart-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0 12px}
+.legend{display:flex;gap:6px;flex-wrap:wrap}
+.lg{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line2);background:var(--bg1);color:var(--ink);
+  font-size:.76rem;font-weight:700;padding:5px 11px;border-radius:99px;transition:.18s}
+.lg i{width:10px;height:10px;border-radius:3px;background:var(--c);box-shadow:0 0 8px var(--c)}
+.lg:hover{border-color:var(--c)}
+.lg.off{opacity:.4}
+.lg.off i{background:var(--faint);box-shadow:none}
+.seg-toggle{margin-left:auto;display:flex;border:1px solid var(--line2);border-radius:9px;overflow:hidden}
+.seg-toggle button{background:var(--bg1);border:none;color:var(--muted);font-size:.74rem;font-weight:700;padding:6px 13px;font-family:var(--mono);transition:.15s}
+.seg-toggle button.on{background:linear-gradient(135deg,var(--amber),var(--ember));color:#1a1206}
+.chartbox{position:relative}
+svg.chart{width:100%;height:auto;display:block}
+.seg{transition:opacity .18s;cursor:pointer}
+.seg.dim{opacity:.22}
+.axis text{fill:var(--faint);font-family:var(--mono);font-size:11px}
+.axis line{stroke:var(--line)}
+.barlab{fill:var(--muted);font-family:var(--mono);font-size:11px}
+#tip{position:fixed;z-index:300;pointer-events:none;background:rgba(10,13,18,.96);border:1px solid var(--line2);
+  border-radius:10px;padding:10px 13px;font-size:.78rem;max-width:300px;box-shadow:0 12px 34px rgba(0,0,0,.55);
+  opacity:0;transform:translateY(4px);transition:opacity .12s,transform .12s}
+#tip.show{opacity:1;transform:translateY(0)}
+#tip .t-h{font-weight:800;color:var(--amber);margin-bottom:5px;font-family:var(--mono);font-size:.74rem;letter-spacing:.05em}
+#tip .t-r{display:flex;justify-content:space-between;gap:14px;padding:1px 0}
+#tip .t-r i{width:8px;height:8px;border-radius:2px;display:inline-block;margin-right:6px}
+#tip .t-t{border-top:1px solid var(--line);margin-top:5px;padding-top:5px;font-weight:700}
+#tip .t-s{color:var(--muted);font-size:.72rem;margin-top:4px}
+.share-chips{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 2px}
+.share{font-family:var(--mono);font-size:.74rem;padding:5px 12px;border-radius:8px;border:1px solid var(--line2);background:var(--bg1)}
+.share b{color:var(--c)}
+
+.donut-grid{display:grid;grid-template-columns:340px minmax(0,1fr);gap:22px;align-items:center}
+@media(max-width:820px){.donut-grid{grid-template-columns:1fr}}
+.dlegend{list-style:none;display:flex;flex-direction:column;gap:6px}
+.dlegend li{display:flex;align-items:center;gap:10px;font-size:.8rem;padding:6px 10px;border-radius:8px;border:1px solid transparent;transition:.15s;cursor:default}
+.dlegend li:hover,.dlegend li.hl{background:var(--bg1);border-color:var(--line2)}
+.dlegend .sw{width:13px;height:13px;border-radius:4px;flex:none;background:var(--c)}
+.dlegend .sw.haz{background:repeating-linear-gradient(45deg,var(--c),var(--c) 3px,rgba(10,13,18,.85) 3px,rgba(10,13,18,.85) 6px)}
+.dlegend .nm{flex:1;min-width:0}
+.dlegend .nm small{display:block;color:var(--faint);font-family:var(--mono);font-size:.66rem}
+.dlegend .vv{font-family:var(--mono);font-size:.78rem;font-weight:600;white-space:nowrap}
+.dlegend .pc{color:var(--faint);font-family:var(--mono);font-size:.7rem;width:46px;text-align:right}
+.slice{cursor:pointer;transition:transform .18s}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 12px;align-items:center}
+.filters button{border:1px solid var(--line2);background:var(--bg1);color:var(--muted);font-size:.74rem;font-weight:700;padding:5px 13px;border-radius:99px;transition:.15s}
+.filters button.on{background:rgba(255,178,36,.15);color:var(--amber);border-color:var(--amber)}
+#eontoCount{font-family:var(--mono);font-size:.72rem;color:var(--faint);margin-left:auto}
+
+.hbar{display:grid;grid-template-columns:210px minmax(0,1fr) 110px;gap:12px;align-items:center;padding:9px 0;border-bottom:1px dashed var(--line)}
+.hbar:last-child{border-bottom:none}
+.hbar .hl-l{font-size:.8rem}
+.hbar .hl-l small{display:block;color:var(--faint);font-family:var(--mono);font-size:.68rem}
+.htrack{height:22px;background:var(--bg1);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex}
+.hseg{height:100%;width:0;transition:width .9s cubic-bezier(.2,.7,.2,1);cursor:pointer}
+.hseg:hover{filter:brightness(1.25)}
+.hbar .hv{font-family:var(--mono);font-size:.8rem;font-weight:600;text-align:right}
+@media(max-width:640px){.hbar{grid-template-columns:1fr;gap:5px}.hbar .hv{text-align:left}}
+
+.split22{display:grid;grid-template-columns:1fr 1.6fr;gap:16px;margin:14px 0}
+@media(max-width:700px){.split22{grid-template-columns:1fr}}
+.void{border:2px dashed var(--line2);border-radius:14px;padding:26px 20px;text-align:center;background:
+  repeating-linear-gradient(45deg,transparent,transparent 12px,rgba(139,152,172,.04) 12px,rgba(139,152,172,.04) 24px)}
+.void .big{font-size:clamp(2.4rem,6vw,3.6rem);font-weight:900;color:var(--faint);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.void .cap{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.imp{border:1px solid rgba(255,122,26,.45);border-radius:14px;padding:26px 20px;background:linear-gradient(150deg,rgba(255,122,26,.12),rgba(255,59,92,.07));position:relative;overflow:hidden}
+.imp .big{font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--amber);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.imp .cap{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.imp .sub{font-size:.78rem;color:var(--muted);margin-top:6px}
+.ratio{margin:18px 0 4px}
+.ratio .track{height:34px;border-radius:9px;overflow:hidden;display:flex;border:1px solid var(--line2);background:var(--bg1)}
+.ratio .r-imp{flex:1;background:linear-gradient(90deg,var(--ember),var(--red));display:flex;align-items:center;justify-content:center;
+  font-family:var(--mono);font-size:.74rem;font-weight:600;color:#1a0d06;position:relative;overflow:hidden}
+.ratio .r-imp::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 10px,rgba(0,0,0,.12) 10px,rgba(0,0,0,.12) 20px)}
+.ratio .rl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:6px}
+
+.tl-note{display:flex;gap:16px;flex-wrap:wrap;font-size:.76rem;color:var(--muted);margin:8px 0}
+.tl-note i{width:12px;height:12px;border-radius:3px;display:inline-block;vertical-align:-2px;margin-right:6px}
+.tl-bar{cursor:pointer}
+.tl-bar:hover .tl-base,.tl-bar:focus .tl-base{filter:brightness(1.2)}
+
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:820px){.cards{grid-template-columns:1fr}}
+.flagcard{background:linear-gradient(165deg,var(--panel2),var(--panel));border:1px solid var(--line);border-left:4px solid var(--red);
+  border-radius:12px;padding:17px 18px;transition:.2s;position:relative}
+.flagcard:hover{transform:translateY(-2px);border-color:var(--line2);border-left-color:var(--red);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.flagcard .tagline{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;color:var(--red);text-transform:uppercase;margin-bottom:7px}
+.flagcard h4{font-size:.95rem;font-weight:800;margin-bottom:8px}
+.flagcard p{font-size:.83rem;color:var(--muted);margin:0}
+.vs{display:flex;gap:8px;align-items:stretch;margin:10px 0 4px;flex-wrap:wrap}
+.vs .v{flex:1;min-width:120px;background:var(--bg1);border:1px solid var(--line);border-radius:9px;padding:8px 11px}
+.vs .v small{display:block;font-family:var(--mono);font-size:.62rem;color:var(--faint);letter-spacing:.08em;text-transform:uppercase}
+.vs .v b{font-size:.86rem;font-variant-numeric:tabular-nums}
+.vs .x{align-self:center;color:var(--red);font-weight:900;font-family:var(--mono)}
+.flagcard.wide{grid-column:1/-1;border-left-color:var(--purple)}
+.flagcard.wide .tagline{color:var(--purple)}
+blockquote{border-left:3px solid var(--purple);padding:8px 14px;margin:10px 0;background:rgba(183,140,255,.06);border-radius:0 8px 8px 0;font-size:.86rem;color:var(--ink)}
+
+.redact{list-style:none;display:flex;flex-direction:column;gap:9px}
+.redact li{display:flex;align-items:center;gap:13px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 15px;font-size:.88rem}
+.redact .claim{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(255,59,92,.75);text-decoration-thickness:2px;flex:1}
+.redact .stamp{flex:none;font-family:var(--mono);font-size:.6rem;font-weight:600;letter-spacing:.14em;color:var(--red);
+  border:1.5px solid var(--red);border-radius:5px;padding:3px 8px;transform:rotate(-2deg);text-transform:uppercase;opacity:.9}
+.redact .fix{font-size:.74rem;color:var(--amber);font-family:var(--mono)}
+@media(max-width:560px){.redact li{flex-wrap:wrap}.redact .stamp{transform:none}}
+
+.concl{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:820px){.concl{grid-template-columns:1fr}}
+.cbox{border-radius:12px;padding:18px;border:1px solid var(--line)}
+.cbox.no{background:rgba(255,59,92,.05);border-color:rgba(255,59,92,.3)}
+.cbox.yes{background:rgba(44,230,176,.05);border-color:rgba(44,230,176,.3)}
+.cbox h4{font-size:.92rem;margin-bottom:10px;display:flex;gap:8px;align-items:center}
+.cbox.no h4{color:var(--red)}.cbox.yes h4{color:var(--teal)}
+.cbox ul{list-style:none}
+.cbox li{font-size:.83rem;color:var(--muted);padding:5px 0 5px 24px;position:relative}
+.cbox.no li::before{content:"✕";position:absolute;left:2px;color:var(--red);font-weight:700}
+.cbox.yes li::before{content:"✓";position:absolute;left:2px;color:var(--teal);font-weight:700}
+
+.legal{border:1px solid var(--line);border-left:4px solid var(--muted);background:rgba(30,41,59,.2);border-radius:0 12px 12px 0;padding:18px 22px;margin-top:34px;font-size:.82rem}
+.legal .lt{color:var(--muted);font-weight:700;margin-bottom:7px;font-size:.8rem;letter-spacing:.04em}
+.legal p{color:var(--muted);margin:0;line-height:1.6}
+footer{border-top:1px solid var(--line);margin-top:44px;padding:30px 0 10px;text-align:center;color:var(--muted)}
+footer .fl{display:flex;gap:4px 16px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+footer .fl a{color:var(--muted);text-decoration:none;font-size:.8rem;font-weight:600}
+footer .fl a:hover{color:var(--teal)}
+footer .motto{font-weight:800;color:var(--ink);letter-spacing:.03em}
+.tags{margin-top:12px}
+.tag{display:inline-block;background:var(--bg1);color:var(--teal);font-size:.72rem;font-family:var(--mono);padding:3px 11px;border-radius:99px;margin:3px;border:1px solid var(--line)}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+#toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,80px);z-index:400;background:var(--panel2);border:1px solid var(--teal);
+  color:var(--ink);padding:11px 20px;border-radius:11px;font-size:.84rem;font-weight:700;box-shadow:0 14px 40px rgba(0,0,0,.5);
+  transition:transform .3s cubic-bezier(.2,.7,.2,1);display:flex;gap:9px;align-items:center}
+#toast.show{transform:translate(-50%,0)}
+#toast i{color:var(--teal)}
+#toTop{position:fixed;right:22px;bottom:22px;z-index:150;width:44px;height:44px;border-radius:12px;border:1px solid var(--line2);
+  background:rgba(19,26,36,.9);color:var(--amber);font-size:1.1rem;opacity:0;pointer-events:none;transition:.25s;backdrop-filter:blur(8px)}
+#toTop.show{opacity:1;pointer-events:auto}
+#toTop:hover{border-color:var(--amber);transform:translateY(-2px)}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .bg-grain{animation:none}
+  *{transition-duration:.01ms!important;animation-duration:.01ms!important}
 }
-
-.container {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 20px 60px;
-}
-
-/* HEADER + NAV */
-.header {
-  background: var(--panel);
-  border-bottom: 1px solid var(--border);
-  padding: 16px 0;
-  margin-bottom: 40px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 18px;
-  justify-content: center;
-  align-items: center;
-}
-
-.site-nav a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.92rem;
-  font-weight: 500;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: all 0.2s;
-}
-
-.site-nav a:hover {
-  color: var(--neon);
-  background: rgba(0, 255, 204, 0.08);
-}
-
-.site-nav a.alert {
-  color: var(--alert);
-  border: 1px solid rgba(255, 51, 102, 0.3);
-}
-
-.site-nav a.alert:hover {
-  background: rgba(255, 51, 102, 0.1);
-  color: #ff6b8a;
-}
-
-/* TYPOGRAPHY */
-h1 {
-  font-size: clamp(1.6rem, 4.5vw, 2.1rem);
-  color: var(--neon);
-  margin-bottom: 8px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.lead {
-  color: var(--muted);
-  font-size: 1.05rem;
-  margin-bottom: 6px;
-}
-
-.meta {
-  font-size: 0.88rem;
-  color: var(--muted);
-  margin-bottom: 32px;
-}
-
-h2 {
-  font-size: 1.25rem;
-  color: var(--neon);
-  margin: 40px 0 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
-}
-
-h3 {
-  font-size: 1.05rem;
-  color: var(--text);
-  margin: 28px 0 12px;
-}
-
-p {
-  margin-bottom: 14px;
-}
-
-/* TABLES */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 16px 0 24px;
-  font-size: 0.9rem;
-  background: var(--panel);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-th, td {
-  border: 1px solid var(--border);
-  padding: 10px 12px;
-  text-align: left;
-  vertical-align: top;
-}
-
-th {
-  background: var(--code);
-  color: var(--neon);
-  font-weight: 600;
-}
-
-td.num, th.num {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-tr:nth-child(even) td {
-  background: rgba(15, 23, 42, 0.4);
-}
-
-/* FLAGS / NOTES */
-.flag {
-  border-left: 4px solid var(--alert);
-  background: linear-gradient(90deg, rgba(255, 51, 102, 0.08), transparent);
-  padding: 14px 18px;
-  margin: 18px 0;
-  border-radius: 0 8px 8px 0;
-}
-
-.flag h4 {
-  color: var(--alert);
-  margin-bottom: 6px;
-  font-size: 0.98rem;
-}
-
-.not {
-  border-left: 4px solid var(--muted);
-  background: var(--code);
-  padding: 14px 18px;
-  margin: 18px 0;
-  border-radius: 0 8px 8px 0;
-}
-
-.not h4 {
-  color: var(--muted);
-  margin-bottom: 6px;
-  font-size: 0.98rem;
-}
-
-.note, .src {
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin-top: 6px;
-}
-
-.has-star {
-  color: var(--alert);
-  font-weight: 700;
-}
-
-/* FOOTER */
-.site-footer {
-  margin-top: 50px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.tags {
-  margin-top: 12px;
-}
-
-.tag {
-  display: inline-block;
-  background: var(--code);
-  color: var(--neon);
-  font-size: 0.78rem;
-  padding: 3px 11px;
-  border-radius: 20px;
-  margin: 3px;
-  border: 1px solid var(--border);
-}
-
-ul {
-  margin: 12px 0 12px 20px;
-}
-
-li {
-  margin-bottom: 6px;
-}
-
-@media (max-width: 700px) {
-  table { font-size: 0.82rem; }
-  th, td { padding: 8px 8px; }
+@media print{
+  header,#progress,#dust,.bg-mesh,.bg-grid,.bg-grain,#toTop,#toast,#tip,.copy,.hact,.chart-tools,.filters,.secnav{display:none!important}
+  body{background:#fff;color:#111}
+  main{padding-top:0;max-width:100%}
+  .sec{grid-template-columns:1fr;padding:20px 0;break-inside:avoid-page}
+  .sec-head{position:static}
+  .panel,.stat,.flagcard,.cbox,.tblwrap,table{background:#fff!important;border-color:#bbb!important;box-shadow:none!important}
+  .stat .val,.sec-head h2,h1 .hl{color:#111!important;-webkit-text-fill-color:#111}
+  .rv{opacity:1!important;transform:none!important}
+  .lead,.src,p,td{color:#222!important}
+  a{color:#111}
 }
 </style>
+<noscript><style>.rv{opacity:1;transform:none}.hseg{width:var(--w)!important}</style></noscript>
 </head>
 <body>
+<a class="skip" href="#s1">Preskoči na sadržaj</a>
+<div class="bg-mesh" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-grain" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"></div>
 
-<header class="header">
-  <div class="container">
-    <nav class="site-nav">
-      <a href="index_dosje_koromacno/index_dosje_koromacno.html">Početna</a>
-      <a href="brevik_kodeco.html">Brevik vs KOdeCO</a>
-      <a href="docs/pantheon.html" class="alert">Pantheon / KOdeCO dosje</a>
-      <a href="energija.html">Energija</a>
-      <a href="dozvole.html">Dozvole</a>
-      <a href="promet.html">Promet otpada</a>
+<header id="hdr">
+  <div class="hwrap">
+    <div class="hrow">
+      <a class="brand" href="index_dosje_koromacno/index_dosje_koromacno.html" aria-label="Dosje Koromačno — početna">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+          <rect x="1.5" y="1.5" width="31" height="31" rx="8" stroke="#ffb224" stroke-width="1.6"/>
+          <circle cx="17" cy="17" r="9.5" stroke="#2ce6b0" stroke-width="1.3" stroke-dasharray="3 2.4"/>
+          <path d="M17 9.5 L21 19 H13 Z" fill="#ff7a1a"/>
+          <circle cx="17" cy="22.6" r="1.7" fill="#ff3b5c"/>
+        </svg>
+        <span><b>DOSJE KOROMAČNO</b><small>promet otpada · forenzika</small></span>
+      </a>
+      <nav class="proj" aria-label="Projekt">
+        <a href="index_dosje_koromacno/index_dosje_koromacno.html">Početna</a>
+        <a href="brevik_kodeco.html">Brevik vs KOdeCO</a>
+        <a href="docs/pantheon.html" class="alert">Pantheon / KOdeCO</a>
+        <a href="energija.html">Energija</a>
+        <a href="dozvole.html">Dozvole</a>
+        <a href="promet.html" aria-current="page" style="color:var(--amber)">Promet otpada</a>
+      </nav>
+      <div class="hact">
+        <button class="btn" id="copySummary" type="button">⧉ <span>Kopiraj sažetak</span></button>
+        <button class="btn solid" id="printBtn" type="button">⎙ <span>Ispis / PDF</span></button>
+        <button class="btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="secnav" aria-label="Izbornik">☰</button>
+      </div>
+    </div>
+    <nav class="secnav" id="secnav" aria-label="Sekcije">
+      <a href="#s1">01 · Sažetak</a><a href="#s2">02 · Godine</a><a href="#s3">03 · eONTO</a>
+      <a href="#s4">04 · RDF 2022</a><a href="#s5">05 · Consenti</a><a href="#s6">06 · Nesklad</a>
+      <a href="#s7">07 · Nedokazano</a><a href="#s8">08 · Zaključak</a>
     </nav>
   </div>
 </header>
 
-<main class="container">
-
-  <h1>Prekogranični promet otpada — Holcim Koromačno 2015–2024</h1>
-  <p class="lead">Verificirani podaci iz službenih dokumenata za razdoblje 2015.–2024.</p>
-  <p class="meta">Izvori: eONTO / OZO izvješća / notifikacijski consenti · Metodologija: samo podaci koji se mogu provjeriti u priloženim dokumentima</p>
-
-  <h2>1. Sažetak</h2>
-  <p>Iz godišnjih realizacijskih tablica i eONTO baze proizlazi da je u tvornicu cementa u Koromačnu u razdoblju 2015.–2024. uvezeno najmanje <strong>144.056,79 tona</strong> otpada pod režimom prekogranične notifikacije. eONTO dodatno bilježi <strong>55.041,08 tona</strong> uvoza <em>bez</em> notifikacije (2018.–2024.), uglavnom guma, šljake i pepela.</p>
-  <p>U 2022. godini domaći RDF (KBO 19 12 10) pao je na <strong>0 tona</strong>, dok je uvezeno <strong>20.538,72 tone</strong> — peć je te godine radila isključivo na uvoznom gorivu.</p>
-  <p>Dva consenta za opasni otpad (<code>IT 023367</code> i <code>AT 030821</code>) imaju valjanost koja prelazi 14. rujna 2019. Oba se pozivaju na prethodne dozvole (2014. i 2015.). <strong>Ne postoji evidencija u godišnjim tablicama da su pošiljke pod tim consentima stvarno izvršene.</strong></p>
-
-  <h2>2. Ukupni notificirani uvoz po godinama</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Godina</th>
-        <th class="num">Austrija (t)</th>
-        <th class="num">Italija (t)</th>
-        <th class="num">Slovenija (t)</th>
-        <th class="num">Ukupno (t)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>2015.</td><td class="num">0</td><td class="num">0</td><td class="num">2.337,10</td><td class="num">2.337,10</td></tr>
-      <tr><td>2016.</td><td class="num">16,64</td><td class="num">0</td><td class="num">4.020,76</td><td class="num">4.037,40</td></tr>
-      <tr><td>2017.</td><td class="num">2.641,39</td><td class="num">177,98</td><td class="num">1.655,60</td><td class="num">4.474,97</td></tr>
-      <tr><td>2018.</td><td class="num">6.613,47</td><td class="num">3.047,26</td><td class="num">340,88</td><td class="num">10.001,61</td></tr>
-      <tr><td>2019.</td><td class="num">3.628,14</td><td class="num">6.624,92</td><td class="num">121,06</td><td class="num">10.374,12</td></tr>
-      <tr><td>2020.</td><td class="num">9.091,65</td><td class="num">7.401,40</td><td class="num">1.077,90</td><td class="num">17.570,95</td></tr>
-      <tr><td>2021.</td><td class="num">8.256,29</td><td class="num">13.553,61</td><td class="num">1.554,30</td><td class="num">23.364,20</td></tr>
-      <tr><td>2022.</td><td class="num">3.218,44</td><td class="num">20.223,65</td><td class="num">1.203,16</td><td class="num">24.645,25</td></tr>
-      <tr><td>2023.</td><td class="num">1.545,64</td><td class="num">21.058,82</td><td class="num">1.343,68</td><td class="num">23.948,14</td></tr>
-      <tr><td>2024.</td><td class="num">2.936,20</td><td class="num">17.801,31</td><td class="num">2.565,54</td><td class="num">23.303,05</td></tr>
-      <tr>
-        <th>Ukupno</th>
-        <th class="num">37.947,77</th>
-        <th class="num">89.888,95</th>
-        <th class="num">16.219,98</th>
-        <th class="num">144.056,79</th>
-      </tr>
-    </tbody>
-  </table>
-  <p class="src">Izvor: <em>Prilog 1_HOLCIM hrvatska_2015-2024_godišnja izvješća_prekogranični promet i eONTO.xlsx</em></p>
-
-  <h2>3. eONTO baza 2018.–2024.</h2>
-
-  <h3>3.1 Po notifikaciji — ukupno 130.736,30 t</h3>
-  <table>
-    <thead>
-      <tr><th>KBO</th><th>Naziv</th><th>Opasno</th><th class="num">Ukupno (t)</th><th>Podrijetlo</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>19 12 10</td><td>Gorivi otpad (RDF)</td><td>Ne</td><td class="num">115.944,77</td><td>Italija 84.347,05; Austrija 31.073,96; Slovenija 523,76</td></tr>
-      <tr><td>13 02 05<span class="has-star">*</span></td><td>Neklorirana motorna, strojna i maziva ulja</td><td>Da</td><td class="num">5.689,02</td><td>Austrija 2.905,44; Slovenija 2.783,58</td></tr>
-      <tr><td>19 02 07<span class="has-star">*</span></td><td>Ulja i koncentrati iz procesa odvajanja</td><td>Da</td><td class="num">3.449,28</td><td>Slovenija</td></tr>
-      <tr><td>19 12 12</td><td>Ostali otpad od mehaničke obrade</td><td>Ne</td><td class="num">2.812,74</td><td>Italija 2.569,78; Slovenija 242,96</td></tr>
-      <tr><td>19 08 05</td><td>Muljevi od obrade urbanih otpadnih voda</td><td>Ne</td><td class="num">2.289,82</td><td>Italija 1.429,26; Slovenija 860,56</td></tr>
-      <tr><td>12 01 09<span class="has-star">*</span></td><td>Emulzije i otopine za strojnu obradu</td><td>Da</td><td class="num">384,92</td><td>Italija</td></tr>
-      <tr><td>13 05 07<span class="has-star">*</span></td><td>Zauljena voda iz separatora ulje/voda</td><td>Da</td><td class="num">165,75</td><td>Italija</td></tr>
-    </tbody>
-  </table>
-
-  <h3>3.2 Bez notifikacije — ukupno 55.041,08 t</h3>
-  <table>
-    <thead>
-      <tr><th>KBO</th><th>Naziv</th><th class="num">Ukupno (t)</th><th>Podrijetlo</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>16 01 03</td><td>Otpadne gume</td><td class="num">22.687,80</td><td>Slovenija 18.059,96; Italija 4.344,54; Austrija 283,30</td></tr>
-      <tr><td>10 02 02</td><td>Neprerađena šljaka</td><td class="num">18.244,16</td><td>Italija</td></tr>
-      <tr><td>02 02 03</td><td>Materijali neprikladni za potrošnju ili preradu</td><td class="num">10.208,24</td><td>Slovenija 10.183,74; Austrija 24,50</td></tr>
-      <tr><td>10 01 02</td><td>Lebdeći pepeo od izgaranja ugljena</td><td class="num">3.792,74</td><td>BiH 3.681,92; Italija 110,82</td></tr>
-      <tr><td>10 01 05</td><td>Kruti reakcijski otpad na bazi kalcija</td><td class="num">108,14</td><td>Italija</td></tr>
-    </tbody>
-  </table>
-  <p class="src">Izvor: eONTO listovi „UVOZ po notifikaciji_eONTO“ i „UVOZ bez notifikacije_eONTO“, 1.1.2018.–31.12.2024.</p>
-
-  <h2>4. Domaći RDF 2022. = 0 t</h2>
-  <table>
-    <thead>
-      <tr><th>KBO</th><th class="num">S područja Hrvatske (t)</th><th class="num">Uvezeni otpad (t)</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>19 12 10</td><td class="num">0,00</td><td class="num">20.538,72</td></tr>
-    </tbody>
-  </table>
-  <p class="src">Izvor: ozo_2022_Holcim_Koromacno.pdf</p>
-
-  <h2>5. Formalni kontinuitet dvaju consenata za opasni otpad</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Notifikacija</th><th>Pošiljatelj</th><th>KBO</th>
-        <th class="num">Količina (t)</th><th>Izdano</th><th>Valjanost</th>
-        <th>Poziva se na</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>IT 023367</td><td>NEDA AMBIENTE FVG Srl</td>
-        <td>13 05 07<span class="has-star">*</span></td>
-        <td class="num">700</td><td>6.8.2019.</td>
-        <td>15.9.2019. – 14.9.2020.</td>
-        <td>UP/I 351-02/13-11/121 od 13.2.2015.</td>
-      </tr>
-      <tr>
-        <td>AT 030821</td><td>Fischer Entsorgungs- und Transport GmbH</td>
-        <td>13 02 05<span class="has-star">*</span></td>
-        <td class="num">1.500</td><td>6.3.2019.</td>
-        <td>6.3.2019. – 14.2.2020.</td>
-        <td>UP/I 351-03/12-02/96 od 15.9.2014.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p class="note"><strong>Ne postoji evidencija u godišnjim realizacijskim tablicama da su pošiljke pod tim consentima stvarno izvršene.</strong> Za potvrdu stvarnih pošiljaka potrebni su movement dokumenti.</p>
-
-  <h2>6. Dokumentirane nekonzistentnosti</h2>
-
-  <div class="flag">
-    <h4>6.1 Datumski nesklad — IT 028349 (DELCA ENERGY)</h4>
-    <p>Notifikacijski list navodi početak prijevoza <strong>15.2.2022.</strong>; hrvatski consent izdan je <strong>18.3.2022.</strong></p>
-  </div>
-
-  <div class="flag">
-    <h4>6.2 Datumski nesklad — IT 028749 (RECYCLA)</h4>
-    <p>Consent: <strong>6.6.2022. – 5.6.2023.</strong>; notifikacijski list: <strong>1.1.2022. – 1.1.2023.</strong></p>
-  </div>
-
-  <div class="flag">
-    <h4>6.3 Nekonzistentni kapaciteti u OZO obrascima</h4>
-    <p>OZO 2021: mlin u R5 postupku = <strong>180.000 t/god</strong>. OZO 2022. i OZO 2023: isti mlin = <strong>50 t/god</strong>.</p>
-  </div>
-
-  <div class="flag">
-    <h4>6.4 Razmak između dvije austrijske notifikacije</h4>
-    <p>AT 034956 završava <strong>30.6.2021.</strong>, AT 036314 počinje <strong>16.7.2021.</strong> — praznina od <strong>15 dana</strong>.</p>
-  </div>
-
-  <div class="flag">
-    <h4>6.5 Korporativni narativ vs. činjenice — Projekt KOdeCO net zero</h4>
-    <p>Tvrtka Holcim je na prezentaciji za medije (6.11.2026.) istaknula kako je <strong>„KOdeCO net zero odvojena tema“</strong> u odnosu na redovito poslovanje, emisije i obradu neopasnog otpada. Dok se javnosti nudi narativ o „odvojenosti“ i „dekarbonizaciji“, podaci iz eONTO sustava (144.056,79 t uvoza) pokazuju stvarno poslovanje tvornice.</p>
-  </div>
-
-  <h2>7. Što <em>nije</em> dokazano — i ne smije se koristiti</h2>
-
-  <div class="not">
-    <h4>Nije u priloženim dokumentima</h4>
-    <ul>
-      <li>Figura od <strong>19.013 tona</strong> talijanskog otpada</li>
-      <li>Cijena od <strong>124 €/t</strong></li>
-      <li><strong>3× prekoračenje dozvola</strong></li>
-      <li><strong>11-mjesečni austrijski vakuum</strong> (stvarno 15 dana)</li>
-      <li><strong>19 02 07* bez dozvole</strong></li>
-      <li><strong>TOC emisije</strong></li>
-    </ul>
-  </div>
-
-  <h2>8. Zaključak</h2>
-  <p><strong>Podaci ne dokazuju „End-of-Waste“ prevaru.</strong> Svi priloženi dokumenti tretiraju materijal kao otpad i vode ga pod postupkom <strong>R1</strong>.</p>
-  <p><strong>Podaci dokumentiraju:</strong></p>
-  <ul>
-    <li>144.056,79 t notificiranog uvoza 2015.–2024.</li>
-    <li>55.041,08 t uvoza bez notifikacije 2018.–2024.</li>
-    <li>domaći RDF 0 t u 2022., uz 20.538,72 t uvezenog</li>
-    <li>dva consenta za opasni otpad (IT 023367, AT 030821) s valjanošću preko 14.9.2019., bez evidentiranih pošiljaka</li>
-    <li>datumski neskladi i nekonzistentne kapacitete u OZO obrascima</li>
-  </ul>
-  <p>Za potvrdu eventualnih prekršaja nužni su <strong>movement dokumenti</strong> i uvid u važenje osnovnih dozvola.</p>
-
-<!-- PRAVNA ZAŠTITA I OGRADA OD ODGOVORNOSTI -->
-<div class="card card-neon" style="font-size: 0.85rem; border-left: 4px solid var(--muted); background: rgba(30, 41, 59, 0.2); padding: 15px 20px; margin-top: 30px;">
-    <p style="margin-bottom: 5px; color: var(--muted); font-weight: 600;">⚖️ PRAVNA NAPOMENA I IZJAVA O OGRANIČENJU ODGOVORNOSTI</p>
-    <p style="color: var(--muted); margin: 0; line-height: 1.5;">
-        Svi izneseni podaci, analize i kronologija uvoza otpada na ovoj stranici temelje se isključivo na javno dostupnim informacijama i službenim dokumentima dobivenim putem zahtjeva za pristup informacijama (ZPPI). Sadržaj je namijenjen isključivo informiranju javnosti i zaštiti javnog interesa u pogledu očuvanja okoliša i zdravlja građana. Vrijednosni sudovi, kritički osvrti i iznesene sumnje predstavljaju ustavom zajamčeno pravo na slobodu govora i postavljanje legitimnih pitanja nadležnim institucijama, a ne pravomoćne sudske ili inspekcijske zaključke. Autor ne preuzima odgovornost za eventualne naknadne izmjene u službenim registrima trećih strana.
-    </p>
-</div>
-
-  <div class="site-footer">
-    <p>Dosje Koromačno · Istina se ne pregovara</p>
-    <div class="tags">
-      <span class="tag">#Koromačno</span>
-      <span class="tag">#PrometOtpada</span>
-      <span class="tag">#Holcim</span>
-      <span class="tag">#eONTO</span>
-      <span class="tag">#SHA256</span>
+<main id="main">
+  <div class="hero" id="hero">
+    <canvas id="dust" aria-hidden="true"></canvas>
+    <p class="eyebrow rv">Forenzički presjek · eONTO / OZO / notifikacije</p>
+    <h1 class="rv" style="--d:.08s">Prekogranični promet otpada<br><span class="hl">Holcim Koromačno · 2015–2024</span></h1>
+    <p class="lead rv" style="--d:.16s">Verificirani podaci iz službenih dokumenata za razdoblje 2015.–2024. Samo ono što se može provjeriti u priloženim dokumentima — bez pretpostavki, bez pripisivanja namjere.</p>
+    <div class="meta-chips rv" style="--d:.22s">
+      <span class="chip"><i></i>eONTO · snapshot 06.10.2026.</span>
+      <span class="chip"><i></i>OZO godišnja izvješća</span>
+      <span class="chip"><i></i>Notifikacijski consenti IT / AT / SI</span>
+      <span class="chip warn"><i></i>Metodologija: samo provjerljivi podaci</span>
     </div>
+    <div class="legend-method rv" style="--d:.28s">
+      <span class="m-fakt"><b>FAKT</b>iz dokumenta</span>
+      <span class="m-izr"><b>IZR</b>vlastiti izračun iz dokumenata</span>
+      <span class="m-open"><b>OTVORENO</b>treba movement / ZPPI</span>
+    </div>
+
+    <div class="stats">
+      <div class="stat rv" style="--sc:var(--teal);--d:.30s">
+        <button class="copy" data-copy="Notificirani uvoz 2015–2024: 144.056,79 t (godišnje realizacijske tablice, Prilog 1)" title="Kopiraj brojku" type="button">⧉</button>
+        <div class="lab">Notificirani uvoz · 2015–2024</div>
+        <div class="val"><span data-count="144056.79">0,00</span><small>t</small></div>
+        <div class="sub">režim prekogranične notifikacije · FAKT</div>
+      </div>
+      <div class="stat rv" style="--sc:var(--blue);--d:.36s">
+        <button class="copy" data-copy="Uvoz bez notifikacije 2018–2024: 55.041,08 t (eONTO: gume, šljaka, pepeo)" title="Kopiraj brojku" type="button">⧉</button>
+        <div class="lab">Bez notifikacije · 2018–2024</div>
+        <div class="val"><span data-count="55041.08">0,00</span><small>t</small></div>
+        <div class="sub">eONTO · gume, šljaka, pepeo · FAKT</div>
+      </div>
+      <div class="stat rv" style="--sc:var(--amber);--d:.42s">
+        <button class="copy" data-copy="Zbroj dvaju režima: 199.097,87 t (144.056,79 notificirano 2015–2024 + 55.041,08 bez notifikacije 2018–2024; razdoblja se razlikuju)" title="Kopiraj brojku" type="button">⧉</button>
+        <div class="lab">Zbroj režima · IZR</div>
+        <div class="val"><span data-count="199097.87">0,00</span><small>t</small></div>
+        <div class="sub">razdoblja se razlikuju · nije dvostruko brojanje</div>
+      </div>
+      <div class="stat rv" style="--sc:var(--red);--d:.48s">
+        <button class="copy" data-copy="2022: domaći RDF (19 12 10) = 0,00 t; uvezeno 20.538,72 t (ozo_2022_Holcim_Koromacno.pdf)" title="Kopiraj brojku" type="button">⧉</button>
+        <div class="lab">Domaći RDF · 2022.</div>
+        <div class="val"><span data-count="0">0,00</span><small>t</small></div>
+        <div class="sub">uz 20.538,72 t uvoza · FAKT</div>
+      </div>
+    </div>
+    <p class="stat-note rv" style="--d:.54s">Napomena: eONTO „po notifikaciji“ (130.736,30 t, 2018–2024) kontrolni je presjek istih notificiranih tokova — ne zbraja se s godišnjim tablicama.</p>
   </div>
 
+  <!-- 01 SAŽETAK -->
+  <section class="sec" id="s1" style="--acc:var(--teal)">
+    <div class="sec-head rv"><div class="idx">01 / PRESJEK</div><h2>Sažetak</h2><div class="bar"></div>
+      <p>Tri režima evidencije, jedna tvornica. Brojke se međusobno kontroliraju.</p></div>
+    <div>
+      <p class="rv">Iz godišnjih realizacijskih tablica i eONTO baze proizlazi da je u tvornicu cementa u Koromačnu u razdoblju 2015.–2024. uvezeno najmanje <strong>144.056,79 tona</strong> otpada pod režimom prekogranične notifikacije. eONTO dodatno bilježi <strong>55.041,08 tona</strong> uvoza <em>bez</em> notifikacije (2018.–2024.), uglavnom guma, šljake i pepela.</p>
+      <p class="rv" style="--d:.06s">U 2022. godini domaći RDF (KBO 19 12 10) pao je na <strong>0 tona</strong>, dok je uvezeno <strong>20.538,72 tone</strong> — peć je te godine radila isključivo na uvoznom gorivu.</p>
+      <p class="rv" style="--d:.12s">Dva consenta za opasni otpad (<code>IT 023367</code> i <code>AT 030821</code>) imaju valjanost koja prelazi 14. rujna 2019. Oba se pozivaju na prethodne dozvole (2014. i 2015.). <strong>Ne postoji evidencija u godišnjim tablicama da su pošiljke pod tim consentima stvarno izvršene.</strong></p>
+    </div>
+  </section>
+
+  <!-- 02 GODINE -->
+  <section class="sec" id="s2" style="--acc:var(--amber)">
+    <div class="sec-head rv"><div class="idx">02 / TOKOVI</div><h2>Notificirani uvoz po godinama</h2><div class="bar"></div>
+      <p>Ukupno <strong>144.056,79 t</strong>. Klikni državu u legendi za uključenje/isključenje; mijenjaj prikaz tone ↔ udio.</p></div>
+    <div>
+      <div class="panel rv">
+        <div class="chart-tools">
+          <div class="legend" id="yLegend" role="group" aria-label="Države"></div>
+          <div class="seg-toggle" role="group" aria-label="Način prikaza">
+            <button type="button" id="modeT" class="on" aria-pressed="true">TONE</button>
+            <button type="button" id="modeP" aria-pressed="false">UDIO %</button>
+          </div>
+        </div>
+        <div class="chartbox">
+          <svg class="chart" id="yChart" viewBox="0 0 960 400" role="img" aria-label="Stupčasti grafikon notificiranog uvoza po godinama i državama, 2015 do 2024"></svg>
+        </div>
+        <noscript><p class="src">Grafikon zahtijeva JavaScript — tablica ispod sadrži sve podatke.</p></noscript>
+        <div class="share-chips" id="shareChips"></div>
+      </div>
+      <div class="tblwrap rv" style="--d:.08s">
+        <table id="yTable">
+          <thead><tr><th>Godina</th><th class="num">Austrija (t)</th><th class="num">Italija (t)</th><th class="num">Slovenija (t)</th><th class="num">Ukupno (t)</th></tr></thead>
+          <tbody>
+            <tr data-year="2015"><td>2015.</td><td class="num">0,00</td><td class="num">0,00</td><td class="num">2.337,10</td><td class="num"><strong>2.337,10</strong></td></tr>
+            <tr data-year="2016"><td>2016.</td><td class="num">16,64</td><td class="num">0,00</td><td class="num">4.020,76</td><td class="num"><strong>4.037,40</strong></td></tr>
+            <tr data-year="2017"><td>2017.</td><td class="num">2.641,39</td><td class="num">177,98</td><td class="num">1.655,60</td><td class="num"><strong>4.474,97</strong></td></tr>
+            <tr data-year="2018"><td>2018.</td><td class="num">6.613,47</td><td class="num">3.047,26</td><td class="num">340,88</td><td class="num"><strong>10.001,61</strong></td></tr>
+            <tr data-year="2019"><td>2019.</td><td class="num">3.628,14</td><td class="num">6.624,92</td><td class="num">121,06</td><td class="num"><strong>10.374,12</strong></td></tr>
+            <tr data-year="2020"><td>2020.</td><td class="num">9.091,65</td><td class="num">7.401,40</td><td class="num">1.077,90</td><td class="num"><strong>17.570,95</strong></td></tr>
+            <tr data-year="2021"><td>2021.</td><td class="num">8.256,29</td><td class="num">13.553,61</td><td class="num">1.554,30</td><td class="num"><strong>23.364,20</strong></td></tr>
+            <tr data-year="2022"><td>2022.</td><td class="num">3.218,44</td><td class="num">20.223,65</td><td class="num">1.203,16</td><td class="num"><strong>24.645,25</strong></td></tr>
+            <tr data-year="2023"><td>2023.</td><td class="num">1.545,64</td><td class="num">21.058,82</td><td class="num">1.343,68</td><td class="num"><strong>23.948,14</strong></td></tr>
+            <tr data-year="2024"><td>2024.</td><td class="num">2.936,20</td><td class="num">17.801,31</td><td class="num">2.565,54</td><td class="num"><strong>23.303,05</strong></td></tr>
+          </tbody>
+          <tfoot><tr><th>Ukupno</th><th class="num">37.947,86</th><th class="num">89.888,95</th><th class="num">16.219,98</th><th class="num">144.056,79</th></tr></tfoot>
+        </table>
+      </div>
+      <p class="src rv">Izvor: <em>Prilog 1_HOLCIM hrvatska_2015-2024_godišnja izvješća_prekogranični promet i eONTO.xlsx</em> · udjeli država: IZR</p>
+    </div>
+  </section>
+
+  <!-- 03 eONTO -->
+  <section class="sec" id="s3" style="--acc:var(--blue)">
+    <div class="sec-head rv"><div class="idx">03 / EVIDENCIJA</div><h2>eONTO baza 2018.–2024.</h2><div class="bar"></div>
+      <p>Dva odvojena režima. Šrafirani isječci označavaju opasni otpad (*).</p></div>
+    <div>
+      <div class="panel rv">
+        <h3>3.1 Po notifikaciji <span class="pill teal">130.736,30 t</span> <span class="pill red">opasni*: 9.688,97 t · 7,4% (IZR)</span></h3>
+        <div class="filters" role="group" aria-label="Filter eONTO">
+          <button type="button" data-f="all" class="on" aria-pressed="true">Sve</button>
+          <button type="button" data-f="haz" aria-pressed="false">Opasni*</button>
+          <button type="button" data-f="non" aria-pressed="false">Neopasni</button>
+          <span id="eontoCount"></span>
+        </div>
+        <div class="donut-grid">
+          <svg class="chart" id="eontoDonut" viewBox="0 0 340 340" role="img" aria-label="Prstenasti grafikon eONTO uvoza po ključnim brojevima otpada"></svg>
+          <ul class="dlegend" id="eontoLegend"></ul>
+        </div>
+        <div class="tblwrap">
+          <table id="eontoTable">
+            <thead><tr><th>KBO</th><th>Naziv</th><th>Opasno</th><th class="num">Ukupno (t)</th><th>Podrijetlo</th></tr></thead>
+            <tbody>
+              <tr data-haz="0"><td>19 12 10</td><td>Gorivi otpad (RDF)</td><td>Ne</td><td class="num">115.944,77</td><td>Italija 84.347,05; Austrija 31.073,96; Slovenija 523,76</td></tr>
+              <tr data-haz="1" class="hazrow"><td>13 02 05<span class="has-star">*</span></td><td>Neklorirana motorna, strojna i maziva ulja</td><td>Da</td><td class="num">5.689,02</td><td>Austrija 2.905,44; Slovenija 2.783,58</td></tr>
+              <tr data-haz="1" class="hazrow"><td>19 02 07<span class="has-star">*</span></td><td>Ulja i koncentrati iz procesa odvajanja</td><td>Da</td><td class="num">3.449,28</td><td>Slovenija</td></tr>
+              <tr data-haz="0"><td>19 12 12</td><td>Ostali otpad od mehaničke obrade</td><td>Ne</td><td class="num">2.812,74</td><td>Italija 2.569,78; Slovenija 242,96</td></tr>
+              <tr data-haz="0"><td>19 08 05</td><td>Muljevi od obrade urbanih otpadnih voda</td><td>Ne</td><td class="num">2.289,82</td><td>Italija 1.429,26; Slovenija 860,56</td></tr>
+              <tr data-haz="1" class="hazrow"><td>12 01 09<span class="has-star">*</span></td><td>Emulzije i otopine za strojnu obradu</td><td>Da</td><td class="num">384,92</td><td>Italija</td></tr>
+              <tr data-haz="1" class="hazrow"><td>13 05 07<span class="has-star">*</span></td><td>Zauljena voda iz separatora ulje/voda</td><td>Da</td><td class="num">165,75</td><td>Italija</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel rv" style="--d:.06s">
+        <h3>3.2 Bez notifikacije <span class="pill blue">55.041,08 t</span></h3>
+        <div class="legend" id="nnLegend" style="margin-bottom:12px"></div>
+        <div id="nnBars"></div>
+        <div class="tblwrap">
+          <table>
+            <thead><tr><th>KBO</th><th>Naziv</th><th class="num">Ukupno (t)</th><th>Podrijetlo</th></tr></thead>
+            <tbody>
+              <tr><td>16 01 03</td><td>Otpadne gume</td><td class="num">22.687,80</td><td>Slovenija 18.059,96; Italija 4.344,54; Austrija 283,30</td></tr>
+              <tr><td>10 02 02</td><td>Neprerađena šljaka</td><td class="num">18.244,16</td><td>Italija</td></tr>
+              <tr><td>02 02 03</td><td>Materijali neprikladni za potrošnju ili preradu</td><td class="num">10.208,24</td><td>Slovenija 10.183,74; Austrija 24,50</td></tr>
+              <tr><td>10 01 02</td><td>Lebdeći pepeo od izgaranja ugljena</td><td class="num">3.792,74</td><td>BiH 3.681,92; Italija 110,82</td></tr>
+              <tr><td>10 01 05</td><td>Kruti reakcijski otpad na bazi kalcija</td><td class="num">108,14</td><td>Italija</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="src">Izvor: eONTO listovi „UVOZ po notifikaciji_eONTO“ i „UVOZ bez notifikacije_eONTO“, 1.1.2018.–31.12.2024.</p>
+        <p class="src">Napomena: „bez notifikacije“ je režim evidencije (npr. gume, šljaka, pepeo) — nije isto što i „bez dozvole“.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 RDF 2022 -->
+  <section class="sec" id="s4" style="--acc:var(--red)">
+    <div class="sec-head rv"><div class="idx">04 / ANOMALIJA</div><h2>Domaći RDF 2022. = 0 t</h2><div class="bar"></div>
+      <p>KBO 19 12 10 · iz OZO obrasca za 2022. godinu.</p></div>
+    <div>
+      <div class="split22">
+        <div class="void rv">
+          <div class="cap">S područja Hrvatske</div>
+          <div class="big">0,00 t</div>
+          <div class="cap" style="margin-top:6px">domaći RDF · 19 12 10</div>
+        </div>
+        <div class="imp rv" style="--d:.08s">
+          <div class="cap">Uvezeni otpad</div>
+          <div class="big"><span data-count="20538.72">0,00</span> t</div>
+          <div class="sub">≈ 822 kamiona à 25 t (IZR) · peć je te godine radila isključivo na uvoznom gorivu</div>
+        </div>
+      </div>
+      <div class="ratio rv" style="--d:.12s">
+        <div class="track"><div class="r-imp">100% UVOZNO · 20.538,72 t</div></div>
+        <div class="rl"><span>domaći: 0%</span><span>uvezni: 100%</span></div>
+      </div>
+      <div class="tblwrap rv" style="--d:.16s">
+        <table>
+          <thead><tr><th>KBO</th><th class="num">S područja Hrvatske (t)</th><th class="num">Uvezeni otpad (t)</th></tr></thead>
+          <tbody><tr><td>19 12 10</td><td class="num">0,00</td><td class="num">20.538,72</td></tr></tbody>
+        </table>
+      </div>
+      <p class="src rv">Izvor: <em>ozo_2022_Holcim_Koromacno.pdf</em></p>
+    </div>
+  </section>
+
+  <!-- 05 CONSENTI -->
+  <section class="sec" id="s5" style="--acc:var(--purple)">
+    <div class="sec-head rv"><div class="idx">05 / VREMENSKA OS</div><h2>Kontinuitet dvaju consenata za opasni otpad</h2><div class="bar"></div>
+      <p>Valjanost prelazi istek temeljne dozvole (14.9.2019.). Pošiljke nisu evidentirane.</p></div>
+    <div>
+      <div class="panel rv">
+        <div class="tl-note">
+          <span><i style="background:var(--at)"></i>prije isteka dozvole</span>
+          <span><i style="background:repeating-linear-gradient(45deg,var(--red),var(--red) 3px,transparent 3px,transparent 6px)"></i>nakon isteka (šrafirano)</span>
+          <span><i style="background:var(--red);width:2px;height:14px;border-radius:0"></i>14.9.2019. — istek</span>
+        </div>
+        <svg class="chart" id="tlSvg" viewBox="0 0 960 250" role="img" aria-label="Vremenska os valjanosti consenata IT 023367 i AT 030821 u odnosu na istek temeljne dozvole 14 rujna 2019"></svg>
+        <noscript><p class="src">Vremenska os zahtijeva JavaScript — tablica ispod sadrži sve podatke.</p></noscript>
+      </div>
+      <div class="tblwrap rv" style="--d:.06s">
+        <table>
+          <thead><tr><th>Notifikacija</th><th>Pošiljatelj</th><th>KBO</th><th class="num">Količina (t)</th><th>Izdano</th><th>Valjanost</th><th>Poziva se na</th></tr></thead>
+          <tbody>
+            <tr><td>IT 023367</td><td>NEDA AMBIENTE FVG Srl</td><td>13 05 07<span class="has-star">*</span></td><td class="num">700</td><td>6.8.2019.</td><td>15.9.2019. – 14.9.2020.</td><td>UP/I 351-02/13-11/121 od 13.2.2015.</td></tr>
+            <tr><td>AT 030821</td><td>Fischer Entsorgungs- und Transport GmbH</td><td>13 02 05<span class="has-star">*</span></td><td class="num">1.500</td><td>6.3.2019.</td><td>6.3.2019. – 14.2.2020.</td><td>UP/I 351-03/12-02/96 od 15.9.2014.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="src rv"><strong>Ne postoji evidencija u godišnjim realizacijskim tablicama da su pošiljke pod tim consentima stvarno izvršene.</strong> Za potvrdu stvarnih pošiljaka potrebni su movement dokumenti. · OTVORENO</p>
+    </div>
+  </section>
+
+  <!-- 06 NESKLAD -->
+  <section class="sec" id="s6" style="--acc:var(--red)">
+    <div class="sec-head rv"><div class="idx">06 / KONTROLA</div><h2>Dokumentirane nekonzistentnosti</h2><div class="bar"></div>
+      <p>Svaka stavka je razlika između dvaju službenih zapisa — ne zaključak o namjeri.</p></div>
+    <div class="cards">
+      <div class="flagcard rv">
+        <div class="tagline">6.1 · Datumski nesklad</div>
+        <h4>IT 028349 — DELCA ENERGY</h4>
+        <div class="vs"><div class="v"><small>Notifikacijski list · početak</small><b>15.2.2022.</b></div><div class="x">≠</div><div class="v"><small>HR consent izdan</small><b>18.3.2022.</b></div></div>
+        <p>Početak prijevoza naveden prije izdavanja hrvatskog consenta.</p>
+      </div>
+      <div class="flagcard rv" style="--d:.06s">
+        <div class="tagline">6.2 · Datumski nesklad</div>
+        <h4>IT 028749 — RECYCLA</h4>
+        <div class="vs"><div class="v"><small>Consent</small><b>6.6.2022. – 5.6.2023.</b></div><div class="x">≠</div><div class="v"><small>Notifikacijski list</small><b>1.1.2022. – 1.1.2023.</b></div></div>
+        <p>Različiti periodi valjanosti u dva dokumenta za istu notifikaciju.</p>
+      </div>
+      <div class="flagcard rv" style="--d:.12s">
+        <div class="tagline">6.3 · Kapacitet</div>
+        <h4>Nekonzistentni kapaciteti u OZO obrascima</h4>
+        <div class="vs"><div class="v"><small>OZO 2021 · mlin R5</small><b>180.000 t/god</b></div><div class="x">≠</div><div class="v"><small>OZO 2022. i 2023.</small><b>50 t/god</b></div></div>
+        <p>Isti mlin, isti postupak — tri reda veličine razlike između obrazaca.</p>
+      </div>
+      <div class="flagcard rv" style="--d:.18s">
+        <div class="tagline">6.4 · Praznina</div>
+        <h4>Razmak između dvije austrijske notifikacije</h4>
+        <div class="vs"><div class="v"><small>AT 034956 završava</small><b>30.6.2021.</b></div><div class="x">→</div><div class="v"><small>AT 036314 počinje</small><b>16.7.2021.</b></div></div>
+        <p>Praznina od <strong style="color:var(--amber)">15 dana</strong> — ne „11-mjesečni vakuum“.</p>
+      </div>
+      <div class="flagcard wide rv" style="--d:.24s">
+        <div class="tagline">6.5 · Narativ vs. podaci</div>
+        <h4>Korporativni narativ — projekt KOdeCO net zero</h4>
+        <blockquote>„KOdeCO net zero odvojena tema“ — prezentacija za medije, 6.11.2026.</blockquote>
+        <p>Tvrtka Holcim je na prezentaciji za medije (6.11.2026.) istaknula kako je <strong>„KOdeCO net zero odvojena tema“</strong> u odnosu na redovito poslovanje, emisije i obradu neopasnog otpada. Dok se javnosti nudi narativ o „odvojenosti“ i „dekarbonizaciji“, podaci iz eONTO sustava (<strong>144.056,79 t uvoza</strong>) pokazuju stvarno poslovanje tvornice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 NEDOKAZANO -->
+  <section class="sec" id="s7" style="--acc:var(--muted)">
+    <div class="sec-head rv"><div class="idx">07 / DISCIPLINA</div><h2>Što <em>nije</em> dokazano — i ne smije se koristiti</h2><div class="bar"></div>
+      <p>Ove tvrdnje nisu u priloženim dokumentima. Zadržavaju se kao otvorena pitanja, ne kao činjenice.</p></div>
+    <div>
+      <ul class="redact">
+        <li class="rv"><span class="claim">Figura od <strong>19.013 tona</strong> talijanskog otpada</span><span class="stamp">Nije dokazano</span></li>
+        <li class="rv" style="--d:.05s"><span class="claim">Cijena od <strong>124 €/t</strong></span><span class="stamp">Nije dokazano</span></li>
+        <li class="rv" style="--d:.10s"><span class="claim"><strong>3× prekoračenje dozvola</strong></span><span class="stamp">Nije dokazano</span></li>
+        <li class="rv" style="--d:.15s"><span class="claim"><strong>11-mjesečni austrijski vakuum</strong></span><span class="fix">stvarno: 15 dana</span><span class="stamp">Ispravljeno</span></li>
+        <li class="rv" style="--d:.20s"><span class="claim"><strong>19 02 07*</strong> bez dozvole</span><span class="stamp">Nije dokazano</span></li>
+        <li class="rv" style="--d:.25s"><span class="claim"><strong>TOC emisije</strong></span><span class="stamp">Nije dokazano</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 08 ZAKLJUČAK -->
+  <section class="sec" id="s8" style="--acc:var(--teal)">
+    <div class="sec-head rv"><div class="idx">08 / NALAZ</div><h2>Zaključak</h2><div class="bar"></div>
+      <p>Što podaci dokumentiraju — i što ostaje otvoreno.</p></div>
+    <div>
+      <p class="rv"><strong>Podaci ne dokazuju „End-of-Waste“ prevaru.</strong> Svi priloženi dokumenti tretiraju materijal kao otpad i vode ga pod postupkom <strong>R1</strong>.</p>
+      <div class="concl">
+        <div class="cbox no rv">
+          <h4>✕ Ne dokazuje se</h4>
+          <ul>
+            <li>„End-of-Waste“ prijevara — materijal se vodi kao otpad, postupak R1</li>
+            <li>Izvršenje pošiljaka pod consentima IT 023367 / AT 030821</li>
+            <li>Prekoračenja dozvola, TOC emisije, carinske vrijednosti</li>
+          </ul>
+        </div>
+        <div class="cbox yes rv" style="--d:.08s">
+          <h4>✓ Dokumentira se</h4>
+          <ul>
+            <li>144.056,79 t notificiranog uvoza 2015.–2024.</li>
+            <li>55.041,08 t uvoza bez notifikacije 2018.–2024.</li>
+            <li>Domaći RDF 0 t u 2022., uz 20.538,72 t uvezenog</li>
+            <li>Dva consenta za opasni otpad s valjanošću preko 14.9.2019., bez evidentiranih pošiljaka</li>
+            <li>Datumski neskladi i nekonzistentni kapaciteti u OZO obrascima</li>
+          </ul>
+        </div>
+      </div>
+      <p class="rv" style="--d:.14s;margin-top:16px">Za potvrdu eventualnih prekršaja nužni su <strong>movement dokumenti</strong> i uvid u važenje osnovnih dozvola. <span class="pill amber">OTVORENO · ZPPI</span></p>
+    </div>
+  </section>
+
+  <div class="legal rv">
+    <p class="lt">⚖️ PRAVNA NAPOMENA I IZJAVA O OGRANIČENJU ODGOVORNOSTI</p>
+    <p>Svi izneseni podaci, analize i kronologija uvoza otpada na ovoj stranici temelje se isključivo na javno dostupnim informacijama i službenim dokumentima dobivenim putem zahtjeva za pristup informacijama (ZPPI). Sadržaj je namijenjen isključivo informiranju javnosti i zaštiti javnog interesa u pogledu očuvanja okoliša i zdravlja građana. Vrijednosni sudovi, kritički osvrti i iznesene sumnje predstavljaju ustavom zajamčeno pravo na slobodu govora i postavljanje legitimnih pitanja nadležnim institucijama, a ne pravomoćne sudske ili inspekcijske zaključke. Autor ne preuzima odgovornost za eventualne naknadne izmjene u službenim registrima trećih strana.</p>
+  </div>
+
+  <footer>
+    <nav class="fl" aria-label="Projekt — podnožje">
+      <a href="index_dosje_koromacno/index_dosje_koromacno.html">Početna</a>
+      <a href="brevik_kodeco.html">Brevik vs KOdeCO</a>
+      <a href="docs/pantheon.html">Pantheon / KOdeCO dosje</a>
+      <a href="energija.html">Energija</a>
+      <a href="dozvole.html">Dozvole</a>
+      <a href="promet.html">Promet otpada</a>
+    </nav>
+    <p class="motto">Dosje Koromačno · Istina se ne pregovara</p>
+    <div class="tags">
+      <span class="tag">#Koromačno</span><span class="tag">#PrometOtpada</span><span class="tag">#Holcim</span><span class="tag">#eONTO</span><span class="tag">#SHA256</span>
+    </div>
+  </footer>
 </main>
 
+<div id="tip" role="tooltip" aria-hidden="true"></div>
+<div id="toast" role="status" aria-live="polite"><i>✓</i><span id="toastMsg"></span></div>
+<button id="toTop" type="button" aria-label="Povratak na vrh">↑</button>
+
+<script>
+(function(){
+"use strict";
+var $=function(s){return document.querySelector(s)};
+var $=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var NF=new Intl.NumberFormat('hr-HR',{minimumFractionDigits:2,maximumFractionDigits:2});
+var NF0=new Intl.NumberFormat('hr-HR',{maximumFractionDigits:0});
+var NF1=new Intl.NumberFormat('hr-HR',{minimumFractionDigits:1,maximumFractionDigits:1});
+function fmt(n){return NF.format(n)} function fmt0(n){return NF0.format(n)} function fmt1(n){return NF1.format(n)}
+
+var CTY={AT:{n:'Austrija',c:'#4da3ff'},IT:{n:'Italija',c:'#ff4d6d'},SI:{n:'Slovenija',c:'#2ce6b0'},BIH:{n:'Bosna i Hercegovina',c:'#b78cff'}};
+var YEARS=[
+ {y:2015,at:0,it:0,si:2337.10},{y:2016,at:16.64,it:0,si:4020.76},
+ {y:2017,at:2641.39,it:177.98,si:1655.60},{y:2018,at:6613.47,it:3047.26,si:340.88},
+ {y:2019,at:3628.14,it:6624.92,si:121.06},{y:2020,at:9091.65,it:7401.40,si:1077.90},
+ {y:2021,at:8256.29,it:13553.61,si:1554.30},{y:2022,at:3218.44,it:20223.65,si:1203.16},
+ {y:2023,at:1545.64,it:21058.82,si:1343.68},{y:2024,at:2936.20,it:17801.31,si:2565.54}
+];
+var EONTO=[
+ {kbo:'19 12 10',name:'Gorivi otpad (RDF)',haz:false,total:115944.77,parts:{IT:84347.05,AT:31073.96,SI:523.76},c:'#2ce6b0'},
+ {kbo:'13 02 05*',name:'Neklorirana motorna, strojna i maziva ulja',haz:true,total:5689.02,parts:{AT:2905.44,SI:2783.58},c:'#ff3b5c'},
+ {kbo:'19 02 07*',name:'Ulja i koncentrati iz procesa odvajanja',haz:true,total:3449.28,parts:{SI:3449.28},c:'#ff4d8d'},
+ {kbo:'19 12 12',name:'Ostali otpad od mehaničke obrade',haz:false,total:2812.74,parts:{IT:2569.78,SI:242.96},c:'#4da3ff'},
+ {kbo:'19 08 05',name:'Muljevi od obrade urbanih otpadnih voda',haz:false,total:2289.82,parts:{IT:1429.26,SI:860.56},c:'#ffb224'},
+ {kbo:'12 01 09*',name:'Emulzije i otopine za strojnu obradu',haz:true,total:384.92,parts:{IT:384.92},c:'#b78cff'},
+ {kbo:'13 05 07*',name:'Zauljena voda iz separatora ulje/voda',haz:true,total:165.75,parts:{IT:165.75},c:'#c6f24e'}
+];
+var NN=[
+ {kbo:'16 01 03',name:'Otpadne gume',total:22687.80,parts:{SI:18059.96,IT:4344.54,AT:283.30}},
+ {kbo:'10 02 02',name:'Neprerađena šljaka',total:18244.16,parts:{IT:18244.16}},
+ {kbo:'02 02 03',name:'Materijali neprikladni za potrošnju ili preradu',total:10208.24,parts:{SI:10183.74,AT:24.50}},
+ {kbo:'10 01 02',name:'Lebdeći pepeo od izgaranja ugljena',total:3792.74,parts:{BIH:3681.92,IT:110.82}},
+ {kbo:'10 01 05',name:'Kruti reakcijski otpad na bazi kalcija',total:108.14,parts:{IT:108.14}}
+];
+
+/* ---------- tooltip ---------- */
+var tip=$('#tip');
+function showTip(html,x,y){
+  tip.innerHTML=html; tip.classList.add('show'); tip.setAttribute('aria-hidden','false');
+  var w=tip.offsetWidth,h=tip.offsetHeight;
+  var L=Math.min(x+16,window.innerWidth-w-10), T=Math.min(y+16,window.innerHeight-h-10);
+  tip.style.left=Math.max(8,L)+'px'; tip.style.top=Math.max(8,T)+'px';
+}
+function hideTip(){tip.classList.remove('show');tip.setAttribute('aria-hidden','true')}
+function tipRow(c,label,val){return '<div class="t-r"><span><i style="background:'+c+'"></i>'+label+'</span><span>'+val+'</span></div>'}
+
+/* ---------- toast / copy ---------- */
+var toastT=null;
+function toast(msg){$('#toastMsg').textContent=msg;$('#toast').classList.add('show');
+  if(toastT)clearTimeout(toastT);toastT=setTimeout(function(){$('#toast').classList.remove('show')},2200)}
+function copyText(t){
+  function ok(){toast('Kopirano u međuspremnik')}
+  function fb(){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);ta.select();try{document.execCommand('copy');ok()}catch(e){toast('Kopiranje nije uspjelo')}document.body.removeChild(ta)}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,fb)}else fb();
+}
+$('.copy').forEach(function(b){b.addEventListener('click',function(){copyText(b.getAttribute('data-copy'))})});
+$('#copySummary').addEventListener('click',function(){
+  copyText('DOSJE KOROMAČNO — PREKOGRANIČNI PROMET OTPADA\n'+
+  '• Notificirani uvoz 2015–2024: 144.056,79 t\n'+
+  '• Bez notifikacije (eONTO) 2018–2024: 55.041,08 t\n'+
+  '• Zbroj režima: 199.097,87 t (razdoblja se razlikuju)\n'+
+  '• 2022: domaći RDF 0,00 t / uvoz 20.538,72 t\n'+
+  '• Opasni otpad (eONTO po notif.): 9.688,97 t\n'+
+  'Izvori: Prilog 1 xlsx · eONTO · ozo_2022_Holcim_Koromacno.pdf\nDetalji: promet.html (Dosje Koromačno)');
+});
+$('#printBtn').addEventListener('click',function(){window.print()});
+
+/* ---------- header / scroll ---------- */
+var hdr=$('#hdr'),menuBtn=$('#menuBtn');
+menuBtn.addEventListener('click',function(){var o=hdr.classList.toggle('open');menuBtn.setAttribute('aria-expanded',o?'true':'false')});
+$('#secnav a, .proj a').forEach(function(a){a.addEventListener('click',function(){hdr.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){hdr.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');hideTip()}});
+var sections=$('section.sec'),navLinks=$('#secnav a'),toTop=$('#toTop'),prog=$('#progress');
+var ticking=false;
+function onScroll(){
+  if(ticking)return;ticking=true;
+  requestAnimationFrame(function(){
+    var st=window.pageYOffset||document.documentElement.scrollTop;
+    var dh=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.width=(dh>0?(st/dh*100):0)+'%';
+    toTop.classList.toggle('show',st>600);
+    var headH=hdr.offsetHeight,cur=null;
+    for(var i=0;i<sections.length;i++){if(sections[i].offsetTop-headH-80<=st)cur=sections[i].id}
+    navLinks.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+    ticking=false;
+  });
+}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+toTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduced?'auto':'smooth'})});
+
+/* ---------- reveal + counters ---------- */
+function setHseg(scope){$('.hseg',scope).forEach(function(s){s.style.width=s.getAttribute('data-w')+'%'})}
+function $(s,scope){return Array.prototype.slice.call((scope||document).querySelectorAll(s))}
+var revealEls=$('.rv');
+if('IntersectionObserver' in window&&!reduced){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');
+    $('.hseg',e.target).forEach(function(s){s.style.width=s.getAttribute('data-w')+'%'});io.unobserve(e.target)}})},{threshold:.12});
+  revealEls.forEach(function(el){io.observe(el)});
+}else{revealEls.forEach(function(el){el.classList.add('in')});$('.hseg').forEach(function(s){s.style.width=s.getAttribute('data-w')+'%'})}
+var counters=$('[data-count]');
+function runCounter(el){
+  var target=parseFloat(el.getAttribute('data-count'));
+  if(reduced){el.textContent=fmt(target);return}
+  var t0=performance.now(),dur=1200;
+  function step(t){var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=fmt(target*e);if(p<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step);
+}
+if('IntersectionObserver' in window){
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){runCounter(e.target);cio.unobserve(e.target)}})},{threshold:.4});
+  counters.forEach(function(c){cio.observe(c)});
+}else counters.forEach(runCounter);
+
+/* ---------- godišnji grafikon ---------- */
+var ySvg=$('#yChart'),yState={mode:'t',show:{AT:true,IT:true,SI:true}};
+var Y={x0:64,x1:944,y0:20,y1:360,slot:88,bw:52};
+var order=['SI','IT','AT'],yRects=[],yAnim=null;
+function yKey(y,c){return y+'|'+c}
+(function initY(){
+  var s='<g class="axis" id="yAxis"></g><g id="yBars">';
+  YEARS.forEach(function(d,i){
+    var x=Y.x0+i*Y.slot+(Y.slot-Y.bw)/2;
+    order.forEach(function(c){
+      s+='<rect class="seg" data-year="'+d.y+'" data-c="'+c+'" x="'+x+'" y="'+Y.y1+'" width="'+Y.bw+'" height="0" rx="2" fill="'+CTY[c].c+'" tabindex="0" role="img" aria-label="'+d.y+' '+CTY[c].n+'"></rect>';
+    });
+    s+='<text class="barlab" x="'+(x+Y.bw/2)+'" y="382" text-anchor="middle">'+d.y+'.</text>';
+  });
+  s+='</g><text id="yEmpty" x="480" y="190" text-anchor="middle" fill="#8b98ac" font-size="14" style="display:none">Sve serije isključene — uključi državu u legendi.</text>';
+  ySvg.innerHTML=s;
+  yRects=$('.seg',ySvg).map(function(el){return {key:el.getAttribute('data-year')+'|'+el.getAttribute('data-c'),el:el}});
+})();
+function yTargets(){
+  var maxT=0;
+  YEARS.forEach(function(d){var t=0;order.forEach(function(c){if(yState.show[c])t+=d[c.toLowerCase()]});if(t>maxT)maxT=t});
+  var max=yState.mode==='p'?100:Math.max(5000,Math.ceil(maxT/5000)*5000);
+  var vals={};
+  YEARS.forEach(function(d){
+    var vis=0;order.forEach(function(c){if(yState.show[c])vis+=d[c.toLowerCase()]});
+    var cum=0;
+    order.forEach(function(c){
+      var raw=yState.show[c]?d[c.toLowerCase()]:0;
+      var v=yState.mode==='p'?(vis>0?raw/vis*100:0):raw;
+      var h=v/max*(Y.y1-Y.y0);
+      vals[yKey(d.y,c)]={y:Y.y1-cum-h,h:h};cum+=h;
+    });
+  });
+  return {max:max,vals:vals};
+}
+function yAxis(max){
+  var g=$('#yAxis'),s='';
+  for(var i=0;i<=5;i++){
+    var v=max*i/5,y=Y.y1-(Y.y1-Y.y0)*i/5;
+    s+='<line x1="'+Y.x0+'" x2="'+Y.x1+'" y1="'+y+'" y2="'+y+'" stroke="#243044" stroke-width="1"'+(i===0?' stroke-width="1.5"':'')+'></line>';
+    s+='<text x="'+(Y.x0-8)+'" y="'+(y+4)+'" text-anchor="end">'+(yState.mode==='p'?fmt0(v)+'%':fmt0(v))+'</text>';
+  }
+  g.innerHTML=s;
+}
+function drawY(animate){
+  var T=yTargets();yAxis(T.max);
+  var none=!yState.show.AT&&!yState.show.IT&&!yState.show.SI;
+  $('#yEmpty').style.display=none?'':'none';
+  var from={};yRects.forEach(function(r){from[r.key]={y:parseFloat(r.el.getAttribute('y')),h:parseFloat(r.el.getAttribute('height'))}});
+  if(yAnim)cancelAnimationFrame(yAnim);
+  function apply(k){yRects.forEach(function(r){var a=from[r.key],b=T.vals[r.key];
+    r.el.setAttribute('y',a.y+(b.y-a.y)*k);r.el.setAttribute('height',Math.max(0,a.h+(b.h-a.h)*k))})}
+  if(!animate||reduced){apply(1);return}
+  var t0=performance.now(),dur=380;
+  function step(t){var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);apply(e);if(p<1)yAnim=requestAnimationFrame(step)}
+  yAnim=requestAnimationFrame(step);
+}
+function yTipHtml(year){
+  var d=null;YEARS.forEach(function(x){if(x.y===year)d=x});if(!d)return '';
+  var h='<div class="t-h">'+year+'. · NOTIFIKACIJA</div>',tot=0;
+  ['AT','IT','SI'].forEach(function(c){if(yState.show[c]){var v=d[c.toLowerCase()];tot+=v;h+=tipRow(CTY[c].c,CTY[c].n,fmt(v)+' t')}});
+  h+='<div class="t-r t-t"><span>Ukupno (vidljivo)</span><span>'+fmt(tot)+' t</span></div>';
+  return h;
+}
+var yHover=null;
+function yFocus(year){
+  if(yHover===year)return;yHover=year;
+  yRects.forEach(function(r){r.el.classList.toggle('dim',year!==null&&r.el.getAttribute('data-year')!==String(year))});
+  $('#yTable tbody tr').forEach(function(tr){tr.classList.toggle('hl',year!==null&&tr.getAttribute('data-year')===String(year))});
+}
+ySvg.addEventListener('pointermove',function(e){
+  var t=e.target.closest?e.target.closest('.seg'):null;
+  if(t){var yr=parseInt(t.getAttribute('data-year'),10);yFocus(yr);showTip(yTipHtml(yr),e.clientX,e.clientY)}
+  else{yFocus(null);hideTip()}
+});
+ySvg.addEventListener('pointerleave',function(){yFocus(null);hideTip()});
+ySvg.addEventListener('focusin',function(e){
+  var t=e.target.closest?e.target.closest('.seg'):null;if(!t)return;
+  var yr=parseInt(t.getAttribute('data-year'),10),r=t.getBoundingClientRect();
+  yFocus(yr);showTip(yTipHtml(yr),r.left+r.width/2,r.top);
+});
+ySvg.addEventListener('focusout',function(){yFocus(null);hideTip()});
+$('#yTable tbody tr').forEach(function(tr){
+  tr.addEventListener('mouseenter',function(){yFocus(parseInt(tr.getAttribute('data-year'),10))});
+  tr.addEventListener('mouseleave',function(){yFocus(null)});
+});
+(function buildYLegend(){
+  var lg=$('#yLegend');
+  ['AT','IT','SI'].forEach(function(c){
+    var b=document.createElement('button');b.type='button';b.className='lg';b.style.setProperty('--c',CTY[c].c);
+    b.setAttribute('aria-pressed','true');b.innerHTML='<i></i>'+CTY[c].n;
+    b.addEventListener('click',function(){yState.show[c]=!yState.show[c];b.classList.toggle('off',!yState.show[c]);
+      b.setAttribute('aria-pressed',yState.show[c]?'true':'false');drawY(true)});
+    lg.appendChild(b);
+  });
+  var mt=$('#modeT'),mp=$('#modeP');
+  function setMode(m){yState.mode=m;mt.classList.toggle('on',m==='t');mp.classList.toggle('on',m==='p');
+    mt.setAttribute('aria-pressed',m==='t'?'true':'false');mp.setAttribute('aria-pressed',m==='p'?'true':'false');drawY(true)}
+  mt.addEventListener('click',function(){setMode('t')});mp.addEventListener('click',function(){setMode('p')});
+  var tot={AT:37947.86,IT:89888.95,SI:16219.98},grand=144056.79,sc=$('#shareChips');
+  ['IT','AT','SI'].forEach(function(c){
+    var s=document.createElement('span');s.className='share';s.style.setProperty('--c',CTY[c].c);
+    s.innerHTML='<b>'+CTY[c].n+'</b> '+fmt1(tot[c]/grand*100)+'% · '+fmt(tot[c])+' t';sc.appendChild(s);
+  });
+})();
+drawY(false);
+if('IntersectionObserver' in window&&!reduced){
+  var yio=new IntersectionObserver(function(es){if(es[0].isIntersecting){drawY(true);yio.disconnect()}},{threshold:.3});
+  yio.observe(ySvg);
+}
+
+/* ---------- eONTO donut ---------- */
+var dSvg=$('#eontoDonut'),dLegend=$('#eontoLegend'),eFilter='all',eHover=-1;
+function ring(cx,cy,r0,r1,a0,a1){
+  function p(r,a){return [cx+r*Math.cos(a),cy+r*Math.sin(a)]}
+  var A=p(r1,a0),B=p(r1,a1),C=p(r0,a1),D=p(r0,a0),laf=(a1-a0)>Math.PI?1:0;
+  return 'M'+A[0]+' '+A[1]+'A'+r1+' '+r1+' 0 '+laf+' 1 '+B[0]+' '+B[1]+'L'+C[0]+' '+C[1]+'A'+r0+' '+r0+' 0 '+laf+' 0 '+D[0]+' '+D[1]+'Z';
+}
+function eSubset(){return EONTO.filter(function(d){return eFilter==='all'||(eFilter==='haz')===d.haz})}
+function plural(n){var m=n%10,k=n%100;if(m===1&&k!==11)return 'stavka';if(m>=2&&m<=4&&(k<12||k>14))return 'stavke';return 'stavki'}
+function drawDonut(){
+  var sub=eSubset(),total=0;sub.forEach(function(d){total+=d.total});
+  var cx=170,cy=170,r0=88,r1=140,a=-Math.PI/2,s='<defs><pattern id="hatchP" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="none"/><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(10,13,18,.75)" stroke-width="2.6"/></pattern></defs>';
+  var mids=[];
+  sub.forEach(function(d,i){
+    var ang=d.total/total*Math.PI*2,gap=ang>0.06?0.018:0;
+    var a0=a+gap,a1=a+ang-gap;mid=(a0+a1)/2;mids.push(mid);
+    var path=ring(cx,cy,r0,r1,a0,a1);
+    s+='<g class="slice" data-i="'+i+'" tabindex="0" role="img" aria-label="'+d.kbo+' '+fmt(d.total)+' tona">';
+    s+='<path d="'+path+'" fill="'+d.c+'"></path>';
+    if(d.haz)s+='<path d="'+path+'" fill="url(#hatchP)"></path>';
+    s+='</g>';a+=ang;
+  });
+  var lab=eFilter==='haz'?'opasni*':(eFilter==='non'?'neopasni':'po notifikaciji');
+  s+='<text x="170" y="160" text-anchor="middle" fill="#e8edf5" font-size="24" font-weight="800" font-family="IBM Plex Mono,monospace">'+fmt(total)+'</text>';
+  s+='<text x="170" y="182" text-anchor="middle" fill="#8b98ac" font-size="12">tona · '+lab+'</text>';
+  s+='<text x="170" y="200" text-anchor="middle" fill="#5b6880" font-size="11" font-family="IBM Plex Mono,monospace">'+sub.length+' '+plural(sub.length)+' · 2018–2024</text>';
+  dSvg.innerHTML=s;
+  dSvg._mids=mids;dSvg._sub=sub;dSvg._total=total;
+  var lg='';
+  sub.forEach(function(d,i){
+    lg+='<li data-i="'+i+'"><span class="sw'+(d.haz?' haz':'')+'" style="--c:'+d.c+'"></span><span class="nm">'+d.name+'<small>'+d.kbo+(d.haz?' · OPASNI':'')+'</small></span><span class="vv">'+fmt(d.total)+' t</span><span class="pc">'+fmt1(d.total/total*100)+'%</span></li>';
+  });
+  dLegend.innerHTML=lg;
+  $('#eontoCount').textContent=sub.length+' '+plural(sub.length)+' · '+fmt(total)+' t';
+  $('#eontoTable tbody tr').forEach(function(tr){
+    var h=tr.getAttribute('data-haz')==='1';
+    tr.classList.toggle('hide',eFilter!=='all'&&((eFilter==='haz')!==h));
+  });
+}
+function eHighlight(i){
+  eHover=i;
+  $('.slice',dSvg).forEach(function(g){
+    var j=parseInt(g.getAttribute('data-i'),10);
+    if(j===i&&dSvg._mids){var m=dSvg._mids[j];g.setAttribute('transform','translate('+(Math.cos(m)*6)+' '+(Math.sin(m)*6)+')')}
+    else g.setAttribute('transform','translate(0 0)');
+  });
+  $('li',dLegend).forEach(function(li){li.classList.toggle('hl',parseInt(li.getAttribute('data-i'),10)===i)});
+}
+function eTipHtml(d,total){
+  var h='<div class="t-h">'+d.kbo+(d.haz?' · OPASNI*':'')+'</div><div style="margin-bottom:5px">'+d.name+'</div>';
+  h+=tipRow(d.c,'Ukupno',fmt(d.total)+' t · '+fmt1(d.total/total*100)+'%');
+  Object.keys(d.parts).forEach(function(c){h+=tipRow(CTY[c].c,CTY[c].n,fmt(d.parts[c])+' t')});
+  return h;
+}
+dSvg.addEventListener('pointermove',function(e){
+  var g=e.target.closest?e.target.closest('.slice'):null;
+  if(g){var i=parseInt(g.getAttribute('data-i'),10);eHighlight(i);showTip(eTipHtml(dSvg._sub[i],dSvg._total),e.clientX,e.clientY)}
+  else{eHighlight(-1);hideTip()}
+});
+dSvg.addEventListener('pointerleave',function(){eHighlight(-1);hideTip()});
+dSvg.addEventListener('focusin',function(e){
+  var g=e.target.closest?e.target.closest('.slice'):null;if(!g)return;
+  var i=parseInt(g.getAttribute('data-i'),10),r=g.getBoundingClientRect();
+  eHighlight(i);showTip(eTipHtml(dSvg._sub[i],dSvg._total),r.left+r.width/2,r.top);
+});
+dSvg.addEventListener('focusout',function(){eHighlight(-1);hideTip()});
+dLegend.addEventListener('mouseover',function(e){var li=e.target.closest?e.target.closest('li'):null;if(li)eHighlight(parseInt(li.getAttribute('data-i'),10))});
+dLegend.addEventListener('mouseout',function(){eHighlight(-1)});
+$('.filters button').forEach(function(b){
+  b.addEventListener('click',function(){
+    eFilter=b.getAttribute('data-f');
+    $('.filters button').forEach(function(x){var on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on?'true':'false')});
+    drawDonut();
+  });
+});
+drawDonut();
+
+/* ---------- bez notifikacije hbars ---------- */
+(function(){
+  var max=22687.80,box=$('#nnBars'),h='';
+  NN.forEach(function(d){
+    h+='<div class="hbar"><div class="hl-l">'+d.name+'<small>'+d.kbo+'</small></div><div class="htrack">';
+    Object.keys(d.parts).forEach(function(c){
+      var w=d.parts[c]/max*100;
+      h+='<span class="hseg" data-k="'+d.kbo+'" data-c="'+c+'" data-w="'+w+'" style="--w:'+w+';background:'+CTY[c].c+'" title="'+CTY[c].n+': '+fmt(d.parts[c])+' t"></span>';
+    });
+    h+='</div><div class="hv">'+fmt(d.total)+' t</div></div>';
+  });
+  box.innerHTML=h;
+  var lg=$('#nnLegend');
+  ['SI','IT','AT','BIH'].forEach(function(c){
+    var s=document.createElement('span');s.className='lg';s.style.setProperty('--c',CTY[c].c);s.style.cursor='default';
+    s.innerHTML='<i></i>'+CTY[c].n;lg.appendChild(s);
+  });
+  box.addEventListener('pointermove',function(e){
+    var t=e.target.closest?e.target.closest('.hseg'):null;if(!t){hideTip();return}
+    var k=t.getAttribute('data-k'),c=t.getAttribute('data-c'),d=null;
+    NN.forEach(function(x){if(x.kbo===k)d=x});if(!d)return;
+    var html='<div class="t-h">'+d.kbo+' · '+d.name+'</div>'+tipRow(CTY[c].c,CTY[c].n,fmt(d.parts[c])+' t')+
+      '<div class="t-s">'+fmt1(d.parts[c]/d.total*100)+'% stavke · ukupno '+fmt(d.total)+' t</div>';
+    showTip(html,e.clientX,e.clientY);
+  });
+  box.addEventListener('pointerleave',hideTip);
+})();
+
+/* ---------- timeline consenata ---------- */
+(function(){
+  var svg=$('#tlSvg');if(!svg)return;
+  var start=Date.UTC(2019,0,1),end=Date.UTC(2020,10,30),expiry=Date.UTC(2019,8,14);
+  var x0=64,x1=944;
+  function X(ms){return x0+(ms-start)/(end-start)*(x1-x0)}
+  function dstr(ms){var d=new Date(ms);return d.getUTCDate()+'.'+(d.getUTCMonth()+1)+'.'+d.getUTCFullYear()+'.'}
+  var bars=[
+   {id:'AT 030821',who:'Fischer Entsorgungs- und Transport GmbH',kbo:'13 02 05*',t:1500,issued:'6.3.2019.',from:Date.UTC(2019,2,6),to:Date.UTC(2020,1,14),ref:'UP/I 351-03/12-02/96 od 15.9.2014.',c:'#4da3ff',y:78},
+   {id:'IT 023367',who:'NEDA AMBIENTE FVG Srl',kbo:'13 05 07*',t:700,issued:'6.8.2019.',from:Date.UTC(2019,8,15),to:Date.UTC(2020,8,14),ref:'UP/I 351-02/13-11/121 od 13.2.2015.',c:'#ff4d6d',y:128}
+  ];
+  var s='<defs><pattern id="hatchR" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(255,59,92,.85)" stroke-width="2.4"/></pattern></defs>';
+  var ticks=[[2019,0],[2019,3],[2019,6],[2019,9],[2020,0],[2020,3],[2020,6],[2020,9]];
+  s+='<line x1="'+x0+'" x2="'+x1+'" y1="200" y2="200" stroke="#31415c" stroke-width="1.5"/>';
+  ticks.forEach(function(t){var ms=Date.UTC(t[0],t[1],1),x=X(ms);
+    s+='<line x1="'+x+'" x2="'+x+'" y1="196" y2="204" stroke="#31415c"/>';
+    s+='<text class="barlab" x="'+x+'" y="222" text-anchor="middle">'+('0'+(t[1]+1)).slice(-2)+'/'+String(t[0]).slice(2)+'</text>';
+  });
+  var ex=X(expiry);
+  s+='<line x1="'+ex+'" x2="'+ex+'" y1="34" y2="200" stroke="#ff3b5c" stroke-width="1.6" stroke-dasharray="5 4"/>';
+  s+='<text x="'+(ex+8)+'" y="28" fill="#ff3b5c" font-size="12" font-weight="700" font-family="IBM Plex Mono,monospace">14.9.2019. · istek temeljne dozvole</text>';
+  bars.forEach(function(b,i){
+    var xa=X(b.from),xb=X(b.to),ov=Math.max(b.from,expiry);
+    s+='<g class="tl-bar" data-i="'+i+'" tabindex="0" role="img" aria-label="'+b.id+' '+b.who+' validan '+dstr(b.from)+' do '+dstr(b.to)+'">';
+    s+='<text class="barlab" x="'+xa+'" y="'+(b.y-8)+'" fill="#e8edf5" font-weight="600">'+b.id+' · '+b.kbo+' · '+fmt0(b.t)+' t</text>';
+    s+='<rect class="tl-base" x="'+xa+'" y="'+b.y+'" width="'+(xb-xa)+'" height="30" rx="5" fill="'+b.c+'" fill-opacity=".85"/>';
+    if(ov<b.to)s+='<rect x="'+X(ov)+'" y="'+b.y+'" width="'+(xb-X(ov))+'" height="30" rx="5" fill="url(#hatchR)" stroke="#ff3b5c" stroke-width="1.2"/>';
+    s+='<text class="barlab" x="'+xa+'" y="'+(b.y+46)+'">'+dstr(b.from)+'</text>';
+    s+='<text class="barlab" x="'+xb+'" y="'+(b.y+46)+'" text-anchor="end">'+dstr(b.to)+'</text>';
+    s+='</g>';
+  });
+  s+='<text class="barlab" x="'+x0+'" y="244" fill="#5b6880">Domena: 01/2019 – 11/2020 · oba consenta pozivaju se na dozvole iz 2014./2015.</text>';
+  svg.innerHTML=s;
+  function tlTip(b){
+    return '<div class="t-h">'+b.id+' · OPASNI*</div><div style="margin-bottom:5px">'+b.who+'</div>'+
+      tipRow(b.c,b.kbo,fmt0(b.t)+' t')+
+      '<div class="t-r"><span>Izdano</span><span>'+b.issued+'</span></div>'+
+      '<div class="t-r"><span>Valjanost</span><span>'+dstr(b.from)+' – '+dstr(b.to)+'</span></div>'+
+      '<div class="t-s">Poziva se na: '+b.ref+'<br>Nema evidentiranih pošiljaka u godišnjim tablicama.</div>';
+  }
+  svg.addEventListener('pointermove',function(e){
+    var g=e.target.closest?e.target.closest('.tl-bar'):null;
+    if(g){showTip(tlTip(bars[parseInt(g.getAttribute('data-i'),10)]),e.clientX,e.clientY)}else hideTip();
+  });
+  svg.addEventListener('pointerleave',hideTip);
+  svg.addEventListener('focusin',function(e){
+    var g=e.target.closest?e.target.closest('.tl-bar'):null;if(!g)return;
+    var r=g.getBoundingClientRect();showTip(tlTip(bars[parseInt(g.getAttribute('data-i'),10)]),r.left+r.width/2,r.top);
+  });
+  svg.addEventListener('focusout',hideTip);
+})();
+
+/* ---------- dust particles ---------- */
+(function(){
+  var cv=$('#dust'),hero=$('#hero');
+  if(!cv||!hero||reduced)return;
+  var ctx=cv.getContext&&cv.getContext('2d');if(!ctx)return;
+  var W=0,H=0,ps=[],raf=null,run=false,DPR=Math.min(2,window.devicePixelRatio||1);
+  function size(){
+    var r=hero.getBoundingClientRect();W=Math.max(1,r.width);H=Math.max(1,r.height);
+    cv.width=W*DPR;cv.height=H*DPR;cv.style.width=W+'px';cv.style.height=H+'px';
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    var n=Math.min(80,Math.max(24,Math.floor(W/16)));ps=[];
+    for(var i=0;i<n;i++)ps.push({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.8,
+      vx:(Math.random()-.5)*.16,vy:-.06-Math.random()*.22,a:.06+Math.random()*.3,
+      c:Math.random()<.7?'255,178,36':'44,230,176'});
+  }
+  function tick(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<ps.length;i++){var p=ps[i];p.x+=p.vx;p.y+=p.vy;
+      if(p.y<-4){p.y=H+4;p.x=Math.random()*W}
+      if(p.x<-4)p.x=W+4;if(p.x>W+4)p.x=-4;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.2832);ctx.fillStyle='rgba('+p.c+','+p.a+')';ctx.fill();}
+    raf=requestAnimationFrame(tick);
+  }
+  function start(){if(!run){run=true;raf=requestAnimationFrame(tick)}}
+  function stop(){run=false;if(raf)cancelAnimationFrame(raf);raf=null}
+  size();window.addEventListener('resize',size);
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){es[0].isIntersecting?start():stop()},{threshold:0}).observe(hero)}
+  else start();
+  document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else start()});
+})();
+})();
+</script>
 </body>
 </html>
-```
