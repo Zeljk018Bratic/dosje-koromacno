@@ -3,8 +3,8 @@
 Ova mapa sadrži službene dokumente prikupljene putem ZPPI zahtjeva i javno dostupnih registara (MZOZT, DIRH). Svi dokumenti su izvorni i neizmijenjeni.
 
 ## 1. Baza podataka i sirovi podaci
-- [Prilog 1_HOLCIM hrvatska _2015-2024_godišnja izvješća_prekogranični promet i eONTO.xlsx](Holcim_Dokazi/Prilog%201_HOLCIM%20hrvatska%20_2015-2024_godi%C5%A1nja%20izvje%C5%A1%C4%87a_prekograni%C4%8Dni%20promet%20i%20eONTO.xlsx) — *Glavna Excel baza realiziranog uvoza i e-ONTO podataka.*
-- [Prilog 2__Holcim Hrvatska _podaci ROO.rar](Holcim_Dokazi/Prilog%202__Holcim%20Hrvatska%20_podaci%20ROO.rar) — *Arhiva podataka iz Registra onečišćavanja okoliša.*
+- [Prilog 1_HOLCIM hrvatska _2015-2024_godišnja izvješća_prekogranični promet i eONTO.xlsx](Prilog%201_HOLCIM%20hrvatska%20_2015-2024_godi%C5%A1nja%20izvje%C5%A1%C4%87a_prekograni%C4%8Dni%20promet%20i%20eONTO.xlsx) — *Glavna Excel baza realiziranog uvoza i e-ONTO podataka.*
+- [Prilog 2__Holcim Hrvatska _podaci ROO.rar](Prilog%202__Holcim%20Hrvatska%20_podaci%20ROO.rar) — *Arhiva podataka iz Registra onečišćavanja okoliša.*
 
 ## 2. Godišnja izvješća o okolišu (OZO i PLOPKO)
 - [PLOPKO_Report2014_Holcim_Koromacno.pdf](Holcim_Dokazi/PLOPKO_Report2014_Holcim_Koromacno.pdf)
